@@ -44,7 +44,7 @@ var routes = [
   },
   {
     path: "login",
-    loadComponent: /* @__PURE__ */ __name(() => import("./chunk-RZZ5KMKG.js").then((m) => m.LoginComponent), "loadComponent")
+    loadComponent: /* @__PURE__ */ __name(() => import("./chunk-ASQ2JG6J.js").then((m) => m.LoginComponent), "loadComponent")
   },
   {
     path: "dashboard",
