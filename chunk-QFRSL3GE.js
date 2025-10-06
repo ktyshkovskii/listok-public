@@ -1,6 +1,6 @@
 import {
   AuthService
-} from "./chunk-DTVRW2I7.js";
+} from "./chunk-2U2SCJGW.js";
 import {
   MatChipOption,
   MatChipSet,
@@ -8,8 +8,10 @@ import {
   MatMenu,
   MatMenuItem,
   MatMenuModule,
-  MatMenuTrigger
-} from "./chunk-G3BCYBM2.js";
+  MatMenuTrigger,
+  MatPseudoCheckboxModule,
+  SelectionModel
+} from "./chunk-ZDNPTREO.js";
 import {
   CdkScrollable,
   CdkScrollableModule,
@@ -19,8 +21,8 @@ import {
   NG_VALUE_ACCESSOR,
   ScrollDispatcher,
   ViewportRuler
-} from "./chunk-MBA56NPS.js";
-import "./chunk-3ZBWVIZK.js";
+} from "./chunk-M4AMQKTQ.js";
+import "./chunk-KYZXPXLL.js";
 import {
   A,
   A11yModule,
@@ -60,12 +62,11 @@ import {
   coerceBooleanProperty,
   coerceNumberProperty,
   hasModifierKey
-} from "./chunk-SAHT5VQE.js";
+} from "./chunk-UNOES5P2.js";
 import {
   BehaviorSubject,
   ChangeDetectionStrategy,
   ChangeDetectorRef,
-  CommonModule,
   Component,
   ContentChild,
   ContentChildren,
@@ -77,8 +78,6 @@ import {
   InjectionToken,
   Injector,
   Input,
-  NgForOf,
-  NgIf,
   NgModule,
   NgTemplateOutlet,
   NgZone,
@@ -94,8 +93,6 @@ import {
   ViewChild,
   ViewEncapsulation,
   __async,
-  __name,
-  __publicField,
   afterNextRender,
   booleanAttribute,
   debounceTime,
@@ -143,6 +140,9 @@ import {
   ɵɵpureFunction0,
   ɵɵqueryRefresh,
   ɵɵreference,
+  ɵɵrepeater,
+  ɵɵrepeaterCreate,
+  ɵɵrepeaterTrackByIdentity,
   ɵɵresetView,
   ɵɵrestoreView,
   ɵɵsanitizeUrl,
@@ -153,7 +153,7 @@ import {
   ɵɵtextInterpolate,
   ɵɵtextInterpolate1,
   ɵɵviewQuery
-} from "./chunk-376M5ZWK.js";
+} from "./chunk-3DPZ4J24.js";
 
 // node_modules/@angular/material/fesm2022/sidenav.mjs
 var _c0 = ["*"];
@@ -164,11 +164,11 @@ function MatDrawerContainer_Conditional_0_Template(rf, ctx) {
   if (rf & 1) {
     const _r1 = \u0275\u0275getCurrentView();
     \u0275\u0275elementStart(0, "div", 1);
-    \u0275\u0275listener("click", /* @__PURE__ */ __name(function MatDrawerContainer_Conditional_0_Template_div_click_0_listener() {
+    \u0275\u0275listener("click", function MatDrawerContainer_Conditional_0_Template_div_click_0_listener() {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1._onBackdropClicked());
-    }, "MatDrawerContainer_Conditional_0_Template_div_click_0_listener"));
+    });
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -176,7 +176,6 @@ function MatDrawerContainer_Conditional_0_Template(rf, ctx) {
     \u0275\u0275classProp("mat-drawer-shown", ctx_r1._isShowingBackdrop());
   }
 }
-__name(MatDrawerContainer_Conditional_0_Template, "MatDrawerContainer_Conditional_0_Template");
 function MatDrawerContainer_Conditional_3_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "mat-drawer-content");
@@ -184,18 +183,17 @@ function MatDrawerContainer_Conditional_3_Template(rf, ctx) {
     \u0275\u0275elementEnd();
   }
 }
-__name(MatDrawerContainer_Conditional_3_Template, "MatDrawerContainer_Conditional_3_Template");
 var _c4 = [[["mat-sidenav"]], [["mat-sidenav-content"]], "*"];
 var _c5 = ["mat-sidenav", "mat-sidenav-content", "*"];
 function MatSidenavContainer_Conditional_0_Template(rf, ctx) {
   if (rf & 1) {
     const _r1 = \u0275\u0275getCurrentView();
     \u0275\u0275elementStart(0, "div", 1);
-    \u0275\u0275listener("click", /* @__PURE__ */ __name(function MatSidenavContainer_Conditional_0_Template_div_click_0_listener() {
+    \u0275\u0275listener("click", function MatSidenavContainer_Conditional_0_Template_div_click_0_listener() {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1._onBackdropClicked());
-    }, "MatSidenavContainer_Conditional_0_Template_div_click_0_listener"));
+    });
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -203,7 +201,6 @@ function MatSidenavContainer_Conditional_0_Template(rf, ctx) {
     \u0275\u0275classProp("mat-drawer-shown", ctx_r1._isShowingBackdrop());
   }
 }
-__name(MatSidenavContainer_Conditional_0_Template, "MatSidenavContainer_Conditional_0_Template");
 function MatSidenavContainer_Conditional_3_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "mat-sidenav-content");
@@ -211,12 +208,10 @@ function MatSidenavContainer_Conditional_3_Template(rf, ctx) {
     \u0275\u0275elementEnd();
   }
 }
-__name(MatSidenavContainer_Conditional_3_Template, "MatSidenavContainer_Conditional_3_Template");
 var _c6 = ".mat-drawer-container{position:relative;z-index:1;color:var(--mat-sidenav-content-text-color, var(--mat-sys-on-background));background-color:var(--mat-sidenav-content-background-color, var(--mat-sys-background));box-sizing:border-box;display:block;overflow:hidden}.mat-drawer-container[fullscreen]{top:0;left:0;right:0;bottom:0;position:absolute}.mat-drawer-container[fullscreen].mat-drawer-container-has-open{overflow:hidden}.mat-drawer-container.mat-drawer-container-explicit-backdrop .mat-drawer-side{z-index:3}.mat-drawer-container.ng-animate-disabled .mat-drawer-backdrop,.mat-drawer-container.ng-animate-disabled .mat-drawer-content,.ng-animate-disabled .mat-drawer-container .mat-drawer-backdrop,.ng-animate-disabled .mat-drawer-container .mat-drawer-content{transition:none}.mat-drawer-backdrop{top:0;left:0;right:0;bottom:0;position:absolute;display:block;z-index:3;visibility:hidden}.mat-drawer-backdrop.mat-drawer-shown{visibility:visible;background-color:var(--mat-sidenav-scrim-color, color-mix(in srgb, var(--mat-sys-neutral-variant20) 40%, transparent))}.mat-drawer-transition .mat-drawer-backdrop{transition-duration:400ms;transition-timing-function:cubic-bezier(0.25, 0.8, 0.25, 1);transition-property:background-color,visibility}@media(forced-colors: active){.mat-drawer-backdrop{opacity:.5}}.mat-drawer-content{position:relative;z-index:1;display:block;height:100%;overflow:auto}.mat-drawer-content.mat-drawer-content-hidden{opacity:0}.mat-drawer-transition .mat-drawer-content{transition-duration:400ms;transition-timing-function:cubic-bezier(0.25, 0.8, 0.25, 1);transition-property:transform,margin-left,margin-right}.mat-drawer{position:relative;z-index:4;color:var(--mat-sidenav-container-text-color, var(--mat-sys-on-surface-variant));box-shadow:var(--mat-sidenav-container-elevation-shadow, none);background-color:var(--mat-sidenav-container-background-color, var(--mat-sys-surface));border-top-right-radius:var(--mat-sidenav-container-shape, var(--mat-sys-corner-large));border-bottom-right-radius:var(--mat-sidenav-container-shape, var(--mat-sys-corner-large));width:var(--mat-sidenav-container-width, 360px);display:block;position:absolute;top:0;bottom:0;z-index:3;outline:0;box-sizing:border-box;overflow-y:auto;transform:translate3d(-100%, 0, 0)}@media(forced-colors: active){.mat-drawer,[dir=rtl] .mat-drawer.mat-drawer-end{border-right:solid 1px currentColor}}@media(forced-colors: active){[dir=rtl] .mat-drawer,.mat-drawer.mat-drawer-end{border-left:solid 1px currentColor;border-right:none}}.mat-drawer.mat-drawer-side{z-index:2}.mat-drawer.mat-drawer-end{right:0;transform:translate3d(100%, 0, 0);border-top-left-radius:var(--mat-sidenav-container-shape, var(--mat-sys-corner-large));border-bottom-left-radius:var(--mat-sidenav-container-shape, var(--mat-sys-corner-large));border-top-right-radius:0;border-bottom-right-radius:0}[dir=rtl] .mat-drawer{border-top-left-radius:var(--mat-sidenav-container-shape, var(--mat-sys-corner-large));border-bottom-left-radius:var(--mat-sidenav-container-shape, var(--mat-sys-corner-large));border-top-right-radius:0;border-bottom-right-radius:0;transform:translate3d(100%, 0, 0)}[dir=rtl] .mat-drawer.mat-drawer-end{border-top-right-radius:var(--mat-sidenav-container-shape, var(--mat-sys-corner-large));border-bottom-right-radius:var(--mat-sidenav-container-shape, var(--mat-sys-corner-large));border-top-left-radius:0;border-bottom-left-radius:0;left:0;right:auto;transform:translate3d(-100%, 0, 0)}.mat-drawer-transition .mat-drawer{transition:transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1)}.mat-drawer:not(.mat-drawer-opened):not(.mat-drawer-animating){visibility:hidden;box-shadow:none}.mat-drawer:not(.mat-drawer-opened):not(.mat-drawer-animating) .mat-drawer-inner-container{display:none}.mat-drawer.mat-drawer-opened.mat-drawer-opened{transform:none}.mat-drawer-side{box-shadow:none;border-right-color:var(--mat-sidenav-container-divider-color, transparent);border-right-width:1px;border-right-style:solid}.mat-drawer-side.mat-drawer-end{border-left-color:var(--mat-sidenav-container-divider-color, transparent);border-left-width:1px;border-left-style:solid;border-right:none}[dir=rtl] .mat-drawer-side{border-left-color:var(--mat-sidenav-container-divider-color, transparent);border-left-width:1px;border-left-style:solid;border-right:none}[dir=rtl] .mat-drawer-side.mat-drawer-end{border-right-color:var(--mat-sidenav-container-divider-color, transparent);border-right-width:1px;border-right-style:solid;border-left:none}.mat-drawer-inner-container{width:100%;height:100%;overflow:auto}.mat-sidenav-fixed{position:fixed}\n";
 function throwMatDuplicatedDrawerError(position) {
   throw Error(`A drawer was already declared for 'position="${position}"'`);
 }
-__name(throwMatDuplicatedDrawerError, "throwMatDuplicatedDrawerError");
 var MAT_DRAWER_DEFAULT_AUTOSIZE = new InjectionToken("MAT_DRAWER_DEFAULT_AUTOSIZE", {
   providedIn: "root",
   factory: MAT_DRAWER_DEFAULT_AUTOSIZE_FACTORY
@@ -225,8 +220,7 @@ var MAT_DRAWER_CONTAINER = new InjectionToken("MAT_DRAWER_CONTAINER");
 function MAT_DRAWER_DEFAULT_AUTOSIZE_FACTORY() {
   return false;
 }
-__name(MAT_DRAWER_DEFAULT_AUTOSIZE_FACTORY, "MAT_DRAWER_DEFAULT_AUTOSIZE_FACTORY");
-var _MatDrawerContent = class _MatDrawerContent extends CdkScrollable {
+var MatDrawerContent = class _MatDrawerContent extends CdkScrollable {
   _platform = inject(Platform);
   _changeDetectorRef = inject(ChangeDetectorRef);
   _container = inject(MatDrawerContainer);
@@ -252,39 +246,37 @@ var _MatDrawerContent = class _MatDrawerContent extends CdkScrollable {
     } = this._container;
     return start != null && start.mode !== "over" && start.opened || end != null && end.mode !== "over" && end.opened;
   }
+  static \u0275fac = function MatDrawerContent_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatDrawerContent)();
+  };
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
+    type: _MatDrawerContent,
+    selectors: [["mat-drawer-content"]],
+    hostAttrs: [1, "mat-drawer-content"],
+    hostVars: 6,
+    hostBindings: function MatDrawerContent_HostBindings(rf, ctx) {
+      if (rf & 2) {
+        \u0275\u0275styleProp("margin-left", ctx._container._contentMargins.left, "px")("margin-right", ctx._container._contentMargins.right, "px");
+        \u0275\u0275classProp("mat-drawer-content-hidden", ctx._shouldBeHidden());
+      }
+    },
+    features: [\u0275\u0275ProvidersFeature([{
+      provide: CdkScrollable,
+      useExisting: _MatDrawerContent
+    }]), \u0275\u0275InheritDefinitionFeature],
+    ngContentSelectors: _c0,
+    decls: 1,
+    vars: 0,
+    template: function MatDrawerContent_Template(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275projectionDef();
+        \u0275\u0275projection(0);
+      }
+    },
+    encapsulation: 2,
+    changeDetection: 0
+  });
 };
-__name(_MatDrawerContent, "MatDrawerContent");
-__publicField(_MatDrawerContent, "\u0275fac", /* @__PURE__ */ __name(function MatDrawerContent_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatDrawerContent)();
-}, "MatDrawerContent_Factory"));
-__publicField(_MatDrawerContent, "\u0275cmp", /* @__PURE__ */ \u0275\u0275defineComponent({
-  type: _MatDrawerContent,
-  selectors: [["mat-drawer-content"]],
-  hostAttrs: [1, "mat-drawer-content"],
-  hostVars: 6,
-  hostBindings: /* @__PURE__ */ __name(function MatDrawerContent_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      \u0275\u0275styleProp("margin-left", ctx._container._contentMargins.left, "px")("margin-right", ctx._container._contentMargins.right, "px");
-      \u0275\u0275classProp("mat-drawer-content-hidden", ctx._shouldBeHidden());
-    }
-  }, "MatDrawerContent_HostBindings"),
-  features: [\u0275\u0275ProvidersFeature([{
-    provide: CdkScrollable,
-    useExisting: _MatDrawerContent
-  }]), \u0275\u0275InheritDefinitionFeature],
-  ngContentSelectors: _c0,
-  decls: 1,
-  vars: 0,
-  template: /* @__PURE__ */ __name(function MatDrawerContent_Template(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275projectionDef();
-      \u0275\u0275projection(0);
-    }
-  }, "MatDrawerContent_Template"),
-  encapsulation: 2,
-  changeDetection: 0
-}));
-var MatDrawerContent = _MatDrawerContent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatDrawerContent, [{
     type: Component,
@@ -306,7 +298,7 @@ var MatDrawerContent = _MatDrawerContent;
     }]
   }], () => [], null);
 })();
-var _MatDrawer = class _MatDrawer {
+var MatDrawer = class _MatDrawer {
   _elementRef = inject(ElementRef);
   _focusTrapFactory = inject(FocusTrapFactory);
   _focusMonitor = inject(FocusMonitor);
@@ -467,11 +459,11 @@ var _MatDrawer = class _MatDrawer {
     if (!this._interactivityChecker.isFocusable(element)) {
       element.tabIndex = -1;
       this._ngZone.runOutsideAngular(() => {
-        const callback = /* @__PURE__ */ __name(() => {
+        const callback = () => {
           cleanupBlur();
           cleanupMousedown();
           element.removeAttribute("tabindex");
-        }, "callback");
+        };
         const cleanupBlur = this._renderer.listen(element, "blur", callback);
         const cleanupMousedown = this._renderer.listen(element, "mousedown", callback);
       });
@@ -669,7 +661,7 @@ var _MatDrawer = class _MatDrawer {
     }
   }
   /** Event handler for animation events. */
-  _handleTransitionEvent = /* @__PURE__ */ __name((event) => {
+  _handleTransitionEvent = (event) => {
     const element = this._elementRef.nativeElement;
     if (event.target === element) {
       this._ngZone.run(() => {
@@ -683,66 +675,64 @@ var _MatDrawer = class _MatDrawer {
         }
       });
     }
-  }, "_handleTransitionEvent");
+  };
+  static \u0275fac = function MatDrawer_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatDrawer)();
+  };
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
+    type: _MatDrawer,
+    selectors: [["mat-drawer"]],
+    viewQuery: function MatDrawer_Query(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275viewQuery(_c1, 5);
+      }
+      if (rf & 2) {
+        let _t;
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._content = _t.first);
+      }
+    },
+    hostAttrs: [1, "mat-drawer"],
+    hostVars: 12,
+    hostBindings: function MatDrawer_HostBindings(rf, ctx) {
+      if (rf & 2) {
+        \u0275\u0275attribute("align", null)("tabIndex", ctx.mode !== "side" ? "-1" : null);
+        \u0275\u0275styleProp("visibility", !ctx._container && !ctx.opened ? "hidden" : null);
+        \u0275\u0275classProp("mat-drawer-end", ctx.position === "end")("mat-drawer-over", ctx.mode === "over")("mat-drawer-push", ctx.mode === "push")("mat-drawer-side", ctx.mode === "side");
+      }
+    },
+    inputs: {
+      position: "position",
+      mode: "mode",
+      disableClose: "disableClose",
+      autoFocus: "autoFocus",
+      opened: "opened"
+    },
+    outputs: {
+      openedChange: "openedChange",
+      _openedStream: "opened",
+      openedStart: "openedStart",
+      _closedStream: "closed",
+      closedStart: "closedStart",
+      onPositionChanged: "positionChanged"
+    },
+    exportAs: ["matDrawer"],
+    ngContentSelectors: _c0,
+    decls: 3,
+    vars: 0,
+    consts: [["content", ""], ["cdkScrollable", "", 1, "mat-drawer-inner-container"]],
+    template: function MatDrawer_Template(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275projectionDef();
+        \u0275\u0275elementStart(0, "div", 1, 0);
+        \u0275\u0275projection(2);
+        \u0275\u0275elementEnd();
+      }
+    },
+    dependencies: [CdkScrollable],
+    encapsulation: 2,
+    changeDetection: 0
+  });
 };
-__name(_MatDrawer, "MatDrawer");
-__publicField(_MatDrawer, "\u0275fac", /* @__PURE__ */ __name(function MatDrawer_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatDrawer)();
-}, "MatDrawer_Factory"));
-__publicField(_MatDrawer, "\u0275cmp", /* @__PURE__ */ \u0275\u0275defineComponent({
-  type: _MatDrawer,
-  selectors: [["mat-drawer"]],
-  viewQuery: /* @__PURE__ */ __name(function MatDrawer_Query(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275viewQuery(_c1, 5);
-    }
-    if (rf & 2) {
-      let _t;
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._content = _t.first);
-    }
-  }, "MatDrawer_Query"),
-  hostAttrs: [1, "mat-drawer"],
-  hostVars: 12,
-  hostBindings: /* @__PURE__ */ __name(function MatDrawer_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      \u0275\u0275attribute("align", null)("tabIndex", ctx.mode !== "side" ? "-1" : null);
-      \u0275\u0275styleProp("visibility", !ctx._container && !ctx.opened ? "hidden" : null);
-      \u0275\u0275classProp("mat-drawer-end", ctx.position === "end")("mat-drawer-over", ctx.mode === "over")("mat-drawer-push", ctx.mode === "push")("mat-drawer-side", ctx.mode === "side");
-    }
-  }, "MatDrawer_HostBindings"),
-  inputs: {
-    position: "position",
-    mode: "mode",
-    disableClose: "disableClose",
-    autoFocus: "autoFocus",
-    opened: "opened"
-  },
-  outputs: {
-    openedChange: "openedChange",
-    _openedStream: "opened",
-    openedStart: "openedStart",
-    _closedStream: "closed",
-    closedStart: "closedStart",
-    onPositionChanged: "positionChanged"
-  },
-  exportAs: ["matDrawer"],
-  ngContentSelectors: _c0,
-  decls: 3,
-  vars: 0,
-  consts: [["content", ""], ["cdkScrollable", "", 1, "mat-drawer-inner-container"]],
-  template: /* @__PURE__ */ __name(function MatDrawer_Template(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275projectionDef();
-      \u0275\u0275elementStart(0, "div", 1, 0);
-      \u0275\u0275projection(2);
-      \u0275\u0275elementEnd();
-    }
-  }, "MatDrawer_Template"),
-  dependencies: [CdkScrollable],
-  encapsulation: 2,
-  changeDetection: 0
-}));
-var MatDrawer = _MatDrawer;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatDrawer, [{
     type: Component,
@@ -813,7 +803,7 @@ var MatDrawer = _MatDrawer;
     }]
   });
 })();
-var _MatDrawerContainer = class _MatDrawerContainer {
+var MatDrawerContainer = class _MatDrawerContainer {
   _dir = inject(Directionality, {
     optional: true
   });
@@ -1013,7 +1003,7 @@ var _MatDrawerContainer = class _MatDrawerContainer {
   _watchDrawerPosition(drawer) {
     drawer.onPositionChanged.pipe(takeUntil(this._drawers.changes)).subscribe(() => {
       afterNextRender({
-        read: /* @__PURE__ */ __name(() => this._validateDrawers(), "read")
+        read: () => this._validateDrawers()
       }, {
         injector: this._injector
       });
@@ -1085,77 +1075,75 @@ var _MatDrawerContainer = class _MatDrawerContainer {
     }
     return this._backdropOverride;
   }
+  static \u0275fac = function MatDrawerContainer_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatDrawerContainer)();
+  };
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
+    type: _MatDrawerContainer,
+    selectors: [["mat-drawer-container"]],
+    contentQueries: function MatDrawerContainer_ContentQueries(rf, ctx, dirIndex) {
+      if (rf & 1) {
+        \u0275\u0275contentQuery(dirIndex, MatDrawerContent, 5);
+        \u0275\u0275contentQuery(dirIndex, MatDrawer, 5);
+      }
+      if (rf & 2) {
+        let _t;
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._content = _t.first);
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._allDrawers = _t);
+      }
+    },
+    viewQuery: function MatDrawerContainer_Query(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275viewQuery(MatDrawerContent, 5);
+      }
+      if (rf & 2) {
+        let _t;
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._userContent = _t.first);
+      }
+    },
+    hostAttrs: [1, "mat-drawer-container"],
+    hostVars: 2,
+    hostBindings: function MatDrawerContainer_HostBindings(rf, ctx) {
+      if (rf & 2) {
+        \u0275\u0275classProp("mat-drawer-container-explicit-backdrop", ctx._backdropOverride);
+      }
+    },
+    inputs: {
+      autosize: "autosize",
+      hasBackdrop: "hasBackdrop"
+    },
+    outputs: {
+      backdropClick: "backdropClick"
+    },
+    exportAs: ["matDrawerContainer"],
+    features: [\u0275\u0275ProvidersFeature([{
+      provide: MAT_DRAWER_CONTAINER,
+      useExisting: _MatDrawerContainer
+    }])],
+    ngContentSelectors: _c3,
+    decls: 4,
+    vars: 2,
+    consts: [[1, "mat-drawer-backdrop", 3, "mat-drawer-shown"], [1, "mat-drawer-backdrop", 3, "click"]],
+    template: function MatDrawerContainer_Template(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275projectionDef(_c2);
+        \u0275\u0275conditionalCreate(0, MatDrawerContainer_Conditional_0_Template, 1, 2, "div", 0);
+        \u0275\u0275projection(1);
+        \u0275\u0275projection(2, 1);
+        \u0275\u0275conditionalCreate(3, MatDrawerContainer_Conditional_3_Template, 2, 0, "mat-drawer-content");
+      }
+      if (rf & 2) {
+        \u0275\u0275conditional(ctx.hasBackdrop ? 0 : -1);
+        \u0275\u0275advance(3);
+        \u0275\u0275conditional(!ctx._content ? 3 : -1);
+      }
+    },
+    dependencies: [MatDrawerContent],
+    styles: [".mat-drawer-container{position:relative;z-index:1;color:var(--mat-sidenav-content-text-color, var(--mat-sys-on-background));background-color:var(--mat-sidenav-content-background-color, var(--mat-sys-background));box-sizing:border-box;display:block;overflow:hidden}.mat-drawer-container[fullscreen]{top:0;left:0;right:0;bottom:0;position:absolute}.mat-drawer-container[fullscreen].mat-drawer-container-has-open{overflow:hidden}.mat-drawer-container.mat-drawer-container-explicit-backdrop .mat-drawer-side{z-index:3}.mat-drawer-container.ng-animate-disabled .mat-drawer-backdrop,.mat-drawer-container.ng-animate-disabled .mat-drawer-content,.ng-animate-disabled .mat-drawer-container .mat-drawer-backdrop,.ng-animate-disabled .mat-drawer-container .mat-drawer-content{transition:none}.mat-drawer-backdrop{top:0;left:0;right:0;bottom:0;position:absolute;display:block;z-index:3;visibility:hidden}.mat-drawer-backdrop.mat-drawer-shown{visibility:visible;background-color:var(--mat-sidenav-scrim-color, color-mix(in srgb, var(--mat-sys-neutral-variant20) 40%, transparent))}.mat-drawer-transition .mat-drawer-backdrop{transition-duration:400ms;transition-timing-function:cubic-bezier(0.25, 0.8, 0.25, 1);transition-property:background-color,visibility}@media(forced-colors: active){.mat-drawer-backdrop{opacity:.5}}.mat-drawer-content{position:relative;z-index:1;display:block;height:100%;overflow:auto}.mat-drawer-content.mat-drawer-content-hidden{opacity:0}.mat-drawer-transition .mat-drawer-content{transition-duration:400ms;transition-timing-function:cubic-bezier(0.25, 0.8, 0.25, 1);transition-property:transform,margin-left,margin-right}.mat-drawer{position:relative;z-index:4;color:var(--mat-sidenav-container-text-color, var(--mat-sys-on-surface-variant));box-shadow:var(--mat-sidenav-container-elevation-shadow, none);background-color:var(--mat-sidenav-container-background-color, var(--mat-sys-surface));border-top-right-radius:var(--mat-sidenav-container-shape, var(--mat-sys-corner-large));border-bottom-right-radius:var(--mat-sidenav-container-shape, var(--mat-sys-corner-large));width:var(--mat-sidenav-container-width, 360px);display:block;position:absolute;top:0;bottom:0;z-index:3;outline:0;box-sizing:border-box;overflow-y:auto;transform:translate3d(-100%, 0, 0)}@media(forced-colors: active){.mat-drawer,[dir=rtl] .mat-drawer.mat-drawer-end{border-right:solid 1px currentColor}}@media(forced-colors: active){[dir=rtl] .mat-drawer,.mat-drawer.mat-drawer-end{border-left:solid 1px currentColor;border-right:none}}.mat-drawer.mat-drawer-side{z-index:2}.mat-drawer.mat-drawer-end{right:0;transform:translate3d(100%, 0, 0);border-top-left-radius:var(--mat-sidenav-container-shape, var(--mat-sys-corner-large));border-bottom-left-radius:var(--mat-sidenav-container-shape, var(--mat-sys-corner-large));border-top-right-radius:0;border-bottom-right-radius:0}[dir=rtl] .mat-drawer{border-top-left-radius:var(--mat-sidenav-container-shape, var(--mat-sys-corner-large));border-bottom-left-radius:var(--mat-sidenav-container-shape, var(--mat-sys-corner-large));border-top-right-radius:0;border-bottom-right-radius:0;transform:translate3d(100%, 0, 0)}[dir=rtl] .mat-drawer.mat-drawer-end{border-top-right-radius:var(--mat-sidenav-container-shape, var(--mat-sys-corner-large));border-bottom-right-radius:var(--mat-sidenav-container-shape, var(--mat-sys-corner-large));border-top-left-radius:0;border-bottom-left-radius:0;left:0;right:auto;transform:translate3d(-100%, 0, 0)}.mat-drawer-transition .mat-drawer{transition:transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1)}.mat-drawer:not(.mat-drawer-opened):not(.mat-drawer-animating){visibility:hidden;box-shadow:none}.mat-drawer:not(.mat-drawer-opened):not(.mat-drawer-animating) .mat-drawer-inner-container{display:none}.mat-drawer.mat-drawer-opened.mat-drawer-opened{transform:none}.mat-drawer-side{box-shadow:none;border-right-color:var(--mat-sidenav-container-divider-color, transparent);border-right-width:1px;border-right-style:solid}.mat-drawer-side.mat-drawer-end{border-left-color:var(--mat-sidenav-container-divider-color, transparent);border-left-width:1px;border-left-style:solid;border-right:none}[dir=rtl] .mat-drawer-side{border-left-color:var(--mat-sidenav-container-divider-color, transparent);border-left-width:1px;border-left-style:solid;border-right:none}[dir=rtl] .mat-drawer-side.mat-drawer-end{border-right-color:var(--mat-sidenav-container-divider-color, transparent);border-right-width:1px;border-right-style:solid;border-left:none}.mat-drawer-inner-container{width:100%;height:100%;overflow:auto}.mat-sidenav-fixed{position:fixed}\n"],
+    encapsulation: 2,
+    changeDetection: 0
+  });
 };
-__name(_MatDrawerContainer, "MatDrawerContainer");
-__publicField(_MatDrawerContainer, "\u0275fac", /* @__PURE__ */ __name(function MatDrawerContainer_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatDrawerContainer)();
-}, "MatDrawerContainer_Factory"));
-__publicField(_MatDrawerContainer, "\u0275cmp", /* @__PURE__ */ \u0275\u0275defineComponent({
-  type: _MatDrawerContainer,
-  selectors: [["mat-drawer-container"]],
-  contentQueries: /* @__PURE__ */ __name(function MatDrawerContainer_ContentQueries(rf, ctx, dirIndex) {
-    if (rf & 1) {
-      \u0275\u0275contentQuery(dirIndex, MatDrawerContent, 5);
-      \u0275\u0275contentQuery(dirIndex, MatDrawer, 5);
-    }
-    if (rf & 2) {
-      let _t;
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._content = _t.first);
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._allDrawers = _t);
-    }
-  }, "MatDrawerContainer_ContentQueries"),
-  viewQuery: /* @__PURE__ */ __name(function MatDrawerContainer_Query(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275viewQuery(MatDrawerContent, 5);
-    }
-    if (rf & 2) {
-      let _t;
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._userContent = _t.first);
-    }
-  }, "MatDrawerContainer_Query"),
-  hostAttrs: [1, "mat-drawer-container"],
-  hostVars: 2,
-  hostBindings: /* @__PURE__ */ __name(function MatDrawerContainer_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      \u0275\u0275classProp("mat-drawer-container-explicit-backdrop", ctx._backdropOverride);
-    }
-  }, "MatDrawerContainer_HostBindings"),
-  inputs: {
-    autosize: "autosize",
-    hasBackdrop: "hasBackdrop"
-  },
-  outputs: {
-    backdropClick: "backdropClick"
-  },
-  exportAs: ["matDrawerContainer"],
-  features: [\u0275\u0275ProvidersFeature([{
-    provide: MAT_DRAWER_CONTAINER,
-    useExisting: _MatDrawerContainer
-  }])],
-  ngContentSelectors: _c3,
-  decls: 4,
-  vars: 2,
-  consts: [[1, "mat-drawer-backdrop", 3, "mat-drawer-shown"], [1, "mat-drawer-backdrop", 3, "click"]],
-  template: /* @__PURE__ */ __name(function MatDrawerContainer_Template(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275projectionDef(_c2);
-      \u0275\u0275conditionalCreate(0, MatDrawerContainer_Conditional_0_Template, 1, 2, "div", 0);
-      \u0275\u0275projection(1);
-      \u0275\u0275projection(2, 1);
-      \u0275\u0275conditionalCreate(3, MatDrawerContainer_Conditional_3_Template, 2, 0, "mat-drawer-content");
-    }
-    if (rf & 2) {
-      \u0275\u0275conditional(ctx.hasBackdrop ? 0 : -1);
-      \u0275\u0275advance(3);
-      \u0275\u0275conditional(!ctx._content ? 3 : -1);
-    }
-  }, "MatDrawerContainer_Template"),
-  dependencies: [MatDrawerContent],
-  styles: [".mat-drawer-container{position:relative;z-index:1;color:var(--mat-sidenav-content-text-color, var(--mat-sys-on-background));background-color:var(--mat-sidenav-content-background-color, var(--mat-sys-background));box-sizing:border-box;display:block;overflow:hidden}.mat-drawer-container[fullscreen]{top:0;left:0;right:0;bottom:0;position:absolute}.mat-drawer-container[fullscreen].mat-drawer-container-has-open{overflow:hidden}.mat-drawer-container.mat-drawer-container-explicit-backdrop .mat-drawer-side{z-index:3}.mat-drawer-container.ng-animate-disabled .mat-drawer-backdrop,.mat-drawer-container.ng-animate-disabled .mat-drawer-content,.ng-animate-disabled .mat-drawer-container .mat-drawer-backdrop,.ng-animate-disabled .mat-drawer-container .mat-drawer-content{transition:none}.mat-drawer-backdrop{top:0;left:0;right:0;bottom:0;position:absolute;display:block;z-index:3;visibility:hidden}.mat-drawer-backdrop.mat-drawer-shown{visibility:visible;background-color:var(--mat-sidenav-scrim-color, color-mix(in srgb, var(--mat-sys-neutral-variant20) 40%, transparent))}.mat-drawer-transition .mat-drawer-backdrop{transition-duration:400ms;transition-timing-function:cubic-bezier(0.25, 0.8, 0.25, 1);transition-property:background-color,visibility}@media(forced-colors: active){.mat-drawer-backdrop{opacity:.5}}.mat-drawer-content{position:relative;z-index:1;display:block;height:100%;overflow:auto}.mat-drawer-content.mat-drawer-content-hidden{opacity:0}.mat-drawer-transition .mat-drawer-content{transition-duration:400ms;transition-timing-function:cubic-bezier(0.25, 0.8, 0.25, 1);transition-property:transform,margin-left,margin-right}.mat-drawer{position:relative;z-index:4;color:var(--mat-sidenav-container-text-color, var(--mat-sys-on-surface-variant));box-shadow:var(--mat-sidenav-container-elevation-shadow, none);background-color:var(--mat-sidenav-container-background-color, var(--mat-sys-surface));border-top-right-radius:var(--mat-sidenav-container-shape, var(--mat-sys-corner-large));border-bottom-right-radius:var(--mat-sidenav-container-shape, var(--mat-sys-corner-large));width:var(--mat-sidenav-container-width, 360px);display:block;position:absolute;top:0;bottom:0;z-index:3;outline:0;box-sizing:border-box;overflow-y:auto;transform:translate3d(-100%, 0, 0)}@media(forced-colors: active){.mat-drawer,[dir=rtl] .mat-drawer.mat-drawer-end{border-right:solid 1px currentColor}}@media(forced-colors: active){[dir=rtl] .mat-drawer,.mat-drawer.mat-drawer-end{border-left:solid 1px currentColor;border-right:none}}.mat-drawer.mat-drawer-side{z-index:2}.mat-drawer.mat-drawer-end{right:0;transform:translate3d(100%, 0, 0);border-top-left-radius:var(--mat-sidenav-container-shape, var(--mat-sys-corner-large));border-bottom-left-radius:var(--mat-sidenav-container-shape, var(--mat-sys-corner-large));border-top-right-radius:0;border-bottom-right-radius:0}[dir=rtl] .mat-drawer{border-top-left-radius:var(--mat-sidenav-container-shape, var(--mat-sys-corner-large));border-bottom-left-radius:var(--mat-sidenav-container-shape, var(--mat-sys-corner-large));border-top-right-radius:0;border-bottom-right-radius:0;transform:translate3d(100%, 0, 0)}[dir=rtl] .mat-drawer.mat-drawer-end{border-top-right-radius:var(--mat-sidenav-container-shape, var(--mat-sys-corner-large));border-bottom-right-radius:var(--mat-sidenav-container-shape, var(--mat-sys-corner-large));border-top-left-radius:0;border-bottom-left-radius:0;left:0;right:auto;transform:translate3d(-100%, 0, 0)}.mat-drawer-transition .mat-drawer{transition:transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1)}.mat-drawer:not(.mat-drawer-opened):not(.mat-drawer-animating){visibility:hidden;box-shadow:none}.mat-drawer:not(.mat-drawer-opened):not(.mat-drawer-animating) .mat-drawer-inner-container{display:none}.mat-drawer.mat-drawer-opened.mat-drawer-opened{transform:none}.mat-drawer-side{box-shadow:none;border-right-color:var(--mat-sidenav-container-divider-color, transparent);border-right-width:1px;border-right-style:solid}.mat-drawer-side.mat-drawer-end{border-left-color:var(--mat-sidenav-container-divider-color, transparent);border-left-width:1px;border-left-style:solid;border-right:none}[dir=rtl] .mat-drawer-side{border-left-color:var(--mat-sidenav-container-divider-color, transparent);border-left-width:1px;border-left-style:solid;border-right:none}[dir=rtl] .mat-drawer-side.mat-drawer-end{border-right-color:var(--mat-sidenav-container-divider-color, transparent);border-right-width:1px;border-right-style:solid;border-left:none}.mat-drawer-inner-container{width:100%;height:100%;overflow:auto}.mat-sidenav-fixed{position:fixed}\n"],
-  encapsulation: 2,
-  changeDetection: 0
-}));
-var MatDrawerContainer = _MatDrawerContainer;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatDrawerContainer, [{
     type: Component,
@@ -1204,36 +1192,34 @@ var MatDrawerContainer = _MatDrawerContainer;
     }]
   });
 })();
-var _MatSidenavContent = class _MatSidenavContent extends MatDrawerContent {
+var MatSidenavContent = class _MatSidenavContent extends MatDrawerContent {
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275MatSidenavContent_BaseFactory;
+    return function MatSidenavContent_Factory(__ngFactoryType__) {
+      return (\u0275MatSidenavContent_BaseFactory || (\u0275MatSidenavContent_BaseFactory = \u0275\u0275getInheritedFactory(_MatSidenavContent)))(__ngFactoryType__ || _MatSidenavContent);
+    };
+  })();
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
+    type: _MatSidenavContent,
+    selectors: [["mat-sidenav-content"]],
+    hostAttrs: [1, "mat-drawer-content", "mat-sidenav-content"],
+    features: [\u0275\u0275ProvidersFeature([{
+      provide: CdkScrollable,
+      useExisting: _MatSidenavContent
+    }]), \u0275\u0275InheritDefinitionFeature],
+    ngContentSelectors: _c0,
+    decls: 1,
+    vars: 0,
+    template: function MatSidenavContent_Template(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275projectionDef();
+        \u0275\u0275projection(0);
+      }
+    },
+    encapsulation: 2,
+    changeDetection: 0
+  });
 };
-__name(_MatSidenavContent, "MatSidenavContent");
-__publicField(_MatSidenavContent, "\u0275fac", /* @__PURE__ */ (() => {
-  let \u0275MatSidenavContent_BaseFactory;
-  return /* @__PURE__ */ __name(function MatSidenavContent_Factory(__ngFactoryType__) {
-    return (\u0275MatSidenavContent_BaseFactory || (\u0275MatSidenavContent_BaseFactory = \u0275\u0275getInheritedFactory(_MatSidenavContent)))(__ngFactoryType__ || _MatSidenavContent);
-  }, "MatSidenavContent_Factory");
-})());
-__publicField(_MatSidenavContent, "\u0275cmp", /* @__PURE__ */ \u0275\u0275defineComponent({
-  type: _MatSidenavContent,
-  selectors: [["mat-sidenav-content"]],
-  hostAttrs: [1, "mat-drawer-content", "mat-sidenav-content"],
-  features: [\u0275\u0275ProvidersFeature([{
-    provide: CdkScrollable,
-    useExisting: _MatSidenavContent
-  }]), \u0275\u0275InheritDefinitionFeature],
-  ngContentSelectors: _c0,
-  decls: 1,
-  vars: 0,
-  template: /* @__PURE__ */ __name(function MatSidenavContent_Template(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275projectionDef();
-      \u0275\u0275projection(0);
-    }
-  }, "MatSidenavContent_Template"),
-  encapsulation: 2,
-  changeDetection: 0
-}));
-var MatSidenavContent = _MatSidenavContent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatSidenavContent, [{
     type: Component,
@@ -1252,7 +1238,7 @@ var MatSidenavContent = _MatSidenavContent;
     }]
   }], null, null);
 })();
-var _MatSidenav = class _MatSidenav extends MatDrawer {
+var MatSidenav = class _MatSidenav extends MatDrawer {
   /** Whether the sidenav is fixed in the viewport. */
   get fixedInViewport() {
     return this._fixedInViewport;
@@ -1283,53 +1269,51 @@ var _MatSidenav = class _MatSidenav extends MatDrawer {
     this._fixedBottomGap = coerceNumberProperty(value);
   }
   _fixedBottomGap = 0;
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275MatSidenav_BaseFactory;
+    return function MatSidenav_Factory(__ngFactoryType__) {
+      return (\u0275MatSidenav_BaseFactory || (\u0275MatSidenav_BaseFactory = \u0275\u0275getInheritedFactory(_MatSidenav)))(__ngFactoryType__ || _MatSidenav);
+    };
+  })();
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
+    type: _MatSidenav,
+    selectors: [["mat-sidenav"]],
+    hostAttrs: [1, "mat-drawer", "mat-sidenav"],
+    hostVars: 16,
+    hostBindings: function MatSidenav_HostBindings(rf, ctx) {
+      if (rf & 2) {
+        \u0275\u0275attribute("tabIndex", ctx.mode !== "side" ? "-1" : null)("align", null);
+        \u0275\u0275styleProp("top", ctx.fixedInViewport ? ctx.fixedTopGap : null, "px")("bottom", ctx.fixedInViewport ? ctx.fixedBottomGap : null, "px");
+        \u0275\u0275classProp("mat-drawer-end", ctx.position === "end")("mat-drawer-over", ctx.mode === "over")("mat-drawer-push", ctx.mode === "push")("mat-drawer-side", ctx.mode === "side")("mat-sidenav-fixed", ctx.fixedInViewport);
+      }
+    },
+    inputs: {
+      fixedInViewport: "fixedInViewport",
+      fixedTopGap: "fixedTopGap",
+      fixedBottomGap: "fixedBottomGap"
+    },
+    exportAs: ["matSidenav"],
+    features: [\u0275\u0275ProvidersFeature([{
+      provide: MatDrawer,
+      useExisting: _MatSidenav
+    }]), \u0275\u0275InheritDefinitionFeature],
+    ngContentSelectors: _c0,
+    decls: 3,
+    vars: 0,
+    consts: [["content", ""], ["cdkScrollable", "", 1, "mat-drawer-inner-container"]],
+    template: function MatSidenav_Template(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275projectionDef();
+        \u0275\u0275elementStart(0, "div", 1, 0);
+        \u0275\u0275projection(2);
+        \u0275\u0275elementEnd();
+      }
+    },
+    dependencies: [CdkScrollable],
+    encapsulation: 2,
+    changeDetection: 0
+  });
 };
-__name(_MatSidenav, "MatSidenav");
-__publicField(_MatSidenav, "\u0275fac", /* @__PURE__ */ (() => {
-  let \u0275MatSidenav_BaseFactory;
-  return /* @__PURE__ */ __name(function MatSidenav_Factory(__ngFactoryType__) {
-    return (\u0275MatSidenav_BaseFactory || (\u0275MatSidenav_BaseFactory = \u0275\u0275getInheritedFactory(_MatSidenav)))(__ngFactoryType__ || _MatSidenav);
-  }, "MatSidenav_Factory");
-})());
-__publicField(_MatSidenav, "\u0275cmp", /* @__PURE__ */ \u0275\u0275defineComponent({
-  type: _MatSidenav,
-  selectors: [["mat-sidenav"]],
-  hostAttrs: [1, "mat-drawer", "mat-sidenav"],
-  hostVars: 16,
-  hostBindings: /* @__PURE__ */ __name(function MatSidenav_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      \u0275\u0275attribute("tabIndex", ctx.mode !== "side" ? "-1" : null)("align", null);
-      \u0275\u0275styleProp("top", ctx.fixedInViewport ? ctx.fixedTopGap : null, "px")("bottom", ctx.fixedInViewport ? ctx.fixedBottomGap : null, "px");
-      \u0275\u0275classProp("mat-drawer-end", ctx.position === "end")("mat-drawer-over", ctx.mode === "over")("mat-drawer-push", ctx.mode === "push")("mat-drawer-side", ctx.mode === "side")("mat-sidenav-fixed", ctx.fixedInViewport);
-    }
-  }, "MatSidenav_HostBindings"),
-  inputs: {
-    fixedInViewport: "fixedInViewport",
-    fixedTopGap: "fixedTopGap",
-    fixedBottomGap: "fixedBottomGap"
-  },
-  exportAs: ["matSidenav"],
-  features: [\u0275\u0275ProvidersFeature([{
-    provide: MatDrawer,
-    useExisting: _MatSidenav
-  }]), \u0275\u0275InheritDefinitionFeature],
-  ngContentSelectors: _c0,
-  decls: 3,
-  vars: 0,
-  consts: [["content", ""], ["cdkScrollable", "", 1, "mat-drawer-inner-container"]],
-  template: /* @__PURE__ */ __name(function MatSidenav_Template(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275projectionDef();
-      \u0275\u0275elementStart(0, "div", 1, 0);
-      \u0275\u0275projection(2);
-      \u0275\u0275elementEnd();
-    }
-  }, "MatSidenav_Template"),
-  dependencies: [CdkScrollable],
-  encapsulation: 2,
-  changeDetection: 0
-}));
-var MatSidenav = _MatSidenav;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatSidenav, [{
     type: Component,
@@ -1372,71 +1356,69 @@ var MatSidenav = _MatSidenav;
     }]
   });
 })();
-var _MatSidenavContainer = class _MatSidenavContainer extends MatDrawerContainer {
+var MatSidenavContainer = class _MatSidenavContainer extends MatDrawerContainer {
   _allDrawers = void 0;
   // We need an initializer here to avoid a TS error.
   _content = void 0;
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275MatSidenavContainer_BaseFactory;
+    return function MatSidenavContainer_Factory(__ngFactoryType__) {
+      return (\u0275MatSidenavContainer_BaseFactory || (\u0275MatSidenavContainer_BaseFactory = \u0275\u0275getInheritedFactory(_MatSidenavContainer)))(__ngFactoryType__ || _MatSidenavContainer);
+    };
+  })();
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
+    type: _MatSidenavContainer,
+    selectors: [["mat-sidenav-container"]],
+    contentQueries: function MatSidenavContainer_ContentQueries(rf, ctx, dirIndex) {
+      if (rf & 1) {
+        \u0275\u0275contentQuery(dirIndex, MatSidenavContent, 5);
+        \u0275\u0275contentQuery(dirIndex, MatSidenav, 5);
+      }
+      if (rf & 2) {
+        let _t;
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._content = _t.first);
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._allDrawers = _t);
+      }
+    },
+    hostAttrs: [1, "mat-drawer-container", "mat-sidenav-container"],
+    hostVars: 2,
+    hostBindings: function MatSidenavContainer_HostBindings(rf, ctx) {
+      if (rf & 2) {
+        \u0275\u0275classProp("mat-drawer-container-explicit-backdrop", ctx._backdropOverride);
+      }
+    },
+    exportAs: ["matSidenavContainer"],
+    features: [\u0275\u0275ProvidersFeature([{
+      provide: MAT_DRAWER_CONTAINER,
+      useExisting: _MatSidenavContainer
+    }, {
+      provide: MatDrawerContainer,
+      useExisting: _MatSidenavContainer
+    }]), \u0275\u0275InheritDefinitionFeature],
+    ngContentSelectors: _c5,
+    decls: 4,
+    vars: 2,
+    consts: [[1, "mat-drawer-backdrop", 3, "mat-drawer-shown"], [1, "mat-drawer-backdrop", 3, "click"]],
+    template: function MatSidenavContainer_Template(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275projectionDef(_c4);
+        \u0275\u0275conditionalCreate(0, MatSidenavContainer_Conditional_0_Template, 1, 2, "div", 0);
+        \u0275\u0275projection(1);
+        \u0275\u0275projection(2, 1);
+        \u0275\u0275conditionalCreate(3, MatSidenavContainer_Conditional_3_Template, 2, 0, "mat-sidenav-content");
+      }
+      if (rf & 2) {
+        \u0275\u0275conditional(ctx.hasBackdrop ? 0 : -1);
+        \u0275\u0275advance(3);
+        \u0275\u0275conditional(!ctx._content ? 3 : -1);
+      }
+    },
+    dependencies: [MatSidenavContent],
+    styles: [_c6],
+    encapsulation: 2,
+    changeDetection: 0
+  });
 };
-__name(_MatSidenavContainer, "MatSidenavContainer");
-__publicField(_MatSidenavContainer, "\u0275fac", /* @__PURE__ */ (() => {
-  let \u0275MatSidenavContainer_BaseFactory;
-  return /* @__PURE__ */ __name(function MatSidenavContainer_Factory(__ngFactoryType__) {
-    return (\u0275MatSidenavContainer_BaseFactory || (\u0275MatSidenavContainer_BaseFactory = \u0275\u0275getInheritedFactory(_MatSidenavContainer)))(__ngFactoryType__ || _MatSidenavContainer);
-  }, "MatSidenavContainer_Factory");
-})());
-__publicField(_MatSidenavContainer, "\u0275cmp", /* @__PURE__ */ \u0275\u0275defineComponent({
-  type: _MatSidenavContainer,
-  selectors: [["mat-sidenav-container"]],
-  contentQueries: /* @__PURE__ */ __name(function MatSidenavContainer_ContentQueries(rf, ctx, dirIndex) {
-    if (rf & 1) {
-      \u0275\u0275contentQuery(dirIndex, MatSidenavContent, 5);
-      \u0275\u0275contentQuery(dirIndex, MatSidenav, 5);
-    }
-    if (rf & 2) {
-      let _t;
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._content = _t.first);
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._allDrawers = _t);
-    }
-  }, "MatSidenavContainer_ContentQueries"),
-  hostAttrs: [1, "mat-drawer-container", "mat-sidenav-container"],
-  hostVars: 2,
-  hostBindings: /* @__PURE__ */ __name(function MatSidenavContainer_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      \u0275\u0275classProp("mat-drawer-container-explicit-backdrop", ctx._backdropOverride);
-    }
-  }, "MatSidenavContainer_HostBindings"),
-  exportAs: ["matSidenavContainer"],
-  features: [\u0275\u0275ProvidersFeature([{
-    provide: MAT_DRAWER_CONTAINER,
-    useExisting: _MatSidenavContainer
-  }, {
-    provide: MatDrawerContainer,
-    useExisting: _MatSidenavContainer
-  }]), \u0275\u0275InheritDefinitionFeature],
-  ngContentSelectors: _c5,
-  decls: 4,
-  vars: 2,
-  consts: [[1, "mat-drawer-backdrop", 3, "mat-drawer-shown"], [1, "mat-drawer-backdrop", 3, "click"]],
-  template: /* @__PURE__ */ __name(function MatSidenavContainer_Template(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275projectionDef(_c4);
-      \u0275\u0275conditionalCreate(0, MatSidenavContainer_Conditional_0_Template, 1, 2, "div", 0);
-      \u0275\u0275projection(1);
-      \u0275\u0275projection(2, 1);
-      \u0275\u0275conditionalCreate(3, MatSidenavContainer_Conditional_3_Template, 2, 0, "mat-sidenav-content");
-    }
-    if (rf & 2) {
-      \u0275\u0275conditional(ctx.hasBackdrop ? 0 : -1);
-      \u0275\u0275advance(3);
-      \u0275\u0275conditional(!ctx._content ? 3 : -1);
-    }
-  }, "MatSidenavContainer_Template"),
-  dependencies: [MatSidenavContent],
-  styles: [_c6],
-  encapsulation: 2,
-  changeDetection: 0
-}));
-var MatSidenavContainer = _MatSidenavContainer;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatSidenavContainer, [{
     type: Component,
@@ -1475,21 +1457,19 @@ var MatSidenavContainer = _MatSidenavContainer;
     }]
   });
 })();
-var _MatSidenavModule = class _MatSidenavModule {
+var MatSidenavModule = class _MatSidenavModule {
+  static \u0275fac = function MatSidenavModule_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatSidenavModule)();
+  };
+  static \u0275mod = /* @__PURE__ */ \u0275\u0275defineNgModule({
+    type: _MatSidenavModule,
+    imports: [MatCommonModule, CdkScrollableModule, MatDrawer, MatDrawerContainer, MatDrawerContent, MatSidenav, MatSidenavContainer, MatSidenavContent],
+    exports: [CdkScrollableModule, MatCommonModule, MatDrawer, MatDrawerContainer, MatDrawerContent, MatSidenav, MatSidenavContainer, MatSidenavContent]
+  });
+  static \u0275inj = /* @__PURE__ */ \u0275\u0275defineInjector({
+    imports: [MatCommonModule, CdkScrollableModule, CdkScrollableModule, MatCommonModule]
+  });
 };
-__name(_MatSidenavModule, "MatSidenavModule");
-__publicField(_MatSidenavModule, "\u0275fac", /* @__PURE__ */ __name(function MatSidenavModule_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatSidenavModule)();
-}, "MatSidenavModule_Factory"));
-__publicField(_MatSidenavModule, "\u0275mod", /* @__PURE__ */ \u0275\u0275defineNgModule({
-  type: _MatSidenavModule,
-  imports: [MatCommonModule, CdkScrollableModule, MatDrawer, MatDrawerContainer, MatDrawerContent, MatSidenav, MatSidenavContainer, MatSidenavContent],
-  exports: [CdkScrollableModule, MatCommonModule, MatDrawer, MatDrawerContainer, MatDrawerContent, MatSidenav, MatSidenavContainer, MatSidenavContent]
-}));
-__publicField(_MatSidenavModule, "\u0275inj", /* @__PURE__ */ \u0275\u0275defineInjector({
-  imports: [MatCommonModule, CdkScrollableModule, CdkScrollableModule, MatCommonModule]
-}));
-var MatSidenavModule = _MatSidenavModule;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatSidenavModule, [{
     type: NgModule,
@@ -1501,7 +1481,7 @@ var MatSidenavModule = _MatSidenavModule;
 })();
 
 // node_modules/@angular/material/fesm2022/divider.mjs
-var _MatDivider = class _MatDivider {
+var MatDivider = class _MatDivider {
   /** Whether the divider is vertically aligned. */
   get vertical() {
     return this._vertical;
@@ -1518,35 +1498,33 @@ var _MatDivider = class _MatDivider {
     this._inset = coerceBooleanProperty(value);
   }
   _inset = false;
+  static \u0275fac = function MatDivider_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatDivider)();
+  };
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
+    type: _MatDivider,
+    selectors: [["mat-divider"]],
+    hostAttrs: ["role", "separator", 1, "mat-divider"],
+    hostVars: 7,
+    hostBindings: function MatDivider_HostBindings(rf, ctx) {
+      if (rf & 2) {
+        \u0275\u0275attribute("aria-orientation", ctx.vertical ? "vertical" : "horizontal");
+        \u0275\u0275classProp("mat-divider-vertical", ctx.vertical)("mat-divider-horizontal", !ctx.vertical)("mat-divider-inset", ctx.inset);
+      }
+    },
+    inputs: {
+      vertical: "vertical",
+      inset: "inset"
+    },
+    decls: 0,
+    vars: 0,
+    template: function MatDivider_Template(rf, ctx) {
+    },
+    styles: [".mat-divider{display:block;margin:0;border-top-style:solid;border-top-color:var(--mat-divider-color, var(--mat-sys-outline-variant));border-top-width:var(--mat-divider-width, 1px)}.mat-divider.mat-divider-vertical{border-top:0;border-right-style:solid;border-right-color:var(--mat-divider-color, var(--mat-sys-outline-variant));border-right-width:var(--mat-divider-width, 1px)}.mat-divider.mat-divider-inset{margin-left:80px}[dir=rtl] .mat-divider.mat-divider-inset{margin-left:auto;margin-right:80px}\n"],
+    encapsulation: 2,
+    changeDetection: 0
+  });
 };
-__name(_MatDivider, "MatDivider");
-__publicField(_MatDivider, "\u0275fac", /* @__PURE__ */ __name(function MatDivider_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatDivider)();
-}, "MatDivider_Factory"));
-__publicField(_MatDivider, "\u0275cmp", /* @__PURE__ */ \u0275\u0275defineComponent({
-  type: _MatDivider,
-  selectors: [["mat-divider"]],
-  hostAttrs: ["role", "separator", 1, "mat-divider"],
-  hostVars: 7,
-  hostBindings: /* @__PURE__ */ __name(function MatDivider_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      \u0275\u0275attribute("aria-orientation", ctx.vertical ? "vertical" : "horizontal");
-      \u0275\u0275classProp("mat-divider-vertical", ctx.vertical)("mat-divider-horizontal", !ctx.vertical)("mat-divider-inset", ctx.inset);
-    }
-  }, "MatDivider_HostBindings"),
-  inputs: {
-    vertical: "vertical",
-    inset: "inset"
-  },
-  decls: 0,
-  vars: 0,
-  template: /* @__PURE__ */ __name(function MatDivider_Template(rf, ctx) {
-  }, "MatDivider_Template"),
-  styles: [".mat-divider{display:block;margin:0;border-top-style:solid;border-top-color:var(--mat-divider-color, var(--mat-sys-outline-variant));border-top-width:var(--mat-divider-width, 1px)}.mat-divider.mat-divider-vertical{border-top:0;border-right-style:solid;border-right-color:var(--mat-divider-color, var(--mat-sys-outline-variant));border-right-width:var(--mat-divider-width, 1px)}.mat-divider.mat-divider-inset{margin-left:80px}[dir=rtl] .mat-divider.mat-divider-inset{margin-left:auto;margin-right:80px}\n"],
-  encapsulation: 2,
-  changeDetection: 0
-}));
-var MatDivider = _MatDivider;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatDivider, [{
     type: Component,
@@ -1574,335 +1552,25 @@ var MatDivider = _MatDivider;
     }]
   });
 })();
-var _MatDividerModule = class _MatDividerModule {
+var MatDividerModule = class _MatDividerModule {
+  static \u0275fac = function MatDividerModule_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatDividerModule)();
+  };
+  static \u0275mod = /* @__PURE__ */ \u0275\u0275defineNgModule({
+    type: _MatDividerModule,
+    imports: [MatCommonModule, MatDivider],
+    exports: [MatDivider, MatCommonModule]
+  });
+  static \u0275inj = /* @__PURE__ */ \u0275\u0275defineInjector({
+    imports: [MatCommonModule, MatCommonModule]
+  });
 };
-__name(_MatDividerModule, "MatDividerModule");
-__publicField(_MatDividerModule, "\u0275fac", /* @__PURE__ */ __name(function MatDividerModule_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatDividerModule)();
-}, "MatDividerModule_Factory"));
-__publicField(_MatDividerModule, "\u0275mod", /* @__PURE__ */ \u0275\u0275defineNgModule({
-  type: _MatDividerModule,
-  imports: [MatCommonModule, MatDivider],
-  exports: [MatDivider, MatCommonModule]
-}));
-__publicField(_MatDividerModule, "\u0275inj", /* @__PURE__ */ \u0275\u0275defineInjector({
-  imports: [MatCommonModule, MatCommonModule]
-}));
-var MatDividerModule = _MatDividerModule;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatDividerModule, [{
     type: NgModule,
     args: [{
       imports: [MatCommonModule, MatDivider],
       exports: [MatDivider, MatCommonModule]
-    }]
-  }], null, null);
-})();
-
-// node_modules/@angular/cdk/fesm2022/selection-model.mjs
-var _SelectionModel = class _SelectionModel {
-  _multiple;
-  _emitChanges;
-  compareWith;
-  /** Currently-selected values. */
-  _selection = /* @__PURE__ */ new Set();
-  /** Keeps track of the deselected options that haven't been emitted by the change event. */
-  _deselectedToEmit = [];
-  /** Keeps track of the selected options that haven't been emitted by the change event. */
-  _selectedToEmit = [];
-  /** Cache for the array value of the selected items. */
-  _selected;
-  /** Selected values. */
-  get selected() {
-    if (!this._selected) {
-      this._selected = Array.from(this._selection.values());
-    }
-    return this._selected;
-  }
-  /** Event emitted when the value has changed. */
-  changed = new Subject();
-  constructor(_multiple = false, initiallySelectedValues, _emitChanges = true, compareWith) {
-    this._multiple = _multiple;
-    this._emitChanges = _emitChanges;
-    this.compareWith = compareWith;
-    if (initiallySelectedValues && initiallySelectedValues.length) {
-      if (_multiple) {
-        initiallySelectedValues.forEach((value) => this._markSelected(value));
-      } else {
-        this._markSelected(initiallySelectedValues[0]);
-      }
-      this._selectedToEmit.length = 0;
-    }
-  }
-  /**
-   * Selects a value or an array of values.
-   * @param values The values to select
-   * @return Whether the selection changed as a result of this call
-   */
-  select(...values) {
-    this._verifyValueAssignment(values);
-    values.forEach((value) => this._markSelected(value));
-    const changed = this._hasQueuedChanges();
-    this._emitChangeEvent();
-    return changed;
-  }
-  /**
-   * Deselects a value or an array of values.
-   * @param values The values to deselect
-   * @return Whether the selection changed as a result of this call
-   */
-  deselect(...values) {
-    this._verifyValueAssignment(values);
-    values.forEach((value) => this._unmarkSelected(value));
-    const changed = this._hasQueuedChanges();
-    this._emitChangeEvent();
-    return changed;
-  }
-  /**
-   * Sets the selected values
-   * @param values The new selected values
-   * @return Whether the selection changed as a result of this call
-   */
-  setSelection(...values) {
-    this._verifyValueAssignment(values);
-    const oldValues = this.selected;
-    const newSelectedSet = new Set(values.map((value) => this._getConcreteValue(value)));
-    values.forEach((value) => this._markSelected(value));
-    oldValues.filter((value) => !newSelectedSet.has(this._getConcreteValue(value, newSelectedSet))).forEach((value) => this._unmarkSelected(value));
-    const changed = this._hasQueuedChanges();
-    this._emitChangeEvent();
-    return changed;
-  }
-  /**
-   * Toggles a value between selected and deselected.
-   * @param value The value to toggle
-   * @return Whether the selection changed as a result of this call
-   */
-  toggle(value) {
-    return this.isSelected(value) ? this.deselect(value) : this.select(value);
-  }
-  /**
-   * Clears all of the selected values.
-   * @param flushEvent Whether to flush the changes in an event.
-   *   If false, the changes to the selection will be flushed along with the next event.
-   * @return Whether the selection changed as a result of this call
-   */
-  clear(flushEvent = true) {
-    this._unmarkAll();
-    const changed = this._hasQueuedChanges();
-    if (flushEvent) {
-      this._emitChangeEvent();
-    }
-    return changed;
-  }
-  /**
-   * Determines whether a value is selected.
-   */
-  isSelected(value) {
-    return this._selection.has(this._getConcreteValue(value));
-  }
-  /**
-   * Determines whether the model does not have a value.
-   */
-  isEmpty() {
-    return this._selection.size === 0;
-  }
-  /**
-   * Determines whether the model has a value.
-   */
-  hasValue() {
-    return !this.isEmpty();
-  }
-  /**
-   * Sorts the selected values based on a predicate function.
-   */
-  sort(predicate) {
-    if (this._multiple && this.selected) {
-      this._selected.sort(predicate);
-    }
-  }
-  /**
-   * Gets whether multiple values can be selected.
-   */
-  isMultipleSelection() {
-    return this._multiple;
-  }
-  /** Emits a change event and clears the records of selected and deselected values. */
-  _emitChangeEvent() {
-    this._selected = null;
-    if (this._selectedToEmit.length || this._deselectedToEmit.length) {
-      this.changed.next({
-        source: this,
-        added: this._selectedToEmit,
-        removed: this._deselectedToEmit
-      });
-      this._deselectedToEmit = [];
-      this._selectedToEmit = [];
-    }
-  }
-  /** Selects a value. */
-  _markSelected(value) {
-    value = this._getConcreteValue(value);
-    if (!this.isSelected(value)) {
-      if (!this._multiple) {
-        this._unmarkAll();
-      }
-      if (!this.isSelected(value)) {
-        this._selection.add(value);
-      }
-      if (this._emitChanges) {
-        this._selectedToEmit.push(value);
-      }
-    }
-  }
-  /** Deselects a value. */
-  _unmarkSelected(value) {
-    value = this._getConcreteValue(value);
-    if (this.isSelected(value)) {
-      this._selection.delete(value);
-      if (this._emitChanges) {
-        this._deselectedToEmit.push(value);
-      }
-    }
-  }
-  /** Clears out the selected values. */
-  _unmarkAll() {
-    if (!this.isEmpty()) {
-      this._selection.forEach((value) => this._unmarkSelected(value));
-    }
-  }
-  /**
-   * Verifies the value assignment and throws an error if the specified value array is
-   * including multiple values while the selection model is not supporting multiple values.
-   */
-  _verifyValueAssignment(values) {
-    if (values.length > 1 && !this._multiple && (typeof ngDevMode === "undefined" || ngDevMode)) {
-      throw getMultipleValuesInSingleSelectionError();
-    }
-  }
-  /** Whether there are queued up change to be emitted. */
-  _hasQueuedChanges() {
-    return !!(this._deselectedToEmit.length || this._selectedToEmit.length);
-  }
-  /** Returns a value that is comparable to inputValue by applying compareWith function, returns the same inputValue otherwise. */
-  _getConcreteValue(inputValue, selection) {
-    if (!this.compareWith) {
-      return inputValue;
-    } else {
-      selection = selection ?? this._selection;
-      for (let selectedValue of selection) {
-        if (this.compareWith(inputValue, selectedValue)) {
-          return selectedValue;
-        }
-      }
-      return inputValue;
-    }
-  }
-};
-__name(_SelectionModel, "SelectionModel");
-var SelectionModel = _SelectionModel;
-function getMultipleValuesInSingleSelectionError() {
-  return Error("Cannot pass multiple values into SelectionModel with single-value mode.");
-}
-__name(getMultipleValuesInSingleSelectionError, "getMultipleValuesInSingleSelectionError");
-
-// node_modules/@angular/material/fesm2022/pseudo-checkbox.mjs
-var _MatPseudoCheckbox = class _MatPseudoCheckbox {
-  _animationsDisabled = _animationsDisabled();
-  /** Display state of the checkbox. */
-  state = "unchecked";
-  /** Whether the checkbox is disabled. */
-  disabled = false;
-  /**
-   * Appearance of the pseudo checkbox. Default appearance of 'full' renders a checkmark/mixedmark
-   * indicator inside a square box. 'minimal' appearance only renders the checkmark/mixedmark.
-   */
-  appearance = "full";
-  constructor() {
-  }
-};
-__name(_MatPseudoCheckbox, "MatPseudoCheckbox");
-__publicField(_MatPseudoCheckbox, "\u0275fac", /* @__PURE__ */ __name(function MatPseudoCheckbox_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatPseudoCheckbox)();
-}, "MatPseudoCheckbox_Factory"));
-__publicField(_MatPseudoCheckbox, "\u0275cmp", /* @__PURE__ */ \u0275\u0275defineComponent({
-  type: _MatPseudoCheckbox,
-  selectors: [["mat-pseudo-checkbox"]],
-  hostAttrs: [1, "mat-pseudo-checkbox"],
-  hostVars: 12,
-  hostBindings: /* @__PURE__ */ __name(function MatPseudoCheckbox_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      \u0275\u0275classProp("mat-pseudo-checkbox-indeterminate", ctx.state === "indeterminate")("mat-pseudo-checkbox-checked", ctx.state === "checked")("mat-pseudo-checkbox-disabled", ctx.disabled)("mat-pseudo-checkbox-minimal", ctx.appearance === "minimal")("mat-pseudo-checkbox-full", ctx.appearance === "full")("_mat-animation-noopable", ctx._animationsDisabled);
-    }
-  }, "MatPseudoCheckbox_HostBindings"),
-  inputs: {
-    state: "state",
-    disabled: "disabled",
-    appearance: "appearance"
-  },
-  decls: 0,
-  vars: 0,
-  template: /* @__PURE__ */ __name(function MatPseudoCheckbox_Template(rf, ctx) {
-  }, "MatPseudoCheckbox_Template"),
-  styles: ['.mat-pseudo-checkbox{border-radius:2px;cursor:pointer;display:inline-block;vertical-align:middle;box-sizing:border-box;position:relative;flex-shrink:0;transition:border-color 90ms cubic-bezier(0, 0, 0.2, 0.1),background-color 90ms cubic-bezier(0, 0, 0.2, 0.1)}.mat-pseudo-checkbox::after{position:absolute;opacity:0;content:"";border-bottom:2px solid currentColor;transition:opacity 90ms cubic-bezier(0, 0, 0.2, 0.1)}.mat-pseudo-checkbox._mat-animation-noopable{transition:none !important;animation:none !important}.mat-pseudo-checkbox._mat-animation-noopable::after{transition:none}.mat-pseudo-checkbox-disabled{cursor:default}.mat-pseudo-checkbox-indeterminate::after{left:1px;opacity:1;border-radius:2px}.mat-pseudo-checkbox-checked::after{left:1px;border-left:2px solid currentColor;transform:rotate(-45deg);opacity:1;box-sizing:content-box}.mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-checked::after,.mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-indeterminate::after{color:var(--mat-pseudo-checkbox-minimal-selected-checkmark-color, var(--mat-sys-primary))}.mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-checked.mat-pseudo-checkbox-disabled::after,.mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-indeterminate.mat-pseudo-checkbox-disabled::after{color:var(--mat-pseudo-checkbox-minimal-disabled-selected-checkmark-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mat-pseudo-checkbox-full{border-color:var(--mat-pseudo-checkbox-full-unselected-icon-color, var(--mat-sys-on-surface-variant));border-width:2px;border-style:solid}.mat-pseudo-checkbox-full.mat-pseudo-checkbox-disabled{border-color:var(--mat-pseudo-checkbox-full-disabled-unselected-icon-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mat-pseudo-checkbox-full.mat-pseudo-checkbox-checked,.mat-pseudo-checkbox-full.mat-pseudo-checkbox-indeterminate{background-color:var(--mat-pseudo-checkbox-full-selected-icon-color, var(--mat-sys-primary));border-color:rgba(0,0,0,0)}.mat-pseudo-checkbox-full.mat-pseudo-checkbox-checked::after,.mat-pseudo-checkbox-full.mat-pseudo-checkbox-indeterminate::after{color:var(--mat-pseudo-checkbox-full-selected-checkmark-color, var(--mat-sys-on-primary))}.mat-pseudo-checkbox-full.mat-pseudo-checkbox-checked.mat-pseudo-checkbox-disabled,.mat-pseudo-checkbox-full.mat-pseudo-checkbox-indeterminate.mat-pseudo-checkbox-disabled{background-color:var(--mat-pseudo-checkbox-full-disabled-selected-icon-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mat-pseudo-checkbox-full.mat-pseudo-checkbox-checked.mat-pseudo-checkbox-disabled::after,.mat-pseudo-checkbox-full.mat-pseudo-checkbox-indeterminate.mat-pseudo-checkbox-disabled::after{color:var(--mat-pseudo-checkbox-full-disabled-selected-checkmark-color, var(--mat-sys-surface))}.mat-pseudo-checkbox{width:18px;height:18px}.mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-checked::after{width:14px;height:6px;transform-origin:center;top:-4.2426406871px;left:0;bottom:0;right:0;margin:auto}.mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-indeterminate::after{top:8px;width:16px}.mat-pseudo-checkbox-full.mat-pseudo-checkbox-checked::after{width:10px;height:4px;transform-origin:center;top:-2.8284271247px;left:0;bottom:0;right:0;margin:auto}.mat-pseudo-checkbox-full.mat-pseudo-checkbox-indeterminate::after{top:6px;width:12px}\n'],
-  encapsulation: 2,
-  changeDetection: 0
-}));
-var MatPseudoCheckbox = _MatPseudoCheckbox;
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatPseudoCheckbox, [{
-    type: Component,
-    args: [{
-      encapsulation: ViewEncapsulation.None,
-      changeDetection: ChangeDetectionStrategy.OnPush,
-      selector: "mat-pseudo-checkbox",
-      template: "",
-      host: {
-        "class": "mat-pseudo-checkbox",
-        "[class.mat-pseudo-checkbox-indeterminate]": 'state === "indeterminate"',
-        "[class.mat-pseudo-checkbox-checked]": 'state === "checked"',
-        "[class.mat-pseudo-checkbox-disabled]": "disabled",
-        "[class.mat-pseudo-checkbox-minimal]": 'appearance === "minimal"',
-        "[class.mat-pseudo-checkbox-full]": 'appearance === "full"',
-        "[class._mat-animation-noopable]": "_animationsDisabled"
-      },
-      styles: ['.mat-pseudo-checkbox{border-radius:2px;cursor:pointer;display:inline-block;vertical-align:middle;box-sizing:border-box;position:relative;flex-shrink:0;transition:border-color 90ms cubic-bezier(0, 0, 0.2, 0.1),background-color 90ms cubic-bezier(0, 0, 0.2, 0.1)}.mat-pseudo-checkbox::after{position:absolute;opacity:0;content:"";border-bottom:2px solid currentColor;transition:opacity 90ms cubic-bezier(0, 0, 0.2, 0.1)}.mat-pseudo-checkbox._mat-animation-noopable{transition:none !important;animation:none !important}.mat-pseudo-checkbox._mat-animation-noopable::after{transition:none}.mat-pseudo-checkbox-disabled{cursor:default}.mat-pseudo-checkbox-indeterminate::after{left:1px;opacity:1;border-radius:2px}.mat-pseudo-checkbox-checked::after{left:1px;border-left:2px solid currentColor;transform:rotate(-45deg);opacity:1;box-sizing:content-box}.mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-checked::after,.mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-indeterminate::after{color:var(--mat-pseudo-checkbox-minimal-selected-checkmark-color, var(--mat-sys-primary))}.mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-checked.mat-pseudo-checkbox-disabled::after,.mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-indeterminate.mat-pseudo-checkbox-disabled::after{color:var(--mat-pseudo-checkbox-minimal-disabled-selected-checkmark-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mat-pseudo-checkbox-full{border-color:var(--mat-pseudo-checkbox-full-unselected-icon-color, var(--mat-sys-on-surface-variant));border-width:2px;border-style:solid}.mat-pseudo-checkbox-full.mat-pseudo-checkbox-disabled{border-color:var(--mat-pseudo-checkbox-full-disabled-unselected-icon-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mat-pseudo-checkbox-full.mat-pseudo-checkbox-checked,.mat-pseudo-checkbox-full.mat-pseudo-checkbox-indeterminate{background-color:var(--mat-pseudo-checkbox-full-selected-icon-color, var(--mat-sys-primary));border-color:rgba(0,0,0,0)}.mat-pseudo-checkbox-full.mat-pseudo-checkbox-checked::after,.mat-pseudo-checkbox-full.mat-pseudo-checkbox-indeterminate::after{color:var(--mat-pseudo-checkbox-full-selected-checkmark-color, var(--mat-sys-on-primary))}.mat-pseudo-checkbox-full.mat-pseudo-checkbox-checked.mat-pseudo-checkbox-disabled,.mat-pseudo-checkbox-full.mat-pseudo-checkbox-indeterminate.mat-pseudo-checkbox-disabled{background-color:var(--mat-pseudo-checkbox-full-disabled-selected-icon-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mat-pseudo-checkbox-full.mat-pseudo-checkbox-checked.mat-pseudo-checkbox-disabled::after,.mat-pseudo-checkbox-full.mat-pseudo-checkbox-indeterminate.mat-pseudo-checkbox-disabled::after{color:var(--mat-pseudo-checkbox-full-disabled-selected-checkmark-color, var(--mat-sys-surface))}.mat-pseudo-checkbox{width:18px;height:18px}.mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-checked::after{width:14px;height:6px;transform-origin:center;top:-4.2426406871px;left:0;bottom:0;right:0;margin:auto}.mat-pseudo-checkbox-minimal.mat-pseudo-checkbox-indeterminate::after{top:8px;width:16px}.mat-pseudo-checkbox-full.mat-pseudo-checkbox-checked::after{width:10px;height:4px;transform-origin:center;top:-2.8284271247px;left:0;bottom:0;right:0;margin:auto}.mat-pseudo-checkbox-full.mat-pseudo-checkbox-indeterminate::after{top:6px;width:12px}\n']
-    }]
-  }], () => [], {
-    state: [{
-      type: Input
-    }],
-    disabled: [{
-      type: Input
-    }],
-    appearance: [{
-      type: Input
-    }]
-  });
-})();
-
-// node_modules/@angular/material/fesm2022/pseudo-checkbox-module.mjs
-var _MatPseudoCheckboxModule = class _MatPseudoCheckboxModule {
-};
-__name(_MatPseudoCheckboxModule, "MatPseudoCheckboxModule");
-__publicField(_MatPseudoCheckboxModule, "\u0275fac", /* @__PURE__ */ __name(function MatPseudoCheckboxModule_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatPseudoCheckboxModule)();
-}, "MatPseudoCheckboxModule_Factory"));
-__publicField(_MatPseudoCheckboxModule, "\u0275mod", /* @__PURE__ */ \u0275\u0275defineNgModule({
-  type: _MatPseudoCheckboxModule,
-  imports: [MatCommonModule, MatPseudoCheckbox],
-  exports: [MatPseudoCheckbox]
-}));
-__publicField(_MatPseudoCheckboxModule, "\u0275inj", /* @__PURE__ */ \u0275\u0275defineInjector({
-  imports: [MatCommonModule]
-}));
-var MatPseudoCheckboxModule = _MatPseudoCheckboxModule;
-(() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatPseudoCheckboxModule, [{
-    type: NgModule,
-    args: [{
-      imports: [MatCommonModule, MatPseudoCheckbox],
-      exports: [MatPseudoCheckbox]
     }]
   }], null, null);
 })();
@@ -1921,7 +1589,6 @@ function MatListOption_ng_template_0_Template(rf, ctx) {
     \u0275\u0275projection(0, 4);
   }
 }
-__name(MatListOption_ng_template_0_Template, "MatListOption_ng_template_0_Template");
 function MatListOption_ng_template_2_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 11);
@@ -1942,7 +1609,6 @@ function MatListOption_ng_template_2_Template(rf, ctx) {
     \u0275\u0275property("checked", ctx_r1.selected)("disabled", ctx_r1.disabled);
   }
 }
-__name(MatListOption_ng_template_2_Template, "MatListOption_ng_template_2_Template");
 function MatListOption_ng_template_4_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 17);
@@ -1958,10 +1624,8 @@ function MatListOption_ng_template_4_Template(rf, ctx) {
     \u0275\u0275property("checked", ctx_r1.selected)("disabled", ctx_r1.disabled);
   }
 }
-__name(MatListOption_ng_template_4_Template, "MatListOption_ng_template_4_Template");
 function MatListOption_Conditional_6_ng_template_1_Template(rf, ctx) {
 }
-__name(MatListOption_Conditional_6_ng_template_1_Template, "MatListOption_Conditional_6_ng_template_1_Template");
 function MatListOption_Conditional_6_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "span", 4);
@@ -1975,10 +1639,8 @@ function MatListOption_Conditional_6_Template(rf, ctx) {
     \u0275\u0275property("ngTemplateOutlet", checkbox_r3);
   }
 }
-__name(MatListOption_Conditional_6_Template, "MatListOption_Conditional_6_Template");
 function MatListOption_Conditional_7_ng_template_1_Template(rf, ctx) {
 }
-__name(MatListOption_Conditional_7_ng_template_1_Template, "MatListOption_Conditional_7_ng_template_1_Template");
 function MatListOption_Conditional_7_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "span", 5);
@@ -1992,10 +1654,8 @@ function MatListOption_Conditional_7_Template(rf, ctx) {
     \u0275\u0275property("ngTemplateOutlet", radio_r4);
   }
 }
-__name(MatListOption_Conditional_7_Template, "MatListOption_Conditional_7_Template");
 function MatListOption_Conditional_8_ng_template_0_Template(rf, ctx) {
 }
-__name(MatListOption_Conditional_8_ng_template_0_Template, "MatListOption_Conditional_8_ng_template_0_Template");
 function MatListOption_Conditional_8_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275template(0, MatListOption_Conditional_8_ng_template_0_Template, 0, 0, "ng-template", 6);
@@ -2006,10 +1666,8 @@ function MatListOption_Conditional_8_Template(rf, ctx) {
     \u0275\u0275property("ngTemplateOutlet", icons_r5);
   }
 }
-__name(MatListOption_Conditional_8_Template, "MatListOption_Conditional_8_Template");
 function MatListOption_Conditional_15_ng_template_1_Template(rf, ctx) {
 }
-__name(MatListOption_Conditional_15_ng_template_1_Template, "MatListOption_Conditional_15_ng_template_1_Template");
 function MatListOption_Conditional_15_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "span", 9);
@@ -2023,10 +1681,8 @@ function MatListOption_Conditional_15_Template(rf, ctx) {
     \u0275\u0275property("ngTemplateOutlet", checkbox_r3);
   }
 }
-__name(MatListOption_Conditional_15_Template, "MatListOption_Conditional_15_Template");
 function MatListOption_Conditional_16_ng_template_1_Template(rf, ctx) {
 }
-__name(MatListOption_Conditional_16_ng_template_1_Template, "MatListOption_Conditional_16_ng_template_1_Template");
 function MatListOption_Conditional_16_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "span", 9);
@@ -2040,10 +1696,8 @@ function MatListOption_Conditional_16_Template(rf, ctx) {
     \u0275\u0275property("ngTemplateOutlet", radio_r4);
   }
 }
-__name(MatListOption_Conditional_16_Template, "MatListOption_Conditional_16_Template");
 function MatListOption_Conditional_17_ng_template_0_Template(rf, ctx) {
 }
-__name(MatListOption_Conditional_17_ng_template_0_Template, "MatListOption_Conditional_17_ng_template_0_Template");
 function MatListOption_Conditional_17_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275template(0, MatListOption_Conditional_17_ng_template_0_Template, 0, 0, "ng-template", 6);
@@ -2054,23 +1708,20 @@ function MatListOption_Conditional_17_Template(rf, ctx) {
     \u0275\u0275property("ngTemplateOutlet", icons_r5);
   }
 }
-__name(MatListOption_Conditional_17_Template, "MatListOption_Conditional_17_Template");
 var LIST_OPTION = new InjectionToken("ListOption");
-var _MatListItemTitle = class _MatListItemTitle {
+var MatListItemTitle = class _MatListItemTitle {
   _elementRef = inject(ElementRef);
   constructor() {
   }
+  static \u0275fac = function MatListItemTitle_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatListItemTitle)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _MatListItemTitle,
+    selectors: [["", "matListItemTitle", ""]],
+    hostAttrs: [1, "mat-mdc-list-item-title", "mdc-list-item__primary-text"]
+  });
 };
-__name(_MatListItemTitle, "MatListItemTitle");
-__publicField(_MatListItemTitle, "\u0275fac", /* @__PURE__ */ __name(function MatListItemTitle_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatListItemTitle)();
-}, "MatListItemTitle_Factory"));
-__publicField(_MatListItemTitle, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _MatListItemTitle,
-  selectors: [["", "matListItemTitle", ""]],
-  hostAttrs: [1, "mat-mdc-list-item-title", "mdc-list-item__primary-text"]
-}));
-var MatListItemTitle = _MatListItemTitle;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatListItemTitle, [{
     type: Directive,
@@ -2082,21 +1733,19 @@ var MatListItemTitle = _MatListItemTitle;
     }]
   }], () => [], null);
 })();
-var _MatListItemLine = class _MatListItemLine {
+var MatListItemLine = class _MatListItemLine {
   _elementRef = inject(ElementRef);
   constructor() {
   }
+  static \u0275fac = function MatListItemLine_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatListItemLine)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _MatListItemLine,
+    selectors: [["", "matListItemLine", ""]],
+    hostAttrs: [1, "mat-mdc-list-item-line", "mdc-list-item__secondary-text"]
+  });
 };
-__name(_MatListItemLine, "MatListItemLine");
-__publicField(_MatListItemLine, "\u0275fac", /* @__PURE__ */ __name(function MatListItemLine_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatListItemLine)();
-}, "MatListItemLine_Factory"));
-__publicField(_MatListItemLine, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _MatListItemLine,
-  selectors: [["", "matListItemLine", ""]],
-  hostAttrs: [1, "mat-mdc-list-item-line", "mdc-list-item__secondary-text"]
-}));
-var MatListItemLine = _MatListItemLine;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatListItemLine, [{
     type: Directive,
@@ -2108,18 +1757,16 @@ var MatListItemLine = _MatListItemLine;
     }]
   }], () => [], null);
 })();
-var _MatListItemMeta = class _MatListItemMeta {
+var MatListItemMeta = class _MatListItemMeta {
+  static \u0275fac = function MatListItemMeta_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatListItemMeta)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _MatListItemMeta,
+    selectors: [["", "matListItemMeta", ""]],
+    hostAttrs: [1, "mat-mdc-list-item-meta", "mdc-list-item__end"]
+  });
 };
-__name(_MatListItemMeta, "MatListItemMeta");
-__publicField(_MatListItemMeta, "\u0275fac", /* @__PURE__ */ __name(function MatListItemMeta_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatListItemMeta)();
-}, "MatListItemMeta_Factory"));
-__publicField(_MatListItemMeta, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _MatListItemMeta,
-  selectors: [["", "matListItemMeta", ""]],
-  hostAttrs: [1, "mat-mdc-list-item-meta", "mdc-list-item__end"]
-}));
-var MatListItemMeta = _MatListItemMeta;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatListItemMeta, [{
     type: Directive,
@@ -2131,7 +1778,7 @@ var MatListItemMeta = _MatListItemMeta;
     }]
   }], null, null);
 })();
-var __MatListItemGraphicBase = class __MatListItemGraphicBase {
+var _MatListItemGraphicBase = class __MatListItemGraphicBase {
   _listOption = inject(LIST_OPTION, {
     optional: true
   });
@@ -2140,21 +1787,19 @@ var __MatListItemGraphicBase = class __MatListItemGraphicBase {
   _isAlignedAtStart() {
     return !this._listOption || this._listOption?._getTogglePosition() === "after";
   }
-};
-__name(__MatListItemGraphicBase, "_MatListItemGraphicBase");
-__publicField(__MatListItemGraphicBase, "\u0275fac", /* @__PURE__ */ __name(function _MatListItemGraphicBase_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || __MatListItemGraphicBase)();
-}, "_MatListItemGraphicBase_Factory"));
-__publicField(__MatListItemGraphicBase, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: __MatListItemGraphicBase,
-  hostVars: 4,
-  hostBindings: /* @__PURE__ */ __name(function _MatListItemGraphicBase_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      \u0275\u0275classProp("mdc-list-item__start", ctx._isAlignedAtStart())("mdc-list-item__end", !ctx._isAlignedAtStart());
+  static \u0275fac = function _MatListItemGraphicBase_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || __MatListItemGraphicBase)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: __MatListItemGraphicBase,
+    hostVars: 4,
+    hostBindings: function _MatListItemGraphicBase_HostBindings(rf, ctx) {
+      if (rf & 2) {
+        \u0275\u0275classProp("mdc-list-item__start", ctx._isAlignedAtStart())("mdc-list-item__end", !ctx._isAlignedAtStart());
+      }
     }
-  }, "_MatListItemGraphicBase_HostBindings")
-}));
-var _MatListItemGraphicBase = __MatListItemGraphicBase;
+  });
+};
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(_MatListItemGraphicBase, [{
     type: Directive,
@@ -2170,22 +1815,20 @@ var _MatListItemGraphicBase = __MatListItemGraphicBase;
     }]
   }], () => [], null);
 })();
-var _MatListItemAvatar = class _MatListItemAvatar extends _MatListItemGraphicBase {
+var MatListItemAvatar = class _MatListItemAvatar extends _MatListItemGraphicBase {
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275MatListItemAvatar_BaseFactory;
+    return function MatListItemAvatar_Factory(__ngFactoryType__) {
+      return (\u0275MatListItemAvatar_BaseFactory || (\u0275MatListItemAvatar_BaseFactory = \u0275\u0275getInheritedFactory(_MatListItemAvatar)))(__ngFactoryType__ || _MatListItemAvatar);
+    };
+  })();
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _MatListItemAvatar,
+    selectors: [["", "matListItemAvatar", ""]],
+    hostAttrs: [1, "mat-mdc-list-item-avatar"],
+    features: [\u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_MatListItemAvatar, "MatListItemAvatar");
-__publicField(_MatListItemAvatar, "\u0275fac", /* @__PURE__ */ (() => {
-  let \u0275MatListItemAvatar_BaseFactory;
-  return /* @__PURE__ */ __name(function MatListItemAvatar_Factory(__ngFactoryType__) {
-    return (\u0275MatListItemAvatar_BaseFactory || (\u0275MatListItemAvatar_BaseFactory = \u0275\u0275getInheritedFactory(_MatListItemAvatar)))(__ngFactoryType__ || _MatListItemAvatar);
-  }, "MatListItemAvatar_Factory");
-})());
-__publicField(_MatListItemAvatar, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _MatListItemAvatar,
-  selectors: [["", "matListItemAvatar", ""]],
-  hostAttrs: [1, "mat-mdc-list-item-avatar"],
-  features: [\u0275\u0275InheritDefinitionFeature]
-}));
-var MatListItemAvatar = _MatListItemAvatar;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatListItemAvatar, [{
     type: Directive,
@@ -2197,22 +1840,20 @@ var MatListItemAvatar = _MatListItemAvatar;
     }]
   }], null, null);
 })();
-var _MatListItemIcon = class _MatListItemIcon extends _MatListItemGraphicBase {
+var MatListItemIcon = class _MatListItemIcon extends _MatListItemGraphicBase {
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275MatListItemIcon_BaseFactory;
+    return function MatListItemIcon_Factory(__ngFactoryType__) {
+      return (\u0275MatListItemIcon_BaseFactory || (\u0275MatListItemIcon_BaseFactory = \u0275\u0275getInheritedFactory(_MatListItemIcon)))(__ngFactoryType__ || _MatListItemIcon);
+    };
+  })();
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _MatListItemIcon,
+    selectors: [["", "matListItemIcon", ""]],
+    hostAttrs: [1, "mat-mdc-list-item-icon"],
+    features: [\u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_MatListItemIcon, "MatListItemIcon");
-__publicField(_MatListItemIcon, "\u0275fac", /* @__PURE__ */ (() => {
-  let \u0275MatListItemIcon_BaseFactory;
-  return /* @__PURE__ */ __name(function MatListItemIcon_Factory(__ngFactoryType__) {
-    return (\u0275MatListItemIcon_BaseFactory || (\u0275MatListItemIcon_BaseFactory = \u0275\u0275getInheritedFactory(_MatListItemIcon)))(__ngFactoryType__ || _MatListItemIcon);
-  }, "MatListItemIcon_Factory");
-})());
-__publicField(_MatListItemIcon, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _MatListItemIcon,
-  selectors: [["", "matListItemIcon", ""]],
-  hostAttrs: [1, "mat-mdc-list-item-icon"],
-  features: [\u0275\u0275InheritDefinitionFeature]
-}));
-var MatListItemIcon = _MatListItemIcon;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatListItemIcon, [{
     type: Directive,
@@ -2225,7 +1866,7 @@ var MatListItemIcon = _MatListItemIcon;
   }], null, null);
 })();
 var MAT_LIST_CONFIG = new InjectionToken("MAT_LIST_CONFIG");
-var _MatListBase = class _MatListBase {
+var MatListBase = class _MatListBase {
   _isNonInteractive = true;
   /** Whether ripples for all list items is disabled. */
   get disableRipple() {
@@ -2251,25 +1892,23 @@ var _MatListBase = class _MatListBase {
   _defaultOptions = inject(MAT_LIST_CONFIG, {
     optional: true
   });
-};
-__name(_MatListBase, "MatListBase");
-__publicField(_MatListBase, "\u0275fac", /* @__PURE__ */ __name(function MatListBase_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatListBase)();
-}, "MatListBase_Factory"));
-__publicField(_MatListBase, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _MatListBase,
-  hostVars: 1,
-  hostBindings: /* @__PURE__ */ __name(function MatListBase_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      \u0275\u0275attribute("aria-disabled", ctx.disabled);
+  static \u0275fac = function MatListBase_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatListBase)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _MatListBase,
+    hostVars: 1,
+    hostBindings: function MatListBase_HostBindings(rf, ctx) {
+      if (rf & 2) {
+        \u0275\u0275attribute("aria-disabled", ctx.disabled);
+      }
+    },
+    inputs: {
+      disableRipple: "disableRipple",
+      disabled: "disabled"
     }
-  }, "MatListBase_HostBindings"),
-  inputs: {
-    disableRipple: "disableRipple",
-    disabled: "disabled"
-  }
-}));
-var MatListBase = _MatListBase;
+  });
+};
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatListBase, [{
     type: Directive,
@@ -2287,7 +1926,7 @@ var MatListBase = _MatListBase;
     }]
   });
 })();
-var _MatListItemBase = class _MatListItemBase {
+var MatListItemBase = class _MatListItemBase {
   _elementRef = inject(ElementRef);
   _ngZone = inject(NgZone);
   _listBase = inject(MatListBase, {
@@ -2449,38 +2088,36 @@ var _MatListItemBase = class _MatListItemBase {
   _checkDomForUnscopedTextContent() {
     this._hasUnscopedTextContent = Array.from(this._unscopedContent.nativeElement.childNodes).filter((node) => node.nodeType !== node.COMMENT_NODE).some((node) => !!(node.textContent && node.textContent.trim()));
   }
+  static \u0275fac = function MatListItemBase_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatListItemBase)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _MatListItemBase,
+    contentQueries: function MatListItemBase_ContentQueries(rf, ctx, dirIndex) {
+      if (rf & 1) {
+        \u0275\u0275contentQuery(dirIndex, MatListItemAvatar, 4);
+        \u0275\u0275contentQuery(dirIndex, MatListItemIcon, 4);
+      }
+      if (rf & 2) {
+        let _t;
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._avatars = _t);
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._icons = _t);
+      }
+    },
+    hostVars: 4,
+    hostBindings: function MatListItemBase_HostBindings(rf, ctx) {
+      if (rf & 2) {
+        \u0275\u0275attribute("aria-disabled", ctx.disabled)("disabled", ctx._isButtonElement && ctx.disabled || null);
+        \u0275\u0275classProp("mdc-list-item--disabled", ctx.disabled);
+      }
+    },
+    inputs: {
+      lines: "lines",
+      disableRipple: "disableRipple",
+      disabled: "disabled"
+    }
+  });
 };
-__name(_MatListItemBase, "MatListItemBase");
-__publicField(_MatListItemBase, "\u0275fac", /* @__PURE__ */ __name(function MatListItemBase_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatListItemBase)();
-}, "MatListItemBase_Factory"));
-__publicField(_MatListItemBase, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _MatListItemBase,
-  contentQueries: /* @__PURE__ */ __name(function MatListItemBase_ContentQueries(rf, ctx, dirIndex) {
-    if (rf & 1) {
-      \u0275\u0275contentQuery(dirIndex, MatListItemAvatar, 4);
-      \u0275\u0275contentQuery(dirIndex, MatListItemIcon, 4);
-    }
-    if (rf & 2) {
-      let _t;
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._avatars = _t);
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._icons = _t);
-    }
-  }, "MatListItemBase_ContentQueries"),
-  hostVars: 4,
-  hostBindings: /* @__PURE__ */ __name(function MatListItemBase_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      \u0275\u0275attribute("aria-disabled", ctx.disabled)("disabled", ctx._isButtonElement && ctx.disabled || null);
-      \u0275\u0275classProp("mdc-list-item--disabled", ctx.disabled);
-    }
-  }, "MatListItemBase_HostBindings"),
-  inputs: {
-    lines: "lines",
-    disableRipple: "disableRipple",
-    disabled: "disabled"
-  }
-}));
-var MatListItemBase = _MatListItemBase;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatListItemBase, [{
     type: Directive,
@@ -2531,45 +2168,42 @@ function sanityCheckListItemContent(item) {
     console.warn("A list item can have at maximum three lines.");
   }
 }
-__name(sanityCheckListItemContent, "sanityCheckListItemContent");
-var _MatActionList = class _MatActionList extends MatListBase {
+var MatActionList = class _MatActionList extends MatListBase {
   // An navigation list is considered interactive, but does not extend the interactive list
   // base class. We do this because as per MDC, items of interactive lists are only reachable
   // through keyboard shortcuts. We want all items for the navigation list to be reachable
   // through tab key as we do not intend to provide any special accessibility treatment. The
   // accessibility treatment depends on how the end-user will interact with it.
   _isNonInteractive = false;
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275MatActionList_BaseFactory;
+    return function MatActionList_Factory(__ngFactoryType__) {
+      return (\u0275MatActionList_BaseFactory || (\u0275MatActionList_BaseFactory = \u0275\u0275getInheritedFactory(_MatActionList)))(__ngFactoryType__ || _MatActionList);
+    };
+  })();
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
+    type: _MatActionList,
+    selectors: [["mat-action-list"]],
+    hostAttrs: ["role", "group", 1, "mat-mdc-action-list", "mat-mdc-list-base", "mdc-list"],
+    exportAs: ["matActionList"],
+    features: [\u0275\u0275ProvidersFeature([{
+      provide: MatListBase,
+      useExisting: _MatActionList
+    }]), \u0275\u0275InheritDefinitionFeature],
+    ngContentSelectors: _c02,
+    decls: 1,
+    vars: 0,
+    template: function MatActionList_Template(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275projectionDef();
+        \u0275\u0275projection(0);
+      }
+    },
+    styles: ['.mdc-list{margin:0;padding:8px 0;list-style-type:none}.mdc-list:focus{outline:none}.mdc-list-item{display:flex;position:relative;justify-content:flex-start;overflow:hidden;padding:0;align-items:stretch;cursor:pointer;padding-left:16px;padding-right:16px;background-color:var(--mat-list-list-item-container-color, transparent);border-radius:var(--mat-list-list-item-container-shape, var(--mat-sys-corner-none))}.mdc-list-item.mdc-list-item--selected{background-color:var(--mat-list-list-item-selected-container-color)}.mdc-list-item:focus{outline:0}.mdc-list-item.mdc-list-item--disabled{cursor:auto}.mdc-list-item.mdc-list-item--with-one-line{height:var(--mat-list-list-item-one-line-container-height, 48px)}.mdc-list-item.mdc-list-item--with-one-line .mdc-list-item__start{align-self:center;margin-top:0}.mdc-list-item.mdc-list-item--with-one-line .mdc-list-item__end{align-self:center;margin-top:0}.mdc-list-item.mdc-list-item--with-two-lines{height:var(--mat-list-list-item-two-line-container-height, 64px)}.mdc-list-item.mdc-list-item--with-two-lines .mdc-list-item__start{align-self:flex-start;margin-top:16px}.mdc-list-item.mdc-list-item--with-two-lines .mdc-list-item__end{align-self:center;margin-top:0}.mdc-list-item.mdc-list-item--with-three-lines{height:var(--mat-list-list-item-three-line-container-height, 88px)}.mdc-list-item.mdc-list-item--with-three-lines .mdc-list-item__start{align-self:flex-start;margin-top:16px}.mdc-list-item.mdc-list-item--with-three-lines .mdc-list-item__end{align-self:flex-start;margin-top:16px}.mdc-list-item.mdc-list-item--selected::before,.mdc-list-item.mdc-list-item--selected:focus::before,.mdc-list-item:not(.mdc-list-item--selected):focus::before{position:absolute;box-sizing:border-box;width:100%;height:100%;top:0;left:0;content:"";pointer-events:none}a.mdc-list-item{color:inherit;text-decoration:none}.mdc-list-item__start{fill:currentColor;flex-shrink:0;pointer-events:none}.mdc-list-item--with-leading-icon .mdc-list-item__start{color:var(--mat-list-list-item-leading-icon-color, var(--mat-sys-on-surface-variant));width:var(--mat-list-list-item-leading-icon-size, 24px);height:var(--mat-list-list-item-leading-icon-size, 24px);margin-left:16px;margin-right:32px}[dir=rtl] .mdc-list-item--with-leading-icon .mdc-list-item__start{margin-left:32px;margin-right:16px}.mdc-list-item--with-leading-icon:hover .mdc-list-item__start{color:var(--mat-list-list-item-hover-leading-icon-color)}.mdc-list-item--with-leading-avatar .mdc-list-item__start{width:var(--mat-list-list-item-leading-avatar-size, 40px);height:var(--mat-list-list-item-leading-avatar-size, 40px);margin-left:16px;margin-right:16px;border-radius:50%}.mdc-list-item--with-leading-avatar .mdc-list-item__start,[dir=rtl] .mdc-list-item--with-leading-avatar .mdc-list-item__start{margin-left:16px;margin-right:16px;border-radius:50%}.mdc-list-item__end{flex-shrink:0;pointer-events:none}.mdc-list-item--with-trailing-meta .mdc-list-item__end{font-family:var(--mat-list-list-item-trailing-supporting-text-font, var(--mat-sys-label-small-font));line-height:var(--mat-list-list-item-trailing-supporting-text-line-height, var(--mat-sys-label-small-line-height));font-size:var(--mat-list-list-item-trailing-supporting-text-size, var(--mat-sys-label-small-size));font-weight:var(--mat-list-list-item-trailing-supporting-text-weight, var(--mat-sys-label-small-weight));letter-spacing:var(--mat-list-list-item-trailing-supporting-text-tracking, var(--mat-sys-label-small-tracking))}.mdc-list-item--with-trailing-icon .mdc-list-item__end{color:var(--mat-list-list-item-trailing-icon-color, var(--mat-sys-on-surface-variant));width:var(--mat-list-list-item-trailing-icon-size, 24px);height:var(--mat-list-list-item-trailing-icon-size, 24px)}.mdc-list-item--with-trailing-icon:hover .mdc-list-item__end{color:var(--mat-list-list-item-hover-trailing-icon-color)}.mdc-list-item.mdc-list-item--with-trailing-meta .mdc-list-item__end{color:var(--mat-list-list-item-trailing-supporting-text-color, var(--mat-sys-on-surface-variant))}.mdc-list-item--selected.mdc-list-item--with-trailing-icon .mdc-list-item__end{color:var(--mat-list-list-item-selected-trailing-icon-color, var(--mat-sys-primary))}.mdc-list-item__content{text-overflow:ellipsis;white-space:nowrap;overflow:hidden;align-self:center;flex:1;pointer-events:none}.mdc-list-item--with-two-lines .mdc-list-item__content,.mdc-list-item--with-three-lines .mdc-list-item__content{align-self:stretch}.mdc-list-item__primary-text{text-overflow:ellipsis;white-space:nowrap;overflow:hidden;color:var(--mat-list-list-item-label-text-color, var(--mat-sys-on-surface));font-family:var(--mat-list-list-item-label-text-font, var(--mat-sys-body-large-font));line-height:var(--mat-list-list-item-label-text-line-height, var(--mat-sys-body-large-line-height));font-size:var(--mat-list-list-item-label-text-size, var(--mat-sys-body-large-size));font-weight:var(--mat-list-list-item-label-text-weight, var(--mat-sys-body-large-weight));letter-spacing:var(--mat-list-list-item-label-text-tracking, var(--mat-sys-body-large-tracking))}.mdc-list-item:hover .mdc-list-item__primary-text{color:var(--mat-list-list-item-hover-label-text-color, var(--mat-sys-on-surface))}.mdc-list-item:focus .mdc-list-item__primary-text{color:var(--mat-list-list-item-focus-label-text-color, var(--mat-sys-on-surface))}.mdc-list-item--with-two-lines .mdc-list-item__primary-text,.mdc-list-item--with-three-lines .mdc-list-item__primary-text{display:block;margin-top:0;line-height:normal;margin-bottom:-20px}.mdc-list-item--with-two-lines .mdc-list-item__primary-text::before,.mdc-list-item--with-three-lines .mdc-list-item__primary-text::before{display:inline-block;width:0;height:28px;content:"";vertical-align:0}.mdc-list-item--with-two-lines .mdc-list-item__primary-text::after,.mdc-list-item--with-three-lines .mdc-list-item__primary-text::after{display:inline-block;width:0;height:20px;content:"";vertical-align:-20px}.mdc-list-item__secondary-text{text-overflow:ellipsis;white-space:nowrap;overflow:hidden;display:block;margin-top:0;color:var(--mat-list-list-item-supporting-text-color, var(--mat-sys-on-surface-variant));font-family:var(--mat-list-list-item-supporting-text-font, var(--mat-sys-body-medium-font));line-height:var(--mat-list-list-item-supporting-text-line-height, var(--mat-sys-body-medium-line-height));font-size:var(--mat-list-list-item-supporting-text-size, var(--mat-sys-body-medium-size));font-weight:var(--mat-list-list-item-supporting-text-weight, var(--mat-sys-body-medium-weight));letter-spacing:var(--mat-list-list-item-supporting-text-tracking, var(--mat-sys-body-medium-tracking))}.mdc-list-item__secondary-text::before{display:inline-block;width:0;height:20px;content:"";vertical-align:0}.mdc-list-item--with-three-lines .mdc-list-item__secondary-text{white-space:normal;line-height:20px}.mdc-list-item--with-overline .mdc-list-item__secondary-text{white-space:nowrap;line-height:auto}.mdc-list-item--with-leading-radio.mdc-list-item,.mdc-list-item--with-leading-checkbox.mdc-list-item,.mdc-list-item--with-leading-icon.mdc-list-item,.mdc-list-item--with-leading-avatar.mdc-list-item{padding-left:0;padding-right:16px}[dir=rtl] .mdc-list-item--with-leading-radio.mdc-list-item,[dir=rtl] .mdc-list-item--with-leading-checkbox.mdc-list-item,[dir=rtl] .mdc-list-item--with-leading-icon.mdc-list-item,[dir=rtl] .mdc-list-item--with-leading-avatar.mdc-list-item{padding-left:16px;padding-right:0}.mdc-list-item--with-leading-radio.mdc-list-item--with-two-lines .mdc-list-item__primary-text,.mdc-list-item--with-leading-checkbox.mdc-list-item--with-two-lines .mdc-list-item__primary-text,.mdc-list-item--with-leading-icon.mdc-list-item--with-two-lines .mdc-list-item__primary-text,.mdc-list-item--with-leading-avatar.mdc-list-item--with-two-lines .mdc-list-item__primary-text{display:block;margin-top:0;line-height:normal;margin-bottom:-20px}.mdc-list-item--with-leading-radio.mdc-list-item--with-two-lines .mdc-list-item__primary-text::before,.mdc-list-item--with-leading-checkbox.mdc-list-item--with-two-lines .mdc-list-item__primary-text::before,.mdc-list-item--with-leading-icon.mdc-list-item--with-two-lines .mdc-list-item__primary-text::before,.mdc-list-item--with-leading-avatar.mdc-list-item--with-two-lines .mdc-list-item__primary-text::before{display:inline-block;width:0;height:32px;content:"";vertical-align:0}.mdc-list-item--with-leading-radio.mdc-list-item--with-two-lines .mdc-list-item__primary-text::after,.mdc-list-item--with-leading-checkbox.mdc-list-item--with-two-lines .mdc-list-item__primary-text::after,.mdc-list-item--with-leading-icon.mdc-list-item--with-two-lines .mdc-list-item__primary-text::after,.mdc-list-item--with-leading-avatar.mdc-list-item--with-two-lines .mdc-list-item__primary-text::after{display:inline-block;width:0;height:20px;content:"";vertical-align:-20px}.mdc-list-item--with-leading-radio.mdc-list-item--with-two-lines.mdc-list-item--with-trailing-meta .mdc-list-item__end,.mdc-list-item--with-leading-checkbox.mdc-list-item--with-two-lines.mdc-list-item--with-trailing-meta .mdc-list-item__end,.mdc-list-item--with-leading-icon.mdc-list-item--with-two-lines.mdc-list-item--with-trailing-meta .mdc-list-item__end,.mdc-list-item--with-leading-avatar.mdc-list-item--with-two-lines.mdc-list-item--with-trailing-meta .mdc-list-item__end{display:block;margin-top:0;line-height:normal}.mdc-list-item--with-leading-radio.mdc-list-item--with-two-lines.mdc-list-item--with-trailing-meta .mdc-list-item__end::before,.mdc-list-item--with-leading-checkbox.mdc-list-item--with-two-lines.mdc-list-item--with-trailing-meta .mdc-list-item__end::before,.mdc-list-item--with-leading-icon.mdc-list-item--with-two-lines.mdc-list-item--with-trailing-meta .mdc-list-item__end::before,.mdc-list-item--with-leading-avatar.mdc-list-item--with-two-lines.mdc-list-item--with-trailing-meta .mdc-list-item__end::before{display:inline-block;width:0;height:32px;content:"";vertical-align:0}.mdc-list-item--with-trailing-icon.mdc-list-item,[dir=rtl] .mdc-list-item--with-trailing-icon.mdc-list-item{padding-left:0;padding-right:0}.mdc-list-item--with-trailing-icon .mdc-list-item__end{margin-left:16px;margin-right:16px}.mdc-list-item--with-trailing-meta.mdc-list-item{padding-left:16px;padding-right:0}[dir=rtl] .mdc-list-item--with-trailing-meta.mdc-list-item{padding-left:0;padding-right:16px}.mdc-list-item--with-trailing-meta .mdc-list-item__end{-webkit-user-select:none;user-select:none;margin-left:28px;margin-right:16px}[dir=rtl] .mdc-list-item--with-trailing-meta .mdc-list-item__end{margin-left:16px;margin-right:28px}.mdc-list-item--with-trailing-meta.mdc-list-item--with-three-lines .mdc-list-item__end,.mdc-list-item--with-trailing-meta.mdc-list-item--with-two-lines .mdc-list-item__end{display:block;line-height:normal;align-self:flex-start;margin-top:0}.mdc-list-item--with-trailing-meta.mdc-list-item--with-three-lines .mdc-list-item__end::before,.mdc-list-item--with-trailing-meta.mdc-list-item--with-two-lines .mdc-list-item__end::before{display:inline-block;width:0;height:28px;content:"";vertical-align:0}.mdc-list-item--with-leading-radio .mdc-list-item__start,.mdc-list-item--with-leading-checkbox .mdc-list-item__start{margin-left:8px;margin-right:24px}[dir=rtl] .mdc-list-item--with-leading-radio .mdc-list-item__start,[dir=rtl] .mdc-list-item--with-leading-checkbox .mdc-list-item__start{margin-left:24px;margin-right:8px}.mdc-list-item--with-leading-radio.mdc-list-item--with-two-lines .mdc-list-item__start,.mdc-list-item--with-leading-checkbox.mdc-list-item--with-two-lines .mdc-list-item__start{align-self:flex-start;margin-top:8px}.mdc-list-item--with-trailing-radio.mdc-list-item,.mdc-list-item--with-trailing-checkbox.mdc-list-item{padding-left:16px;padding-right:0}[dir=rtl] .mdc-list-item--with-trailing-radio.mdc-list-item,[dir=rtl] .mdc-list-item--with-trailing-checkbox.mdc-list-item{padding-left:0;padding-right:16px}.mdc-list-item--with-trailing-radio.mdc-list-item--with-leading-icon,.mdc-list-item--with-trailing-radio.mdc-list-item--with-leading-avatar,.mdc-list-item--with-trailing-checkbox.mdc-list-item--with-leading-icon,.mdc-list-item--with-trailing-checkbox.mdc-list-item--with-leading-avatar{padding-left:0}[dir=rtl] .mdc-list-item--with-trailing-radio.mdc-list-item--with-leading-icon,[dir=rtl] .mdc-list-item--with-trailing-radio.mdc-list-item--with-leading-avatar,[dir=rtl] .mdc-list-item--with-trailing-checkbox.mdc-list-item--with-leading-icon,[dir=rtl] .mdc-list-item--with-trailing-checkbox.mdc-list-item--with-leading-avatar{padding-right:0}.mdc-list-item--with-trailing-radio .mdc-list-item__end,.mdc-list-item--with-trailing-checkbox .mdc-list-item__end{margin-left:24px;margin-right:8px}[dir=rtl] .mdc-list-item--with-trailing-radio .mdc-list-item__end,[dir=rtl] .mdc-list-item--with-trailing-checkbox .mdc-list-item__end{margin-left:8px;margin-right:24px}.mdc-list-item--with-trailing-radio.mdc-list-item--with-three-lines .mdc-list-item__end,.mdc-list-item--with-trailing-checkbox.mdc-list-item--with-three-lines .mdc-list-item__end{align-self:flex-start;margin-top:8px}.mdc-list-group__subheader{margin:.75rem 16px}.mdc-list-item--disabled .mdc-list-item__start,.mdc-list-item--disabled .mdc-list-item__content,.mdc-list-item--disabled .mdc-list-item__end{opacity:1}.mdc-list-item--disabled .mdc-list-item__primary-text,.mdc-list-item--disabled .mdc-list-item__secondary-text{opacity:var(--mat-list-list-item-disabled-label-text-opacity, 0.3)}.mdc-list-item--disabled.mdc-list-item--with-leading-icon .mdc-list-item__start{color:var(--mat-list-list-item-disabled-leading-icon-color, var(--mat-sys-on-surface));opacity:var(--mat-list-list-item-disabled-leading-icon-opacity, 0.38)}.mdc-list-item--disabled.mdc-list-item--with-trailing-icon .mdc-list-item__end{color:var(--mat-list-list-item-disabled-trailing-icon-color, var(--mat-sys-on-surface));opacity:var(--mat-list-list-item-disabled-trailing-icon-opacity, 0.38)}.mat-mdc-list-item.mat-mdc-list-item-both-leading-and-trailing,[dir=rtl] .mat-mdc-list-item.mat-mdc-list-item-both-leading-and-trailing{padding-left:0;padding-right:0}.mdc-list-item.mdc-list-item--disabled .mdc-list-item__primary-text{color:var(--mat-list-list-item-disabled-label-text-color, var(--mat-sys-on-surface))}.mdc-list-item:hover::before{background-color:var(--mat-list-list-item-hover-state-layer-color, var(--mat-sys-on-surface));opacity:var(--mat-list-list-item-hover-state-layer-opacity, var(--mat-sys-hover-state-layer-opacity))}.mdc-list-item.mdc-list-item--disabled::before{background-color:var(--mat-list-list-item-disabled-state-layer-color, var(--mat-sys-on-surface));opacity:var(--mat-list-list-item-disabled-state-layer-opacity, var(--mat-sys-focus-state-layer-opacity))}.mdc-list-item:focus::before{background-color:var(--mat-list-list-item-focus-state-layer-color, var(--mat-sys-on-surface));opacity:var(--mat-list-list-item-focus-state-layer-opacity, var(--mat-sys-focus-state-layer-opacity))}.mdc-list-item--disabled .mdc-radio,.mdc-list-item--disabled .mdc-checkbox{opacity:var(--mat-list-list-item-disabled-label-text-opacity, 0.3)}.mdc-list-item--with-leading-avatar .mat-mdc-list-item-avatar{border-radius:var(--mat-list-list-item-leading-avatar-shape, var(--mat-sys-corner-full));background-color:var(--mat-list-list-item-leading-avatar-color, var(--mat-sys-primary-container))}.mat-mdc-list-item-icon{font-size:var(--mat-list-list-item-leading-icon-size, 24px)}@media(forced-colors: active){a.mdc-list-item--activated::after{content:"";position:absolute;top:50%;right:16px;transform:translateY(-50%);width:10px;height:0;border-bottom:solid 10px;border-radius:10px}a.mdc-list-item--activated [dir=rtl]::after{right:auto;left:16px}}.mat-mdc-list-base{display:block}.mat-mdc-list-base .mdc-list-item__start,.mat-mdc-list-base .mdc-list-item__end,.mat-mdc-list-base .mdc-list-item__content{pointer-events:auto}.mat-mdc-list-item,.mat-mdc-list-option{width:100%;box-sizing:border-box;-webkit-tap-highlight-color:rgba(0,0,0,0)}.mat-mdc-list-item:not(.mat-mdc-list-item-interactive),.mat-mdc-list-option:not(.mat-mdc-list-item-interactive){cursor:default}.mat-mdc-list-item .mat-divider-inset,.mat-mdc-list-option .mat-divider-inset{position:absolute;left:0;right:0;bottom:0}.mat-mdc-list-item .mat-mdc-list-item-avatar~.mat-divider-inset,.mat-mdc-list-option .mat-mdc-list-item-avatar~.mat-divider-inset{margin-left:72px}[dir=rtl] .mat-mdc-list-item .mat-mdc-list-item-avatar~.mat-divider-inset,[dir=rtl] .mat-mdc-list-option .mat-mdc-list-item-avatar~.mat-divider-inset{margin-right:72px}.mat-mdc-list-item-interactive::before{top:0;left:0;right:0;bottom:0;position:absolute;content:"";opacity:0;pointer-events:none;border-radius:inherit}.mat-mdc-list-item>.mat-focus-indicator{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none}.mat-mdc-list-item:focus>.mat-focus-indicator::before{content:""}.mat-mdc-list-item.mdc-list-item--with-three-lines .mat-mdc-list-item-line.mdc-list-item__secondary-text{white-space:nowrap;line-height:normal}.mat-mdc-list-item.mdc-list-item--with-three-lines .mat-mdc-list-item-unscoped-content.mdc-list-item__secondary-text{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2}mat-action-list button{background:none;color:inherit;border:none;font:inherit;outline:inherit;-webkit-tap-highlight-color:rgba(0,0,0,0);text-align:start}mat-action-list button::-moz-focus-inner{border:0}.mdc-list-item--with-leading-icon .mdc-list-item__start{margin-inline-start:var(--mat-list-list-item-leading-icon-start-space, 16px);margin-inline-end:var(--mat-list-list-item-leading-icon-end-space, 16px)}.mat-mdc-nav-list .mat-mdc-list-item{border-radius:var(--mat-list-active-indicator-shape, var(--mat-sys-corner-full));--mat-focus-indicator-border-radius: var(--mat-list-active-indicator-shape, var(--mat-sys-corner-full))}.mat-mdc-nav-list .mat-mdc-list-item.mdc-list-item--activated{background-color:var(--mat-list-active-indicator-color, var(--mat-sys-secondary-container))}\n'],
+    encapsulation: 2,
+    changeDetection: 0
+  });
 };
-__name(_MatActionList, "MatActionList");
-__publicField(_MatActionList, "\u0275fac", /* @__PURE__ */ (() => {
-  let \u0275MatActionList_BaseFactory;
-  return /* @__PURE__ */ __name(function MatActionList_Factory(__ngFactoryType__) {
-    return (\u0275MatActionList_BaseFactory || (\u0275MatActionList_BaseFactory = \u0275\u0275getInheritedFactory(_MatActionList)))(__ngFactoryType__ || _MatActionList);
-  }, "MatActionList_Factory");
-})());
-__publicField(_MatActionList, "\u0275cmp", /* @__PURE__ */ \u0275\u0275defineComponent({
-  type: _MatActionList,
-  selectors: [["mat-action-list"]],
-  hostAttrs: ["role", "group", 1, "mat-mdc-action-list", "mat-mdc-list-base", "mdc-list"],
-  exportAs: ["matActionList"],
-  features: [\u0275\u0275ProvidersFeature([{
-    provide: MatListBase,
-    useExisting: _MatActionList
-  }]), \u0275\u0275InheritDefinitionFeature],
-  ngContentSelectors: _c02,
-  decls: 1,
-  vars: 0,
-  template: /* @__PURE__ */ __name(function MatActionList_Template(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275projectionDef();
-      \u0275\u0275projection(0);
-    }
-  }, "MatActionList_Template"),
-  styles: ['.mdc-list{margin:0;padding:8px 0;list-style-type:none}.mdc-list:focus{outline:none}.mdc-list-item{display:flex;position:relative;justify-content:flex-start;overflow:hidden;padding:0;align-items:stretch;cursor:pointer;padding-left:16px;padding-right:16px;background-color:var(--mat-list-list-item-container-color, transparent);border-radius:var(--mat-list-list-item-container-shape, var(--mat-sys-corner-none))}.mdc-list-item.mdc-list-item--selected{background-color:var(--mat-list-list-item-selected-container-color)}.mdc-list-item:focus{outline:0}.mdc-list-item.mdc-list-item--disabled{cursor:auto}.mdc-list-item.mdc-list-item--with-one-line{height:var(--mat-list-list-item-one-line-container-height, 48px)}.mdc-list-item.mdc-list-item--with-one-line .mdc-list-item__start{align-self:center;margin-top:0}.mdc-list-item.mdc-list-item--with-one-line .mdc-list-item__end{align-self:center;margin-top:0}.mdc-list-item.mdc-list-item--with-two-lines{height:var(--mat-list-list-item-two-line-container-height, 64px)}.mdc-list-item.mdc-list-item--with-two-lines .mdc-list-item__start{align-self:flex-start;margin-top:16px}.mdc-list-item.mdc-list-item--with-two-lines .mdc-list-item__end{align-self:center;margin-top:0}.mdc-list-item.mdc-list-item--with-three-lines{height:var(--mat-list-list-item-three-line-container-height, 88px)}.mdc-list-item.mdc-list-item--with-three-lines .mdc-list-item__start{align-self:flex-start;margin-top:16px}.mdc-list-item.mdc-list-item--with-three-lines .mdc-list-item__end{align-self:flex-start;margin-top:16px}.mdc-list-item.mdc-list-item--selected::before,.mdc-list-item.mdc-list-item--selected:focus::before,.mdc-list-item:not(.mdc-list-item--selected):focus::before{position:absolute;box-sizing:border-box;width:100%;height:100%;top:0;left:0;content:"";pointer-events:none}a.mdc-list-item{color:inherit;text-decoration:none}.mdc-list-item__start{fill:currentColor;flex-shrink:0;pointer-events:none}.mdc-list-item--with-leading-icon .mdc-list-item__start{color:var(--mat-list-list-item-leading-icon-color, var(--mat-sys-on-surface-variant));width:var(--mat-list-list-item-leading-icon-size, 24px);height:var(--mat-list-list-item-leading-icon-size, 24px);margin-left:16px;margin-right:32px}[dir=rtl] .mdc-list-item--with-leading-icon .mdc-list-item__start{margin-left:32px;margin-right:16px}.mdc-list-item--with-leading-icon:hover .mdc-list-item__start{color:var(--mat-list-list-item-hover-leading-icon-color)}.mdc-list-item--with-leading-avatar .mdc-list-item__start{width:var(--mat-list-list-item-leading-avatar-size, 40px);height:var(--mat-list-list-item-leading-avatar-size, 40px);margin-left:16px;margin-right:16px;border-radius:50%}.mdc-list-item--with-leading-avatar .mdc-list-item__start,[dir=rtl] .mdc-list-item--with-leading-avatar .mdc-list-item__start{margin-left:16px;margin-right:16px;border-radius:50%}.mdc-list-item__end{flex-shrink:0;pointer-events:none}.mdc-list-item--with-trailing-meta .mdc-list-item__end{font-family:var(--mat-list-list-item-trailing-supporting-text-font, var(--mat-sys-label-small-font));line-height:var(--mat-list-list-item-trailing-supporting-text-line-height, var(--mat-sys-label-small-line-height));font-size:var(--mat-list-list-item-trailing-supporting-text-size, var(--mat-sys-label-small-size));font-weight:var(--mat-list-list-item-trailing-supporting-text-weight, var(--mat-sys-label-small-weight));letter-spacing:var(--mat-list-list-item-trailing-supporting-text-tracking, var(--mat-sys-label-small-tracking))}.mdc-list-item--with-trailing-icon .mdc-list-item__end{color:var(--mat-list-list-item-trailing-icon-color, var(--mat-sys-on-surface-variant));width:var(--mat-list-list-item-trailing-icon-size, 24px);height:var(--mat-list-list-item-trailing-icon-size, 24px)}.mdc-list-item--with-trailing-icon:hover .mdc-list-item__end{color:var(--mat-list-list-item-hover-trailing-icon-color)}.mdc-list-item.mdc-list-item--with-trailing-meta .mdc-list-item__end{color:var(--mat-list-list-item-trailing-supporting-text-color, var(--mat-sys-on-surface-variant))}.mdc-list-item--selected.mdc-list-item--with-trailing-icon .mdc-list-item__end{color:var(--mat-list-list-item-selected-trailing-icon-color, var(--mat-sys-primary))}.mdc-list-item__content{text-overflow:ellipsis;white-space:nowrap;overflow:hidden;align-self:center;flex:1;pointer-events:none}.mdc-list-item--with-two-lines .mdc-list-item__content,.mdc-list-item--with-three-lines .mdc-list-item__content{align-self:stretch}.mdc-list-item__primary-text{text-overflow:ellipsis;white-space:nowrap;overflow:hidden;color:var(--mat-list-list-item-label-text-color, var(--mat-sys-on-surface));font-family:var(--mat-list-list-item-label-text-font, var(--mat-sys-body-large-font));line-height:var(--mat-list-list-item-label-text-line-height, var(--mat-sys-body-large-line-height));font-size:var(--mat-list-list-item-label-text-size, var(--mat-sys-body-large-size));font-weight:var(--mat-list-list-item-label-text-weight, var(--mat-sys-body-large-weight));letter-spacing:var(--mat-list-list-item-label-text-tracking, var(--mat-sys-body-large-tracking))}.mdc-list-item:hover .mdc-list-item__primary-text{color:var(--mat-list-list-item-hover-label-text-color, var(--mat-sys-on-surface))}.mdc-list-item:focus .mdc-list-item__primary-text{color:var(--mat-list-list-item-focus-label-text-color, var(--mat-sys-on-surface))}.mdc-list-item--with-two-lines .mdc-list-item__primary-text,.mdc-list-item--with-three-lines .mdc-list-item__primary-text{display:block;margin-top:0;line-height:normal;margin-bottom:-20px}.mdc-list-item--with-two-lines .mdc-list-item__primary-text::before,.mdc-list-item--with-three-lines .mdc-list-item__primary-text::before{display:inline-block;width:0;height:28px;content:"";vertical-align:0}.mdc-list-item--with-two-lines .mdc-list-item__primary-text::after,.mdc-list-item--with-three-lines .mdc-list-item__primary-text::after{display:inline-block;width:0;height:20px;content:"";vertical-align:-20px}.mdc-list-item__secondary-text{text-overflow:ellipsis;white-space:nowrap;overflow:hidden;display:block;margin-top:0;color:var(--mat-list-list-item-supporting-text-color, var(--mat-sys-on-surface-variant));font-family:var(--mat-list-list-item-supporting-text-font, var(--mat-sys-body-medium-font));line-height:var(--mat-list-list-item-supporting-text-line-height, var(--mat-sys-body-medium-line-height));font-size:var(--mat-list-list-item-supporting-text-size, var(--mat-sys-body-medium-size));font-weight:var(--mat-list-list-item-supporting-text-weight, var(--mat-sys-body-medium-weight));letter-spacing:var(--mat-list-list-item-supporting-text-tracking, var(--mat-sys-body-medium-tracking))}.mdc-list-item__secondary-text::before{display:inline-block;width:0;height:20px;content:"";vertical-align:0}.mdc-list-item--with-three-lines .mdc-list-item__secondary-text{white-space:normal;line-height:20px}.mdc-list-item--with-overline .mdc-list-item__secondary-text{white-space:nowrap;line-height:auto}.mdc-list-item--with-leading-radio.mdc-list-item,.mdc-list-item--with-leading-checkbox.mdc-list-item,.mdc-list-item--with-leading-icon.mdc-list-item,.mdc-list-item--with-leading-avatar.mdc-list-item{padding-left:0;padding-right:16px}[dir=rtl] .mdc-list-item--with-leading-radio.mdc-list-item,[dir=rtl] .mdc-list-item--with-leading-checkbox.mdc-list-item,[dir=rtl] .mdc-list-item--with-leading-icon.mdc-list-item,[dir=rtl] .mdc-list-item--with-leading-avatar.mdc-list-item{padding-left:16px;padding-right:0}.mdc-list-item--with-leading-radio.mdc-list-item--with-two-lines .mdc-list-item__primary-text,.mdc-list-item--with-leading-checkbox.mdc-list-item--with-two-lines .mdc-list-item__primary-text,.mdc-list-item--with-leading-icon.mdc-list-item--with-two-lines .mdc-list-item__primary-text,.mdc-list-item--with-leading-avatar.mdc-list-item--with-two-lines .mdc-list-item__primary-text{display:block;margin-top:0;line-height:normal;margin-bottom:-20px}.mdc-list-item--with-leading-radio.mdc-list-item--with-two-lines .mdc-list-item__primary-text::before,.mdc-list-item--with-leading-checkbox.mdc-list-item--with-two-lines .mdc-list-item__primary-text::before,.mdc-list-item--with-leading-icon.mdc-list-item--with-two-lines .mdc-list-item__primary-text::before,.mdc-list-item--with-leading-avatar.mdc-list-item--with-two-lines .mdc-list-item__primary-text::before{display:inline-block;width:0;height:32px;content:"";vertical-align:0}.mdc-list-item--with-leading-radio.mdc-list-item--with-two-lines .mdc-list-item__primary-text::after,.mdc-list-item--with-leading-checkbox.mdc-list-item--with-two-lines .mdc-list-item__primary-text::after,.mdc-list-item--with-leading-icon.mdc-list-item--with-two-lines .mdc-list-item__primary-text::after,.mdc-list-item--with-leading-avatar.mdc-list-item--with-two-lines .mdc-list-item__primary-text::after{display:inline-block;width:0;height:20px;content:"";vertical-align:-20px}.mdc-list-item--with-leading-radio.mdc-list-item--with-two-lines.mdc-list-item--with-trailing-meta .mdc-list-item__end,.mdc-list-item--with-leading-checkbox.mdc-list-item--with-two-lines.mdc-list-item--with-trailing-meta .mdc-list-item__end,.mdc-list-item--with-leading-icon.mdc-list-item--with-two-lines.mdc-list-item--with-trailing-meta .mdc-list-item__end,.mdc-list-item--with-leading-avatar.mdc-list-item--with-two-lines.mdc-list-item--with-trailing-meta .mdc-list-item__end{display:block;margin-top:0;line-height:normal}.mdc-list-item--with-leading-radio.mdc-list-item--with-two-lines.mdc-list-item--with-trailing-meta .mdc-list-item__end::before,.mdc-list-item--with-leading-checkbox.mdc-list-item--with-two-lines.mdc-list-item--with-trailing-meta .mdc-list-item__end::before,.mdc-list-item--with-leading-icon.mdc-list-item--with-two-lines.mdc-list-item--with-trailing-meta .mdc-list-item__end::before,.mdc-list-item--with-leading-avatar.mdc-list-item--with-two-lines.mdc-list-item--with-trailing-meta .mdc-list-item__end::before{display:inline-block;width:0;height:32px;content:"";vertical-align:0}.mdc-list-item--with-trailing-icon.mdc-list-item,[dir=rtl] .mdc-list-item--with-trailing-icon.mdc-list-item{padding-left:0;padding-right:0}.mdc-list-item--with-trailing-icon .mdc-list-item__end{margin-left:16px;margin-right:16px}.mdc-list-item--with-trailing-meta.mdc-list-item{padding-left:16px;padding-right:0}[dir=rtl] .mdc-list-item--with-trailing-meta.mdc-list-item{padding-left:0;padding-right:16px}.mdc-list-item--with-trailing-meta .mdc-list-item__end{-webkit-user-select:none;user-select:none;margin-left:28px;margin-right:16px}[dir=rtl] .mdc-list-item--with-trailing-meta .mdc-list-item__end{margin-left:16px;margin-right:28px}.mdc-list-item--with-trailing-meta.mdc-list-item--with-three-lines .mdc-list-item__end,.mdc-list-item--with-trailing-meta.mdc-list-item--with-two-lines .mdc-list-item__end{display:block;line-height:normal;align-self:flex-start;margin-top:0}.mdc-list-item--with-trailing-meta.mdc-list-item--with-three-lines .mdc-list-item__end::before,.mdc-list-item--with-trailing-meta.mdc-list-item--with-two-lines .mdc-list-item__end::before{display:inline-block;width:0;height:28px;content:"";vertical-align:0}.mdc-list-item--with-leading-radio .mdc-list-item__start,.mdc-list-item--with-leading-checkbox .mdc-list-item__start{margin-left:8px;margin-right:24px}[dir=rtl] .mdc-list-item--with-leading-radio .mdc-list-item__start,[dir=rtl] .mdc-list-item--with-leading-checkbox .mdc-list-item__start{margin-left:24px;margin-right:8px}.mdc-list-item--with-leading-radio.mdc-list-item--with-two-lines .mdc-list-item__start,.mdc-list-item--with-leading-checkbox.mdc-list-item--with-two-lines .mdc-list-item__start{align-self:flex-start;margin-top:8px}.mdc-list-item--with-trailing-radio.mdc-list-item,.mdc-list-item--with-trailing-checkbox.mdc-list-item{padding-left:16px;padding-right:0}[dir=rtl] .mdc-list-item--with-trailing-radio.mdc-list-item,[dir=rtl] .mdc-list-item--with-trailing-checkbox.mdc-list-item{padding-left:0;padding-right:16px}.mdc-list-item--with-trailing-radio.mdc-list-item--with-leading-icon,.mdc-list-item--with-trailing-radio.mdc-list-item--with-leading-avatar,.mdc-list-item--with-trailing-checkbox.mdc-list-item--with-leading-icon,.mdc-list-item--with-trailing-checkbox.mdc-list-item--with-leading-avatar{padding-left:0}[dir=rtl] .mdc-list-item--with-trailing-radio.mdc-list-item--with-leading-icon,[dir=rtl] .mdc-list-item--with-trailing-radio.mdc-list-item--with-leading-avatar,[dir=rtl] .mdc-list-item--with-trailing-checkbox.mdc-list-item--with-leading-icon,[dir=rtl] .mdc-list-item--with-trailing-checkbox.mdc-list-item--with-leading-avatar{padding-right:0}.mdc-list-item--with-trailing-radio .mdc-list-item__end,.mdc-list-item--with-trailing-checkbox .mdc-list-item__end{margin-left:24px;margin-right:8px}[dir=rtl] .mdc-list-item--with-trailing-radio .mdc-list-item__end,[dir=rtl] .mdc-list-item--with-trailing-checkbox .mdc-list-item__end{margin-left:8px;margin-right:24px}.mdc-list-item--with-trailing-radio.mdc-list-item--with-three-lines .mdc-list-item__end,.mdc-list-item--with-trailing-checkbox.mdc-list-item--with-three-lines .mdc-list-item__end{align-self:flex-start;margin-top:8px}.mdc-list-group__subheader{margin:.75rem 16px}.mdc-list-item--disabled .mdc-list-item__start,.mdc-list-item--disabled .mdc-list-item__content,.mdc-list-item--disabled .mdc-list-item__end{opacity:1}.mdc-list-item--disabled .mdc-list-item__primary-text,.mdc-list-item--disabled .mdc-list-item__secondary-text{opacity:var(--mat-list-list-item-disabled-label-text-opacity, 0.3)}.mdc-list-item--disabled.mdc-list-item--with-leading-icon .mdc-list-item__start{color:var(--mat-list-list-item-disabled-leading-icon-color, var(--mat-sys-on-surface));opacity:var(--mat-list-list-item-disabled-leading-icon-opacity, 0.38)}.mdc-list-item--disabled.mdc-list-item--with-trailing-icon .mdc-list-item__end{color:var(--mat-list-list-item-disabled-trailing-icon-color, var(--mat-sys-on-surface));opacity:var(--mat-list-list-item-disabled-trailing-icon-opacity, 0.38)}.mat-mdc-list-item.mat-mdc-list-item-both-leading-and-trailing,[dir=rtl] .mat-mdc-list-item.mat-mdc-list-item-both-leading-and-trailing{padding-left:0;padding-right:0}.mdc-list-item.mdc-list-item--disabled .mdc-list-item__primary-text{color:var(--mat-list-list-item-disabled-label-text-color, var(--mat-sys-on-surface))}.mdc-list-item:hover::before{background-color:var(--mat-list-list-item-hover-state-layer-color, var(--mat-sys-on-surface));opacity:var(--mat-list-list-item-hover-state-layer-opacity, var(--mat-sys-hover-state-layer-opacity))}.mdc-list-item.mdc-list-item--disabled::before{background-color:var(--mat-list-list-item-disabled-state-layer-color, var(--mat-sys-on-surface));opacity:var(--mat-list-list-item-disabled-state-layer-opacity, var(--mat-sys-focus-state-layer-opacity))}.mdc-list-item:focus::before{background-color:var(--mat-list-list-item-focus-state-layer-color, var(--mat-sys-on-surface));opacity:var(--mat-list-list-item-focus-state-layer-opacity, var(--mat-sys-focus-state-layer-opacity))}.mdc-list-item--disabled .mdc-radio,.mdc-list-item--disabled .mdc-checkbox{opacity:var(--mat-list-list-item-disabled-label-text-opacity, 0.3)}.mdc-list-item--with-leading-avatar .mat-mdc-list-item-avatar{border-radius:var(--mat-list-list-item-leading-avatar-shape, var(--mat-sys-corner-full));background-color:var(--mat-list-list-item-leading-avatar-color, var(--mat-sys-primary-container))}.mat-mdc-list-item-icon{font-size:var(--mat-list-list-item-leading-icon-size, 24px)}@media(forced-colors: active){a.mdc-list-item--activated::after{content:"";position:absolute;top:50%;right:16px;transform:translateY(-50%);width:10px;height:0;border-bottom:solid 10px;border-radius:10px}a.mdc-list-item--activated [dir=rtl]::after{right:auto;left:16px}}.mat-mdc-list-base{display:block}.mat-mdc-list-base .mdc-list-item__start,.mat-mdc-list-base .mdc-list-item__end,.mat-mdc-list-base .mdc-list-item__content{pointer-events:auto}.mat-mdc-list-item,.mat-mdc-list-option{width:100%;box-sizing:border-box;-webkit-tap-highlight-color:rgba(0,0,0,0)}.mat-mdc-list-item:not(.mat-mdc-list-item-interactive),.mat-mdc-list-option:not(.mat-mdc-list-item-interactive){cursor:default}.mat-mdc-list-item .mat-divider-inset,.mat-mdc-list-option .mat-divider-inset{position:absolute;left:0;right:0;bottom:0}.mat-mdc-list-item .mat-mdc-list-item-avatar~.mat-divider-inset,.mat-mdc-list-option .mat-mdc-list-item-avatar~.mat-divider-inset{margin-left:72px}[dir=rtl] .mat-mdc-list-item .mat-mdc-list-item-avatar~.mat-divider-inset,[dir=rtl] .mat-mdc-list-option .mat-mdc-list-item-avatar~.mat-divider-inset{margin-right:72px}.mat-mdc-list-item-interactive::before{top:0;left:0;right:0;bottom:0;position:absolute;content:"";opacity:0;pointer-events:none;border-radius:inherit}.mat-mdc-list-item>.mat-focus-indicator{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none}.mat-mdc-list-item:focus>.mat-focus-indicator::before{content:""}.mat-mdc-list-item.mdc-list-item--with-three-lines .mat-mdc-list-item-line.mdc-list-item__secondary-text{white-space:nowrap;line-height:normal}.mat-mdc-list-item.mdc-list-item--with-three-lines .mat-mdc-list-item-unscoped-content.mdc-list-item__secondary-text{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2}mat-action-list button{background:none;color:inherit;border:none;font:inherit;outline:inherit;-webkit-tap-highlight-color:rgba(0,0,0,0);text-align:start}mat-action-list button::-moz-focus-inner{border:0}.mdc-list-item--with-leading-icon .mdc-list-item__start{margin-inline-start:var(--mat-list-list-item-leading-icon-start-space, 16px);margin-inline-end:var(--mat-list-list-item-leading-icon-end-space, 16px)}.mat-mdc-nav-list .mat-mdc-list-item{border-radius:var(--mat-list-active-indicator-shape, var(--mat-sys-corner-full));--mat-focus-indicator-border-radius: var(--mat-list-active-indicator-shape, var(--mat-sys-corner-full))}.mat-mdc-nav-list .mat-mdc-list-item.mdc-list-item--activated{background-color:var(--mat-list-active-indicator-color, var(--mat-sys-secondary-container))}\n'],
-  encapsulation: 2,
-  changeDetection: 0
-}));
-var MatActionList = _MatActionList;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatActionList, [{
     type: Component,
@@ -2592,38 +2226,36 @@ var MatActionList = _MatActionList;
   }], null, null);
 })();
 var MAT_LIST = new InjectionToken("MatList");
-var _MatList = class _MatList extends MatListBase {
+var MatList = class _MatList extends MatListBase {
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275MatList_BaseFactory;
+    return function MatList_Factory(__ngFactoryType__) {
+      return (\u0275MatList_BaseFactory || (\u0275MatList_BaseFactory = \u0275\u0275getInheritedFactory(_MatList)))(__ngFactoryType__ || _MatList);
+    };
+  })();
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
+    type: _MatList,
+    selectors: [["mat-list"]],
+    hostAttrs: [1, "mat-mdc-list", "mat-mdc-list-base", "mdc-list"],
+    exportAs: ["matList"],
+    features: [\u0275\u0275ProvidersFeature([{
+      provide: MatListBase,
+      useExisting: _MatList
+    }]), \u0275\u0275InheritDefinitionFeature],
+    ngContentSelectors: _c02,
+    decls: 1,
+    vars: 0,
+    template: function MatList_Template(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275projectionDef();
+        \u0275\u0275projection(0);
+      }
+    },
+    styles: [_c12],
+    encapsulation: 2,
+    changeDetection: 0
+  });
 };
-__name(_MatList, "MatList");
-__publicField(_MatList, "\u0275fac", /* @__PURE__ */ (() => {
-  let \u0275MatList_BaseFactory;
-  return /* @__PURE__ */ __name(function MatList_Factory(__ngFactoryType__) {
-    return (\u0275MatList_BaseFactory || (\u0275MatList_BaseFactory = \u0275\u0275getInheritedFactory(_MatList)))(__ngFactoryType__ || _MatList);
-  }, "MatList_Factory");
-})());
-__publicField(_MatList, "\u0275cmp", /* @__PURE__ */ \u0275\u0275defineComponent({
-  type: _MatList,
-  selectors: [["mat-list"]],
-  hostAttrs: [1, "mat-mdc-list", "mat-mdc-list-base", "mdc-list"],
-  exportAs: ["matList"],
-  features: [\u0275\u0275ProvidersFeature([{
-    provide: MatListBase,
-    useExisting: _MatList
-  }]), \u0275\u0275InheritDefinitionFeature],
-  ngContentSelectors: _c02,
-  decls: 1,
-  vars: 0,
-  template: /* @__PURE__ */ __name(function MatList_Template(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275projectionDef();
-      \u0275\u0275projection(0);
-    }
-  }, "MatList_Template"),
-  styles: [_c12],
-  encapsulation: 2,
-  changeDetection: 0
-}));
-var MatList = _MatList;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatList, [{
     type: Component,
@@ -2644,7 +2276,7 @@ var MatList = _MatList;
     }]
   }], null, null);
 })();
-var _MatListItem = class _MatListItem extends MatListItemBase {
+var MatListItem = class _MatListItem extends MatListItemBase {
   _lines;
   _titles;
   _meta;
@@ -2668,83 +2300,81 @@ var _MatListItem = class _MatListItem extends MatListItemBase {
   _hasBothLeadingAndTrailing() {
     return this._meta.length !== 0 && (this._avatars.length !== 0 || this._icons.length !== 0);
   }
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275MatListItem_BaseFactory;
+    return function MatListItem_Factory(__ngFactoryType__) {
+      return (\u0275MatListItem_BaseFactory || (\u0275MatListItem_BaseFactory = \u0275\u0275getInheritedFactory(_MatListItem)))(__ngFactoryType__ || _MatListItem);
+    };
+  })();
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
+    type: _MatListItem,
+    selectors: [["mat-list-item"], ["a", "mat-list-item", ""], ["button", "mat-list-item", ""]],
+    contentQueries: function MatListItem_ContentQueries(rf, ctx, dirIndex) {
+      if (rf & 1) {
+        \u0275\u0275contentQuery(dirIndex, MatListItemLine, 5);
+        \u0275\u0275contentQuery(dirIndex, MatListItemTitle, 5);
+        \u0275\u0275contentQuery(dirIndex, MatListItemMeta, 5);
+      }
+      if (rf & 2) {
+        let _t;
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._lines = _t);
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._titles = _t);
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._meta = _t);
+      }
+    },
+    viewQuery: function MatListItem_Query(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275viewQuery(_c22, 5);
+        \u0275\u0275viewQuery(_c32, 5);
+      }
+      if (rf & 2) {
+        let _t;
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._unscopedContent = _t.first);
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._itemText = _t.first);
+      }
+    },
+    hostAttrs: [1, "mat-mdc-list-item", "mdc-list-item"],
+    hostVars: 13,
+    hostBindings: function MatListItem_HostBindings(rf, ctx) {
+      if (rf & 2) {
+        \u0275\u0275attribute("aria-current", ctx._getAriaCurrent());
+        \u0275\u0275classProp("mdc-list-item--activated", ctx.activated)("mdc-list-item--with-leading-avatar", ctx._avatars.length !== 0)("mdc-list-item--with-leading-icon", ctx._icons.length !== 0)("mdc-list-item--with-trailing-meta", ctx._meta.length !== 0)("mat-mdc-list-item-both-leading-and-trailing", ctx._hasBothLeadingAndTrailing())("_mat-animation-noopable", ctx._noopAnimations);
+      }
+    },
+    inputs: {
+      activated: "activated"
+    },
+    exportAs: ["matListItem"],
+    features: [\u0275\u0275InheritDefinitionFeature],
+    ngContentSelectors: _c52,
+    decls: 10,
+    vars: 0,
+    consts: [["unscopedContent", ""], [1, "mdc-list-item__content"], [1, "mat-mdc-list-item-unscoped-content", 3, "cdkObserveContent"], [1, "mat-focus-indicator"]],
+    template: function MatListItem_Template(rf, ctx) {
+      if (rf & 1) {
+        const _r1 = \u0275\u0275getCurrentView();
+        \u0275\u0275projectionDef(_c42);
+        \u0275\u0275projection(0);
+        \u0275\u0275elementStart(1, "span", 1);
+        \u0275\u0275projection(2, 1);
+        \u0275\u0275projection(3, 2);
+        \u0275\u0275elementStart(4, "span", 2, 0);
+        \u0275\u0275listener("cdkObserveContent", function MatListItem_Template_span_cdkObserveContent_4_listener() {
+          \u0275\u0275restoreView(_r1);
+          return \u0275\u0275resetView(ctx._updateItemLines(true));
+        });
+        \u0275\u0275projection(6, 3);
+        \u0275\u0275elementEnd()();
+        \u0275\u0275projection(7, 4);
+        \u0275\u0275projection(8, 5);
+        \u0275\u0275element(9, "div", 3);
+      }
+    },
+    dependencies: [CdkObserveContent],
+    encapsulation: 2,
+    changeDetection: 0
+  });
 };
-__name(_MatListItem, "MatListItem");
-__publicField(_MatListItem, "\u0275fac", /* @__PURE__ */ (() => {
-  let \u0275MatListItem_BaseFactory;
-  return /* @__PURE__ */ __name(function MatListItem_Factory(__ngFactoryType__) {
-    return (\u0275MatListItem_BaseFactory || (\u0275MatListItem_BaseFactory = \u0275\u0275getInheritedFactory(_MatListItem)))(__ngFactoryType__ || _MatListItem);
-  }, "MatListItem_Factory");
-})());
-__publicField(_MatListItem, "\u0275cmp", /* @__PURE__ */ \u0275\u0275defineComponent({
-  type: _MatListItem,
-  selectors: [["mat-list-item"], ["a", "mat-list-item", ""], ["button", "mat-list-item", ""]],
-  contentQueries: /* @__PURE__ */ __name(function MatListItem_ContentQueries(rf, ctx, dirIndex) {
-    if (rf & 1) {
-      \u0275\u0275contentQuery(dirIndex, MatListItemLine, 5);
-      \u0275\u0275contentQuery(dirIndex, MatListItemTitle, 5);
-      \u0275\u0275contentQuery(dirIndex, MatListItemMeta, 5);
-    }
-    if (rf & 2) {
-      let _t;
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._lines = _t);
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._titles = _t);
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._meta = _t);
-    }
-  }, "MatListItem_ContentQueries"),
-  viewQuery: /* @__PURE__ */ __name(function MatListItem_Query(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275viewQuery(_c22, 5);
-      \u0275\u0275viewQuery(_c32, 5);
-    }
-    if (rf & 2) {
-      let _t;
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._unscopedContent = _t.first);
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._itemText = _t.first);
-    }
-  }, "MatListItem_Query"),
-  hostAttrs: [1, "mat-mdc-list-item", "mdc-list-item"],
-  hostVars: 13,
-  hostBindings: /* @__PURE__ */ __name(function MatListItem_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      \u0275\u0275attribute("aria-current", ctx._getAriaCurrent());
-      \u0275\u0275classProp("mdc-list-item--activated", ctx.activated)("mdc-list-item--with-leading-avatar", ctx._avatars.length !== 0)("mdc-list-item--with-leading-icon", ctx._icons.length !== 0)("mdc-list-item--with-trailing-meta", ctx._meta.length !== 0)("mat-mdc-list-item-both-leading-and-trailing", ctx._hasBothLeadingAndTrailing())("_mat-animation-noopable", ctx._noopAnimations);
-    }
-  }, "MatListItem_HostBindings"),
-  inputs: {
-    activated: "activated"
-  },
-  exportAs: ["matListItem"],
-  features: [\u0275\u0275InheritDefinitionFeature],
-  ngContentSelectors: _c52,
-  decls: 10,
-  vars: 0,
-  consts: [["unscopedContent", ""], [1, "mdc-list-item__content"], [1, "mat-mdc-list-item-unscoped-content", 3, "cdkObserveContent"], [1, "mat-focus-indicator"]],
-  template: /* @__PURE__ */ __name(function MatListItem_Template(rf, ctx) {
-    if (rf & 1) {
-      const _r1 = \u0275\u0275getCurrentView();
-      \u0275\u0275projectionDef(_c42);
-      \u0275\u0275projection(0);
-      \u0275\u0275elementStart(1, "span", 1);
-      \u0275\u0275projection(2, 1);
-      \u0275\u0275projection(3, 2);
-      \u0275\u0275elementStart(4, "span", 2, 0);
-      \u0275\u0275listener("cdkObserveContent", /* @__PURE__ */ __name(function MatListItem_Template_span_cdkObserveContent_4_listener() {
-        \u0275\u0275restoreView(_r1);
-        return \u0275\u0275resetView(ctx._updateItemLines(true));
-      }, "MatListItem_Template_span_cdkObserveContent_4_listener"));
-      \u0275\u0275projection(6, 3);
-      \u0275\u0275elementEnd()();
-      \u0275\u0275projection(7, 4);
-      \u0275\u0275projection(8, 5);
-      \u0275\u0275element(9, "div", 3);
-    }
-  }, "MatListItem_Template"),
-  dependencies: [CdkObserveContent],
-  encapsulation: 2,
-  changeDetection: 0
-}));
-var MatListItem = _MatListItem;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatListItem, [{
     type: Component,
@@ -2801,7 +2431,7 @@ var MatListItem = _MatListItem;
   });
 })();
 var SELECTION_LIST = new InjectionToken("SelectionList");
-var _MatListOption = class _MatListOption extends MatListItemBase {
+var MatListOption = class _MatListOption extends MatListItemBase {
   _selectionList = inject(SELECTION_LIST);
   _changeDetectorRef = inject(ChangeDetectorRef);
   _lines;
@@ -2978,113 +2608,111 @@ var _MatListOption = class _MatListOption extends MatListItemBase {
     const hasTrailing = this._hasProjected("icons", "after") || this._hasProjected("avatars", "after") || this._hasCheckboxAt("after") || this._hasRadioAt("after");
     return hasLeading && hasTrailing;
   }
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275MatListOption_BaseFactory;
+    return function MatListOption_Factory(__ngFactoryType__) {
+      return (\u0275MatListOption_BaseFactory || (\u0275MatListOption_BaseFactory = \u0275\u0275getInheritedFactory(_MatListOption)))(__ngFactoryType__ || _MatListOption);
+    };
+  })();
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
+    type: _MatListOption,
+    selectors: [["mat-list-option"]],
+    contentQueries: function MatListOption_ContentQueries(rf, ctx, dirIndex) {
+      if (rf & 1) {
+        \u0275\u0275contentQuery(dirIndex, MatListItemLine, 5);
+        \u0275\u0275contentQuery(dirIndex, MatListItemTitle, 5);
+      }
+      if (rf & 2) {
+        let _t;
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._lines = _t);
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._titles = _t);
+      }
+    },
+    viewQuery: function MatListOption_Query(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275viewQuery(_c22, 5);
+      }
+      if (rf & 2) {
+        let _t;
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._unscopedContent = _t.first);
+      }
+    },
+    hostAttrs: ["role", "option", 1, "mat-mdc-list-item", "mat-mdc-list-option", "mdc-list-item"],
+    hostVars: 27,
+    hostBindings: function MatListOption_HostBindings(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275listener("blur", function MatListOption_blur_HostBindingHandler() {
+          return ctx._handleBlur();
+        })("click", function MatListOption_click_HostBindingHandler() {
+          return ctx._toggleOnInteraction();
+        });
+      }
+      if (rf & 2) {
+        \u0275\u0275attribute("aria-selected", ctx.selected);
+        \u0275\u0275classProp("mdc-list-item--selected", ctx.selected && !ctx._selectionList.multiple && ctx._selectionList.hideSingleSelectionIndicator)("mdc-list-item--with-leading-avatar", ctx._hasProjected("avatars", "before"))("mdc-list-item--with-leading-icon", ctx._hasProjected("icons", "before"))("mdc-list-item--with-trailing-icon", ctx._hasProjected("icons", "after"))("mat-mdc-list-option-with-trailing-avatar", ctx._hasProjected("avatars", "after"))("mdc-list-item--with-leading-checkbox", ctx._hasCheckboxAt("before"))("mdc-list-item--with-trailing-checkbox", ctx._hasCheckboxAt("after"))("mdc-list-item--with-leading-radio", ctx._hasRadioAt("before"))("mdc-list-item--with-trailing-radio", ctx._hasRadioAt("after"))("mat-mdc-list-item-both-leading-and-trailing", ctx._hasBothLeadingAndTrailing())("mat-accent", ctx.color !== "primary" && ctx.color !== "warn")("mat-warn", ctx.color === "warn")("_mat-animation-noopable", ctx._noopAnimations);
+      }
+    },
+    inputs: {
+      togglePosition: "togglePosition",
+      checkboxPosition: "checkboxPosition",
+      color: "color",
+      value: "value",
+      selected: "selected"
+    },
+    outputs: {
+      selectedChange: "selectedChange"
+    },
+    exportAs: ["matListOption"],
+    features: [\u0275\u0275ProvidersFeature([{
+      provide: MatListItemBase,
+      useExisting: _MatListOption
+    }, {
+      provide: LIST_OPTION,
+      useExisting: _MatListOption
+    }]), \u0275\u0275InheritDefinitionFeature],
+    ngContentSelectors: _c7,
+    decls: 20,
+    vars: 4,
+    consts: [["icons", ""], ["checkbox", ""], ["radio", ""], ["unscopedContent", ""], [1, "mdc-list-item__start", "mat-mdc-list-option-checkbox-before"], [1, "mdc-list-item__start", "mat-mdc-list-option-radio-before"], [3, "ngTemplateOutlet"], [1, "mdc-list-item__content"], [1, "mat-mdc-list-item-unscoped-content", 3, "cdkObserveContent"], [1, "mdc-list-item__end"], [1, "mat-focus-indicator"], [1, "mdc-checkbox"], ["type", "checkbox", 1, "mdc-checkbox__native-control", 3, "checked", "disabled"], [1, "mdc-checkbox__background"], ["viewBox", "0 0 24 24", "aria-hidden", "true", 1, "mdc-checkbox__checkmark"], ["fill", "none", "d", "M1.73,12.91 8.1,19.28 22.79,4.59", 1, "mdc-checkbox__checkmark-path"], [1, "mdc-checkbox__mixedmark"], [1, "mdc-radio"], ["type", "radio", 1, "mdc-radio__native-control", 3, "checked", "disabled"], [1, "mdc-radio__background"], [1, "mdc-radio__outer-circle"], [1, "mdc-radio__inner-circle"]],
+    template: function MatListOption_Template(rf, ctx) {
+      if (rf & 1) {
+        const _r1 = \u0275\u0275getCurrentView();
+        \u0275\u0275projectionDef(_c62);
+        \u0275\u0275template(0, MatListOption_ng_template_0_Template, 1, 0, "ng-template", null, 0, \u0275\u0275templateRefExtractor)(2, MatListOption_ng_template_2_Template, 6, 4, "ng-template", null, 1, \u0275\u0275templateRefExtractor)(4, MatListOption_ng_template_4_Template, 5, 4, "ng-template", null, 2, \u0275\u0275templateRefExtractor);
+        \u0275\u0275conditionalCreate(6, MatListOption_Conditional_6_Template, 2, 1, "span", 4)(7, MatListOption_Conditional_7_Template, 2, 1, "span", 5);
+        \u0275\u0275conditionalCreate(8, MatListOption_Conditional_8_Template, 1, 1, null, 6);
+        \u0275\u0275elementStart(9, "span", 7);
+        \u0275\u0275projection(10);
+        \u0275\u0275projection(11, 1);
+        \u0275\u0275elementStart(12, "span", 8, 3);
+        \u0275\u0275listener("cdkObserveContent", function MatListOption_Template_span_cdkObserveContent_12_listener() {
+          \u0275\u0275restoreView(_r1);
+          return \u0275\u0275resetView(ctx._updateItemLines(true));
+        });
+        \u0275\u0275projection(14, 2);
+        \u0275\u0275elementEnd()();
+        \u0275\u0275conditionalCreate(15, MatListOption_Conditional_15_Template, 2, 1, "span", 9)(16, MatListOption_Conditional_16_Template, 2, 1, "span", 9);
+        \u0275\u0275conditionalCreate(17, MatListOption_Conditional_17_Template, 1, 1, null, 6);
+        \u0275\u0275projection(18, 3);
+        \u0275\u0275element(19, "div", 10);
+      }
+      if (rf & 2) {
+        \u0275\u0275advance(6);
+        \u0275\u0275conditional(ctx._hasCheckboxAt("before") ? 6 : ctx._hasRadioAt("before") ? 7 : -1);
+        \u0275\u0275advance(2);
+        \u0275\u0275conditional(ctx._hasIconsOrAvatarsAt("before") ? 8 : -1);
+        \u0275\u0275advance(7);
+        \u0275\u0275conditional(ctx._hasCheckboxAt("after") ? 15 : ctx._hasRadioAt("after") ? 16 : -1);
+        \u0275\u0275advance(2);
+        \u0275\u0275conditional(ctx._hasIconsOrAvatarsAt("after") ? 17 : -1);
+      }
+    },
+    dependencies: [NgTemplateOutlet, CdkObserveContent],
+    styles: ['.mat-mdc-list-option-with-trailing-avatar.mdc-list-item,[dir=rtl] .mat-mdc-list-option-with-trailing-avatar.mdc-list-item{padding-left:0;padding-right:0}.mat-mdc-list-option-with-trailing-avatar .mdc-list-item__end{margin-left:16px;margin-right:16px;width:40px;height:40px}.mat-mdc-list-option-with-trailing-avatar.mdc-list-item--with-two-lines .mdc-list-item__primary-text{display:block;margin-top:0;line-height:normal;margin-bottom:-20px}.mat-mdc-list-option-with-trailing-avatar.mdc-list-item--with-two-lines .mdc-list-item__primary-text::before{display:inline-block;width:0;height:32px;content:"";vertical-align:0}.mat-mdc-list-option-with-trailing-avatar.mdc-list-item--with-two-lines .mdc-list-item__primary-text::after{display:inline-block;width:0;height:20px;content:"";vertical-align:-20px}.mat-mdc-list-option-with-trailing-avatar .mdc-list-item__end{border-radius:50%}.mat-mdc-list-option .mdc-checkbox{display:inline-block;position:relative;flex:0 0 18px;box-sizing:content-box;width:18px;height:18px;line-height:0;white-space:nowrap;cursor:pointer;vertical-align:bottom;padding:calc((var(--mat-checkbox-state-layer-size, 40px) - 18px)/2);margin:calc((var(--mat-checkbox-state-layer-size, 40px) - var(--mat-checkbox-state-layer-size, 40px))/2)}.mat-mdc-list-option .mdc-checkbox .mdc-checkbox__native-control{position:absolute;margin:0;padding:0;opacity:0;cursor:inherit;z-index:1;width:var(--mat-checkbox-state-layer-size, 40px);height:var(--mat-checkbox-state-layer-size, 40px);top:calc((var(--mat-checkbox-state-layer-size, 40px) - var(--mat-checkbox-state-layer-size, 40px))/2);right:calc((var(--mat-checkbox-state-layer-size, 40px) - var(--mat-checkbox-state-layer-size, 40px))/2);left:calc((var(--mat-checkbox-state-layer-size, 40px) - var(--mat-checkbox-state-layer-size, 40px))/2)}.mat-mdc-list-option .mdc-checkbox--disabled{cursor:default;pointer-events:none}@media(forced-colors: active){.mat-mdc-list-option .mdc-checkbox--disabled{opacity:.5}}.mat-mdc-list-option .mdc-checkbox__background{display:inline-flex;position:absolute;align-items:center;justify-content:center;box-sizing:border-box;width:18px;height:18px;border:2px solid currentColor;border-radius:2px;background-color:rgba(0,0,0,0);pointer-events:none;will-change:background-color,border-color;transition:background-color 90ms cubic-bezier(0.4, 0, 0.6, 1),border-color 90ms cubic-bezier(0.4, 0, 0.6, 1);-webkit-print-color-adjust:exact;color-adjust:exact;border-color:var(--mat-checkbox-unselected-icon-color, var(--mat-sys-on-surface-variant));top:calc((var(--mat-checkbox-state-layer-size, 40px) - 18px)/2);left:calc((var(--mat-checkbox-state-layer-size, 40px) - 18px)/2)}.mat-mdc-list-option .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background,.mat-mdc-list-option .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background{border-color:var(--mat-checkbox-selected-icon-color, var(--mat-sys-primary));background-color:var(--mat-checkbox-selected-icon-color, var(--mat-sys-primary))}.mat-mdc-list-option .mdc-checkbox--disabled .mdc-checkbox__background{border-color:var(--mat-checkbox-disabled-unselected-icon-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mat-mdc-list-option .mdc-checkbox__native-control:disabled:checked~.mdc-checkbox__background,.mat-mdc-list-option .mdc-checkbox__native-control:disabled:indeterminate~.mdc-checkbox__background{background-color:var(--mat-checkbox-disabled-selected-icon-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent));border-color:rgba(0,0,0,0)}.mat-mdc-list-option .mdc-checkbox:hover>.mdc-checkbox__native-control:not(:checked)~.mdc-checkbox__background,.mat-mdc-list-option .mdc-checkbox:hover>.mdc-checkbox__native-control:not(:indeterminate)~.mdc-checkbox__background{border-color:var(--mat-checkbox-unselected-hover-icon-color, var(--mat-sys-on-surface));background-color:rgba(0,0,0,0)}.mat-mdc-list-option .mdc-checkbox:hover>.mdc-checkbox__native-control:checked~.mdc-checkbox__background,.mat-mdc-list-option .mdc-checkbox:hover>.mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background{border-color:var(--mat-checkbox-selected-hover-icon-color, var(--mat-sys-primary));background-color:var(--mat-checkbox-selected-hover-icon-color, var(--mat-sys-primary))}.mat-mdc-list-option .mdc-checkbox__native-control:focus:focus:not(:checked)~.mdc-checkbox__background,.mat-mdc-list-option .mdc-checkbox__native-control:focus:focus:not(:indeterminate)~.mdc-checkbox__background{border-color:var(--mat-checkbox-unselected-focus-icon-color, var(--mat-sys-on-surface))}.mat-mdc-list-option .mdc-checkbox__native-control:focus:focus:checked~.mdc-checkbox__background,.mat-mdc-list-option .mdc-checkbox__native-control:focus:focus:indeterminate~.mdc-checkbox__background{border-color:var(--mat-checkbox-selected-focus-icon-color, var(--mat-sys-primary));background-color:var(--mat-checkbox-selected-focus-icon-color, var(--mat-sys-primary))}.mat-mdc-list-option .mdc-checkbox--disabled.mat-mdc-checkbox-disabled-interactive .mdc-checkbox:hover>.mdc-checkbox__native-control~.mdc-checkbox__background,.mat-mdc-list-option .mdc-checkbox--disabled.mat-mdc-checkbox-disabled-interactive .mdc-checkbox .mdc-checkbox__native-control:focus~.mdc-checkbox__background,.mat-mdc-list-option .mdc-checkbox--disabled.mat-mdc-checkbox-disabled-interactive .mdc-checkbox__background{border-color:var(--mat-checkbox-disabled-unselected-icon-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mat-mdc-list-option .mdc-checkbox--disabled.mat-mdc-checkbox-disabled-interactive .mdc-checkbox__native-control:checked~.mdc-checkbox__background,.mat-mdc-list-option .mdc-checkbox--disabled.mat-mdc-checkbox-disabled-interactive .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background{background-color:var(--mat-checkbox-disabled-selected-icon-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent));border-color:rgba(0,0,0,0)}.mat-mdc-list-option .mdc-checkbox__checkmark{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;opacity:0;transition:opacity 180ms cubic-bezier(0.4, 0, 0.6, 1);color:var(--mat-checkbox-selected-checkmark-color, var(--mat-sys-on-primary))}@media(forced-colors: active){.mat-mdc-list-option .mdc-checkbox__checkmark{color:CanvasText}}.mat-mdc-list-option .mdc-checkbox--disabled .mdc-checkbox__checkmark,.mat-mdc-list-option .mdc-checkbox--disabled.mat-mdc-checkbox-disabled-interactive .mdc-checkbox__checkmark{color:var(--mat-checkbox-disabled-selected-checkmark-color, var(--mat-sys-surface))}@media(forced-colors: active){.mat-mdc-list-option .mdc-checkbox--disabled .mdc-checkbox__checkmark,.mat-mdc-list-option .mdc-checkbox--disabled.mat-mdc-checkbox-disabled-interactive .mdc-checkbox__checkmark{color:CanvasText}}.mat-mdc-list-option .mdc-checkbox__checkmark-path{transition:stroke-dashoffset 180ms cubic-bezier(0.4, 0, 0.6, 1);stroke:currentColor;stroke-width:3.12px;stroke-dashoffset:29.7833385;stroke-dasharray:29.7833385}.mat-mdc-list-option .mdc-checkbox__mixedmark{width:100%;height:0;transform:scaleX(0) rotate(0deg);border-width:1px;border-style:solid;opacity:0;transition:opacity 90ms cubic-bezier(0.4, 0, 0.6, 1),transform 90ms cubic-bezier(0.4, 0, 0.6, 1);border-color:var(--mat-checkbox-selected-checkmark-color, var(--mat-sys-on-primary))}@media(forced-colors: active){.mat-mdc-list-option .mdc-checkbox__mixedmark{margin:0 1px}}.mat-mdc-list-option .mdc-checkbox--disabled .mdc-checkbox__mixedmark,.mat-mdc-list-option .mdc-checkbox--disabled.mat-mdc-checkbox-disabled-interactive .mdc-checkbox__mixedmark{border-color:var(--mat-checkbox-disabled-selected-checkmark-color, var(--mat-sys-surface))}.mat-mdc-list-option .mdc-checkbox--anim-unchecked-checked .mdc-checkbox__background,.mat-mdc-list-option .mdc-checkbox--anim-unchecked-indeterminate .mdc-checkbox__background,.mat-mdc-list-option .mdc-checkbox--anim-checked-unchecked .mdc-checkbox__background,.mat-mdc-list-option .mdc-checkbox--anim-indeterminate-unchecked .mdc-checkbox__background{animation-duration:180ms;animation-timing-function:linear}.mat-mdc-list-option .mdc-checkbox--anim-unchecked-checked .mdc-checkbox__checkmark-path{animation:mdc-checkbox-unchecked-checked-checkmark-path 180ms linear;transition:none}.mat-mdc-list-option .mdc-checkbox--anim-unchecked-indeterminate .mdc-checkbox__mixedmark{animation:mdc-checkbox-unchecked-indeterminate-mixedmark 90ms linear;transition:none}.mat-mdc-list-option .mdc-checkbox--anim-checked-unchecked .mdc-checkbox__checkmark-path{animation:mdc-checkbox-checked-unchecked-checkmark-path 90ms linear;transition:none}.mat-mdc-list-option .mdc-checkbox--anim-checked-indeterminate .mdc-checkbox__checkmark{animation:mdc-checkbox-checked-indeterminate-checkmark 90ms linear;transition:none}.mat-mdc-list-option .mdc-checkbox--anim-checked-indeterminate .mdc-checkbox__mixedmark{animation:mdc-checkbox-checked-indeterminate-mixedmark 90ms linear;transition:none}.mat-mdc-list-option .mdc-checkbox--anim-indeterminate-checked .mdc-checkbox__checkmark{animation:mdc-checkbox-indeterminate-checked-checkmark 500ms linear;transition:none}.mat-mdc-list-option .mdc-checkbox--anim-indeterminate-checked .mdc-checkbox__mixedmark{animation:mdc-checkbox-indeterminate-checked-mixedmark 500ms linear;transition:none}.mat-mdc-list-option .mdc-checkbox--anim-indeterminate-unchecked .mdc-checkbox__mixedmark{animation:mdc-checkbox-indeterminate-unchecked-mixedmark 300ms linear;transition:none}.mat-mdc-list-option .mdc-checkbox__native-control:checked~.mdc-checkbox__background,.mat-mdc-list-option .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background{transition:border-color 90ms cubic-bezier(0, 0, 0.2, 1),background-color 90ms cubic-bezier(0, 0, 0.2, 1)}.mat-mdc-list-option .mdc-checkbox__native-control:checked~.mdc-checkbox__background>.mdc-checkbox__checkmark>.mdc-checkbox__checkmark-path,.mat-mdc-list-option .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background>.mdc-checkbox__checkmark>.mdc-checkbox__checkmark-path{stroke-dashoffset:0}.mat-mdc-list-option .mdc-checkbox__native-control:checked~.mdc-checkbox__background>.mdc-checkbox__checkmark{transition:opacity 180ms cubic-bezier(0, 0, 0.2, 1),transform 180ms cubic-bezier(0, 0, 0.2, 1);opacity:1}.mat-mdc-list-option .mdc-checkbox__native-control:checked~.mdc-checkbox__background>.mdc-checkbox__mixedmark{transform:scaleX(1) rotate(-45deg)}.mat-mdc-list-option .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background>.mdc-checkbox__checkmark{transform:rotate(45deg);opacity:0;transition:opacity 90ms cubic-bezier(0.4, 0, 0.6, 1),transform 90ms cubic-bezier(0.4, 0, 0.6, 1)}.mat-mdc-list-option .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background>.mdc-checkbox__mixedmark{transform:scaleX(1) rotate(0deg);opacity:1}@keyframes mdc-checkbox-unchecked-checked-checkmark-path{0%,50%{stroke-dashoffset:29.7833385}50%{animation-timing-function:cubic-bezier(0, 0, 0.2, 1)}100%{stroke-dashoffset:0}}@keyframes mdc-checkbox-unchecked-indeterminate-mixedmark{0%,68.2%{transform:scaleX(0)}68.2%{animation-timing-function:cubic-bezier(0, 0, 0, 1)}100%{transform:scaleX(1)}}@keyframes mdc-checkbox-checked-unchecked-checkmark-path{from{animation-timing-function:cubic-bezier(0.4, 0, 1, 1);opacity:1;stroke-dashoffset:0}to{opacity:0;stroke-dashoffset:-29.7833385}}@keyframes mdc-checkbox-checked-indeterminate-checkmark{from{animation-timing-function:cubic-bezier(0, 0, 0.2, 1);transform:rotate(0deg);opacity:1}to{transform:rotate(45deg);opacity:0}}@keyframes mdc-checkbox-indeterminate-checked-checkmark{from{animation-timing-function:cubic-bezier(0.14, 0, 0, 1);transform:rotate(45deg);opacity:0}to{transform:rotate(360deg);opacity:1}}@keyframes mdc-checkbox-checked-indeterminate-mixedmark{from{animation-timing-function:cubic-bezier(0, 0, 0.2, 1);transform:rotate(-45deg);opacity:0}to{transform:rotate(0deg);opacity:1}}@keyframes mdc-checkbox-indeterminate-checked-mixedmark{from{animation-timing-function:cubic-bezier(0.14, 0, 0, 1);transform:rotate(0deg);opacity:1}to{transform:rotate(315deg);opacity:0}}@keyframes mdc-checkbox-indeterminate-unchecked-mixedmark{0%{animation-timing-function:linear;transform:scaleX(1);opacity:1}32.8%,100%{transform:scaleX(0);opacity:0}}.mat-mdc-list-option .mdc-radio{display:inline-block;position:relative;flex:0 0 auto;box-sizing:content-box;width:20px;height:20px;cursor:pointer;will-change:opacity,transform,border-color,color;padding:calc((var(--mat-radio-state-layer-size, 40px) - 20px)/2)}.mat-mdc-list-option .mdc-radio__background{display:inline-block;position:relative;box-sizing:border-box;width:20px;height:20px}.mat-mdc-list-option .mdc-radio__background::before{position:absolute;transform:scale(0, 0);border-radius:50%;opacity:0;pointer-events:none;content:"";transition:opacity 90ms cubic-bezier(0.4, 0, 0.6, 1),transform 90ms cubic-bezier(0.4, 0, 0.6, 1);width:var(--mat-radio-state-layer-size, 40px);height:var(--mat-radio-state-layer-size, 40px);top:calc(-1*(var(--mat-radio-state-layer-size, 40px) - 20px)/2);left:calc(-1*(var(--mat-radio-state-layer-size, 40px) - 20px)/2)}.mat-mdc-list-option .mdc-radio__outer-circle{position:absolute;top:0;left:0;box-sizing:border-box;width:100%;height:100%;border-width:2px;border-style:solid;border-radius:50%;transition:border-color 90ms cubic-bezier(0.4, 0, 0.6, 1)}.mat-mdc-list-option .mdc-radio__inner-circle{position:absolute;top:0;left:0;box-sizing:border-box;width:100%;height:100%;transform:scale(0);border-radius:50%;transition:transform 90ms cubic-bezier(0.4, 0, 0.6, 1),background-color 90ms cubic-bezier(0.4, 0, 0.6, 1)}@media(forced-colors: active){.mat-mdc-list-option .mdc-radio__inner-circle{background-color:CanvasText !important}}.mat-mdc-list-option .mdc-radio__native-control{position:absolute;margin:0;padding:0;opacity:0;top:0;right:0;left:0;cursor:inherit;z-index:1;width:var(--mat-radio-state-layer-size, 40px);height:var(--mat-radio-state-layer-size, 40px)}.mat-mdc-list-option .mdc-radio__native-control:checked+.mdc-radio__background,.mat-mdc-list-option .mdc-radio__native-control:disabled+.mdc-radio__background{transition:opacity 90ms cubic-bezier(0, 0, 0.2, 1),transform 90ms cubic-bezier(0, 0, 0.2, 1)}.mat-mdc-list-option .mdc-radio__native-control:checked+.mdc-radio__background>.mdc-radio__outer-circle,.mat-mdc-list-option .mdc-radio__native-control:disabled+.mdc-radio__background>.mdc-radio__outer-circle{transition:border-color 90ms cubic-bezier(0, 0, 0.2, 1)}.mat-mdc-list-option .mdc-radio__native-control:checked+.mdc-radio__background>.mdc-radio__inner-circle,.mat-mdc-list-option .mdc-radio__native-control:disabled+.mdc-radio__background>.mdc-radio__inner-circle{transition:transform 90ms cubic-bezier(0, 0, 0.2, 1),background-color 90ms cubic-bezier(0, 0, 0.2, 1)}.mat-mdc-list-option .mdc-radio__native-control:disabled:not(:checked)+.mdc-radio__background>.mdc-radio__outer-circle{border-color:var(--mat-radio-disabled-unselected-icon-color, var(--mat-sys-on-surface));opacity:var(--mat-radio-disabled-unselected-icon-opacity, 0.38)}.mat-mdc-list-option .mdc-radio__native-control:disabled+.mdc-radio__background{cursor:default}.mat-mdc-list-option .mdc-radio__native-control:disabled+.mdc-radio__background>.mdc-radio__outer-circle{border-color:var(--mat-radio-disabled-selected-icon-color, var(--mat-sys-on-surface));opacity:var(--mat-radio-disabled-selected-icon-opacity, 0.38)}.mat-mdc-list-option .mdc-radio__native-control:disabled+.mdc-radio__background>.mdc-radio__inner-circle{background-color:var(--mat-radio-disabled-selected-icon-color, var(--mat-sys-on-surface, currentColor));opacity:var(--mat-radio-disabled-selected-icon-opacity, 0.38)}.mat-mdc-list-option .mdc-radio__native-control:enabled:not(:checked)+.mdc-radio__background>.mdc-radio__outer-circle{border-color:var(--mat-radio-unselected-icon-color, var(--mat-sys-on-surface-variant))}.mat-mdc-list-option .mdc-radio__native-control:enabled:checked+.mdc-radio__background>.mdc-radio__outer-circle{border-color:var(--mat-radio-selected-icon-color, var(--mat-sys-primary))}.mat-mdc-list-option .mdc-radio__native-control:enabled:checked+.mdc-radio__background>.mdc-radio__inner-circle{background-color:var(--mat-radio-selected-icon-color, var(--mat-sys-primary, currentColor))}.mat-mdc-list-option .mdc-radio__native-control:checked+.mdc-radio__background>.mdc-radio__inner-circle{transform:scale(0.5);transition:transform 90ms cubic-bezier(0, 0, 0.2, 1),background-color 90ms cubic-bezier(0, 0, 0.2, 1)}.mat-mdc-list-option._mat-animation-noopable .mdc-radio__background::before,.mat-mdc-list-option._mat-animation-noopable .mdc-radio__outer-circle,.mat-mdc-list-option._mat-animation-noopable .mdc-radio__inner-circle{transition:none !important}.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__start>.mdc-checkbox>.mat-mdc-checkbox-touch-target,.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__start>.mdc-checkbox>.mdc-checkbox__native-control,.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__start>.mdc-checkbox>.mdc-checkbox__ripple,.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__start>.mdc-checkbox>.mat-mdc-checkbox-ripple::before,.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__start>.mdc-checkbox>.mdc-checkbox__background,.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__start>.mdc-checkbox>.mdc-checkbox__background>.mdc-checkbox__checkmark,.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__start>.mdc-checkbox>.mdc-checkbox__background>.mdc-checkbox__checkmark>.mdc-checkbox__checkmark-path,.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__start>.mdc-checkbox>.mdc-checkbox__background>.mdc-checkbox__mixedmark,.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__end>.mdc-checkbox>.mat-mdc-checkbox-touch-target,.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__end>.mdc-checkbox>.mdc-checkbox__native-control,.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__end>.mdc-checkbox>.mdc-checkbox__ripple,.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__end>.mdc-checkbox>.mat-mdc-checkbox-ripple::before,.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__end>.mdc-checkbox>.mdc-checkbox__background,.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__end>.mdc-checkbox>.mdc-checkbox__background>.mdc-checkbox__checkmark,.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__end>.mdc-checkbox>.mdc-checkbox__background>.mdc-checkbox__checkmark>.mdc-checkbox__checkmark-path,.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__end>.mdc-checkbox>.mdc-checkbox__background>.mdc-checkbox__mixedmark{transition:none !important;animation:none !important}.mat-mdc-list-option .mdc-checkbox__native-control,.mat-mdc-list-option .mdc-radio__native-control{display:none}@media(forced-colors: active){.mat-mdc-list-option.mdc-list-item--selected::after{content:"";position:absolute;top:50%;right:16px;transform:translateY(-50%);width:10px;height:0;border-bottom:solid 10px;border-radius:10px}.mat-mdc-list-option.mdc-list-item--selected [dir=rtl]::after{right:auto;left:16px}}\n'],
+    encapsulation: 2,
+    changeDetection: 0
+  });
 };
-__name(_MatListOption, "MatListOption");
-__publicField(_MatListOption, "\u0275fac", /* @__PURE__ */ (() => {
-  let \u0275MatListOption_BaseFactory;
-  return /* @__PURE__ */ __name(function MatListOption_Factory(__ngFactoryType__) {
-    return (\u0275MatListOption_BaseFactory || (\u0275MatListOption_BaseFactory = \u0275\u0275getInheritedFactory(_MatListOption)))(__ngFactoryType__ || _MatListOption);
-  }, "MatListOption_Factory");
-})());
-__publicField(_MatListOption, "\u0275cmp", /* @__PURE__ */ \u0275\u0275defineComponent({
-  type: _MatListOption,
-  selectors: [["mat-list-option"]],
-  contentQueries: /* @__PURE__ */ __name(function MatListOption_ContentQueries(rf, ctx, dirIndex) {
-    if (rf & 1) {
-      \u0275\u0275contentQuery(dirIndex, MatListItemLine, 5);
-      \u0275\u0275contentQuery(dirIndex, MatListItemTitle, 5);
-    }
-    if (rf & 2) {
-      let _t;
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._lines = _t);
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._titles = _t);
-    }
-  }, "MatListOption_ContentQueries"),
-  viewQuery: /* @__PURE__ */ __name(function MatListOption_Query(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275viewQuery(_c22, 5);
-    }
-    if (rf & 2) {
-      let _t;
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._unscopedContent = _t.first);
-    }
-  }, "MatListOption_Query"),
-  hostAttrs: ["role", "option", 1, "mat-mdc-list-item", "mat-mdc-list-option", "mdc-list-item"],
-  hostVars: 27,
-  hostBindings: /* @__PURE__ */ __name(function MatListOption_HostBindings(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275listener("blur", /* @__PURE__ */ __name(function MatListOption_blur_HostBindingHandler() {
-        return ctx._handleBlur();
-      }, "MatListOption_blur_HostBindingHandler"))("click", /* @__PURE__ */ __name(function MatListOption_click_HostBindingHandler() {
-        return ctx._toggleOnInteraction();
-      }, "MatListOption_click_HostBindingHandler"));
-    }
-    if (rf & 2) {
-      \u0275\u0275attribute("aria-selected", ctx.selected);
-      \u0275\u0275classProp("mdc-list-item--selected", ctx.selected && !ctx._selectionList.multiple && ctx._selectionList.hideSingleSelectionIndicator)("mdc-list-item--with-leading-avatar", ctx._hasProjected("avatars", "before"))("mdc-list-item--with-leading-icon", ctx._hasProjected("icons", "before"))("mdc-list-item--with-trailing-icon", ctx._hasProjected("icons", "after"))("mat-mdc-list-option-with-trailing-avatar", ctx._hasProjected("avatars", "after"))("mdc-list-item--with-leading-checkbox", ctx._hasCheckboxAt("before"))("mdc-list-item--with-trailing-checkbox", ctx._hasCheckboxAt("after"))("mdc-list-item--with-leading-radio", ctx._hasRadioAt("before"))("mdc-list-item--with-trailing-radio", ctx._hasRadioAt("after"))("mat-mdc-list-item-both-leading-and-trailing", ctx._hasBothLeadingAndTrailing())("mat-accent", ctx.color !== "primary" && ctx.color !== "warn")("mat-warn", ctx.color === "warn")("_mat-animation-noopable", ctx._noopAnimations);
-    }
-  }, "MatListOption_HostBindings"),
-  inputs: {
-    togglePosition: "togglePosition",
-    checkboxPosition: "checkboxPosition",
-    color: "color",
-    value: "value",
-    selected: "selected"
-  },
-  outputs: {
-    selectedChange: "selectedChange"
-  },
-  exportAs: ["matListOption"],
-  features: [\u0275\u0275ProvidersFeature([{
-    provide: MatListItemBase,
-    useExisting: _MatListOption
-  }, {
-    provide: LIST_OPTION,
-    useExisting: _MatListOption
-  }]), \u0275\u0275InheritDefinitionFeature],
-  ngContentSelectors: _c7,
-  decls: 20,
-  vars: 4,
-  consts: [["icons", ""], ["checkbox", ""], ["radio", ""], ["unscopedContent", ""], [1, "mdc-list-item__start", "mat-mdc-list-option-checkbox-before"], [1, "mdc-list-item__start", "mat-mdc-list-option-radio-before"], [3, "ngTemplateOutlet"], [1, "mdc-list-item__content"], [1, "mat-mdc-list-item-unscoped-content", 3, "cdkObserveContent"], [1, "mdc-list-item__end"], [1, "mat-focus-indicator"], [1, "mdc-checkbox"], ["type", "checkbox", 1, "mdc-checkbox__native-control", 3, "checked", "disabled"], [1, "mdc-checkbox__background"], ["viewBox", "0 0 24 24", "aria-hidden", "true", 1, "mdc-checkbox__checkmark"], ["fill", "none", "d", "M1.73,12.91 8.1,19.28 22.79,4.59", 1, "mdc-checkbox__checkmark-path"], [1, "mdc-checkbox__mixedmark"], [1, "mdc-radio"], ["type", "radio", 1, "mdc-radio__native-control", 3, "checked", "disabled"], [1, "mdc-radio__background"], [1, "mdc-radio__outer-circle"], [1, "mdc-radio__inner-circle"]],
-  template: /* @__PURE__ */ __name(function MatListOption_Template(rf, ctx) {
-    if (rf & 1) {
-      const _r1 = \u0275\u0275getCurrentView();
-      \u0275\u0275projectionDef(_c62);
-      \u0275\u0275template(0, MatListOption_ng_template_0_Template, 1, 0, "ng-template", null, 0, \u0275\u0275templateRefExtractor)(2, MatListOption_ng_template_2_Template, 6, 4, "ng-template", null, 1, \u0275\u0275templateRefExtractor)(4, MatListOption_ng_template_4_Template, 5, 4, "ng-template", null, 2, \u0275\u0275templateRefExtractor);
-      \u0275\u0275conditionalCreate(6, MatListOption_Conditional_6_Template, 2, 1, "span", 4)(7, MatListOption_Conditional_7_Template, 2, 1, "span", 5);
-      \u0275\u0275conditionalCreate(8, MatListOption_Conditional_8_Template, 1, 1, null, 6);
-      \u0275\u0275elementStart(9, "span", 7);
-      \u0275\u0275projection(10);
-      \u0275\u0275projection(11, 1);
-      \u0275\u0275elementStart(12, "span", 8, 3);
-      \u0275\u0275listener("cdkObserveContent", /* @__PURE__ */ __name(function MatListOption_Template_span_cdkObserveContent_12_listener() {
-        \u0275\u0275restoreView(_r1);
-        return \u0275\u0275resetView(ctx._updateItemLines(true));
-      }, "MatListOption_Template_span_cdkObserveContent_12_listener"));
-      \u0275\u0275projection(14, 2);
-      \u0275\u0275elementEnd()();
-      \u0275\u0275conditionalCreate(15, MatListOption_Conditional_15_Template, 2, 1, "span", 9)(16, MatListOption_Conditional_16_Template, 2, 1, "span", 9);
-      \u0275\u0275conditionalCreate(17, MatListOption_Conditional_17_Template, 1, 1, null, 6);
-      \u0275\u0275projection(18, 3);
-      \u0275\u0275element(19, "div", 10);
-    }
-    if (rf & 2) {
-      \u0275\u0275advance(6);
-      \u0275\u0275conditional(ctx._hasCheckboxAt("before") ? 6 : ctx._hasRadioAt("before") ? 7 : -1);
-      \u0275\u0275advance(2);
-      \u0275\u0275conditional(ctx._hasIconsOrAvatarsAt("before") ? 8 : -1);
-      \u0275\u0275advance(7);
-      \u0275\u0275conditional(ctx._hasCheckboxAt("after") ? 15 : ctx._hasRadioAt("after") ? 16 : -1);
-      \u0275\u0275advance(2);
-      \u0275\u0275conditional(ctx._hasIconsOrAvatarsAt("after") ? 17 : -1);
-    }
-  }, "MatListOption_Template"),
-  dependencies: [NgTemplateOutlet, CdkObserveContent],
-  styles: ['.mat-mdc-list-option-with-trailing-avatar.mdc-list-item,[dir=rtl] .mat-mdc-list-option-with-trailing-avatar.mdc-list-item{padding-left:0;padding-right:0}.mat-mdc-list-option-with-trailing-avatar .mdc-list-item__end{margin-left:16px;margin-right:16px;width:40px;height:40px}.mat-mdc-list-option-with-trailing-avatar.mdc-list-item--with-two-lines .mdc-list-item__primary-text{display:block;margin-top:0;line-height:normal;margin-bottom:-20px}.mat-mdc-list-option-with-trailing-avatar.mdc-list-item--with-two-lines .mdc-list-item__primary-text::before{display:inline-block;width:0;height:32px;content:"";vertical-align:0}.mat-mdc-list-option-with-trailing-avatar.mdc-list-item--with-two-lines .mdc-list-item__primary-text::after{display:inline-block;width:0;height:20px;content:"";vertical-align:-20px}.mat-mdc-list-option-with-trailing-avatar .mdc-list-item__end{border-radius:50%}.mat-mdc-list-option .mdc-checkbox{display:inline-block;position:relative;flex:0 0 18px;box-sizing:content-box;width:18px;height:18px;line-height:0;white-space:nowrap;cursor:pointer;vertical-align:bottom;padding:calc((var(--mat-checkbox-state-layer-size, 40px) - 18px)/2);margin:calc((var(--mat-checkbox-state-layer-size, 40px) - var(--mat-checkbox-state-layer-size, 40px))/2)}.mat-mdc-list-option .mdc-checkbox .mdc-checkbox__native-control{position:absolute;margin:0;padding:0;opacity:0;cursor:inherit;z-index:1;width:var(--mat-checkbox-state-layer-size, 40px);height:var(--mat-checkbox-state-layer-size, 40px);top:calc((var(--mat-checkbox-state-layer-size, 40px) - var(--mat-checkbox-state-layer-size, 40px))/2);right:calc((var(--mat-checkbox-state-layer-size, 40px) - var(--mat-checkbox-state-layer-size, 40px))/2);left:calc((var(--mat-checkbox-state-layer-size, 40px) - var(--mat-checkbox-state-layer-size, 40px))/2)}.mat-mdc-list-option .mdc-checkbox--disabled{cursor:default;pointer-events:none}@media(forced-colors: active){.mat-mdc-list-option .mdc-checkbox--disabled{opacity:.5}}.mat-mdc-list-option .mdc-checkbox__background{display:inline-flex;position:absolute;align-items:center;justify-content:center;box-sizing:border-box;width:18px;height:18px;border:2px solid currentColor;border-radius:2px;background-color:rgba(0,0,0,0);pointer-events:none;will-change:background-color,border-color;transition:background-color 90ms cubic-bezier(0.4, 0, 0.6, 1),border-color 90ms cubic-bezier(0.4, 0, 0.6, 1);-webkit-print-color-adjust:exact;color-adjust:exact;border-color:var(--mat-checkbox-unselected-icon-color, var(--mat-sys-on-surface-variant));top:calc((var(--mat-checkbox-state-layer-size, 40px) - 18px)/2);left:calc((var(--mat-checkbox-state-layer-size, 40px) - 18px)/2)}.mat-mdc-list-option .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background,.mat-mdc-list-option .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background{border-color:var(--mat-checkbox-selected-icon-color, var(--mat-sys-primary));background-color:var(--mat-checkbox-selected-icon-color, var(--mat-sys-primary))}.mat-mdc-list-option .mdc-checkbox--disabled .mdc-checkbox__background{border-color:var(--mat-checkbox-disabled-unselected-icon-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mat-mdc-list-option .mdc-checkbox__native-control:disabled:checked~.mdc-checkbox__background,.mat-mdc-list-option .mdc-checkbox__native-control:disabled:indeterminate~.mdc-checkbox__background{background-color:var(--mat-checkbox-disabled-selected-icon-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent));border-color:rgba(0,0,0,0)}.mat-mdc-list-option .mdc-checkbox:hover>.mdc-checkbox__native-control:not(:checked)~.mdc-checkbox__background,.mat-mdc-list-option .mdc-checkbox:hover>.mdc-checkbox__native-control:not(:indeterminate)~.mdc-checkbox__background{border-color:var(--mat-checkbox-unselected-hover-icon-color, var(--mat-sys-on-surface));background-color:rgba(0,0,0,0)}.mat-mdc-list-option .mdc-checkbox:hover>.mdc-checkbox__native-control:checked~.mdc-checkbox__background,.mat-mdc-list-option .mdc-checkbox:hover>.mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background{border-color:var(--mat-checkbox-selected-hover-icon-color, var(--mat-sys-primary));background-color:var(--mat-checkbox-selected-hover-icon-color, var(--mat-sys-primary))}.mat-mdc-list-option .mdc-checkbox__native-control:focus:focus:not(:checked)~.mdc-checkbox__background,.mat-mdc-list-option .mdc-checkbox__native-control:focus:focus:not(:indeterminate)~.mdc-checkbox__background{border-color:var(--mat-checkbox-unselected-focus-icon-color, var(--mat-sys-on-surface))}.mat-mdc-list-option .mdc-checkbox__native-control:focus:focus:checked~.mdc-checkbox__background,.mat-mdc-list-option .mdc-checkbox__native-control:focus:focus:indeterminate~.mdc-checkbox__background{border-color:var(--mat-checkbox-selected-focus-icon-color, var(--mat-sys-primary));background-color:var(--mat-checkbox-selected-focus-icon-color, var(--mat-sys-primary))}.mat-mdc-list-option .mdc-checkbox--disabled.mat-mdc-checkbox-disabled-interactive .mdc-checkbox:hover>.mdc-checkbox__native-control~.mdc-checkbox__background,.mat-mdc-list-option .mdc-checkbox--disabled.mat-mdc-checkbox-disabled-interactive .mdc-checkbox .mdc-checkbox__native-control:focus~.mdc-checkbox__background,.mat-mdc-list-option .mdc-checkbox--disabled.mat-mdc-checkbox-disabled-interactive .mdc-checkbox__background{border-color:var(--mat-checkbox-disabled-unselected-icon-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mat-mdc-list-option .mdc-checkbox--disabled.mat-mdc-checkbox-disabled-interactive .mdc-checkbox__native-control:checked~.mdc-checkbox__background,.mat-mdc-list-option .mdc-checkbox--disabled.mat-mdc-checkbox-disabled-interactive .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background{background-color:var(--mat-checkbox-disabled-selected-icon-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent));border-color:rgba(0,0,0,0)}.mat-mdc-list-option .mdc-checkbox__checkmark{position:absolute;top:0;right:0;bottom:0;left:0;width:100%;opacity:0;transition:opacity 180ms cubic-bezier(0.4, 0, 0.6, 1);color:var(--mat-checkbox-selected-checkmark-color, var(--mat-sys-on-primary))}@media(forced-colors: active){.mat-mdc-list-option .mdc-checkbox__checkmark{color:CanvasText}}.mat-mdc-list-option .mdc-checkbox--disabled .mdc-checkbox__checkmark,.mat-mdc-list-option .mdc-checkbox--disabled.mat-mdc-checkbox-disabled-interactive .mdc-checkbox__checkmark{color:var(--mat-checkbox-disabled-selected-checkmark-color, var(--mat-sys-surface))}@media(forced-colors: active){.mat-mdc-list-option .mdc-checkbox--disabled .mdc-checkbox__checkmark,.mat-mdc-list-option .mdc-checkbox--disabled.mat-mdc-checkbox-disabled-interactive .mdc-checkbox__checkmark{color:CanvasText}}.mat-mdc-list-option .mdc-checkbox__checkmark-path{transition:stroke-dashoffset 180ms cubic-bezier(0.4, 0, 0.6, 1);stroke:currentColor;stroke-width:3.12px;stroke-dashoffset:29.7833385;stroke-dasharray:29.7833385}.mat-mdc-list-option .mdc-checkbox__mixedmark{width:100%;height:0;transform:scaleX(0) rotate(0deg);border-width:1px;border-style:solid;opacity:0;transition:opacity 90ms cubic-bezier(0.4, 0, 0.6, 1),transform 90ms cubic-bezier(0.4, 0, 0.6, 1);border-color:var(--mat-checkbox-selected-checkmark-color, var(--mat-sys-on-primary))}@media(forced-colors: active){.mat-mdc-list-option .mdc-checkbox__mixedmark{margin:0 1px}}.mat-mdc-list-option .mdc-checkbox--disabled .mdc-checkbox__mixedmark,.mat-mdc-list-option .mdc-checkbox--disabled.mat-mdc-checkbox-disabled-interactive .mdc-checkbox__mixedmark{border-color:var(--mat-checkbox-disabled-selected-checkmark-color, var(--mat-sys-surface))}.mat-mdc-list-option .mdc-checkbox--anim-unchecked-checked .mdc-checkbox__background,.mat-mdc-list-option .mdc-checkbox--anim-unchecked-indeterminate .mdc-checkbox__background,.mat-mdc-list-option .mdc-checkbox--anim-checked-unchecked .mdc-checkbox__background,.mat-mdc-list-option .mdc-checkbox--anim-indeterminate-unchecked .mdc-checkbox__background{animation-duration:180ms;animation-timing-function:linear}.mat-mdc-list-option .mdc-checkbox--anim-unchecked-checked .mdc-checkbox__checkmark-path{animation:mdc-checkbox-unchecked-checked-checkmark-path 180ms linear;transition:none}.mat-mdc-list-option .mdc-checkbox--anim-unchecked-indeterminate .mdc-checkbox__mixedmark{animation:mdc-checkbox-unchecked-indeterminate-mixedmark 90ms linear;transition:none}.mat-mdc-list-option .mdc-checkbox--anim-checked-unchecked .mdc-checkbox__checkmark-path{animation:mdc-checkbox-checked-unchecked-checkmark-path 90ms linear;transition:none}.mat-mdc-list-option .mdc-checkbox--anim-checked-indeterminate .mdc-checkbox__checkmark{animation:mdc-checkbox-checked-indeterminate-checkmark 90ms linear;transition:none}.mat-mdc-list-option .mdc-checkbox--anim-checked-indeterminate .mdc-checkbox__mixedmark{animation:mdc-checkbox-checked-indeterminate-mixedmark 90ms linear;transition:none}.mat-mdc-list-option .mdc-checkbox--anim-indeterminate-checked .mdc-checkbox__checkmark{animation:mdc-checkbox-indeterminate-checked-checkmark 500ms linear;transition:none}.mat-mdc-list-option .mdc-checkbox--anim-indeterminate-checked .mdc-checkbox__mixedmark{animation:mdc-checkbox-indeterminate-checked-mixedmark 500ms linear;transition:none}.mat-mdc-list-option .mdc-checkbox--anim-indeterminate-unchecked .mdc-checkbox__mixedmark{animation:mdc-checkbox-indeterminate-unchecked-mixedmark 300ms linear;transition:none}.mat-mdc-list-option .mdc-checkbox__native-control:checked~.mdc-checkbox__background,.mat-mdc-list-option .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background{transition:border-color 90ms cubic-bezier(0, 0, 0.2, 1),background-color 90ms cubic-bezier(0, 0, 0.2, 1)}.mat-mdc-list-option .mdc-checkbox__native-control:checked~.mdc-checkbox__background>.mdc-checkbox__checkmark>.mdc-checkbox__checkmark-path,.mat-mdc-list-option .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background>.mdc-checkbox__checkmark>.mdc-checkbox__checkmark-path{stroke-dashoffset:0}.mat-mdc-list-option .mdc-checkbox__native-control:checked~.mdc-checkbox__background>.mdc-checkbox__checkmark{transition:opacity 180ms cubic-bezier(0, 0, 0.2, 1),transform 180ms cubic-bezier(0, 0, 0.2, 1);opacity:1}.mat-mdc-list-option .mdc-checkbox__native-control:checked~.mdc-checkbox__background>.mdc-checkbox__mixedmark{transform:scaleX(1) rotate(-45deg)}.mat-mdc-list-option .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background>.mdc-checkbox__checkmark{transform:rotate(45deg);opacity:0;transition:opacity 90ms cubic-bezier(0.4, 0, 0.6, 1),transform 90ms cubic-bezier(0.4, 0, 0.6, 1)}.mat-mdc-list-option .mdc-checkbox__native-control:indeterminate~.mdc-checkbox__background>.mdc-checkbox__mixedmark{transform:scaleX(1) rotate(0deg);opacity:1}@keyframes mdc-checkbox-unchecked-checked-checkmark-path{0%,50%{stroke-dashoffset:29.7833385}50%{animation-timing-function:cubic-bezier(0, 0, 0.2, 1)}100%{stroke-dashoffset:0}}@keyframes mdc-checkbox-unchecked-indeterminate-mixedmark{0%,68.2%{transform:scaleX(0)}68.2%{animation-timing-function:cubic-bezier(0, 0, 0, 1)}100%{transform:scaleX(1)}}@keyframes mdc-checkbox-checked-unchecked-checkmark-path{from{animation-timing-function:cubic-bezier(0.4, 0, 1, 1);opacity:1;stroke-dashoffset:0}to{opacity:0;stroke-dashoffset:-29.7833385}}@keyframes mdc-checkbox-checked-indeterminate-checkmark{from{animation-timing-function:cubic-bezier(0, 0, 0.2, 1);transform:rotate(0deg);opacity:1}to{transform:rotate(45deg);opacity:0}}@keyframes mdc-checkbox-indeterminate-checked-checkmark{from{animation-timing-function:cubic-bezier(0.14, 0, 0, 1);transform:rotate(45deg);opacity:0}to{transform:rotate(360deg);opacity:1}}@keyframes mdc-checkbox-checked-indeterminate-mixedmark{from{animation-timing-function:cubic-bezier(0, 0, 0.2, 1);transform:rotate(-45deg);opacity:0}to{transform:rotate(0deg);opacity:1}}@keyframes mdc-checkbox-indeterminate-checked-mixedmark{from{animation-timing-function:cubic-bezier(0.14, 0, 0, 1);transform:rotate(0deg);opacity:1}to{transform:rotate(315deg);opacity:0}}@keyframes mdc-checkbox-indeterminate-unchecked-mixedmark{0%{animation-timing-function:linear;transform:scaleX(1);opacity:1}32.8%,100%{transform:scaleX(0);opacity:0}}.mat-mdc-list-option .mdc-radio{display:inline-block;position:relative;flex:0 0 auto;box-sizing:content-box;width:20px;height:20px;cursor:pointer;will-change:opacity,transform,border-color,color;padding:calc((var(--mat-radio-state-layer-size, 40px) - 20px)/2)}.mat-mdc-list-option .mdc-radio__background{display:inline-block;position:relative;box-sizing:border-box;width:20px;height:20px}.mat-mdc-list-option .mdc-radio__background::before{position:absolute;transform:scale(0, 0);border-radius:50%;opacity:0;pointer-events:none;content:"";transition:opacity 90ms cubic-bezier(0.4, 0, 0.6, 1),transform 90ms cubic-bezier(0.4, 0, 0.6, 1);width:var(--mat-radio-state-layer-size, 40px);height:var(--mat-radio-state-layer-size, 40px);top:calc(-1*(var(--mat-radio-state-layer-size, 40px) - 20px)/2);left:calc(-1*(var(--mat-radio-state-layer-size, 40px) - 20px)/2)}.mat-mdc-list-option .mdc-radio__outer-circle{position:absolute;top:0;left:0;box-sizing:border-box;width:100%;height:100%;border-width:2px;border-style:solid;border-radius:50%;transition:border-color 90ms cubic-bezier(0.4, 0, 0.6, 1)}.mat-mdc-list-option .mdc-radio__inner-circle{position:absolute;top:0;left:0;box-sizing:border-box;width:100%;height:100%;transform:scale(0);border-radius:50%;transition:transform 90ms cubic-bezier(0.4, 0, 0.6, 1),background-color 90ms cubic-bezier(0.4, 0, 0.6, 1)}@media(forced-colors: active){.mat-mdc-list-option .mdc-radio__inner-circle{background-color:CanvasText !important}}.mat-mdc-list-option .mdc-radio__native-control{position:absolute;margin:0;padding:0;opacity:0;top:0;right:0;left:0;cursor:inherit;z-index:1;width:var(--mat-radio-state-layer-size, 40px);height:var(--mat-radio-state-layer-size, 40px)}.mat-mdc-list-option .mdc-radio__native-control:checked+.mdc-radio__background,.mat-mdc-list-option .mdc-radio__native-control:disabled+.mdc-radio__background{transition:opacity 90ms cubic-bezier(0, 0, 0.2, 1),transform 90ms cubic-bezier(0, 0, 0.2, 1)}.mat-mdc-list-option .mdc-radio__native-control:checked+.mdc-radio__background>.mdc-radio__outer-circle,.mat-mdc-list-option .mdc-radio__native-control:disabled+.mdc-radio__background>.mdc-radio__outer-circle{transition:border-color 90ms cubic-bezier(0, 0, 0.2, 1)}.mat-mdc-list-option .mdc-radio__native-control:checked+.mdc-radio__background>.mdc-radio__inner-circle,.mat-mdc-list-option .mdc-radio__native-control:disabled+.mdc-radio__background>.mdc-radio__inner-circle{transition:transform 90ms cubic-bezier(0, 0, 0.2, 1),background-color 90ms cubic-bezier(0, 0, 0.2, 1)}.mat-mdc-list-option .mdc-radio__native-control:disabled:not(:checked)+.mdc-radio__background>.mdc-radio__outer-circle{border-color:var(--mat-radio-disabled-unselected-icon-color, var(--mat-sys-on-surface));opacity:var(--mat-radio-disabled-unselected-icon-opacity, 0.38)}.mat-mdc-list-option .mdc-radio__native-control:disabled+.mdc-radio__background{cursor:default}.mat-mdc-list-option .mdc-radio__native-control:disabled+.mdc-radio__background>.mdc-radio__outer-circle{border-color:var(--mat-radio-disabled-selected-icon-color, var(--mat-sys-on-surface));opacity:var(--mat-radio-disabled-selected-icon-opacity, 0.38)}.mat-mdc-list-option .mdc-radio__native-control:disabled+.mdc-radio__background>.mdc-radio__inner-circle{background-color:var(--mat-radio-disabled-selected-icon-color, var(--mat-sys-on-surface, currentColor));opacity:var(--mat-radio-disabled-selected-icon-opacity, 0.38)}.mat-mdc-list-option .mdc-radio__native-control:enabled:not(:checked)+.mdc-radio__background>.mdc-radio__outer-circle{border-color:var(--mat-radio-unselected-icon-color, var(--mat-sys-on-surface-variant))}.mat-mdc-list-option .mdc-radio__native-control:enabled:checked+.mdc-radio__background>.mdc-radio__outer-circle{border-color:var(--mat-radio-selected-icon-color, var(--mat-sys-primary))}.mat-mdc-list-option .mdc-radio__native-control:enabled:checked+.mdc-radio__background>.mdc-radio__inner-circle{background-color:var(--mat-radio-selected-icon-color, var(--mat-sys-primary, currentColor))}.mat-mdc-list-option .mdc-radio__native-control:checked+.mdc-radio__background>.mdc-radio__inner-circle{transform:scale(0.5);transition:transform 90ms cubic-bezier(0, 0, 0.2, 1),background-color 90ms cubic-bezier(0, 0, 0.2, 1)}.mat-mdc-list-option._mat-animation-noopable .mdc-radio__background::before,.mat-mdc-list-option._mat-animation-noopable .mdc-radio__outer-circle,.mat-mdc-list-option._mat-animation-noopable .mdc-radio__inner-circle{transition:none !important}.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__start>.mdc-checkbox>.mat-mdc-checkbox-touch-target,.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__start>.mdc-checkbox>.mdc-checkbox__native-control,.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__start>.mdc-checkbox>.mdc-checkbox__ripple,.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__start>.mdc-checkbox>.mat-mdc-checkbox-ripple::before,.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__start>.mdc-checkbox>.mdc-checkbox__background,.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__start>.mdc-checkbox>.mdc-checkbox__background>.mdc-checkbox__checkmark,.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__start>.mdc-checkbox>.mdc-checkbox__background>.mdc-checkbox__checkmark>.mdc-checkbox__checkmark-path,.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__start>.mdc-checkbox>.mdc-checkbox__background>.mdc-checkbox__mixedmark,.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__end>.mdc-checkbox>.mat-mdc-checkbox-touch-target,.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__end>.mdc-checkbox>.mdc-checkbox__native-control,.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__end>.mdc-checkbox>.mdc-checkbox__ripple,.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__end>.mdc-checkbox>.mat-mdc-checkbox-ripple::before,.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__end>.mdc-checkbox>.mdc-checkbox__background,.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__end>.mdc-checkbox>.mdc-checkbox__background>.mdc-checkbox__checkmark,.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__end>.mdc-checkbox>.mdc-checkbox__background>.mdc-checkbox__checkmark>.mdc-checkbox__checkmark-path,.mat-mdc-list-option._mat-animation-noopable>.mdc-list-item__end>.mdc-checkbox>.mdc-checkbox__background>.mdc-checkbox__mixedmark{transition:none !important;animation:none !important}.mat-mdc-list-option .mdc-checkbox__native-control,.mat-mdc-list-option .mdc-radio__native-control{display:none}@media(forced-colors: active){.mat-mdc-list-option.mdc-list-item--selected::after{content:"";position:absolute;top:50%;right:16px;transform:translateY(-50%);width:10px;height:0;border-bottom:solid 10px;border-radius:10px}.mat-mdc-list-option.mdc-list-item--selected [dir=rtl]::after{right:auto;left:16px}}\n'],
-  encapsulation: 2,
-  changeDetection: 0
-}));
-var MatListOption = _MatListOption;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatListOption, [{
     type: Component,
@@ -3258,18 +2886,16 @@ var MatListOption = _MatListOption;
     }]
   });
 })();
-var _MatListSubheaderCssMatStyler = class _MatListSubheaderCssMatStyler {
+var MatListSubheaderCssMatStyler = class _MatListSubheaderCssMatStyler {
+  static \u0275fac = function MatListSubheaderCssMatStyler_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatListSubheaderCssMatStyler)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _MatListSubheaderCssMatStyler,
+    selectors: [["", "mat-subheader", ""], ["", "matSubheader", ""]],
+    hostAttrs: [1, "mat-mdc-subheader", "mdc-list-group__subheader"]
+  });
 };
-__name(_MatListSubheaderCssMatStyler, "MatListSubheaderCssMatStyler");
-__publicField(_MatListSubheaderCssMatStyler, "\u0275fac", /* @__PURE__ */ __name(function MatListSubheaderCssMatStyler_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatListSubheaderCssMatStyler)();
-}, "MatListSubheaderCssMatStyler_Factory"));
-__publicField(_MatListSubheaderCssMatStyler, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _MatListSubheaderCssMatStyler,
-  selectors: [["", "mat-subheader", ""], ["", "matSubheader", ""]],
-  hostAttrs: [1, "mat-mdc-subheader", "mdc-list-group__subheader"]
-}));
-var MatListSubheaderCssMatStyler = _MatListSubheaderCssMatStyler;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatListSubheaderCssMatStyler, [{
     type: Directive,
@@ -3284,44 +2910,42 @@ var MatListSubheaderCssMatStyler = _MatListSubheaderCssMatStyler;
   }], null, null);
 })();
 var MAT_NAV_LIST = new InjectionToken("MatNavList");
-var _MatNavList = class _MatNavList extends MatListBase {
+var MatNavList = class _MatNavList extends MatListBase {
   // An navigation list is considered interactive, but does not extend the interactive list
   // base class. We do this because as per MDC, items of interactive lists are only reachable
   // through keyboard shortcuts. We want all items for the navigation list to be reachable
   // through tab key as we do not intend to provide any special accessibility treatment. The
   // accessibility treatment depends on how the end-user will interact with it.
   _isNonInteractive = false;
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275MatNavList_BaseFactory;
+    return function MatNavList_Factory(__ngFactoryType__) {
+      return (\u0275MatNavList_BaseFactory || (\u0275MatNavList_BaseFactory = \u0275\u0275getInheritedFactory(_MatNavList)))(__ngFactoryType__ || _MatNavList);
+    };
+  })();
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
+    type: _MatNavList,
+    selectors: [["mat-nav-list"]],
+    hostAttrs: ["role", "navigation", 1, "mat-mdc-nav-list", "mat-mdc-list-base", "mdc-list"],
+    exportAs: ["matNavList"],
+    features: [\u0275\u0275ProvidersFeature([{
+      provide: MatListBase,
+      useExisting: _MatNavList
+    }]), \u0275\u0275InheritDefinitionFeature],
+    ngContentSelectors: _c02,
+    decls: 1,
+    vars: 0,
+    template: function MatNavList_Template(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275projectionDef();
+        \u0275\u0275projection(0);
+      }
+    },
+    styles: [_c12],
+    encapsulation: 2,
+    changeDetection: 0
+  });
 };
-__name(_MatNavList, "MatNavList");
-__publicField(_MatNavList, "\u0275fac", /* @__PURE__ */ (() => {
-  let \u0275MatNavList_BaseFactory;
-  return /* @__PURE__ */ __name(function MatNavList_Factory(__ngFactoryType__) {
-    return (\u0275MatNavList_BaseFactory || (\u0275MatNavList_BaseFactory = \u0275\u0275getInheritedFactory(_MatNavList)))(__ngFactoryType__ || _MatNavList);
-  }, "MatNavList_Factory");
-})());
-__publicField(_MatNavList, "\u0275cmp", /* @__PURE__ */ \u0275\u0275defineComponent({
-  type: _MatNavList,
-  selectors: [["mat-nav-list"]],
-  hostAttrs: ["role", "navigation", 1, "mat-mdc-nav-list", "mat-mdc-list-base", "mdc-list"],
-  exportAs: ["matNavList"],
-  features: [\u0275\u0275ProvidersFeature([{
-    provide: MatListBase,
-    useExisting: _MatNavList
-  }]), \u0275\u0275InheritDefinitionFeature],
-  ngContentSelectors: _c02,
-  decls: 1,
-  vars: 0,
-  template: /* @__PURE__ */ __name(function MatNavList_Template(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275projectionDef();
-      \u0275\u0275projection(0);
-    }
-  }, "MatNavList_Template"),
-  styles: [_c12],
-  encapsulation: 2,
-  changeDetection: 0
-}));
-var MatNavList = _MatNavList;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatNavList, [{
     type: Component,
@@ -3348,7 +2972,7 @@ var MAT_SELECTION_LIST_VALUE_ACCESSOR = {
   useExisting: forwardRef(() => MatSelectionList),
   multi: true
 };
-var _MatSelectionListChange = class _MatSelectionListChange {
+var MatSelectionListChange = class {
   source;
   options;
   constructor(source, options) {
@@ -3356,9 +2980,7 @@ var _MatSelectionListChange = class _MatSelectionListChange {
     this.options = options;
   }
 };
-__name(_MatSelectionListChange, "MatSelectionListChange");
-var MatSelectionListChange = _MatSelectionListChange;
-var _MatSelectionList = class _MatSelectionList extends MatListBase {
+var MatSelectionList = class _MatSelectionList extends MatListBase {
   _element = inject(ElementRef);
   _ngZone = inject(NgZone);
   _renderer = inject(Renderer2);
@@ -3370,8 +2992,8 @@ var _MatSelectionList = class _MatSelectionList extends MatListBase {
   /** Whether the list has been destroyed. */
   _isDestroyed;
   /** View to model callback that should be called whenever the selected options change. */
-  _onChange = /* @__PURE__ */ __name((_) => {
-  }, "_onChange");
+  _onChange = (_) => {
+  };
   _items;
   /** Emits a change event whenever the selected state of an option changes. */
   selectionChange = new EventEmitter();
@@ -3389,7 +3011,7 @@ var _MatSelectionList = class _MatSelectionList extends MatListBase {
    * options should appear as selected. The first argument is the value of an options. The second
    * one is a value from the selected value. A boolean must be returned.
    */
-  compareWith = /* @__PURE__ */ __name((a1, a2) => a1 === a2, "compareWith");
+  compareWith = (a1, a2) => a1 === a2;
   /** Whether selection is limited to one or multiple items (default multiple). */
   get multiple() {
     return this._multiple;
@@ -3418,8 +3040,8 @@ var _MatSelectionList = class _MatSelectionList extends MatListBase {
   /** Keeps track of the currently-selected value. */
   _value;
   /** View to model callback that should be called if the list or its options lost focus. */
-  _onTouched = /* @__PURE__ */ __name(() => {
-  }, "_onTouched");
+  _onTouched = () => {
+  };
   _changeDetectorRef = inject(ChangeDetectorRef);
   constructor() {
     super();
@@ -3585,15 +3207,15 @@ var _MatSelectionList = class _MatSelectionList extends MatListBase {
     }
   }
   /** Handles focusout events within the list. */
-  _handleFocusout = /* @__PURE__ */ __name(() => {
+  _handleFocusout = () => {
     setTimeout(() => {
       if (!this._containsFocus()) {
         this._resetActiveOption();
       }
     });
-  }, "_handleFocusout");
+  };
   /** Handles focusin events within the list. */
-  _handleFocusin = /* @__PURE__ */ __name((event) => {
+  _handleFocusin = (event) => {
     if (this.disabled) {
       return;
     }
@@ -3603,7 +3225,7 @@ var _MatSelectionList = class _MatSelectionList extends MatListBase {
     } else {
       this._resetActiveOption();
     }
-  }, "_handleFocusin");
+  };
   /**
    * Sets up the logic for maintaining the roving tabindex.
    *
@@ -3653,67 +3275,65 @@ var _MatSelectionList = class _MatSelectionList extends MatListBase {
     const activeElement = _getFocusedElementPierceShadowDom();
     return activeElement && this._element.nativeElement.contains(activeElement);
   }
+  static \u0275fac = function MatSelectionList_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatSelectionList)();
+  };
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
+    type: _MatSelectionList,
+    selectors: [["mat-selection-list"]],
+    contentQueries: function MatSelectionList_ContentQueries(rf, ctx, dirIndex) {
+      if (rf & 1) {
+        \u0275\u0275contentQuery(dirIndex, MatListOption, 5);
+      }
+      if (rf & 2) {
+        let _t;
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._items = _t);
+      }
+    },
+    hostAttrs: ["role", "listbox", 1, "mat-mdc-selection-list", "mat-mdc-list-base", "mdc-list"],
+    hostVars: 1,
+    hostBindings: function MatSelectionList_HostBindings(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275listener("keydown", function MatSelectionList_keydown_HostBindingHandler($event) {
+          return ctx._handleKeydown($event);
+        });
+      }
+      if (rf & 2) {
+        \u0275\u0275attribute("aria-multiselectable", ctx.multiple);
+      }
+    },
+    inputs: {
+      color: "color",
+      compareWith: "compareWith",
+      multiple: "multiple",
+      hideSingleSelectionIndicator: "hideSingleSelectionIndicator",
+      disabled: "disabled"
+    },
+    outputs: {
+      selectionChange: "selectionChange"
+    },
+    exportAs: ["matSelectionList"],
+    features: [\u0275\u0275ProvidersFeature([MAT_SELECTION_LIST_VALUE_ACCESSOR, {
+      provide: MatListBase,
+      useExisting: _MatSelectionList
+    }, {
+      provide: SELECTION_LIST,
+      useExisting: _MatSelectionList
+    }]), \u0275\u0275InheritDefinitionFeature, \u0275\u0275NgOnChangesFeature],
+    ngContentSelectors: _c02,
+    decls: 1,
+    vars: 0,
+    template: function MatSelectionList_Template(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275projectionDef();
+        \u0275\u0275projection(0);
+      }
+    },
+    styles: [_c12],
+    encapsulation: 2,
+    changeDetection: 0
+  });
 };
-__name(_MatSelectionList, "MatSelectionList");
-__publicField(_MatSelectionList, "\u0275fac", /* @__PURE__ */ __name(function MatSelectionList_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatSelectionList)();
-}, "MatSelectionList_Factory"));
-__publicField(_MatSelectionList, "\u0275cmp", /* @__PURE__ */ \u0275\u0275defineComponent({
-  type: _MatSelectionList,
-  selectors: [["mat-selection-list"]],
-  contentQueries: /* @__PURE__ */ __name(function MatSelectionList_ContentQueries(rf, ctx, dirIndex) {
-    if (rf & 1) {
-      \u0275\u0275contentQuery(dirIndex, MatListOption, 5);
-    }
-    if (rf & 2) {
-      let _t;
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._items = _t);
-    }
-  }, "MatSelectionList_ContentQueries"),
-  hostAttrs: ["role", "listbox", 1, "mat-mdc-selection-list", "mat-mdc-list-base", "mdc-list"],
-  hostVars: 1,
-  hostBindings: /* @__PURE__ */ __name(function MatSelectionList_HostBindings(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275listener("keydown", /* @__PURE__ */ __name(function MatSelectionList_keydown_HostBindingHandler($event) {
-        return ctx._handleKeydown($event);
-      }, "MatSelectionList_keydown_HostBindingHandler"));
-    }
-    if (rf & 2) {
-      \u0275\u0275attribute("aria-multiselectable", ctx.multiple);
-    }
-  }, "MatSelectionList_HostBindings"),
-  inputs: {
-    color: "color",
-    compareWith: "compareWith",
-    multiple: "multiple",
-    hideSingleSelectionIndicator: "hideSingleSelectionIndicator",
-    disabled: "disabled"
-  },
-  outputs: {
-    selectionChange: "selectionChange"
-  },
-  exportAs: ["matSelectionList"],
-  features: [\u0275\u0275ProvidersFeature([MAT_SELECTION_LIST_VALUE_ACCESSOR, {
-    provide: MatListBase,
-    useExisting: _MatSelectionList
-  }, {
-    provide: SELECTION_LIST,
-    useExisting: _MatSelectionList
-  }]), \u0275\u0275InheritDefinitionFeature, \u0275\u0275NgOnChangesFeature],
-  ngContentSelectors: _c02,
-  decls: 1,
-  vars: 0,
-  template: /* @__PURE__ */ __name(function MatSelectionList_Template(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275projectionDef();
-      \u0275\u0275projection(0);
-    }
-  }, "MatSelectionList_Template"),
-  styles: [_c12],
-  encapsulation: 2,
-  changeDetection: 0
-}));
-var MatSelectionList = _MatSelectionList;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatSelectionList, [{
     type: Component,
@@ -3765,21 +3385,19 @@ var MatSelectionList = _MatSelectionList;
     }]
   });
 })();
-var _MatListModule = class _MatListModule {
+var MatListModule = class _MatListModule {
+  static \u0275fac = function MatListModule_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatListModule)();
+  };
+  static \u0275mod = /* @__PURE__ */ \u0275\u0275defineNgModule({
+    type: _MatListModule,
+    imports: [ObserversModule, MatCommonModule, MatRippleModule, MatPseudoCheckboxModule, MatList, MatActionList, MatNavList, MatSelectionList, MatListItem, MatListOption, MatListSubheaderCssMatStyler, MatListItemAvatar, MatListItemIcon, MatListItemLine, MatListItemTitle, MatListItemMeta],
+    exports: [MatList, MatActionList, MatNavList, MatSelectionList, MatListItem, MatListOption, MatListItemAvatar, MatListItemIcon, MatListSubheaderCssMatStyler, MatDividerModule, MatListItemLine, MatListItemTitle, MatListItemMeta]
+  });
+  static \u0275inj = /* @__PURE__ */ \u0275\u0275defineInjector({
+    imports: [ObserversModule, MatCommonModule, MatRippleModule, MatPseudoCheckboxModule, MatDividerModule]
+  });
 };
-__name(_MatListModule, "MatListModule");
-__publicField(_MatListModule, "\u0275fac", /* @__PURE__ */ __name(function MatListModule_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatListModule)();
-}, "MatListModule_Factory"));
-__publicField(_MatListModule, "\u0275mod", /* @__PURE__ */ \u0275\u0275defineNgModule({
-  type: _MatListModule,
-  imports: [ObserversModule, MatCommonModule, MatRippleModule, MatPseudoCheckboxModule, MatList, MatActionList, MatNavList, MatSelectionList, MatListItem, MatListOption, MatListSubheaderCssMatStyler, MatListItemAvatar, MatListItemIcon, MatListItemLine, MatListItemTitle, MatListItemMeta],
-  exports: [MatList, MatActionList, MatNavList, MatSelectionList, MatListItem, MatListOption, MatListItemAvatar, MatListItemIcon, MatListSubheaderCssMatStyler, MatDividerModule, MatListItemLine, MatListItemTitle, MatListItemMeta]
-}));
-__publicField(_MatListModule, "\u0275inj", /* @__PURE__ */ \u0275\u0275defineInjector({
-  imports: [ObserversModule, MatCommonModule, MatRippleModule, MatPseudoCheckboxModule, MatDividerModule]
-}));
-var MatListModule = _MatListModule;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatListModule, [{
     type: NgModule,
@@ -3791,7 +3409,7 @@ var MatListModule = _MatListModule;
 })();
 
 // node_modules/@angular/material/fesm2022/public-api.mjs
-var _TileCoordinator = class _TileCoordinator {
+var TileCoordinator = class {
   /** Tracking array (see class description). */
   tracker;
   /** Index at which the search for the next gap will start. */
@@ -3884,9 +3502,7 @@ var _TileCoordinator = class _TileCoordinator {
     }
   }
 };
-__name(_TileCoordinator, "TileCoordinator");
-var TileCoordinator = _TileCoordinator;
-var _TilePosition = class _TilePosition {
+var TilePosition = class {
   row;
   col;
   constructor(row, col) {
@@ -3894,22 +3510,18 @@ var _TilePosition = class _TilePosition {
     this.col = col;
   }
 };
-__name(_TilePosition, "TilePosition");
-var TilePosition = _TilePosition;
 
 // node_modules/@angular/material/fesm2022/line.mjs
-var _MatLine = class _MatLine {
+var MatLine = class _MatLine {
+  static \u0275fac = function MatLine_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatLine)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _MatLine,
+    selectors: [["", "mat-line", ""], ["", "matLine", ""]],
+    hostAttrs: [1, "mat-line"]
+  });
 };
-__name(_MatLine, "MatLine");
-__publicField(_MatLine, "\u0275fac", /* @__PURE__ */ __name(function MatLine_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatLine)();
-}, "MatLine_Factory"));
-__publicField(_MatLine, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _MatLine,
-  selectors: [["", "mat-line", ""], ["", "matLine", ""]],
-  hostAttrs: [1, "mat-line"]
-}));
-var MatLine = _MatLine;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatLine, [{
     type: Directive,
@@ -3935,26 +3547,22 @@ function setLines(lines, element, prefix = "mat") {
     }
   });
 }
-__name(setLines, "setLines");
 function setClass(element, className, isAdd) {
   element.nativeElement.classList.toggle(className, isAdd);
 }
-__name(setClass, "setClass");
-var _MatLineModule = class _MatLineModule {
+var MatLineModule = class _MatLineModule {
+  static \u0275fac = function MatLineModule_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatLineModule)();
+  };
+  static \u0275mod = /* @__PURE__ */ \u0275\u0275defineNgModule({
+    type: _MatLineModule,
+    imports: [MatCommonModule, MatLine],
+    exports: [MatLine, MatCommonModule]
+  });
+  static \u0275inj = /* @__PURE__ */ \u0275\u0275defineInjector({
+    imports: [MatCommonModule, MatCommonModule]
+  });
 };
-__name(_MatLineModule, "MatLineModule");
-__publicField(_MatLineModule, "\u0275fac", /* @__PURE__ */ __name(function MatLineModule_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatLineModule)();
-}, "MatLineModule_Factory"));
-__publicField(_MatLineModule, "\u0275mod", /* @__PURE__ */ \u0275\u0275defineNgModule({
-  type: _MatLineModule,
-  imports: [MatCommonModule, MatLine],
-  exports: [MatLine, MatCommonModule]
-}));
-__publicField(_MatLineModule, "\u0275inj", /* @__PURE__ */ \u0275\u0275defineInjector({
-  imports: [MatCommonModule, MatCommonModule]
-}));
-var MatLineModule = _MatLineModule;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatLineModule, [{
     type: NgModule,
@@ -3971,7 +3579,7 @@ var _c13 = [[["", "mat-grid-avatar", ""], ["", "matGridAvatar", ""]], [["", "mat
 var _c23 = ["[mat-grid-avatar], [matGridAvatar]", "[mat-line], [matLine]", "*"];
 var _c33 = ".mat-grid-list{display:block;position:relative}.mat-grid-tile{display:block;position:absolute;overflow:hidden}.mat-grid-tile .mat-grid-tile-header,.mat-grid-tile .mat-grid-tile-footer{display:flex;align-items:center;height:48px;color:#fff;background:rgba(0,0,0,.38);overflow:hidden;padding:0 16px;position:absolute;left:0;right:0}.mat-grid-tile .mat-grid-tile-header>*,.mat-grid-tile .mat-grid-tile-footer>*{margin:0;padding:0;font-weight:normal;font-size:inherit}.mat-grid-tile .mat-grid-tile-header.mat-2-line,.mat-grid-tile .mat-grid-tile-footer.mat-2-line{height:68px}.mat-grid-tile .mat-grid-list-text{display:flex;flex-direction:column;flex:auto;box-sizing:border-box;overflow:hidden}.mat-grid-tile .mat-grid-list-text>*{margin:0;padding:0;font-weight:normal;font-size:inherit}.mat-grid-tile .mat-grid-list-text:empty{display:none}.mat-grid-tile .mat-grid-tile-header{top:0}.mat-grid-tile .mat-grid-tile-footer{bottom:0}.mat-grid-tile .mat-grid-avatar{padding-right:16px}[dir=rtl] .mat-grid-tile .mat-grid-avatar{padding-right:0;padding-left:16px}.mat-grid-tile .mat-grid-avatar:empty{display:none}.mat-grid-tile-header{font-size:var(--mat-grid-list-tile-header-primary-text-size, var(--mat-sys-body-large))}.mat-grid-tile-header .mat-line{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;box-sizing:border-box}.mat-grid-tile-header .mat-line:nth-child(n+2){font-size:var(--mat-grid-list-tile-header-secondary-text-size, var(--mat-sys-body-medium))}.mat-grid-tile-footer{font-size:var(--mat-grid-list-tile-footer-primary-text-size, var(--mat-sys-body-large))}.mat-grid-tile-footer .mat-line{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;box-sizing:border-box}.mat-grid-tile-footer .mat-line:nth-child(n+2){font-size:var(--mat-grid-list-tile-footer-secondary-text-size, var(--mat-sys-body-medium))}.mat-grid-tile-content{top:0;left:0;right:0;bottom:0;position:absolute;display:flex;align-items:center;justify-content:center;height:100%;padding:0;margin:0}\n";
 var MAT_GRID_LIST = new InjectionToken("MAT_GRID_LIST");
-var _MatGridTile = class _MatGridTile {
+var MatGridTile = class _MatGridTile {
   _element = inject(ElementRef);
   _gridList = inject(MAT_GRID_LIST, {
     optional: true
@@ -4001,43 +3609,41 @@ var _MatGridTile = class _MatGridTile {
   _setStyle(property, value) {
     this._element.nativeElement.style[property] = value;
   }
+  static \u0275fac = function MatGridTile_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatGridTile)();
+  };
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
+    type: _MatGridTile,
+    selectors: [["mat-grid-tile"]],
+    hostAttrs: [1, "mat-grid-tile"],
+    hostVars: 2,
+    hostBindings: function MatGridTile_HostBindings(rf, ctx) {
+      if (rf & 2) {
+        \u0275\u0275attribute("rowspan", ctx.rowspan)("colspan", ctx.colspan);
+      }
+    },
+    inputs: {
+      rowspan: "rowspan",
+      colspan: "colspan"
+    },
+    exportAs: ["matGridTile"],
+    ngContentSelectors: _c03,
+    decls: 2,
+    vars: 0,
+    consts: [[1, "mat-grid-tile-content"]],
+    template: function MatGridTile_Template(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275projectionDef();
+        \u0275\u0275domElementStart(0, "div", 0);
+        \u0275\u0275projection(1);
+        \u0275\u0275domElementEnd();
+      }
+    },
+    styles: [".mat-grid-list{display:block;position:relative}.mat-grid-tile{display:block;position:absolute;overflow:hidden}.mat-grid-tile .mat-grid-tile-header,.mat-grid-tile .mat-grid-tile-footer{display:flex;align-items:center;height:48px;color:#fff;background:rgba(0,0,0,.38);overflow:hidden;padding:0 16px;position:absolute;left:0;right:0}.mat-grid-tile .mat-grid-tile-header>*,.mat-grid-tile .mat-grid-tile-footer>*{margin:0;padding:0;font-weight:normal;font-size:inherit}.mat-grid-tile .mat-grid-tile-header.mat-2-line,.mat-grid-tile .mat-grid-tile-footer.mat-2-line{height:68px}.mat-grid-tile .mat-grid-list-text{display:flex;flex-direction:column;flex:auto;box-sizing:border-box;overflow:hidden}.mat-grid-tile .mat-grid-list-text>*{margin:0;padding:0;font-weight:normal;font-size:inherit}.mat-grid-tile .mat-grid-list-text:empty{display:none}.mat-grid-tile .mat-grid-tile-header{top:0}.mat-grid-tile .mat-grid-tile-footer{bottom:0}.mat-grid-tile .mat-grid-avatar{padding-right:16px}[dir=rtl] .mat-grid-tile .mat-grid-avatar{padding-right:0;padding-left:16px}.mat-grid-tile .mat-grid-avatar:empty{display:none}.mat-grid-tile-header{font-size:var(--mat-grid-list-tile-header-primary-text-size, var(--mat-sys-body-large))}.mat-grid-tile-header .mat-line{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;box-sizing:border-box}.mat-grid-tile-header .mat-line:nth-child(n+2){font-size:var(--mat-grid-list-tile-header-secondary-text-size, var(--mat-sys-body-medium))}.mat-grid-tile-footer{font-size:var(--mat-grid-list-tile-footer-primary-text-size, var(--mat-sys-body-large))}.mat-grid-tile-footer .mat-line{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;box-sizing:border-box}.mat-grid-tile-footer .mat-line:nth-child(n+2){font-size:var(--mat-grid-list-tile-footer-secondary-text-size, var(--mat-sys-body-medium))}.mat-grid-tile-content{top:0;left:0;right:0;bottom:0;position:absolute;display:flex;align-items:center;justify-content:center;height:100%;padding:0;margin:0}\n"],
+    encapsulation: 2,
+    changeDetection: 0
+  });
 };
-__name(_MatGridTile, "MatGridTile");
-__publicField(_MatGridTile, "\u0275fac", /* @__PURE__ */ __name(function MatGridTile_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatGridTile)();
-}, "MatGridTile_Factory"));
-__publicField(_MatGridTile, "\u0275cmp", /* @__PURE__ */ \u0275\u0275defineComponent({
-  type: _MatGridTile,
-  selectors: [["mat-grid-tile"]],
-  hostAttrs: [1, "mat-grid-tile"],
-  hostVars: 2,
-  hostBindings: /* @__PURE__ */ __name(function MatGridTile_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      \u0275\u0275attribute("rowspan", ctx.rowspan)("colspan", ctx.colspan);
-    }
-  }, "MatGridTile_HostBindings"),
-  inputs: {
-    rowspan: "rowspan",
-    colspan: "colspan"
-  },
-  exportAs: ["matGridTile"],
-  ngContentSelectors: _c03,
-  decls: 2,
-  vars: 0,
-  consts: [[1, "mat-grid-tile-content"]],
-  template: /* @__PURE__ */ __name(function MatGridTile_Template(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275projectionDef();
-      \u0275\u0275domElementStart(0, "div", 0);
-      \u0275\u0275projection(1);
-      \u0275\u0275domElementEnd();
-    }
-  }, "MatGridTile_Template"),
-  styles: [".mat-grid-list{display:block;position:relative}.mat-grid-tile{display:block;position:absolute;overflow:hidden}.mat-grid-tile .mat-grid-tile-header,.mat-grid-tile .mat-grid-tile-footer{display:flex;align-items:center;height:48px;color:#fff;background:rgba(0,0,0,.38);overflow:hidden;padding:0 16px;position:absolute;left:0;right:0}.mat-grid-tile .mat-grid-tile-header>*,.mat-grid-tile .mat-grid-tile-footer>*{margin:0;padding:0;font-weight:normal;font-size:inherit}.mat-grid-tile .mat-grid-tile-header.mat-2-line,.mat-grid-tile .mat-grid-tile-footer.mat-2-line{height:68px}.mat-grid-tile .mat-grid-list-text{display:flex;flex-direction:column;flex:auto;box-sizing:border-box;overflow:hidden}.mat-grid-tile .mat-grid-list-text>*{margin:0;padding:0;font-weight:normal;font-size:inherit}.mat-grid-tile .mat-grid-list-text:empty{display:none}.mat-grid-tile .mat-grid-tile-header{top:0}.mat-grid-tile .mat-grid-tile-footer{bottom:0}.mat-grid-tile .mat-grid-avatar{padding-right:16px}[dir=rtl] .mat-grid-tile .mat-grid-avatar{padding-right:0;padding-left:16px}.mat-grid-tile .mat-grid-avatar:empty{display:none}.mat-grid-tile-header{font-size:var(--mat-grid-list-tile-header-primary-text-size, var(--mat-sys-body-large))}.mat-grid-tile-header .mat-line{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;box-sizing:border-box}.mat-grid-tile-header .mat-line:nth-child(n+2){font-size:var(--mat-grid-list-tile-header-secondary-text-size, var(--mat-sys-body-medium))}.mat-grid-tile-footer{font-size:var(--mat-grid-list-tile-footer-primary-text-size, var(--mat-sys-body-large))}.mat-grid-tile-footer .mat-line{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;box-sizing:border-box}.mat-grid-tile-footer .mat-line:nth-child(n+2){font-size:var(--mat-grid-list-tile-footer-secondary-text-size, var(--mat-sys-body-medium))}.mat-grid-tile-content{top:0;left:0;right:0;bottom:0;position:absolute;display:flex;align-items:center;justify-content:center;height:100%;padding:0;margin:0}\n"],
-  encapsulation: 2,
-  changeDetection: 0
-}));
-var MatGridTile = _MatGridTile;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatGridTile, [{
     type: Component,
@@ -4065,7 +3671,7 @@ var MatGridTile = _MatGridTile;
     }]
   });
 })();
-var _MatGridTileText = class _MatGridTileText {
+var MatGridTileText = class _MatGridTileText {
   _element = inject(ElementRef);
   _lines;
   constructor() {
@@ -4073,41 +3679,39 @@ var _MatGridTileText = class _MatGridTileText {
   ngAfterContentInit() {
     setLines(this._lines, this._element);
   }
+  static \u0275fac = function MatGridTileText_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatGridTileText)();
+  };
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
+    type: _MatGridTileText,
+    selectors: [["mat-grid-tile-header"], ["mat-grid-tile-footer"]],
+    contentQueries: function MatGridTileText_ContentQueries(rf, ctx, dirIndex) {
+      if (rf & 1) {
+        \u0275\u0275contentQuery(dirIndex, MatLine, 5);
+      }
+      if (rf & 2) {
+        let _t;
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._lines = _t);
+      }
+    },
+    ngContentSelectors: _c23,
+    decls: 4,
+    vars: 0,
+    consts: [[1, "mat-grid-list-text"]],
+    template: function MatGridTileText_Template(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275projectionDef(_c13);
+        \u0275\u0275projection(0);
+        \u0275\u0275domElementStart(1, "div", 0);
+        \u0275\u0275projection(2, 1);
+        \u0275\u0275domElementEnd();
+        \u0275\u0275projection(3, 2);
+      }
+    },
+    encapsulation: 2,
+    changeDetection: 0
+  });
 };
-__name(_MatGridTileText, "MatGridTileText");
-__publicField(_MatGridTileText, "\u0275fac", /* @__PURE__ */ __name(function MatGridTileText_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatGridTileText)();
-}, "MatGridTileText_Factory"));
-__publicField(_MatGridTileText, "\u0275cmp", /* @__PURE__ */ \u0275\u0275defineComponent({
-  type: _MatGridTileText,
-  selectors: [["mat-grid-tile-header"], ["mat-grid-tile-footer"]],
-  contentQueries: /* @__PURE__ */ __name(function MatGridTileText_ContentQueries(rf, ctx, dirIndex) {
-    if (rf & 1) {
-      \u0275\u0275contentQuery(dirIndex, MatLine, 5);
-    }
-    if (rf & 2) {
-      let _t;
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._lines = _t);
-    }
-  }, "MatGridTileText_ContentQueries"),
-  ngContentSelectors: _c23,
-  decls: 4,
-  vars: 0,
-  consts: [[1, "mat-grid-list-text"]],
-  template: /* @__PURE__ */ __name(function MatGridTileText_Template(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275projectionDef(_c13);
-      \u0275\u0275projection(0);
-      \u0275\u0275domElementStart(1, "div", 0);
-      \u0275\u0275projection(2, 1);
-      \u0275\u0275domElementEnd();
-      \u0275\u0275projection(3, 2);
-    }
-  }, "MatGridTileText_Template"),
-  encapsulation: 2,
-  changeDetection: 0
-}));
-var MatGridTileText = _MatGridTileText;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatGridTileText, [{
     type: Component,
@@ -4126,18 +3730,16 @@ var MatGridTileText = _MatGridTileText;
     }]
   });
 })();
-var _MatGridAvatarCssMatStyler = class _MatGridAvatarCssMatStyler {
+var MatGridAvatarCssMatStyler = class _MatGridAvatarCssMatStyler {
+  static \u0275fac = function MatGridAvatarCssMatStyler_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatGridAvatarCssMatStyler)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _MatGridAvatarCssMatStyler,
+    selectors: [["", "mat-grid-avatar", ""], ["", "matGridAvatar", ""]],
+    hostAttrs: [1, "mat-grid-avatar"]
+  });
 };
-__name(_MatGridAvatarCssMatStyler, "MatGridAvatarCssMatStyler");
-__publicField(_MatGridAvatarCssMatStyler, "\u0275fac", /* @__PURE__ */ __name(function MatGridAvatarCssMatStyler_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatGridAvatarCssMatStyler)();
-}, "MatGridAvatarCssMatStyler_Factory"));
-__publicField(_MatGridAvatarCssMatStyler, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _MatGridAvatarCssMatStyler,
-  selectors: [["", "mat-grid-avatar", ""], ["", "matGridAvatar", ""]],
-  hostAttrs: [1, "mat-grid-avatar"]
-}));
-var MatGridAvatarCssMatStyler = _MatGridAvatarCssMatStyler;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatGridAvatarCssMatStyler, [{
     type: Directive,
@@ -4149,18 +3751,16 @@ var MatGridAvatarCssMatStyler = _MatGridAvatarCssMatStyler;
     }]
   }], null, null);
 })();
-var _MatGridTileHeaderCssMatStyler = class _MatGridTileHeaderCssMatStyler {
+var MatGridTileHeaderCssMatStyler = class _MatGridTileHeaderCssMatStyler {
+  static \u0275fac = function MatGridTileHeaderCssMatStyler_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatGridTileHeaderCssMatStyler)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _MatGridTileHeaderCssMatStyler,
+    selectors: [["mat-grid-tile-header"]],
+    hostAttrs: [1, "mat-grid-tile-header"]
+  });
 };
-__name(_MatGridTileHeaderCssMatStyler, "MatGridTileHeaderCssMatStyler");
-__publicField(_MatGridTileHeaderCssMatStyler, "\u0275fac", /* @__PURE__ */ __name(function MatGridTileHeaderCssMatStyler_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatGridTileHeaderCssMatStyler)();
-}, "MatGridTileHeaderCssMatStyler_Factory"));
-__publicField(_MatGridTileHeaderCssMatStyler, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _MatGridTileHeaderCssMatStyler,
-  selectors: [["mat-grid-tile-header"]],
-  hostAttrs: [1, "mat-grid-tile-header"]
-}));
-var MatGridTileHeaderCssMatStyler = _MatGridTileHeaderCssMatStyler;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatGridTileHeaderCssMatStyler, [{
     type: Directive,
@@ -4172,18 +3772,16 @@ var MatGridTileHeaderCssMatStyler = _MatGridTileHeaderCssMatStyler;
     }]
   }], null, null);
 })();
-var _MatGridTileFooterCssMatStyler = class _MatGridTileFooterCssMatStyler {
+var MatGridTileFooterCssMatStyler = class _MatGridTileFooterCssMatStyler {
+  static \u0275fac = function MatGridTileFooterCssMatStyler_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatGridTileFooterCssMatStyler)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _MatGridTileFooterCssMatStyler,
+    selectors: [["mat-grid-tile-footer"]],
+    hostAttrs: [1, "mat-grid-tile-footer"]
+  });
 };
-__name(_MatGridTileFooterCssMatStyler, "MatGridTileFooterCssMatStyler");
-__publicField(_MatGridTileFooterCssMatStyler, "\u0275fac", /* @__PURE__ */ __name(function MatGridTileFooterCssMatStyler_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatGridTileFooterCssMatStyler)();
-}, "MatGridTileFooterCssMatStyler_Factory"));
-__publicField(_MatGridTileFooterCssMatStyler, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _MatGridTileFooterCssMatStyler,
-  selectors: [["mat-grid-tile-footer"]],
-  hostAttrs: [1, "mat-grid-tile-footer"]
-}));
-var MatGridTileFooterCssMatStyler = _MatGridTileFooterCssMatStyler;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatGridTileFooterCssMatStyler, [{
     type: Directive,
@@ -4196,7 +3794,7 @@ var MatGridTileFooterCssMatStyler = _MatGridTileFooterCssMatStyler;
   }], null, null);
 })();
 var cssCalcAllowedValue = /^-?\d+((\.\d+)?[A-Za-z%$]?)+$/;
-var _TileStyler = class _TileStyler {
+var TileStyler = class {
   _gutterSize;
   _rows = 0;
   _rowspan = 0;
@@ -4287,9 +3885,7 @@ var _TileStyler = class _TileStyler {
     return null;
   }
 };
-__name(_TileStyler, "TileStyler");
-var TileStyler = _TileStyler;
-var _FixedTileStyler = class _FixedTileStyler extends TileStyler {
+var FixedTileStyler = class extends TileStyler {
   fixedRowHeight;
   constructor(fixedRowHeight) {
     super();
@@ -4319,9 +3915,7 @@ var _FixedTileStyler = class _FixedTileStyler extends TileStyler {
     }
   }
 };
-__name(_FixedTileStyler, "FixedTileStyler");
-var FixedTileStyler = _FixedTileStyler;
-var _RatioTileStyler = class _RatioTileStyler extends TileStyler {
+var RatioTileStyler = class extends TileStyler {
   /** Ratio width:height given by user to determine row height. */
   rowHeightRatio;
   baseTileHeight;
@@ -4353,9 +3947,7 @@ var _RatioTileStyler = class _RatioTileStyler extends TileStyler {
     this.rowHeightRatio = parseFloat(ratioParts[0]) / parseFloat(ratioParts[1]);
   }
 };
-__name(_RatioTileStyler, "RatioTileStyler");
-var RatioTileStyler = _RatioTileStyler;
-var _FitTileStyler = class _FitTileStyler extends TileStyler {
+var FitTileStyler = class extends TileStyler {
   setRowStyles(tile, rowIndex) {
     let percentHeightPerTile = 100 / this._rowspan;
     let gutterHeightPerTile = (this._rows - 1) / this._rows;
@@ -4372,18 +3964,14 @@ var _FitTileStyler = class _FitTileStyler extends TileStyler {
     }
   }
 };
-__name(_FitTileStyler, "FitTileStyler");
-var FitTileStyler = _FitTileStyler;
 function calc(exp) {
   return `calc(${exp})`;
 }
-__name(calc, "calc");
 function normalizeUnits(value) {
   return value.match(/([A-Za-z%]+)$/) ? value : `${value}px`;
 }
-__name(normalizeUnits, "normalizeUnits");
 var MAT_FIT_MODE = "fit";
-var _MatGridList = class _MatGridList {
+var MatGridList = class _MatGridList {
   _element = inject(ElementRef);
   _dir = inject(Directionality, {
     optional: true
@@ -4490,56 +4078,54 @@ var _MatGridList = class _MatGridList {
       this._element.nativeElement.style[style[0]] = style[1];
     }
   }
+  static \u0275fac = function MatGridList_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatGridList)();
+  };
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
+    type: _MatGridList,
+    selectors: [["mat-grid-list"]],
+    contentQueries: function MatGridList_ContentQueries(rf, ctx, dirIndex) {
+      if (rf & 1) {
+        \u0275\u0275contentQuery(dirIndex, MatGridTile, 5);
+      }
+      if (rf & 2) {
+        let _t;
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._tiles = _t);
+      }
+    },
+    hostAttrs: [1, "mat-grid-list"],
+    hostVars: 1,
+    hostBindings: function MatGridList_HostBindings(rf, ctx) {
+      if (rf & 2) {
+        \u0275\u0275attribute("cols", ctx.cols);
+      }
+    },
+    inputs: {
+      cols: "cols",
+      gutterSize: "gutterSize",
+      rowHeight: "rowHeight"
+    },
+    exportAs: ["matGridList"],
+    features: [\u0275\u0275ProvidersFeature([{
+      provide: MAT_GRID_LIST,
+      useExisting: _MatGridList
+    }])],
+    ngContentSelectors: _c03,
+    decls: 2,
+    vars: 0,
+    template: function MatGridList_Template(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275projectionDef();
+        \u0275\u0275domElementStart(0, "div");
+        \u0275\u0275projection(1);
+        \u0275\u0275domElementEnd();
+      }
+    },
+    styles: [_c33],
+    encapsulation: 2,
+    changeDetection: 0
+  });
 };
-__name(_MatGridList, "MatGridList");
-__publicField(_MatGridList, "\u0275fac", /* @__PURE__ */ __name(function MatGridList_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatGridList)();
-}, "MatGridList_Factory"));
-__publicField(_MatGridList, "\u0275cmp", /* @__PURE__ */ \u0275\u0275defineComponent({
-  type: _MatGridList,
-  selectors: [["mat-grid-list"]],
-  contentQueries: /* @__PURE__ */ __name(function MatGridList_ContentQueries(rf, ctx, dirIndex) {
-    if (rf & 1) {
-      \u0275\u0275contentQuery(dirIndex, MatGridTile, 5);
-    }
-    if (rf & 2) {
-      let _t;
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._tiles = _t);
-    }
-  }, "MatGridList_ContentQueries"),
-  hostAttrs: [1, "mat-grid-list"],
-  hostVars: 1,
-  hostBindings: /* @__PURE__ */ __name(function MatGridList_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      \u0275\u0275attribute("cols", ctx.cols);
-    }
-  }, "MatGridList_HostBindings"),
-  inputs: {
-    cols: "cols",
-    gutterSize: "gutterSize",
-    rowHeight: "rowHeight"
-  },
-  exportAs: ["matGridList"],
-  features: [\u0275\u0275ProvidersFeature([{
-    provide: MAT_GRID_LIST,
-    useExisting: _MatGridList
-  }])],
-  ngContentSelectors: _c03,
-  decls: 2,
-  vars: 0,
-  template: /* @__PURE__ */ __name(function MatGridList_Template(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275projectionDef();
-      \u0275\u0275domElementStart(0, "div");
-      \u0275\u0275projection(1);
-      \u0275\u0275domElementEnd();
-    }
-  }, "MatGridList_Template"),
-  styles: [_c33],
-  encapsulation: 2,
-  changeDetection: 0
-}));
-var MatGridList = _MatGridList;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatGridList, [{
     type: Component,
@@ -4579,21 +4165,19 @@ var MatGridList = _MatGridList;
     }]
   });
 })();
-var _MatGridListModule = class _MatGridListModule {
+var MatGridListModule = class _MatGridListModule {
+  static \u0275fac = function MatGridListModule_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatGridListModule)();
+  };
+  static \u0275mod = /* @__PURE__ */ \u0275\u0275defineNgModule({
+    type: _MatGridListModule,
+    imports: [MatLineModule, MatCommonModule, MatGridList, MatGridTile, MatGridTileText, MatGridTileHeaderCssMatStyler, MatGridTileFooterCssMatStyler, MatGridAvatarCssMatStyler],
+    exports: [MatGridList, MatGridTile, MatGridTileText, MatLineModule, MatCommonModule, MatGridTileHeaderCssMatStyler, MatGridTileFooterCssMatStyler, MatGridAvatarCssMatStyler]
+  });
+  static \u0275inj = /* @__PURE__ */ \u0275\u0275defineInjector({
+    imports: [MatLineModule, MatCommonModule, MatLineModule, MatCommonModule]
+  });
 };
-__name(_MatGridListModule, "MatGridListModule");
-__publicField(_MatGridListModule, "\u0275fac", /* @__PURE__ */ __name(function MatGridListModule_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatGridListModule)();
-}, "MatGridListModule_Factory"));
-__publicField(_MatGridListModule, "\u0275mod", /* @__PURE__ */ \u0275\u0275defineNgModule({
-  type: _MatGridListModule,
-  imports: [MatLineModule, MatCommonModule, MatGridList, MatGridTile, MatGridTileText, MatGridTileHeaderCssMatStyler, MatGridTileFooterCssMatStyler, MatGridAvatarCssMatStyler],
-  exports: [MatGridList, MatGridTile, MatGridTileText, MatLineModule, MatCommonModule, MatGridTileHeaderCssMatStyler, MatGridTileFooterCssMatStyler, MatGridAvatarCssMatStyler]
-}));
-__publicField(_MatGridListModule, "\u0275inj", /* @__PURE__ */ \u0275\u0275defineInjector({
-  imports: [MatLineModule, MatCommonModule, MatLineModule, MatCommonModule]
-}));
-var MatGridListModule = _MatGridListModule;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatGridListModule, [{
     type: NgModule,
@@ -4606,24 +4190,22 @@ var MatGridListModule = _MatGridListModule;
 
 // node_modules/@angular/material/fesm2022/badge.mjs
 var BADGE_CONTENT_CLASS = "mat-badge-content";
-var __MatBadgeStyleLoader = class __MatBadgeStyleLoader {
+var _MatBadgeStyleLoader = class __MatBadgeStyleLoader {
+  static \u0275fac = function _MatBadgeStyleLoader_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || __MatBadgeStyleLoader)();
+  };
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
+    type: __MatBadgeStyleLoader,
+    selectors: [["ng-component"]],
+    decls: 0,
+    vars: 0,
+    template: function _MatBadgeStyleLoader_Template(rf, ctx) {
+    },
+    styles: [".mat-badge{position:relative}.mat-badge.mat-badge{overflow:visible}.mat-badge-content{position:absolute;text-align:center;display:inline-block;transition:transform 200ms ease-in-out;transform:scale(0.6);overflow:hidden;white-space:nowrap;text-overflow:ellipsis;box-sizing:border-box;pointer-events:none;background-color:var(--mat-badge-background-color, var(--mat-sys-error));color:var(--mat-badge-text-color, var(--mat-sys-on-error));font-family:var(--mat-badge-text-font, var(--mat-sys-label-small-font));font-weight:var(--mat-badge-text-weight, var(--mat-sys-label-small-weight));border-radius:var(--mat-badge-container-shape, var(--mat-sys-corner-full))}.mat-badge-above .mat-badge-content{bottom:100%}.mat-badge-below .mat-badge-content{top:100%}.mat-badge-before .mat-badge-content{right:100%}[dir=rtl] .mat-badge-before .mat-badge-content{right:auto;left:100%}.mat-badge-after .mat-badge-content{left:100%}[dir=rtl] .mat-badge-after .mat-badge-content{left:auto;right:100%}@media(forced-colors: active){.mat-badge-content{outline:solid 1px;border-radius:0}}.mat-badge-disabled .mat-badge-content{background-color:var(--mat-badge-disabled-state-background-color, color-mix(in srgb, var(--mat-sys-error) 38%, transparent));color:var(--mat-badge-disabled-state-text-color, var(--mat-sys-on-error))}.mat-badge-hidden .mat-badge-content{display:none}.ng-animate-disabled .mat-badge-content,.mat-badge-content._mat-animation-noopable{transition:none}.mat-badge-content.mat-badge-active{transform:none}.mat-badge-small .mat-badge-content{width:var(--mat-badge-legacy-small-size-container-size, unset);height:var(--mat-badge-legacy-small-size-container-size, unset);min-width:var(--mat-badge-small-size-container-size, 6px);min-height:var(--mat-badge-small-size-container-size, 6px);line-height:var(--mat-badge-small-size-line-height, 6px);padding:var(--mat-badge-small-size-container-padding, 0);font-size:var(--mat-badge-small-size-text-size, 0);margin:var(--mat-badge-small-size-container-offset, -6px 0)}.mat-badge-small.mat-badge-overlap .mat-badge-content{margin:var(--mat-badge-small-size-container-overlap-offset, -6px)}.mat-badge-medium .mat-badge-content{width:var(--mat-badge-legacy-container-size, unset);height:var(--mat-badge-legacy-container-size, unset);min-width:var(--mat-badge-container-size, 16px);min-height:var(--mat-badge-container-size, 16px);line-height:var(--mat-badge-line-height, 16px);padding:var(--mat-badge-container-padding, 0 4px);font-size:var(--mat-badge-text-size, var(--mat-sys-label-small-size));margin:var(--mat-badge-container-offset, -12px 0)}.mat-badge-medium.mat-badge-overlap .mat-badge-content{margin:var(--mat-badge-container-overlap-offset, -12px)}.mat-badge-large .mat-badge-content{width:var(--mat-badge-legacy-large-size-container-size, unset);height:var(--mat-badge-legacy-large-size-container-size, unset);min-width:var(--mat-badge-large-size-container-size, 16px);min-height:var(--mat-badge-large-size-container-size, 16px);line-height:var(--mat-badge-large-size-line-height, 16px);padding:var(--mat-badge-large-size-container-padding, 0 4px);font-size:var(--mat-badge-large-size-text-size, var(--mat-sys-label-small-size));margin:var(--mat-badge-large-size-container-offset, -12px 0)}.mat-badge-large.mat-badge-overlap .mat-badge-content{margin:var(--mat-badge-large-size-container-overlap-offset, -12px)}\n"],
+    encapsulation: 2,
+    changeDetection: 0
+  });
 };
-__name(__MatBadgeStyleLoader, "_MatBadgeStyleLoader");
-__publicField(__MatBadgeStyleLoader, "\u0275fac", /* @__PURE__ */ __name(function _MatBadgeStyleLoader_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || __MatBadgeStyleLoader)();
-}, "_MatBadgeStyleLoader_Factory"));
-__publicField(__MatBadgeStyleLoader, "\u0275cmp", /* @__PURE__ */ \u0275\u0275defineComponent({
-  type: __MatBadgeStyleLoader,
-  selectors: [["ng-component"]],
-  decls: 0,
-  vars: 0,
-  template: /* @__PURE__ */ __name(function _MatBadgeStyleLoader_Template(rf, ctx) {
-  }, "_MatBadgeStyleLoader_Template"),
-  styles: [".mat-badge{position:relative}.mat-badge.mat-badge{overflow:visible}.mat-badge-content{position:absolute;text-align:center;display:inline-block;transition:transform 200ms ease-in-out;transform:scale(0.6);overflow:hidden;white-space:nowrap;text-overflow:ellipsis;box-sizing:border-box;pointer-events:none;background-color:var(--mat-badge-background-color, var(--mat-sys-error));color:var(--mat-badge-text-color, var(--mat-sys-on-error));font-family:var(--mat-badge-text-font, var(--mat-sys-label-small-font));font-weight:var(--mat-badge-text-weight, var(--mat-sys-label-small-weight));border-radius:var(--mat-badge-container-shape, var(--mat-sys-corner-full))}.mat-badge-above .mat-badge-content{bottom:100%}.mat-badge-below .mat-badge-content{top:100%}.mat-badge-before .mat-badge-content{right:100%}[dir=rtl] .mat-badge-before .mat-badge-content{right:auto;left:100%}.mat-badge-after .mat-badge-content{left:100%}[dir=rtl] .mat-badge-after .mat-badge-content{left:auto;right:100%}@media(forced-colors: active){.mat-badge-content{outline:solid 1px;border-radius:0}}.mat-badge-disabled .mat-badge-content{background-color:var(--mat-badge-disabled-state-background-color, color-mix(in srgb, var(--mat-sys-error) 38%, transparent));color:var(--mat-badge-disabled-state-text-color, var(--mat-sys-on-error))}.mat-badge-hidden .mat-badge-content{display:none}.ng-animate-disabled .mat-badge-content,.mat-badge-content._mat-animation-noopable{transition:none}.mat-badge-content.mat-badge-active{transform:none}.mat-badge-small .mat-badge-content{width:var(--mat-badge-legacy-small-size-container-size, unset);height:var(--mat-badge-legacy-small-size-container-size, unset);min-width:var(--mat-badge-small-size-container-size, 6px);min-height:var(--mat-badge-small-size-container-size, 6px);line-height:var(--mat-badge-small-size-line-height, 6px);padding:var(--mat-badge-small-size-container-padding, 0);font-size:var(--mat-badge-small-size-text-size, 0);margin:var(--mat-badge-small-size-container-offset, -6px 0)}.mat-badge-small.mat-badge-overlap .mat-badge-content{margin:var(--mat-badge-small-size-container-overlap-offset, -6px)}.mat-badge-medium .mat-badge-content{width:var(--mat-badge-legacy-container-size, unset);height:var(--mat-badge-legacy-container-size, unset);min-width:var(--mat-badge-container-size, 16px);min-height:var(--mat-badge-container-size, 16px);line-height:var(--mat-badge-line-height, 16px);padding:var(--mat-badge-container-padding, 0 4px);font-size:var(--mat-badge-text-size, var(--mat-sys-label-small-size));margin:var(--mat-badge-container-offset, -12px 0)}.mat-badge-medium.mat-badge-overlap .mat-badge-content{margin:var(--mat-badge-container-overlap-offset, -12px)}.mat-badge-large .mat-badge-content{width:var(--mat-badge-legacy-large-size-container-size, unset);height:var(--mat-badge-legacy-large-size-container-size, unset);min-width:var(--mat-badge-large-size-container-size, 16px);min-height:var(--mat-badge-large-size-container-size, 16px);line-height:var(--mat-badge-large-size-line-height, 16px);padding:var(--mat-badge-large-size-container-padding, 0 4px);font-size:var(--mat-badge-large-size-text-size, var(--mat-sys-label-small-size));margin:var(--mat-badge-large-size-container-offset, -12px 0)}.mat-badge-large.mat-badge-overlap .mat-badge-content{margin:var(--mat-badge-large-size-container-overlap-offset, -12px)}\n"],
-  encapsulation: 2,
-  changeDetection: 0
-}));
-var _MatBadgeStyleLoader = __MatBadgeStyleLoader;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(_MatBadgeStyleLoader, [{
     type: Component,
@@ -4635,7 +4217,7 @@ var _MatBadgeStyleLoader = __MatBadgeStyleLoader;
     }]
   }], null, null);
 })();
-var _MatBadge = class _MatBadge {
+var MatBadge = class _MatBadge {
   _ngZone = inject(NgZone);
   _elementRef = inject(ElementRef);
   _ariaDescriber = inject(AriaDescriber);
@@ -4822,33 +4404,31 @@ ${nativeElement.outerHTML}`);
       }
     }
   }
-};
-__name(_MatBadge, "MatBadge");
-__publicField(_MatBadge, "\u0275fac", /* @__PURE__ */ __name(function MatBadge_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatBadge)();
-}, "MatBadge_Factory"));
-__publicField(_MatBadge, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _MatBadge,
-  selectors: [["", "matBadge", ""]],
-  hostAttrs: [1, "mat-badge"],
-  hostVars: 20,
-  hostBindings: /* @__PURE__ */ __name(function MatBadge_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      \u0275\u0275classProp("mat-badge-overlap", ctx.overlap)("mat-badge-above", ctx.isAbove())("mat-badge-below", !ctx.isAbove())("mat-badge-before", !ctx.isAfter())("mat-badge-after", ctx.isAfter())("mat-badge-small", ctx.size === "small")("mat-badge-medium", ctx.size === "medium")("mat-badge-large", ctx.size === "large")("mat-badge-hidden", ctx.hidden || !ctx.content)("mat-badge-disabled", ctx.disabled);
+  static \u0275fac = function MatBadge_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatBadge)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _MatBadge,
+    selectors: [["", "matBadge", ""]],
+    hostAttrs: [1, "mat-badge"],
+    hostVars: 20,
+    hostBindings: function MatBadge_HostBindings(rf, ctx) {
+      if (rf & 2) {
+        \u0275\u0275classProp("mat-badge-overlap", ctx.overlap)("mat-badge-above", ctx.isAbove())("mat-badge-below", !ctx.isAbove())("mat-badge-before", !ctx.isAfter())("mat-badge-after", ctx.isAfter())("mat-badge-small", ctx.size === "small")("mat-badge-medium", ctx.size === "medium")("mat-badge-large", ctx.size === "large")("mat-badge-hidden", ctx.hidden || !ctx.content)("mat-badge-disabled", ctx.disabled);
+      }
+    },
+    inputs: {
+      color: [0, "matBadgeColor", "color"],
+      overlap: [2, "matBadgeOverlap", "overlap", booleanAttribute],
+      disabled: [2, "matBadgeDisabled", "disabled", booleanAttribute],
+      position: [0, "matBadgePosition", "position"],
+      content: [0, "matBadge", "content"],
+      description: [0, "matBadgeDescription", "description"],
+      size: [0, "matBadgeSize", "size"],
+      hidden: [2, "matBadgeHidden", "hidden", booleanAttribute]
     }
-  }, "MatBadge_HostBindings"),
-  inputs: {
-    color: [0, "matBadgeColor", "color"],
-    overlap: [2, "matBadgeOverlap", "overlap", booleanAttribute],
-    disabled: [2, "matBadgeDisabled", "disabled", booleanAttribute],
-    position: [0, "matBadgePosition", "position"],
-    content: [0, "matBadge", "content"],
-    description: [0, "matBadgeDescription", "description"],
-    size: [0, "matBadgeSize", "size"],
-    hidden: [2, "matBadgeHidden", "hidden", booleanAttribute]
-  }
-}));
-var MatBadge = _MatBadge;
+  });
+};
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatBadge, [{
     type: Directive,
@@ -4912,21 +4492,19 @@ var MatBadge = _MatBadge;
     }]
   });
 })();
-var _MatBadgeModule = class _MatBadgeModule {
+var MatBadgeModule = class _MatBadgeModule {
+  static \u0275fac = function MatBadgeModule_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatBadgeModule)();
+  };
+  static \u0275mod = /* @__PURE__ */ \u0275\u0275defineNgModule({
+    type: _MatBadgeModule,
+    imports: [A11yModule, MatCommonModule, MatBadge, _MatBadgeStyleLoader],
+    exports: [MatBadge, MatCommonModule]
+  });
+  static \u0275inj = /* @__PURE__ */ \u0275\u0275defineInjector({
+    imports: [A11yModule, MatCommonModule, MatCommonModule]
+  });
 };
-__name(_MatBadgeModule, "MatBadgeModule");
-__publicField(_MatBadgeModule, "\u0275fac", /* @__PURE__ */ __name(function MatBadgeModule_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatBadgeModule)();
-}, "MatBadgeModule_Factory"));
-__publicField(_MatBadgeModule, "\u0275mod", /* @__PURE__ */ \u0275\u0275defineNgModule({
-  type: _MatBadgeModule,
-  imports: [A11yModule, MatCommonModule, MatBadge, _MatBadgeStyleLoader],
-  exports: [MatBadge, MatCommonModule]
-}));
-__publicField(_MatBadgeModule, "\u0275inj", /* @__PURE__ */ \u0275\u0275defineInjector({
-  imports: [A11yModule, MatCommonModule, MatCommonModule]
-}));
-var MatBadgeModule = _MatBadgeModule;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatBadgeModule, [{
     type: NgModule,
@@ -4940,13 +4518,13 @@ var MatBadgeModule = _MatBadgeModule;
 })();
 
 // src/app/components/dashboard/dashboard.component.ts
-var _c04 = /* @__PURE__ */ __name(() => ["/lists/new"], "_c0");
-var _c14 = /* @__PURE__ */ __name(() => ["/dashboard"], "_c1");
-var _c24 = /* @__PURE__ */ __name(() => ["/lists"], "_c2");
-var _c34 = /* @__PURE__ */ __name(() => ({ exact: true }), "_c3");
-function DashboardComponent_div_78_Template(rf, ctx) {
+var _c04 = () => ["/lists/new"];
+var _c14 = () => ["/dashboard"];
+var _c24 = () => ["/lists"];
+var _c34 = () => ({ exact: true });
+function DashboardComponent_Conditional_78_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 31)(1, "mat-card", 32)(2, "mat-card-content")(3, "div", 33)(4, "mat-icon", 34);
+    \u0275\u0275elementStart(0, "div", 28)(1, "mat-card", 31)(2, "mat-card-content")(3, "div", 32)(4, "mat-icon", 33);
     \u0275\u0275text(5, "assignment");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(6, "h3");
@@ -4955,7 +4533,7 @@ function DashboardComponent_div_78_Template(rf, ctx) {
     \u0275\u0275elementStart(8, "p");
     \u0275\u0275text(9, "Total Lists");
     \u0275\u0275elementEnd()()()();
-    \u0275\u0275elementStart(10, "mat-card", 32)(11, "mat-card-content")(12, "div", 33)(13, "mat-icon", 35);
+    \u0275\u0275elementStart(10, "mat-card", 31)(11, "mat-card-content")(12, "div", 32)(13, "mat-icon", 34);
     \u0275\u0275text(14, "shopping_cart");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(15, "h3");
@@ -4964,7 +4542,7 @@ function DashboardComponent_div_78_Template(rf, ctx) {
     \u0275\u0275elementStart(17, "p");
     \u0275\u0275text(18, "Items to Buy");
     \u0275\u0275elementEnd()()()();
-    \u0275\u0275elementStart(19, "mat-card", 32)(20, "mat-card-content")(21, "div", 33)(22, "mat-icon", 36);
+    \u0275\u0275elementStart(19, "mat-card", 31)(20, "mat-card-content")(21, "div", 32)(22, "mat-icon", 35);
     \u0275\u0275text(23, "done_all");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(24, "h3");
@@ -4973,7 +4551,7 @@ function DashboardComponent_div_78_Template(rf, ctx) {
     \u0275\u0275elementStart(26, "p");
     \u0275\u0275text(27, "Items Bought");
     \u0275\u0275elementEnd()()()();
-    \u0275\u0275elementStart(28, "mat-card", 32)(29, "mat-card-content")(30, "div", 33)(31, "mat-icon", 37);
+    \u0275\u0275elementStart(28, "mat-card", 31)(29, "mat-card-content")(30, "div", 32)(31, "mat-icon", 36);
     \u0275\u0275text(32, "percent");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(33, "h3");
@@ -4995,10 +4573,9 @@ function DashboardComponent_div_78_Template(rf, ctx) {
     \u0275\u0275textInterpolate1("", ctx_r2.completionRate, "%");
   }
 }
-__name(DashboardComponent_div_78_Template, "DashboardComponent_div_78_Template");
-function DashboardComponent_div_79_mat_card_4_p_6_Template(rf, ctx) {
+function DashboardComponent_Conditional_79_For_5_Conditional_6_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "p", 54);
+    \u0275\u0275elementStart(0, "p", 45);
     \u0275\u0275text(1);
     \u0275\u0275elementEnd();
   }
@@ -5008,10 +4585,9 @@ function DashboardComponent_div_79_mat_card_4_p_6_Template(rf, ctx) {
     \u0275\u0275textInterpolate(list_r5.comment);
   }
 }
-__name(DashboardComponent_div_79_mat_card_4_p_6_Template, "DashboardComponent_div_79_mat_card_4_p_6_Template");
-function DashboardComponent_div_79_mat_card_4_mat_chip_option_13_Template(rf, ctx) {
+function DashboardComponent_Conditional_79_For_5_Conditional_13_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "mat-chip-option", 50)(1, "mat-icon");
+    \u0275\u0275elementStart(0, "mat-chip-option", 48)(1, "mat-icon");
     \u0275\u0275text(2, "shopping_cart");
     \u0275\u0275elementEnd();
     \u0275\u0275text(3);
@@ -5025,10 +4601,9 @@ function DashboardComponent_div_79_mat_card_4_mat_chip_option_13_Template(rf, ct
     \u0275\u0275textInterpolate1(" ", ctx_r2.getListItemsToBuy(list_r5), " to buy ");
   }
 }
-__name(DashboardComponent_div_79_mat_card_4_mat_chip_option_13_Template, "DashboardComponent_div_79_mat_card_4_mat_chip_option_13_Template");
-function DashboardComponent_div_79_mat_card_4_mat_chip_option_14_Template(rf, ctx) {
+function DashboardComponent_Conditional_79_For_5_Conditional_14_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "mat-chip-option", 50)(1, "mat-icon");
+    \u0275\u0275elementStart(0, "mat-chip-option", 48)(1, "mat-icon");
     \u0275\u0275text(2, "done");
     \u0275\u0275elementEnd();
     \u0275\u0275text(3);
@@ -5042,47 +4617,47 @@ function DashboardComponent_div_79_mat_card_4_mat_chip_option_14_Template(rf, ct
     \u0275\u0275textInterpolate1(" ", ctx_r2.getListItemsBought(list_r5), " done ");
   }
 }
-__name(DashboardComponent_div_79_mat_card_4_mat_chip_option_14_Template, "DashboardComponent_div_79_mat_card_4_mat_chip_option_14_Template");
-function DashboardComponent_div_79_mat_card_4_Template(rf, ctx) {
+function DashboardComponent_Conditional_79_For_5_Template(rf, ctx) {
   if (rf & 1) {
     const _r4 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "mat-card", 43);
-    \u0275\u0275listener("click", /* @__PURE__ */ __name(function DashboardComponent_div_79_mat_card_4_Template_mat_card_click_0_listener() {
+    \u0275\u0275elementStart(0, "mat-card", 41);
+    \u0275\u0275listener("click", function DashboardComponent_Conditional_79_For_5_Template_mat_card_click_0_listener() {
       const list_r5 = \u0275\u0275restoreView(_r4).$implicit;
       const ctx_r2 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r2.openList(list_r5.id));
-    }, "DashboardComponent_div_79_mat_card_4_Template_mat_card_click_0_listener"));
-    \u0275\u0275elementStart(1, "div", 44)(2, "div", 45)(3, "h3", 46);
+    });
+    \u0275\u0275elementStart(1, "div", 42)(2, "div", 43)(3, "h3", 44);
     \u0275\u0275text(4);
     \u0275\u0275elementEnd()()();
     \u0275\u0275elementStart(5, "mat-card-content");
-    \u0275\u0275template(6, DashboardComponent_div_79_mat_card_4_p_6_Template, 2, 1, "p", 47);
-    \u0275\u0275elementStart(7, "div", 48)(8, "mat-chip-set", 49)(9, "mat-chip-option", 50)(10, "mat-icon");
+    \u0275\u0275conditionalCreate(6, DashboardComponent_Conditional_79_For_5_Conditional_6_Template, 2, 1, "p", 45);
+    \u0275\u0275elementStart(7, "div", 46)(8, "mat-chip-set", 47)(9, "mat-chip-option", 48)(10, "mat-icon");
     \u0275\u0275text(11, "assignment");
     \u0275\u0275elementEnd();
     \u0275\u0275text(12);
     \u0275\u0275elementEnd();
-    \u0275\u0275template(13, DashboardComponent_div_79_mat_card_4_mat_chip_option_13_Template, 4, 2, "mat-chip-option", 51)(14, DashboardComponent_div_79_mat_card_4_mat_chip_option_14_Template, 4, 2, "mat-chip-option", 51);
+    \u0275\u0275conditionalCreate(13, DashboardComponent_Conditional_79_For_5_Conditional_13_Template, 4, 2, "mat-chip-option", 48);
+    \u0275\u0275conditionalCreate(14, DashboardComponent_Conditional_79_For_5_Conditional_14_Template, 4, 2, "mat-chip-option", 48);
     \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(15, "mat-card-actions")(16, "button", 52);
-    \u0275\u0275listener("click", /* @__PURE__ */ __name(function DashboardComponent_div_79_mat_card_4_Template_button_click_16_listener($event) {
+    \u0275\u0275elementStart(15, "mat-card-actions")(16, "button", 49);
+    \u0275\u0275listener("click", function DashboardComponent_Conditional_79_For_5_Template_button_click_16_listener($event) {
       const list_r5 = \u0275\u0275restoreView(_r4).$implicit;
       const ctx_r2 = \u0275\u0275nextContext(2);
       $event.stopPropagation();
       return \u0275\u0275resetView(ctx_r2.openList(list_r5.id));
-    }, "DashboardComponent_div_79_mat_card_4_Template_button_click_16_listener"));
+    });
     \u0275\u0275elementStart(17, "mat-icon");
     \u0275\u0275text(18, "open_in_new");
     \u0275\u0275elementEnd();
     \u0275\u0275text(19, " View ");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(20, "button", 53);
-    \u0275\u0275listener("click", /* @__PURE__ */ __name(function DashboardComponent_div_79_mat_card_4_Template_button_click_20_listener($event) {
+    \u0275\u0275elementStart(20, "button", 50);
+    \u0275\u0275listener("click", function DashboardComponent_Conditional_79_For_5_Template_button_click_20_listener($event) {
       const list_r5 = \u0275\u0275restoreView(_r4).$implicit;
       const ctx_r2 = \u0275\u0275nextContext(2);
       $event.stopPropagation();
       return \u0275\u0275resetView(ctx_r2.editList(list_r5.id));
-    }, "DashboardComponent_div_79_mat_card_4_Template_button_click_20_listener"));
+    });
     \u0275\u0275elementStart(21, "mat-icon");
     \u0275\u0275text(22, "edit");
     \u0275\u0275elementEnd();
@@ -5097,21 +4672,20 @@ function DashboardComponent_div_79_mat_card_4_Template(rf, ctx) {
     \u0275\u0275advance(3);
     \u0275\u0275textInterpolate(list_r5.name);
     \u0275\u0275advance(2);
-    \u0275\u0275property("ngIf", list_r5.comment);
+    \u0275\u0275conditional(list_r5.comment ? 6 : -1);
     \u0275\u0275advance(3);
     \u0275\u0275property("disabled", true);
     \u0275\u0275advance(3);
     \u0275\u0275textInterpolate1(" ", list_r5.items.length, " items ");
     \u0275\u0275advance();
-    \u0275\u0275property("ngIf", ctx_r2.getListItemsToBuy(list_r5) > 0);
+    \u0275\u0275conditional(ctx_r2.getListItemsToBuy(list_r5) > 0 ? 13 : -1);
     \u0275\u0275advance();
-    \u0275\u0275property("ngIf", ctx_r2.getListItemsBought(list_r5) > 0);
+    \u0275\u0275conditional(ctx_r2.getListItemsBought(list_r5) > 0 ? 14 : -1);
   }
 }
-__name(DashboardComponent_div_79_mat_card_4_Template, "DashboardComponent_div_79_mat_card_4_Template");
-function DashboardComponent_div_79_div_5_Template(rf, ctx) {
+function DashboardComponent_Conditional_79_Conditional_6_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 55)(1, "mat-icon", 56);
+    \u0275\u0275elementStart(0, "div", 40)(1, "mat-icon", 51);
     \u0275\u0275text(2, "assignment");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(3, "h3");
@@ -5120,7 +4694,7 @@ function DashboardComponent_div_79_div_5_Template(rf, ctx) {
     \u0275\u0275elementStart(5, "p");
     \u0275\u0275text(6, "Create your first list to get started");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(7, "button", 57)(8, "mat-icon");
+    \u0275\u0275elementStart(7, "button", 52)(8, "mat-icon");
     \u0275\u0275text(9, "add");
     \u0275\u0275elementEnd();
     \u0275\u0275text(10, " Create Your First List ");
@@ -5131,37 +4705,34 @@ function DashboardComponent_div_79_div_5_Template(rf, ctx) {
     \u0275\u0275property("routerLink", \u0275\u0275pureFunction0(1, _c04));
   }
 }
-__name(DashboardComponent_div_79_div_5_Template, "DashboardComponent_div_79_div_5_Template");
-function DashboardComponent_div_79_Template(rf, ctx) {
+function DashboardComponent_Conditional_79_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 38)(1, "h2", 39);
+    \u0275\u0275elementStart(0, "div", 29)(1, "h2", 37);
     \u0275\u0275text(2, "Recent Lists");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(3, "div", 40);
-    \u0275\u0275template(4, DashboardComponent_div_79_mat_card_4_Template, 24, 8, "mat-card", 41);
+    \u0275\u0275elementStart(3, "div", 38);
+    \u0275\u0275repeaterCreate(4, DashboardComponent_Conditional_79_For_5_Template, 24, 8, "mat-card", 39, \u0275\u0275repeaterTrackByIdentity);
     \u0275\u0275elementEnd();
-    \u0275\u0275template(5, DashboardComponent_div_79_div_5_Template, 11, 2, "div", 42);
+    \u0275\u0275conditionalCreate(6, DashboardComponent_Conditional_79_Conditional_6_Template, 11, 2, "div", 40);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
     const ctx_r2 = \u0275\u0275nextContext();
     \u0275\u0275advance(4);
-    \u0275\u0275property("ngForOf", ctx_r2.recentLists);
-    \u0275\u0275advance();
-    \u0275\u0275property("ngIf", ctx_r2.totalLists === 0);
+    \u0275\u0275repeater(ctx_r2.recentLists);
+    \u0275\u0275advance(2);
+    \u0275\u0275conditional(ctx_r2.totalLists === 0 ? 6 : -1);
   }
 }
-__name(DashboardComponent_div_79_Template, "DashboardComponent_div_79_Template");
-function DashboardComponent_div_80_Template(rf, ctx) {
+function DashboardComponent_Conditional_80_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 58);
-    \u0275\u0275element(1, "mat-spinner", 59);
+    \u0275\u0275elementStart(0, "div", 30);
+    \u0275\u0275element(1, "mat-spinner", 53);
     \u0275\u0275elementStart(2, "p");
     \u0275\u0275text(3, "Loading your dashboard...");
     \u0275\u0275elementEnd()();
   }
 }
-__name(DashboardComponent_div_80_Template, "DashboardComponent_div_80_Template");
 var _DashboardComponent = class _DashboardComponent {
   constructor() {
     this.lists$ = new BehaviorSubject([]);
@@ -5183,14 +4754,14 @@ var _DashboardComponent = class _DashboardComponent {
   loadLists() {
     this.loading = true;
     this.apiService.getLists().subscribe({
-      next: /* @__PURE__ */ __name((lists) => {
+      next: (lists) => {
         this.lists$.next(lists);
         this.loading = false;
-      }, "next"),
-      error: /* @__PURE__ */ __name((error) => {
+      },
+      error: (error) => {
         console.error("Error loading lists:", error);
         this.loading = false;
-      }, "error")
+      }
     });
   }
   get totalLists() {
@@ -5233,19 +4804,18 @@ var _DashboardComponent = class _DashboardComponent {
     });
   }
 };
-__name(_DashboardComponent, "DashboardComponent");
-_DashboardComponent.\u0275fac = /* @__PURE__ */ __name(function DashboardComponent_Factory(__ngFactoryType__) {
+_DashboardComponent.\u0275fac = function DashboardComponent_Factory(__ngFactoryType__) {
   return new (__ngFactoryType__ || _DashboardComponent)();
-}, "DashboardComponent_Factory");
-_DashboardComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _DashboardComponent, selectors: [["app-dashboard"]], decls: 81, vars: 24, consts: [["userMenu", "matMenu"], ["sidenav", ""], [1, "dashboard-container"], ["color", "primary", 1, "app-toolbar"], ["mat-icon-button", "", 1, "menu-button", 3, "click"], [1, "app-title"], [1, "spacer"], ["mat-button", "", 1, "new-list-button", 3, "routerLink"], ["mat-icon-button", "", 1, "user-button", 3, "matMenuTriggerFor"], [1, "user-avatar", 3, "src", "alt"], [1, "user-info"], [1, "user-avatar-large", 3, "src", "alt"], [1, "user-name"], [1, "user-email"], ["mat-menu-item", "", 3, "click"], [1, "sidenav-container"], ["mode", "over", 1, "sidenav"], ["mat-list-item", "", "routerLinkActive", "active", 3, "routerLink"], ["matListItemIcon", ""], ["matListItemTitle", ""], ["mat-list-item", "", "routerLinkActive", "active", 3, "routerLink", "routerLinkActiveOptions"], ["matSubheader", ""], ["matListItemMeta", "", 1, "stat-badge"], [1, "main-content"], [1, "content-container"], [1, "welcome-section"], [1, "page-title"], [1, "page-subtitle"], ["class", "stats-info", 4, "ngIf"], ["class", "recent-lists-section", 4, "ngIf"], ["class", "loading-container", 4, "ngIf"], [1, "stats-info"], [1, "stat-card"], [1, "stat-content"], [1, "stat-icon"], [1, "stat-icon", "to-do"], [1, "stat-icon", "done"], [1, "stat-icon", "progress"], [1, "recent-lists-section"], [1, "section-title"], [1, "lists-grid"], ["class", "list-card", 3, "click", 4, "ngFor", "ngForOf"], ["class", "no-lists", 4, "ngIf"], [1, "list-card", 3, "click"], [1, "list-image"], [1, "list-overlay"], [1, "list-title"], ["class", "list-comment", 4, "ngIf"], [1, "list-stats"], ["aria-label", "List statistics"], [3, "disabled"], [3, "disabled", 4, "ngIf"], ["mat-button", "", "color", "primary", 3, "click"], ["mat-button", "", 3, "click"], [1, "list-comment"], [1, "no-lists"], [1, "empty-icon"], ["mat-raised-button", "", "color", "primary", 3, "routerLink"], [1, "loading-container"], ["diameter", "50"]], template: /* @__PURE__ */ __name(function DashboardComponent_Template(rf, ctx) {
+};
+_DashboardComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _DashboardComponent, selectors: [["ng-component"]], decls: 81, vars: 24, consts: [["userMenu", "matMenu"], ["sidenav", ""], [1, "dashboard-container"], ["color", "primary", 1, "app-toolbar"], ["mat-icon-button", "", 1, "menu-button", 3, "click"], [1, "app-title"], [1, "spacer"], ["mat-button", "", 1, "new-list-button", 3, "routerLink"], ["mat-icon-button", "", 1, "user-button", 3, "matMenuTriggerFor"], [1, "user-avatar", 3, "src", "alt"], [1, "user-info"], [1, "user-avatar-large", 3, "src", "alt"], [1, "user-name"], [1, "user-email"], ["mat-menu-item", "", 3, "click"], [1, "sidenav-container"], ["mode", "over", 1, "sidenav"], ["mat-list-item", "", "routerLinkActive", "active", 3, "routerLink"], ["matListItemIcon", ""], ["matListItemTitle", ""], ["mat-list-item", "", "routerLinkActive", "active", 3, "routerLink", "routerLinkActiveOptions"], ["matSubheader", ""], ["matListItemMeta", "", 1, "stat-badge"], [1, "main-content"], [1, "content-container"], [1, "welcome-section"], [1, "page-title"], [1, "page-subtitle"], [1, "stats-info"], [1, "recent-lists-section"], [1, "loading-container"], [1, "stat-card"], [1, "stat-content"], [1, "stat-icon"], [1, "stat-icon", "to-do"], [1, "stat-icon", "done"], [1, "stat-icon", "progress"], [1, "section-title"], [1, "lists-grid"], [1, "list-card"], [1, "no-lists"], [1, "list-card", 3, "click"], [1, "list-image"], [1, "list-overlay"], [1, "list-title"], [1, "list-comment"], [1, "list-stats"], ["aria-label", "List statistics"], [3, "disabled"], ["mat-button", "", "color", "primary", 3, "click"], ["mat-button", "", 3, "click"], [1, "empty-icon"], ["mat-raised-button", "", "color", "primary", 3, "routerLink"], ["diameter", "50"]], template: function DashboardComponent_Template(rf, ctx) {
   if (rf & 1) {
     const _r1 = \u0275\u0275getCurrentView();
     \u0275\u0275elementStart(0, "div", 2)(1, "mat-toolbar", 3)(2, "button", 4);
-    \u0275\u0275listener("click", /* @__PURE__ */ __name(function DashboardComponent_Template_button_click_2_listener() {
+    \u0275\u0275listener("click", function DashboardComponent_Template_button_click_2_listener() {
       \u0275\u0275restoreView(_r1);
       const sidenav_r2 = \u0275\u0275reference(30);
       return \u0275\u0275resetView(sidenav_r2.toggle());
-    }, "DashboardComponent_Template_button_click_2_listener"));
+    });
     \u0275\u0275elementStart(3, "mat-icon");
     \u0275\u0275text(4, "menu");
     \u0275\u0275elementEnd()();
@@ -5271,10 +4841,10 @@ _DashboardComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ ty
     \u0275\u0275elementEnd()()();
     \u0275\u0275element(23, "mat-divider");
     \u0275\u0275elementStart(24, "button", 14);
-    \u0275\u0275listener("click", /* @__PURE__ */ __name(function DashboardComponent_Template_button_click_24_listener() {
+    \u0275\u0275listener("click", function DashboardComponent_Template_button_click_24_listener() {
       \u0275\u0275restoreView(_r1);
       return \u0275\u0275resetView(ctx.signOut());
-    }, "DashboardComponent_Template_button_click_24_listener"));
+    });
     \u0275\u0275elementStart(25, "mat-icon");
     \u0275\u0275text(26, "logout");
     \u0275\u0275elementEnd();
@@ -5335,7 +4905,9 @@ _DashboardComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ ty
     \u0275\u0275elementStart(76, "p", 27);
     \u0275\u0275text(77, "Here's an overview of your lists");
     \u0275\u0275elementEnd()();
-    \u0275\u0275template(78, DashboardComponent_div_78_Template, 37, 4, "div", 28)(79, DashboardComponent_div_79_Template, 6, 2, "div", 29)(80, DashboardComponent_div_80_Template, 4, 0, "div", 30);
+    \u0275\u0275conditionalCreate(78, DashboardComponent_Conditional_78_Template, 37, 4, "div", 28);
+    \u0275\u0275conditionalCreate(79, DashboardComponent_Conditional_79_Template, 7, 1, "div", 29);
+    \u0275\u0275conditionalCreate(80, DashboardComponent_Conditional_80_Template, 4, 0, "div", 30);
     \u0275\u0275elementEnd()()()();
   }
   if (rf & 2) {
@@ -5367,16 +4939,13 @@ _DashboardComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ ty
     \u0275\u0275advance(5);
     \u0275\u0275textInterpolate1("Welcome back, ", (ctx.currentUser == null ? null : ctx.currentUser.displayName) || "User", "!");
     \u0275\u0275advance(3);
-    \u0275\u0275property("ngIf", !ctx.loading);
+    \u0275\u0275conditional(!ctx.loading ? 78 : -1);
     \u0275\u0275advance();
-    \u0275\u0275property("ngIf", !ctx.loading);
+    \u0275\u0275conditional(!ctx.loading ? 79 : -1);
     \u0275\u0275advance();
-    \u0275\u0275property("ngIf", ctx.loading);
+    \u0275\u0275conditional(ctx.loading ? 80 : -1);
   }
-}, "DashboardComponent_Template"), dependencies: [
-  CommonModule,
-  NgForOf,
-  NgIf,
+}, dependencies: [
   MatCardModule,
   MatCard,
   MatCardActions,
@@ -5419,8 +4988,7 @@ var DashboardComponent = _DashboardComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(DashboardComponent, [{
     type: Component,
-    args: [{ selector: "app-dashboard", standalone: true, imports: [
-      CommonModule,
+    args: [{ standalone: true, imports: [
       MatCardModule,
       MatButtonModule,
       MatIconModule,
@@ -5434,198 +5002,209 @@ var DashboardComponent = _DashboardComponent;
       MatProgressSpinnerModule,
       RouterModule
     ], template: `<div class="dashboard-container">
-    <mat-toolbar color="primary" class="app-toolbar">
-        <button mat-icon-button (click)="sidenav.toggle()" class="menu-button">
-            <mat-icon>menu</mat-icon>
-        </button>
+  <mat-toolbar color="primary" class="app-toolbar">
+    <button mat-icon-button (click)="sidenav.toggle()" class="menu-button">
+      <mat-icon>menu</mat-icon>
+    </button>
 
-        <span class="app-title">Listok</span>
+    <span class="app-title">Listok</span>
 
-        <span class="spacer"></span>
+    <span class="spacer"></span>
 
-        <button mat-button [routerLink]="['/lists/new']" class="new-list-button">
-            <mat-icon>add</mat-icon>
-            New List
-        </button>
+    <button mat-button [routerLink]="['/lists/new']" class="new-list-button">
+      <mat-icon>add</mat-icon>
+      New List
+    </button>
 
-        <button mat-icon-button [matMenuTriggerFor]="userMenu" class="user-button">
-            <img [src]="currentUser?.photoURL || 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg'"
-                 [alt]="currentUser?.displayName || 'User'"
-                 class="user-avatar">
-        </button>
+    <button mat-icon-button [matMenuTriggerFor]="userMenu" class="user-button">
+      <img [src]="currentUser?.photoURL || 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg'"
+        [alt]="currentUser?.displayName || 'User'"
+        class="user-avatar">
+    </button>
 
-        <mat-menu #userMenu="matMenu">
-            <div class="user-info">
-                <img [src]="currentUser?.photoURL || 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg'"
-                     [alt]="currentUser?.displayName || 'User'"
-                     class="user-avatar-large">
-                <div>
-                    <p class="user-name">{{ currentUser?.displayName || 'User' }}</p>
-                    <p class="user-email">{{ currentUser?.email }}</p>
+    <mat-menu #userMenu="matMenu">
+      <div class="user-info">
+        <img [src]="currentUser?.photoURL || 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg'"
+          [alt]="currentUser?.displayName || 'User'"
+          class="user-avatar-large">
+        <div>
+          <p class="user-name">{{ currentUser?.displayName || 'User' }}</p>
+          <p class="user-email">{{ currentUser?.email }}</p>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+      <button mat-menu-item (click)="signOut()">
+        <mat-icon>logout</mat-icon>
+        Sign Out
+      </button>
+    </mat-menu>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="over" class="sidenav">
+      <mat-nav-list>
+        <a mat-list-item [routerLink]="['/dashboard']" routerLinkActive="active">
+          <mat-icon matListItemIcon>dashboard</mat-icon>
+          <span matListItemTitle>Dashboard</span>
+        </a>
+        <a mat-list-item [routerLink]="['/lists']" routerLinkActive="active">
+          <mat-icon matListItemIcon>list</mat-icon>
+          <span matListItemTitle>All Lists</span>
+        </a>
+        <a mat-list-item [routerLink]="['/lists/new']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <mat-icon matListItemIcon>add</mat-icon>
+          <span matListItemTitle>Create List</span>
+        </a>
+        <mat-divider></mat-divider>
+        <h3 matSubheader>Quick Stats</h3>
+        <mat-list-item>
+          <mat-icon matListItemIcon>assignment</mat-icon>
+          <span matListItemTitle>Total Lists</span>
+          <span matListItemMeta class="stat-badge">{{ totalLists }}</span>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon matListItemIcon>shopping_cart</mat-icon>
+          <span matListItemTitle>Items to Buy</span>
+          <span matListItemMeta class="stat-badge">{{ itemsToBuy }}</span>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon matListItemIcon>done</mat-icon>
+          <span matListItemTitle>Items Bought</span>
+          <span matListItemMeta class="stat-badge">{{ itemsBought }}</span>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="main-content">
+      <div class="content-container">
+        <div class="welcome-section">
+          <h1 class="page-title">Welcome back, {{ currentUser?.displayName || 'User' }}!</h1>
+          <p class="page-subtitle">Here's an overview of your lists</p>
+        </div>
+
+        @if (!loading) {
+          <div class="stats-info">
+            <mat-card class="stat-card">
+              <mat-card-content>
+                <div class="stat-content">
+                  <mat-icon class="stat-icon">assignment</mat-icon>
+                  <h3>{{ totalLists }}</h3>
+                  <p>Total Lists</p>
                 </div>
-            </div>
-            <mat-divider></mat-divider>
-            <button mat-menu-item (click)="signOut()">
-                <mat-icon>logout</mat-icon>
-                Sign Out
-            </button>
-        </mat-menu>
-    </mat-toolbar>
-
-    <mat-sidenav-container class="sidenav-container">
-        <mat-sidenav #sidenav mode="over" class="sidenav">
-            <mat-nav-list>
-                <a mat-list-item [routerLink]="['/dashboard']" routerLinkActive="active">
-                    <mat-icon matListItemIcon>dashboard</mat-icon>
-                    <span matListItemTitle>Dashboard</span>
-                </a>
-                <a mat-list-item [routerLink]="['/lists']" routerLinkActive="active">
-                    <mat-icon matListItemIcon>list</mat-icon>
-                    <span matListItemTitle>All Lists</span>
-                </a>
-                <a mat-list-item [routerLink]="['/lists/new']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-                    <mat-icon matListItemIcon>add</mat-icon>
-                    <span matListItemTitle>Create List</span>
-                </a>
-                <mat-divider></mat-divider>
-                <h3 matSubheader>Quick Stats</h3>
-                <mat-list-item>
-                    <mat-icon matListItemIcon>assignment</mat-icon>
-                    <span matListItemTitle>Total Lists</span>
-                    <span matListItemMeta class="stat-badge">{{ totalLists }}</span>
-                </mat-list-item>
-                <mat-list-item>
-                    <mat-icon matListItemIcon>shopping_cart</mat-icon>
-                    <span matListItemTitle>Items to Buy</span>
-                    <span matListItemMeta class="stat-badge">{{ itemsToBuy }}</span>
-                </mat-list-item>
-                <mat-list-item>
-                    <mat-icon matListItemIcon>done</mat-icon>
-                    <span matListItemTitle>Items Bought</span>
-                    <span matListItemMeta class="stat-badge">{{ itemsBought }}</span>
-                </mat-list-item>
-            </mat-nav-list>
-        </mat-sidenav>
-
-        <mat-sidenav-content class="main-content">
-            <div class="content-container">
-                <div class="welcome-section">
-                    <h1 class="page-title">Welcome back, {{ currentUser?.displayName || 'User' }}!</h1>
-                    <p class="page-subtitle">Here's an overview of your lists</p>
+              </mat-card-content>
+            </mat-card>
+            <mat-card class="stat-card">
+              <mat-card-content>
+                <div class="stat-content">
+                  <mat-icon class="stat-icon to-do">shopping_cart</mat-icon>
+                  <h3>{{ itemsToBuy }}</h3>
+                  <p>Items to Buy</p>
                 </div>
-
-                <div class="stats-info" *ngIf="!loading">
-                    <mat-card class="stat-card">
-                        <mat-card-content>
-                            <div class="stat-content">
-                                <mat-icon class="stat-icon">assignment</mat-icon>
-                                <h3>{{ totalLists }}</h3>
-                                <p>Total Lists</p>
-                            </div>
-                        </mat-card-content>
-                    </mat-card>
-
-                    <mat-card class="stat-card">
-                        <mat-card-content>
-                            <div class="stat-content">
-                                <mat-icon class="stat-icon to-do">shopping_cart</mat-icon>
-                                <h3>{{ itemsToBuy }}</h3>
-                                <p>Items to Buy</p>
-                            </div>
-                        </mat-card-content>
-                    </mat-card>
-
-                    <mat-card class="stat-card">
-                        <mat-card-content>
-                            <div class="stat-content">
-                                <mat-icon class="stat-icon done">done_all</mat-icon>
-                                <h3>{{ itemsBought }}</h3>
-                                <p>Items Bought</p>
-                            </div>
-                        </mat-card-content>
-                    </mat-card>
-
-                    <mat-card class="stat-card">
-                        <mat-card-content>
-                            <div class="stat-content">
-                                <mat-icon class="stat-icon progress">percent</mat-icon>
-                                <h3>{{ completionRate }}%</h3>
-                                <p>Completion Rate</p>
-                            </div>
-                        </mat-card-content>
-                    </mat-card>
+              </mat-card-content>
+            </mat-card>
+            <mat-card class="stat-card">
+              <mat-card-content>
+                <div class="stat-content">
+                  <mat-icon class="stat-icon done">done_all</mat-icon>
+                  <h3>{{ itemsBought }}</h3>
+                  <p>Items Bought</p>
                 </div>
+              </mat-card-content>
+            </mat-card>
+            <mat-card class="stat-card">
+              <mat-card-content>
+                <div class="stat-content">
+                  <mat-icon class="stat-icon progress">percent</mat-icon>
+                  <h3>{{ completionRate }}%</h3>
+                  <p>Completion Rate</p>
+                </div>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        }
 
-                <div class="recent-lists-section" *ngIf="!loading">
-                    <h2 class="section-title">Recent Lists</h2>
-                    <div class="lists-grid">
-                        <mat-card
-                                *ngFor="let list of recentLists"
-                                class="list-card"
-                                (click)="openList(list.id)">
-                            <div class="list-image" [style.background-image]="'url(' + (list.img || 'https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg') + ')'">
-                                <div class="list-overlay">
-                                    <h3 class="list-title">{{ list.name }}</h3>
-                                </div>
-                            </div>
-                            <mat-card-content>
-                                <p class="list-comment" *ngIf="list.comment">{{ list.comment }}</p>
-                                <div class="list-stats">
-                                    <mat-chip-set aria-label="List statistics">
-                                        <mat-chip-option [disabled]="true">
-                                            <mat-icon>assignment</mat-icon>
-                                            {{ list.items.length }} items
-                                        </mat-chip-option>
-                                        <mat-chip-option [disabled]="true" *ngIf="getListItemsToBuy(list) > 0">
-                                            <mat-icon>shopping_cart</mat-icon>
-                                            {{ getListItemsToBuy(list) }} to buy
-                                        </mat-chip-option>
-                                        <mat-chip-option [disabled]="true" *ngIf="getListItemsBought(list) > 0">
-                                            <mat-icon>done</mat-icon>
-                                            {{ getListItemsBought(list) }} done
-                                        </mat-chip-option>
-                                    </mat-chip-set>
-                                </div>
-                            </mat-card-content>
-                            <mat-card-actions>
-                                <button mat-button color="primary" (click)="$event.stopPropagation(); openList(list.id)">
-                                    <mat-icon>open_in_new</mat-icon>
-                                    View
-                                </button>
-                                <button mat-button (click)="$event.stopPropagation(); editList(list.id)">
-                                    <mat-icon>edit</mat-icon>
-                                    Edit
-                                </button>
-                            </mat-card-actions>
-                        </mat-card>
+        @if (!loading) {
+          <div class="recent-lists-section">
+            <h2 class="section-title">Recent Lists</h2>
+            <div class="lists-grid">
+              @for (list of recentLists; track list) {
+                <mat-card
+                  class="list-card"
+                  (click)="openList(list.id)">
+                  <div class="list-image" [style.background-image]="'url(' + (list.img || 'https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg') + ')'">
+                    <div class="list-overlay">
+                      <h3 class="list-title">{{ list.name }}</h3>
                     </div>
-
-                    <div class="no-lists" *ngIf="totalLists === 0">
-                        <mat-icon class="empty-icon">assignment</mat-icon>
-                        <h3>No lists yet</h3>
-                        <p>Create your first list to get started</p>
-                        <button mat-raised-button color="primary" [routerLink]="['/lists/new']">
-                            <mat-icon>add</mat-icon>
-                            Create Your First List
-                        </button>
+                  </div>
+                  <mat-card-content>
+                    @if (list.comment) {
+                      <p class="list-comment">{{ list.comment }}</p>
+                    }
+                    <div class="list-stats">
+                      <mat-chip-set aria-label="List statistics">
+                        <mat-chip-option [disabled]="true">
+                          <mat-icon>assignment</mat-icon>
+                          {{ list.items.length }} items
+                        </mat-chip-option>
+                        @if (getListItemsToBuy(list) > 0) {
+                          <mat-chip-option [disabled]="true">
+                            <mat-icon>shopping_cart</mat-icon>
+                            {{ getListItemsToBuy(list) }} to buy
+                          </mat-chip-option>
+                        }
+                        @if (getListItemsBought(list) > 0) {
+                          <mat-chip-option [disabled]="true">
+                            <mat-icon>done</mat-icon>
+                            {{ getListItemsBought(list) }} done
+                          </mat-chip-option>
+                        }
+                      </mat-chip-set>
                     </div>
-                </div>
-
-                <div class="loading-container" *ngIf="loading">
-                    <mat-spinner diameter="50"></mat-spinner>
-                    <p>Loading your dashboard...</p>
-                </div>
+                  </mat-card-content>
+                  <mat-card-actions>
+                    <button mat-button color="primary" (click)="$event.stopPropagation(); openList(list.id)">
+                      <mat-icon>open_in_new</mat-icon>
+                      View
+                    </button>
+                    <button mat-button (click)="$event.stopPropagation(); editList(list.id)">
+                      <mat-icon>edit</mat-icon>
+                      Edit
+                    </button>
+                  </mat-card-actions>
+                </mat-card>
+              }
             </div>
-        </mat-sidenav-content>
-    </mat-sidenav-container>
+            @if (totalLists === 0) {
+              <div class="no-lists">
+                <mat-icon class="empty-icon">assignment</mat-icon>
+                <h3>No lists yet</h3>
+                <p>Create your first list to get started</p>
+                <button mat-raised-button color="primary" [routerLink]="['/lists/new']">
+                  <mat-icon>add</mat-icon>
+                  Create Your First List
+                </button>
+              </div>
+            }
+          </div>
+        }
+
+        @if (loading) {
+          <div class="loading-container">
+            <mat-spinner diameter="50"></mat-spinner>
+            <p>Loading your dashboard...</p>
+          </div>
+        }
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>
 `, styles: ["/* src/app/components/dashboard/dashboard.component.scss */\n.dashboard-container {\n  height: 100vh;\n  display: flex;\n  flex-direction: column;\n}\n.app-toolbar {\n  position: sticky;\n  top: 0;\n  z-index: 2;\n}\n.app-title {\n  font-size: 20px;\n  font-weight: 600;\n}\n.spacer {\n  flex: 1 1 auto;\n}\n.new-list-button {\n  margin-right: 16px;\n}\n.user-button {\n  padding: 4px;\n}\n.user-avatar {\n  width: 32px;\n  height: 32px;\n  border-radius: 50%;\n  object-fit: cover;\n}\n.user-avatar-large {\n  width: 48px;\n  height: 48px;\n  border-radius: 50%;\n  object-fit: cover;\n}\n.user-info {\n  display: flex;\n  align-items: center;\n  gap: 12px;\n  padding: 16px;\n}\n.user-name {\n  font-weight: 600;\n  margin: 0;\n}\n.user-email {\n  font-size: 14px;\n  opacity: 0.7;\n  margin: 0;\n}\n.sidenav-container {\n  flex: 1;\n}\n.sidenav {\n  width: 280px;\n  padding: 0;\n}\n.sidenav mat-nav-list {\n  padding-top: 0;\n}\n.sidenav a.active {\n  background-color: rgba(0, 0, 0, 0.04);\n}\n.stat-badge {\n  background-color: #1976d2;\n  color: white;\n  padding: 4px 8px;\n  border-radius: 12px;\n  font-size: 12px;\n  font-weight: 600;\n}\n.main-content {\n  background-color: #fafafa;\n}\n.content-container {\n  padding: 24px;\n  max-width: 1200px;\n  margin: 0 auto;\n}\n.welcome-section {\n  margin-bottom: 32px;\n}\n.page-title {\n  font-size: 32px;\n  font-weight: 600;\n  margin: 0 0 8px 0;\n  color: #1976d2;\n}\n.page-subtitle {\n  font-size: 16px;\n  opacity: 0.7;\n  margin: 0;\n}\n.stats-info {\n  display: flex;\n  flex-wrap: nowrap;\n  gap: 16px;\n  margin-bottom: 32px;\n  padding-bottom: 8px;\n}\n.stat-card {\n  flex: 1 0 auto;\n  min-width: 140px;\n  border-radius: 12px;\n  transition: min-width 0.3s ease;\n}\n.stat-content {\n  display: flex;\n  align-items: center;\n  gap: 16px;\n}\n.stat-icon {\n  font-size: 40px;\n  width: 40px;\n  height: 40px;\n  background-color: #e3f2fd;\n  color: #1976d2;\n}\n.stat-icon.to-do {\n  background-color: #fff3e0;\n  color: #f57c00;\n}\n.stat-icon.done {\n  background-color: #e8f5e8;\n  color: #4caf50;\n}\n.stat-icon.progress {\n  background-color: #f3e5f5;\n  color: #9c27b0;\n}\n.stat-content h3 {\n  font-size: 28px;\n  font-weight: 700;\n  margin: 0;\n}\n.stat-content p {\n  font-size: 14px;\n  opacity: 0.7;\n  margin: 0;\n  white-space: nowrap;\n}\n.section-title {\n  font-size: 24px;\n  font-weight: 600;\n  margin: 0 0 16px 0;\n  color: #333;\n}\n.lists-grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));\n  gap: 20px;\n}\n.list-card {\n  border-radius: 12px;\n  overflow: hidden;\n  transition: transform 0.2s, box-shadow 0.2s;\n  cursor: pointer;\n}\n.list-card:hover {\n  transform: translateY(-4px);\n  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);\n}\n.list-image {\n  height: 160px;\n  background-size: cover;\n  background-position: center;\n  position: relative;\n}\n.list-overlay {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));\n  color: white;\n  padding: 16px;\n}\n.list-title {\n  font-size: 18px;\n  font-weight: 600;\n  margin: 0;\n}\n.list-comment {\n  font-size: 14px;\n  opacity: 0.7;\n  margin: 0 0 12px 0;\n  line-height: 1.4;\n}\n.list-stats {\n  margin-bottom: 8px;\n}\n.list-stats mat-chip-set {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 4px;\n}\n.list-stats mat-chip {\n  font-size: 12px;\n}\n.no-lists {\n  text-align: center;\n  padding: 40px;\n  background-color: white;\n  border-radius: 12px;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\n}\n.empty-icon {\n  font-size: 64px;\n  width: 64px;\n  height: 64px;\n  opacity: 0.3;\n  margin-bottom: 16px;\n}\n.no-lists h3 {\n  margin: 0 0 8px 0;\n  font-size: 20px;\n}\n.no-lists p {\n  margin: 0 0 24px 0;\n  opacity: 0.7;\n}\n.loading-container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  padding: 40px;\n  gap: 16px;\n}\n@media (max-width: 768px) {\n  .sidenav {\n    width: 240px;\n  }\n  .content-container {\n    padding: 16px;\n  }\n  .page-title {\n    font-size: 24px;\n  }\n  .stats-info {\n    flex-wrap: nowrap;\n    gap: 8px;\n  }\n  .stat-card {\n    flex: 1;\n    min-width: 0;\n  }\n  .stat-content p {\n    display: none;\n  }\n  .lists-grid {\n    grid-template-columns: 1fr;\n    gap: 16px;\n  }\n}\n/*# sourceMappingURL=dashboard.component.css.map */\n"] }]
   }], null, null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(DashboardComponent, { className: "DashboardComponent", filePath: "src/app/components/dashboard/dashboard.component.ts", lineNumber: 42 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(DashboardComponent, { className: "DashboardComponent", filePath: "src/app/components/dashboard/dashboard.component.ts", lineNumber: 39 });
 })();
 export {
   DashboardComponent
 };
-//# sourceMappingURL=chunk-TRI6FF5Y.js.map
+//# sourceMappingURL=chunk-QFRSL3GE.js.map

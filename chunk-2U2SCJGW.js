@@ -2,12 +2,11 @@ import {
   BehaviorSubject,
   Injectable,
   __async,
-  __name,
   __spreadProps,
   __spreadValues,
   setClassMetadata,
   ɵɵdefineInjectable
-} from "./chunk-376M5ZWK.js";
+} from "./chunk-3DPZ4J24.js";
 
 // src/app/services/auth.service.ts
 var _AuthService = class _AuthService {
@@ -68,18 +67,18 @@ var _AuthService = class _AuthService {
         localStorage.removeItem("authToken");
         this._authState.next({ user: null, loading: false, error: null });
       } catch (error) {
+        const errorMessage = error instanceof Error ? error.message : String(error);
         this._authState.next(__spreadProps(__spreadValues({}, this._authState.value), {
           loading: false,
-          error: error.message
+          error: errorMessage
         }));
       }
     });
   }
 };
-__name(_AuthService, "AuthService");
-_AuthService.\u0275fac = /* @__PURE__ */ __name(function AuthService_Factory(__ngFactoryType__) {
+_AuthService.\u0275fac = function AuthService_Factory(__ngFactoryType__) {
   return new (__ngFactoryType__ || _AuthService)();
-}, "AuthService_Factory");
+};
 _AuthService.\u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({ token: _AuthService, factory: _AuthService.\u0275fac, providedIn: "root" });
 var AuthService = _AuthService;
 (() => {
@@ -94,4 +93,4 @@ var AuthService = _AuthService;
 export {
   AuthService
 };
-//# sourceMappingURL=chunk-DTVRW2I7.js.map
+//# sourceMappingURL=chunk-2U2SCJGW.js.map

@@ -1,6 +1,6 @@
 import {
   ListApiService
-} from "./chunk-3ZBWVIZK.js";
+} from "./chunk-KYZXPXLL.js";
 import {
   BidiModule,
   Directionality,
@@ -21,7 +21,7 @@ import {
   getRtlScrollAxisType,
   hasModifierKey,
   supportsScrollBehavior
-} from "./chunk-SAHT5VQE.js";
+} from "./chunk-UNOES5P2.js";
 import {
   ANIMATION_MODULE_TYPE,
   ApplicationRef,
@@ -64,8 +64,6 @@ import {
   ViewChild,
   ViewContainerRef,
   ViewEncapsulation,
-  __name,
-  __publicField,
   __spreadProps,
   __spreadValues,
   afterNextRender,
@@ -145,24 +143,22 @@ import {
   ɵɵtextInterpolate,
   ɵɵviewQuery,
   ɵɵviewQuerySignal
-} from "./chunk-376M5ZWK.js";
+} from "./chunk-3DPZ4J24.js";
 
 // node_modules/@angular/material/fesm2022/toolbar.mjs
 var _c0 = ["*", [["mat-toolbar-row"]]];
 var _c1 = ["*", "mat-toolbar-row"];
-var _MatToolbarRow = class _MatToolbarRow {
+var MatToolbarRow = class _MatToolbarRow {
+  static \u0275fac = function MatToolbarRow_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatToolbarRow)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _MatToolbarRow,
+    selectors: [["mat-toolbar-row"]],
+    hostAttrs: [1, "mat-toolbar-row"],
+    exportAs: ["matToolbarRow"]
+  });
 };
-__name(_MatToolbarRow, "MatToolbarRow");
-__publicField(_MatToolbarRow, "\u0275fac", /* @__PURE__ */ __name(function MatToolbarRow_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatToolbarRow)();
-}, "MatToolbarRow_Factory"));
-__publicField(_MatToolbarRow, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _MatToolbarRow,
-  selectors: [["mat-toolbar-row"]],
-  hostAttrs: [1, "mat-toolbar-row"],
-  exportAs: ["matToolbarRow"]
-}));
-var MatToolbarRow = _MatToolbarRow;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatToolbarRow, [{
     type: Directive,
@@ -175,7 +171,7 @@ var MatToolbarRow = _MatToolbarRow;
     }]
   }], null, null);
 })();
-var _MatToolbar = class _MatToolbar {
+var MatToolbar = class _MatToolbar {
   _elementRef = inject(ElementRef);
   _platform = inject(Platform);
   _document = inject(DOCUMENT);
@@ -209,50 +205,48 @@ var _MatToolbar = class _MatToolbar {
       }
     }
   }
+  static \u0275fac = function MatToolbar_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatToolbar)();
+  };
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
+    type: _MatToolbar,
+    selectors: [["mat-toolbar"]],
+    contentQueries: function MatToolbar_ContentQueries(rf, ctx, dirIndex) {
+      if (rf & 1) {
+        \u0275\u0275contentQuery(dirIndex, MatToolbarRow, 5);
+      }
+      if (rf & 2) {
+        let _t;
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._toolbarRows = _t);
+      }
+    },
+    hostAttrs: [1, "mat-toolbar"],
+    hostVars: 6,
+    hostBindings: function MatToolbar_HostBindings(rf, ctx) {
+      if (rf & 2) {
+        \u0275\u0275classMap(ctx.color ? "mat-" + ctx.color : "");
+        \u0275\u0275classProp("mat-toolbar-multiple-rows", ctx._toolbarRows.length > 0)("mat-toolbar-single-row", ctx._toolbarRows.length === 0);
+      }
+    },
+    inputs: {
+      color: "color"
+    },
+    exportAs: ["matToolbar"],
+    ngContentSelectors: _c1,
+    decls: 2,
+    vars: 0,
+    template: function MatToolbar_Template(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275projectionDef(_c0);
+        \u0275\u0275projection(0);
+        \u0275\u0275projection(1, 1);
+      }
+    },
+    styles: [".mat-toolbar{background:var(--mat-toolbar-container-background-color, var(--mat-sys-surface));color:var(--mat-toolbar-container-text-color, var(--mat-sys-on-surface))}.mat-toolbar,.mat-toolbar h1,.mat-toolbar h2,.mat-toolbar h3,.mat-toolbar h4,.mat-toolbar h5,.mat-toolbar h6{font-family:var(--mat-toolbar-title-text-font, var(--mat-sys-title-large-font));font-size:var(--mat-toolbar-title-text-size, var(--mat-sys-title-large-size));line-height:var(--mat-toolbar-title-text-line-height, var(--mat-sys-title-large-line-height));font-weight:var(--mat-toolbar-title-text-weight, var(--mat-sys-title-large-weight));letter-spacing:var(--mat-toolbar-title-text-tracking, var(--mat-sys-title-large-tracking));margin:0}@media(forced-colors: active){.mat-toolbar{outline:solid 1px}}.mat-toolbar .mat-form-field-underline,.mat-toolbar .mat-form-field-ripple,.mat-toolbar .mat-focused .mat-form-field-ripple{background-color:currentColor}.mat-toolbar .mat-form-field-label,.mat-toolbar .mat-focused .mat-form-field-label,.mat-toolbar .mat-select-value,.mat-toolbar .mat-select-arrow,.mat-toolbar .mat-form-field.mat-focused .mat-select-arrow{color:inherit}.mat-toolbar .mat-input-element{caret-color:currentColor}.mat-toolbar .mat-mdc-button-base.mat-mdc-button-base.mat-unthemed{--mat-button-text-label-text-color: var(--mat-toolbar-container-text-color, var(--mat-sys-on-surface));--mat-button-outlined-label-text-color: var(--mat-toolbar-container-text-color, var(--mat-sys-on-surface))}.mat-toolbar-row,.mat-toolbar-single-row{display:flex;box-sizing:border-box;padding:0 16px;width:100%;flex-direction:row;align-items:center;white-space:nowrap;height:var(--mat-toolbar-standard-height, 64px)}@media(max-width: 599px){.mat-toolbar-row,.mat-toolbar-single-row{height:var(--mat-toolbar-mobile-height, 56px)}}.mat-toolbar-multiple-rows{display:flex;box-sizing:border-box;flex-direction:column;width:100%;min-height:var(--mat-toolbar-standard-height, 64px)}@media(max-width: 599px){.mat-toolbar-multiple-rows{min-height:var(--mat-toolbar-mobile-height, 56px)}}\n"],
+    encapsulation: 2,
+    changeDetection: 0
+  });
 };
-__name(_MatToolbar, "MatToolbar");
-__publicField(_MatToolbar, "\u0275fac", /* @__PURE__ */ __name(function MatToolbar_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatToolbar)();
-}, "MatToolbar_Factory"));
-__publicField(_MatToolbar, "\u0275cmp", /* @__PURE__ */ \u0275\u0275defineComponent({
-  type: _MatToolbar,
-  selectors: [["mat-toolbar"]],
-  contentQueries: /* @__PURE__ */ __name(function MatToolbar_ContentQueries(rf, ctx, dirIndex) {
-    if (rf & 1) {
-      \u0275\u0275contentQuery(dirIndex, MatToolbarRow, 5);
-    }
-    if (rf & 2) {
-      let _t;
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._toolbarRows = _t);
-    }
-  }, "MatToolbar_ContentQueries"),
-  hostAttrs: [1, "mat-toolbar"],
-  hostVars: 6,
-  hostBindings: /* @__PURE__ */ __name(function MatToolbar_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      \u0275\u0275classMap(ctx.color ? "mat-" + ctx.color : "");
-      \u0275\u0275classProp("mat-toolbar-multiple-rows", ctx._toolbarRows.length > 0)("mat-toolbar-single-row", ctx._toolbarRows.length === 0);
-    }
-  }, "MatToolbar_HostBindings"),
-  inputs: {
-    color: "color"
-  },
-  exportAs: ["matToolbar"],
-  ngContentSelectors: _c1,
-  decls: 2,
-  vars: 0,
-  template: /* @__PURE__ */ __name(function MatToolbar_Template(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275projectionDef(_c0);
-      \u0275\u0275projection(0);
-      \u0275\u0275projection(1, 1);
-    }
-  }, "MatToolbar_Template"),
-  styles: [".mat-toolbar{background:var(--mat-toolbar-container-background-color, var(--mat-sys-surface));color:var(--mat-toolbar-container-text-color, var(--mat-sys-on-surface))}.mat-toolbar,.mat-toolbar h1,.mat-toolbar h2,.mat-toolbar h3,.mat-toolbar h4,.mat-toolbar h5,.mat-toolbar h6{font-family:var(--mat-toolbar-title-text-font, var(--mat-sys-title-large-font));font-size:var(--mat-toolbar-title-text-size, var(--mat-sys-title-large-size));line-height:var(--mat-toolbar-title-text-line-height, var(--mat-sys-title-large-line-height));font-weight:var(--mat-toolbar-title-text-weight, var(--mat-sys-title-large-weight));letter-spacing:var(--mat-toolbar-title-text-tracking, var(--mat-sys-title-large-tracking));margin:0}@media(forced-colors: active){.mat-toolbar{outline:solid 1px}}.mat-toolbar .mat-form-field-underline,.mat-toolbar .mat-form-field-ripple,.mat-toolbar .mat-focused .mat-form-field-ripple{background-color:currentColor}.mat-toolbar .mat-form-field-label,.mat-toolbar .mat-focused .mat-form-field-label,.mat-toolbar .mat-select-value,.mat-toolbar .mat-select-arrow,.mat-toolbar .mat-form-field.mat-focused .mat-select-arrow{color:inherit}.mat-toolbar .mat-input-element{caret-color:currentColor}.mat-toolbar .mat-mdc-button-base.mat-mdc-button-base.mat-unthemed{--mat-button-text-label-text-color: var(--mat-toolbar-container-text-color, var(--mat-sys-on-surface));--mat-button-outlined-label-text-color: var(--mat-toolbar-container-text-color, var(--mat-sys-on-surface))}.mat-toolbar-row,.mat-toolbar-single-row{display:flex;box-sizing:border-box;padding:0 16px;width:100%;flex-direction:row;align-items:center;white-space:nowrap;height:var(--mat-toolbar-standard-height, 64px)}@media(max-width: 599px){.mat-toolbar-row,.mat-toolbar-single-row{height:var(--mat-toolbar-mobile-height, 56px)}}.mat-toolbar-multiple-rows{display:flex;box-sizing:border-box;flex-direction:column;width:100%;min-height:var(--mat-toolbar-standard-height, 64px)}@media(max-width: 599px){.mat-toolbar-multiple-rows{min-height:var(--mat-toolbar-mobile-height, 56px)}}\n"],
-  encapsulation: 2,
-  changeDetection: 0
-}));
-var MatToolbar = _MatToolbar;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatToolbar, [{
     type: Component,
@@ -285,22 +279,19 @@ var MatToolbar = _MatToolbar;
 function throwToolbarMixedModesError() {
   throw Error("MatToolbar: Attempting to combine different toolbar modes. Either specify multiple `<mat-toolbar-row>` elements explicitly or just place content inside of a `<mat-toolbar>` for a single row.");
 }
-__name(throwToolbarMixedModesError, "throwToolbarMixedModesError");
-var _MatToolbarModule = class _MatToolbarModule {
+var MatToolbarModule = class _MatToolbarModule {
+  static \u0275fac = function MatToolbarModule_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatToolbarModule)();
+  };
+  static \u0275mod = /* @__PURE__ */ \u0275\u0275defineNgModule({
+    type: _MatToolbarModule,
+    imports: [MatCommonModule, MatToolbar, MatToolbarRow],
+    exports: [MatToolbar, MatToolbarRow, MatCommonModule]
+  });
+  static \u0275inj = /* @__PURE__ */ \u0275\u0275defineInjector({
+    imports: [MatCommonModule, MatCommonModule]
+  });
 };
-__name(_MatToolbarModule, "MatToolbarModule");
-__publicField(_MatToolbarModule, "\u0275fac", /* @__PURE__ */ __name(function MatToolbarModule_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatToolbarModule)();
-}, "MatToolbarModule_Factory"));
-__publicField(_MatToolbarModule, "\u0275mod", /* @__PURE__ */ \u0275\u0275defineNgModule({
-  type: _MatToolbarModule,
-  imports: [MatCommonModule, MatToolbar, MatToolbarRow],
-  exports: [MatToolbar, MatToolbarRow, MatCommonModule]
-}));
-__publicField(_MatToolbarModule, "\u0275inj", /* @__PURE__ */ \u0275\u0275defineInjector({
-  imports: [MatCommonModule, MatCommonModule]
-}));
-var MatToolbarModule = _MatToolbarModule;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatToolbarModule, [{
     type: NgModule,
@@ -312,7 +303,7 @@ var MatToolbarModule = _MatToolbarModule;
 })();
 
 // node_modules/@angular/forms/fesm2022/forms.mjs
-var _BaseControlValueAccessor = class _BaseControlValueAccessor {
+var BaseControlValueAccessor = class _BaseControlValueAccessor {
   _renderer;
   _elementRef;
   /**
@@ -320,14 +311,14 @@ var _BaseControlValueAccessor = class _BaseControlValueAccessor {
    * element.
    * @docs-private
    */
-  onChange = /* @__PURE__ */ __name((_) => {
-  }, "onChange");
+  onChange = (_) => {
+  };
   /**
    * The registered callback function called when a blur event occurs on the input element.
    * @docs-private
    */
-  onTouched = /* @__PURE__ */ __name(() => {
-  }, "onTouched");
+  onTouched = () => {
+  };
   constructor(_renderer, _elementRef) {
     this._renderer = _renderer;
     this._elementRef = _elementRef;
@@ -361,15 +352,13 @@ var _BaseControlValueAccessor = class _BaseControlValueAccessor {
   setDisabledState(isDisabled) {
     this.setProperty("disabled", isDisabled);
   }
+  static \u0275fac = function BaseControlValueAccessor_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _BaseControlValueAccessor)(\u0275\u0275directiveInject(Renderer2), \u0275\u0275directiveInject(ElementRef));
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _BaseControlValueAccessor
+  });
 };
-__name(_BaseControlValueAccessor, "BaseControlValueAccessor");
-__publicField(_BaseControlValueAccessor, "\u0275fac", /* @__PURE__ */ __name(function BaseControlValueAccessor_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _BaseControlValueAccessor)(\u0275\u0275directiveInject(Renderer2), \u0275\u0275directiveInject(ElementRef));
-}, "BaseControlValueAccessor_Factory"));
-__publicField(_BaseControlValueAccessor, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _BaseControlValueAccessor
-}));
-var BaseControlValueAccessor = _BaseControlValueAccessor;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(BaseControlValueAccessor, [{
     type: Directive
@@ -379,20 +368,18 @@ var BaseControlValueAccessor = _BaseControlValueAccessor;
     type: ElementRef
   }], null);
 })();
-var _BuiltInControlValueAccessor = class _BuiltInControlValueAccessor extends BaseControlValueAccessor {
+var BuiltInControlValueAccessor = class _BuiltInControlValueAccessor extends BaseControlValueAccessor {
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275BuiltInControlValueAccessor_BaseFactory;
+    return function BuiltInControlValueAccessor_Factory(__ngFactoryType__) {
+      return (\u0275BuiltInControlValueAccessor_BaseFactory || (\u0275BuiltInControlValueAccessor_BaseFactory = \u0275\u0275getInheritedFactory(_BuiltInControlValueAccessor)))(__ngFactoryType__ || _BuiltInControlValueAccessor);
+    };
+  })();
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _BuiltInControlValueAccessor,
+    features: [\u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_BuiltInControlValueAccessor, "BuiltInControlValueAccessor");
-__publicField(_BuiltInControlValueAccessor, "\u0275fac", /* @__PURE__ */ (() => {
-  let \u0275BuiltInControlValueAccessor_BaseFactory;
-  return /* @__PURE__ */ __name(function BuiltInControlValueAccessor_Factory(__ngFactoryType__) {
-    return (\u0275BuiltInControlValueAccessor_BaseFactory || (\u0275BuiltInControlValueAccessor_BaseFactory = \u0275\u0275getInheritedFactory(_BuiltInControlValueAccessor)))(__ngFactoryType__ || _BuiltInControlValueAccessor);
-  }, "BuiltInControlValueAccessor_Factory");
-})());
-__publicField(_BuiltInControlValueAccessor, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _BuiltInControlValueAccessor,
-  features: [\u0275\u0275InheritDefinitionFeature]
-}));
-var BuiltInControlValueAccessor = _BuiltInControlValueAccessor;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(BuiltInControlValueAccessor, [{
     type: Directive
@@ -404,7 +391,7 @@ var CHECKBOX_VALUE_ACCESSOR = {
   useExisting: forwardRef(() => CheckboxControlValueAccessor),
   multi: true
 };
-var _CheckboxControlValueAccessor = class _CheckboxControlValueAccessor extends BuiltInControlValueAccessor {
+var CheckboxControlValueAccessor = class _CheckboxControlValueAccessor extends BuiltInControlValueAccessor {
   /**
    * Sets the "checked" property on the input element.
    * @docs-private
@@ -412,30 +399,28 @@ var _CheckboxControlValueAccessor = class _CheckboxControlValueAccessor extends 
   writeValue(value) {
     this.setProperty("checked", value);
   }
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275CheckboxControlValueAccessor_BaseFactory;
+    return function CheckboxControlValueAccessor_Factory(__ngFactoryType__) {
+      return (\u0275CheckboxControlValueAccessor_BaseFactory || (\u0275CheckboxControlValueAccessor_BaseFactory = \u0275\u0275getInheritedFactory(_CheckboxControlValueAccessor)))(__ngFactoryType__ || _CheckboxControlValueAccessor);
+    };
+  })();
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _CheckboxControlValueAccessor,
+    selectors: [["input", "type", "checkbox", "formControlName", ""], ["input", "type", "checkbox", "formControl", ""], ["input", "type", "checkbox", "ngModel", ""]],
+    hostBindings: function CheckboxControlValueAccessor_HostBindings(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275listener("change", function CheckboxControlValueAccessor_change_HostBindingHandler($event) {
+          return ctx.onChange($event.target.checked);
+        })("blur", function CheckboxControlValueAccessor_blur_HostBindingHandler() {
+          return ctx.onTouched();
+        });
+      }
+    },
+    standalone: false,
+    features: [\u0275\u0275ProvidersFeature([CHECKBOX_VALUE_ACCESSOR]), \u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_CheckboxControlValueAccessor, "CheckboxControlValueAccessor");
-__publicField(_CheckboxControlValueAccessor, "\u0275fac", /* @__PURE__ */ (() => {
-  let \u0275CheckboxControlValueAccessor_BaseFactory;
-  return /* @__PURE__ */ __name(function CheckboxControlValueAccessor_Factory(__ngFactoryType__) {
-    return (\u0275CheckboxControlValueAccessor_BaseFactory || (\u0275CheckboxControlValueAccessor_BaseFactory = \u0275\u0275getInheritedFactory(_CheckboxControlValueAccessor)))(__ngFactoryType__ || _CheckboxControlValueAccessor);
-  }, "CheckboxControlValueAccessor_Factory");
-})());
-__publicField(_CheckboxControlValueAccessor, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _CheckboxControlValueAccessor,
-  selectors: [["input", "type", "checkbox", "formControlName", ""], ["input", "type", "checkbox", "formControl", ""], ["input", "type", "checkbox", "ngModel", ""]],
-  hostBindings: /* @__PURE__ */ __name(function CheckboxControlValueAccessor_HostBindings(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275listener("change", /* @__PURE__ */ __name(function CheckboxControlValueAccessor_change_HostBindingHandler($event) {
-        return ctx.onChange($event.target.checked);
-      }, "CheckboxControlValueAccessor_change_HostBindingHandler"))("blur", /* @__PURE__ */ __name(function CheckboxControlValueAccessor_blur_HostBindingHandler() {
-        return ctx.onTouched();
-      }, "CheckboxControlValueAccessor_blur_HostBindingHandler"));
-    }
-  }, "CheckboxControlValueAccessor_HostBindings"),
-  standalone: false,
-  features: [\u0275\u0275ProvidersFeature([CHECKBOX_VALUE_ACCESSOR]), \u0275\u0275InheritDefinitionFeature]
-}));
-var CheckboxControlValueAccessor = _CheckboxControlValueAccessor;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(CheckboxControlValueAccessor, [{
     type: Directive,
@@ -459,9 +444,8 @@ function _isAndroid() {
   const userAgent = getDOM() ? getDOM().getUserAgent() : "";
   return /android (\d+)/.test(userAgent.toLowerCase());
 }
-__name(_isAndroid, "_isAndroid");
 var COMPOSITION_BUFFER_MODE = new InjectionToken(ngDevMode ? "CompositionEventMode" : "");
-var _DefaultValueAccessor = class _DefaultValueAccessor extends BaseControlValueAccessor {
+var DefaultValueAccessor = class _DefaultValueAccessor extends BaseControlValueAccessor {
   _compositionMode;
   /** Whether the user is creating a composition string (IME events). */
   _composing = false;
@@ -495,31 +479,29 @@ var _DefaultValueAccessor = class _DefaultValueAccessor extends BaseControlValue
     this._composing = false;
     this._compositionMode && this.onChange(value);
   }
+  static \u0275fac = function DefaultValueAccessor_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _DefaultValueAccessor)(\u0275\u0275directiveInject(Renderer2), \u0275\u0275directiveInject(ElementRef), \u0275\u0275directiveInject(COMPOSITION_BUFFER_MODE, 8));
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _DefaultValueAccessor,
+    selectors: [["input", "formControlName", "", 3, "type", "checkbox"], ["textarea", "formControlName", ""], ["input", "formControl", "", 3, "type", "checkbox"], ["textarea", "formControl", ""], ["input", "ngModel", "", 3, "type", "checkbox"], ["textarea", "ngModel", ""], ["", "ngDefaultControl", ""]],
+    hostBindings: function DefaultValueAccessor_HostBindings(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275listener("input", function DefaultValueAccessor_input_HostBindingHandler($event) {
+          return ctx._handleInput($event.target.value);
+        })("blur", function DefaultValueAccessor_blur_HostBindingHandler() {
+          return ctx.onTouched();
+        })("compositionstart", function DefaultValueAccessor_compositionstart_HostBindingHandler() {
+          return ctx._compositionStart();
+        })("compositionend", function DefaultValueAccessor_compositionend_HostBindingHandler($event) {
+          return ctx._compositionEnd($event.target.value);
+        });
+      }
+    },
+    standalone: false,
+    features: [\u0275\u0275ProvidersFeature([DEFAULT_VALUE_ACCESSOR]), \u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_DefaultValueAccessor, "DefaultValueAccessor");
-__publicField(_DefaultValueAccessor, "\u0275fac", /* @__PURE__ */ __name(function DefaultValueAccessor_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _DefaultValueAccessor)(\u0275\u0275directiveInject(Renderer2), \u0275\u0275directiveInject(ElementRef), \u0275\u0275directiveInject(COMPOSITION_BUFFER_MODE, 8));
-}, "DefaultValueAccessor_Factory"));
-__publicField(_DefaultValueAccessor, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _DefaultValueAccessor,
-  selectors: [["input", "formControlName", "", 3, "type", "checkbox"], ["textarea", "formControlName", ""], ["input", "formControl", "", 3, "type", "checkbox"], ["textarea", "formControl", ""], ["input", "ngModel", "", 3, "type", "checkbox"], ["textarea", "ngModel", ""], ["", "ngDefaultControl", ""]],
-  hostBindings: /* @__PURE__ */ __name(function DefaultValueAccessor_HostBindings(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275listener("input", /* @__PURE__ */ __name(function DefaultValueAccessor_input_HostBindingHandler($event) {
-        return ctx._handleInput($event.target.value);
-      }, "DefaultValueAccessor_input_HostBindingHandler"))("blur", /* @__PURE__ */ __name(function DefaultValueAccessor_blur_HostBindingHandler() {
-        return ctx.onTouched();
-      }, "DefaultValueAccessor_blur_HostBindingHandler"))("compositionstart", /* @__PURE__ */ __name(function DefaultValueAccessor_compositionstart_HostBindingHandler() {
-        return ctx._compositionStart();
-      }, "DefaultValueAccessor_compositionstart_HostBindingHandler"))("compositionend", /* @__PURE__ */ __name(function DefaultValueAccessor_compositionend_HostBindingHandler($event) {
-        return ctx._compositionEnd($event.target.value);
-      }, "DefaultValueAccessor_compositionend_HostBindingHandler"));
-    }
-  }, "DefaultValueAccessor_HostBindings"),
-  standalone: false,
-  features: [\u0275\u0275ProvidersFeature([DEFAULT_VALUE_ACCESSOR]), \u0275\u0275InheritDefinitionFeature]
-}));
-var DefaultValueAccessor = _DefaultValueAccessor;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(DefaultValueAccessor, [{
     type: Directive,
@@ -554,7 +536,6 @@ var DefaultValueAccessor = _DefaultValueAccessor;
 function isEmptyInputValue(value) {
   return value == null || lengthOrSize(value) === 0;
 }
-__name(isEmptyInputValue, "isEmptyInputValue");
 function lengthOrSize(value) {
   if (value == null) {
     return null;
@@ -565,11 +546,10 @@ function lengthOrSize(value) {
   }
   return null;
 }
-__name(lengthOrSize, "lengthOrSize");
 var NG_VALIDATORS = new InjectionToken(ngDevMode ? "NgValidators" : "");
 var NG_ASYNC_VALIDATORS = new InjectionToken(ngDevMode ? "NgAsyncValidators" : "");
 var EMAIL_REGEXP = /^(?=.{1,254}$)(?=.{1,64}@)[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-var _Validators = class _Validators {
+var Validators = class {
   /**
    * @description
    * Validator that requires the control's value to be greater than or equal to the provided number.
@@ -847,8 +827,6 @@ var _Validators = class _Validators {
     return composeAsync(validators);
   }
 };
-__name(_Validators, "Validators");
-var Validators = _Validators;
 function minValidator(min) {
   return (control) => {
     if (control.value == null || min == null) {
@@ -863,7 +841,6 @@ function minValidator(min) {
     } : null;
   };
 }
-__name(minValidator, "minValidator");
 function maxValidator(max) {
   return (control) => {
     if (control.value == null || max == null) {
@@ -878,19 +855,16 @@ function maxValidator(max) {
     } : null;
   };
 }
-__name(maxValidator, "maxValidator");
 function requiredValidator(control) {
   return isEmptyInputValue(control.value) ? {
     "required": true
   } : null;
 }
-__name(requiredValidator, "requiredValidator");
 function requiredTrueValidator(control) {
   return control.value === true ? null : {
     "required": true
   };
 }
-__name(requiredTrueValidator, "requiredTrueValidator");
 function emailValidator(control) {
   if (isEmptyInputValue(control.value)) {
     return null;
@@ -899,7 +873,6 @@ function emailValidator(control) {
     "email": true
   };
 }
-__name(emailValidator, "emailValidator");
 function minLengthValidator(minLength) {
   return (control) => {
     const length = control.value?.length ?? lengthOrSize(control.value);
@@ -914,7 +887,6 @@ function minLengthValidator(minLength) {
     } : null;
   };
 }
-__name(minLengthValidator, "minLengthValidator");
 function maxLengthValidator(maxLength) {
   return (control) => {
     const length = control.value?.length ?? lengthOrSize(control.value);
@@ -929,7 +901,6 @@ function maxLengthValidator(maxLength) {
     return null;
   };
 }
-__name(maxLengthValidator, "maxLengthValidator");
 function patternValidator(pattern) {
   if (!pattern) return nullValidator;
   let regex;
@@ -957,15 +928,12 @@ function patternValidator(pattern) {
     };
   };
 }
-__name(patternValidator, "patternValidator");
 function nullValidator(control) {
   return null;
 }
-__name(nullValidator, "nullValidator");
 function isPresent(o) {
   return o != null;
 }
-__name(isPresent, "isPresent");
 function toObservable(value) {
   const obs = isPromise(value) ? from(value) : value;
   if ((typeof ngDevMode === "undefined" || ngDevMode) && !isSubscribable(obs)) {
@@ -977,7 +945,6 @@ function toObservable(value) {
   }
   return obs;
 }
-__name(toObservable, "toObservable");
 function mergeErrors(arrayOfErrors) {
   let res = {};
   arrayOfErrors.forEach((errors) => {
@@ -985,21 +952,17 @@ function mergeErrors(arrayOfErrors) {
   });
   return Object.keys(res).length === 0 ? null : res;
 }
-__name(mergeErrors, "mergeErrors");
 function executeValidators(control, validators) {
   return validators.map((validator) => validator(control));
 }
-__name(executeValidators, "executeValidators");
 function isValidatorFn(validator) {
   return !validator.validate;
 }
-__name(isValidatorFn, "isValidatorFn");
 function normalizeValidators(validators) {
   return validators.map((validator) => {
     return isValidatorFn(validator) ? validator : (c) => validator.validate(c);
   });
 }
-__name(normalizeValidators, "normalizeValidators");
 function compose(validators) {
   if (!validators) return null;
   const presentValidators = validators.filter(isPresent);
@@ -1008,11 +971,9 @@ function compose(validators) {
     return mergeErrors(executeValidators(control, presentValidators));
   };
 }
-__name(compose, "compose");
 function composeValidators(validators) {
   return validators != null ? compose(normalizeValidators(validators)) : null;
 }
-__name(composeValidators, "composeValidators");
 function composeAsync(validators) {
   if (!validators) return null;
   const presentValidators = validators.filter(isPresent);
@@ -1022,33 +983,26 @@ function composeAsync(validators) {
     return forkJoin(observables).pipe(map(mergeErrors));
   };
 }
-__name(composeAsync, "composeAsync");
 function composeAsyncValidators(validators) {
   return validators != null ? composeAsync(normalizeValidators(validators)) : null;
 }
-__name(composeAsyncValidators, "composeAsyncValidators");
 function mergeValidators(controlValidators, dirValidator) {
   if (controlValidators === null) return [dirValidator];
   return Array.isArray(controlValidators) ? [...controlValidators, dirValidator] : [controlValidators, dirValidator];
 }
-__name(mergeValidators, "mergeValidators");
 function getControlValidators(control) {
   return control._rawValidators;
 }
-__name(getControlValidators, "getControlValidators");
 function getControlAsyncValidators(control) {
   return control._rawAsyncValidators;
 }
-__name(getControlAsyncValidators, "getControlAsyncValidators");
 function makeValidatorsArray(validators) {
   if (!validators) return [];
   return Array.isArray(validators) ? validators : [validators];
 }
-__name(makeValidatorsArray, "makeValidatorsArray");
 function hasValidator(validators, validator) {
   return Array.isArray(validators) ? validators.includes(validator) : validators === validator;
 }
-__name(hasValidator, "hasValidator");
 function addValidators(validators, currentValidators) {
   const current = makeValidatorsArray(currentValidators);
   const validatorsToAdd = makeValidatorsArray(validators);
@@ -1059,12 +1013,10 @@ function addValidators(validators, currentValidators) {
   });
   return current;
 }
-__name(addValidators, "addValidators");
 function removeValidators(validators, currentValidators) {
   return makeValidatorsArray(currentValidators).filter((v) => !hasValidator(validators, v));
 }
-__name(removeValidators, "removeValidators");
-var _AbstractControlDirective = class _AbstractControlDirective {
+var AbstractControlDirective = class {
   /**
    * @description
    * Reports the value of the control if it is present, otherwise null.
@@ -1333,9 +1285,7 @@ var _AbstractControlDirective = class _AbstractControlDirective {
     return this.control ? this.control.getError(errorCode, path) : null;
   }
 };
-__name(_AbstractControlDirective, "AbstractControlDirective");
-var AbstractControlDirective = _AbstractControlDirective;
-var _ControlContainer = class _ControlContainer extends AbstractControlDirective {
+var ControlContainer = class extends AbstractControlDirective {
   /**
    * @description
    * The name for the control
@@ -1356,9 +1306,7 @@ var _ControlContainer = class _ControlContainer extends AbstractControlDirective
     return null;
   }
 };
-__name(_ControlContainer, "ControlContainer");
-var ControlContainer = _ControlContainer;
-var _NgControl = class _NgControl extends AbstractControlDirective {
+var NgControl = class extends AbstractControlDirective {
   /**
    * @description
    * The parent form for the control.
@@ -1377,9 +1325,7 @@ var _NgControl = class _NgControl extends AbstractControlDirective {
    */
   valueAccessor = null;
 };
-__name(_NgControl, "NgControl");
-var NgControl = _NgControl;
-var _AbstractControlStatus = class _AbstractControlStatus {
+var AbstractControlStatus = class {
   _cd;
   constructor(cd) {
     this._cd = cd;
@@ -1413,8 +1359,6 @@ var _AbstractControlStatus = class _AbstractControlStatus {
     return !!this._cd?.submitted;
   }
 };
-__name(_AbstractControlStatus, "AbstractControlStatus");
-var AbstractControlStatus = _AbstractControlStatus;
 var ngControlStatusHost = {
   "[class.ng-untouched]": "isUntouched",
   "[class.ng-touched]": "isTouched",
@@ -1427,28 +1371,26 @@ var ngControlStatusHost = {
 var ngGroupStatusHost = __spreadProps(__spreadValues({}, ngControlStatusHost), {
   "[class.ng-submitted]": "isSubmitted"
 });
-var _NgControlStatus = class _NgControlStatus extends AbstractControlStatus {
+var NgControlStatus = class _NgControlStatus extends AbstractControlStatus {
   constructor(cd) {
     super(cd);
   }
+  static \u0275fac = function NgControlStatus_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _NgControlStatus)(\u0275\u0275directiveInject(NgControl, 2));
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _NgControlStatus,
+    selectors: [["", "formControlName", ""], ["", "ngModel", ""], ["", "formControl", ""]],
+    hostVars: 14,
+    hostBindings: function NgControlStatus_HostBindings(rf, ctx) {
+      if (rf & 2) {
+        \u0275\u0275classProp("ng-untouched", ctx.isUntouched)("ng-touched", ctx.isTouched)("ng-pristine", ctx.isPristine)("ng-dirty", ctx.isDirty)("ng-valid", ctx.isValid)("ng-invalid", ctx.isInvalid)("ng-pending", ctx.isPending);
+      }
+    },
+    standalone: false,
+    features: [\u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_NgControlStatus, "NgControlStatus");
-__publicField(_NgControlStatus, "\u0275fac", /* @__PURE__ */ __name(function NgControlStatus_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _NgControlStatus)(\u0275\u0275directiveInject(NgControl, 2));
-}, "NgControlStatus_Factory"));
-__publicField(_NgControlStatus, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _NgControlStatus,
-  selectors: [["", "formControlName", ""], ["", "ngModel", ""], ["", "formControl", ""]],
-  hostVars: 14,
-  hostBindings: /* @__PURE__ */ __name(function NgControlStatus_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      \u0275\u0275classProp("ng-untouched", ctx.isUntouched)("ng-touched", ctx.isTouched)("ng-pristine", ctx.isPristine)("ng-dirty", ctx.isDirty)("ng-valid", ctx.isValid)("ng-invalid", ctx.isInvalid)("ng-pending", ctx.isPending);
-    }
-  }, "NgControlStatus_HostBindings"),
-  standalone: false,
-  features: [\u0275\u0275InheritDefinitionFeature]
-}));
-var NgControlStatus = _NgControlStatus;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(NgControlStatus, [{
     type: Directive,
@@ -1464,28 +1406,26 @@ var NgControlStatus = _NgControlStatus;
     }]
   }], null);
 })();
-var _NgControlStatusGroup = class _NgControlStatusGroup extends AbstractControlStatus {
+var NgControlStatusGroup = class _NgControlStatusGroup extends AbstractControlStatus {
   constructor(cd) {
     super(cd);
   }
+  static \u0275fac = function NgControlStatusGroup_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _NgControlStatusGroup)(\u0275\u0275directiveInject(ControlContainer, 10));
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _NgControlStatusGroup,
+    selectors: [["", "formGroupName", ""], ["", "formArrayName", ""], ["", "ngModelGroup", ""], ["", "formGroup", ""], ["form", 3, "ngNoForm", ""], ["", "ngForm", ""]],
+    hostVars: 16,
+    hostBindings: function NgControlStatusGroup_HostBindings(rf, ctx) {
+      if (rf & 2) {
+        \u0275\u0275classProp("ng-untouched", ctx.isUntouched)("ng-touched", ctx.isTouched)("ng-pristine", ctx.isPristine)("ng-dirty", ctx.isDirty)("ng-valid", ctx.isValid)("ng-invalid", ctx.isInvalid)("ng-pending", ctx.isPending)("ng-submitted", ctx.isSubmitted);
+      }
+    },
+    standalone: false,
+    features: [\u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_NgControlStatusGroup, "NgControlStatusGroup");
-__publicField(_NgControlStatusGroup, "\u0275fac", /* @__PURE__ */ __name(function NgControlStatusGroup_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _NgControlStatusGroup)(\u0275\u0275directiveInject(ControlContainer, 10));
-}, "NgControlStatusGroup_Factory"));
-__publicField(_NgControlStatusGroup, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _NgControlStatusGroup,
-  selectors: [["", "formGroupName", ""], ["", "formArrayName", ""], ["", "ngModelGroup", ""], ["", "formGroup", ""], ["form", 3, "ngNoForm", ""], ["", "ngForm", ""]],
-  hostVars: 16,
-  hostBindings: /* @__PURE__ */ __name(function NgControlStatusGroup_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      \u0275\u0275classProp("ng-untouched", ctx.isUntouched)("ng-touched", ctx.isTouched)("ng-pristine", ctx.isPristine)("ng-dirty", ctx.isDirty)("ng-valid", ctx.isValid)("ng-invalid", ctx.isInvalid)("ng-pending", ctx.isPending)("ng-submitted", ctx.isSubmitted);
-    }
-  }, "NgControlStatusGroup_HostBindings"),
-  standalone: false,
-  features: [\u0275\u0275InheritDefinitionFeature]
-}));
-var NgControlStatusGroup = _NgControlStatusGroup;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(NgControlStatusGroup, [{
     type: Directive,
@@ -1562,7 +1502,6 @@ function controlParentException(nameOrIndex) {
 
     ${formControlNameExample}`);
 }
-__name(controlParentException, "controlParentException");
 function describeFormControl(nameOrIndex) {
   if (nameOrIndex == null || nameOrIndex === "") {
     return "";
@@ -1570,7 +1509,6 @@ function describeFormControl(nameOrIndex) {
   const valueType = typeof nameOrIndex === "string" ? "name" : "index";
   return `Affected Form Control ${valueType}: "${nameOrIndex}"`;
 }
-__name(describeFormControl, "describeFormControl");
 function ngModelGroupException() {
   return new RuntimeError(1051, `formControlName cannot be used with an ngModelGroup parent. It is only compatible with parents
       that also have a "form" prefix: formGroupName, formArrayName, or formGroup.
@@ -1583,7 +1521,6 @@ function ngModelGroupException() {
 
       ${ngModelGroupExample}`);
 }
-__name(ngModelGroupException, "ngModelGroupException");
 function missingFormException() {
   return new RuntimeError(1052, `formGroup expects a FormGroup instance. Please pass one in.
 
@@ -1591,7 +1528,6 @@ function missingFormException() {
 
       ${formControlNameExample}`);
 }
-__name(missingFormException, "missingFormException");
 function groupParentException() {
   return new RuntimeError(1053, `formGroupName must be used with a parent formGroup directive.  You'll want to add a formGroup
     directive and pass it an existing FormGroup instance (you can create one in your class).
@@ -1600,7 +1536,6 @@ function groupParentException() {
 
     ${formGroupNameExample}`);
 }
-__name(groupParentException, "groupParentException");
 function arrayParentException() {
   return new RuntimeError(1054, `formArrayName must be used with a parent formGroup directive.  You'll want to add a formGroup
       directive and pass it an existing FormGroup instance (you can create one in your class).
@@ -1609,7 +1544,6 @@ function arrayParentException() {
 
       ${formArrayNameExample}`);
 }
-__name(arrayParentException, "arrayParentException");
 var disabledAttrWarning = `
   It looks like you're using the disabled attribute with a reactive form directive. If you set disabled to true
   when you set up this control in your component class, the disabled attribute will actually be set in the DOM for
@@ -1652,35 +1586,28 @@ function ngModelWarning(directiveName) {
   https://angular.io/api/forms/${directiveName === "formControl" ? "FormControlDirective" : "FormControlName"}#use-with-ngmodel
   `;
 }
-__name(ngModelWarning, "ngModelWarning");
 function describeKey(isFormGroup, key) {
   return isFormGroup ? `with name: '${key}'` : `at index: ${key}`;
 }
-__name(describeKey, "describeKey");
 function noControlsError(isFormGroup) {
   return `
     There are no form controls registered with this ${isFormGroup ? "group" : "array"} yet. If you're using ngModel,
     you may want to check next tick (e.g. use setTimeout).
   `;
 }
-__name(noControlsError, "noControlsError");
 function missingControlError(isFormGroup, key) {
   return `Cannot find form control ${describeKey(isFormGroup, key)}`;
 }
-__name(missingControlError, "missingControlError");
 function missingControlValueError(isFormGroup, key) {
   return `Must supply a value for form control ${describeKey(isFormGroup, key)}`;
 }
-__name(missingControlValueError, "missingControlValueError");
 var VALID = "VALID";
 var INVALID = "INVALID";
 var PENDING = "PENDING";
 var DISABLED = "DISABLED";
-var _ControlEvent = class _ControlEvent {
+var ControlEvent = class {
 };
-__name(_ControlEvent, "ControlEvent");
-var ControlEvent = _ControlEvent;
-var _ValueChangeEvent = class _ValueChangeEvent extends ControlEvent {
+var ValueChangeEvent = class extends ControlEvent {
   value;
   source;
   constructor(value, source) {
@@ -1689,9 +1616,7 @@ var _ValueChangeEvent = class _ValueChangeEvent extends ControlEvent {
     this.source = source;
   }
 };
-__name(_ValueChangeEvent, "ValueChangeEvent");
-var ValueChangeEvent = _ValueChangeEvent;
-var _PristineChangeEvent = class _PristineChangeEvent extends ControlEvent {
+var PristineChangeEvent = class extends ControlEvent {
   pristine;
   source;
   constructor(pristine, source) {
@@ -1700,9 +1625,7 @@ var _PristineChangeEvent = class _PristineChangeEvent extends ControlEvent {
     this.source = source;
   }
 };
-__name(_PristineChangeEvent, "PristineChangeEvent");
-var PristineChangeEvent = _PristineChangeEvent;
-var _TouchedChangeEvent = class _TouchedChangeEvent extends ControlEvent {
+var TouchedChangeEvent = class extends ControlEvent {
   touched;
   source;
   constructor(touched, source) {
@@ -1711,9 +1634,7 @@ var _TouchedChangeEvent = class _TouchedChangeEvent extends ControlEvent {
     this.source = source;
   }
 };
-__name(_TouchedChangeEvent, "TouchedChangeEvent");
-var TouchedChangeEvent = _TouchedChangeEvent;
-var _StatusChangeEvent = class _StatusChangeEvent extends ControlEvent {
+var StatusChangeEvent = class extends ControlEvent {
   status;
   source;
   constructor(status, source) {
@@ -1722,34 +1643,26 @@ var _StatusChangeEvent = class _StatusChangeEvent extends ControlEvent {
     this.source = source;
   }
 };
-__name(_StatusChangeEvent, "StatusChangeEvent");
-var StatusChangeEvent = _StatusChangeEvent;
-var _FormSubmittedEvent = class _FormSubmittedEvent extends ControlEvent {
+var FormSubmittedEvent = class extends ControlEvent {
   source;
   constructor(source) {
     super();
     this.source = source;
   }
 };
-__name(_FormSubmittedEvent, "FormSubmittedEvent");
-var FormSubmittedEvent = _FormSubmittedEvent;
-var _FormResetEvent = class _FormResetEvent extends ControlEvent {
+var FormResetEvent = class extends ControlEvent {
   source;
   constructor(source) {
     super();
     this.source = source;
   }
 };
-__name(_FormResetEvent, "FormResetEvent");
-var FormResetEvent = _FormResetEvent;
 function pickValidators(validatorOrOpts) {
   return (isOptionsObj(validatorOrOpts) ? validatorOrOpts.validators : validatorOrOpts) || null;
 }
-__name(pickValidators, "pickValidators");
 function coerceToValidator(validator) {
   return Array.isArray(validator) ? composeValidators(validator) : validator || null;
 }
-__name(coerceToValidator, "coerceToValidator");
 function pickAsyncValidators(asyncValidator, validatorOrOpts) {
   if (typeof ngDevMode === "undefined" || ngDevMode) {
     if (isOptionsObj(validatorOrOpts) && asyncValidator) {
@@ -1758,15 +1671,12 @@ function pickAsyncValidators(asyncValidator, validatorOrOpts) {
   }
   return (isOptionsObj(validatorOrOpts) ? validatorOrOpts.asyncValidators : asyncValidator) || null;
 }
-__name(pickAsyncValidators, "pickAsyncValidators");
 function coerceToAsyncValidator(asyncValidator) {
   return Array.isArray(asyncValidator) ? composeAsyncValidators(asyncValidator) : asyncValidator || null;
 }
-__name(coerceToAsyncValidator, "coerceToAsyncValidator");
 function isOptionsObj(validatorOrOpts) {
   return validatorOrOpts != null && !Array.isArray(validatorOrOpts) && typeof validatorOrOpts === "object";
 }
-__name(isOptionsObj, "isOptionsObj");
 function assertControlPresent(parent, isGroup, key) {
   const controls = parent.controls;
   const collection = isGroup ? Object.keys(controls) : controls;
@@ -1777,7 +1687,6 @@ function assertControlPresent(parent, isGroup, key) {
     throw new RuntimeError(1001, typeof ngDevMode === "undefined" || ngDevMode ? missingControlError(isGroup, key) : "");
   }
 }
-__name(assertControlPresent, "assertControlPresent");
 function assertAllValuesPresent(control, isGroup, value) {
   control._forEachChild((_, key) => {
     if (value[key] === void 0) {
@@ -1785,8 +1694,7 @@ function assertAllValuesPresent(control, isGroup, value) {
     }
   });
 }
-__name(assertAllValuesPresent, "assertAllValuesPresent");
-var _AbstractControl = class _AbstractControl {
+var AbstractControl = class {
   /** @internal */
   _pendingDirty = false;
   /**
@@ -1799,8 +1707,8 @@ var _AbstractControl = class _AbstractControl {
   /** @internal */
   _pendingTouched = false;
   /** @internal */
-  _onCollectionChange = /* @__PURE__ */ __name(() => {
-  }, "_onCollectionChange");
+  _onCollectionChange = () => {
+  };
   /** @internal */
   _updateOn;
   _parent = null;
@@ -2714,9 +2622,7 @@ var _AbstractControl = class _AbstractControl {
     this._composedAsyncValidatorFn = coerceToAsyncValidator(this._rawAsyncValidators);
   }
 };
-__name(_AbstractControl, "AbstractControl");
-var AbstractControl = _AbstractControl;
-var _FormGroup = class _FormGroup extends AbstractControl {
+var FormGroup = class extends AbstractControl {
   /**
    * Creates a new `FormGroup` instance.
    *
@@ -2956,6 +2862,9 @@ var _FormGroup = class _FormGroup extends AbstractControl {
     this._updatePristine(options, this);
     this._updateTouched(options, this);
     this.updateValueAndValidity(options);
+    if (options?.emitEvent !== false) {
+      this._events.next(new FormResetEvent(this));
+    }
   }
   /**
    * The aggregate value of the `FormGroup`, including any disabled controls.
@@ -3037,28 +2946,22 @@ var _FormGroup = class _FormGroup extends AbstractControl {
     return this.controls.hasOwnProperty(name) ? this.controls[name] : null;
   }
 };
-__name(_FormGroup, "FormGroup");
-var FormGroup = _FormGroup;
 function validateFormGroupControls(controls) {
   const invalidKeys = Object.keys(controls).filter((key) => key.includes("."));
   if (invalidKeys.length > 0) {
     console.warn(`FormGroup keys cannot include \`.\`, please replace the keys for: ${invalidKeys.join(",")}.`);
   }
 }
-__name(validateFormGroupControls, "validateFormGroupControls");
-var _FormRecord = class _FormRecord extends FormGroup {
+var FormRecord = class extends FormGroup {
 };
-__name(_FormRecord, "FormRecord");
-var FormRecord = _FormRecord;
 var CALL_SET_DISABLED_STATE = new InjectionToken(typeof ngDevMode === "undefined" || ngDevMode ? "CallSetDisabledState" : "", {
   providedIn: "root",
-  factory: /* @__PURE__ */ __name(() => setDisabledStateDefault, "factory")
+  factory: () => setDisabledStateDefault
 });
 var setDisabledStateDefault = "always";
 function controlPath(name, parent) {
   return [...parent.path, name];
 }
-__name(controlPath, "controlPath");
 function setUpControl(control, dir, callSetDisabledState = setDisabledStateDefault) {
   if (typeof ngDevMode === "undefined" || ngDevMode) {
     if (!control) _throwError(dir, "Cannot find control with");
@@ -3074,13 +2977,12 @@ function setUpControl(control, dir, callSetDisabledState = setDisabledStateDefau
   setUpBlurPipeline(control, dir);
   setUpDisabledChangeHandler(control, dir);
 }
-__name(setUpControl, "setUpControl");
 function cleanUpControl(control, dir, validateControlPresenceOnChange = true) {
-  const noop = /* @__PURE__ */ __name(() => {
+  const noop = () => {
     if (validateControlPresenceOnChange && (typeof ngDevMode === "undefined" || ngDevMode)) {
       _noControlError(dir);
     }
-  }, "noop");
+  };
   if (dir.valueAccessor) {
     dir.valueAccessor.registerOnChange(noop);
     dir.valueAccessor.registerOnTouched(noop);
@@ -3092,25 +2994,22 @@ function cleanUpControl(control, dir, validateControlPresenceOnChange = true) {
     });
   }
 }
-__name(cleanUpControl, "cleanUpControl");
 function registerOnValidatorChange(validators, onChange) {
   validators.forEach((validator) => {
     if (validator.registerOnValidatorChange) validator.registerOnValidatorChange(onChange);
   });
 }
-__name(registerOnValidatorChange, "registerOnValidatorChange");
 function setUpDisabledChangeHandler(control, dir) {
   if (dir.valueAccessor.setDisabledState) {
-    const onDisabledChange = /* @__PURE__ */ __name((isDisabled) => {
+    const onDisabledChange = (isDisabled) => {
       dir.valueAccessor.setDisabledState(isDisabled);
-    }, "onDisabledChange");
+    };
     control.registerOnDisabledChange(onDisabledChange);
     dir._registerOnDestroy(() => {
       control._unregisterOnDisabledChange(onDisabledChange);
     });
   }
 }
-__name(setUpDisabledChangeHandler, "setUpDisabledChangeHandler");
 function setUpValidators(control, dir) {
   const validators = getControlValidators(control);
   if (dir.validator !== null) {
@@ -3124,11 +3023,10 @@ function setUpValidators(control, dir) {
   } else if (typeof asyncValidators === "function") {
     control.setAsyncValidators([asyncValidators]);
   }
-  const onValidatorChange = /* @__PURE__ */ __name(() => control.updateValueAndValidity(), "onValidatorChange");
+  const onValidatorChange = () => control.updateValueAndValidity();
   registerOnValidatorChange(dir._rawValidators, onValidatorChange);
   registerOnValidatorChange(dir._rawAsyncValidators, onValidatorChange);
 }
-__name(setUpValidators, "setUpValidators");
 function cleanUpValidators(control, dir) {
   let isControlUpdated = false;
   if (control !== null) {
@@ -3153,13 +3051,12 @@ function cleanUpValidators(control, dir) {
       }
     }
   }
-  const noop = /* @__PURE__ */ __name(() => {
-  }, "noop");
+  const noop = () => {
+  };
   registerOnValidatorChange(dir._rawValidators, noop);
   registerOnValidatorChange(dir._rawAsyncValidators, noop);
   return isControlUpdated;
 }
-__name(cleanUpValidators, "cleanUpValidators");
 function setUpViewChangePipeline(control, dir) {
   dir.valueAccessor.registerOnChange((newValue) => {
     control._pendingValue = newValue;
@@ -3168,7 +3065,6 @@ function setUpViewChangePipeline(control, dir) {
     if (control.updateOn === "change") updateControl(control, dir);
   });
 }
-__name(setUpViewChangePipeline, "setUpViewChangePipeline");
 function setUpBlurPipeline(control, dir) {
   dir.valueAccessor.registerOnTouched(() => {
     control._pendingTouched = true;
@@ -3176,7 +3072,6 @@ function setUpBlurPipeline(control, dir) {
     if (control.updateOn !== "submit") control.markAsTouched();
   });
 }
-__name(setUpBlurPipeline, "setUpBlurPipeline");
 function updateControl(control, dir) {
   if (control._pendingDirty) control.markAsDirty();
   control.setValue(control._pendingValue, {
@@ -3185,64 +3080,53 @@ function updateControl(control, dir) {
   dir.viewToModelUpdate(control._pendingValue);
   control._pendingChange = false;
 }
-__name(updateControl, "updateControl");
 function setUpModelChangePipeline(control, dir) {
-  const onChange = /* @__PURE__ */ __name((newValue, emitModelEvent) => {
+  const onChange = (newValue, emitModelEvent) => {
     dir.valueAccessor.writeValue(newValue);
     if (emitModelEvent) dir.viewToModelUpdate(newValue);
-  }, "onChange");
+  };
   control.registerOnChange(onChange);
   dir._registerOnDestroy(() => {
     control._unregisterOnChange(onChange);
   });
 }
-__name(setUpModelChangePipeline, "setUpModelChangePipeline");
 function setUpFormContainer(control, dir) {
   if (control == null && (typeof ngDevMode === "undefined" || ngDevMode)) _throwError(dir, "Cannot find control with");
   setUpValidators(control, dir);
 }
-__name(setUpFormContainer, "setUpFormContainer");
 function cleanUpFormContainer(control, dir) {
   return cleanUpValidators(control, dir);
 }
-__name(cleanUpFormContainer, "cleanUpFormContainer");
 function _noControlError(dir) {
   return _throwError(dir, "There is no FormControl instance attached to form control element with");
 }
-__name(_noControlError, "_noControlError");
 function _throwError(dir, message) {
   const messageEnd = _describeControlLocation(dir);
   throw new Error(`${message} ${messageEnd}`);
 }
-__name(_throwError, "_throwError");
 function _describeControlLocation(dir) {
   const path = dir.path;
   if (path && path.length > 1) return `path: '${path.join(" -> ")}'`;
   if (path?.[0]) return `name: '${path}'`;
   return "unspecified name attribute";
 }
-__name(_describeControlLocation, "_describeControlLocation");
 function _throwMissingValueAccessorError(dir) {
   const loc = _describeControlLocation(dir);
   throw new RuntimeError(-1203, `No value accessor for form control ${loc}.`);
 }
-__name(_throwMissingValueAccessorError, "_throwMissingValueAccessorError");
 function _throwInvalidValueAccessorError(dir) {
   const loc = _describeControlLocation(dir);
   throw new RuntimeError(1200, `Value accessor was not provided as an array for form control with ${loc}. Check that the \`NG_VALUE_ACCESSOR\` token is configured as a \`multi: true\` provider.`);
 }
-__name(_throwInvalidValueAccessorError, "_throwInvalidValueAccessorError");
 function isPropertyUpdated(changes, viewModel) {
   if (!changes.hasOwnProperty("model")) return false;
   const change = changes["model"];
   if (change.isFirstChange()) return true;
   return !Object.is(viewModel, change.currentValue);
 }
-__name(isPropertyUpdated, "isPropertyUpdated");
 function isBuiltInAccessor(valueAccessor) {
   return Object.getPrototypeOf(valueAccessor.constructor) === BuiltInControlValueAccessor;
 }
-__name(isBuiltInAccessor, "isBuiltInAccessor");
 function syncPendingControls(form, directives) {
   form._syncPendingControls();
   directives.forEach((dir) => {
@@ -3253,7 +3137,6 @@ function syncPendingControls(form, directives) {
     }
   });
 }
-__name(syncPendingControls, "syncPendingControls");
 function selectValueAccessor(dir, valueAccessors) {
   if (!valueAccessors) return null;
   if (!Array.isArray(valueAccessors) && (typeof ngDevMode === "undefined" || ngDevMode)) _throwInvalidValueAccessorError(dir);
@@ -3279,12 +3162,10 @@ function selectValueAccessor(dir, valueAccessors) {
   }
   return null;
 }
-__name(selectValueAccessor, "selectValueAccessor");
 function removeListItem$1(list, el) {
   const index = list.indexOf(el);
   if (index > -1) list.splice(index, 1);
 }
-__name(removeListItem$1, "removeListItem$1");
 function _ngModelWarning(name, type, instance, warningConfig) {
   if (warningConfig === "never") return;
   if ((warningConfig === null || warningConfig === "once") && !type._ngModelWarningSentOnce || warningConfig === "always" && !instance._ngModelWarningSent) {
@@ -3293,13 +3174,12 @@ function _ngModelWarning(name, type, instance, warningConfig) {
     instance._ngModelWarningSent = true;
   }
 }
-__name(_ngModelWarning, "_ngModelWarning");
 var formDirectiveProvider$1 = {
   provide: ControlContainer,
   useExisting: forwardRef(() => NgForm)
 };
 var resolvedPromise$1 = (() => Promise.resolve())();
-var _NgForm = class _NgForm extends ControlContainer {
+var NgForm = class _NgForm extends ControlContainer {
   callSetDisabledState;
   /**
    * @description
@@ -3507,7 +3387,6 @@ var _NgForm = class _NgForm extends ControlContainer {
   resetForm(value = void 0) {
     this.form.reset(value);
     this.submittedReactive.set(false);
-    this.form._events.next(new FormResetEvent(this.form));
   }
   _setUpdateStrategy() {
     if (this.options && this.options.updateOn != null) {
@@ -3518,34 +3397,32 @@ var _NgForm = class _NgForm extends ControlContainer {
     path.pop();
     return path.length ? this.form.get(path) : this.form;
   }
+  static \u0275fac = function NgForm_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _NgForm)(\u0275\u0275directiveInject(NG_VALIDATORS, 10), \u0275\u0275directiveInject(NG_ASYNC_VALIDATORS, 10), \u0275\u0275directiveInject(CALL_SET_DISABLED_STATE, 8));
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _NgForm,
+    selectors: [["form", 3, "ngNoForm", "", 3, "formGroup", ""], ["ng-form"], ["", "ngForm", ""]],
+    hostBindings: function NgForm_HostBindings(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275listener("submit", function NgForm_submit_HostBindingHandler($event) {
+          return ctx.onSubmit($event);
+        })("reset", function NgForm_reset_HostBindingHandler() {
+          return ctx.onReset();
+        });
+      }
+    },
+    inputs: {
+      options: [0, "ngFormOptions", "options"]
+    },
+    outputs: {
+      ngSubmit: "ngSubmit"
+    },
+    exportAs: ["ngForm"],
+    standalone: false,
+    features: [\u0275\u0275ProvidersFeature([formDirectiveProvider$1]), \u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_NgForm, "NgForm");
-__publicField(_NgForm, "\u0275fac", /* @__PURE__ */ __name(function NgForm_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _NgForm)(\u0275\u0275directiveInject(NG_VALIDATORS, 10), \u0275\u0275directiveInject(NG_ASYNC_VALIDATORS, 10), \u0275\u0275directiveInject(CALL_SET_DISABLED_STATE, 8));
-}, "NgForm_Factory"));
-__publicField(_NgForm, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _NgForm,
-  selectors: [["form", 3, "ngNoForm", "", 3, "formGroup", ""], ["ng-form"], ["", "ngForm", ""]],
-  hostBindings: /* @__PURE__ */ __name(function NgForm_HostBindings(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275listener("submit", /* @__PURE__ */ __name(function NgForm_submit_HostBindingHandler($event) {
-        return ctx.onSubmit($event);
-      }, "NgForm_submit_HostBindingHandler"))("reset", /* @__PURE__ */ __name(function NgForm_reset_HostBindingHandler() {
-        return ctx.onReset();
-      }, "NgForm_reset_HostBindingHandler"));
-    }
-  }, "NgForm_HostBindings"),
-  inputs: {
-    options: [0, "ngFormOptions", "options"]
-  },
-  outputs: {
-    ngSubmit: "ngSubmit"
-  },
-  exportAs: ["ngForm"],
-  standalone: false,
-  features: [\u0275\u0275ProvidersFeature([formDirectiveProvider$1]), \u0275\u0275InheritDefinitionFeature]
-}));
-var NgForm = _NgForm;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(NgForm, [{
     type: Directive,
@@ -3599,13 +3476,10 @@ function removeListItem(list, el) {
   const index = list.indexOf(el);
   if (index > -1) list.splice(index, 1);
 }
-__name(removeListItem, "removeListItem");
 function isFormControlState(formState) {
   return typeof formState === "object" && formState !== null && Object.keys(formState).length === 2 && "value" in formState && "disabled" in formState;
 }
-__name(isFormControlState, "isFormControlState");
-var _a;
-var FormControl = (_a = class extends AbstractControl {
+var FormControl = class FormControl2 extends AbstractControl {
   /** @publicApi */
   defaultValue = null;
   /** @internal */
@@ -3651,6 +3525,9 @@ var FormControl = (_a = class extends AbstractControl {
     this.markAsUntouched(options);
     this.setValue(this.value, options);
     this._pendingChange = false;
+    if (options?.emitEvent !== false) {
+      this._events.next(new FormResetEvent(this));
+    }
   }
   /**  @internal */
   _updateValue() {
@@ -3709,9 +3586,9 @@ var FormControl = (_a = class extends AbstractControl {
       this.value = this._pendingValue = formState;
     }
   }
-}, __name(_a, "FormControl"), _a);
-var isFormControl = /* @__PURE__ */ __name((control) => control instanceof FormControl, "isFormControl");
-var _AbstractFormGroupDirective = class _AbstractFormGroupDirective extends ControlContainer {
+};
+var isFormControl = (control) => control instanceof FormControl;
+var AbstractFormGroupDirective = class _AbstractFormGroupDirective extends ControlContainer {
   /**
    * @description
    * The parent control for the group
@@ -3754,20 +3631,18 @@ var _AbstractFormGroupDirective = class _AbstractFormGroupDirective extends Cont
   /** @internal */
   _checkParentType() {
   }
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275AbstractFormGroupDirective_BaseFactory;
+    return function AbstractFormGroupDirective_Factory(__ngFactoryType__) {
+      return (\u0275AbstractFormGroupDirective_BaseFactory || (\u0275AbstractFormGroupDirective_BaseFactory = \u0275\u0275getInheritedFactory(_AbstractFormGroupDirective)))(__ngFactoryType__ || _AbstractFormGroupDirective);
+    };
+  })();
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _AbstractFormGroupDirective,
+    standalone: false,
+    features: [\u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_AbstractFormGroupDirective, "AbstractFormGroupDirective");
-__publicField(_AbstractFormGroupDirective, "\u0275fac", /* @__PURE__ */ (() => {
-  let \u0275AbstractFormGroupDirective_BaseFactory;
-  return /* @__PURE__ */ __name(function AbstractFormGroupDirective_Factory(__ngFactoryType__) {
-    return (\u0275AbstractFormGroupDirective_BaseFactory || (\u0275AbstractFormGroupDirective_BaseFactory = \u0275\u0275getInheritedFactory(_AbstractFormGroupDirective)))(__ngFactoryType__ || _AbstractFormGroupDirective);
-  }, "AbstractFormGroupDirective_Factory");
-})());
-__publicField(_AbstractFormGroupDirective, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _AbstractFormGroupDirective,
-  standalone: false,
-  features: [\u0275\u0275InheritDefinitionFeature]
-}));
-var AbstractFormGroupDirective = _AbstractFormGroupDirective;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(AbstractFormGroupDirective, [{
     type: Directive,
@@ -3789,7 +3664,6 @@ function modelParentException() {
 
     ${ngModelWithFormGroupExample}`);
 }
-__name(modelParentException, "modelParentException");
 function formGroupNameException() {
   return new RuntimeError(1351, `
     ngModel cannot be used to register form controls with a parent formGroupName or formArrayName directive.
@@ -3802,7 +3676,6 @@ function formGroupNameException() {
 
     ${ngModelGroupExample}`);
 }
-__name(formGroupNameException, "formGroupNameException");
 function missingNameException() {
   return new RuntimeError(1352, `If ngModel is used within a form tag, either the name attribute must be set or the form
     control must be defined as 'standalone' in ngModelOptions.
@@ -3810,7 +3683,6 @@ function missingNameException() {
     Example 1: <input [(ngModel)]="person.firstName" name="first">
     Example 2: <input [(ngModel)]="person.firstName" [ngModelOptions]="{standalone: true}">`);
 }
-__name(missingNameException, "missingNameException");
 function modelGroupParentException() {
   return new RuntimeError(1353, `
     ngModelGroup cannot be used with a parent formGroup directive.
@@ -3823,12 +3695,11 @@ function modelGroupParentException() {
 
     ${ngModelGroupExample}`);
 }
-__name(modelGroupParentException, "modelGroupParentException");
 var modelGroupProvider = {
   provide: ControlContainer,
   useExisting: forwardRef(() => NgModelGroup)
 };
-var _NgModelGroup = class _NgModelGroup extends AbstractFormGroupDirective {
+var NgModelGroup = class _NgModelGroup extends AbstractFormGroupDirective {
   /**
    * @description
    * Tracks the name of the `NgModelGroup` bound to the directive. The name corresponds
@@ -3847,22 +3718,20 @@ var _NgModelGroup = class _NgModelGroup extends AbstractFormGroupDirective {
       throw modelGroupParentException();
     }
   }
+  static \u0275fac = function NgModelGroup_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _NgModelGroup)(\u0275\u0275directiveInject(ControlContainer, 5), \u0275\u0275directiveInject(NG_VALIDATORS, 10), \u0275\u0275directiveInject(NG_ASYNC_VALIDATORS, 10));
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _NgModelGroup,
+    selectors: [["", "ngModelGroup", ""]],
+    inputs: {
+      name: [0, "ngModelGroup", "name"]
+    },
+    exportAs: ["ngModelGroup"],
+    standalone: false,
+    features: [\u0275\u0275ProvidersFeature([modelGroupProvider]), \u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_NgModelGroup, "NgModelGroup");
-__publicField(_NgModelGroup, "\u0275fac", /* @__PURE__ */ __name(function NgModelGroup_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _NgModelGroup)(\u0275\u0275directiveInject(ControlContainer, 5), \u0275\u0275directiveInject(NG_VALIDATORS, 10), \u0275\u0275directiveInject(NG_ASYNC_VALIDATORS, 10));
-}, "NgModelGroup_Factory"));
-__publicField(_NgModelGroup, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _NgModelGroup,
-  selectors: [["", "ngModelGroup", ""]],
-  inputs: {
-    name: [0, "ngModelGroup", "name"]
-  },
-  exportAs: ["ngModelGroup"],
-  standalone: false,
-  features: [\u0275\u0275ProvidersFeature([modelGroupProvider]), \u0275\u0275InheritDefinitionFeature]
-}));
-var NgModelGroup = _NgModelGroup;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(NgModelGroup, [{
     type: Directive,
@@ -3911,10 +3780,18 @@ var formControlBinding$1 = {
   useExisting: forwardRef(() => NgModel)
 };
 var resolvedPromise = (() => Promise.resolve())();
-var _NgModel = class _NgModel extends NgControl {
+var NgModel = class _NgModel extends NgControl {
   _changeDetectorRef;
   callSetDisabledState;
   control = new FormControl();
+  // At runtime we coerce arbitrary values assigned to the "disabled" input to a "boolean".
+  // This is not reflected in the type of the property because outside of templates, consumers
+  // should only deal with booleans. In templates, a string is allowed for convenience and to
+  // match the native "disabled attribute" semantics which can be observed on input elements.
+  // This static member tells the compiler that values of type "string" can also be assigned
+  // to the input in a template.
+  /** @docs-private */
+  static ngAcceptInputType_isDisabled;
   /** @internal */
   _registered = false;
   /**
@@ -4077,36 +3954,26 @@ var _NgModel = class _NgModel extends NgControl {
   _getPath(controlName) {
     return this._parent ? controlPath(controlName, this._parent) : [controlName];
   }
+  static \u0275fac = function NgModel_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _NgModel)(\u0275\u0275directiveInject(ControlContainer, 9), \u0275\u0275directiveInject(NG_VALIDATORS, 10), \u0275\u0275directiveInject(NG_ASYNC_VALIDATORS, 10), \u0275\u0275directiveInject(NG_VALUE_ACCESSOR, 10), \u0275\u0275directiveInject(ChangeDetectorRef, 8), \u0275\u0275directiveInject(CALL_SET_DISABLED_STATE, 8));
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _NgModel,
+    selectors: [["", "ngModel", "", 3, "formControlName", "", 3, "formControl", ""]],
+    inputs: {
+      name: "name",
+      isDisabled: [0, "disabled", "isDisabled"],
+      model: [0, "ngModel", "model"],
+      options: [0, "ngModelOptions", "options"]
+    },
+    outputs: {
+      update: "ngModelChange"
+    },
+    exportAs: ["ngModel"],
+    standalone: false,
+    features: [\u0275\u0275ProvidersFeature([formControlBinding$1]), \u0275\u0275InheritDefinitionFeature, \u0275\u0275NgOnChangesFeature]
+  });
 };
-__name(_NgModel, "NgModel");
-// At runtime we coerce arbitrary values assigned to the "disabled" input to a "boolean".
-// This is not reflected in the type of the property because outside of templates, consumers
-// should only deal with booleans. In templates, a string is allowed for convenience and to
-// match the native "disabled attribute" semantics which can be observed on input elements.
-// This static member tells the compiler that values of type "string" can also be assigned
-// to the input in a template.
-/** @docs-private */
-__publicField(_NgModel, "ngAcceptInputType_isDisabled");
-__publicField(_NgModel, "\u0275fac", /* @__PURE__ */ __name(function NgModel_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _NgModel)(\u0275\u0275directiveInject(ControlContainer, 9), \u0275\u0275directiveInject(NG_VALIDATORS, 10), \u0275\u0275directiveInject(NG_ASYNC_VALIDATORS, 10), \u0275\u0275directiveInject(NG_VALUE_ACCESSOR, 10), \u0275\u0275directiveInject(ChangeDetectorRef, 8), \u0275\u0275directiveInject(CALL_SET_DISABLED_STATE, 8));
-}, "NgModel_Factory"));
-__publicField(_NgModel, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _NgModel,
-  selectors: [["", "ngModel", "", 3, "formControlName", "", 3, "formControl", ""]],
-  inputs: {
-    name: "name",
-    isDisabled: [0, "disabled", "isDisabled"],
-    model: [0, "ngModel", "model"],
-    options: [0, "ngModelOptions", "options"]
-  },
-  outputs: {
-    update: "ngModelChange"
-  },
-  exportAs: ["ngModel"],
-  standalone: false,
-  features: [\u0275\u0275ProvidersFeature([formControlBinding$1]), \u0275\u0275InheritDefinitionFeature, \u0275\u0275NgOnChangesFeature]
-}));
-var NgModel = _NgModel;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(NgModel, [{
     type: Directive,
@@ -4198,20 +4065,17 @@ function checkParentType$1(parent) {
     throw modelParentException();
   }
 }
-__name(checkParentType$1, "checkParentType$1");
-var _\u0275NgNoValidate = class _\u0275NgNoValidate {
+var \u0275NgNoValidate = class _\u0275NgNoValidate {
+  static \u0275fac = function \u0275NgNoValidate_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _\u0275NgNoValidate)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _\u0275NgNoValidate,
+    selectors: [["form", 3, "ngNoForm", "", 3, "ngNativeValidate", ""]],
+    hostAttrs: ["novalidate", ""],
+    standalone: false
+  });
 };
-__name(_\u0275NgNoValidate, "\u0275NgNoValidate");
-__publicField(_\u0275NgNoValidate, "\u0275fac", /* @__PURE__ */ __name(function \u0275NgNoValidate_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _\u0275NgNoValidate)();
-}, "\u0275NgNoValidate_Factory"));
-__publicField(_\u0275NgNoValidate, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _\u0275NgNoValidate,
-  selectors: [["form", 3, "ngNoForm", "", 3, "ngNativeValidate", ""]],
-  hostAttrs: ["novalidate", ""],
-  standalone: false
-}));
-var \u0275NgNoValidate = _\u0275NgNoValidate;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(\u0275NgNoValidate, [{
     type: Directive,
@@ -4229,7 +4093,7 @@ var NUMBER_VALUE_ACCESSOR = {
   useExisting: forwardRef(() => NumberValueAccessor),
   multi: true
 };
-var _NumberValueAccessor = class _NumberValueAccessor extends BuiltInControlValueAccessor {
+var NumberValueAccessor = class _NumberValueAccessor extends BuiltInControlValueAccessor {
   /**
    * Sets the "value" property on the input element.
    * @docs-private
@@ -4247,30 +4111,28 @@ var _NumberValueAccessor = class _NumberValueAccessor extends BuiltInControlValu
       fn(value == "" ? null : parseFloat(value));
     };
   }
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275NumberValueAccessor_BaseFactory;
+    return function NumberValueAccessor_Factory(__ngFactoryType__) {
+      return (\u0275NumberValueAccessor_BaseFactory || (\u0275NumberValueAccessor_BaseFactory = \u0275\u0275getInheritedFactory(_NumberValueAccessor)))(__ngFactoryType__ || _NumberValueAccessor);
+    };
+  })();
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _NumberValueAccessor,
+    selectors: [["input", "type", "number", "formControlName", ""], ["input", "type", "number", "formControl", ""], ["input", "type", "number", "ngModel", ""]],
+    hostBindings: function NumberValueAccessor_HostBindings(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275listener("input", function NumberValueAccessor_input_HostBindingHandler($event) {
+          return ctx.onChange($event.target.value);
+        })("blur", function NumberValueAccessor_blur_HostBindingHandler() {
+          return ctx.onTouched();
+        });
+      }
+    },
+    standalone: false,
+    features: [\u0275\u0275ProvidersFeature([NUMBER_VALUE_ACCESSOR]), \u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_NumberValueAccessor, "NumberValueAccessor");
-__publicField(_NumberValueAccessor, "\u0275fac", /* @__PURE__ */ (() => {
-  let \u0275NumberValueAccessor_BaseFactory;
-  return /* @__PURE__ */ __name(function NumberValueAccessor_Factory(__ngFactoryType__) {
-    return (\u0275NumberValueAccessor_BaseFactory || (\u0275NumberValueAccessor_BaseFactory = \u0275\u0275getInheritedFactory(_NumberValueAccessor)))(__ngFactoryType__ || _NumberValueAccessor);
-  }, "NumberValueAccessor_Factory");
-})());
-__publicField(_NumberValueAccessor, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _NumberValueAccessor,
-  selectors: [["input", "type", "number", "formControlName", ""], ["input", "type", "number", "formControl", ""], ["input", "type", "number", "ngModel", ""]],
-  hostBindings: /* @__PURE__ */ __name(function NumberValueAccessor_HostBindings(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275listener("input", /* @__PURE__ */ __name(function NumberValueAccessor_input_HostBindingHandler($event) {
-        return ctx.onChange($event.target.value);
-      }, "NumberValueAccessor_input_HostBindingHandler"))("blur", /* @__PURE__ */ __name(function NumberValueAccessor_blur_HostBindingHandler() {
-        return ctx.onTouched();
-      }, "NumberValueAccessor_blur_HostBindingHandler"));
-    }
-  }, "NumberValueAccessor_HostBindings"),
-  standalone: false,
-  features: [\u0275\u0275ProvidersFeature([NUMBER_VALUE_ACCESSOR]), \u0275\u0275InheritDefinitionFeature]
-}));
-var NumberValueAccessor = _NumberValueAccessor;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(NumberValueAccessor, [{
     type: Directive,
@@ -4296,8 +4158,7 @@ function throwNameError() {
       must match. Ex: <input type="radio" formControlName="food" name="food">
     `);
 }
-__name(throwNameError, "throwNameError");
-var _RadioControlRegistry = class _RadioControlRegistry {
+var RadioControlRegistry = class _RadioControlRegistry {
   _accessors = [];
   /**
    * @description
@@ -4333,17 +4194,15 @@ var _RadioControlRegistry = class _RadioControlRegistry {
     if (!controlPair[0].control) return false;
     return controlPair[0]._parent === accessor._control._parent && controlPair[1].name === accessor.name;
   }
+  static \u0275fac = function RadioControlRegistry_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _RadioControlRegistry)();
+  };
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
+    token: _RadioControlRegistry,
+    factory: _RadioControlRegistry.\u0275fac,
+    providedIn: "root"
+  });
 };
-__name(_RadioControlRegistry, "RadioControlRegistry");
-__publicField(_RadioControlRegistry, "\u0275fac", /* @__PURE__ */ __name(function RadioControlRegistry_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _RadioControlRegistry)();
-}, "RadioControlRegistry_Factory"));
-__publicField(_RadioControlRegistry, "\u0275prov", /* @__PURE__ */ \u0275\u0275defineInjectable({
-  token: _RadioControlRegistry,
-  factory: _RadioControlRegistry.\u0275fac,
-  providedIn: "root"
-}));
-var RadioControlRegistry = _RadioControlRegistry;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(RadioControlRegistry, [{
     type: Injectable,
@@ -4352,7 +4211,7 @@ var RadioControlRegistry = _RadioControlRegistry;
     }]
   }], null, null);
 })();
-var _RadioControlValueAccessor = class _RadioControlValueAccessor extends BuiltInControlValueAccessor {
+var RadioControlValueAccessor = class _RadioControlValueAccessor extends BuiltInControlValueAccessor {
   _registry;
   _injector;
   /** @internal */
@@ -4369,8 +4228,8 @@ var _RadioControlValueAccessor = class _RadioControlValueAccessor extends BuiltI
    * `BaseControlValueAccessor` class.
    * @docs-private
    */
-  onChange = /* @__PURE__ */ __name(() => {
-  }, "onChange");
+  onChange = () => {
+  };
   /**
    * @description
    * Tracks the name of the radio input element.
@@ -4445,32 +4304,30 @@ var _RadioControlValueAccessor = class _RadioControlValueAccessor extends BuiltI
     }
     if (!this.name && this.formControlName) this.name = this.formControlName;
   }
+  static \u0275fac = function RadioControlValueAccessor_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _RadioControlValueAccessor)(\u0275\u0275directiveInject(Renderer2), \u0275\u0275directiveInject(ElementRef), \u0275\u0275directiveInject(RadioControlRegistry), \u0275\u0275directiveInject(Injector));
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _RadioControlValueAccessor,
+    selectors: [["input", "type", "radio", "formControlName", ""], ["input", "type", "radio", "formControl", ""], ["input", "type", "radio", "ngModel", ""]],
+    hostBindings: function RadioControlValueAccessor_HostBindings(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275listener("change", function RadioControlValueAccessor_change_HostBindingHandler() {
+          return ctx.onChange();
+        })("blur", function RadioControlValueAccessor_blur_HostBindingHandler() {
+          return ctx.onTouched();
+        });
+      }
+    },
+    inputs: {
+      name: "name",
+      formControlName: "formControlName",
+      value: "value"
+    },
+    standalone: false,
+    features: [\u0275\u0275ProvidersFeature([RADIO_VALUE_ACCESSOR]), \u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_RadioControlValueAccessor, "RadioControlValueAccessor");
-__publicField(_RadioControlValueAccessor, "\u0275fac", /* @__PURE__ */ __name(function RadioControlValueAccessor_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _RadioControlValueAccessor)(\u0275\u0275directiveInject(Renderer2), \u0275\u0275directiveInject(ElementRef), \u0275\u0275directiveInject(RadioControlRegistry), \u0275\u0275directiveInject(Injector));
-}, "RadioControlValueAccessor_Factory"));
-__publicField(_RadioControlValueAccessor, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _RadioControlValueAccessor,
-  selectors: [["input", "type", "radio", "formControlName", ""], ["input", "type", "radio", "formControl", ""], ["input", "type", "radio", "ngModel", ""]],
-  hostBindings: /* @__PURE__ */ __name(function RadioControlValueAccessor_HostBindings(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275listener("change", /* @__PURE__ */ __name(function RadioControlValueAccessor_change_HostBindingHandler() {
-        return ctx.onChange();
-      }, "RadioControlValueAccessor_change_HostBindingHandler"))("blur", /* @__PURE__ */ __name(function RadioControlValueAccessor_blur_HostBindingHandler() {
-        return ctx.onTouched();
-      }, "RadioControlValueAccessor_blur_HostBindingHandler"));
-    }
-  }, "RadioControlValueAccessor_HostBindings"),
-  inputs: {
-    name: "name",
-    formControlName: "formControlName",
-    value: "value"
-  },
-  standalone: false,
-  features: [\u0275\u0275ProvidersFeature([RADIO_VALUE_ACCESSOR]), \u0275\u0275InheritDefinitionFeature]
-}));
-var RadioControlValueAccessor = _RadioControlValueAccessor;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(RadioControlValueAccessor, [{
     type: Directive,
@@ -4508,7 +4365,7 @@ var RANGE_VALUE_ACCESSOR = {
   useExisting: forwardRef(() => RangeValueAccessor),
   multi: true
 };
-var _RangeValueAccessor = class _RangeValueAccessor extends BuiltInControlValueAccessor {
+var RangeValueAccessor = class _RangeValueAccessor extends BuiltInControlValueAccessor {
   /**
    * Sets the "value" property on the input element.
    * @docs-private
@@ -4525,32 +4382,30 @@ var _RangeValueAccessor = class _RangeValueAccessor extends BuiltInControlValueA
       fn(value == "" ? null : parseFloat(value));
     };
   }
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275RangeValueAccessor_BaseFactory;
+    return function RangeValueAccessor_Factory(__ngFactoryType__) {
+      return (\u0275RangeValueAccessor_BaseFactory || (\u0275RangeValueAccessor_BaseFactory = \u0275\u0275getInheritedFactory(_RangeValueAccessor)))(__ngFactoryType__ || _RangeValueAccessor);
+    };
+  })();
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _RangeValueAccessor,
+    selectors: [["input", "type", "range", "formControlName", ""], ["input", "type", "range", "formControl", ""], ["input", "type", "range", "ngModel", ""]],
+    hostBindings: function RangeValueAccessor_HostBindings(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275listener("change", function RangeValueAccessor_change_HostBindingHandler($event) {
+          return ctx.onChange($event.target.value);
+        })("input", function RangeValueAccessor_input_HostBindingHandler($event) {
+          return ctx.onChange($event.target.value);
+        })("blur", function RangeValueAccessor_blur_HostBindingHandler() {
+          return ctx.onTouched();
+        });
+      }
+    },
+    standalone: false,
+    features: [\u0275\u0275ProvidersFeature([RANGE_VALUE_ACCESSOR]), \u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_RangeValueAccessor, "RangeValueAccessor");
-__publicField(_RangeValueAccessor, "\u0275fac", /* @__PURE__ */ (() => {
-  let \u0275RangeValueAccessor_BaseFactory;
-  return /* @__PURE__ */ __name(function RangeValueAccessor_Factory(__ngFactoryType__) {
-    return (\u0275RangeValueAccessor_BaseFactory || (\u0275RangeValueAccessor_BaseFactory = \u0275\u0275getInheritedFactory(_RangeValueAccessor)))(__ngFactoryType__ || _RangeValueAccessor);
-  }, "RangeValueAccessor_Factory");
-})());
-__publicField(_RangeValueAccessor, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _RangeValueAccessor,
-  selectors: [["input", "type", "range", "formControlName", ""], ["input", "type", "range", "formControl", ""], ["input", "type", "range", "ngModel", ""]],
-  hostBindings: /* @__PURE__ */ __name(function RangeValueAccessor_HostBindings(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275listener("change", /* @__PURE__ */ __name(function RangeValueAccessor_change_HostBindingHandler($event) {
-        return ctx.onChange($event.target.value);
-      }, "RangeValueAccessor_change_HostBindingHandler"))("input", /* @__PURE__ */ __name(function RangeValueAccessor_input_HostBindingHandler($event) {
-        return ctx.onChange($event.target.value);
-      }, "RangeValueAccessor_input_HostBindingHandler"))("blur", /* @__PURE__ */ __name(function RangeValueAccessor_blur_HostBindingHandler() {
-        return ctx.onTouched();
-      }, "RangeValueAccessor_blur_HostBindingHandler"));
-    }
-  }, "RangeValueAccessor_HostBindings"),
-  standalone: false,
-  features: [\u0275\u0275ProvidersFeature([RANGE_VALUE_ACCESSOR]), \u0275\u0275InheritDefinitionFeature]
-}));
-var RangeValueAccessor = _RangeValueAccessor;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(RangeValueAccessor, [{
     type: Directive,
@@ -4571,7 +4426,7 @@ var formControlBinding = {
   provide: NgControl,
   useExisting: forwardRef(() => FormControlDirective)
 };
-var _FormControlDirective = class _FormControlDirective extends NgControl {
+var FormControlDirective = class _FormControlDirective extends NgControl {
   _ngModelWarningConfig;
   callSetDisabledState;
   /**
@@ -4598,6 +4453,14 @@ var _FormControlDirective = class _FormControlDirective extends NgControl {
   model;
   /** @deprecated as of v6 */
   update = new EventEmitter();
+  /**
+   * @description
+   * Static property used to track whether any ngModel warnings have been sent across
+   * all instances of FormControlDirective. Used to support warning config of "once".
+   *
+   * @internal
+   */
+  static _ngModelWarningSentOnce = false;
   /**
    * @description
    * Instance property used to track whether an ngModel warning has been sent out for this
@@ -4678,35 +4541,25 @@ var _FormControlDirective = class _FormControlDirective extends NgControl {
   _isControlChanged(changes) {
     return changes.hasOwnProperty("form");
   }
+  static \u0275fac = function FormControlDirective_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _FormControlDirective)(\u0275\u0275directiveInject(NG_VALIDATORS, 10), \u0275\u0275directiveInject(NG_ASYNC_VALIDATORS, 10), \u0275\u0275directiveInject(NG_VALUE_ACCESSOR, 10), \u0275\u0275directiveInject(NG_MODEL_WITH_FORM_CONTROL_WARNING, 8), \u0275\u0275directiveInject(CALL_SET_DISABLED_STATE, 8));
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _FormControlDirective,
+    selectors: [["", "formControl", ""]],
+    inputs: {
+      form: [0, "formControl", "form"],
+      isDisabled: [0, "disabled", "isDisabled"],
+      model: [0, "ngModel", "model"]
+    },
+    outputs: {
+      update: "ngModelChange"
+    },
+    exportAs: ["ngForm"],
+    standalone: false,
+    features: [\u0275\u0275ProvidersFeature([formControlBinding]), \u0275\u0275InheritDefinitionFeature, \u0275\u0275NgOnChangesFeature]
+  });
 };
-__name(_FormControlDirective, "FormControlDirective");
-/**
- * @description
- * Static property used to track whether any ngModel warnings have been sent across
- * all instances of FormControlDirective. Used to support warning config of "once".
- *
- * @internal
- */
-__publicField(_FormControlDirective, "_ngModelWarningSentOnce", false);
-__publicField(_FormControlDirective, "\u0275fac", /* @__PURE__ */ __name(function FormControlDirective_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _FormControlDirective)(\u0275\u0275directiveInject(NG_VALIDATORS, 10), \u0275\u0275directiveInject(NG_ASYNC_VALIDATORS, 10), \u0275\u0275directiveInject(NG_VALUE_ACCESSOR, 10), \u0275\u0275directiveInject(NG_MODEL_WITH_FORM_CONTROL_WARNING, 8), \u0275\u0275directiveInject(CALL_SET_DISABLED_STATE, 8));
-}, "FormControlDirective_Factory"));
-__publicField(_FormControlDirective, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _FormControlDirective,
-  selectors: [["", "formControl", ""]],
-  inputs: {
-    form: [0, "formControl", "form"],
-    isDisabled: [0, "disabled", "isDisabled"],
-    model: [0, "ngModel", "model"]
-  },
-  outputs: {
-    update: "ngModelChange"
-  },
-  exportAs: ["ngForm"],
-  standalone: false,
-  features: [\u0275\u0275ProvidersFeature([formControlBinding]), \u0275\u0275InheritDefinitionFeature, \u0275\u0275NgOnChangesFeature]
-}));
-var FormControlDirective = _FormControlDirective;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(FormControlDirective, [{
     type: Directive,
@@ -4785,7 +4638,7 @@ var formDirectiveProvider = {
   provide: ControlContainer,
   useExisting: forwardRef(() => FormGroupDirective)
 };
-var _FormGroupDirective = class _FormGroupDirective extends ControlContainer {
+var FormGroupDirective = class _FormGroupDirective extends ControlContainer {
   callSetDisabledState;
   /**
    * @description
@@ -4814,7 +4667,7 @@ var _FormGroupDirective = class _FormGroupDirective extends ControlContainer {
    * Callback that should be invoked when controls in FormGroup or FormArray collection change
    * (added or removed). This callback triggers corresponding DOM updates.
    */
-  _onCollectionChange = /* @__PURE__ */ __name(() => this._updateDomValue(), "_onCollectionChange");
+  _onCollectionChange = () => this._updateDomValue();
   /**
    * @description
    * Tracks the list of added `FormControlName` instances
@@ -5012,9 +4865,6 @@ var _FormGroupDirective = class _FormGroupDirective extends ControlContainer {
   resetForm(value = void 0, options = {}) {
     this.form.reset(value, options);
     this._submittedReactive.set(false);
-    if (options?.emitEvent !== false) {
-      this.form._events.next(new FormResetEvent(this.form));
-    }
   }
   /** @internal */
   _updateDomValue() {
@@ -5066,34 +4916,32 @@ var _FormGroupDirective = class _FormGroupDirective extends ControlContainer {
       cleanUpValidators(this._oldForm, this);
     }
   }
+  static \u0275fac = function FormGroupDirective_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _FormGroupDirective)(\u0275\u0275directiveInject(NG_VALIDATORS, 10), \u0275\u0275directiveInject(NG_ASYNC_VALIDATORS, 10), \u0275\u0275directiveInject(CALL_SET_DISABLED_STATE, 8));
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _FormGroupDirective,
+    selectors: [["", "formGroup", ""]],
+    hostBindings: function FormGroupDirective_HostBindings(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275listener("submit", function FormGroupDirective_submit_HostBindingHandler($event) {
+          return ctx.onSubmit($event);
+        })("reset", function FormGroupDirective_reset_HostBindingHandler() {
+          return ctx.onReset();
+        });
+      }
+    },
+    inputs: {
+      form: [0, "formGroup", "form"]
+    },
+    outputs: {
+      ngSubmit: "ngSubmit"
+    },
+    exportAs: ["ngForm"],
+    standalone: false,
+    features: [\u0275\u0275ProvidersFeature([formDirectiveProvider]), \u0275\u0275InheritDefinitionFeature, \u0275\u0275NgOnChangesFeature]
+  });
 };
-__name(_FormGroupDirective, "FormGroupDirective");
-__publicField(_FormGroupDirective, "\u0275fac", /* @__PURE__ */ __name(function FormGroupDirective_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _FormGroupDirective)(\u0275\u0275directiveInject(NG_VALIDATORS, 10), \u0275\u0275directiveInject(NG_ASYNC_VALIDATORS, 10), \u0275\u0275directiveInject(CALL_SET_DISABLED_STATE, 8));
-}, "FormGroupDirective_Factory"));
-__publicField(_FormGroupDirective, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _FormGroupDirective,
-  selectors: [["", "formGroup", ""]],
-  hostBindings: /* @__PURE__ */ __name(function FormGroupDirective_HostBindings(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275listener("submit", /* @__PURE__ */ __name(function FormGroupDirective_submit_HostBindingHandler($event) {
-        return ctx.onSubmit($event);
-      }, "FormGroupDirective_submit_HostBindingHandler"))("reset", /* @__PURE__ */ __name(function FormGroupDirective_reset_HostBindingHandler() {
-        return ctx.onReset();
-      }, "FormGroupDirective_reset_HostBindingHandler"));
-    }
-  }, "FormGroupDirective_HostBindings"),
-  inputs: {
-    form: [0, "formGroup", "form"]
-  },
-  outputs: {
-    ngSubmit: "ngSubmit"
-  },
-  exportAs: ["ngForm"],
-  standalone: false,
-  features: [\u0275\u0275ProvidersFeature([formDirectiveProvider]), \u0275\u0275InheritDefinitionFeature, \u0275\u0275NgOnChangesFeature]
-}));
-var FormGroupDirective = _FormGroupDirective;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(FormGroupDirective, [{
     type: Directive,
@@ -5149,7 +4997,7 @@ var formGroupNameProvider = {
   provide: ControlContainer,
   useExisting: forwardRef(() => FormGroupName)
 };
-var _FormGroupName = class _FormGroupName extends AbstractFormGroupDirective {
+var FormGroupName = class _FormGroupName extends AbstractFormGroupDirective {
   /**
    * @description
    * Tracks the name of the `FormGroup` bound to the directive. The name corresponds
@@ -5172,21 +5020,19 @@ var _FormGroupName = class _FormGroupName extends AbstractFormGroupDirective {
       throw groupParentException();
     }
   }
+  static \u0275fac = function FormGroupName_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _FormGroupName)(\u0275\u0275directiveInject(ControlContainer, 13), \u0275\u0275directiveInject(NG_VALIDATORS, 10), \u0275\u0275directiveInject(NG_ASYNC_VALIDATORS, 10));
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _FormGroupName,
+    selectors: [["", "formGroupName", ""]],
+    inputs: {
+      name: [0, "formGroupName", "name"]
+    },
+    standalone: false,
+    features: [\u0275\u0275ProvidersFeature([formGroupNameProvider]), \u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_FormGroupName, "FormGroupName");
-__publicField(_FormGroupName, "\u0275fac", /* @__PURE__ */ __name(function FormGroupName_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _FormGroupName)(\u0275\u0275directiveInject(ControlContainer, 13), \u0275\u0275directiveInject(NG_VALIDATORS, 10), \u0275\u0275directiveInject(NG_ASYNC_VALIDATORS, 10));
-}, "FormGroupName_Factory"));
-__publicField(_FormGroupName, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _FormGroupName,
-  selectors: [["", "formGroupName", ""]],
-  inputs: {
-    name: [0, "formGroupName", "name"]
-  },
-  standalone: false,
-  features: [\u0275\u0275ProvidersFeature([formGroupNameProvider]), \u0275\u0275InheritDefinitionFeature]
-}));
-var FormGroupName = _FormGroupName;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(FormGroupName, [{
     type: Directive,
@@ -5235,7 +5081,7 @@ var formArrayNameProvider = {
   provide: ControlContainer,
   useExisting: forwardRef(() => FormArrayName)
 };
-var _FormArrayName = class _FormArrayName extends ControlContainer {
+var FormArrayName = class _FormArrayName extends ControlContainer {
   /** @internal */
   _parent;
   /**
@@ -5294,21 +5140,19 @@ var _FormArrayName = class _FormArrayName extends ControlContainer {
   get path() {
     return controlPath(this.name == null ? this.name : this.name.toString(), this._parent);
   }
+  static \u0275fac = function FormArrayName_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _FormArrayName)(\u0275\u0275directiveInject(ControlContainer, 13), \u0275\u0275directiveInject(NG_VALIDATORS, 10), \u0275\u0275directiveInject(NG_ASYNC_VALIDATORS, 10));
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _FormArrayName,
+    selectors: [["", "formArrayName", ""]],
+    inputs: {
+      name: [0, "formArrayName", "name"]
+    },
+    standalone: false,
+    features: [\u0275\u0275ProvidersFeature([formArrayNameProvider]), \u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_FormArrayName, "FormArrayName");
-__publicField(_FormArrayName, "\u0275fac", /* @__PURE__ */ __name(function FormArrayName_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _FormArrayName)(\u0275\u0275directiveInject(ControlContainer, 13), \u0275\u0275directiveInject(NG_VALIDATORS, 10), \u0275\u0275directiveInject(NG_ASYNC_VALIDATORS, 10));
-}, "FormArrayName_Factory"));
-__publicField(_FormArrayName, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _FormArrayName,
-  selectors: [["", "formArrayName", ""]],
-  inputs: {
-    name: [0, "formArrayName", "name"]
-  },
-  standalone: false,
-  features: [\u0275\u0275ProvidersFeature([formArrayNameProvider]), \u0275\u0275InheritDefinitionFeature]
-}));
-var FormArrayName = _FormArrayName;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(FormArrayName, [{
     type: Directive,
@@ -5356,12 +5200,11 @@ var FormArrayName = _FormArrayName;
 function hasInvalidParent(parent) {
   return !(parent instanceof FormGroupName) && !(parent instanceof FormGroupDirective) && !(parent instanceof FormArrayName);
 }
-__name(hasInvalidParent, "hasInvalidParent");
 var controlNameBinding = {
   provide: NgControl,
   useExisting: forwardRef(() => FormControlName)
 };
-var _FormControlName = class _FormControlName extends NgControl {
+var FormControlName = class _FormControlName extends NgControl {
   _ngModelWarningConfig;
   _added = false;
   /**
@@ -5398,6 +5241,14 @@ var _FormControlName = class _FormControlName extends NgControl {
   model;
   /** @deprecated as of v6 */
   update = new EventEmitter();
+  /**
+   * @description
+   * Static property used to track whether any ngModel warnings have been sent across
+   * all instances of FormControlName. Used to support warning config of "once".
+   *
+   * @internal
+   */
+  static _ngModelWarningSentOnce = false;
   /**
    * @description
    * Instance property used to track whether an ngModel warning has been sent out for this
@@ -5463,34 +5314,24 @@ var _FormControlName = class _FormControlName extends NgControl {
     this.control = this.formDirective.addControl(this);
     this._added = true;
   }
+  static \u0275fac = function FormControlName_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _FormControlName)(\u0275\u0275directiveInject(ControlContainer, 13), \u0275\u0275directiveInject(NG_VALIDATORS, 10), \u0275\u0275directiveInject(NG_ASYNC_VALIDATORS, 10), \u0275\u0275directiveInject(NG_VALUE_ACCESSOR, 10), \u0275\u0275directiveInject(NG_MODEL_WITH_FORM_CONTROL_WARNING, 8));
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _FormControlName,
+    selectors: [["", "formControlName", ""]],
+    inputs: {
+      name: [0, "formControlName", "name"],
+      isDisabled: [0, "disabled", "isDisabled"],
+      model: [0, "ngModel", "model"]
+    },
+    outputs: {
+      update: "ngModelChange"
+    },
+    standalone: false,
+    features: [\u0275\u0275ProvidersFeature([controlNameBinding]), \u0275\u0275InheritDefinitionFeature, \u0275\u0275NgOnChangesFeature]
+  });
 };
-__name(_FormControlName, "FormControlName");
-/**
- * @description
- * Static property used to track whether any ngModel warnings have been sent across
- * all instances of FormControlName. Used to support warning config of "once".
- *
- * @internal
- */
-__publicField(_FormControlName, "_ngModelWarningSentOnce", false);
-__publicField(_FormControlName, "\u0275fac", /* @__PURE__ */ __name(function FormControlName_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _FormControlName)(\u0275\u0275directiveInject(ControlContainer, 13), \u0275\u0275directiveInject(NG_VALIDATORS, 10), \u0275\u0275directiveInject(NG_ASYNC_VALIDATORS, 10), \u0275\u0275directiveInject(NG_VALUE_ACCESSOR, 10), \u0275\u0275directiveInject(NG_MODEL_WITH_FORM_CONTROL_WARNING, 8));
-}, "FormControlName_Factory"));
-__publicField(_FormControlName, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _FormControlName,
-  selectors: [["", "formControlName", ""]],
-  inputs: {
-    name: [0, "formControlName", "name"],
-    isDisabled: [0, "disabled", "isDisabled"],
-    model: [0, "ngModel", "model"]
-  },
-  outputs: {
-    update: "ngModelChange"
-  },
-  standalone: false,
-  features: [\u0275\u0275ProvidersFeature([controlNameBinding]), \u0275\u0275InheritDefinitionFeature, \u0275\u0275NgOnChangesFeature]
-}));
-var FormControlName = _FormControlName;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(FormControlName, [{
     type: Directive,
@@ -5572,7 +5413,6 @@ function checkParentType(parent, name) {
     throw controlParentException(name);
   }
 }
-__name(checkParentType, "checkParentType");
 var SELECT_VALUE_ACCESSOR = {
   provide: NG_VALUE_ACCESSOR,
   useExisting: forwardRef(() => SelectControlValueAccessor),
@@ -5583,12 +5423,10 @@ function _buildValueString$1(id, value) {
   if (value && typeof value === "object") value = "Object";
   return `${id}: ${value}`.slice(0, 50);
 }
-__name(_buildValueString$1, "_buildValueString$1");
 function _extractId$1(valueString) {
   return valueString.split(":")[0];
 }
-__name(_extractId$1, "_extractId$1");
-var _SelectControlValueAccessor = class _SelectControlValueAccessor extends BuiltInControlValueAccessor {
+var SelectControlValueAccessor = class _SelectControlValueAccessor extends BuiltInControlValueAccessor {
   /** @docs-private */
   value;
   /** @internal */
@@ -5641,13 +5479,13 @@ var _SelectControlValueAccessor = class _SelectControlValueAccessor extends Buil
     }
     this._queuedWrite = true;
     afterNextRender({
-      write: /* @__PURE__ */ __name(() => {
+      write: () => {
         if (this.destroyRef.destroyed) {
           return;
         }
         this._queuedWrite = false;
         this.writeValue(this.value);
-      }, "write")
+      }
     }, {
       injector: this.appRefInjector
     });
@@ -5689,33 +5527,31 @@ var _SelectControlValueAccessor = class _SelectControlValueAccessor extends Buil
     const id = _extractId$1(valueString);
     return this._optionMap.has(id) ? this._optionMap.get(id) : valueString;
   }
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275SelectControlValueAccessor_BaseFactory;
+    return function SelectControlValueAccessor_Factory(__ngFactoryType__) {
+      return (\u0275SelectControlValueAccessor_BaseFactory || (\u0275SelectControlValueAccessor_BaseFactory = \u0275\u0275getInheritedFactory(_SelectControlValueAccessor)))(__ngFactoryType__ || _SelectControlValueAccessor);
+    };
+  })();
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _SelectControlValueAccessor,
+    selectors: [["select", "formControlName", "", 3, "multiple", ""], ["select", "formControl", "", 3, "multiple", ""], ["select", "ngModel", "", 3, "multiple", ""]],
+    hostBindings: function SelectControlValueAccessor_HostBindings(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275listener("change", function SelectControlValueAccessor_change_HostBindingHandler($event) {
+          return ctx.onChange($event.target.value);
+        })("blur", function SelectControlValueAccessor_blur_HostBindingHandler() {
+          return ctx.onTouched();
+        });
+      }
+    },
+    inputs: {
+      compareWith: "compareWith"
+    },
+    standalone: false,
+    features: [\u0275\u0275ProvidersFeature([SELECT_VALUE_ACCESSOR]), \u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_SelectControlValueAccessor, "SelectControlValueAccessor");
-__publicField(_SelectControlValueAccessor, "\u0275fac", /* @__PURE__ */ (() => {
-  let \u0275SelectControlValueAccessor_BaseFactory;
-  return /* @__PURE__ */ __name(function SelectControlValueAccessor_Factory(__ngFactoryType__) {
-    return (\u0275SelectControlValueAccessor_BaseFactory || (\u0275SelectControlValueAccessor_BaseFactory = \u0275\u0275getInheritedFactory(_SelectControlValueAccessor)))(__ngFactoryType__ || _SelectControlValueAccessor);
-  }, "SelectControlValueAccessor_Factory");
-})());
-__publicField(_SelectControlValueAccessor, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _SelectControlValueAccessor,
-  selectors: [["select", "formControlName", "", 3, "multiple", ""], ["select", "formControl", "", 3, "multiple", ""], ["select", "ngModel", "", 3, "multiple", ""]],
-  hostBindings: /* @__PURE__ */ __name(function SelectControlValueAccessor_HostBindings(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275listener("change", /* @__PURE__ */ __name(function SelectControlValueAccessor_change_HostBindingHandler($event) {
-        return ctx.onChange($event.target.value);
-      }, "SelectControlValueAccessor_change_HostBindingHandler"))("blur", /* @__PURE__ */ __name(function SelectControlValueAccessor_blur_HostBindingHandler() {
-        return ctx.onTouched();
-      }, "SelectControlValueAccessor_blur_HostBindingHandler"));
-    }
-  }, "SelectControlValueAccessor_HostBindings"),
-  inputs: {
-    compareWith: "compareWith"
-  },
-  standalone: false,
-  features: [\u0275\u0275ProvidersFeature([SELECT_VALUE_ACCESSOR]), \u0275\u0275InheritDefinitionFeature]
-}));
-var SelectControlValueAccessor = _SelectControlValueAccessor;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(SelectControlValueAccessor, [{
     type: Directive,
@@ -5734,7 +5570,7 @@ var SelectControlValueAccessor = _SelectControlValueAccessor;
     }]
   });
 })();
-var _NgSelectOption = class _NgSelectOption {
+var NgSelectOption = class _NgSelectOption {
   _element;
   _renderer;
   _select;
@@ -5780,21 +5616,19 @@ var _NgSelectOption = class _NgSelectOption {
       this._select._writeValueAfterRender();
     }
   }
+  static \u0275fac = function NgSelectOption_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _NgSelectOption)(\u0275\u0275directiveInject(ElementRef), \u0275\u0275directiveInject(Renderer2), \u0275\u0275directiveInject(SelectControlValueAccessor, 9));
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _NgSelectOption,
+    selectors: [["option"]],
+    inputs: {
+      ngValue: "ngValue",
+      value: "value"
+    },
+    standalone: false
+  });
 };
-__name(_NgSelectOption, "NgSelectOption");
-__publicField(_NgSelectOption, "\u0275fac", /* @__PURE__ */ __name(function NgSelectOption_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _NgSelectOption)(\u0275\u0275directiveInject(ElementRef), \u0275\u0275directiveInject(Renderer2), \u0275\u0275directiveInject(SelectControlValueAccessor, 9));
-}, "NgSelectOption_Factory"));
-__publicField(_NgSelectOption, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _NgSelectOption,
-  selectors: [["option"]],
-  inputs: {
-    ngValue: "ngValue",
-    value: "value"
-  },
-  standalone: false
-}));
-var NgSelectOption = _NgSelectOption;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(NgSelectOption, [{
     type: Directive,
@@ -5835,12 +5669,10 @@ function _buildValueString(id, value) {
   if (value && typeof value === "object") value = "Object";
   return `${id}: ${value}`.slice(0, 50);
 }
-__name(_buildValueString, "_buildValueString");
 function _extractId(valueString) {
   return valueString.split(":")[0];
 }
-__name(_extractId, "_extractId");
-var _SelectMultipleControlValueAccessor = class _SelectMultipleControlValueAccessor extends BuiltInControlValueAccessor {
+var SelectMultipleControlValueAccessor = class _SelectMultipleControlValueAccessor extends BuiltInControlValueAccessor {
   /**
    * The current value.
    * @docs-private
@@ -5871,13 +5703,13 @@ var _SelectMultipleControlValueAccessor = class _SelectMultipleControlValueAcces
     let optionSelectedStateSetter;
     if (Array.isArray(value)) {
       const ids = value.map((v) => this._getOptionId(v));
-      optionSelectedStateSetter = /* @__PURE__ */ __name((opt, o) => {
+      optionSelectedStateSetter = (opt, o) => {
         opt._setSelected(ids.indexOf(o.toString()) > -1);
-      }, "optionSelectedStateSetter");
+      };
     } else {
-      optionSelectedStateSetter = /* @__PURE__ */ __name((opt, o) => {
+      optionSelectedStateSetter = (opt, o) => {
         opt._setSelected(false);
-      }, "optionSelectedStateSetter");
+      };
     }
     this._optionMap.forEach(optionSelectedStateSetter);
   }
@@ -5929,33 +5761,31 @@ var _SelectMultipleControlValueAccessor = class _SelectMultipleControlValueAcces
     const id = _extractId(valueString);
     return this._optionMap.has(id) ? this._optionMap.get(id)._value : valueString;
   }
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275SelectMultipleControlValueAccessor_BaseFactory;
+    return function SelectMultipleControlValueAccessor_Factory(__ngFactoryType__) {
+      return (\u0275SelectMultipleControlValueAccessor_BaseFactory || (\u0275SelectMultipleControlValueAccessor_BaseFactory = \u0275\u0275getInheritedFactory(_SelectMultipleControlValueAccessor)))(__ngFactoryType__ || _SelectMultipleControlValueAccessor);
+    };
+  })();
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _SelectMultipleControlValueAccessor,
+    selectors: [["select", "multiple", "", "formControlName", ""], ["select", "multiple", "", "formControl", ""], ["select", "multiple", "", "ngModel", ""]],
+    hostBindings: function SelectMultipleControlValueAccessor_HostBindings(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275listener("change", function SelectMultipleControlValueAccessor_change_HostBindingHandler($event) {
+          return ctx.onChange($event.target);
+        })("blur", function SelectMultipleControlValueAccessor_blur_HostBindingHandler() {
+          return ctx.onTouched();
+        });
+      }
+    },
+    inputs: {
+      compareWith: "compareWith"
+    },
+    standalone: false,
+    features: [\u0275\u0275ProvidersFeature([SELECT_MULTIPLE_VALUE_ACCESSOR]), \u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_SelectMultipleControlValueAccessor, "SelectMultipleControlValueAccessor");
-__publicField(_SelectMultipleControlValueAccessor, "\u0275fac", /* @__PURE__ */ (() => {
-  let \u0275SelectMultipleControlValueAccessor_BaseFactory;
-  return /* @__PURE__ */ __name(function SelectMultipleControlValueAccessor_Factory(__ngFactoryType__) {
-    return (\u0275SelectMultipleControlValueAccessor_BaseFactory || (\u0275SelectMultipleControlValueAccessor_BaseFactory = \u0275\u0275getInheritedFactory(_SelectMultipleControlValueAccessor)))(__ngFactoryType__ || _SelectMultipleControlValueAccessor);
-  }, "SelectMultipleControlValueAccessor_Factory");
-})());
-__publicField(_SelectMultipleControlValueAccessor, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _SelectMultipleControlValueAccessor,
-  selectors: [["select", "multiple", "", "formControlName", ""], ["select", "multiple", "", "formControl", ""], ["select", "multiple", "", "ngModel", ""]],
-  hostBindings: /* @__PURE__ */ __name(function SelectMultipleControlValueAccessor_HostBindings(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275listener("change", /* @__PURE__ */ __name(function SelectMultipleControlValueAccessor_change_HostBindingHandler($event) {
-        return ctx.onChange($event.target);
-      }, "SelectMultipleControlValueAccessor_change_HostBindingHandler"))("blur", /* @__PURE__ */ __name(function SelectMultipleControlValueAccessor_blur_HostBindingHandler() {
-        return ctx.onTouched();
-      }, "SelectMultipleControlValueAccessor_blur_HostBindingHandler"));
-    }
-  }, "SelectMultipleControlValueAccessor_HostBindings"),
-  inputs: {
-    compareWith: "compareWith"
-  },
-  standalone: false,
-  features: [\u0275\u0275ProvidersFeature([SELECT_MULTIPLE_VALUE_ACCESSOR]), \u0275\u0275InheritDefinitionFeature]
-}));
-var SelectMultipleControlValueAccessor = _SelectMultipleControlValueAccessor;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(SelectMultipleControlValueAccessor, [{
     type: Directive,
@@ -5974,7 +5804,7 @@ var SelectMultipleControlValueAccessor = _SelectMultipleControlValueAccessor;
     }]
   });
 })();
-var _\u0275NgSelectMultipleOption = class _\u0275NgSelectMultipleOption {
+var \u0275NgSelectMultipleOption = class _\u0275NgSelectMultipleOption {
   _element;
   _renderer;
   _select;
@@ -6029,21 +5859,19 @@ var _\u0275NgSelectMultipleOption = class _\u0275NgSelectMultipleOption {
       this._select.writeValue(this._select.value);
     }
   }
+  static \u0275fac = function \u0275NgSelectMultipleOption_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _\u0275NgSelectMultipleOption)(\u0275\u0275directiveInject(ElementRef), \u0275\u0275directiveInject(Renderer2), \u0275\u0275directiveInject(SelectMultipleControlValueAccessor, 9));
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _\u0275NgSelectMultipleOption,
+    selectors: [["option"]],
+    inputs: {
+      ngValue: "ngValue",
+      value: "value"
+    },
+    standalone: false
+  });
 };
-__name(_\u0275NgSelectMultipleOption, "\u0275NgSelectMultipleOption");
-__publicField(_\u0275NgSelectMultipleOption, "\u0275fac", /* @__PURE__ */ __name(function \u0275NgSelectMultipleOption_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _\u0275NgSelectMultipleOption)(\u0275\u0275directiveInject(ElementRef), \u0275\u0275directiveInject(Renderer2), \u0275\u0275directiveInject(SelectMultipleControlValueAccessor, 9));
-}, "\u0275NgSelectMultipleOption_Factory"));
-__publicField(_\u0275NgSelectMultipleOption, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _\u0275NgSelectMultipleOption,
-  selectors: [["option"]],
-  inputs: {
-    ngValue: "ngValue",
-    value: "value"
-  },
-  standalone: false
-}));
-var \u0275NgSelectMultipleOption = _\u0275NgSelectMultipleOption;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(\u0275NgSelectMultipleOption, [{
     type: Directive,
@@ -6076,12 +5904,10 @@ var \u0275NgSelectMultipleOption = _\u0275NgSelectMultipleOption;
 function toInteger(value) {
   return typeof value === "number" ? value : parseInt(value, 10);
 }
-__name(toInteger, "toInteger");
 function toFloat(value) {
   return typeof value === "number" ? value : parseFloat(value);
 }
-__name(toFloat, "toFloat");
-var _AbstractValidatorDirective = class _AbstractValidatorDirective {
+var AbstractValidatorDirective = class _AbstractValidatorDirective {
   _validator = nullValidator;
   _onChange;
   /**
@@ -6121,16 +5947,14 @@ var _AbstractValidatorDirective = class _AbstractValidatorDirective {
   enabled(input) {
     return input != null;
   }
+  static \u0275fac = function AbstractValidatorDirective_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _AbstractValidatorDirective)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _AbstractValidatorDirective,
+    features: [\u0275\u0275NgOnChangesFeature]
+  });
 };
-__name(_AbstractValidatorDirective, "AbstractValidatorDirective");
-__publicField(_AbstractValidatorDirective, "\u0275fac", /* @__PURE__ */ __name(function AbstractValidatorDirective_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _AbstractValidatorDirective)();
-}, "AbstractValidatorDirective_Factory"));
-__publicField(_AbstractValidatorDirective, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _AbstractValidatorDirective,
-  features: [\u0275\u0275NgOnChangesFeature]
-}));
-var AbstractValidatorDirective = _AbstractValidatorDirective;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(AbstractValidatorDirective, [{
     type: Directive
@@ -6141,7 +5965,7 @@ var MAX_VALIDATOR = {
   useExisting: forwardRef(() => MaxValidator),
   multi: true
 };
-var _MaxValidator = class _MaxValidator extends AbstractValidatorDirective {
+var MaxValidator = class _MaxValidator extends AbstractValidatorDirective {
   /**
    * @description
    * Tracks changes to the max bound to this directive.
@@ -6150,33 +5974,31 @@ var _MaxValidator = class _MaxValidator extends AbstractValidatorDirective {
   /** @internal */
   inputName = "max";
   /** @internal */
-  normalizeInput = /* @__PURE__ */ __name((input) => toFloat(input), "normalizeInput");
+  normalizeInput = (input) => toFloat(input);
   /** @internal */
-  createValidator = /* @__PURE__ */ __name((max) => maxValidator(max), "createValidator");
+  createValidator = (max) => maxValidator(max);
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275MaxValidator_BaseFactory;
+    return function MaxValidator_Factory(__ngFactoryType__) {
+      return (\u0275MaxValidator_BaseFactory || (\u0275MaxValidator_BaseFactory = \u0275\u0275getInheritedFactory(_MaxValidator)))(__ngFactoryType__ || _MaxValidator);
+    };
+  })();
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _MaxValidator,
+    selectors: [["input", "type", "number", "max", "", "formControlName", ""], ["input", "type", "number", "max", "", "formControl", ""], ["input", "type", "number", "max", "", "ngModel", ""]],
+    hostVars: 1,
+    hostBindings: function MaxValidator_HostBindings(rf, ctx) {
+      if (rf & 2) {
+        \u0275\u0275attribute("max", ctx._enabled ? ctx.max : null);
+      }
+    },
+    inputs: {
+      max: "max"
+    },
+    standalone: false,
+    features: [\u0275\u0275ProvidersFeature([MAX_VALIDATOR]), \u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_MaxValidator, "MaxValidator");
-__publicField(_MaxValidator, "\u0275fac", /* @__PURE__ */ (() => {
-  let \u0275MaxValidator_BaseFactory;
-  return /* @__PURE__ */ __name(function MaxValidator_Factory(__ngFactoryType__) {
-    return (\u0275MaxValidator_BaseFactory || (\u0275MaxValidator_BaseFactory = \u0275\u0275getInheritedFactory(_MaxValidator)))(__ngFactoryType__ || _MaxValidator);
-  }, "MaxValidator_Factory");
-})());
-__publicField(_MaxValidator, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _MaxValidator,
-  selectors: [["input", "type", "number", "max", "", "formControlName", ""], ["input", "type", "number", "max", "", "formControl", ""], ["input", "type", "number", "max", "", "ngModel", ""]],
-  hostVars: 1,
-  hostBindings: /* @__PURE__ */ __name(function MaxValidator_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      \u0275\u0275attribute("max", ctx._enabled ? ctx.max : null);
-    }
-  }, "MaxValidator_HostBindings"),
-  inputs: {
-    max: "max"
-  },
-  standalone: false,
-  features: [\u0275\u0275ProvidersFeature([MAX_VALIDATOR]), \u0275\u0275InheritDefinitionFeature]
-}));
-var MaxValidator = _MaxValidator;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MaxValidator, [{
     type: Directive,
@@ -6199,7 +6021,7 @@ var MIN_VALIDATOR = {
   useExisting: forwardRef(() => MinValidator),
   multi: true
 };
-var _MinValidator = class _MinValidator extends AbstractValidatorDirective {
+var MinValidator = class _MinValidator extends AbstractValidatorDirective {
   /**
    * @description
    * Tracks changes to the min bound to this directive.
@@ -6208,33 +6030,31 @@ var _MinValidator = class _MinValidator extends AbstractValidatorDirective {
   /** @internal */
   inputName = "min";
   /** @internal */
-  normalizeInput = /* @__PURE__ */ __name((input) => toFloat(input), "normalizeInput");
+  normalizeInput = (input) => toFloat(input);
   /** @internal */
-  createValidator = /* @__PURE__ */ __name((min) => minValidator(min), "createValidator");
+  createValidator = (min) => minValidator(min);
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275MinValidator_BaseFactory;
+    return function MinValidator_Factory(__ngFactoryType__) {
+      return (\u0275MinValidator_BaseFactory || (\u0275MinValidator_BaseFactory = \u0275\u0275getInheritedFactory(_MinValidator)))(__ngFactoryType__ || _MinValidator);
+    };
+  })();
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _MinValidator,
+    selectors: [["input", "type", "number", "min", "", "formControlName", ""], ["input", "type", "number", "min", "", "formControl", ""], ["input", "type", "number", "min", "", "ngModel", ""]],
+    hostVars: 1,
+    hostBindings: function MinValidator_HostBindings(rf, ctx) {
+      if (rf & 2) {
+        \u0275\u0275attribute("min", ctx._enabled ? ctx.min : null);
+      }
+    },
+    inputs: {
+      min: "min"
+    },
+    standalone: false,
+    features: [\u0275\u0275ProvidersFeature([MIN_VALIDATOR]), \u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_MinValidator, "MinValidator");
-__publicField(_MinValidator, "\u0275fac", /* @__PURE__ */ (() => {
-  let \u0275MinValidator_BaseFactory;
-  return /* @__PURE__ */ __name(function MinValidator_Factory(__ngFactoryType__) {
-    return (\u0275MinValidator_BaseFactory || (\u0275MinValidator_BaseFactory = \u0275\u0275getInheritedFactory(_MinValidator)))(__ngFactoryType__ || _MinValidator);
-  }, "MinValidator_Factory");
-})());
-__publicField(_MinValidator, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _MinValidator,
-  selectors: [["input", "type", "number", "min", "", "formControlName", ""], ["input", "type", "number", "min", "", "formControl", ""], ["input", "type", "number", "min", "", "ngModel", ""]],
-  hostVars: 1,
-  hostBindings: /* @__PURE__ */ __name(function MinValidator_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      \u0275\u0275attribute("min", ctx._enabled ? ctx.min : null);
-    }
-  }, "MinValidator_HostBindings"),
-  inputs: {
-    min: "min"
-  },
-  standalone: false,
-  features: [\u0275\u0275ProvidersFeature([MIN_VALIDATOR]), \u0275\u0275InheritDefinitionFeature]
-}));
-var MinValidator = _MinValidator;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MinValidator, [{
     type: Directive,
@@ -6262,7 +6082,7 @@ var CHECKBOX_REQUIRED_VALIDATOR = {
   useExisting: forwardRef(() => CheckboxRequiredValidator),
   multi: true
 };
-var _RequiredValidator = class _RequiredValidator extends AbstractValidatorDirective {
+var RequiredValidator = class _RequiredValidator extends AbstractValidatorDirective {
   /**
    * @description
    * Tracks changes to the required attribute bound to this directive.
@@ -6273,35 +6093,33 @@ var _RequiredValidator = class _RequiredValidator extends AbstractValidatorDirec
   /** @internal */
   normalizeInput = booleanAttribute;
   /** @internal */
-  createValidator = /* @__PURE__ */ __name((input) => requiredValidator, "createValidator");
+  createValidator = (input) => requiredValidator;
   /** @docs-private */
   enabled(input) {
     return input;
   }
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275RequiredValidator_BaseFactory;
+    return function RequiredValidator_Factory(__ngFactoryType__) {
+      return (\u0275RequiredValidator_BaseFactory || (\u0275RequiredValidator_BaseFactory = \u0275\u0275getInheritedFactory(_RequiredValidator)))(__ngFactoryType__ || _RequiredValidator);
+    };
+  })();
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _RequiredValidator,
+    selectors: [["", "required", "", "formControlName", "", 3, "type", "checkbox"], ["", "required", "", "formControl", "", 3, "type", "checkbox"], ["", "required", "", "ngModel", "", 3, "type", "checkbox"]],
+    hostVars: 1,
+    hostBindings: function RequiredValidator_HostBindings(rf, ctx) {
+      if (rf & 2) {
+        \u0275\u0275attribute("required", ctx._enabled ? "" : null);
+      }
+    },
+    inputs: {
+      required: "required"
+    },
+    standalone: false,
+    features: [\u0275\u0275ProvidersFeature([REQUIRED_VALIDATOR]), \u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_RequiredValidator, "RequiredValidator");
-__publicField(_RequiredValidator, "\u0275fac", /* @__PURE__ */ (() => {
-  let \u0275RequiredValidator_BaseFactory;
-  return /* @__PURE__ */ __name(function RequiredValidator_Factory(__ngFactoryType__) {
-    return (\u0275RequiredValidator_BaseFactory || (\u0275RequiredValidator_BaseFactory = \u0275\u0275getInheritedFactory(_RequiredValidator)))(__ngFactoryType__ || _RequiredValidator);
-  }, "RequiredValidator_Factory");
-})());
-__publicField(_RequiredValidator, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _RequiredValidator,
-  selectors: [["", "required", "", "formControlName", "", 3, "type", "checkbox"], ["", "required", "", "formControl", "", 3, "type", "checkbox"], ["", "required", "", "ngModel", "", 3, "type", "checkbox"]],
-  hostVars: 1,
-  hostBindings: /* @__PURE__ */ __name(function RequiredValidator_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      \u0275\u0275attribute("required", ctx._enabled ? "" : null);
-    }
-  }, "RequiredValidator_HostBindings"),
-  inputs: {
-    required: "required"
-  },
-  standalone: false,
-  features: [\u0275\u0275ProvidersFeature([REQUIRED_VALIDATOR]), \u0275\u0275InheritDefinitionFeature]
-}));
-var RequiredValidator = _RequiredValidator;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(RequiredValidator, [{
     type: Directive,
@@ -6319,30 +6137,28 @@ var RequiredValidator = _RequiredValidator;
     }]
   });
 })();
-var _CheckboxRequiredValidator = class _CheckboxRequiredValidator extends RequiredValidator {
+var CheckboxRequiredValidator = class _CheckboxRequiredValidator extends RequiredValidator {
   /** @internal */
-  createValidator = /* @__PURE__ */ __name((input) => requiredTrueValidator, "createValidator");
+  createValidator = (input) => requiredTrueValidator;
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275CheckboxRequiredValidator_BaseFactory;
+    return function CheckboxRequiredValidator_Factory(__ngFactoryType__) {
+      return (\u0275CheckboxRequiredValidator_BaseFactory || (\u0275CheckboxRequiredValidator_BaseFactory = \u0275\u0275getInheritedFactory(_CheckboxRequiredValidator)))(__ngFactoryType__ || _CheckboxRequiredValidator);
+    };
+  })();
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _CheckboxRequiredValidator,
+    selectors: [["input", "type", "checkbox", "required", "", "formControlName", ""], ["input", "type", "checkbox", "required", "", "formControl", ""], ["input", "type", "checkbox", "required", "", "ngModel", ""]],
+    hostVars: 1,
+    hostBindings: function CheckboxRequiredValidator_HostBindings(rf, ctx) {
+      if (rf & 2) {
+        \u0275\u0275attribute("required", ctx._enabled ? "" : null);
+      }
+    },
+    standalone: false,
+    features: [\u0275\u0275ProvidersFeature([CHECKBOX_REQUIRED_VALIDATOR]), \u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_CheckboxRequiredValidator, "CheckboxRequiredValidator");
-__publicField(_CheckboxRequiredValidator, "\u0275fac", /* @__PURE__ */ (() => {
-  let \u0275CheckboxRequiredValidator_BaseFactory;
-  return /* @__PURE__ */ __name(function CheckboxRequiredValidator_Factory(__ngFactoryType__) {
-    return (\u0275CheckboxRequiredValidator_BaseFactory || (\u0275CheckboxRequiredValidator_BaseFactory = \u0275\u0275getInheritedFactory(_CheckboxRequiredValidator)))(__ngFactoryType__ || _CheckboxRequiredValidator);
-  }, "CheckboxRequiredValidator_Factory");
-})());
-__publicField(_CheckboxRequiredValidator, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _CheckboxRequiredValidator,
-  selectors: [["input", "type", "checkbox", "required", "", "formControlName", ""], ["input", "type", "checkbox", "required", "", "formControl", ""], ["input", "type", "checkbox", "required", "", "ngModel", ""]],
-  hostVars: 1,
-  hostBindings: /* @__PURE__ */ __name(function CheckboxRequiredValidator_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      \u0275\u0275attribute("required", ctx._enabled ? "" : null);
-    }
-  }, "CheckboxRequiredValidator_HostBindings"),
-  standalone: false,
-  features: [\u0275\u0275ProvidersFeature([CHECKBOX_REQUIRED_VALIDATOR]), \u0275\u0275InheritDefinitionFeature]
-}));
-var CheckboxRequiredValidator = _CheckboxRequiredValidator;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(CheckboxRequiredValidator, [{
     type: Directive,
@@ -6361,7 +6177,7 @@ var EMAIL_VALIDATOR = {
   useExisting: forwardRef(() => EmailValidator),
   multi: true
 };
-var _EmailValidator = class _EmailValidator extends AbstractValidatorDirective {
+var EmailValidator = class _EmailValidator extends AbstractValidatorDirective {
   /**
    * @description
    * Tracks changes to the email attribute bound to this directive.
@@ -6372,29 +6188,27 @@ var _EmailValidator = class _EmailValidator extends AbstractValidatorDirective {
   /** @internal */
   normalizeInput = booleanAttribute;
   /** @internal */
-  createValidator = /* @__PURE__ */ __name((input) => emailValidator, "createValidator");
+  createValidator = (input) => emailValidator;
   /** @docs-private */
   enabled(input) {
     return input;
   }
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275EmailValidator_BaseFactory;
+    return function EmailValidator_Factory(__ngFactoryType__) {
+      return (\u0275EmailValidator_BaseFactory || (\u0275EmailValidator_BaseFactory = \u0275\u0275getInheritedFactory(_EmailValidator)))(__ngFactoryType__ || _EmailValidator);
+    };
+  })();
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _EmailValidator,
+    selectors: [["", "email", "", "formControlName", ""], ["", "email", "", "formControl", ""], ["", "email", "", "ngModel", ""]],
+    inputs: {
+      email: "email"
+    },
+    standalone: false,
+    features: [\u0275\u0275ProvidersFeature([EMAIL_VALIDATOR]), \u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_EmailValidator, "EmailValidator");
-__publicField(_EmailValidator, "\u0275fac", /* @__PURE__ */ (() => {
-  let \u0275EmailValidator_BaseFactory;
-  return /* @__PURE__ */ __name(function EmailValidator_Factory(__ngFactoryType__) {
-    return (\u0275EmailValidator_BaseFactory || (\u0275EmailValidator_BaseFactory = \u0275\u0275getInheritedFactory(_EmailValidator)))(__ngFactoryType__ || _EmailValidator);
-  }, "EmailValidator_Factory");
-})());
-__publicField(_EmailValidator, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _EmailValidator,
-  selectors: [["", "email", "", "formControlName", ""], ["", "email", "", "formControl", ""], ["", "email", "", "ngModel", ""]],
-  inputs: {
-    email: "email"
-  },
-  standalone: false,
-  features: [\u0275\u0275ProvidersFeature([EMAIL_VALIDATOR]), \u0275\u0275InheritDefinitionFeature]
-}));
-var EmailValidator = _EmailValidator;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(EmailValidator, [{
     type: Directive,
@@ -6414,7 +6228,7 @@ var MIN_LENGTH_VALIDATOR = {
   useExisting: forwardRef(() => MinLengthValidator),
   multi: true
 };
-var _MinLengthValidator = class _MinLengthValidator extends AbstractValidatorDirective {
+var MinLengthValidator = class _MinLengthValidator extends AbstractValidatorDirective {
   /**
    * @description
    * Tracks changes to the minimum length bound to this directive.
@@ -6423,33 +6237,31 @@ var _MinLengthValidator = class _MinLengthValidator extends AbstractValidatorDir
   /** @internal */
   inputName = "minlength";
   /** @internal */
-  normalizeInput = /* @__PURE__ */ __name((input) => toInteger(input), "normalizeInput");
+  normalizeInput = (input) => toInteger(input);
   /** @internal */
-  createValidator = /* @__PURE__ */ __name((minlength) => minLengthValidator(minlength), "createValidator");
+  createValidator = (minlength) => minLengthValidator(minlength);
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275MinLengthValidator_BaseFactory;
+    return function MinLengthValidator_Factory(__ngFactoryType__) {
+      return (\u0275MinLengthValidator_BaseFactory || (\u0275MinLengthValidator_BaseFactory = \u0275\u0275getInheritedFactory(_MinLengthValidator)))(__ngFactoryType__ || _MinLengthValidator);
+    };
+  })();
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _MinLengthValidator,
+    selectors: [["", "minlength", "", "formControlName", ""], ["", "minlength", "", "formControl", ""], ["", "minlength", "", "ngModel", ""]],
+    hostVars: 1,
+    hostBindings: function MinLengthValidator_HostBindings(rf, ctx) {
+      if (rf & 2) {
+        \u0275\u0275attribute("minlength", ctx._enabled ? ctx.minlength : null);
+      }
+    },
+    inputs: {
+      minlength: "minlength"
+    },
+    standalone: false,
+    features: [\u0275\u0275ProvidersFeature([MIN_LENGTH_VALIDATOR]), \u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_MinLengthValidator, "MinLengthValidator");
-__publicField(_MinLengthValidator, "\u0275fac", /* @__PURE__ */ (() => {
-  let \u0275MinLengthValidator_BaseFactory;
-  return /* @__PURE__ */ __name(function MinLengthValidator_Factory(__ngFactoryType__) {
-    return (\u0275MinLengthValidator_BaseFactory || (\u0275MinLengthValidator_BaseFactory = \u0275\u0275getInheritedFactory(_MinLengthValidator)))(__ngFactoryType__ || _MinLengthValidator);
-  }, "MinLengthValidator_Factory");
-})());
-__publicField(_MinLengthValidator, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _MinLengthValidator,
-  selectors: [["", "minlength", "", "formControlName", ""], ["", "minlength", "", "formControl", ""], ["", "minlength", "", "ngModel", ""]],
-  hostVars: 1,
-  hostBindings: /* @__PURE__ */ __name(function MinLengthValidator_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      \u0275\u0275attribute("minlength", ctx._enabled ? ctx.minlength : null);
-    }
-  }, "MinLengthValidator_HostBindings"),
-  inputs: {
-    minlength: "minlength"
-  },
-  standalone: false,
-  features: [\u0275\u0275ProvidersFeature([MIN_LENGTH_VALIDATOR]), \u0275\u0275InheritDefinitionFeature]
-}));
-var MinLengthValidator = _MinLengthValidator;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MinLengthValidator, [{
     type: Directive,
@@ -6472,7 +6284,7 @@ var MAX_LENGTH_VALIDATOR = {
   useExisting: forwardRef(() => MaxLengthValidator),
   multi: true
 };
-var _MaxLengthValidator = class _MaxLengthValidator extends AbstractValidatorDirective {
+var MaxLengthValidator = class _MaxLengthValidator extends AbstractValidatorDirective {
   /**
    * @description
    * Tracks changes to the maximum length bound to this directive.
@@ -6481,33 +6293,31 @@ var _MaxLengthValidator = class _MaxLengthValidator extends AbstractValidatorDir
   /** @internal */
   inputName = "maxlength";
   /** @internal */
-  normalizeInput = /* @__PURE__ */ __name((input) => toInteger(input), "normalizeInput");
+  normalizeInput = (input) => toInteger(input);
   /** @internal */
-  createValidator = /* @__PURE__ */ __name((maxlength) => maxLengthValidator(maxlength), "createValidator");
+  createValidator = (maxlength) => maxLengthValidator(maxlength);
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275MaxLengthValidator_BaseFactory;
+    return function MaxLengthValidator_Factory(__ngFactoryType__) {
+      return (\u0275MaxLengthValidator_BaseFactory || (\u0275MaxLengthValidator_BaseFactory = \u0275\u0275getInheritedFactory(_MaxLengthValidator)))(__ngFactoryType__ || _MaxLengthValidator);
+    };
+  })();
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _MaxLengthValidator,
+    selectors: [["", "maxlength", "", "formControlName", ""], ["", "maxlength", "", "formControl", ""], ["", "maxlength", "", "ngModel", ""]],
+    hostVars: 1,
+    hostBindings: function MaxLengthValidator_HostBindings(rf, ctx) {
+      if (rf & 2) {
+        \u0275\u0275attribute("maxlength", ctx._enabled ? ctx.maxlength : null);
+      }
+    },
+    inputs: {
+      maxlength: "maxlength"
+    },
+    standalone: false,
+    features: [\u0275\u0275ProvidersFeature([MAX_LENGTH_VALIDATOR]), \u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_MaxLengthValidator, "MaxLengthValidator");
-__publicField(_MaxLengthValidator, "\u0275fac", /* @__PURE__ */ (() => {
-  let \u0275MaxLengthValidator_BaseFactory;
-  return /* @__PURE__ */ __name(function MaxLengthValidator_Factory(__ngFactoryType__) {
-    return (\u0275MaxLengthValidator_BaseFactory || (\u0275MaxLengthValidator_BaseFactory = \u0275\u0275getInheritedFactory(_MaxLengthValidator)))(__ngFactoryType__ || _MaxLengthValidator);
-  }, "MaxLengthValidator_Factory");
-})());
-__publicField(_MaxLengthValidator, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _MaxLengthValidator,
-  selectors: [["", "maxlength", "", "formControlName", ""], ["", "maxlength", "", "formControl", ""], ["", "maxlength", "", "ngModel", ""]],
-  hostVars: 1,
-  hostBindings: /* @__PURE__ */ __name(function MaxLengthValidator_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      \u0275\u0275attribute("maxlength", ctx._enabled ? ctx.maxlength : null);
-    }
-  }, "MaxLengthValidator_HostBindings"),
-  inputs: {
-    maxlength: "maxlength"
-  },
-  standalone: false,
-  features: [\u0275\u0275ProvidersFeature([MAX_LENGTH_VALIDATOR]), \u0275\u0275InheritDefinitionFeature]
-}));
-var MaxLengthValidator = _MaxLengthValidator;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MaxLengthValidator, [{
     type: Directive,
@@ -6530,7 +6340,7 @@ var PATTERN_VALIDATOR = {
   useExisting: forwardRef(() => PatternValidator),
   multi: true
 };
-var _PatternValidator = class _PatternValidator extends AbstractValidatorDirective {
+var PatternValidator = class _PatternValidator extends AbstractValidatorDirective {
   /**
    * @description
    * Tracks changes to the pattern bound to this directive.
@@ -6540,33 +6350,31 @@ var _PatternValidator = class _PatternValidator extends AbstractValidatorDirecti
   /** @internal */
   inputName = "pattern";
   /** @internal */
-  normalizeInput = /* @__PURE__ */ __name((input) => input, "normalizeInput");
+  normalizeInput = (input) => input;
   /** @internal */
-  createValidator = /* @__PURE__ */ __name((input) => patternValidator(input), "createValidator");
+  createValidator = (input) => patternValidator(input);
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275PatternValidator_BaseFactory;
+    return function PatternValidator_Factory(__ngFactoryType__) {
+      return (\u0275PatternValidator_BaseFactory || (\u0275PatternValidator_BaseFactory = \u0275\u0275getInheritedFactory(_PatternValidator)))(__ngFactoryType__ || _PatternValidator);
+    };
+  })();
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _PatternValidator,
+    selectors: [["", "pattern", "", "formControlName", ""], ["", "pattern", "", "formControl", ""], ["", "pattern", "", "ngModel", ""]],
+    hostVars: 1,
+    hostBindings: function PatternValidator_HostBindings(rf, ctx) {
+      if (rf & 2) {
+        \u0275\u0275attribute("pattern", ctx._enabled ? ctx.pattern : null);
+      }
+    },
+    inputs: {
+      pattern: "pattern"
+    },
+    standalone: false,
+    features: [\u0275\u0275ProvidersFeature([PATTERN_VALIDATOR]), \u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_PatternValidator, "PatternValidator");
-__publicField(_PatternValidator, "\u0275fac", /* @__PURE__ */ (() => {
-  let \u0275PatternValidator_BaseFactory;
-  return /* @__PURE__ */ __name(function PatternValidator_Factory(__ngFactoryType__) {
-    return (\u0275PatternValidator_BaseFactory || (\u0275PatternValidator_BaseFactory = \u0275\u0275getInheritedFactory(_PatternValidator)))(__ngFactoryType__ || _PatternValidator);
-  }, "PatternValidator_Factory");
-})());
-__publicField(_PatternValidator, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _PatternValidator,
-  selectors: [["", "pattern", "", "formControlName", ""], ["", "pattern", "", "formControl", ""], ["", "pattern", "", "ngModel", ""]],
-  hostVars: 1,
-  hostBindings: /* @__PURE__ */ __name(function PatternValidator_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      \u0275\u0275attribute("pattern", ctx._enabled ? ctx.pattern : null);
-    }
-  }, "PatternValidator_HostBindings"),
-  inputs: {
-    pattern: "pattern"
-  },
-  standalone: false,
-  features: [\u0275\u0275ProvidersFeature([PATTERN_VALIDATOR]), \u0275\u0275InheritDefinitionFeature]
-}));
-var PatternValidator = _PatternValidator;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(PatternValidator, [{
     type: Directive,
@@ -6587,19 +6395,17 @@ var PatternValidator = _PatternValidator;
 var SHARED_FORM_DIRECTIVES = [\u0275NgNoValidate, NgSelectOption, \u0275NgSelectMultipleOption, DefaultValueAccessor, NumberValueAccessor, RangeValueAccessor, CheckboxControlValueAccessor, SelectControlValueAccessor, SelectMultipleControlValueAccessor, RadioControlValueAccessor, NgControlStatus, NgControlStatusGroup, RequiredValidator, MinLengthValidator, MaxLengthValidator, PatternValidator, CheckboxRequiredValidator, EmailValidator, MinValidator, MaxValidator];
 var TEMPLATE_DRIVEN_DIRECTIVES = [NgModel, NgModelGroup, NgForm];
 var REACTIVE_DRIVEN_DIRECTIVES = [FormControlDirective, FormGroupDirective, FormControlName, FormGroupName, FormArrayName];
-var _\u0275InternalFormsSharedModule = class _\u0275InternalFormsSharedModule {
+var \u0275InternalFormsSharedModule = class _\u0275InternalFormsSharedModule {
+  static \u0275fac = function \u0275InternalFormsSharedModule_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _\u0275InternalFormsSharedModule)();
+  };
+  static \u0275mod = /* @__PURE__ */ \u0275\u0275defineNgModule({
+    type: _\u0275InternalFormsSharedModule,
+    declarations: [\u0275NgNoValidate, NgSelectOption, \u0275NgSelectMultipleOption, DefaultValueAccessor, NumberValueAccessor, RangeValueAccessor, CheckboxControlValueAccessor, SelectControlValueAccessor, SelectMultipleControlValueAccessor, RadioControlValueAccessor, NgControlStatus, NgControlStatusGroup, RequiredValidator, MinLengthValidator, MaxLengthValidator, PatternValidator, CheckboxRequiredValidator, EmailValidator, MinValidator, MaxValidator],
+    exports: [\u0275NgNoValidate, NgSelectOption, \u0275NgSelectMultipleOption, DefaultValueAccessor, NumberValueAccessor, RangeValueAccessor, CheckboxControlValueAccessor, SelectControlValueAccessor, SelectMultipleControlValueAccessor, RadioControlValueAccessor, NgControlStatus, NgControlStatusGroup, RequiredValidator, MinLengthValidator, MaxLengthValidator, PatternValidator, CheckboxRequiredValidator, EmailValidator, MinValidator, MaxValidator]
+  });
+  static \u0275inj = /* @__PURE__ */ \u0275\u0275defineInjector({});
 };
-__name(_\u0275InternalFormsSharedModule, "\u0275InternalFormsSharedModule");
-__publicField(_\u0275InternalFormsSharedModule, "\u0275fac", /* @__PURE__ */ __name(function \u0275InternalFormsSharedModule_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _\u0275InternalFormsSharedModule)();
-}, "\u0275InternalFormsSharedModule_Factory"));
-__publicField(_\u0275InternalFormsSharedModule, "\u0275mod", /* @__PURE__ */ \u0275\u0275defineNgModule({
-  type: _\u0275InternalFormsSharedModule,
-  declarations: [\u0275NgNoValidate, NgSelectOption, \u0275NgSelectMultipleOption, DefaultValueAccessor, NumberValueAccessor, RangeValueAccessor, CheckboxControlValueAccessor, SelectControlValueAccessor, SelectMultipleControlValueAccessor, RadioControlValueAccessor, NgControlStatus, NgControlStatusGroup, RequiredValidator, MinLengthValidator, MaxLengthValidator, PatternValidator, CheckboxRequiredValidator, EmailValidator, MinValidator, MaxValidator],
-  exports: [\u0275NgNoValidate, NgSelectOption, \u0275NgSelectMultipleOption, DefaultValueAccessor, NumberValueAccessor, RangeValueAccessor, CheckboxControlValueAccessor, SelectControlValueAccessor, SelectMultipleControlValueAccessor, RadioControlValueAccessor, NgControlStatus, NgControlStatusGroup, RequiredValidator, MinLengthValidator, MaxLengthValidator, PatternValidator, CheckboxRequiredValidator, EmailValidator, MinValidator, MaxValidator]
-}));
-__publicField(_\u0275InternalFormsSharedModule, "\u0275inj", /* @__PURE__ */ \u0275\u0275defineInjector({}));
-var \u0275InternalFormsSharedModule = _\u0275InternalFormsSharedModule;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(\u0275InternalFormsSharedModule, [{
     type: NgModule,
@@ -6609,7 +6415,7 @@ var \u0275InternalFormsSharedModule = _\u0275InternalFormsSharedModule;
     }]
   }], null, null);
 })();
-var _FormArray = class _FormArray extends AbstractControl {
+var FormArray = class extends AbstractControl {
   /**
    * Creates a new `FormArray` instance.
    *
@@ -6896,6 +6702,9 @@ var _FormArray = class _FormArray extends AbstractControl {
     this._updatePristine(options, this);
     this._updateTouched(options, this);
     this.updateValueAndValidity(options);
+    if (options?.emitEvent !== false) {
+      this._events.next(new FormResetEvent(this));
+    }
   }
   /**
    * The aggregate value of the array, including any disabled controls.
@@ -7002,13 +6811,10 @@ var _FormArray = class _FormArray extends AbstractControl {
     return this.at(name) ?? null;
   }
 };
-__name(_FormArray, "FormArray");
-var FormArray = _FormArray;
 function isAbstractControlOptions(options) {
   return !!options && (options.asyncValidators !== void 0 || options.validators !== void 0 || options.updateOn !== void 0);
 }
-__name(isAbstractControlOptions, "isAbstractControlOptions");
-var _FormBuilder = class _FormBuilder {
+var FormBuilder = class _FormBuilder {
   useNonNullable = false;
   /**
    * @description
@@ -7168,17 +6974,15 @@ var _FormBuilder = class _FormBuilder {
       return this.control(controls);
     }
   }
+  static \u0275fac = function FormBuilder_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _FormBuilder)();
+  };
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
+    token: _FormBuilder,
+    factory: _FormBuilder.\u0275fac,
+    providedIn: "root"
+  });
 };
-__name(_FormBuilder, "FormBuilder");
-__publicField(_FormBuilder, "\u0275fac", /* @__PURE__ */ __name(function FormBuilder_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _FormBuilder)();
-}, "FormBuilder_Factory"));
-__publicField(_FormBuilder, "\u0275prov", /* @__PURE__ */ \u0275\u0275defineInjectable({
-  token: _FormBuilder,
-  factory: _FormBuilder.\u0275fac,
-  providedIn: "root"
-}));
-var FormBuilder = _FormBuilder;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(FormBuilder, [{
     type: Injectable,
@@ -7187,28 +6991,26 @@ var FormBuilder = _FormBuilder;
     }]
   }], null, null);
 })();
-var _NonNullableFormBuilder = class _NonNullableFormBuilder {
+var NonNullableFormBuilder = class _NonNullableFormBuilder {
+  static \u0275fac = function NonNullableFormBuilder_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _NonNullableFormBuilder)();
+  };
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
+    token: _NonNullableFormBuilder,
+    factory: () => (() => inject(FormBuilder).nonNullable)(),
+    providedIn: "root"
+  });
 };
-__name(_NonNullableFormBuilder, "NonNullableFormBuilder");
-__publicField(_NonNullableFormBuilder, "\u0275fac", /* @__PURE__ */ __name(function NonNullableFormBuilder_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _NonNullableFormBuilder)();
-}, "NonNullableFormBuilder_Factory"));
-__publicField(_NonNullableFormBuilder, "\u0275prov", /* @__PURE__ */ \u0275\u0275defineInjectable({
-  token: _NonNullableFormBuilder,
-  factory: /* @__PURE__ */ __name(() => (() => inject(FormBuilder).nonNullable)(), "factory"),
-  providedIn: "root"
-}));
-var NonNullableFormBuilder = _NonNullableFormBuilder;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(NonNullableFormBuilder, [{
     type: Injectable,
     args: [{
       providedIn: "root",
-      useFactory: /* @__PURE__ */ __name(() => inject(FormBuilder).nonNullable, "useFactory")
+      useFactory: () => inject(FormBuilder).nonNullable
     }]
   }], null, null);
 })();
-var _UntypedFormBuilder = class _UntypedFormBuilder extends FormBuilder {
+var UntypedFormBuilder = class _UntypedFormBuilder extends FormBuilder {
   group(controlsConfig, options = null) {
     return super.group(controlsConfig, options);
   }
@@ -7224,20 +7026,18 @@ var _UntypedFormBuilder = class _UntypedFormBuilder extends FormBuilder {
   array(controlsConfig, validatorOrOpts, asyncValidator) {
     return super.array(controlsConfig, validatorOrOpts, asyncValidator);
   }
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275UntypedFormBuilder_BaseFactory;
+    return function UntypedFormBuilder_Factory(__ngFactoryType__) {
+      return (\u0275UntypedFormBuilder_BaseFactory || (\u0275UntypedFormBuilder_BaseFactory = \u0275\u0275getInheritedFactory(_UntypedFormBuilder)))(__ngFactoryType__ || _UntypedFormBuilder);
+    };
+  })();
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
+    token: _UntypedFormBuilder,
+    factory: _UntypedFormBuilder.\u0275fac,
+    providedIn: "root"
+  });
 };
-__name(_UntypedFormBuilder, "UntypedFormBuilder");
-__publicField(_UntypedFormBuilder, "\u0275fac", /* @__PURE__ */ (() => {
-  let \u0275UntypedFormBuilder_BaseFactory;
-  return /* @__PURE__ */ __name(function UntypedFormBuilder_Factory(__ngFactoryType__) {
-    return (\u0275UntypedFormBuilder_BaseFactory || (\u0275UntypedFormBuilder_BaseFactory = \u0275\u0275getInheritedFactory(_UntypedFormBuilder)))(__ngFactoryType__ || _UntypedFormBuilder);
-  }, "UntypedFormBuilder_Factory");
-})());
-__publicField(_UntypedFormBuilder, "\u0275prov", /* @__PURE__ */ \u0275\u0275defineInjectable({
-  token: _UntypedFormBuilder,
-  factory: _UntypedFormBuilder.\u0275fac,
-  providedIn: "root"
-}));
-var UntypedFormBuilder = _UntypedFormBuilder;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(UntypedFormBuilder, [{
     type: Injectable,
@@ -7246,8 +7046,8 @@ var UntypedFormBuilder = _UntypedFormBuilder;
     }]
   }], null, null);
 })();
-var VERSION = new Version("20.3.0");
-var _FormsModule = class _FormsModule {
+var VERSION = new Version("20.3.3");
+var FormsModule = class _FormsModule {
   /**
    * @description
    * Provides options for configuring the forms module.
@@ -7265,20 +7065,18 @@ var _FormsModule = class _FormsModule {
       }]
     };
   }
+  static \u0275fac = function FormsModule_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _FormsModule)();
+  };
+  static \u0275mod = /* @__PURE__ */ \u0275\u0275defineNgModule({
+    type: _FormsModule,
+    declarations: [NgModel, NgModelGroup, NgForm],
+    exports: [\u0275InternalFormsSharedModule, NgModel, NgModelGroup, NgForm]
+  });
+  static \u0275inj = /* @__PURE__ */ \u0275\u0275defineInjector({
+    imports: [\u0275InternalFormsSharedModule]
+  });
 };
-__name(_FormsModule, "FormsModule");
-__publicField(_FormsModule, "\u0275fac", /* @__PURE__ */ __name(function FormsModule_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _FormsModule)();
-}, "FormsModule_Factory"));
-__publicField(_FormsModule, "\u0275mod", /* @__PURE__ */ \u0275\u0275defineNgModule({
-  type: _FormsModule,
-  declarations: [NgModel, NgModelGroup, NgForm],
-  exports: [\u0275InternalFormsSharedModule, NgModel, NgModelGroup, NgForm]
-}));
-__publicField(_FormsModule, "\u0275inj", /* @__PURE__ */ \u0275\u0275defineInjector({
-  imports: [\u0275InternalFormsSharedModule]
-}));
-var FormsModule = _FormsModule;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(FormsModule, [{
     type: NgModule,
@@ -7288,7 +7086,7 @@ var FormsModule = _FormsModule;
     }]
   }], null, null);
 })();
-var _ReactiveFormsModule = class _ReactiveFormsModule {
+var ReactiveFormsModule = class _ReactiveFormsModule {
   /**
    * @description
    * Provides options for configuring the reactive forms module.
@@ -7311,20 +7109,18 @@ var _ReactiveFormsModule = class _ReactiveFormsModule {
       }]
     };
   }
+  static \u0275fac = function ReactiveFormsModule_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _ReactiveFormsModule)();
+  };
+  static \u0275mod = /* @__PURE__ */ \u0275\u0275defineNgModule({
+    type: _ReactiveFormsModule,
+    declarations: [FormControlDirective, FormGroupDirective, FormControlName, FormGroupName, FormArrayName],
+    exports: [\u0275InternalFormsSharedModule, FormControlDirective, FormGroupDirective, FormControlName, FormGroupName, FormArrayName]
+  });
+  static \u0275inj = /* @__PURE__ */ \u0275\u0275defineInjector({
+    imports: [\u0275InternalFormsSharedModule]
+  });
 };
-__name(_ReactiveFormsModule, "ReactiveFormsModule");
-__publicField(_ReactiveFormsModule, "\u0275fac", /* @__PURE__ */ __name(function ReactiveFormsModule_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _ReactiveFormsModule)();
-}, "ReactiveFormsModule_Factory"));
-__publicField(_ReactiveFormsModule, "\u0275mod", /* @__PURE__ */ \u0275\u0275defineNgModule({
-  type: _ReactiveFormsModule,
-  declarations: [FormControlDirective, FormGroupDirective, FormControlName, FormGroupName, FormArrayName],
-  exports: [\u0275InternalFormsSharedModule, FormControlDirective, FormGroupDirective, FormControlName, FormGroupName, FormArrayName]
-}));
-__publicField(_ReactiveFormsModule, "\u0275inj", /* @__PURE__ */ \u0275\u0275defineInjector({
-  imports: [\u0275InternalFormsSharedModule]
-}));
-var ReactiveFormsModule = _ReactiveFormsModule;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ReactiveFormsModule, [{
     type: NgModule,
@@ -7336,12 +7132,12 @@ var ReactiveFormsModule = _ReactiveFormsModule;
 })();
 
 // node_modules/@angular/cdk/fesm2022/observers/private.mjs
-var loopLimitExceededErrorHandler = /* @__PURE__ */ __name((e) => {
+var loopLimitExceededErrorHandler = (e) => {
   if (e instanceof ErrorEvent && e.message === "ResizeObserver loop limit exceeded") {
     console.error(`${e.message}. This could indicate a performance issue with your app. See https://github.com/WICG/resize-observer/blob/master/explainer.md#error-handling`);
   }
-}, "loopLimitExceededErrorHandler");
-var _SingleBoxSharedResizeObserver = class _SingleBoxSharedResizeObserver {
+};
+var SingleBoxSharedResizeObserver = class {
   _box;
   /** Stream that emits when the shared observer is destroyed. */
   _destroyed = new Subject();
@@ -7396,9 +7192,7 @@ var _SingleBoxSharedResizeObserver = class _SingleBoxSharedResizeObserver {
     this._elementObservables.clear();
   }
 };
-__name(_SingleBoxSharedResizeObserver, "SingleBoxSharedResizeObserver");
-var SingleBoxSharedResizeObserver = _SingleBoxSharedResizeObserver;
-var _SharedResizeObserver = class _SharedResizeObserver {
+var SharedResizeObserver = class _SharedResizeObserver {
   _cleanupErrorListener;
   /** Map of box type to shared resize observer. */
   _observers = /* @__PURE__ */ new Map();
@@ -7432,17 +7226,15 @@ var _SharedResizeObserver = class _SharedResizeObserver {
     }
     return this._observers.get(box).observe(target);
   }
+  static \u0275fac = function SharedResizeObserver_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _SharedResizeObserver)();
+  };
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
+    token: _SharedResizeObserver,
+    factory: _SharedResizeObserver.\u0275fac,
+    providedIn: "root"
+  });
 };
-__name(_SharedResizeObserver, "SharedResizeObserver");
-__publicField(_SharedResizeObserver, "\u0275fac", /* @__PURE__ */ __name(function SharedResizeObserver_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _SharedResizeObserver)();
-}, "SharedResizeObserver_Factory"));
-__publicField(_SharedResizeObserver, "\u0275prov", /* @__PURE__ */ \u0275\u0275defineInjectable({
-  token: _SharedResizeObserver,
-  factory: _SharedResizeObserver.\u0275fac,
-  providedIn: "root"
-}));
-var SharedResizeObserver = _SharedResizeObserver;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(SharedResizeObserver, [{
     type: Injectable,
@@ -7468,7 +7260,6 @@ function MatFormField_ng_template_0_Conditional_0_Conditional_2_Template(rf, ctx
     \u0275\u0275element(0, "span", 20);
   }
 }
-__name(MatFormField_ng_template_0_Conditional_0_Conditional_2_Template, "MatFormField_ng_template_0_Conditional_0_Conditional_2_Template");
 function MatFormField_ng_template_0_Conditional_0_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "label", 19);
@@ -7484,7 +7275,6 @@ function MatFormField_ng_template_0_Conditional_0_Template(rf, ctx) {
     \u0275\u0275conditional(!ctx_r1.hideRequiredMarker && ctx_r1._control.required ? 2 : -1);
   }
 }
-__name(MatFormField_ng_template_0_Conditional_0_Template, "MatFormField_ng_template_0_Conditional_0_Template");
 function MatFormField_ng_template_0_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275conditionalCreate(0, MatFormField_ng_template_0_Conditional_0_Template, 3, 5, "label", 19);
@@ -7494,16 +7284,13 @@ function MatFormField_ng_template_0_Template(rf, ctx) {
     \u0275\u0275conditional(ctx_r1._hasFloatingLabel() ? 0 : -1);
   }
 }
-__name(MatFormField_ng_template_0_Template, "MatFormField_ng_template_0_Template");
 function MatFormField_Conditional_4_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275element(0, "div", 7);
   }
 }
-__name(MatFormField_Conditional_4_Template, "MatFormField_Conditional_4_Template");
 function MatFormField_Conditional_6_Conditional_1_ng_template_0_Template(rf, ctx) {
 }
-__name(MatFormField_Conditional_6_Conditional_1_ng_template_0_Template, "MatFormField_Conditional_6_Conditional_1_ng_template_0_Template");
 function MatFormField_Conditional_6_Conditional_1_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275template(0, MatFormField_Conditional_6_Conditional_1_ng_template_0_Template, 0, 0, "ng-template", 13);
@@ -7514,7 +7301,6 @@ function MatFormField_Conditional_6_Conditional_1_Template(rf, ctx) {
     \u0275\u0275property("ngTemplateOutlet", labelTemplate_r3);
   }
 }
-__name(MatFormField_Conditional_6_Conditional_1_Template, "MatFormField_Conditional_6_Conditional_1_Template");
 function MatFormField_Conditional_6_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 9);
@@ -7528,7 +7314,6 @@ function MatFormField_Conditional_6_Template(rf, ctx) {
     \u0275\u0275conditional(!ctx_r1._forceDisplayInfixLabel() ? 1 : -1);
   }
 }
-__name(MatFormField_Conditional_6_Template, "MatFormField_Conditional_6_Template");
 function MatFormField_Conditional_7_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 10, 2);
@@ -7536,7 +7321,6 @@ function MatFormField_Conditional_7_Template(rf, ctx) {
     \u0275\u0275elementEnd();
   }
 }
-__name(MatFormField_Conditional_7_Template, "MatFormField_Conditional_7_Template");
 function MatFormField_Conditional_8_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 11, 3);
@@ -7544,10 +7328,8 @@ function MatFormField_Conditional_8_Template(rf, ctx) {
     \u0275\u0275elementEnd();
   }
 }
-__name(MatFormField_Conditional_8_Template, "MatFormField_Conditional_8_Template");
 function MatFormField_Conditional_10_ng_template_0_Template(rf, ctx) {
 }
-__name(MatFormField_Conditional_10_ng_template_0_Template, "MatFormField_Conditional_10_ng_template_0_Template");
 function MatFormField_Conditional_10_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275template(0, MatFormField_Conditional_10_ng_template_0_Template, 0, 0, "ng-template", 13);
@@ -7558,7 +7340,6 @@ function MatFormField_Conditional_10_Template(rf, ctx) {
     \u0275\u0275property("ngTemplateOutlet", labelTemplate_r3);
   }
 }
-__name(MatFormField_Conditional_10_Template, "MatFormField_Conditional_10_Template");
 function MatFormField_Conditional_12_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 14, 4);
@@ -7566,7 +7347,6 @@ function MatFormField_Conditional_12_Template(rf, ctx) {
     \u0275\u0275elementEnd();
   }
 }
-__name(MatFormField_Conditional_12_Template, "MatFormField_Conditional_12_Template");
 function MatFormField_Conditional_13_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 15, 5);
@@ -7574,19 +7354,16 @@ function MatFormField_Conditional_13_Template(rf, ctx) {
     \u0275\u0275elementEnd();
   }
 }
-__name(MatFormField_Conditional_13_Template, "MatFormField_Conditional_13_Template");
 function MatFormField_Conditional_14_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275element(0, "div", 16);
   }
 }
-__name(MatFormField_Conditional_14_Template, "MatFormField_Conditional_14_Template");
 function MatFormField_Case_17_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275projection(0, 6);
   }
 }
-__name(MatFormField_Case_17_Template, "MatFormField_Case_17_Template");
 function MatFormField_Case_18_Conditional_0_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "mat-hint", 21);
@@ -7600,7 +7377,6 @@ function MatFormField_Case_18_Conditional_0_Template(rf, ctx) {
     \u0275\u0275textInterpolate(ctx_r1.hintLabel);
   }
 }
-__name(MatFormField_Case_18_Conditional_0_Template, "MatFormField_Case_18_Conditional_0_Template");
 function MatFormField_Case_18_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275conditionalCreate(0, MatFormField_Case_18_Conditional_0_Template, 2, 2, "mat-hint", 21);
@@ -7613,18 +7389,15 @@ function MatFormField_Case_18_Template(rf, ctx) {
     \u0275\u0275conditional(ctx_r1.hintLabel ? 0 : -1);
   }
 }
-__name(MatFormField_Case_18_Template, "MatFormField_Case_18_Template");
-var _MatLabel = class _MatLabel {
+var MatLabel = class _MatLabel {
+  static \u0275fac = function MatLabel_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatLabel)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _MatLabel,
+    selectors: [["mat-label"]]
+  });
 };
-__name(_MatLabel, "MatLabel");
-__publicField(_MatLabel, "\u0275fac", /* @__PURE__ */ __name(function MatLabel_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatLabel)();
-}, "MatLabel_Factory"));
-__publicField(_MatLabel, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _MatLabel,
-  selectors: [["mat-label"]]
-}));
-var MatLabel = _MatLabel;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatLabel, [{
     type: Directive,
@@ -7634,34 +7407,32 @@ var MatLabel = _MatLabel;
   }], null, null);
 })();
 var MAT_ERROR = new InjectionToken("MatError");
-var _MatError = class _MatError {
+var MatError = class _MatError {
   id = inject(_IdGenerator).getId("mat-mdc-error-");
   constructor() {
   }
+  static \u0275fac = function MatError_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatError)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _MatError,
+    selectors: [["mat-error"], ["", "matError", ""]],
+    hostAttrs: [1, "mat-mdc-form-field-error", "mat-mdc-form-field-bottom-align"],
+    hostVars: 1,
+    hostBindings: function MatError_HostBindings(rf, ctx) {
+      if (rf & 2) {
+        \u0275\u0275domProperty("id", ctx.id);
+      }
+    },
+    inputs: {
+      id: "id"
+    },
+    features: [\u0275\u0275ProvidersFeature([{
+      provide: MAT_ERROR,
+      useExisting: _MatError
+    }])]
+  });
 };
-__name(_MatError, "MatError");
-__publicField(_MatError, "\u0275fac", /* @__PURE__ */ __name(function MatError_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatError)();
-}, "MatError_Factory"));
-__publicField(_MatError, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _MatError,
-  selectors: [["mat-error"], ["", "matError", ""]],
-  hostAttrs: [1, "mat-mdc-form-field-error", "mat-mdc-form-field-bottom-align"],
-  hostVars: 1,
-  hostBindings: /* @__PURE__ */ __name(function MatError_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      \u0275\u0275domProperty("id", ctx.id);
-    }
-  }, "MatError_HostBindings"),
-  inputs: {
-    id: "id"
-  },
-  features: [\u0275\u0275ProvidersFeature([{
-    provide: MAT_ERROR,
-    useExisting: _MatError
-  }])]
-}));
-var MatError = _MatError;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatError, [{
     type: Directive,
@@ -7682,34 +7453,32 @@ var MatError = _MatError;
     }]
   });
 })();
-var _MatHint = class _MatHint {
+var MatHint = class _MatHint {
   /** Whether to align the hint label at the start or end of the line. */
   align = "start";
   /** Unique ID for the hint. Used for the aria-describedby on the form field control. */
   id = inject(_IdGenerator).getId("mat-mdc-hint-");
-};
-__name(_MatHint, "MatHint");
-__publicField(_MatHint, "\u0275fac", /* @__PURE__ */ __name(function MatHint_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatHint)();
-}, "MatHint_Factory"));
-__publicField(_MatHint, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _MatHint,
-  selectors: [["mat-hint"]],
-  hostAttrs: [1, "mat-mdc-form-field-hint", "mat-mdc-form-field-bottom-align"],
-  hostVars: 4,
-  hostBindings: /* @__PURE__ */ __name(function MatHint_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      \u0275\u0275domProperty("id", ctx.id);
-      \u0275\u0275attribute("align", null);
-      \u0275\u0275classProp("mat-mdc-form-field-hint-end", ctx.align === "end");
+  static \u0275fac = function MatHint_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatHint)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _MatHint,
+    selectors: [["mat-hint"]],
+    hostAttrs: [1, "mat-mdc-form-field-hint", "mat-mdc-form-field-bottom-align"],
+    hostVars: 4,
+    hostBindings: function MatHint_HostBindings(rf, ctx) {
+      if (rf & 2) {
+        \u0275\u0275domProperty("id", ctx.id);
+        \u0275\u0275attribute("align", null);
+        \u0275\u0275classProp("mat-mdc-form-field-hint-end", ctx.align === "end");
+      }
+    },
+    inputs: {
+      align: "align",
+      id: "id"
     }
-  }, "MatHint_HostBindings"),
-  inputs: {
-    align: "align",
-    id: "id"
-  }
-}));
-var MatHint = _MatHint;
+  });
+};
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatHint, [{
     type: Directive,
@@ -7733,28 +7502,26 @@ var MatHint = _MatHint;
   });
 })();
 var MAT_PREFIX = new InjectionToken("MatPrefix");
-var _MatPrefix = class _MatPrefix {
+var MatPrefix = class _MatPrefix {
   set _isTextSelector(value) {
     this._isText = true;
   }
   _isText = false;
+  static \u0275fac = function MatPrefix_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatPrefix)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _MatPrefix,
+    selectors: [["", "matPrefix", ""], ["", "matIconPrefix", ""], ["", "matTextPrefix", ""]],
+    inputs: {
+      _isTextSelector: [0, "matTextPrefix", "_isTextSelector"]
+    },
+    features: [\u0275\u0275ProvidersFeature([{
+      provide: MAT_PREFIX,
+      useExisting: _MatPrefix
+    }])]
+  });
 };
-__name(_MatPrefix, "MatPrefix");
-__publicField(_MatPrefix, "\u0275fac", /* @__PURE__ */ __name(function MatPrefix_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatPrefix)();
-}, "MatPrefix_Factory"));
-__publicField(_MatPrefix, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _MatPrefix,
-  selectors: [["", "matPrefix", ""], ["", "matIconPrefix", ""], ["", "matTextPrefix", ""]],
-  inputs: {
-    _isTextSelector: [0, "matTextPrefix", "_isTextSelector"]
-  },
-  features: [\u0275\u0275ProvidersFeature([{
-    provide: MAT_PREFIX,
-    useExisting: _MatPrefix
-  }])]
-}));
-var MatPrefix = _MatPrefix;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatPrefix, [{
     type: Directive,
@@ -7773,28 +7540,26 @@ var MatPrefix = _MatPrefix;
   });
 })();
 var MAT_SUFFIX = new InjectionToken("MatSuffix");
-var _MatSuffix = class _MatSuffix {
+var MatSuffix = class _MatSuffix {
   set _isTextSelector(value) {
     this._isText = true;
   }
   _isText = false;
+  static \u0275fac = function MatSuffix_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatSuffix)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _MatSuffix,
+    selectors: [["", "matSuffix", ""], ["", "matIconSuffix", ""], ["", "matTextSuffix", ""]],
+    inputs: {
+      _isTextSelector: [0, "matTextSuffix", "_isTextSelector"]
+    },
+    features: [\u0275\u0275ProvidersFeature([{
+      provide: MAT_SUFFIX,
+      useExisting: _MatSuffix
+    }])]
+  });
 };
-__name(_MatSuffix, "MatSuffix");
-__publicField(_MatSuffix, "\u0275fac", /* @__PURE__ */ __name(function MatSuffix_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatSuffix)();
-}, "MatSuffix_Factory"));
-__publicField(_MatSuffix, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _MatSuffix,
-  selectors: [["", "matSuffix", ""], ["", "matIconSuffix", ""], ["", "matTextSuffix", ""]],
-  inputs: {
-    _isTextSelector: [0, "matTextSuffix", "_isTextSelector"]
-  },
-  features: [\u0275\u0275ProvidersFeature([{
-    provide: MAT_SUFFIX,
-    useExisting: _MatSuffix
-  }])]
-}));
-var MatSuffix = _MatSuffix;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatSuffix, [{
     type: Directive,
@@ -7813,7 +7578,7 @@ var MatSuffix = _MatSuffix;
   });
 })();
 var FLOATING_LABEL_PARENT = new InjectionToken("FloatingLabelParent");
-var _MatFormFieldFloatingLabel = class _MatFormFieldFloatingLabel {
+var MatFormFieldFloatingLabel = class _MatFormFieldFloatingLabel {
   _elementRef = inject(ElementRef);
   /** Whether the label is floating. */
   get floating() {
@@ -7873,27 +7638,25 @@ var _MatFormFieldFloatingLabel = class _MatFormFieldFloatingLabel {
       }).subscribe(() => this._handleResize());
     });
   }
-};
-__name(_MatFormFieldFloatingLabel, "MatFormFieldFloatingLabel");
-__publicField(_MatFormFieldFloatingLabel, "\u0275fac", /* @__PURE__ */ __name(function MatFormFieldFloatingLabel_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatFormFieldFloatingLabel)();
-}, "MatFormFieldFloatingLabel_Factory"));
-__publicField(_MatFormFieldFloatingLabel, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _MatFormFieldFloatingLabel,
-  selectors: [["label", "matFormFieldFloatingLabel", ""]],
-  hostAttrs: [1, "mdc-floating-label", "mat-mdc-floating-label"],
-  hostVars: 2,
-  hostBindings: /* @__PURE__ */ __name(function MatFormFieldFloatingLabel_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      \u0275\u0275classProp("mdc-floating-label--float-above", ctx.floating);
+  static \u0275fac = function MatFormFieldFloatingLabel_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatFormFieldFloatingLabel)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _MatFormFieldFloatingLabel,
+    selectors: [["label", "matFormFieldFloatingLabel", ""]],
+    hostAttrs: [1, "mdc-floating-label", "mat-mdc-floating-label"],
+    hostVars: 2,
+    hostBindings: function MatFormFieldFloatingLabel_HostBindings(rf, ctx) {
+      if (rf & 2) {
+        \u0275\u0275classProp("mdc-floating-label--float-above", ctx.floating);
+      }
+    },
+    inputs: {
+      floating: "floating",
+      monitorResize: "monitorResize"
     }
-  }, "MatFormFieldFloatingLabel_HostBindings"),
-  inputs: {
-    floating: "floating",
-    monitorResize: "monitorResize"
-  }
-}));
-var MatFormFieldFloatingLabel = _MatFormFieldFloatingLabel;
+  });
+};
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatFormFieldFloatingLabel, [{
     type: Directive,
@@ -7926,10 +7689,9 @@ function estimateScrollWidth(element) {
   clone.remove();
   return scrollWidth;
 }
-__name(estimateScrollWidth, "estimateScrollWidth");
 var ACTIVATE_CLASS = "mdc-line-ripple--active";
 var DEACTIVATING_CLASS = "mdc-line-ripple--deactivating";
-var _MatFormFieldLineRipple = class _MatFormFieldLineRipple {
+var MatFormFieldLineRipple = class _MatFormFieldLineRipple {
   _elementRef = inject(ElementRef);
   _cleanupTransitionEnd;
   constructor() {
@@ -7947,27 +7709,25 @@ var _MatFormFieldLineRipple = class _MatFormFieldLineRipple {
   deactivate() {
     this._elementRef.nativeElement.classList.add(DEACTIVATING_CLASS);
   }
-  _handleTransitionEnd = /* @__PURE__ */ __name((event) => {
+  _handleTransitionEnd = (event) => {
     const classList = this._elementRef.nativeElement.classList;
     const isDeactivating = classList.contains(DEACTIVATING_CLASS);
     if (event.propertyName === "opacity" && isDeactivating) {
       classList.remove(ACTIVATE_CLASS, DEACTIVATING_CLASS);
     }
-  }, "_handleTransitionEnd");
+  };
   ngOnDestroy() {
     this._cleanupTransitionEnd();
   }
+  static \u0275fac = function MatFormFieldLineRipple_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatFormFieldLineRipple)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _MatFormFieldLineRipple,
+    selectors: [["div", "matFormFieldLineRipple", ""]],
+    hostAttrs: [1, "mdc-line-ripple"]
+  });
 };
-__name(_MatFormFieldLineRipple, "MatFormFieldLineRipple");
-__publicField(_MatFormFieldLineRipple, "\u0275fac", /* @__PURE__ */ __name(function MatFormFieldLineRipple_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatFormFieldLineRipple)();
-}, "MatFormFieldLineRipple_Factory"));
-__publicField(_MatFormFieldLineRipple, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _MatFormFieldLineRipple,
-  selectors: [["div", "matFormFieldLineRipple", ""]],
-  hostAttrs: [1, "mdc-line-ripple"]
-}));
-var MatFormFieldLineRipple = _MatFormFieldLineRipple;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatFormFieldLineRipple, [{
     type: Directive,
@@ -7979,7 +7739,7 @@ var MatFormFieldLineRipple = _MatFormFieldLineRipple;
     }]
   }], () => [], null);
 })();
-var _MatFormFieldNotchedOutline = class _MatFormFieldNotchedOutline {
+var MatFormFieldNotchedOutline = class _MatFormFieldNotchedOutline {
   _elementRef = inject(ElementRef);
   _ngZone = inject(NgZone);
   /** Whether the notch should be opened. */
@@ -8013,52 +7773,50 @@ var _MatFormFieldNotchedOutline = class _MatFormFieldNotchedOutline {
   _setMaxWidth(prefixAndSuffixWidth) {
     this._notch.nativeElement.style.setProperty("--mat-form-field-notch-max-width", `calc(100% - ${prefixAndSuffixWidth}px)`);
   }
+  static \u0275fac = function MatFormFieldNotchedOutline_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatFormFieldNotchedOutline)();
+  };
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
+    type: _MatFormFieldNotchedOutline,
+    selectors: [["div", "matFormFieldNotchedOutline", ""]],
+    viewQuery: function MatFormFieldNotchedOutline_Query(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275viewQuery(_c02, 5);
+      }
+      if (rf & 2) {
+        let _t;
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._notch = _t.first);
+      }
+    },
+    hostAttrs: [1, "mdc-notched-outline"],
+    hostVars: 2,
+    hostBindings: function MatFormFieldNotchedOutline_HostBindings(rf, ctx) {
+      if (rf & 2) {
+        \u0275\u0275classProp("mdc-notched-outline--notched", ctx.open);
+      }
+    },
+    inputs: {
+      open: [0, "matFormFieldNotchedOutlineOpen", "open"]
+    },
+    attrs: _c12,
+    ngContentSelectors: _c2,
+    decls: 5,
+    vars: 0,
+    consts: [["notch", ""], [1, "mat-mdc-notch-piece", "mdc-notched-outline__leading"], [1, "mat-mdc-notch-piece", "mdc-notched-outline__notch"], [1, "mat-mdc-notch-piece", "mdc-notched-outline__trailing"]],
+    template: function MatFormFieldNotchedOutline_Template(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275projectionDef();
+        \u0275\u0275domElement(0, "div", 1);
+        \u0275\u0275domElementStart(1, "div", 2, 0);
+        \u0275\u0275projection(3);
+        \u0275\u0275domElementEnd();
+        \u0275\u0275domElement(4, "div", 3);
+      }
+    },
+    encapsulation: 2,
+    changeDetection: 0
+  });
 };
-__name(_MatFormFieldNotchedOutline, "MatFormFieldNotchedOutline");
-__publicField(_MatFormFieldNotchedOutline, "\u0275fac", /* @__PURE__ */ __name(function MatFormFieldNotchedOutline_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatFormFieldNotchedOutline)();
-}, "MatFormFieldNotchedOutline_Factory"));
-__publicField(_MatFormFieldNotchedOutline, "\u0275cmp", /* @__PURE__ */ \u0275\u0275defineComponent({
-  type: _MatFormFieldNotchedOutline,
-  selectors: [["div", "matFormFieldNotchedOutline", ""]],
-  viewQuery: /* @__PURE__ */ __name(function MatFormFieldNotchedOutline_Query(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275viewQuery(_c02, 5);
-    }
-    if (rf & 2) {
-      let _t;
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._notch = _t.first);
-    }
-  }, "MatFormFieldNotchedOutline_Query"),
-  hostAttrs: [1, "mdc-notched-outline"],
-  hostVars: 2,
-  hostBindings: /* @__PURE__ */ __name(function MatFormFieldNotchedOutline_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      \u0275\u0275classProp("mdc-notched-outline--notched", ctx.open);
-    }
-  }, "MatFormFieldNotchedOutline_HostBindings"),
-  inputs: {
-    open: [0, "matFormFieldNotchedOutlineOpen", "open"]
-  },
-  attrs: _c12,
-  ngContentSelectors: _c2,
-  decls: 5,
-  vars: 0,
-  consts: [["notch", ""], [1, "mat-mdc-notch-piece", "mdc-notched-outline__leading"], [1, "mat-mdc-notch-piece", "mdc-notched-outline__notch"], [1, "mat-mdc-notch-piece", "mdc-notched-outline__trailing"]],
-  template: /* @__PURE__ */ __name(function MatFormFieldNotchedOutline_Template(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275projectionDef();
-      \u0275\u0275domElement(0, "div", 1);
-      \u0275\u0275domElementStart(1, "div", 2, 0);
-      \u0275\u0275projection(3);
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElement(4, "div", 3);
-    }
-  }, "MatFormFieldNotchedOutline_Template"),
-  encapsulation: 2,
-  changeDetection: 0
-}));
-var MatFormFieldNotchedOutline = _MatFormFieldNotchedOutline;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatFormFieldNotchedOutline, [{
     type: Component,
@@ -8085,7 +7843,7 @@ var MatFormFieldNotchedOutline = _MatFormFieldNotchedOutline;
     }]
   });
 })();
-var _MatFormFieldControl = class _MatFormFieldControl {
+var MatFormFieldControl = class _MatFormFieldControl {
   /** The value of the control. */
   value;
   /**
@@ -8135,15 +7893,13 @@ var _MatFormFieldControl = class _MatFormFieldControl {
   disableAutomaticLabeling;
   /** Gets the list of element IDs that currently describe this control. */
   describedByIds;
+  static \u0275fac = function MatFormFieldControl_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatFormFieldControl)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _MatFormFieldControl
+  });
 };
-__name(_MatFormFieldControl, "MatFormFieldControl");
-__publicField(_MatFormFieldControl, "\u0275fac", /* @__PURE__ */ __name(function MatFormFieldControl_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatFormFieldControl)();
-}, "MatFormFieldControl_Factory"));
-__publicField(_MatFormFieldControl, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _MatFormFieldControl
-}));
-var MatFormFieldControl = _MatFormFieldControl;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatFormFieldControl, [{
     type: Directive
@@ -8152,18 +7908,16 @@ var MatFormFieldControl = _MatFormFieldControl;
 function getMatFormFieldDuplicatedHintError(align) {
   return Error(`A hint was already declared for 'align="${align}"'.`);
 }
-__name(getMatFormFieldDuplicatedHintError, "getMatFormFieldDuplicatedHintError");
 function getMatFormFieldMissingControlError() {
   return Error("mat-form-field must contain a MatFormFieldControl.");
 }
-__name(getMatFormFieldMissingControlError, "getMatFormFieldMissingControlError");
 var MAT_FORM_FIELD = new InjectionToken("MatFormField");
 var MAT_FORM_FIELD_DEFAULT_OPTIONS = new InjectionToken("MAT_FORM_FIELD_DEFAULT_OPTIONS");
 var DEFAULT_APPEARANCE = "fill";
 var DEFAULT_FLOAT_LABEL = "auto";
 var DEFAULT_SUBSCRIPT_SIZING = "fixed";
 var FLOATING_LABEL_DEFAULT_DOCKED_TRANSFORM = `translateY(-50%)`;
-var _MatFormField = class _MatFormField {
+var MatFormField = class _MatFormField {
   _elementRef = inject(ElementRef);
   _changeDetectorRef = inject(ChangeDetectorRef);
   _platform = inject(Platform);
@@ -8452,7 +8206,7 @@ var _MatFormField = class _MatFormField {
    */
   _syncOutlineLabelOffset() {
     afterRenderEffect({
-      earlyRead: /* @__PURE__ */ __name(() => {
+      earlyRead: () => {
         if (this._appearanceSignal() !== "outline") {
           this._outlineLabelOffsetResizeObserver?.disconnect();
           return null;
@@ -8468,8 +8222,8 @@ var _MatFormField = class _MatFormField {
           }
         }
         return this._getOutlinedLabelOffset();
-      }, "earlyRead"),
-      write: /* @__PURE__ */ __name((labelStyles) => this._writeOutlinedLabelStyles(labelStyles()), "write")
+      },
+      write: (labelStyles) => this._writeOutlinedLabelStyles(labelStyles())
     });
   }
   /** Whether the floating label should always float or not. */
@@ -8645,151 +8399,149 @@ var _MatFormField = class _MatFormField {
     }
     return document.documentElement.contains(element);
   }
+  static \u0275fac = function MatFormField_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _MatFormField)();
+  };
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
+    type: _MatFormField,
+    selectors: [["mat-form-field"]],
+    contentQueries: function MatFormField_ContentQueries(rf, ctx, dirIndex) {
+      if (rf & 1) {
+        \u0275\u0275contentQuerySignal(dirIndex, ctx._labelChild, MatLabel, 5);
+        \u0275\u0275contentQuery(dirIndex, MatFormFieldControl, 5);
+        \u0275\u0275contentQuery(dirIndex, MAT_PREFIX, 5);
+        \u0275\u0275contentQuery(dirIndex, MAT_SUFFIX, 5);
+        \u0275\u0275contentQuery(dirIndex, MAT_ERROR, 5);
+        \u0275\u0275contentQuery(dirIndex, MatHint, 5);
+      }
+      if (rf & 2) {
+        \u0275\u0275queryAdvance();
+        let _t;
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._formFieldControl = _t.first);
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._prefixChildren = _t);
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._suffixChildren = _t);
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._errorChildren = _t);
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._hintChildren = _t);
+      }
+    },
+    viewQuery: function MatFormField_Query(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275viewQuerySignal(ctx._iconPrefixContainerSignal, _c3, 5);
+        \u0275\u0275viewQuerySignal(ctx._textPrefixContainerSignal, _c4, 5);
+        \u0275\u0275viewQuerySignal(ctx._iconSuffixContainerSignal, _c5, 5);
+        \u0275\u0275viewQuerySignal(ctx._textSuffixContainerSignal, _c6, 5);
+        \u0275\u0275viewQuery(_c7, 5);
+        \u0275\u0275viewQuery(_c3, 5);
+        \u0275\u0275viewQuery(_c4, 5);
+        \u0275\u0275viewQuery(_c5, 5);
+        \u0275\u0275viewQuery(_c6, 5);
+        \u0275\u0275viewQuery(MatFormFieldFloatingLabel, 5);
+        \u0275\u0275viewQuery(MatFormFieldNotchedOutline, 5);
+        \u0275\u0275viewQuery(MatFormFieldLineRipple, 5);
+      }
+      if (rf & 2) {
+        \u0275\u0275queryAdvance(4);
+        let _t;
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._textField = _t.first);
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._iconPrefixContainer = _t.first);
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._textPrefixContainer = _t.first);
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._iconSuffixContainer = _t.first);
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._textSuffixContainer = _t.first);
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._floatingLabel = _t.first);
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._notchedOutline = _t.first);
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._lineRipple = _t.first);
+      }
+    },
+    hostAttrs: [1, "mat-mdc-form-field"],
+    hostVars: 38,
+    hostBindings: function MatFormField_HostBindings(rf, ctx) {
+      if (rf & 2) {
+        \u0275\u0275classProp("mat-mdc-form-field-label-always-float", ctx._shouldAlwaysFloat())("mat-mdc-form-field-has-icon-prefix", ctx._hasIconPrefix)("mat-mdc-form-field-has-icon-suffix", ctx._hasIconSuffix)("mat-form-field-invalid", ctx._control.errorState)("mat-form-field-disabled", ctx._control.disabled)("mat-form-field-autofilled", ctx._control.autofilled)("mat-form-field-appearance-fill", ctx.appearance == "fill")("mat-form-field-appearance-outline", ctx.appearance == "outline")("mat-form-field-hide-placeholder", ctx._hasFloatingLabel() && !ctx._shouldLabelFloat())("mat-primary", ctx.color !== "accent" && ctx.color !== "warn")("mat-accent", ctx.color === "accent")("mat-warn", ctx.color === "warn")("ng-untouched", ctx._shouldForward("untouched"))("ng-touched", ctx._shouldForward("touched"))("ng-pristine", ctx._shouldForward("pristine"))("ng-dirty", ctx._shouldForward("dirty"))("ng-valid", ctx._shouldForward("valid"))("ng-invalid", ctx._shouldForward("invalid"))("ng-pending", ctx._shouldForward("pending"));
+      }
+    },
+    inputs: {
+      hideRequiredMarker: "hideRequiredMarker",
+      color: "color",
+      floatLabel: "floatLabel",
+      appearance: "appearance",
+      subscriptSizing: "subscriptSizing",
+      hintLabel: "hintLabel"
+    },
+    exportAs: ["matFormField"],
+    features: [\u0275\u0275ProvidersFeature([{
+      provide: MAT_FORM_FIELD,
+      useExisting: _MatFormField
+    }, {
+      provide: FLOATING_LABEL_PARENT,
+      useExisting: _MatFormField
+    }])],
+    ngContentSelectors: _c9,
+    decls: 19,
+    vars: 25,
+    consts: [["labelTemplate", ""], ["textField", ""], ["iconPrefixContainer", ""], ["textPrefixContainer", ""], ["textSuffixContainer", ""], ["iconSuffixContainer", ""], [1, "mat-mdc-text-field-wrapper", "mdc-text-field", 3, "click"], [1, "mat-mdc-form-field-focus-overlay"], [1, "mat-mdc-form-field-flex"], ["matFormFieldNotchedOutline", "", 3, "matFormFieldNotchedOutlineOpen"], [1, "mat-mdc-form-field-icon-prefix"], [1, "mat-mdc-form-field-text-prefix"], [1, "mat-mdc-form-field-infix"], [3, "ngTemplateOutlet"], [1, "mat-mdc-form-field-text-suffix"], [1, "mat-mdc-form-field-icon-suffix"], ["matFormFieldLineRipple", ""], [1, "mat-mdc-form-field-subscript-wrapper", "mat-mdc-form-field-bottom-align"], ["aria-atomic", "true", "aria-live", "polite"], ["matFormFieldFloatingLabel", "", 3, "floating", "monitorResize", "id"], ["aria-hidden", "true", 1, "mat-mdc-form-field-required-marker", "mdc-floating-label--required"], [3, "id"], [1, "mat-mdc-form-field-hint-spacer"]],
+    template: function MatFormField_Template(rf, ctx) {
+      if (rf & 1) {
+        const _r1 = \u0275\u0275getCurrentView();
+        \u0275\u0275projectionDef(_c8);
+        \u0275\u0275template(0, MatFormField_ng_template_0_Template, 1, 1, "ng-template", null, 0, \u0275\u0275templateRefExtractor);
+        \u0275\u0275elementStart(2, "div", 6, 1);
+        \u0275\u0275listener("click", function MatFormField_Template_div_click_2_listener($event) {
+          \u0275\u0275restoreView(_r1);
+          return \u0275\u0275resetView(ctx._control.onContainerClick($event));
+        });
+        \u0275\u0275conditionalCreate(4, MatFormField_Conditional_4_Template, 1, 0, "div", 7);
+        \u0275\u0275elementStart(5, "div", 8);
+        \u0275\u0275conditionalCreate(6, MatFormField_Conditional_6_Template, 2, 2, "div", 9);
+        \u0275\u0275conditionalCreate(7, MatFormField_Conditional_7_Template, 3, 0, "div", 10);
+        \u0275\u0275conditionalCreate(8, MatFormField_Conditional_8_Template, 3, 0, "div", 11);
+        \u0275\u0275elementStart(9, "div", 12);
+        \u0275\u0275conditionalCreate(10, MatFormField_Conditional_10_Template, 1, 1, null, 13);
+        \u0275\u0275projection(11);
+        \u0275\u0275elementEnd();
+        \u0275\u0275conditionalCreate(12, MatFormField_Conditional_12_Template, 3, 0, "div", 14);
+        \u0275\u0275conditionalCreate(13, MatFormField_Conditional_13_Template, 3, 0, "div", 15);
+        \u0275\u0275elementEnd();
+        \u0275\u0275conditionalCreate(14, MatFormField_Conditional_14_Template, 1, 0, "div", 16);
+        \u0275\u0275elementEnd();
+        \u0275\u0275elementStart(15, "div", 17)(16, "div", 18);
+        \u0275\u0275conditionalCreate(17, MatFormField_Case_17_Template, 1, 0)(18, MatFormField_Case_18_Template, 4, 1);
+        \u0275\u0275elementEnd()();
+      }
+      if (rf & 2) {
+        let tmp_19_0;
+        \u0275\u0275advance(2);
+        \u0275\u0275classProp("mdc-text-field--filled", !ctx._hasOutline())("mdc-text-field--outlined", ctx._hasOutline())("mdc-text-field--no-label", !ctx._hasFloatingLabel())("mdc-text-field--disabled", ctx._control.disabled)("mdc-text-field--invalid", ctx._control.errorState);
+        \u0275\u0275advance(2);
+        \u0275\u0275conditional(!ctx._hasOutline() && !ctx._control.disabled ? 4 : -1);
+        \u0275\u0275advance(2);
+        \u0275\u0275conditional(ctx._hasOutline() ? 6 : -1);
+        \u0275\u0275advance();
+        \u0275\u0275conditional(ctx._hasIconPrefix ? 7 : -1);
+        \u0275\u0275advance();
+        \u0275\u0275conditional(ctx._hasTextPrefix ? 8 : -1);
+        \u0275\u0275advance(2);
+        \u0275\u0275conditional(!ctx._hasOutline() || ctx._forceDisplayInfixLabel() ? 10 : -1);
+        \u0275\u0275advance(2);
+        \u0275\u0275conditional(ctx._hasTextSuffix ? 12 : -1);
+        \u0275\u0275advance();
+        \u0275\u0275conditional(ctx._hasIconSuffix ? 13 : -1);
+        \u0275\u0275advance();
+        \u0275\u0275conditional(!ctx._hasOutline() ? 14 : -1);
+        \u0275\u0275advance();
+        \u0275\u0275classProp("mat-mdc-form-field-subscript-dynamic-size", ctx.subscriptSizing === "dynamic");
+        const subscriptMessageType_r4 = ctx._getSubscriptMessageType();
+        \u0275\u0275advance();
+        \u0275\u0275classProp("mat-mdc-form-field-error-wrapper", subscriptMessageType_r4 === "error")("mat-mdc-form-field-hint-wrapper", subscriptMessageType_r4 === "hint");
+        \u0275\u0275advance();
+        \u0275\u0275conditional((tmp_19_0 = subscriptMessageType_r4) === "error" ? 17 : tmp_19_0 === "hint" ? 18 : -1);
+      }
+    },
+    dependencies: [MatFormFieldFloatingLabel, MatFormFieldNotchedOutline, NgTemplateOutlet, MatFormFieldLineRipple, MatHint],
+    styles: ['.mdc-text-field{display:inline-flex;align-items:baseline;padding:0 16px;position:relative;box-sizing:border-box;overflow:hidden;will-change:opacity,transform,color;border-top-left-radius:4px;border-top-right-radius:4px;border-bottom-right-radius:0;border-bottom-left-radius:0}.mdc-text-field__input{width:100%;min-width:0;border:none;border-radius:0;background:none;padding:0;-moz-appearance:none;-webkit-appearance:none;height:28px}.mdc-text-field__input::-webkit-calendar-picker-indicator,.mdc-text-field__input::-webkit-search-cancel-button{display:none}.mdc-text-field__input::-ms-clear{display:none}.mdc-text-field__input:focus{outline:none}.mdc-text-field__input:invalid{box-shadow:none}.mdc-text-field__input::placeholder{opacity:0}.mdc-text-field__input::-moz-placeholder{opacity:0}.mdc-text-field__input::-webkit-input-placeholder{opacity:0}.mdc-text-field__input:-ms-input-placeholder{opacity:0}.mdc-text-field--no-label .mdc-text-field__input::placeholder,.mdc-text-field--focused .mdc-text-field__input::placeholder{opacity:1}.mdc-text-field--no-label .mdc-text-field__input::-moz-placeholder,.mdc-text-field--focused .mdc-text-field__input::-moz-placeholder{opacity:1}.mdc-text-field--no-label .mdc-text-field__input::-webkit-input-placeholder,.mdc-text-field--focused .mdc-text-field__input::-webkit-input-placeholder{opacity:1}.mdc-text-field--no-label .mdc-text-field__input:-ms-input-placeholder,.mdc-text-field--focused .mdc-text-field__input:-ms-input-placeholder{opacity:1}.mdc-text-field--disabled:not(.mdc-text-field--no-label) .mdc-text-field__input.mat-mdc-input-disabled-interactive::placeholder{opacity:0}.mdc-text-field--disabled:not(.mdc-text-field--no-label) .mdc-text-field__input.mat-mdc-input-disabled-interactive::-moz-placeholder{opacity:0}.mdc-text-field--disabled:not(.mdc-text-field--no-label) .mdc-text-field__input.mat-mdc-input-disabled-interactive::-webkit-input-placeholder{opacity:0}.mdc-text-field--disabled:not(.mdc-text-field--no-label) .mdc-text-field__input.mat-mdc-input-disabled-interactive:-ms-input-placeholder{opacity:0}.mdc-text-field--outlined .mdc-text-field__input,.mdc-text-field--filled.mdc-text-field--no-label .mdc-text-field__input{height:100%}.mdc-text-field--outlined .mdc-text-field__input{display:flex;border:none !important;background-color:rgba(0,0,0,0)}.mdc-text-field--disabled .mdc-text-field__input{pointer-events:auto}.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-text-field__input{color:var(--mat-form-field-filled-input-text-color, var(--mat-sys-on-surface));caret-color:var(--mat-form-field-filled-caret-color, var(--mat-sys-primary))}.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-text-field__input::placeholder{color:var(--mat-form-field-filled-input-text-placeholder-color, var(--mat-sys-on-surface-variant))}.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-text-field__input::-moz-placeholder{color:var(--mat-form-field-filled-input-text-placeholder-color, var(--mat-sys-on-surface-variant))}.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-text-field__input::-webkit-input-placeholder{color:var(--mat-form-field-filled-input-text-placeholder-color, var(--mat-sys-on-surface-variant))}.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-text-field__input:-ms-input-placeholder{color:var(--mat-form-field-filled-input-text-placeholder-color, var(--mat-sys-on-surface-variant))}.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-text-field__input{color:var(--mat-form-field-outlined-input-text-color, var(--mat-sys-on-surface));caret-color:var(--mat-form-field-outlined-caret-color, var(--mat-sys-primary))}.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-text-field__input::placeholder{color:var(--mat-form-field-outlined-input-text-placeholder-color, var(--mat-sys-on-surface-variant))}.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-text-field__input::-moz-placeholder{color:var(--mat-form-field-outlined-input-text-placeholder-color, var(--mat-sys-on-surface-variant))}.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-text-field__input::-webkit-input-placeholder{color:var(--mat-form-field-outlined-input-text-placeholder-color, var(--mat-sys-on-surface-variant))}.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-text-field__input:-ms-input-placeholder{color:var(--mat-form-field-outlined-input-text-placeholder-color, var(--mat-sys-on-surface-variant))}.mdc-text-field--filled.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-text-field__input{caret-color:var(--mat-form-field-filled-error-caret-color, var(--mat-sys-error))}.mdc-text-field--outlined.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-text-field__input{caret-color:var(--mat-form-field-outlined-error-caret-color, var(--mat-sys-error))}.mdc-text-field--filled.mdc-text-field--disabled .mdc-text-field__input{color:var(--mat-form-field-filled-disabled-input-text-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mdc-text-field--outlined.mdc-text-field--disabled .mdc-text-field__input{color:var(--mat-form-field-outlined-disabled-input-text-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}@media(forced-colors: active){.mdc-text-field--disabled .mdc-text-field__input{background-color:Window}}.mdc-text-field--filled{height:56px;border-bottom-right-radius:0;border-bottom-left-radius:0;border-top-left-radius:var(--mat-form-field-filled-container-shape, var(--mat-sys-corner-extra-small));border-top-right-radius:var(--mat-form-field-filled-container-shape, var(--mat-sys-corner-extra-small))}.mdc-text-field--filled:not(.mdc-text-field--disabled){background-color:var(--mat-form-field-filled-container-color, var(--mat-sys-surface-variant))}.mdc-text-field--filled.mdc-text-field--disabled{background-color:var(--mat-form-field-filled-disabled-container-color, color-mix(in srgb, var(--mat-sys-on-surface) 4%, transparent))}.mdc-text-field--outlined{height:56px;overflow:visible;padding-right:max(16px,var(--mat-form-field-outlined-container-shape, var(--mat-sys-corner-extra-small)));padding-left:max(16px,var(--mat-form-field-outlined-container-shape, var(--mat-sys-corner-extra-small)) + 4px)}[dir=rtl] .mdc-text-field--outlined{padding-right:max(16px,var(--mat-form-field-outlined-container-shape, var(--mat-sys-corner-extra-small)) + 4px);padding-left:max(16px,var(--mat-form-field-outlined-container-shape, var(--mat-sys-corner-extra-small)))}.mdc-floating-label{position:absolute;left:0;transform-origin:left top;line-height:1.15rem;text-align:left;text-overflow:ellipsis;white-space:nowrap;cursor:text;overflow:hidden;will-change:transform}[dir=rtl] .mdc-floating-label{right:0;left:auto;transform-origin:right top;text-align:right}.mdc-text-field .mdc-floating-label{top:50%;transform:translateY(-50%);pointer-events:none}.mdc-notched-outline .mdc-floating-label{display:inline-block;position:relative;max-width:100%}.mdc-text-field--outlined .mdc-floating-label{left:4px;right:auto}[dir=rtl] .mdc-text-field--outlined .mdc-floating-label{left:auto;right:4px}.mdc-text-field--filled .mdc-floating-label{left:16px;right:auto}[dir=rtl] .mdc-text-field--filled .mdc-floating-label{left:auto;right:16px}.mdc-text-field--disabled .mdc-floating-label{cursor:default}@media(forced-colors: active){.mdc-text-field--disabled .mdc-floating-label{z-index:1}}.mdc-text-field--filled.mdc-text-field--no-label .mdc-floating-label{display:none}.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-floating-label{color:var(--mat-form-field-filled-label-text-color, var(--mat-sys-on-surface-variant))}.mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-floating-label{color:var(--mat-form-field-filled-focus-label-text-color, var(--mat-sys-primary))}.mdc-text-field--filled:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-floating-label{color:var(--mat-form-field-filled-hover-label-text-color, var(--mat-sys-on-surface-variant))}.mdc-text-field--filled.mdc-text-field--disabled .mdc-floating-label{color:var(--mat-form-field-filled-disabled-label-text-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--invalid .mdc-floating-label{color:var(--mat-form-field-filled-error-label-text-color, var(--mat-sys-error))}.mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--invalid.mdc-text-field--focused .mdc-floating-label{color:var(--mat-form-field-filled-error-focus-label-text-color, var(--mat-sys-error))}.mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--invalid:not(.mdc-text-field--disabled):hover .mdc-floating-label{color:var(--mat-form-field-filled-error-hover-label-text-color, var(--mat-sys-on-error-container))}.mdc-text-field--filled .mdc-floating-label{font-family:var(--mat-form-field-filled-label-text-font, var(--mat-sys-body-large-font));font-size:var(--mat-form-field-filled-label-text-size, var(--mat-sys-body-large-size));font-weight:var(--mat-form-field-filled-label-text-weight, var(--mat-sys-body-large-weight));letter-spacing:var(--mat-form-field-filled-label-text-tracking, var(--mat-sys-body-large-tracking))}.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-floating-label{color:var(--mat-form-field-outlined-label-text-color, var(--mat-sys-on-surface-variant))}.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-floating-label{color:var(--mat-form-field-outlined-focus-label-text-color, var(--mat-sys-primary))}.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-floating-label{color:var(--mat-form-field-outlined-hover-label-text-color, var(--mat-sys-on-surface))}.mdc-text-field--outlined.mdc-text-field--disabled .mdc-floating-label{color:var(--mat-form-field-outlined-disabled-label-text-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--invalid .mdc-floating-label{color:var(--mat-form-field-outlined-error-label-text-color, var(--mat-sys-error))}.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--invalid.mdc-text-field--focused .mdc-floating-label{color:var(--mat-form-field-outlined-error-focus-label-text-color, var(--mat-sys-error))}.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--invalid:not(.mdc-text-field--disabled):hover .mdc-floating-label{color:var(--mat-form-field-outlined-error-hover-label-text-color, var(--mat-sys-on-error-container))}.mdc-text-field--outlined .mdc-floating-label{font-family:var(--mat-form-field-outlined-label-text-font, var(--mat-sys-body-large-font));font-size:var(--mat-form-field-outlined-label-text-size, var(--mat-sys-body-large-size));font-weight:var(--mat-form-field-outlined-label-text-weight, var(--mat-sys-body-large-weight));letter-spacing:var(--mat-form-field-outlined-label-text-tracking, var(--mat-sys-body-large-tracking))}.mdc-floating-label--float-above{cursor:auto;transform:translateY(-106%) scale(0.75)}.mdc-text-field--filled .mdc-floating-label--float-above{transform:translateY(-106%) scale(0.75)}.mdc-text-field--outlined .mdc-floating-label--float-above{transform:translateY(-37.25px) scale(1);font-size:.75rem}.mdc-notched-outline .mdc-floating-label--float-above{text-overflow:clip}.mdc-notched-outline--upgraded .mdc-floating-label--float-above{max-width:133.3333333333%}.mdc-text-field--outlined.mdc-notched-outline--upgraded .mdc-floating-label--float-above,.mdc-text-field--outlined .mdc-notched-outline--upgraded .mdc-floating-label--float-above{transform:translateY(-34.75px) scale(0.75)}.mdc-text-field--outlined.mdc-notched-outline--upgraded .mdc-floating-label--float-above,.mdc-text-field--outlined .mdc-notched-outline--upgraded .mdc-floating-label--float-above{font-size:1rem}.mdc-floating-label--required:not(.mdc-floating-label--hide-required-marker)::after{margin-left:1px;margin-right:0;content:"*"}[dir=rtl] .mdc-floating-label--required:not(.mdc-floating-label--hide-required-marker)::after{margin-left:0;margin-right:1px}.mdc-notched-outline{display:flex;position:absolute;top:0;right:0;left:0;box-sizing:border-box;width:100%;max-width:100%;height:100%;text-align:left;pointer-events:none}[dir=rtl] .mdc-notched-outline{text-align:right}.mdc-text-field--outlined .mdc-notched-outline{z-index:1}.mat-mdc-notch-piece{box-sizing:border-box;height:100%;pointer-events:none;border-top:1px solid;border-bottom:1px solid}.mdc-text-field--focused .mat-mdc-notch-piece{border-width:2px}.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mat-mdc-notch-piece{border-color:var(--mat-form-field-outlined-outline-color, var(--mat-sys-outline));border-width:var(--mat-form-field-outlined-outline-width, 1px)}.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mat-mdc-notch-piece{border-color:var(--mat-form-field-outlined-hover-outline-color, var(--mat-sys-on-surface))}.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mat-mdc-notch-piece{border-color:var(--mat-form-field-outlined-focus-outline-color, var(--mat-sys-primary))}.mdc-text-field--outlined.mdc-text-field--disabled .mat-mdc-notch-piece{border-color:var(--mat-form-field-outlined-disabled-outline-color, color-mix(in srgb, var(--mat-sys-on-surface) 12%, transparent))}.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--invalid .mat-mdc-notch-piece{border-color:var(--mat-form-field-outlined-error-outline-color, var(--mat-sys-error))}.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--invalid:not(.mdc-text-field--focused):hover .mdc-notched-outline .mat-mdc-notch-piece{border-color:var(--mat-form-field-outlined-error-hover-outline-color, var(--mat-sys-on-error-container))}.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--invalid.mdc-text-field--focused .mat-mdc-notch-piece{border-color:var(--mat-form-field-outlined-error-focus-outline-color, var(--mat-sys-error))}.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline .mat-mdc-notch-piece{border-width:var(--mat-form-field-outlined-focus-outline-width, 2px)}.mdc-notched-outline__leading{border-left:1px solid;border-right:none;border-top-right-radius:0;border-bottom-right-radius:0;border-top-left-radius:var(--mat-form-field-outlined-container-shape, var(--mat-sys-corner-extra-small));border-bottom-left-radius:var(--mat-form-field-outlined-container-shape, var(--mat-sys-corner-extra-small))}.mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__leading{width:max(12px,var(--mat-form-field-outlined-container-shape, var(--mat-sys-corner-extra-small)))}[dir=rtl] .mdc-notched-outline__leading{border-left:none;border-right:1px solid;border-bottom-left-radius:0;border-top-left-radius:0;border-top-right-radius:var(--mat-form-field-outlined-container-shape, var(--mat-sys-corner-extra-small));border-bottom-right-radius:var(--mat-form-field-outlined-container-shape, var(--mat-sys-corner-extra-small))}.mdc-notched-outline__trailing{flex-grow:1;border-left:none;border-right:1px solid;border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:var(--mat-form-field-outlined-container-shape, var(--mat-sys-corner-extra-small));border-bottom-right-radius:var(--mat-form-field-outlined-container-shape, var(--mat-sys-corner-extra-small))}[dir=rtl] .mdc-notched-outline__trailing{border-left:1px solid;border-right:none;border-top-right-radius:0;border-bottom-right-radius:0;border-top-left-radius:var(--mat-form-field-outlined-container-shape, var(--mat-sys-corner-extra-small));border-bottom-left-radius:var(--mat-form-field-outlined-container-shape, var(--mat-sys-corner-extra-small))}.mdc-notched-outline__notch{flex:0 0 auto;width:auto}.mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__notch{max-width:min(var(--mat-form-field-notch-max-width, 100%),calc(100% - max(12px, var(--mat-form-field-outlined-container-shape, var(--mat-sys-corner-extra-small))) * 2))}.mdc-text-field--outlined .mdc-notched-outline--notched .mdc-notched-outline__notch{max-width:min(100%,calc(100% - max(12px, var(--mat-form-field-outlined-container-shape, var(--mat-sys-corner-extra-small))) * 2))}.mdc-text-field--outlined .mdc-notched-outline--notched .mdc-notched-outline__notch{padding-top:1px}.mdc-text-field--focused.mdc-text-field--outlined .mdc-notched-outline--notched .mdc-notched-outline__notch{padding-top:2px}.mdc-notched-outline--notched .mdc-notched-outline__notch{padding-left:0;padding-right:8px;border-top:none}[dir=rtl] .mdc-notched-outline--notched .mdc-notched-outline__notch{padding-left:8px;padding-right:0}.mdc-notched-outline--no-label .mdc-notched-outline__notch{display:none}.mdc-line-ripple::before,.mdc-line-ripple::after{position:absolute;bottom:0;left:0;width:100%;border-bottom-style:solid;content:""}.mdc-line-ripple::before{z-index:1;border-bottom-width:var(--mat-form-field-filled-active-indicator-height, 1px)}.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before{border-bottom-color:var(--mat-form-field-filled-active-indicator-color, var(--mat-sys-on-surface-variant))}.mdc-text-field--filled:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-line-ripple::before{border-bottom-color:var(--mat-form-field-filled-hover-active-indicator-color, var(--mat-sys-on-surface))}.mdc-text-field--filled.mdc-text-field--disabled .mdc-line-ripple::before{border-bottom-color:var(--mat-form-field-filled-disabled-active-indicator-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--invalid .mdc-line-ripple::before{border-bottom-color:var(--mat-form-field-filled-error-active-indicator-color, var(--mat-sys-error))}.mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--invalid:not(.mdc-text-field--focused):hover .mdc-line-ripple::before{border-bottom-color:var(--mat-form-field-filled-error-hover-active-indicator-color, var(--mat-sys-on-error-container))}.mdc-line-ripple::after{transform:scaleX(0);opacity:0;z-index:2}.mdc-text-field--filled .mdc-line-ripple::after{border-bottom-width:var(--mat-form-field-filled-focus-active-indicator-height, 2px)}.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::after{border-bottom-color:var(--mat-form-field-filled-focus-active-indicator-color, var(--mat-sys-primary))}.mdc-text-field--filled.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-line-ripple::after{border-bottom-color:var(--mat-form-field-filled-error-focus-active-indicator-color, var(--mat-sys-error))}.mdc-line-ripple--active::after{transform:scaleX(1);opacity:1}.mdc-line-ripple--deactivating::after{opacity:0}.mdc-text-field--disabled{pointer-events:none}.mat-mdc-form-field-textarea-control{vertical-align:middle;resize:vertical;box-sizing:border-box;height:auto;margin:0;padding:0;border:none;overflow:auto}.mat-mdc-form-field-input-control.mat-mdc-form-field-input-control{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font:inherit;letter-spacing:inherit;text-decoration:inherit;text-transform:inherit;border:none}.mat-mdc-form-field .mat-mdc-floating-label.mdc-floating-label{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;line-height:normal;pointer-events:all;will-change:auto}.mat-mdc-form-field:not(.mat-form-field-disabled) .mat-mdc-floating-label.mdc-floating-label{cursor:inherit}.mdc-text-field--no-label:not(.mdc-text-field--textarea) .mat-mdc-form-field-input-control.mdc-text-field__input,.mat-mdc-text-field-wrapper .mat-mdc-form-field-input-control{height:auto}.mat-mdc-text-field-wrapper .mat-mdc-form-field-input-control.mdc-text-field__input[type=color]{height:23px}.mat-mdc-text-field-wrapper{height:auto;flex:auto;will-change:auto}.mat-mdc-form-field-has-icon-prefix .mat-mdc-text-field-wrapper{padding-left:0;--mat-mdc-form-field-label-offset-x: -16px}.mat-mdc-form-field-has-icon-suffix .mat-mdc-text-field-wrapper{padding-right:0}[dir=rtl] .mat-mdc-text-field-wrapper{padding-left:16px;padding-right:16px}[dir=rtl] .mat-mdc-form-field-has-icon-suffix .mat-mdc-text-field-wrapper{padding-left:0}[dir=rtl] .mat-mdc-form-field-has-icon-prefix .mat-mdc-text-field-wrapper{padding-right:0}.mat-form-field-disabled .mdc-text-field__input::placeholder{color:var(--mat-form-field-disabled-input-text-placeholder-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mat-form-field-disabled .mdc-text-field__input::-moz-placeholder{color:var(--mat-form-field-disabled-input-text-placeholder-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mat-form-field-disabled .mdc-text-field__input::-webkit-input-placeholder{color:var(--mat-form-field-disabled-input-text-placeholder-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mat-form-field-disabled .mdc-text-field__input:-ms-input-placeholder{color:var(--mat-form-field-disabled-input-text-placeholder-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mat-mdc-form-field-label-always-float .mdc-text-field__input::placeholder{transition-delay:40ms;transition-duration:110ms;opacity:1}.mat-mdc-text-field-wrapper .mat-mdc-form-field-infix .mat-mdc-floating-label{left:auto;right:auto}.mat-mdc-text-field-wrapper.mdc-text-field--outlined .mdc-text-field__input{display:inline-block}.mat-mdc-form-field .mat-mdc-text-field-wrapper.mdc-text-field .mdc-notched-outline__notch{padding-top:0}.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field .mdc-notched-outline__notch{border-left:1px solid rgba(0,0,0,0)}[dir=rtl] .mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field .mdc-notched-outline__notch{border-left:none;border-right:1px solid rgba(0,0,0,0)}.mat-mdc-form-field-infix{min-height:var(--mat-form-field-container-height, 56px);padding-top:var(--mat-form-field-filled-with-label-container-padding-top, 24px);padding-bottom:var(--mat-form-field-filled-with-label-container-padding-bottom, 8px)}.mdc-text-field--outlined .mat-mdc-form-field-infix,.mdc-text-field--no-label .mat-mdc-form-field-infix{padding-top:var(--mat-form-field-container-vertical-padding, 16px);padding-bottom:var(--mat-form-field-container-vertical-padding, 16px)}.mat-mdc-text-field-wrapper .mat-mdc-form-field-flex .mat-mdc-floating-label{top:calc(var(--mat-form-field-container-height, 56px)/2)}.mdc-text-field--filled .mat-mdc-floating-label{display:var(--mat-form-field-filled-label-display, block)}.mat-mdc-text-field-wrapper.mdc-text-field--outlined .mdc-notched-outline--upgraded .mdc-floating-label--float-above{--mat-mdc-form-field-label-transform: translateY(calc(calc(6.75px + var(--mat-form-field-container-height, 56px) / 2) * -1)) scale(var(--mat-mdc-form-field-floating-label-scale, 0.75));transform:var(--mat-mdc-form-field-label-transform)}@keyframes _mat-form-field-subscript-animation{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}.mat-mdc-form-field-subscript-wrapper{box-sizing:border-box;width:100%;position:relative}.mat-mdc-form-field-hint-wrapper,.mat-mdc-form-field-error-wrapper{position:absolute;top:0;left:0;right:0;padding:0 16px;opacity:1;transform:translateY(0);animation:_mat-form-field-subscript-animation 0ms cubic-bezier(0.55, 0, 0.55, 0.2)}.mat-mdc-form-field-subscript-dynamic-size .mat-mdc-form-field-hint-wrapper,.mat-mdc-form-field-subscript-dynamic-size .mat-mdc-form-field-error-wrapper{position:static}.mat-mdc-form-field-bottom-align::before{content:"";display:inline-block;height:16px}.mat-mdc-form-field-bottom-align.mat-mdc-form-field-subscript-dynamic-size::before{content:unset}.mat-mdc-form-field-hint-end{order:1}.mat-mdc-form-field-hint-wrapper{display:flex}.mat-mdc-form-field-hint-spacer{flex:1 0 1em}.mat-mdc-form-field-error{display:block;color:var(--mat-form-field-error-text-color, var(--mat-sys-error))}.mat-mdc-form-field-subscript-wrapper,.mat-mdc-form-field-bottom-align::before{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-family:var(--mat-form-field-subscript-text-font, var(--mat-sys-body-small-font));line-height:var(--mat-form-field-subscript-text-line-height, var(--mat-sys-body-small-line-height));font-size:var(--mat-form-field-subscript-text-size, var(--mat-sys-body-small-size));letter-spacing:var(--mat-form-field-subscript-text-tracking, var(--mat-sys-body-small-tracking));font-weight:var(--mat-form-field-subscript-text-weight, var(--mat-sys-body-small-weight))}.mat-mdc-form-field-focus-overlay{top:0;left:0;right:0;bottom:0;position:absolute;opacity:0;pointer-events:none;background-color:var(--mat-form-field-state-layer-color, var(--mat-sys-on-surface))}.mat-mdc-text-field-wrapper:hover .mat-mdc-form-field-focus-overlay{opacity:var(--mat-form-field-hover-state-layer-opacity, var(--mat-sys-hover-state-layer-opacity))}.mat-mdc-form-field.mat-focused .mat-mdc-form-field-focus-overlay{opacity:var(--mat-form-field-focus-state-layer-opacity, 0)}select.mat-mdc-form-field-input-control{-moz-appearance:none;-webkit-appearance:none;background-color:rgba(0,0,0,0);display:inline-flex;box-sizing:border-box}select.mat-mdc-form-field-input-control:not(:disabled){cursor:pointer}select.mat-mdc-form-field-input-control:not(.mat-mdc-native-select-inline) option{color:var(--mat-form-field-select-option-text-color, var(--mat-sys-neutral10))}select.mat-mdc-form-field-input-control:not(.mat-mdc-native-select-inline) option:disabled{color:var(--mat-form-field-select-disabled-option-text-color, color-mix(in srgb, var(--mat-sys-neutral10) 38%, transparent))}.mat-mdc-form-field-type-mat-native-select .mat-mdc-form-field-infix::after{content:"";width:0;height:0;border-left:5px solid rgba(0,0,0,0);border-right:5px solid rgba(0,0,0,0);border-top:5px solid;position:absolute;right:0;top:50%;margin-top:-2.5px;pointer-events:none;color:var(--mat-form-field-enabled-select-arrow-color, var(--mat-sys-on-surface-variant))}[dir=rtl] .mat-mdc-form-field-type-mat-native-select .mat-mdc-form-field-infix::after{right:auto;left:0}.mat-mdc-form-field-type-mat-native-select.mat-focused .mat-mdc-form-field-infix::after{color:var(--mat-form-field-focus-select-arrow-color, var(--mat-sys-primary))}.mat-mdc-form-field-type-mat-native-select.mat-form-field-disabled .mat-mdc-form-field-infix::after{color:var(--mat-form-field-disabled-select-arrow-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mat-mdc-form-field-type-mat-native-select .mat-mdc-form-field-input-control{padding-right:15px}[dir=rtl] .mat-mdc-form-field-type-mat-native-select .mat-mdc-form-field-input-control{padding-right:0;padding-left:15px}@media(forced-colors: active){.mat-form-field-appearance-fill .mat-mdc-text-field-wrapper{outline:solid 1px}}@media(forced-colors: active){.mat-form-field-appearance-fill.mat-form-field-disabled .mat-mdc-text-field-wrapper{outline-color:GrayText}}@media(forced-colors: active){.mat-form-field-appearance-fill.mat-focused .mat-mdc-text-field-wrapper{outline:dashed 3px}}@media(forced-colors: active){.mat-mdc-form-field.mat-focused .mdc-notched-outline{border:dashed 3px}}.mat-mdc-form-field-input-control[type=date],.mat-mdc-form-field-input-control[type=datetime],.mat-mdc-form-field-input-control[type=datetime-local],.mat-mdc-form-field-input-control[type=month],.mat-mdc-form-field-input-control[type=week],.mat-mdc-form-field-input-control[type=time]{line-height:1}.mat-mdc-form-field-input-control::-webkit-datetime-edit{line-height:1;padding:0;margin-bottom:-2px}.mat-mdc-form-field{--mat-mdc-form-field-floating-label-scale: 0.75;display:inline-flex;flex-direction:column;min-width:0;text-align:left;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-family:var(--mat-form-field-container-text-font, var(--mat-sys-body-large-font));line-height:var(--mat-form-field-container-text-line-height, var(--mat-sys-body-large-line-height));font-size:var(--mat-form-field-container-text-size, var(--mat-sys-body-large-size));letter-spacing:var(--mat-form-field-container-text-tracking, var(--mat-sys-body-large-tracking));font-weight:var(--mat-form-field-container-text-weight, var(--mat-sys-body-large-weight))}.mat-mdc-form-field .mdc-text-field--outlined .mdc-floating-label--float-above{font-size:calc(var(--mat-form-field-outlined-label-text-populated-size)*var(--mat-mdc-form-field-floating-label-scale))}.mat-mdc-form-field .mdc-text-field--outlined .mdc-notched-outline--upgraded .mdc-floating-label--float-above{font-size:var(--mat-form-field-outlined-label-text-populated-size)}[dir=rtl] .mat-mdc-form-field{text-align:right}.mat-mdc-form-field-flex{display:inline-flex;align-items:baseline;box-sizing:border-box;width:100%}.mat-mdc-text-field-wrapper{width:100%;z-index:0}.mat-mdc-form-field-icon-prefix,.mat-mdc-form-field-icon-suffix{align-self:center;line-height:0;pointer-events:auto;position:relative;z-index:1}.mat-mdc-form-field-icon-prefix>.mat-icon,.mat-mdc-form-field-icon-suffix>.mat-icon{padding:0 12px;box-sizing:content-box}.mat-mdc-form-field-icon-prefix{color:var(--mat-form-field-leading-icon-color, var(--mat-sys-on-surface-variant))}.mat-form-field-disabled .mat-mdc-form-field-icon-prefix{color:var(--mat-form-field-disabled-leading-icon-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mat-mdc-form-field-icon-suffix{color:var(--mat-form-field-trailing-icon-color, var(--mat-sys-on-surface-variant))}.mat-form-field-disabled .mat-mdc-form-field-icon-suffix{color:var(--mat-form-field-disabled-trailing-icon-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mat-form-field-invalid .mat-mdc-form-field-icon-suffix{color:var(--mat-form-field-error-trailing-icon-color, var(--mat-sys-error))}.mat-form-field-invalid:not(.mat-focused):not(.mat-form-field-disabled) .mat-mdc-text-field-wrapper:hover .mat-mdc-form-field-icon-suffix{color:var(--mat-form-field-error-hover-trailing-icon-color, var(--mat-sys-on-error-container))}.mat-form-field-invalid.mat-focused .mat-mdc-text-field-wrapper .mat-mdc-form-field-icon-suffix{color:var(--mat-form-field-error-focus-trailing-icon-color, var(--mat-sys-error))}.mat-mdc-form-field-icon-prefix,[dir=rtl] .mat-mdc-form-field-icon-suffix{padding:0 4px 0 0}.mat-mdc-form-field-icon-suffix,[dir=rtl] .mat-mdc-form-field-icon-prefix{padding:0 0 0 4px}.mat-mdc-form-field-subscript-wrapper .mat-icon,.mat-mdc-form-field label .mat-icon{width:1em;height:1em;font-size:inherit}.mat-mdc-form-field-infix{flex:auto;min-width:0;width:180px;position:relative;box-sizing:border-box}.mat-mdc-form-field-infix:has(textarea[cols]){width:auto}.mat-mdc-form-field .mdc-notched-outline__notch{margin-left:-1px;-webkit-clip-path:inset(-9em -999em -9em 1px);clip-path:inset(-9em -999em -9em 1px)}[dir=rtl] .mat-mdc-form-field .mdc-notched-outline__notch{margin-left:0;margin-right:-1px;-webkit-clip-path:inset(-9em 1px -9em -999em);clip-path:inset(-9em 1px -9em -999em)}.mat-mdc-form-field.mat-form-field-animations-enabled .mdc-floating-label{transition:transform 150ms cubic-bezier(0.4, 0, 0.2, 1),color 150ms cubic-bezier(0.4, 0, 0.2, 1)}.mat-mdc-form-field.mat-form-field-animations-enabled .mdc-text-field__input{transition:opacity 150ms cubic-bezier(0.4, 0, 0.2, 1)}.mat-mdc-form-field.mat-form-field-animations-enabled .mdc-text-field__input::placeholder{transition:opacity 67ms cubic-bezier(0.4, 0, 0.2, 1)}.mat-mdc-form-field.mat-form-field-animations-enabled .mdc-text-field__input::-moz-placeholder{transition:opacity 67ms cubic-bezier(0.4, 0, 0.2, 1)}.mat-mdc-form-field.mat-form-field-animations-enabled .mdc-text-field__input::-webkit-input-placeholder{transition:opacity 67ms cubic-bezier(0.4, 0, 0.2, 1)}.mat-mdc-form-field.mat-form-field-animations-enabled .mdc-text-field__input:-ms-input-placeholder{transition:opacity 67ms cubic-bezier(0.4, 0, 0.2, 1)}.mat-mdc-form-field.mat-form-field-animations-enabled.mdc-text-field--no-label .mdc-text-field__input::placeholder,.mat-mdc-form-field.mat-form-field-animations-enabled.mdc-text-field--focused .mdc-text-field__input::placeholder{transition-delay:40ms;transition-duration:110ms}.mat-mdc-form-field.mat-form-field-animations-enabled.mdc-text-field--no-label .mdc-text-field__input::-moz-placeholder,.mat-mdc-form-field.mat-form-field-animations-enabled.mdc-text-field--focused .mdc-text-field__input::-moz-placeholder{transition-delay:40ms;transition-duration:110ms}.mat-mdc-form-field.mat-form-field-animations-enabled.mdc-text-field--no-label .mdc-text-field__input::-webkit-input-placeholder,.mat-mdc-form-field.mat-form-field-animations-enabled.mdc-text-field--focused .mdc-text-field__input::-webkit-input-placeholder{transition-delay:40ms;transition-duration:110ms}.mat-mdc-form-field.mat-form-field-animations-enabled.mdc-text-field--no-label .mdc-text-field__input:-ms-input-placeholder,.mat-mdc-form-field.mat-form-field-animations-enabled.mdc-text-field--focused .mdc-text-field__input:-ms-input-placeholder{transition-delay:40ms;transition-duration:110ms}.mat-mdc-form-field.mat-form-field-animations-enabled .mdc-text-field--filled:not(.mdc-ripple-upgraded):focus .mdc-text-field__ripple::before{transition-duration:75ms}.mat-mdc-form-field.mat-form-field-animations-enabled .mdc-line-ripple::after{transition:transform 180ms cubic-bezier(0.4, 0, 0.2, 1),opacity 180ms cubic-bezier(0.4, 0, 0.2, 1)}.mat-mdc-form-field.mat-form-field-animations-enabled .mat-mdc-form-field-hint-wrapper,.mat-mdc-form-field.mat-form-field-animations-enabled .mat-mdc-form-field-error-wrapper{animation-duration:300ms}.mdc-notched-outline .mdc-floating-label{max-width:calc(100% + 1px)}.mdc-notched-outline--upgraded .mdc-floating-label--float-above{max-width:calc(133.3333333333% + 1px)}\n'],
+    encapsulation: 2,
+    changeDetection: 0
+  });
 };
-__name(_MatFormField, "MatFormField");
-__publicField(_MatFormField, "\u0275fac", /* @__PURE__ */ __name(function MatFormField_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _MatFormField)();
-}, "MatFormField_Factory"));
-__publicField(_MatFormField, "\u0275cmp", /* @__PURE__ */ \u0275\u0275defineComponent({
-  type: _MatFormField,
-  selectors: [["mat-form-field"]],
-  contentQueries: /* @__PURE__ */ __name(function MatFormField_ContentQueries(rf, ctx, dirIndex) {
-    if (rf & 1) {
-      \u0275\u0275contentQuerySignal(dirIndex, ctx._labelChild, MatLabel, 5);
-      \u0275\u0275contentQuery(dirIndex, MatFormFieldControl, 5);
-      \u0275\u0275contentQuery(dirIndex, MAT_PREFIX, 5);
-      \u0275\u0275contentQuery(dirIndex, MAT_SUFFIX, 5);
-      \u0275\u0275contentQuery(dirIndex, MAT_ERROR, 5);
-      \u0275\u0275contentQuery(dirIndex, MatHint, 5);
-    }
-    if (rf & 2) {
-      \u0275\u0275queryAdvance();
-      let _t;
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._formFieldControl = _t.first);
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._prefixChildren = _t);
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._suffixChildren = _t);
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._errorChildren = _t);
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._hintChildren = _t);
-    }
-  }, "MatFormField_ContentQueries"),
-  viewQuery: /* @__PURE__ */ __name(function MatFormField_Query(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275viewQuerySignal(ctx._iconPrefixContainerSignal, _c3, 5);
-      \u0275\u0275viewQuerySignal(ctx._textPrefixContainerSignal, _c4, 5);
-      \u0275\u0275viewQuerySignal(ctx._iconSuffixContainerSignal, _c5, 5);
-      \u0275\u0275viewQuerySignal(ctx._textSuffixContainerSignal, _c6, 5);
-      \u0275\u0275viewQuery(_c7, 5);
-      \u0275\u0275viewQuery(_c3, 5);
-      \u0275\u0275viewQuery(_c4, 5);
-      \u0275\u0275viewQuery(_c5, 5);
-      \u0275\u0275viewQuery(_c6, 5);
-      \u0275\u0275viewQuery(MatFormFieldFloatingLabel, 5);
-      \u0275\u0275viewQuery(MatFormFieldNotchedOutline, 5);
-      \u0275\u0275viewQuery(MatFormFieldLineRipple, 5);
-    }
-    if (rf & 2) {
-      \u0275\u0275queryAdvance(4);
-      let _t;
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._textField = _t.first);
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._iconPrefixContainer = _t.first);
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._textPrefixContainer = _t.first);
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._iconSuffixContainer = _t.first);
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._textSuffixContainer = _t.first);
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._floatingLabel = _t.first);
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._notchedOutline = _t.first);
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._lineRipple = _t.first);
-    }
-  }, "MatFormField_Query"),
-  hostAttrs: [1, "mat-mdc-form-field"],
-  hostVars: 38,
-  hostBindings: /* @__PURE__ */ __name(function MatFormField_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      \u0275\u0275classProp("mat-mdc-form-field-label-always-float", ctx._shouldAlwaysFloat())("mat-mdc-form-field-has-icon-prefix", ctx._hasIconPrefix)("mat-mdc-form-field-has-icon-suffix", ctx._hasIconSuffix)("mat-form-field-invalid", ctx._control.errorState)("mat-form-field-disabled", ctx._control.disabled)("mat-form-field-autofilled", ctx._control.autofilled)("mat-form-field-appearance-fill", ctx.appearance == "fill")("mat-form-field-appearance-outline", ctx.appearance == "outline")("mat-form-field-hide-placeholder", ctx._hasFloatingLabel() && !ctx._shouldLabelFloat())("mat-primary", ctx.color !== "accent" && ctx.color !== "warn")("mat-accent", ctx.color === "accent")("mat-warn", ctx.color === "warn")("ng-untouched", ctx._shouldForward("untouched"))("ng-touched", ctx._shouldForward("touched"))("ng-pristine", ctx._shouldForward("pristine"))("ng-dirty", ctx._shouldForward("dirty"))("ng-valid", ctx._shouldForward("valid"))("ng-invalid", ctx._shouldForward("invalid"))("ng-pending", ctx._shouldForward("pending"));
-    }
-  }, "MatFormField_HostBindings"),
-  inputs: {
-    hideRequiredMarker: "hideRequiredMarker",
-    color: "color",
-    floatLabel: "floatLabel",
-    appearance: "appearance",
-    subscriptSizing: "subscriptSizing",
-    hintLabel: "hintLabel"
-  },
-  exportAs: ["matFormField"],
-  features: [\u0275\u0275ProvidersFeature([{
-    provide: MAT_FORM_FIELD,
-    useExisting: _MatFormField
-  }, {
-    provide: FLOATING_LABEL_PARENT,
-    useExisting: _MatFormField
-  }])],
-  ngContentSelectors: _c9,
-  decls: 19,
-  vars: 25,
-  consts: [["labelTemplate", ""], ["textField", ""], ["iconPrefixContainer", ""], ["textPrefixContainer", ""], ["textSuffixContainer", ""], ["iconSuffixContainer", ""], [1, "mat-mdc-text-field-wrapper", "mdc-text-field", 3, "click"], [1, "mat-mdc-form-field-focus-overlay"], [1, "mat-mdc-form-field-flex"], ["matFormFieldNotchedOutline", "", 3, "matFormFieldNotchedOutlineOpen"], [1, "mat-mdc-form-field-icon-prefix"], [1, "mat-mdc-form-field-text-prefix"], [1, "mat-mdc-form-field-infix"], [3, "ngTemplateOutlet"], [1, "mat-mdc-form-field-text-suffix"], [1, "mat-mdc-form-field-icon-suffix"], ["matFormFieldLineRipple", ""], [1, "mat-mdc-form-field-subscript-wrapper", "mat-mdc-form-field-bottom-align"], ["aria-atomic", "true", "aria-live", "polite"], ["matFormFieldFloatingLabel", "", 3, "floating", "monitorResize", "id"], ["aria-hidden", "true", 1, "mat-mdc-form-field-required-marker", "mdc-floating-label--required"], [3, "id"], [1, "mat-mdc-form-field-hint-spacer"]],
-  template: /* @__PURE__ */ __name(function MatFormField_Template(rf, ctx) {
-    if (rf & 1) {
-      const _r1 = \u0275\u0275getCurrentView();
-      \u0275\u0275projectionDef(_c8);
-      \u0275\u0275template(0, MatFormField_ng_template_0_Template, 1, 1, "ng-template", null, 0, \u0275\u0275templateRefExtractor);
-      \u0275\u0275elementStart(2, "div", 6, 1);
-      \u0275\u0275listener("click", /* @__PURE__ */ __name(function MatFormField_Template_div_click_2_listener($event) {
-        \u0275\u0275restoreView(_r1);
-        return \u0275\u0275resetView(ctx._control.onContainerClick($event));
-      }, "MatFormField_Template_div_click_2_listener"));
-      \u0275\u0275conditionalCreate(4, MatFormField_Conditional_4_Template, 1, 0, "div", 7);
-      \u0275\u0275elementStart(5, "div", 8);
-      \u0275\u0275conditionalCreate(6, MatFormField_Conditional_6_Template, 2, 2, "div", 9);
-      \u0275\u0275conditionalCreate(7, MatFormField_Conditional_7_Template, 3, 0, "div", 10);
-      \u0275\u0275conditionalCreate(8, MatFormField_Conditional_8_Template, 3, 0, "div", 11);
-      \u0275\u0275elementStart(9, "div", 12);
-      \u0275\u0275conditionalCreate(10, MatFormField_Conditional_10_Template, 1, 1, null, 13);
-      \u0275\u0275projection(11);
-      \u0275\u0275elementEnd();
-      \u0275\u0275conditionalCreate(12, MatFormField_Conditional_12_Template, 3, 0, "div", 14);
-      \u0275\u0275conditionalCreate(13, MatFormField_Conditional_13_Template, 3, 0, "div", 15);
-      \u0275\u0275elementEnd();
-      \u0275\u0275conditionalCreate(14, MatFormField_Conditional_14_Template, 1, 0, "div", 16);
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(15, "div", 17)(16, "div", 18);
-      \u0275\u0275conditionalCreate(17, MatFormField_Case_17_Template, 1, 0)(18, MatFormField_Case_18_Template, 4, 1);
-      \u0275\u0275elementEnd()();
-    }
-    if (rf & 2) {
-      let tmp_19_0;
-      \u0275\u0275advance(2);
-      \u0275\u0275classProp("mdc-text-field--filled", !ctx._hasOutline())("mdc-text-field--outlined", ctx._hasOutline())("mdc-text-field--no-label", !ctx._hasFloatingLabel())("mdc-text-field--disabled", ctx._control.disabled)("mdc-text-field--invalid", ctx._control.errorState);
-      \u0275\u0275advance(2);
-      \u0275\u0275conditional(!ctx._hasOutline() && !ctx._control.disabled ? 4 : -1);
-      \u0275\u0275advance(2);
-      \u0275\u0275conditional(ctx._hasOutline() ? 6 : -1);
-      \u0275\u0275advance();
-      \u0275\u0275conditional(ctx._hasIconPrefix ? 7 : -1);
-      \u0275\u0275advance();
-      \u0275\u0275conditional(ctx._hasTextPrefix ? 8 : -1);
-      \u0275\u0275advance(2);
-      \u0275\u0275conditional(!ctx._hasOutline() || ctx._forceDisplayInfixLabel() ? 10 : -1);
-      \u0275\u0275advance(2);
-      \u0275\u0275conditional(ctx._hasTextSuffix ? 12 : -1);
-      \u0275\u0275advance();
-      \u0275\u0275conditional(ctx._hasIconSuffix ? 13 : -1);
-      \u0275\u0275advance();
-      \u0275\u0275conditional(!ctx._hasOutline() ? 14 : -1);
-      \u0275\u0275advance();
-      \u0275\u0275classProp("mat-mdc-form-field-subscript-dynamic-size", ctx.subscriptSizing === "dynamic");
-      const subscriptMessageType_r4 = ctx._getSubscriptMessageType();
-      \u0275\u0275advance();
-      \u0275\u0275classProp("mat-mdc-form-field-error-wrapper", subscriptMessageType_r4 === "error")("mat-mdc-form-field-hint-wrapper", subscriptMessageType_r4 === "hint");
-      \u0275\u0275advance();
-      \u0275\u0275conditional((tmp_19_0 = subscriptMessageType_r4) === "error" ? 17 : tmp_19_0 === "hint" ? 18 : -1);
-    }
-  }, "MatFormField_Template"),
-  dependencies: [MatFormFieldFloatingLabel, MatFormFieldNotchedOutline, NgTemplateOutlet, MatFormFieldLineRipple, MatHint],
-  styles: ['.mdc-text-field{display:inline-flex;align-items:baseline;padding:0 16px;position:relative;box-sizing:border-box;overflow:hidden;will-change:opacity,transform,color;border-top-left-radius:4px;border-top-right-radius:4px;border-bottom-right-radius:0;border-bottom-left-radius:0}.mdc-text-field__input{width:100%;min-width:0;border:none;border-radius:0;background:none;padding:0;-moz-appearance:none;-webkit-appearance:none;height:28px}.mdc-text-field__input::-webkit-calendar-picker-indicator,.mdc-text-field__input::-webkit-search-cancel-button{display:none}.mdc-text-field__input::-ms-clear{display:none}.mdc-text-field__input:focus{outline:none}.mdc-text-field__input:invalid{box-shadow:none}.mdc-text-field__input::placeholder{opacity:0}.mdc-text-field__input::-moz-placeholder{opacity:0}.mdc-text-field__input::-webkit-input-placeholder{opacity:0}.mdc-text-field__input:-ms-input-placeholder{opacity:0}.mdc-text-field--no-label .mdc-text-field__input::placeholder,.mdc-text-field--focused .mdc-text-field__input::placeholder{opacity:1}.mdc-text-field--no-label .mdc-text-field__input::-moz-placeholder,.mdc-text-field--focused .mdc-text-field__input::-moz-placeholder{opacity:1}.mdc-text-field--no-label .mdc-text-field__input::-webkit-input-placeholder,.mdc-text-field--focused .mdc-text-field__input::-webkit-input-placeholder{opacity:1}.mdc-text-field--no-label .mdc-text-field__input:-ms-input-placeholder,.mdc-text-field--focused .mdc-text-field__input:-ms-input-placeholder{opacity:1}.mdc-text-field--disabled:not(.mdc-text-field--no-label) .mdc-text-field__input.mat-mdc-input-disabled-interactive::placeholder{opacity:0}.mdc-text-field--disabled:not(.mdc-text-field--no-label) .mdc-text-field__input.mat-mdc-input-disabled-interactive::-moz-placeholder{opacity:0}.mdc-text-field--disabled:not(.mdc-text-field--no-label) .mdc-text-field__input.mat-mdc-input-disabled-interactive::-webkit-input-placeholder{opacity:0}.mdc-text-field--disabled:not(.mdc-text-field--no-label) .mdc-text-field__input.mat-mdc-input-disabled-interactive:-ms-input-placeholder{opacity:0}.mdc-text-field--outlined .mdc-text-field__input,.mdc-text-field--filled.mdc-text-field--no-label .mdc-text-field__input{height:100%}.mdc-text-field--outlined .mdc-text-field__input{display:flex;border:none !important;background-color:rgba(0,0,0,0)}.mdc-text-field--disabled .mdc-text-field__input{pointer-events:auto}.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-text-field__input{color:var(--mat-form-field-filled-input-text-color, var(--mat-sys-on-surface));caret-color:var(--mat-form-field-filled-caret-color, var(--mat-sys-primary))}.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-text-field__input::placeholder{color:var(--mat-form-field-filled-input-text-placeholder-color, var(--mat-sys-on-surface-variant))}.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-text-field__input::-moz-placeholder{color:var(--mat-form-field-filled-input-text-placeholder-color, var(--mat-sys-on-surface-variant))}.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-text-field__input::-webkit-input-placeholder{color:var(--mat-form-field-filled-input-text-placeholder-color, var(--mat-sys-on-surface-variant))}.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-text-field__input:-ms-input-placeholder{color:var(--mat-form-field-filled-input-text-placeholder-color, var(--mat-sys-on-surface-variant))}.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-text-field__input{color:var(--mat-form-field-outlined-input-text-color, var(--mat-sys-on-surface));caret-color:var(--mat-form-field-outlined-caret-color, var(--mat-sys-primary))}.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-text-field__input::placeholder{color:var(--mat-form-field-outlined-input-text-placeholder-color, var(--mat-sys-on-surface-variant))}.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-text-field__input::-moz-placeholder{color:var(--mat-form-field-outlined-input-text-placeholder-color, var(--mat-sys-on-surface-variant))}.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-text-field__input::-webkit-input-placeholder{color:var(--mat-form-field-outlined-input-text-placeholder-color, var(--mat-sys-on-surface-variant))}.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-text-field__input:-ms-input-placeholder{color:var(--mat-form-field-outlined-input-text-placeholder-color, var(--mat-sys-on-surface-variant))}.mdc-text-field--filled.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-text-field__input{caret-color:var(--mat-form-field-filled-error-caret-color, var(--mat-sys-error))}.mdc-text-field--outlined.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-text-field__input{caret-color:var(--mat-form-field-outlined-error-caret-color, var(--mat-sys-error))}.mdc-text-field--filled.mdc-text-field--disabled .mdc-text-field__input{color:var(--mat-form-field-filled-disabled-input-text-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mdc-text-field--outlined.mdc-text-field--disabled .mdc-text-field__input{color:var(--mat-form-field-outlined-disabled-input-text-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}@media(forced-colors: active){.mdc-text-field--disabled .mdc-text-field__input{background-color:Window}}.mdc-text-field--filled{height:56px;border-bottom-right-radius:0;border-bottom-left-radius:0;border-top-left-radius:var(--mat-form-field-filled-container-shape, var(--mat-sys-corner-extra-small));border-top-right-radius:var(--mat-form-field-filled-container-shape, var(--mat-sys-corner-extra-small))}.mdc-text-field--filled:not(.mdc-text-field--disabled){background-color:var(--mat-form-field-filled-container-color, var(--mat-sys-surface-variant))}.mdc-text-field--filled.mdc-text-field--disabled{background-color:var(--mat-form-field-filled-disabled-container-color, color-mix(in srgb, var(--mat-sys-on-surface) 4%, transparent))}.mdc-text-field--outlined{height:56px;overflow:visible;padding-right:max(16px,var(--mat-form-field-outlined-container-shape, var(--mat-sys-corner-extra-small)));padding-left:max(16px,var(--mat-form-field-outlined-container-shape, var(--mat-sys-corner-extra-small)) + 4px)}[dir=rtl] .mdc-text-field--outlined{padding-right:max(16px,var(--mat-form-field-outlined-container-shape, var(--mat-sys-corner-extra-small)) + 4px);padding-left:max(16px,var(--mat-form-field-outlined-container-shape, var(--mat-sys-corner-extra-small)))}.mdc-floating-label{position:absolute;left:0;transform-origin:left top;line-height:1.15rem;text-align:left;text-overflow:ellipsis;white-space:nowrap;cursor:text;overflow:hidden;will-change:transform}[dir=rtl] .mdc-floating-label{right:0;left:auto;transform-origin:right top;text-align:right}.mdc-text-field .mdc-floating-label{top:50%;transform:translateY(-50%);pointer-events:none}.mdc-notched-outline .mdc-floating-label{display:inline-block;position:relative;max-width:100%}.mdc-text-field--outlined .mdc-floating-label{left:4px;right:auto}[dir=rtl] .mdc-text-field--outlined .mdc-floating-label{left:auto;right:4px}.mdc-text-field--filled .mdc-floating-label{left:16px;right:auto}[dir=rtl] .mdc-text-field--filled .mdc-floating-label{left:auto;right:16px}.mdc-text-field--disabled .mdc-floating-label{cursor:default}@media(forced-colors: active){.mdc-text-field--disabled .mdc-floating-label{z-index:1}}.mdc-text-field--filled.mdc-text-field--no-label .mdc-floating-label{display:none}.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-floating-label{color:var(--mat-form-field-filled-label-text-color, var(--mat-sys-on-surface-variant))}.mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-floating-label{color:var(--mat-form-field-filled-focus-label-text-color, var(--mat-sys-primary))}.mdc-text-field--filled:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-floating-label{color:var(--mat-form-field-filled-hover-label-text-color, var(--mat-sys-on-surface-variant))}.mdc-text-field--filled.mdc-text-field--disabled .mdc-floating-label{color:var(--mat-form-field-filled-disabled-label-text-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--invalid .mdc-floating-label{color:var(--mat-form-field-filled-error-label-text-color, var(--mat-sys-error))}.mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--invalid.mdc-text-field--focused .mdc-floating-label{color:var(--mat-form-field-filled-error-focus-label-text-color, var(--mat-sys-error))}.mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--invalid:not(.mdc-text-field--disabled):hover .mdc-floating-label{color:var(--mat-form-field-filled-error-hover-label-text-color, var(--mat-sys-on-error-container))}.mdc-text-field--filled .mdc-floating-label{font-family:var(--mat-form-field-filled-label-text-font, var(--mat-sys-body-large-font));font-size:var(--mat-form-field-filled-label-text-size, var(--mat-sys-body-large-size));font-weight:var(--mat-form-field-filled-label-text-weight, var(--mat-sys-body-large-weight));letter-spacing:var(--mat-form-field-filled-label-text-tracking, var(--mat-sys-body-large-tracking))}.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-floating-label{color:var(--mat-form-field-outlined-label-text-color, var(--mat-sys-on-surface-variant))}.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-floating-label{color:var(--mat-form-field-outlined-focus-label-text-color, var(--mat-sys-primary))}.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-floating-label{color:var(--mat-form-field-outlined-hover-label-text-color, var(--mat-sys-on-surface))}.mdc-text-field--outlined.mdc-text-field--disabled .mdc-floating-label{color:var(--mat-form-field-outlined-disabled-label-text-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--invalid .mdc-floating-label{color:var(--mat-form-field-outlined-error-label-text-color, var(--mat-sys-error))}.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--invalid.mdc-text-field--focused .mdc-floating-label{color:var(--mat-form-field-outlined-error-focus-label-text-color, var(--mat-sys-error))}.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--invalid:not(.mdc-text-field--disabled):hover .mdc-floating-label{color:var(--mat-form-field-outlined-error-hover-label-text-color, var(--mat-sys-on-error-container))}.mdc-text-field--outlined .mdc-floating-label{font-family:var(--mat-form-field-outlined-label-text-font, var(--mat-sys-body-large-font));font-size:var(--mat-form-field-outlined-label-text-size, var(--mat-sys-body-large-size));font-weight:var(--mat-form-field-outlined-label-text-weight, var(--mat-sys-body-large-weight));letter-spacing:var(--mat-form-field-outlined-label-text-tracking, var(--mat-sys-body-large-tracking))}.mdc-floating-label--float-above{cursor:auto;transform:translateY(-106%) scale(0.75)}.mdc-text-field--filled .mdc-floating-label--float-above{transform:translateY(-106%) scale(0.75)}.mdc-text-field--outlined .mdc-floating-label--float-above{transform:translateY(-37.25px) scale(1);font-size:.75rem}.mdc-notched-outline .mdc-floating-label--float-above{text-overflow:clip}.mdc-notched-outline--upgraded .mdc-floating-label--float-above{max-width:133.3333333333%}.mdc-text-field--outlined.mdc-notched-outline--upgraded .mdc-floating-label--float-above,.mdc-text-field--outlined .mdc-notched-outline--upgraded .mdc-floating-label--float-above{transform:translateY(-34.75px) scale(0.75)}.mdc-text-field--outlined.mdc-notched-outline--upgraded .mdc-floating-label--float-above,.mdc-text-field--outlined .mdc-notched-outline--upgraded .mdc-floating-label--float-above{font-size:1rem}.mdc-floating-label--required:not(.mdc-floating-label--hide-required-marker)::after{margin-left:1px;margin-right:0;content:"*"}[dir=rtl] .mdc-floating-label--required:not(.mdc-floating-label--hide-required-marker)::after{margin-left:0;margin-right:1px}.mdc-notched-outline{display:flex;position:absolute;top:0;right:0;left:0;box-sizing:border-box;width:100%;max-width:100%;height:100%;text-align:left;pointer-events:none}[dir=rtl] .mdc-notched-outline{text-align:right}.mdc-text-field--outlined .mdc-notched-outline{z-index:1}.mat-mdc-notch-piece{box-sizing:border-box;height:100%;pointer-events:none;border-top:1px solid;border-bottom:1px solid}.mdc-text-field--focused .mat-mdc-notch-piece{border-width:2px}.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mat-mdc-notch-piece{border-color:var(--mat-form-field-outlined-outline-color, var(--mat-sys-outline));border-width:var(--mat-form-field-outlined-outline-width, 1px)}.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mat-mdc-notch-piece{border-color:var(--mat-form-field-outlined-hover-outline-color, var(--mat-sys-on-surface))}.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mat-mdc-notch-piece{border-color:var(--mat-form-field-outlined-focus-outline-color, var(--mat-sys-primary))}.mdc-text-field--outlined.mdc-text-field--disabled .mat-mdc-notch-piece{border-color:var(--mat-form-field-outlined-disabled-outline-color, color-mix(in srgb, var(--mat-sys-on-surface) 12%, transparent))}.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--invalid .mat-mdc-notch-piece{border-color:var(--mat-form-field-outlined-error-outline-color, var(--mat-sys-error))}.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--invalid:not(.mdc-text-field--focused):hover .mdc-notched-outline .mat-mdc-notch-piece{border-color:var(--mat-form-field-outlined-error-hover-outline-color, var(--mat-sys-on-error-container))}.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--invalid.mdc-text-field--focused .mat-mdc-notch-piece{border-color:var(--mat-form-field-outlined-error-focus-outline-color, var(--mat-sys-error))}.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline .mat-mdc-notch-piece{border-width:var(--mat-form-field-outlined-focus-outline-width, 2px)}.mdc-notched-outline__leading{border-left:1px solid;border-right:none;border-top-right-radius:0;border-bottom-right-radius:0;border-top-left-radius:var(--mat-form-field-outlined-container-shape, var(--mat-sys-corner-extra-small));border-bottom-left-radius:var(--mat-form-field-outlined-container-shape, var(--mat-sys-corner-extra-small))}.mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__leading{width:max(12px,var(--mat-form-field-outlined-container-shape, var(--mat-sys-corner-extra-small)))}[dir=rtl] .mdc-notched-outline__leading{border-left:none;border-right:1px solid;border-bottom-left-radius:0;border-top-left-radius:0;border-top-right-radius:var(--mat-form-field-outlined-container-shape, var(--mat-sys-corner-extra-small));border-bottom-right-radius:var(--mat-form-field-outlined-container-shape, var(--mat-sys-corner-extra-small))}.mdc-notched-outline__trailing{flex-grow:1;border-left:none;border-right:1px solid;border-top-left-radius:0;border-bottom-left-radius:0;border-top-right-radius:var(--mat-form-field-outlined-container-shape, var(--mat-sys-corner-extra-small));border-bottom-right-radius:var(--mat-form-field-outlined-container-shape, var(--mat-sys-corner-extra-small))}[dir=rtl] .mdc-notched-outline__trailing{border-left:1px solid;border-right:none;border-top-right-radius:0;border-bottom-right-radius:0;border-top-left-radius:var(--mat-form-field-outlined-container-shape, var(--mat-sys-corner-extra-small));border-bottom-left-radius:var(--mat-form-field-outlined-container-shape, var(--mat-sys-corner-extra-small))}.mdc-notched-outline__notch{flex:0 0 auto;width:auto}.mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__notch{max-width:min(var(--mat-form-field-notch-max-width, 100%),calc(100% - max(12px, var(--mat-form-field-outlined-container-shape, var(--mat-sys-corner-extra-small))) * 2))}.mdc-text-field--outlined .mdc-notched-outline--notched .mdc-notched-outline__notch{max-width:min(100%,calc(100% - max(12px, var(--mat-form-field-outlined-container-shape, var(--mat-sys-corner-extra-small))) * 2))}.mdc-text-field--outlined .mdc-notched-outline--notched .mdc-notched-outline__notch{padding-top:1px}.mdc-text-field--focused.mdc-text-field--outlined .mdc-notched-outline--notched .mdc-notched-outline__notch{padding-top:2px}.mdc-notched-outline--notched .mdc-notched-outline__notch{padding-left:0;padding-right:8px;border-top:none}[dir=rtl] .mdc-notched-outline--notched .mdc-notched-outline__notch{padding-left:8px;padding-right:0}.mdc-notched-outline--no-label .mdc-notched-outline__notch{display:none}.mdc-line-ripple::before,.mdc-line-ripple::after{position:absolute;bottom:0;left:0;width:100%;border-bottom-style:solid;content:""}.mdc-line-ripple::before{z-index:1;border-bottom-width:var(--mat-form-field-filled-active-indicator-height, 1px)}.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before{border-bottom-color:var(--mat-form-field-filled-active-indicator-color, var(--mat-sys-on-surface-variant))}.mdc-text-field--filled:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover .mdc-line-ripple::before{border-bottom-color:var(--mat-form-field-filled-hover-active-indicator-color, var(--mat-sys-on-surface))}.mdc-text-field--filled.mdc-text-field--disabled .mdc-line-ripple::before{border-bottom-color:var(--mat-form-field-filled-disabled-active-indicator-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--invalid .mdc-line-ripple::before{border-bottom-color:var(--mat-form-field-filled-error-active-indicator-color, var(--mat-sys-error))}.mdc-text-field--filled:not(.mdc-text-field--disabled).mdc-text-field--invalid:not(.mdc-text-field--focused):hover .mdc-line-ripple::before{border-bottom-color:var(--mat-form-field-filled-error-hover-active-indicator-color, var(--mat-sys-on-error-container))}.mdc-line-ripple::after{transform:scaleX(0);opacity:0;z-index:2}.mdc-text-field--filled .mdc-line-ripple::after{border-bottom-width:var(--mat-form-field-filled-focus-active-indicator-height, 2px)}.mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::after{border-bottom-color:var(--mat-form-field-filled-focus-active-indicator-color, var(--mat-sys-primary))}.mdc-text-field--filled.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-line-ripple::after{border-bottom-color:var(--mat-form-field-filled-error-focus-active-indicator-color, var(--mat-sys-error))}.mdc-line-ripple--active::after{transform:scaleX(1);opacity:1}.mdc-line-ripple--deactivating::after{opacity:0}.mdc-text-field--disabled{pointer-events:none}.mat-mdc-form-field-textarea-control{vertical-align:middle;resize:vertical;box-sizing:border-box;height:auto;margin:0;padding:0;border:none;overflow:auto}.mat-mdc-form-field-input-control.mat-mdc-form-field-input-control{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font:inherit;letter-spacing:inherit;text-decoration:inherit;text-transform:inherit;border:none}.mat-mdc-form-field .mat-mdc-floating-label.mdc-floating-label{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;line-height:normal;pointer-events:all;will-change:auto}.mat-mdc-form-field:not(.mat-form-field-disabled) .mat-mdc-floating-label.mdc-floating-label{cursor:inherit}.mdc-text-field--no-label:not(.mdc-text-field--textarea) .mat-mdc-form-field-input-control.mdc-text-field__input,.mat-mdc-text-field-wrapper .mat-mdc-form-field-input-control{height:auto}.mat-mdc-text-field-wrapper .mat-mdc-form-field-input-control.mdc-text-field__input[type=color]{height:23px}.mat-mdc-text-field-wrapper{height:auto;flex:auto;will-change:auto}.mat-mdc-form-field-has-icon-prefix .mat-mdc-text-field-wrapper{padding-left:0;--mat-mdc-form-field-label-offset-x: -16px}.mat-mdc-form-field-has-icon-suffix .mat-mdc-text-field-wrapper{padding-right:0}[dir=rtl] .mat-mdc-text-field-wrapper{padding-left:16px;padding-right:16px}[dir=rtl] .mat-mdc-form-field-has-icon-suffix .mat-mdc-text-field-wrapper{padding-left:0}[dir=rtl] .mat-mdc-form-field-has-icon-prefix .mat-mdc-text-field-wrapper{padding-right:0}.mat-form-field-disabled .mdc-text-field__input::placeholder{color:var(--mat-form-field-disabled-input-text-placeholder-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mat-form-field-disabled .mdc-text-field__input::-moz-placeholder{color:var(--mat-form-field-disabled-input-text-placeholder-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mat-form-field-disabled .mdc-text-field__input::-webkit-input-placeholder{color:var(--mat-form-field-disabled-input-text-placeholder-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mat-form-field-disabled .mdc-text-field__input:-ms-input-placeholder{color:var(--mat-form-field-disabled-input-text-placeholder-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mat-mdc-form-field-label-always-float .mdc-text-field__input::placeholder{transition-delay:40ms;transition-duration:110ms;opacity:1}.mat-mdc-text-field-wrapper .mat-mdc-form-field-infix .mat-mdc-floating-label{left:auto;right:auto}.mat-mdc-text-field-wrapper.mdc-text-field--outlined .mdc-text-field__input{display:inline-block}.mat-mdc-form-field .mat-mdc-text-field-wrapper.mdc-text-field .mdc-notched-outline__notch{padding-top:0}.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field .mdc-notched-outline__notch{border-left:1px solid rgba(0,0,0,0)}[dir=rtl] .mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field .mdc-notched-outline__notch{border-left:none;border-right:1px solid rgba(0,0,0,0)}.mat-mdc-form-field-infix{min-height:var(--mat-form-field-container-height, 56px);padding-top:var(--mat-form-field-filled-with-label-container-padding-top, 24px);padding-bottom:var(--mat-form-field-filled-with-label-container-padding-bottom, 8px)}.mdc-text-field--outlined .mat-mdc-form-field-infix,.mdc-text-field--no-label .mat-mdc-form-field-infix{padding-top:var(--mat-form-field-container-vertical-padding, 16px);padding-bottom:var(--mat-form-field-container-vertical-padding, 16px)}.mat-mdc-text-field-wrapper .mat-mdc-form-field-flex .mat-mdc-floating-label{top:calc(var(--mat-form-field-container-height, 56px)/2)}.mdc-text-field--filled .mat-mdc-floating-label{display:var(--mat-form-field-filled-label-display, block)}.mat-mdc-text-field-wrapper.mdc-text-field--outlined .mdc-notched-outline--upgraded .mdc-floating-label--float-above{--mat-mdc-form-field-label-transform: translateY(calc(calc(6.75px + var(--mat-form-field-container-height, 56px) / 2) * -1)) scale(var(--mat-mdc-form-field-floating-label-scale, 0.75));transform:var(--mat-mdc-form-field-label-transform)}@keyframes _mat-form-field-subscript-animation{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}.mat-mdc-form-field-subscript-wrapper{box-sizing:border-box;width:100%;position:relative}.mat-mdc-form-field-hint-wrapper,.mat-mdc-form-field-error-wrapper{position:absolute;top:0;left:0;right:0;padding:0 16px;opacity:1;transform:translateY(0);animation:_mat-form-field-subscript-animation 0ms cubic-bezier(0.55, 0, 0.55, 0.2)}.mat-mdc-form-field-subscript-dynamic-size .mat-mdc-form-field-hint-wrapper,.mat-mdc-form-field-subscript-dynamic-size .mat-mdc-form-field-error-wrapper{position:static}.mat-mdc-form-field-bottom-align::before{content:"";display:inline-block;height:16px}.mat-mdc-form-field-bottom-align.mat-mdc-form-field-subscript-dynamic-size::before{content:unset}.mat-mdc-form-field-hint-end{order:1}.mat-mdc-form-field-hint-wrapper{display:flex}.mat-mdc-form-field-hint-spacer{flex:1 0 1em}.mat-mdc-form-field-error{display:block;color:var(--mat-form-field-error-text-color, var(--mat-sys-error))}.mat-mdc-form-field-subscript-wrapper,.mat-mdc-form-field-bottom-align::before{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-family:var(--mat-form-field-subscript-text-font, var(--mat-sys-body-small-font));line-height:var(--mat-form-field-subscript-text-line-height, var(--mat-sys-body-small-line-height));font-size:var(--mat-form-field-subscript-text-size, var(--mat-sys-body-small-size));letter-spacing:var(--mat-form-field-subscript-text-tracking, var(--mat-sys-body-small-tracking));font-weight:var(--mat-form-field-subscript-text-weight, var(--mat-sys-body-small-weight))}.mat-mdc-form-field-focus-overlay{top:0;left:0;right:0;bottom:0;position:absolute;opacity:0;pointer-events:none;background-color:var(--mat-form-field-state-layer-color, var(--mat-sys-on-surface))}.mat-mdc-text-field-wrapper:hover .mat-mdc-form-field-focus-overlay{opacity:var(--mat-form-field-hover-state-layer-opacity, var(--mat-sys-hover-state-layer-opacity))}.mat-mdc-form-field.mat-focused .mat-mdc-form-field-focus-overlay{opacity:var(--mat-form-field-focus-state-layer-opacity, 0)}select.mat-mdc-form-field-input-control{-moz-appearance:none;-webkit-appearance:none;background-color:rgba(0,0,0,0);display:inline-flex;box-sizing:border-box}select.mat-mdc-form-field-input-control:not(:disabled){cursor:pointer}select.mat-mdc-form-field-input-control:not(.mat-mdc-native-select-inline) option{color:var(--mat-form-field-select-option-text-color, var(--mat-sys-neutral10))}select.mat-mdc-form-field-input-control:not(.mat-mdc-native-select-inline) option:disabled{color:var(--mat-form-field-select-disabled-option-text-color, color-mix(in srgb, var(--mat-sys-neutral10) 38%, transparent))}.mat-mdc-form-field-type-mat-native-select .mat-mdc-form-field-infix::after{content:"";width:0;height:0;border-left:5px solid rgba(0,0,0,0);border-right:5px solid rgba(0,0,0,0);border-top:5px solid;position:absolute;right:0;top:50%;margin-top:-2.5px;pointer-events:none;color:var(--mat-form-field-enabled-select-arrow-color, var(--mat-sys-on-surface-variant))}[dir=rtl] .mat-mdc-form-field-type-mat-native-select .mat-mdc-form-field-infix::after{right:auto;left:0}.mat-mdc-form-field-type-mat-native-select.mat-focused .mat-mdc-form-field-infix::after{color:var(--mat-form-field-focus-select-arrow-color, var(--mat-sys-primary))}.mat-mdc-form-field-type-mat-native-select.mat-form-field-disabled .mat-mdc-form-field-infix::after{color:var(--mat-form-field-disabled-select-arrow-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mat-mdc-form-field-type-mat-native-select .mat-mdc-form-field-input-control{padding-right:15px}[dir=rtl] .mat-mdc-form-field-type-mat-native-select .mat-mdc-form-field-input-control{padding-right:0;padding-left:15px}@media(forced-colors: active){.mat-form-field-appearance-fill .mat-mdc-text-field-wrapper{outline:solid 1px}}@media(forced-colors: active){.mat-form-field-appearance-fill.mat-form-field-disabled .mat-mdc-text-field-wrapper{outline-color:GrayText}}@media(forced-colors: active){.mat-form-field-appearance-fill.mat-focused .mat-mdc-text-field-wrapper{outline:dashed 3px}}@media(forced-colors: active){.mat-mdc-form-field.mat-focused .mdc-notched-outline{border:dashed 3px}}.mat-mdc-form-field-input-control[type=date],.mat-mdc-form-field-input-control[type=datetime],.mat-mdc-form-field-input-control[type=datetime-local],.mat-mdc-form-field-input-control[type=month],.mat-mdc-form-field-input-control[type=week],.mat-mdc-form-field-input-control[type=time]{line-height:1}.mat-mdc-form-field-input-control::-webkit-datetime-edit{line-height:1;padding:0;margin-bottom:-2px}.mat-mdc-form-field{--mat-mdc-form-field-floating-label-scale: 0.75;display:inline-flex;flex-direction:column;min-width:0;text-align:left;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-family:var(--mat-form-field-container-text-font, var(--mat-sys-body-large-font));line-height:var(--mat-form-field-container-text-line-height, var(--mat-sys-body-large-line-height));font-size:var(--mat-form-field-container-text-size, var(--mat-sys-body-large-size));letter-spacing:var(--mat-form-field-container-text-tracking, var(--mat-sys-body-large-tracking));font-weight:var(--mat-form-field-container-text-weight, var(--mat-sys-body-large-weight))}.mat-mdc-form-field .mdc-text-field--outlined .mdc-floating-label--float-above{font-size:calc(var(--mat-form-field-outlined-label-text-populated-size)*var(--mat-mdc-form-field-floating-label-scale))}.mat-mdc-form-field .mdc-text-field--outlined .mdc-notched-outline--upgraded .mdc-floating-label--float-above{font-size:var(--mat-form-field-outlined-label-text-populated-size)}[dir=rtl] .mat-mdc-form-field{text-align:right}.mat-mdc-form-field-flex{display:inline-flex;align-items:baseline;box-sizing:border-box;width:100%}.mat-mdc-text-field-wrapper{width:100%;z-index:0}.mat-mdc-form-field-icon-prefix,.mat-mdc-form-field-icon-suffix{align-self:center;line-height:0;pointer-events:auto;position:relative;z-index:1}.mat-mdc-form-field-icon-prefix>.mat-icon,.mat-mdc-form-field-icon-suffix>.mat-icon{padding:0 12px;box-sizing:content-box}.mat-mdc-form-field-icon-prefix{color:var(--mat-form-field-leading-icon-color, var(--mat-sys-on-surface-variant))}.mat-form-field-disabled .mat-mdc-form-field-icon-prefix{color:var(--mat-form-field-disabled-leading-icon-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mat-mdc-form-field-icon-suffix{color:var(--mat-form-field-trailing-icon-color, var(--mat-sys-on-surface-variant))}.mat-form-field-disabled .mat-mdc-form-field-icon-suffix{color:var(--mat-form-field-disabled-trailing-icon-color, color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent))}.mat-form-field-invalid .mat-mdc-form-field-icon-suffix{color:var(--mat-form-field-error-trailing-icon-color, var(--mat-sys-error))}.mat-form-field-invalid:not(.mat-focused):not(.mat-form-field-disabled) .mat-mdc-text-field-wrapper:hover .mat-mdc-form-field-icon-suffix{color:var(--mat-form-field-error-hover-trailing-icon-color, var(--mat-sys-on-error-container))}.mat-form-field-invalid.mat-focused .mat-mdc-text-field-wrapper .mat-mdc-form-field-icon-suffix{color:var(--mat-form-field-error-focus-trailing-icon-color, var(--mat-sys-error))}.mat-mdc-form-field-icon-prefix,[dir=rtl] .mat-mdc-form-field-icon-suffix{padding:0 4px 0 0}.mat-mdc-form-field-icon-suffix,[dir=rtl] .mat-mdc-form-field-icon-prefix{padding:0 0 0 4px}.mat-mdc-form-field-subscript-wrapper .mat-icon,.mat-mdc-form-field label .mat-icon{width:1em;height:1em;font-size:inherit}.mat-mdc-form-field-infix{flex:auto;min-width:0;width:180px;position:relative;box-sizing:border-box}.mat-mdc-form-field-infix:has(textarea[cols]){width:auto}.mat-mdc-form-field .mdc-notched-outline__notch{margin-left:-1px;-webkit-clip-path:inset(-9em -999em -9em 1px);clip-path:inset(-9em -999em -9em 1px)}[dir=rtl] .mat-mdc-form-field .mdc-notched-outline__notch{margin-left:0;margin-right:-1px;-webkit-clip-path:inset(-9em 1px -9em -999em);clip-path:inset(-9em 1px -9em -999em)}.mat-mdc-form-field.mat-form-field-animations-enabled .mdc-floating-label{transition:transform 150ms cubic-bezier(0.4, 0, 0.2, 1),color 150ms cubic-bezier(0.4, 0, 0.2, 1)}.mat-mdc-form-field.mat-form-field-animations-enabled .mdc-text-field__input{transition:opacity 150ms cubic-bezier(0.4, 0, 0.2, 1)}.mat-mdc-form-field.mat-form-field-animations-enabled .mdc-text-field__input::placeholder{transition:opacity 67ms cubic-bezier(0.4, 0, 0.2, 1)}.mat-mdc-form-field.mat-form-field-animations-enabled .mdc-text-field__input::-moz-placeholder{transition:opacity 67ms cubic-bezier(0.4, 0, 0.2, 1)}.mat-mdc-form-field.mat-form-field-animations-enabled .mdc-text-field__input::-webkit-input-placeholder{transition:opacity 67ms cubic-bezier(0.4, 0, 0.2, 1)}.mat-mdc-form-field.mat-form-field-animations-enabled .mdc-text-field__input:-ms-input-placeholder{transition:opacity 67ms cubic-bezier(0.4, 0, 0.2, 1)}.mat-mdc-form-field.mat-form-field-animations-enabled.mdc-text-field--no-label .mdc-text-field__input::placeholder,.mat-mdc-form-field.mat-form-field-animations-enabled.mdc-text-field--focused .mdc-text-field__input::placeholder{transition-delay:40ms;transition-duration:110ms}.mat-mdc-form-field.mat-form-field-animations-enabled.mdc-text-field--no-label .mdc-text-field__input::-moz-placeholder,.mat-mdc-form-field.mat-form-field-animations-enabled.mdc-text-field--focused .mdc-text-field__input::-moz-placeholder{transition-delay:40ms;transition-duration:110ms}.mat-mdc-form-field.mat-form-field-animations-enabled.mdc-text-field--no-label .mdc-text-field__input::-webkit-input-placeholder,.mat-mdc-form-field.mat-form-field-animations-enabled.mdc-text-field--focused .mdc-text-field__input::-webkit-input-placeholder{transition-delay:40ms;transition-duration:110ms}.mat-mdc-form-field.mat-form-field-animations-enabled.mdc-text-field--no-label .mdc-text-field__input:-ms-input-placeholder,.mat-mdc-form-field.mat-form-field-animations-enabled.mdc-text-field--focused .mdc-text-field__input:-ms-input-placeholder{transition-delay:40ms;transition-duration:110ms}.mat-mdc-form-field.mat-form-field-animations-enabled .mdc-text-field--filled:not(.mdc-ripple-upgraded):focus .mdc-text-field__ripple::before{transition-duration:75ms}.mat-mdc-form-field.mat-form-field-animations-enabled .mdc-line-ripple::after{transition:transform 180ms cubic-bezier(0.4, 0, 0.2, 1),opacity 180ms cubic-bezier(0.4, 0, 0.2, 1)}.mat-mdc-form-field.mat-form-field-animations-enabled .mat-mdc-form-field-hint-wrapper,.mat-mdc-form-field.mat-form-field-animations-enabled .mat-mdc-form-field-error-wrapper{animation-duration:300ms}.mdc-notched-outline .mdc-floating-label{max-width:calc(100% + 1px)}.mdc-notched-outline--upgraded .mdc-floating-label--float-above{max-width:calc(133.3333333333% + 1px)}\n'],
-  encapsulation: 2,
-  changeDetection: 0
-}));
-var MatFormField = _MatFormField;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(MatFormField, [{
     type: Component,
@@ -8939,7 +8691,7 @@ var _ListService = class _ListService {
     return this.listService.deleteList(id);
   }
   mapApiListToList(apiList) {
-    let items = this.mapApiItemsToItems(apiList.items);
+    const items = this.mapApiItemsToItems(apiList.items);
     return {
       id: apiList.id,
       name: apiList.name,
@@ -8968,10 +8720,9 @@ var _ListService = class _ListService {
     };
   }
 };
-__name(_ListService, "ListService");
-_ListService.\u0275fac = /* @__PURE__ */ __name(function ListService_Factory(__ngFactoryType__) {
+_ListService.\u0275fac = function ListService_Factory(__ngFactoryType__) {
   return new (__ngFactoryType__ || _ListService)();
-}, "ListService_Factory");
+};
 _ListService.\u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({ token: _ListService, factory: _ListService.\u0275fac, providedIn: "root" });
 var ListService = _ListService;
 (() => {
@@ -8984,17 +8735,14 @@ var ListService = _ListService;
 })();
 
 // node_modules/@angular/cdk/fesm2022/data-source.mjs
-var _DataSource = class _DataSource {
+var DataSource = class {
 };
-__name(_DataSource, "DataSource");
-var DataSource = _DataSource;
 function isDataSource(value) {
   return value && typeof value.connect === "function" && !(value instanceof ConnectableObservable);
 }
-__name(isDataSource, "isDataSource");
 
 // node_modules/@angular/cdk/fesm2022/recycle-view-repeater-strategy.mjs
-var _ArrayDataSource = class _ArrayDataSource extends DataSource {
+var ArrayDataSource = class extends DataSource {
   _data;
   constructor(_data) {
     super();
@@ -9006,8 +8754,6 @@ var _ArrayDataSource = class _ArrayDataSource extends DataSource {
   disconnect() {
   }
 };
-__name(_ArrayDataSource, "ArrayDataSource");
-var ArrayDataSource = _ArrayDataSource;
 var _ViewRepeaterOperation;
 (function(_ViewRepeaterOperation2) {
   _ViewRepeaterOperation2[_ViewRepeaterOperation2["REPLACED"] = 0] = "REPLACED";
@@ -9016,7 +8762,7 @@ var _ViewRepeaterOperation;
   _ViewRepeaterOperation2[_ViewRepeaterOperation2["REMOVED"] = 3] = "REMOVED";
 })(_ViewRepeaterOperation || (_ViewRepeaterOperation = {}));
 var _VIEW_REPEATER_STRATEGY = new InjectionToken("_ViewRepeater");
-var __RecycleViewRepeaterStrategy = class __RecycleViewRepeaterStrategy {
+var _RecycleViewRepeaterStrategy = class {
   /**
    * The size of the cache used to store unused views.
    * Setting the cache size to `0` will disable caching. Defaults to 20 views.
@@ -9036,7 +8782,7 @@ var __RecycleViewRepeaterStrategy = class __RecycleViewRepeaterStrategy {
       let view;
       let operation;
       if (record.previousIndex == null) {
-        const viewArgsFactory = /* @__PURE__ */ __name(() => itemContextFactory(record, adjustedPreviousIndex, currentIndex), "viewArgsFactory");
+        const viewArgsFactory = () => itemContextFactory(record, adjustedPreviousIndex, currentIndex);
         view = this._insertView(viewArgsFactory, currentIndex, viewContainerRef, itemValueResolver(record));
         operation = view ? _ViewRepeaterOperation.INSERTED : _ViewRepeaterOperation.REPLACED;
       } else if (currentIndex == null) {
@@ -9111,14 +8857,12 @@ var __RecycleViewRepeaterStrategy = class __RecycleViewRepeaterStrategy {
     return cachedView || null;
   }
 };
-__name(__RecycleViewRepeaterStrategy, "_RecycleViewRepeaterStrategy");
-var _RecycleViewRepeaterStrategy = __RecycleViewRepeaterStrategy;
 
 // node_modules/@angular/cdk/fesm2022/scrolling.mjs
 var _c03 = ["contentWrapper"];
 var _c13 = ["*"];
 var VIRTUAL_SCROLL_STRATEGY = new InjectionToken("VIRTUAL_SCROLL_STRATEGY");
-var _FixedSizeVirtualScrollStrategy = class _FixedSizeVirtualScrollStrategy {
+var FixedSizeVirtualScrollStrategy = class {
   _scrolledIndexChange = new Subject();
   /** @docs-private Implemented as part of VirtualScrollStrategy. */
   scrolledIndexChange = this._scrolledIndexChange.pipe(distinctUntilChanged());
@@ -9246,13 +8990,10 @@ var _FixedSizeVirtualScrollStrategy = class _FixedSizeVirtualScrollStrategy {
     this._scrolledIndexChange.next(Math.floor(firstVisibleIndex));
   }
 };
-__name(_FixedSizeVirtualScrollStrategy, "FixedSizeVirtualScrollStrategy");
-var FixedSizeVirtualScrollStrategy = _FixedSizeVirtualScrollStrategy;
 function _fixedSizeVirtualScrollStrategyFactory(fixedSizeDir) {
   return fixedSizeDir._scrollStrategy;
 }
-__name(_fixedSizeVirtualScrollStrategyFactory, "_fixedSizeVirtualScrollStrategyFactory");
-var _CdkFixedSizeVirtualScroll = class _CdkFixedSizeVirtualScroll {
+var CdkFixedSizeVirtualScroll = class _CdkFixedSizeVirtualScroll {
   /** The size of the items in the list (in pixels). */
   get itemSize() {
     return this._itemSize;
@@ -9287,26 +9028,24 @@ var _CdkFixedSizeVirtualScroll = class _CdkFixedSizeVirtualScroll {
   ngOnChanges() {
     this._scrollStrategy.updateItemAndBufferSize(this.itemSize, this.minBufferPx, this.maxBufferPx);
   }
+  static \u0275fac = function CdkFixedSizeVirtualScroll_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _CdkFixedSizeVirtualScroll)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _CdkFixedSizeVirtualScroll,
+    selectors: [["cdk-virtual-scroll-viewport", "itemSize", ""]],
+    inputs: {
+      itemSize: "itemSize",
+      minBufferPx: "minBufferPx",
+      maxBufferPx: "maxBufferPx"
+    },
+    features: [\u0275\u0275ProvidersFeature([{
+      provide: VIRTUAL_SCROLL_STRATEGY,
+      useFactory: _fixedSizeVirtualScrollStrategyFactory,
+      deps: [forwardRef(() => _CdkFixedSizeVirtualScroll)]
+    }]), \u0275\u0275NgOnChangesFeature]
+  });
 };
-__name(_CdkFixedSizeVirtualScroll, "CdkFixedSizeVirtualScroll");
-__publicField(_CdkFixedSizeVirtualScroll, "\u0275fac", /* @__PURE__ */ __name(function CdkFixedSizeVirtualScroll_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _CdkFixedSizeVirtualScroll)();
-}, "CdkFixedSizeVirtualScroll_Factory"));
-__publicField(_CdkFixedSizeVirtualScroll, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _CdkFixedSizeVirtualScroll,
-  selectors: [["cdk-virtual-scroll-viewport", "itemSize", ""]],
-  inputs: {
-    itemSize: "itemSize",
-    minBufferPx: "minBufferPx",
-    maxBufferPx: "maxBufferPx"
-  },
-  features: [\u0275\u0275ProvidersFeature([{
-    provide: VIRTUAL_SCROLL_STRATEGY,
-    useFactory: _fixedSizeVirtualScrollStrategyFactory,
-    deps: [forwardRef(() => _CdkFixedSizeVirtualScroll)]
-  }]), \u0275\u0275NgOnChangesFeature]
-}));
-var CdkFixedSizeVirtualScroll = _CdkFixedSizeVirtualScroll;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(CdkFixedSizeVirtualScroll, [{
     type: Directive,
@@ -9331,7 +9070,7 @@ var CdkFixedSizeVirtualScroll = _CdkFixedSizeVirtualScroll;
   });
 })();
 var DEFAULT_SCROLL_TIME = 20;
-var _ScrollDispatcher = class _ScrollDispatcher {
+var ScrollDispatcher = class _ScrollDispatcher {
   _ngZone = inject(NgZone);
   _platform = inject(Platform);
   _renderer = inject(RendererFactory2).createRenderer(null, null);
@@ -9435,17 +9174,15 @@ var _ScrollDispatcher = class _ScrollDispatcher {
     } while (element = element.parentElement);
     return false;
   }
+  static \u0275fac = function ScrollDispatcher_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _ScrollDispatcher)();
+  };
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
+    token: _ScrollDispatcher,
+    factory: _ScrollDispatcher.\u0275fac,
+    providedIn: "root"
+  });
 };
-__name(_ScrollDispatcher, "ScrollDispatcher");
-__publicField(_ScrollDispatcher, "\u0275fac", /* @__PURE__ */ __name(function ScrollDispatcher_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _ScrollDispatcher)();
-}, "ScrollDispatcher_Factory"));
-__publicField(_ScrollDispatcher, "\u0275prov", /* @__PURE__ */ \u0275\u0275defineInjectable({
-  token: _ScrollDispatcher,
-  factory: _ScrollDispatcher.\u0275fac,
-  providedIn: "root"
-}));
-var ScrollDispatcher = _ScrollDispatcher;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ScrollDispatcher, [{
     type: Injectable,
@@ -9454,7 +9191,7 @@ var ScrollDispatcher = _ScrollDispatcher;
     }]
   }], () => [], null);
 })();
-var _CdkScrollable = class _CdkScrollable {
+var CdkScrollable = class _CdkScrollable {
   elementRef = inject(ElementRef);
   scrollDispatcher = inject(ScrollDispatcher);
   ngZone = inject(NgZone);
@@ -9581,16 +9318,14 @@ var _CdkScrollable = class _CdkScrollable {
       }
     }
   }
+  static \u0275fac = function CdkScrollable_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _CdkScrollable)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _CdkScrollable,
+    selectors: [["", "cdk-scrollable", ""], ["", "cdkScrollable", ""]]
+  });
 };
-__name(_CdkScrollable, "CdkScrollable");
-__publicField(_CdkScrollable, "\u0275fac", /* @__PURE__ */ __name(function CdkScrollable_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _CdkScrollable)();
-}, "CdkScrollable_Factory"));
-__publicField(_CdkScrollable, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _CdkScrollable,
-  selectors: [["", "cdk-scrollable", ""], ["", "cdkScrollable", ""]]
-}));
-var CdkScrollable = _CdkScrollable;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(CdkScrollable, [{
     type: Directive,
@@ -9600,7 +9335,7 @@ var CdkScrollable = _CdkScrollable;
   }], () => [], null);
 })();
 var DEFAULT_RESIZE_TIME = 20;
-var _ViewportRuler = class _ViewportRuler {
+var ViewportRuler = class _ViewportRuler {
   _platform = inject(Platform);
   _listeners;
   /** Cached viewport dimensions. */
@@ -9614,7 +9349,7 @@ var _ViewportRuler = class _ViewportRuler {
     const renderer = inject(RendererFactory2).createRenderer(null, null);
     ngZone.runOutsideAngular(() => {
       if (this._platform.isBrowser) {
-        const changeListener = /* @__PURE__ */ __name((event) => this._change.next(event), "changeListener");
+        const changeListener = (event) => this._change.next(event);
         this._listeners = [renderer.listen("window", "resize", changeListener), renderer.listen("window", "orientationchange", changeListener)];
       }
       this.change().subscribe(() => this._viewportSize = null);
@@ -9696,17 +9431,15 @@ var _ViewportRuler = class _ViewportRuler {
       height: 0
     };
   }
+  static \u0275fac = function ViewportRuler_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _ViewportRuler)();
+  };
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
+    token: _ViewportRuler,
+    factory: _ViewportRuler.\u0275fac,
+    providedIn: "root"
+  });
 };
-__name(_ViewportRuler, "ViewportRuler");
-__publicField(_ViewportRuler, "\u0275fac", /* @__PURE__ */ __name(function ViewportRuler_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _ViewportRuler)();
-}, "ViewportRuler_Factory"));
-__publicField(_ViewportRuler, "\u0275prov", /* @__PURE__ */ \u0275\u0275defineInjectable({
-  token: _ViewportRuler,
-  factory: _ViewportRuler.\u0275fac,
-  providedIn: "root"
-}));
-var ViewportRuler = _ViewportRuler;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ViewportRuler, [{
     type: Injectable,
@@ -9716,7 +9449,7 @@ var ViewportRuler = _ViewportRuler;
   }], () => [], null);
 })();
 var VIRTUAL_SCROLLABLE = new InjectionToken("VIRTUAL_SCROLLABLE");
-var _CdkVirtualScrollable = class _CdkVirtualScrollable extends CdkScrollable {
+var CdkVirtualScrollable = class _CdkVirtualScrollable extends CdkScrollable {
   constructor() {
     super();
   }
@@ -9729,16 +9462,14 @@ var _CdkVirtualScrollable = class _CdkVirtualScrollable extends CdkScrollable {
     const viewportEl = this.elementRef.nativeElement;
     return orientation === "horizontal" ? viewportEl.clientWidth : viewportEl.clientHeight;
   }
+  static \u0275fac = function CdkVirtualScrollable_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _CdkVirtualScrollable)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _CdkVirtualScrollable,
+    features: [\u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_CdkVirtualScrollable, "CdkVirtualScrollable");
-__publicField(_CdkVirtualScrollable, "\u0275fac", /* @__PURE__ */ __name(function CdkVirtualScrollable_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _CdkVirtualScrollable)();
-}, "CdkVirtualScrollable_Factory"));
-__publicField(_CdkVirtualScrollable, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _CdkVirtualScrollable,
-  features: [\u0275\u0275InheritDefinitionFeature]
-}));
-var CdkVirtualScrollable = _CdkVirtualScrollable;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(CdkVirtualScrollable, [{
     type: Directive
@@ -9747,9 +9478,8 @@ var CdkVirtualScrollable = _CdkVirtualScrollable;
 function rangesEqual(r1, r2) {
   return r1.start == r2.start && r1.end == r2.end;
 }
-__name(rangesEqual, "rangesEqual");
 var SCROLL_SCHEDULER = typeof requestAnimationFrame !== "undefined" ? animationFrameScheduler : asapScheduler;
-var _CdkVirtualScrollViewport = class _CdkVirtualScrollViewport extends CdkVirtualScrollable {
+var CdkVirtualScrollViewport = class _CdkVirtualScrollViewport extends CdkVirtualScrollable {
   elementRef = inject(ElementRef);
   _changeDetectorRef = inject(ChangeDetectorRef);
   _scrollStrategy = inject(VIRTUAL_SCROLL_STRATEGY, {
@@ -10030,9 +9760,9 @@ var _CdkVirtualScrollViewport = class _CdkVirtualScrollViewport extends CdkVirtu
   measureScrollOffset(from2) {
     let measureScrollOffset;
     if (this.scrollable == this) {
-      measureScrollOffset = /* @__PURE__ */ __name((_from) => super.measureScrollOffset(_from), "measureScrollOffset");
+      measureScrollOffset = (_from) => super.measureScrollOffset(_from);
     } else {
-      measureScrollOffset = /* @__PURE__ */ __name((_from) => this.scrollable.measureScrollOffset(_from), "measureScrollOffset");
+      measureScrollOffset = (_from) => this.scrollable.measureScrollOffset(_from);
     }
     return Math.max(0, measureScrollOffset(from2 ?? (this.orientation === "horizontal" ? "start" : "top")) - this.measureViewportOffset());
   }
@@ -10123,64 +9853,62 @@ var _CdkVirtualScrollViewport = class _CdkVirtualScrollViewport extends CdkVirtu
     this._totalContentHeight.set(this.orientation === "horizontal" ? "" : `${this._totalContentSize}px`);
     this._totalContentWidth.set(this.orientation === "horizontal" ? `${this._totalContentSize}px` : "");
   }
+  static \u0275fac = function CdkVirtualScrollViewport_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _CdkVirtualScrollViewport)();
+  };
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
+    type: _CdkVirtualScrollViewport,
+    selectors: [["cdk-virtual-scroll-viewport"]],
+    viewQuery: function CdkVirtualScrollViewport_Query(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275viewQuery(_c03, 7);
+      }
+      if (rf & 2) {
+        let _t;
+        \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._contentWrapper = _t.first);
+      }
+    },
+    hostAttrs: [1, "cdk-virtual-scroll-viewport"],
+    hostVars: 4,
+    hostBindings: function CdkVirtualScrollViewport_HostBindings(rf, ctx) {
+      if (rf & 2) {
+        \u0275\u0275classProp("cdk-virtual-scroll-orientation-horizontal", ctx.orientation === "horizontal")("cdk-virtual-scroll-orientation-vertical", ctx.orientation !== "horizontal");
+      }
+    },
+    inputs: {
+      orientation: "orientation",
+      appendOnly: [2, "appendOnly", "appendOnly", booleanAttribute]
+    },
+    outputs: {
+      scrolledIndexChange: "scrolledIndexChange"
+    },
+    features: [\u0275\u0275ProvidersFeature([{
+      provide: CdkScrollable,
+      useFactory: (virtualScrollable, viewport) => virtualScrollable || viewport,
+      deps: [[new Optional(), new Inject(VIRTUAL_SCROLLABLE)], _CdkVirtualScrollViewport]
+    }]), \u0275\u0275InheritDefinitionFeature],
+    ngContentSelectors: _c13,
+    decls: 4,
+    vars: 4,
+    consts: [["contentWrapper", ""], [1, "cdk-virtual-scroll-content-wrapper"], [1, "cdk-virtual-scroll-spacer"]],
+    template: function CdkVirtualScrollViewport_Template(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275projectionDef();
+        \u0275\u0275domElementStart(0, "div", 1, 0);
+        \u0275\u0275projection(2);
+        \u0275\u0275domElementEnd();
+        \u0275\u0275domElement(3, "div", 2);
+      }
+      if (rf & 2) {
+        \u0275\u0275advance(3);
+        \u0275\u0275styleProp("width", ctx._totalContentWidth())("height", ctx._totalContentHeight());
+      }
+    },
+    styles: ["cdk-virtual-scroll-viewport{display:block;position:relative;transform:translateZ(0)}.cdk-virtual-scrollable{overflow:auto;will-change:scroll-position;contain:strict}.cdk-virtual-scroll-content-wrapper{position:absolute;top:0;left:0;contain:content}[dir=rtl] .cdk-virtual-scroll-content-wrapper{right:0;left:auto}.cdk-virtual-scroll-orientation-horizontal .cdk-virtual-scroll-content-wrapper{min-height:100%}.cdk-virtual-scroll-orientation-horizontal .cdk-virtual-scroll-content-wrapper>dl:not([cdkVirtualFor]),.cdk-virtual-scroll-orientation-horizontal .cdk-virtual-scroll-content-wrapper>ol:not([cdkVirtualFor]),.cdk-virtual-scroll-orientation-horizontal .cdk-virtual-scroll-content-wrapper>table:not([cdkVirtualFor]),.cdk-virtual-scroll-orientation-horizontal .cdk-virtual-scroll-content-wrapper>ul:not([cdkVirtualFor]){padding-left:0;padding-right:0;margin-left:0;margin-right:0;border-left-width:0;border-right-width:0;outline:none}.cdk-virtual-scroll-orientation-vertical .cdk-virtual-scroll-content-wrapper{min-width:100%}.cdk-virtual-scroll-orientation-vertical .cdk-virtual-scroll-content-wrapper>dl:not([cdkVirtualFor]),.cdk-virtual-scroll-orientation-vertical .cdk-virtual-scroll-content-wrapper>ol:not([cdkVirtualFor]),.cdk-virtual-scroll-orientation-vertical .cdk-virtual-scroll-content-wrapper>table:not([cdkVirtualFor]),.cdk-virtual-scroll-orientation-vertical .cdk-virtual-scroll-content-wrapper>ul:not([cdkVirtualFor]){padding-top:0;padding-bottom:0;margin-top:0;margin-bottom:0;border-top-width:0;border-bottom-width:0;outline:none}.cdk-virtual-scroll-spacer{height:1px;transform-origin:0 0;flex:0 0 auto}[dir=rtl] .cdk-virtual-scroll-spacer{transform-origin:100% 0}\n"],
+    encapsulation: 2,
+    changeDetection: 0
+  });
 };
-__name(_CdkVirtualScrollViewport, "CdkVirtualScrollViewport");
-__publicField(_CdkVirtualScrollViewport, "\u0275fac", /* @__PURE__ */ __name(function CdkVirtualScrollViewport_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _CdkVirtualScrollViewport)();
-}, "CdkVirtualScrollViewport_Factory"));
-__publicField(_CdkVirtualScrollViewport, "\u0275cmp", /* @__PURE__ */ \u0275\u0275defineComponent({
-  type: _CdkVirtualScrollViewport,
-  selectors: [["cdk-virtual-scroll-viewport"]],
-  viewQuery: /* @__PURE__ */ __name(function CdkVirtualScrollViewport_Query(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275viewQuery(_c03, 7);
-    }
-    if (rf & 2) {
-      let _t;
-      \u0275\u0275queryRefresh(_t = \u0275\u0275loadQuery()) && (ctx._contentWrapper = _t.first);
-    }
-  }, "CdkVirtualScrollViewport_Query"),
-  hostAttrs: [1, "cdk-virtual-scroll-viewport"],
-  hostVars: 4,
-  hostBindings: /* @__PURE__ */ __name(function CdkVirtualScrollViewport_HostBindings(rf, ctx) {
-    if (rf & 2) {
-      \u0275\u0275classProp("cdk-virtual-scroll-orientation-horizontal", ctx.orientation === "horizontal")("cdk-virtual-scroll-orientation-vertical", ctx.orientation !== "horizontal");
-    }
-  }, "CdkVirtualScrollViewport_HostBindings"),
-  inputs: {
-    orientation: "orientation",
-    appendOnly: [2, "appendOnly", "appendOnly", booleanAttribute]
-  },
-  outputs: {
-    scrolledIndexChange: "scrolledIndexChange"
-  },
-  features: [\u0275\u0275ProvidersFeature([{
-    provide: CdkScrollable,
-    useFactory: /* @__PURE__ */ __name((virtualScrollable, viewport) => virtualScrollable || viewport, "useFactory"),
-    deps: [[new Optional(), new Inject(VIRTUAL_SCROLLABLE)], _CdkVirtualScrollViewport]
-  }]), \u0275\u0275InheritDefinitionFeature],
-  ngContentSelectors: _c13,
-  decls: 4,
-  vars: 4,
-  consts: [["contentWrapper", ""], [1, "cdk-virtual-scroll-content-wrapper"], [1, "cdk-virtual-scroll-spacer"]],
-  template: /* @__PURE__ */ __name(function CdkVirtualScrollViewport_Template(rf, ctx) {
-    if (rf & 1) {
-      \u0275\u0275projectionDef();
-      \u0275\u0275domElementStart(0, "div", 1, 0);
-      \u0275\u0275projection(2);
-      \u0275\u0275domElementEnd();
-      \u0275\u0275domElement(3, "div", 2);
-    }
-    if (rf & 2) {
-      \u0275\u0275advance(3);
-      \u0275\u0275styleProp("width", ctx._totalContentWidth())("height", ctx._totalContentHeight());
-    }
-  }, "CdkVirtualScrollViewport_Template"),
-  styles: ["cdk-virtual-scroll-viewport{display:block;position:relative;transform:translateZ(0)}.cdk-virtual-scrollable{overflow:auto;will-change:scroll-position;contain:strict}.cdk-virtual-scroll-content-wrapper{position:absolute;top:0;left:0;contain:content}[dir=rtl] .cdk-virtual-scroll-content-wrapper{right:0;left:auto}.cdk-virtual-scroll-orientation-horizontal .cdk-virtual-scroll-content-wrapper{min-height:100%}.cdk-virtual-scroll-orientation-horizontal .cdk-virtual-scroll-content-wrapper>dl:not([cdkVirtualFor]),.cdk-virtual-scroll-orientation-horizontal .cdk-virtual-scroll-content-wrapper>ol:not([cdkVirtualFor]),.cdk-virtual-scroll-orientation-horizontal .cdk-virtual-scroll-content-wrapper>table:not([cdkVirtualFor]),.cdk-virtual-scroll-orientation-horizontal .cdk-virtual-scroll-content-wrapper>ul:not([cdkVirtualFor]){padding-left:0;padding-right:0;margin-left:0;margin-right:0;border-left-width:0;border-right-width:0;outline:none}.cdk-virtual-scroll-orientation-vertical .cdk-virtual-scroll-content-wrapper{min-width:100%}.cdk-virtual-scroll-orientation-vertical .cdk-virtual-scroll-content-wrapper>dl:not([cdkVirtualFor]),.cdk-virtual-scroll-orientation-vertical .cdk-virtual-scroll-content-wrapper>ol:not([cdkVirtualFor]),.cdk-virtual-scroll-orientation-vertical .cdk-virtual-scroll-content-wrapper>table:not([cdkVirtualFor]),.cdk-virtual-scroll-orientation-vertical .cdk-virtual-scroll-content-wrapper>ul:not([cdkVirtualFor]){padding-top:0;padding-bottom:0;margin-top:0;margin-bottom:0;border-top-width:0;border-bottom-width:0;outline:none}.cdk-virtual-scroll-spacer{height:1px;transform-origin:0 0;flex:0 0 auto}[dir=rtl] .cdk-virtual-scroll-spacer{transform-origin:100% 0}\n"],
-  encapsulation: 2,
-  changeDetection: 0
-}));
-var CdkVirtualScrollViewport = _CdkVirtualScrollViewport;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(CdkVirtualScrollViewport, [{
     type: Component,
@@ -10195,7 +9923,7 @@ var CdkVirtualScrollViewport = _CdkVirtualScrollViewport;
       changeDetection: ChangeDetectionStrategy.OnPush,
       providers: [{
         provide: CdkScrollable,
-        useFactory: /* @__PURE__ */ __name((virtualScrollable, viewport) => virtualScrollable || viewport, "useFactory"),
+        useFactory: (virtualScrollable, viewport) => virtualScrollable || viewport,
         deps: [[new Optional(), new Inject(VIRTUAL_SCROLLABLE)], CdkVirtualScrollViewport]
       }],
       template: '<!--\n  Wrap the rendered content in an element that will be used to offset it based on the scroll\n  position.\n-->\n<div #contentWrapper class="cdk-virtual-scroll-content-wrapper">\n  <ng-content></ng-content>\n</div>\n<!--\n  Spacer used to force the scrolling container to the correct size for the *total* number of items\n  so that the scrollbar captures the size of the entire data set.\n-->\n<div class="cdk-virtual-scroll-spacer"\n     [style.width]="_totalContentWidth()" [style.height]="_totalContentHeight()"></div>\n',
@@ -10233,8 +9961,7 @@ function getOffset(orientation, direction, node) {
   }
   return direction === "start" ? rect.top : rect.bottom;
 }
-__name(getOffset, "getOffset");
-var _CdkVirtualForOf = class _CdkVirtualForOf {
+var CdkVirtualForOf = class _CdkVirtualForOf {
   _viewContainerRef = inject(ViewContainerRef);
   _template = inject(TemplateRef);
   _differs = inject(IterableDiffers);
@@ -10456,26 +10183,24 @@ var _CdkVirtualForOf = class _CdkVirtualForOf {
   static ngTemplateContextGuard(directive, context) {
     return true;
   }
+  static \u0275fac = function CdkVirtualForOf_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _CdkVirtualForOf)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _CdkVirtualForOf,
+    selectors: [["", "cdkVirtualFor", "", "cdkVirtualForOf", ""]],
+    inputs: {
+      cdkVirtualForOf: "cdkVirtualForOf",
+      cdkVirtualForTrackBy: "cdkVirtualForTrackBy",
+      cdkVirtualForTemplate: "cdkVirtualForTemplate",
+      cdkVirtualForTemplateCacheSize: "cdkVirtualForTemplateCacheSize"
+    },
+    features: [\u0275\u0275ProvidersFeature([{
+      provide: _VIEW_REPEATER_STRATEGY,
+      useClass: _RecycleViewRepeaterStrategy
+    }])]
+  });
 };
-__name(_CdkVirtualForOf, "CdkVirtualForOf");
-__publicField(_CdkVirtualForOf, "\u0275fac", /* @__PURE__ */ __name(function CdkVirtualForOf_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _CdkVirtualForOf)();
-}, "CdkVirtualForOf_Factory"));
-__publicField(_CdkVirtualForOf, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _CdkVirtualForOf,
-  selectors: [["", "cdkVirtualFor", "", "cdkVirtualForOf", ""]],
-  inputs: {
-    cdkVirtualForOf: "cdkVirtualForOf",
-    cdkVirtualForTrackBy: "cdkVirtualForTrackBy",
-    cdkVirtualForTemplate: "cdkVirtualForTemplate",
-    cdkVirtualForTemplateCacheSize: "cdkVirtualForTemplateCacheSize"
-  },
-  features: [\u0275\u0275ProvidersFeature([{
-    provide: _VIEW_REPEATER_STRATEGY,
-    useClass: _RecycleViewRepeaterStrategy
-  }])]
-}));
-var CdkVirtualForOf = _CdkVirtualForOf;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(CdkVirtualForOf, [{
     type: Directive,
@@ -10501,28 +10226,26 @@ var CdkVirtualForOf = _CdkVirtualForOf;
     }]
   });
 })();
-var _CdkVirtualScrollableElement = class _CdkVirtualScrollableElement extends CdkVirtualScrollable {
+var CdkVirtualScrollableElement = class _CdkVirtualScrollableElement extends CdkVirtualScrollable {
   constructor() {
     super();
   }
   measureBoundingClientRectWithScrollOffset(from2) {
     return this.getElementRef().nativeElement.getBoundingClientRect()[from2] - this.measureScrollOffset(from2);
   }
+  static \u0275fac = function CdkVirtualScrollableElement_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _CdkVirtualScrollableElement)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _CdkVirtualScrollableElement,
+    selectors: [["", "cdkVirtualScrollingElement", ""]],
+    hostAttrs: [1, "cdk-virtual-scrollable"],
+    features: [\u0275\u0275ProvidersFeature([{
+      provide: VIRTUAL_SCROLLABLE,
+      useExisting: _CdkVirtualScrollableElement
+    }]), \u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_CdkVirtualScrollableElement, "CdkVirtualScrollableElement");
-__publicField(_CdkVirtualScrollableElement, "\u0275fac", /* @__PURE__ */ __name(function CdkVirtualScrollableElement_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _CdkVirtualScrollableElement)();
-}, "CdkVirtualScrollableElement_Factory"));
-__publicField(_CdkVirtualScrollableElement, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _CdkVirtualScrollableElement,
-  selectors: [["", "cdkVirtualScrollingElement", ""]],
-  hostAttrs: [1, "cdk-virtual-scrollable"],
-  features: [\u0275\u0275ProvidersFeature([{
-    provide: VIRTUAL_SCROLLABLE,
-    useExisting: _CdkVirtualScrollableElement
-  }]), \u0275\u0275InheritDefinitionFeature]
-}));
-var CdkVirtualScrollableElement = _CdkVirtualScrollableElement;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(CdkVirtualScrollableElement, [{
     type: Directive,
@@ -10538,7 +10261,7 @@ var CdkVirtualScrollableElement = _CdkVirtualScrollableElement;
     }]
   }], () => [], null);
 })();
-var _CdkVirtualScrollableWindow = class _CdkVirtualScrollableWindow extends CdkVirtualScrollable {
+var CdkVirtualScrollableWindow = class _CdkVirtualScrollableWindow extends CdkVirtualScrollable {
   constructor() {
     super();
     const document2 = inject(DOCUMENT);
@@ -10548,20 +10271,18 @@ var _CdkVirtualScrollableWindow = class _CdkVirtualScrollableWindow extends CdkV
   measureBoundingClientRectWithScrollOffset(from2) {
     return this.getElementRef().nativeElement.getBoundingClientRect()[from2];
   }
+  static \u0275fac = function CdkVirtualScrollableWindow_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _CdkVirtualScrollableWindow)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _CdkVirtualScrollableWindow,
+    selectors: [["cdk-virtual-scroll-viewport", "scrollWindow", ""]],
+    features: [\u0275\u0275ProvidersFeature([{
+      provide: VIRTUAL_SCROLLABLE,
+      useExisting: _CdkVirtualScrollableWindow
+    }]), \u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_CdkVirtualScrollableWindow, "CdkVirtualScrollableWindow");
-__publicField(_CdkVirtualScrollableWindow, "\u0275fac", /* @__PURE__ */ __name(function CdkVirtualScrollableWindow_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _CdkVirtualScrollableWindow)();
-}, "CdkVirtualScrollableWindow_Factory"));
-__publicField(_CdkVirtualScrollableWindow, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _CdkVirtualScrollableWindow,
-  selectors: [["cdk-virtual-scroll-viewport", "scrollWindow", ""]],
-  features: [\u0275\u0275ProvidersFeature([{
-    provide: VIRTUAL_SCROLLABLE,
-    useExisting: _CdkVirtualScrollableWindow
-  }]), \u0275\u0275InheritDefinitionFeature]
-}));
-var CdkVirtualScrollableWindow = _CdkVirtualScrollableWindow;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(CdkVirtualScrollableWindow, [{
     type: Directive,
@@ -10574,19 +10295,17 @@ var CdkVirtualScrollableWindow = _CdkVirtualScrollableWindow;
     }]
   }], () => [], null);
 })();
-var _CdkScrollableModule = class _CdkScrollableModule {
+var CdkScrollableModule = class _CdkScrollableModule {
+  static \u0275fac = function CdkScrollableModule_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _CdkScrollableModule)();
+  };
+  static \u0275mod = /* @__PURE__ */ \u0275\u0275defineNgModule({
+    type: _CdkScrollableModule,
+    imports: [CdkScrollable],
+    exports: [CdkScrollable]
+  });
+  static \u0275inj = /* @__PURE__ */ \u0275\u0275defineInjector({});
 };
-__name(_CdkScrollableModule, "CdkScrollableModule");
-__publicField(_CdkScrollableModule, "\u0275fac", /* @__PURE__ */ __name(function CdkScrollableModule_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _CdkScrollableModule)();
-}, "CdkScrollableModule_Factory"));
-__publicField(_CdkScrollableModule, "\u0275mod", /* @__PURE__ */ \u0275\u0275defineNgModule({
-  type: _CdkScrollableModule,
-  imports: [CdkScrollable],
-  exports: [CdkScrollable]
-}));
-__publicField(_CdkScrollableModule, "\u0275inj", /* @__PURE__ */ \u0275\u0275defineInjector({}));
-var CdkScrollableModule = _CdkScrollableModule;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(CdkScrollableModule, [{
     type: NgModule,
@@ -10596,21 +10315,19 @@ var CdkScrollableModule = _CdkScrollableModule;
     }]
   }], null, null);
 })();
-var _ScrollingModule = class _ScrollingModule {
+var ScrollingModule = class _ScrollingModule {
+  static \u0275fac = function ScrollingModule_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _ScrollingModule)();
+  };
+  static \u0275mod = /* @__PURE__ */ \u0275\u0275defineNgModule({
+    type: _ScrollingModule,
+    imports: [BidiModule, CdkScrollableModule, CdkVirtualScrollViewport, CdkFixedSizeVirtualScroll, CdkVirtualForOf, CdkVirtualScrollableWindow, CdkVirtualScrollableElement],
+    exports: [BidiModule, CdkScrollableModule, CdkFixedSizeVirtualScroll, CdkVirtualForOf, CdkVirtualScrollViewport, CdkVirtualScrollableWindow, CdkVirtualScrollableElement]
+  });
+  static \u0275inj = /* @__PURE__ */ \u0275\u0275defineInjector({
+    imports: [BidiModule, CdkScrollableModule, BidiModule, CdkScrollableModule]
+  });
 };
-__name(_ScrollingModule, "ScrollingModule");
-__publicField(_ScrollingModule, "\u0275fac", /* @__PURE__ */ __name(function ScrollingModule_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _ScrollingModule)();
-}, "ScrollingModule_Factory"));
-__publicField(_ScrollingModule, "\u0275mod", /* @__PURE__ */ \u0275\u0275defineNgModule({
-  type: _ScrollingModule,
-  imports: [BidiModule, CdkScrollableModule, CdkVirtualScrollViewport, CdkFixedSizeVirtualScroll, CdkVirtualForOf, CdkVirtualScrollableWindow, CdkVirtualScrollableElement],
-  exports: [BidiModule, CdkScrollableModule, CdkFixedSizeVirtualScroll, CdkVirtualForOf, CdkVirtualScrollViewport, CdkVirtualScrollableWindow, CdkVirtualScrollableElement]
-}));
-__publicField(_ScrollingModule, "\u0275inj", /* @__PURE__ */ \u0275\u0275defineInjector({
-  imports: [BidiModule, CdkScrollableModule, BidiModule, CdkScrollableModule]
-}));
-var ScrollingModule = _ScrollingModule;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ScrollingModule, [{
     type: NgModule,
@@ -10622,40 +10339,36 @@ var ScrollingModule = _ScrollingModule;
 })();
 
 // node_modules/@angular/material/fesm2022/error-options.mjs
-var _ShowOnDirtyErrorStateMatcher = class _ShowOnDirtyErrorStateMatcher {
+var ShowOnDirtyErrorStateMatcher = class _ShowOnDirtyErrorStateMatcher {
   isErrorState(control, form) {
     return !!(control && control.invalid && (control.dirty || form && form.submitted));
   }
+  static \u0275fac = function ShowOnDirtyErrorStateMatcher_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _ShowOnDirtyErrorStateMatcher)();
+  };
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
+    token: _ShowOnDirtyErrorStateMatcher,
+    factory: _ShowOnDirtyErrorStateMatcher.\u0275fac
+  });
 };
-__name(_ShowOnDirtyErrorStateMatcher, "ShowOnDirtyErrorStateMatcher");
-__publicField(_ShowOnDirtyErrorStateMatcher, "\u0275fac", /* @__PURE__ */ __name(function ShowOnDirtyErrorStateMatcher_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _ShowOnDirtyErrorStateMatcher)();
-}, "ShowOnDirtyErrorStateMatcher_Factory"));
-__publicField(_ShowOnDirtyErrorStateMatcher, "\u0275prov", /* @__PURE__ */ \u0275\u0275defineInjectable({
-  token: _ShowOnDirtyErrorStateMatcher,
-  factory: _ShowOnDirtyErrorStateMatcher.\u0275fac
-}));
-var ShowOnDirtyErrorStateMatcher = _ShowOnDirtyErrorStateMatcher;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ShowOnDirtyErrorStateMatcher, [{
     type: Injectable
   }], null, null);
 })();
-var _ErrorStateMatcher = class _ErrorStateMatcher {
+var ErrorStateMatcher = class _ErrorStateMatcher {
   isErrorState(control, form) {
     return !!(control && control.invalid && (control.touched || form && form.submitted));
   }
+  static \u0275fac = function ErrorStateMatcher_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _ErrorStateMatcher)();
+  };
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
+    token: _ErrorStateMatcher,
+    factory: _ErrorStateMatcher.\u0275fac,
+    providedIn: "root"
+  });
 };
-__name(_ErrorStateMatcher, "ErrorStateMatcher");
-__publicField(_ErrorStateMatcher, "\u0275fac", /* @__PURE__ */ __name(function ErrorStateMatcher_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _ErrorStateMatcher)();
-}, "ErrorStateMatcher_Factory"));
-__publicField(_ErrorStateMatcher, "\u0275prov", /* @__PURE__ */ \u0275\u0275defineInjectable({
-  token: _ErrorStateMatcher,
-  factory: _ErrorStateMatcher.\u0275fac,
-  providedIn: "root"
-}));
-var ErrorStateMatcher = _ErrorStateMatcher;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ErrorStateMatcher, [{
     type: Injectable,
@@ -10666,7 +10379,7 @@ var ErrorStateMatcher = _ErrorStateMatcher;
 })();
 
 // node_modules/@angular/material/fesm2022/error-state.mjs
-var __ErrorStateTracker = class __ErrorStateTracker {
+var _ErrorStateTracker = class {
   _defaultMatcher;
   ngControl;
   _parentFormGroup;
@@ -10696,35 +10409,27 @@ var __ErrorStateTracker = class __ErrorStateTracker {
     }
   }
 };
-__name(__ErrorStateTracker, "_ErrorStateTracker");
-var _ErrorStateTracker = __ErrorStateTracker;
 
 // node_modules/@angular/cdk/fesm2022/portal.mjs
 function throwNullPortalError() {
   throw Error("Must provide a portal to attach");
 }
-__name(throwNullPortalError, "throwNullPortalError");
 function throwPortalAlreadyAttachedError() {
   throw Error("Host already has a portal attached");
 }
-__name(throwPortalAlreadyAttachedError, "throwPortalAlreadyAttachedError");
 function throwPortalOutletAlreadyDisposedError() {
   throw Error("This PortalOutlet has already been disposed");
 }
-__name(throwPortalOutletAlreadyDisposedError, "throwPortalOutletAlreadyDisposedError");
 function throwUnknownPortalTypeError() {
   throw Error("Attempting to attach an unknown Portal type. BasePortalOutlet accepts either a ComponentPortal or a TemplatePortal.");
 }
-__name(throwUnknownPortalTypeError, "throwUnknownPortalTypeError");
 function throwNullPortalOutletError() {
   throw Error("Attempting to attach a portal to a null PortalOutlet");
 }
-__name(throwNullPortalOutletError, "throwNullPortalOutletError");
 function throwNoPortalAttachedError() {
   throw Error("Attempting to detach a portal that is not attached to a host");
 }
-__name(throwNoPortalAttachedError, "throwNoPortalAttachedError");
-var _Portal = class _Portal {
+var Portal = class {
   _attachedHost;
   /** Attach this portal to a host. */
   attach(host) {
@@ -10761,9 +10466,7 @@ var _Portal = class _Portal {
     this._attachedHost = host;
   }
 };
-__name(_Portal, "Portal");
-var Portal = _Portal;
-var _ComponentPortal = class _ComponentPortal extends Portal {
+var ComponentPortal = class extends Portal {
   /** The type of the component that will be instantiated for attachment. */
   component;
   /**
@@ -10786,9 +10489,7 @@ var _ComponentPortal = class _ComponentPortal extends Portal {
     this.projectableNodes = projectableNodes;
   }
 };
-__name(_ComponentPortal, "ComponentPortal");
-var ComponentPortal = _ComponentPortal;
-var _TemplatePortal = class _TemplatePortal extends Portal {
+var TemplatePortal = class extends Portal {
   templateRef;
   viewContainerRef;
   context;
@@ -10817,9 +10518,7 @@ var _TemplatePortal = class _TemplatePortal extends Portal {
     return super.detach();
   }
 };
-__name(_TemplatePortal, "TemplatePortal");
-var TemplatePortal = _TemplatePortal;
-var _DomPortal = class _DomPortal extends Portal {
+var DomPortal = class extends Portal {
   /** DOM node hosting the portal's content. */
   element;
   constructor(element) {
@@ -10827,9 +10526,7 @@ var _DomPortal = class _DomPortal extends Portal {
     this.element = element instanceof ElementRef ? element.nativeElement : element;
   }
 };
-__name(_DomPortal, "DomPortal");
-var DomPortal = _DomPortal;
-var _BasePortalOutlet = class _BasePortalOutlet {
+var BasePortalOutlet = class {
   /** The portal currently attached to the host. */
   _attachedPortal;
   /** A function that will permanently dispose this host. */
@@ -10896,9 +10593,7 @@ var _BasePortalOutlet = class _BasePortalOutlet {
     }
   }
 };
-__name(_BasePortalOutlet, "BasePortalOutlet");
-var BasePortalOutlet = _BasePortalOutlet;
-var _DomPortalOutlet = class _DomPortalOutlet extends BasePortalOutlet {
+var DomPortalOutlet = class extends BasePortalOutlet {
   outletElement;
   _appRef;
   _defaultInjector;
@@ -10985,7 +10680,7 @@ var _DomPortalOutlet = class _DomPortalOutlet extends BasePortalOutlet {
    * @deprecated To be turned into a method.
    * @breaking-change 10.0.0
    */
-  attachDomPortal = /* @__PURE__ */ __name((portal) => {
+  attachDomPortal = (portal) => {
     const element = portal.element;
     if (!element.parentNode && (typeof ngDevMode === "undefined" || ngDevMode)) {
       throw Error("DOM portal content must be attached to a parent node.");
@@ -10999,7 +10694,7 @@ var _DomPortalOutlet = class _DomPortalOutlet extends BasePortalOutlet {
         anchorNode.parentNode.replaceChild(element, anchorNode);
       }
     });
-  }, "attachDomPortal");
+  };
   /**
    * Clears out a portal from the DOM.
    */
@@ -11012,26 +10707,22 @@ var _DomPortalOutlet = class _DomPortalOutlet extends BasePortalOutlet {
     return componentRef.hostView.rootNodes[0];
   }
 };
-__name(_DomPortalOutlet, "DomPortalOutlet");
-var DomPortalOutlet = _DomPortalOutlet;
-var _CdkPortal = class _CdkPortal extends TemplatePortal {
+var CdkPortal = class _CdkPortal extends TemplatePortal {
   constructor() {
     const templateRef = inject(TemplateRef);
     const viewContainerRef = inject(ViewContainerRef);
     super(templateRef, viewContainerRef);
   }
+  static \u0275fac = function CdkPortal_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _CdkPortal)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _CdkPortal,
+    selectors: [["", "cdkPortal", ""]],
+    exportAs: ["cdkPortal"],
+    features: [\u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_CdkPortal, "CdkPortal");
-__publicField(_CdkPortal, "\u0275fac", /* @__PURE__ */ __name(function CdkPortal_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _CdkPortal)();
-}, "CdkPortal_Factory"));
-__publicField(_CdkPortal, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _CdkPortal,
-  selectors: [["", "cdkPortal", ""]],
-  exportAs: ["cdkPortal"],
-  features: [\u0275\u0275InheritDefinitionFeature]
-}));
-var CdkPortal = _CdkPortal;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(CdkPortal, [{
     type: Directive,
@@ -11041,25 +10732,23 @@ var CdkPortal = _CdkPortal;
     }]
   }], () => [], null);
 })();
-var _TemplatePortalDirective = class _TemplatePortalDirective extends CdkPortal {
+var TemplatePortalDirective = class _TemplatePortalDirective extends CdkPortal {
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275TemplatePortalDirective_BaseFactory;
+    return function TemplatePortalDirective_Factory(__ngFactoryType__) {
+      return (\u0275TemplatePortalDirective_BaseFactory || (\u0275TemplatePortalDirective_BaseFactory = \u0275\u0275getInheritedFactory(_TemplatePortalDirective)))(__ngFactoryType__ || _TemplatePortalDirective);
+    };
+  })();
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _TemplatePortalDirective,
+    selectors: [["", "cdk-portal", ""], ["", "portal", ""]],
+    exportAs: ["cdkPortal"],
+    features: [\u0275\u0275ProvidersFeature([{
+      provide: CdkPortal,
+      useExisting: _TemplatePortalDirective
+    }]), \u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_TemplatePortalDirective, "TemplatePortalDirective");
-__publicField(_TemplatePortalDirective, "\u0275fac", /* @__PURE__ */ (() => {
-  let \u0275TemplatePortalDirective_BaseFactory;
-  return /* @__PURE__ */ __name(function TemplatePortalDirective_Factory(__ngFactoryType__) {
-    return (\u0275TemplatePortalDirective_BaseFactory || (\u0275TemplatePortalDirective_BaseFactory = \u0275\u0275getInheritedFactory(_TemplatePortalDirective)))(__ngFactoryType__ || _TemplatePortalDirective);
-  }, "TemplatePortalDirective_Factory");
-})());
-__publicField(_TemplatePortalDirective, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _TemplatePortalDirective,
-  selectors: [["", "cdk-portal", ""], ["", "portal", ""]],
-  exportAs: ["cdkPortal"],
-  features: [\u0275\u0275ProvidersFeature([{
-    provide: CdkPortal,
-    useExisting: _TemplatePortalDirective
-  }]), \u0275\u0275InheritDefinitionFeature]
-}));
-var TemplatePortalDirective = _TemplatePortalDirective;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(TemplatePortalDirective, [{
     type: Directive,
@@ -11073,7 +10762,7 @@ var TemplatePortalDirective = _TemplatePortalDirective;
     }]
   }], null, null);
 })();
-var _CdkPortalOutlet = class _CdkPortalOutlet extends BasePortalOutlet {
+var CdkPortalOutlet = class _CdkPortalOutlet extends BasePortalOutlet {
   _moduleRef = inject(NgModuleRef$1, {
     optional: true
   });
@@ -11161,7 +10850,7 @@ var _CdkPortalOutlet = class _CdkPortalOutlet extends BasePortalOutlet {
    * @deprecated To be turned into a method.
    * @breaking-change 10.0.0
    */
-  attachDomPortal = /* @__PURE__ */ __name((portal) => {
+  attachDomPortal = (portal) => {
     const element = portal.element;
     if (!element.parentNode && (typeof ngDevMode === "undefined" || ngDevMode)) {
       throw Error("DOM portal content must be attached to a parent node.");
@@ -11176,30 +10865,28 @@ var _CdkPortalOutlet = class _CdkPortalOutlet extends BasePortalOutlet {
         anchorNode.parentNode.replaceChild(element, anchorNode);
       }
     });
-  }, "attachDomPortal");
+  };
   /** Gets the root node of the portal outlet. */
   _getRootNode() {
     const nativeElement = this._viewContainerRef.element.nativeElement;
     return nativeElement.nodeType === nativeElement.ELEMENT_NODE ? nativeElement : nativeElement.parentNode;
   }
+  static \u0275fac = function CdkPortalOutlet_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _CdkPortalOutlet)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _CdkPortalOutlet,
+    selectors: [["", "cdkPortalOutlet", ""]],
+    inputs: {
+      portal: [0, "cdkPortalOutlet", "portal"]
+    },
+    outputs: {
+      attached: "attached"
+    },
+    exportAs: ["cdkPortalOutlet"],
+    features: [\u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_CdkPortalOutlet, "CdkPortalOutlet");
-__publicField(_CdkPortalOutlet, "\u0275fac", /* @__PURE__ */ __name(function CdkPortalOutlet_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _CdkPortalOutlet)();
-}, "CdkPortalOutlet_Factory"));
-__publicField(_CdkPortalOutlet, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _CdkPortalOutlet,
-  selectors: [["", "cdkPortalOutlet", ""]],
-  inputs: {
-    portal: [0, "cdkPortalOutlet", "portal"]
-  },
-  outputs: {
-    attached: "attached"
-  },
-  exportAs: ["cdkPortalOutlet"],
-  features: [\u0275\u0275InheritDefinitionFeature]
-}));
-var CdkPortalOutlet = _CdkPortalOutlet;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(CdkPortalOutlet, [{
     type: Directive,
@@ -11217,28 +10904,26 @@ var CdkPortalOutlet = _CdkPortalOutlet;
     }]
   });
 })();
-var _PortalHostDirective = class _PortalHostDirective extends CdkPortalOutlet {
+var PortalHostDirective = class _PortalHostDirective extends CdkPortalOutlet {
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275PortalHostDirective_BaseFactory;
+    return function PortalHostDirective_Factory(__ngFactoryType__) {
+      return (\u0275PortalHostDirective_BaseFactory || (\u0275PortalHostDirective_BaseFactory = \u0275\u0275getInheritedFactory(_PortalHostDirective)))(__ngFactoryType__ || _PortalHostDirective);
+    };
+  })();
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _PortalHostDirective,
+    selectors: [["", "cdkPortalHost", ""], ["", "portalHost", ""]],
+    inputs: {
+      portal: [0, "cdkPortalHost", "portal"]
+    },
+    exportAs: ["cdkPortalHost"],
+    features: [\u0275\u0275ProvidersFeature([{
+      provide: CdkPortalOutlet,
+      useExisting: _PortalHostDirective
+    }]), \u0275\u0275InheritDefinitionFeature]
+  });
 };
-__name(_PortalHostDirective, "PortalHostDirective");
-__publicField(_PortalHostDirective, "\u0275fac", /* @__PURE__ */ (() => {
-  let \u0275PortalHostDirective_BaseFactory;
-  return /* @__PURE__ */ __name(function PortalHostDirective_Factory(__ngFactoryType__) {
-    return (\u0275PortalHostDirective_BaseFactory || (\u0275PortalHostDirective_BaseFactory = \u0275\u0275getInheritedFactory(_PortalHostDirective)))(__ngFactoryType__ || _PortalHostDirective);
-  }, "PortalHostDirective_Factory");
-})());
-__publicField(_PortalHostDirective, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _PortalHostDirective,
-  selectors: [["", "cdkPortalHost", ""], ["", "portalHost", ""]],
-  inputs: {
-    portal: [0, "cdkPortalHost", "portal"]
-  },
-  exportAs: ["cdkPortalHost"],
-  features: [\u0275\u0275ProvidersFeature([{
-    provide: CdkPortalOutlet,
-    useExisting: _PortalHostDirective
-  }]), \u0275\u0275InheritDefinitionFeature]
-}));
-var PortalHostDirective = _PortalHostDirective;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(PortalHostDirective, [{
     type: Directive,
@@ -11256,19 +10941,17 @@ var PortalHostDirective = _PortalHostDirective;
     }]
   }], null, null);
 })();
-var _PortalModule = class _PortalModule {
+var PortalModule = class _PortalModule {
+  static \u0275fac = function PortalModule_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _PortalModule)();
+  };
+  static \u0275mod = /* @__PURE__ */ \u0275\u0275defineNgModule({
+    type: _PortalModule,
+    imports: [CdkPortal, CdkPortalOutlet, TemplatePortalDirective, PortalHostDirective],
+    exports: [CdkPortal, CdkPortalOutlet, TemplatePortalDirective, PortalHostDirective]
+  });
+  static \u0275inj = /* @__PURE__ */ \u0275\u0275defineInjector({});
 };
-__name(_PortalModule, "PortalModule");
-__publicField(_PortalModule, "\u0275fac", /* @__PURE__ */ __name(function PortalModule_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _PortalModule)();
-}, "PortalModule_Factory"));
-__publicField(_PortalModule, "\u0275mod", /* @__PURE__ */ \u0275\u0275defineNgModule({
-  type: _PortalModule,
-  imports: [CdkPortal, CdkPortalOutlet, TemplatePortalDirective, PortalHostDirective],
-  exports: [CdkPortal, CdkPortalOutlet, TemplatePortalDirective, PortalHostDirective]
-}));
-__publicField(_PortalModule, "\u0275inj", /* @__PURE__ */ \u0275\u0275defineInjector({}));
-var PortalModule = _PortalModule;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(PortalModule, [{
     type: NgModule,
@@ -11284,8 +10967,7 @@ var scrollBehaviorSupported = supportsScrollBehavior();
 function createBlockScrollStrategy(injector) {
   return new BlockScrollStrategy(injector.get(ViewportRuler), injector.get(DOCUMENT));
 }
-__name(createBlockScrollStrategy, "createBlockScrollStrategy");
-var _BlockScrollStrategy = class _BlockScrollStrategy {
+var BlockScrollStrategy = class {
   _viewportRuler;
   _previousHTMLStyles = {
     top: "",
@@ -11347,17 +11029,13 @@ var _BlockScrollStrategy = class _BlockScrollStrategy {
     return rootElement.scrollHeight > viewport.height || rootElement.scrollWidth > viewport.width;
   }
 };
-__name(_BlockScrollStrategy, "BlockScrollStrategy");
-var BlockScrollStrategy = _BlockScrollStrategy;
 function getMatScrollStrategyAlreadyAttachedError() {
   return Error(`Scroll strategy has already been attached.`);
 }
-__name(getMatScrollStrategyAlreadyAttachedError, "getMatScrollStrategyAlreadyAttachedError");
 function createCloseScrollStrategy(injector, config) {
   return new CloseScrollStrategy(injector.get(ScrollDispatcher), injector.get(NgZone), injector.get(ViewportRuler), config);
 }
-__name(createCloseScrollStrategy, "createCloseScrollStrategy");
-var _CloseScrollStrategy = class _CloseScrollStrategy {
+var CloseScrollStrategy = class {
   _scrollDispatcher;
   _ngZone;
   _viewportRuler;
@@ -11412,16 +11090,14 @@ var _CloseScrollStrategy = class _CloseScrollStrategy {
     this._overlayRef = null;
   }
   /** Detaches the overlay ref and disables the scroll strategy. */
-  _detach = /* @__PURE__ */ __name(() => {
+  _detach = () => {
     this.disable();
     if (this._overlayRef.hasAttached()) {
       this._ngZone.run(() => this._overlayRef.detach());
     }
-  }, "_detach");
+  };
 };
-__name(_CloseScrollStrategy, "CloseScrollStrategy");
-var CloseScrollStrategy = _CloseScrollStrategy;
-var _NoopScrollStrategy = class _NoopScrollStrategy {
+var NoopScrollStrategy = class {
   /** Does nothing, as this scroll strategy is a no-op. */
   enable() {
   }
@@ -11432,8 +11108,6 @@ var _NoopScrollStrategy = class _NoopScrollStrategy {
   attach() {
   }
 };
-__name(_NoopScrollStrategy, "NoopScrollStrategy");
-var NoopScrollStrategy = _NoopScrollStrategy;
 function isElementScrolledOutsideView(element, scrollContainers) {
   return scrollContainers.some((containerBounds) => {
     const outsideAbove = element.bottom < containerBounds.top;
@@ -11443,7 +11117,6 @@ function isElementScrolledOutsideView(element, scrollContainers) {
     return outsideAbove || outsideBelow || outsideLeft || outsideRight;
   });
 }
-__name(isElementScrolledOutsideView, "isElementScrolledOutsideView");
 function isElementClippedByScrolling(element, scrollContainers) {
   return scrollContainers.some((scrollContainerRect) => {
     const clippedAbove = element.top < scrollContainerRect.top;
@@ -11453,12 +11126,10 @@ function isElementClippedByScrolling(element, scrollContainers) {
     return clippedAbove || clippedBelow || clippedLeft || clippedRight;
   });
 }
-__name(isElementClippedByScrolling, "isElementClippedByScrolling");
 function createRepositionScrollStrategy(injector, config) {
   return new RepositionScrollStrategy(injector.get(ScrollDispatcher), injector.get(ViewportRuler), injector.get(NgZone), config);
 }
-__name(createRepositionScrollStrategy, "createRepositionScrollStrategy");
-var _RepositionScrollStrategy = class _RepositionScrollStrategy {
+var RepositionScrollStrategy = class {
   _scrollDispatcher;
   _viewportRuler;
   _ngZone;
@@ -11518,38 +11189,34 @@ var _RepositionScrollStrategy = class _RepositionScrollStrategy {
     this._overlayRef = null;
   }
 };
-__name(_RepositionScrollStrategy, "RepositionScrollStrategy");
-var RepositionScrollStrategy = _RepositionScrollStrategy;
-var _ScrollStrategyOptions = class _ScrollStrategyOptions {
+var ScrollStrategyOptions = class _ScrollStrategyOptions {
   _injector = inject(Injector);
   constructor() {
   }
   /** Do nothing on scroll. */
-  noop = /* @__PURE__ */ __name(() => new NoopScrollStrategy(), "noop");
+  noop = () => new NoopScrollStrategy();
   /**
    * Close the overlay as soon as the user scrolls.
    * @param config Configuration to be used inside the scroll strategy.
    */
-  close = /* @__PURE__ */ __name((config) => createCloseScrollStrategy(this._injector, config), "close");
+  close = (config) => createCloseScrollStrategy(this._injector, config);
   /** Block scrolling. */
-  block = /* @__PURE__ */ __name(() => createBlockScrollStrategy(this._injector), "block");
+  block = () => createBlockScrollStrategy(this._injector);
   /**
    * Update the overlay's position on scroll.
    * @param config Configuration to be used inside the scroll strategy.
    * Allows debouncing the reposition calls.
    */
-  reposition = /* @__PURE__ */ __name((config) => createRepositionScrollStrategy(this._injector, config), "reposition");
+  reposition = (config) => createRepositionScrollStrategy(this._injector, config);
+  static \u0275fac = function ScrollStrategyOptions_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _ScrollStrategyOptions)();
+  };
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
+    token: _ScrollStrategyOptions,
+    factory: _ScrollStrategyOptions.\u0275fac,
+    providedIn: "root"
+  });
 };
-__name(_ScrollStrategyOptions, "ScrollStrategyOptions");
-__publicField(_ScrollStrategyOptions, "\u0275fac", /* @__PURE__ */ __name(function ScrollStrategyOptions_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _ScrollStrategyOptions)();
-}, "ScrollStrategyOptions_Factory"));
-__publicField(_ScrollStrategyOptions, "\u0275prov", /* @__PURE__ */ \u0275\u0275defineInjectable({
-  token: _ScrollStrategyOptions,
-  factory: _ScrollStrategyOptions.\u0275fac,
-  providedIn: "root"
-}));
-var ScrollStrategyOptions = _ScrollStrategyOptions;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ScrollStrategyOptions, [{
     type: Injectable,
@@ -11558,7 +11225,7 @@ var ScrollStrategyOptions = _ScrollStrategyOptions;
     }]
   }], () => [], null);
 })();
-var _OverlayConfig = class _OverlayConfig {
+var OverlayConfig = class {
   /** Strategy with which to position the overlay. */
   positionStrategy;
   /** Strategy to be used when handling scroll events while the overlay is open. */
@@ -11605,9 +11272,7 @@ var _OverlayConfig = class _OverlayConfig {
     }
   }
 };
-__name(_OverlayConfig, "OverlayConfig");
-var OverlayConfig = _OverlayConfig;
-var _ConnectedOverlayPositionChange = class _ConnectedOverlayPositionChange {
+var ConnectedOverlayPositionChange = class {
   connectionPair;
   scrollableViewProperties;
   constructor(connectionPair, scrollableViewProperties) {
@@ -11615,21 +11280,17 @@ var _ConnectedOverlayPositionChange = class _ConnectedOverlayPositionChange {
     this.scrollableViewProperties = scrollableViewProperties;
   }
 };
-__name(_ConnectedOverlayPositionChange, "ConnectedOverlayPositionChange");
-var ConnectedOverlayPositionChange = _ConnectedOverlayPositionChange;
 function validateVerticalPosition(property, value) {
   if (value !== "top" && value !== "bottom" && value !== "center") {
     throw Error(`ConnectedPosition: Invalid ${property} "${value}". Expected "top", "bottom" or "center".`);
   }
 }
-__name(validateVerticalPosition, "validateVerticalPosition");
 function validateHorizontalPosition(property, value) {
   if (value !== "start" && value !== "end" && value !== "center") {
     throw Error(`ConnectedPosition: Invalid ${property} "${value}". Expected "start", "end" or "center".`);
   }
 }
-__name(validateHorizontalPosition, "validateHorizontalPosition");
-var _BaseOverlayDispatcher = class _BaseOverlayDispatcher {
+var BaseOverlayDispatcher = class _BaseOverlayDispatcher {
   /** Currently attached overlays in the order they were attached. */
   _attachedOverlays = [];
   _document = inject(DOCUMENT);
@@ -11654,17 +11315,15 @@ var _BaseOverlayDispatcher = class _BaseOverlayDispatcher {
       this.detach();
     }
   }
+  static \u0275fac = function BaseOverlayDispatcher_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _BaseOverlayDispatcher)();
+  };
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
+    token: _BaseOverlayDispatcher,
+    factory: _BaseOverlayDispatcher.\u0275fac,
+    providedIn: "root"
+  });
 };
-__name(_BaseOverlayDispatcher, "BaseOverlayDispatcher");
-__publicField(_BaseOverlayDispatcher, "\u0275fac", /* @__PURE__ */ __name(function BaseOverlayDispatcher_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _BaseOverlayDispatcher)();
-}, "BaseOverlayDispatcher_Factory"));
-__publicField(_BaseOverlayDispatcher, "\u0275prov", /* @__PURE__ */ \u0275\u0275defineInjectable({
-  token: _BaseOverlayDispatcher,
-  factory: _BaseOverlayDispatcher.\u0275fac,
-  providedIn: "root"
-}));
-var BaseOverlayDispatcher = _BaseOverlayDispatcher;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(BaseOverlayDispatcher, [{
     type: Injectable,
@@ -11673,7 +11332,7 @@ var BaseOverlayDispatcher = _BaseOverlayDispatcher;
     }]
   }], () => [], null);
 })();
-var _OverlayKeyboardDispatcher = class _OverlayKeyboardDispatcher extends BaseOverlayDispatcher {
+var OverlayKeyboardDispatcher = class _OverlayKeyboardDispatcher extends BaseOverlayDispatcher {
   _ngZone = inject(NgZone);
   _renderer = inject(RendererFactory2).createRenderer(null, null);
   _cleanupKeydown;
@@ -11695,7 +11354,7 @@ var _OverlayKeyboardDispatcher = class _OverlayKeyboardDispatcher extends BaseOv
     }
   }
   /** Keyboard event listener that will be attached to the body. */
-  _keydownListener = /* @__PURE__ */ __name((event) => {
+  _keydownListener = (event) => {
     const overlays = this._attachedOverlays;
     for (let i = overlays.length - 1; i > -1; i--) {
       if (overlays[i]._keydownEvents.observers.length > 0) {
@@ -11703,21 +11362,19 @@ var _OverlayKeyboardDispatcher = class _OverlayKeyboardDispatcher extends BaseOv
         break;
       }
     }
-  }, "_keydownListener");
+  };
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275OverlayKeyboardDispatcher_BaseFactory;
+    return function OverlayKeyboardDispatcher_Factory(__ngFactoryType__) {
+      return (\u0275OverlayKeyboardDispatcher_BaseFactory || (\u0275OverlayKeyboardDispatcher_BaseFactory = \u0275\u0275getInheritedFactory(_OverlayKeyboardDispatcher)))(__ngFactoryType__ || _OverlayKeyboardDispatcher);
+    };
+  })();
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
+    token: _OverlayKeyboardDispatcher,
+    factory: _OverlayKeyboardDispatcher.\u0275fac,
+    providedIn: "root"
+  });
 };
-__name(_OverlayKeyboardDispatcher, "OverlayKeyboardDispatcher");
-__publicField(_OverlayKeyboardDispatcher, "\u0275fac", /* @__PURE__ */ (() => {
-  let \u0275OverlayKeyboardDispatcher_BaseFactory;
-  return /* @__PURE__ */ __name(function OverlayKeyboardDispatcher_Factory(__ngFactoryType__) {
-    return (\u0275OverlayKeyboardDispatcher_BaseFactory || (\u0275OverlayKeyboardDispatcher_BaseFactory = \u0275\u0275getInheritedFactory(_OverlayKeyboardDispatcher)))(__ngFactoryType__ || _OverlayKeyboardDispatcher);
-  }, "OverlayKeyboardDispatcher_Factory");
-})());
-__publicField(_OverlayKeyboardDispatcher, "\u0275prov", /* @__PURE__ */ \u0275\u0275defineInjectable({
-  token: _OverlayKeyboardDispatcher,
-  factory: _OverlayKeyboardDispatcher.\u0275fac,
-  providedIn: "root"
-}));
-var OverlayKeyboardDispatcher = _OverlayKeyboardDispatcher;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(OverlayKeyboardDispatcher, [{
     type: Injectable,
@@ -11726,7 +11383,7 @@ var OverlayKeyboardDispatcher = _OverlayKeyboardDispatcher;
     }]
   }], null, null);
 })();
-var _OverlayOutsideClickDispatcher = class _OverlayOutsideClickDispatcher extends BaseOverlayDispatcher {
+var OverlayOutsideClickDispatcher = class _OverlayOutsideClickDispatcher extends BaseOverlayDispatcher {
   _platform = inject(Platform);
   _ngZone = inject(NgZone);
   _renderer = inject(RendererFactory2).createRenderer(null, null);
@@ -11765,11 +11422,11 @@ var _OverlayOutsideClickDispatcher = class _OverlayOutsideClickDispatcher extend
     }
   }
   /** Store pointerdown event target to track origin of click. */
-  _pointerDownListener = /* @__PURE__ */ __name((event) => {
+  _pointerDownListener = (event) => {
     this._pointerDownEventTarget = _getEventTarget(event);
-  }, "_pointerDownListener");
+  };
   /** Click event listener that will be attached to the body propagate phase. */
-  _clickListener = /* @__PURE__ */ __name((event) => {
+  _clickListener = (event) => {
     const target = _getEventTarget(event);
     const origin = event.type === "click" && this._pointerDownEventTarget ? this._pointerDownEventTarget : target;
     this._pointerDownEventTarget = null;
@@ -11789,21 +11446,19 @@ var _OverlayOutsideClickDispatcher = class _OverlayOutsideClickDispatcher extend
         outsidePointerEvents.next(event);
       }
     }
-  }, "_clickListener");
+  };
+  static \u0275fac = /* @__PURE__ */ (() => {
+    let \u0275OverlayOutsideClickDispatcher_BaseFactory;
+    return function OverlayOutsideClickDispatcher_Factory(__ngFactoryType__) {
+      return (\u0275OverlayOutsideClickDispatcher_BaseFactory || (\u0275OverlayOutsideClickDispatcher_BaseFactory = \u0275\u0275getInheritedFactory(_OverlayOutsideClickDispatcher)))(__ngFactoryType__ || _OverlayOutsideClickDispatcher);
+    };
+  })();
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
+    token: _OverlayOutsideClickDispatcher,
+    factory: _OverlayOutsideClickDispatcher.\u0275fac,
+    providedIn: "root"
+  });
 };
-__name(_OverlayOutsideClickDispatcher, "OverlayOutsideClickDispatcher");
-__publicField(_OverlayOutsideClickDispatcher, "\u0275fac", /* @__PURE__ */ (() => {
-  let \u0275OverlayOutsideClickDispatcher_BaseFactory;
-  return /* @__PURE__ */ __name(function OverlayOutsideClickDispatcher_Factory(__ngFactoryType__) {
-    return (\u0275OverlayOutsideClickDispatcher_BaseFactory || (\u0275OverlayOutsideClickDispatcher_BaseFactory = \u0275\u0275getInheritedFactory(_OverlayOutsideClickDispatcher)))(__ngFactoryType__ || _OverlayOutsideClickDispatcher);
-  }, "OverlayOutsideClickDispatcher_Factory");
-})());
-__publicField(_OverlayOutsideClickDispatcher, "\u0275prov", /* @__PURE__ */ \u0275\u0275defineInjectable({
-  token: _OverlayOutsideClickDispatcher,
-  factory: _OverlayOutsideClickDispatcher.\u0275fac,
-  providedIn: "root"
-}));
-var OverlayOutsideClickDispatcher = _OverlayOutsideClickDispatcher;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(OverlayOutsideClickDispatcher, [{
     type: Injectable,
@@ -11823,26 +11478,23 @@ function containsPierceShadowDom(parent, child) {
   }
   return false;
 }
-__name(containsPierceShadowDom, "containsPierceShadowDom");
-var __CdkOverlayStyleLoader = class __CdkOverlayStyleLoader {
+var _CdkOverlayStyleLoader = class __CdkOverlayStyleLoader {
+  static \u0275fac = function _CdkOverlayStyleLoader_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || __CdkOverlayStyleLoader)();
+  };
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
+    type: __CdkOverlayStyleLoader,
+    selectors: [["ng-component"]],
+    hostAttrs: ["cdk-overlay-style-loader", ""],
+    decls: 0,
+    vars: 0,
+    template: function _CdkOverlayStyleLoader_Template(rf, ctx) {
+    },
+    styles: [".cdk-overlay-container,.cdk-global-overlay-wrapper{pointer-events:none;top:0;left:0;height:100%;width:100%}.cdk-overlay-container{position:fixed}@layer cdk-overlay{.cdk-overlay-container{z-index:1000}}.cdk-overlay-container:empty{display:none}.cdk-global-overlay-wrapper{display:flex;position:absolute}@layer cdk-overlay{.cdk-global-overlay-wrapper{z-index:1000}}.cdk-overlay-pane{position:absolute;pointer-events:auto;box-sizing:border-box;display:flex;max-width:100%;max-height:100%}@layer cdk-overlay{.cdk-overlay-pane{z-index:1000}}.cdk-overlay-backdrop{position:absolute;top:0;bottom:0;left:0;right:0;pointer-events:auto;-webkit-tap-highlight-color:rgba(0,0,0,0);opacity:0;touch-action:manipulation}@layer cdk-overlay{.cdk-overlay-backdrop{z-index:1000;transition:opacity 400ms cubic-bezier(0.25, 0.8, 0.25, 1)}}@media(prefers-reduced-motion){.cdk-overlay-backdrop{transition-duration:1ms}}.cdk-overlay-backdrop-showing{opacity:1}@media(forced-colors: active){.cdk-overlay-backdrop-showing{opacity:.6}}@layer cdk-overlay{.cdk-overlay-dark-backdrop{background:rgba(0,0,0,.32)}}.cdk-overlay-transparent-backdrop{transition:visibility 1ms linear,opacity 1ms linear;visibility:hidden;opacity:1}.cdk-overlay-transparent-backdrop.cdk-overlay-backdrop-showing,.cdk-high-contrast-active .cdk-overlay-transparent-backdrop{opacity:0;visibility:visible}.cdk-overlay-backdrop-noop-animation{transition:none}.cdk-overlay-connected-position-bounding-box{position:absolute;display:flex;flex-direction:column;min-width:1px;min-height:1px}@layer cdk-overlay{.cdk-overlay-connected-position-bounding-box{z-index:1000}}.cdk-global-scrollblock{position:fixed;width:100%;overflow-y:scroll}\n"],
+    encapsulation: 2,
+    changeDetection: 0
+  });
 };
-__name(__CdkOverlayStyleLoader, "_CdkOverlayStyleLoader");
-__publicField(__CdkOverlayStyleLoader, "\u0275fac", /* @__PURE__ */ __name(function _CdkOverlayStyleLoader_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || __CdkOverlayStyleLoader)();
-}, "_CdkOverlayStyleLoader_Factory"));
-__publicField(__CdkOverlayStyleLoader, "\u0275cmp", /* @__PURE__ */ \u0275\u0275defineComponent({
-  type: __CdkOverlayStyleLoader,
-  selectors: [["ng-component"]],
-  hostAttrs: ["cdk-overlay-style-loader", ""],
-  decls: 0,
-  vars: 0,
-  template: /* @__PURE__ */ __name(function _CdkOverlayStyleLoader_Template(rf, ctx) {
-  }, "_CdkOverlayStyleLoader_Template"),
-  styles: [".cdk-overlay-container,.cdk-global-overlay-wrapper{pointer-events:none;top:0;left:0;height:100%;width:100%}.cdk-overlay-container{position:fixed}@layer cdk-overlay{.cdk-overlay-container{z-index:1000}}.cdk-overlay-container:empty{display:none}.cdk-global-overlay-wrapper{display:flex;position:absolute}@layer cdk-overlay{.cdk-global-overlay-wrapper{z-index:1000}}.cdk-overlay-pane{position:absolute;pointer-events:auto;box-sizing:border-box;display:flex;max-width:100%;max-height:100%}@layer cdk-overlay{.cdk-overlay-pane{z-index:1000}}.cdk-overlay-backdrop{position:absolute;top:0;bottom:0;left:0;right:0;pointer-events:auto;-webkit-tap-highlight-color:rgba(0,0,0,0);opacity:0;touch-action:manipulation}@layer cdk-overlay{.cdk-overlay-backdrop{z-index:1000;transition:opacity 400ms cubic-bezier(0.25, 0.8, 0.25, 1)}}@media(prefers-reduced-motion){.cdk-overlay-backdrop{transition-duration:1ms}}.cdk-overlay-backdrop-showing{opacity:1}@media(forced-colors: active){.cdk-overlay-backdrop-showing{opacity:.6}}@layer cdk-overlay{.cdk-overlay-dark-backdrop{background:rgba(0,0,0,.32)}}.cdk-overlay-transparent-backdrop{transition:visibility 1ms linear,opacity 1ms linear;visibility:hidden;opacity:1}.cdk-overlay-transparent-backdrop.cdk-overlay-backdrop-showing,.cdk-high-contrast-active .cdk-overlay-transparent-backdrop{opacity:0;visibility:visible}.cdk-overlay-backdrop-noop-animation{transition:none}.cdk-overlay-connected-position-bounding-box{position:absolute;display:flex;flex-direction:column;min-width:1px;min-height:1px}@layer cdk-overlay{.cdk-overlay-connected-position-bounding-box{z-index:1000}}.cdk-global-scrollblock{position:fixed;width:100%;overflow-y:scroll}\n"],
-  encapsulation: 2,
-  changeDetection: 0
-}));
-var _CdkOverlayStyleLoader = __CdkOverlayStyleLoader;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(_CdkOverlayStyleLoader, [{
     type: Component,
@@ -11857,7 +11509,7 @@ var _CdkOverlayStyleLoader = __CdkOverlayStyleLoader;
     }]
   }], null, null);
 })();
-var _OverlayContainer = class _OverlayContainer {
+var OverlayContainer = class _OverlayContainer {
   _platform = inject(Platform);
   _containerElement;
   _document = inject(DOCUMENT);
@@ -11906,17 +11558,15 @@ var _OverlayContainer = class _OverlayContainer {
   _loadStyles() {
     this._styleLoader.load(_CdkOverlayStyleLoader);
   }
+  static \u0275fac = function OverlayContainer_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _OverlayContainer)();
+  };
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
+    token: _OverlayContainer,
+    factory: _OverlayContainer.\u0275fac,
+    providedIn: "root"
+  });
 };
-__name(_OverlayContainer, "OverlayContainer");
-__publicField(_OverlayContainer, "\u0275fac", /* @__PURE__ */ __name(function OverlayContainer_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _OverlayContainer)();
-}, "OverlayContainer_Factory"));
-__publicField(_OverlayContainer, "\u0275prov", /* @__PURE__ */ \u0275\u0275defineInjectable({
-  token: _OverlayContainer,
-  factory: _OverlayContainer.\u0275fac,
-  providedIn: "root"
-}));
-var OverlayContainer = _OverlayContainer;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(OverlayContainer, [{
     type: Injectable,
@@ -11925,7 +11575,7 @@ var OverlayContainer = _OverlayContainer;
     }]
   }], () => [], null);
 })();
-var _BackdropRef = class _BackdropRef {
+var BackdropRef = class {
   _renderer;
   _ngZone;
   element;
@@ -11950,17 +11600,15 @@ var _BackdropRef = class _BackdropRef {
       element.classList.remove("cdk-overlay-backdrop-showing");
     });
   }
-  dispose = /* @__PURE__ */ __name(() => {
+  dispose = () => {
     clearTimeout(this._fallbackTimeout);
     this._cleanupClick?.();
     this._cleanupTransitionEnd?.();
     this._cleanupClick = this._cleanupTransitionEnd = this._fallbackTimeout = void 0;
     this.element.remove();
-  }, "dispose");
+  };
 };
-__name(_BackdropRef, "BackdropRef");
-var BackdropRef = _BackdropRef;
-var _OverlayRef = class _OverlayRef {
+var OverlayRef = class {
   _portalOutlet;
   _host;
   _pane;
@@ -12344,15 +11992,12 @@ var _OverlayRef = class _OverlayRef {
     scrollStrategy?.detach?.();
   }
 };
-__name(_OverlayRef, "OverlayRef");
-var OverlayRef = _OverlayRef;
 var boundingBoxClass = "cdk-overlay-connected-position-bounding-box";
 var cssUnitPattern = /([A-Za-z%]+)$/;
 function createFlexibleConnectedPositionStrategy(injector, origin) {
   return new FlexibleConnectedPositionStrategy(origin, injector.get(ViewportRuler), injector.get(DOCUMENT), injector.get(Platform), injector.get(OverlayContainer));
 }
-__name(createFlexibleConnectedPositionStrategy, "createFlexibleConnectedPositionStrategy");
-var _FlexibleConnectedPositionStrategy = class _FlexibleConnectedPositionStrategy {
+var FlexibleConnectedPositionStrategy = class {
   _viewportRuler;
   _document;
   _platform;
@@ -13181,8 +12826,6 @@ var _FlexibleConnectedPositionStrategy = class _FlexibleConnectedPositionStrateg
     };
   }
 };
-__name(_FlexibleConnectedPositionStrategy, "FlexibleConnectedPositionStrategy");
-var FlexibleConnectedPositionStrategy = _FlexibleConnectedPositionStrategy;
 function extendStyles(destination, source) {
   for (let key in source) {
     if (source.hasOwnProperty(key)) {
@@ -13191,7 +12834,6 @@ function extendStyles(destination, source) {
   }
   return destination;
 }
-__name(extendStyles, "extendStyles");
 function getPixelValue(input) {
   if (typeof input !== "number" && input != null) {
     const [value, units] = input.split(cssUnitPattern);
@@ -13199,7 +12841,6 @@ function getPixelValue(input) {
   }
   return input || null;
 }
-__name(getPixelValue, "getPixelValue");
 function getRoundedBoundingClientRect(clientRect) {
   return {
     top: Math.floor(clientRect.top),
@@ -13210,20 +12851,17 @@ function getRoundedBoundingClientRect(clientRect) {
     height: Math.floor(clientRect.height)
   };
 }
-__name(getRoundedBoundingClientRect, "getRoundedBoundingClientRect");
 function compareScrollVisibility(a, b) {
   if (a === b) {
     return true;
   }
   return a.isOriginClipped === b.isOriginClipped && a.isOriginOutsideView === b.isOriginOutsideView && a.isOverlayClipped === b.isOverlayClipped && a.isOverlayOutsideView === b.isOverlayOutsideView;
 }
-__name(compareScrollVisibility, "compareScrollVisibility");
 var wrapperClass = "cdk-global-overlay-wrapper";
 function createGlobalPositionStrategy(_injector) {
   return new GlobalPositionStrategy();
 }
-__name(createGlobalPositionStrategy, "createGlobalPositionStrategy");
-var _GlobalPositionStrategy = class _GlobalPositionStrategy {
+var GlobalPositionStrategy = class {
   /** The overlay to which this strategy is attached. */
   _overlayRef;
   _cssPosition = "static";
@@ -13437,9 +13075,7 @@ var _GlobalPositionStrategy = class _GlobalPositionStrategy {
     this._isDisposed = true;
   }
 };
-__name(_GlobalPositionStrategy, "GlobalPositionStrategy");
-var GlobalPositionStrategy = _GlobalPositionStrategy;
-var _OverlayPositionBuilder = class _OverlayPositionBuilder {
+var OverlayPositionBuilder = class _OverlayPositionBuilder {
   _injector = inject(Injector);
   constructor() {
   }
@@ -13456,17 +13092,15 @@ var _OverlayPositionBuilder = class _OverlayPositionBuilder {
   flexibleConnectedTo(origin) {
     return createFlexibleConnectedPositionStrategy(this._injector, origin);
   }
+  static \u0275fac = function OverlayPositionBuilder_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _OverlayPositionBuilder)();
+  };
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
+    token: _OverlayPositionBuilder,
+    factory: _OverlayPositionBuilder.\u0275fac,
+    providedIn: "root"
+  });
 };
-__name(_OverlayPositionBuilder, "OverlayPositionBuilder");
-__publicField(_OverlayPositionBuilder, "\u0275fac", /* @__PURE__ */ __name(function OverlayPositionBuilder_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _OverlayPositionBuilder)();
-}, "OverlayPositionBuilder_Factory"));
-__publicField(_OverlayPositionBuilder, "\u0275prov", /* @__PURE__ */ \u0275\u0275defineInjectable({
-  token: _OverlayPositionBuilder,
-  factory: _OverlayPositionBuilder.\u0275fac,
-  providedIn: "root"
-}));
-var OverlayPositionBuilder = _OverlayPositionBuilder;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(OverlayPositionBuilder, [{
     type: Injectable,
@@ -13498,8 +13132,7 @@ function createOverlayRef(injector, config) {
     optional: true
   }) === "NoopAnimations", injector.get(EnvironmentInjector), renderer);
 }
-__name(createOverlayRef, "createOverlayRef");
-var _Overlay = class _Overlay {
+var Overlay = class _Overlay {
   scrollStrategies = inject(ScrollStrategyOptions);
   _positionBuilder = inject(OverlayPositionBuilder);
   _injector = inject(Injector);
@@ -13521,17 +13154,15 @@ var _Overlay = class _Overlay {
   position() {
     return this._positionBuilder;
   }
+  static \u0275fac = function Overlay_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _Overlay)();
+  };
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
+    token: _Overlay,
+    factory: _Overlay.\u0275fac,
+    providedIn: "root"
+  });
 };
-__name(_Overlay, "Overlay");
-__publicField(_Overlay, "\u0275fac", /* @__PURE__ */ __name(function Overlay_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _Overlay)();
-}, "Overlay_Factory"));
-__publicField(_Overlay, "\u0275prov", /* @__PURE__ */ \u0275\u0275defineInjectable({
-  token: _Overlay,
-  factory: _Overlay.\u0275fac,
-  providedIn: "root"
-}));
-var Overlay = _Overlay;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(Overlay, [{
     type: Injectable,
@@ -13563,26 +13194,24 @@ var defaultPositionList = [{
 }];
 var CDK_CONNECTED_OVERLAY_SCROLL_STRATEGY = new InjectionToken("cdk-connected-overlay-scroll-strategy", {
   providedIn: "root",
-  factory: /* @__PURE__ */ __name(() => {
+  factory: () => {
     const injector = inject(Injector);
     return () => createRepositionScrollStrategy(injector);
-  }, "factory")
+  }
 });
-var _CdkOverlayOrigin = class _CdkOverlayOrigin {
+var CdkOverlayOrigin = class _CdkOverlayOrigin {
   elementRef = inject(ElementRef);
   constructor() {
   }
+  static \u0275fac = function CdkOverlayOrigin_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _CdkOverlayOrigin)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _CdkOverlayOrigin,
+    selectors: [["", "cdk-overlay-origin", ""], ["", "overlay-origin", ""], ["", "cdkOverlayOrigin", ""]],
+    exportAs: ["cdkOverlayOrigin"]
+  });
 };
-__name(_CdkOverlayOrigin, "CdkOverlayOrigin");
-__publicField(_CdkOverlayOrigin, "\u0275fac", /* @__PURE__ */ __name(function CdkOverlayOrigin_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _CdkOverlayOrigin)();
-}, "CdkOverlayOrigin_Factory"));
-__publicField(_CdkOverlayOrigin, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _CdkOverlayOrigin,
-  selectors: [["", "cdk-overlay-origin", ""], ["", "overlay-origin", ""], ["", "cdkOverlayOrigin", ""]],
-  exportAs: ["cdkOverlayOrigin"]
-}));
-var CdkOverlayOrigin = _CdkOverlayOrigin;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(CdkOverlayOrigin, [{
     type: Directive,
@@ -13592,7 +13221,7 @@ var CdkOverlayOrigin = _CdkOverlayOrigin;
     }]
   }], () => [], null);
 })();
-var _CdkConnectedOverlay = class _CdkConnectedOverlay {
+var CdkConnectedOverlay = class _CdkConnectedOverlay {
   _dir = inject(Directionality, {
     optional: true
   });
@@ -13854,50 +13483,48 @@ var _CdkConnectedOverlay = class _CdkConnectedOverlay {
     this._positionSubscription.unsubscribe();
     this.open = false;
   }
+  static \u0275fac = function CdkConnectedOverlay_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _CdkConnectedOverlay)();
+  };
+  static \u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({
+    type: _CdkConnectedOverlay,
+    selectors: [["", "cdk-connected-overlay", ""], ["", "connected-overlay", ""], ["", "cdkConnectedOverlay", ""]],
+    inputs: {
+      origin: [0, "cdkConnectedOverlayOrigin", "origin"],
+      positions: [0, "cdkConnectedOverlayPositions", "positions"],
+      positionStrategy: [0, "cdkConnectedOverlayPositionStrategy", "positionStrategy"],
+      offsetX: [0, "cdkConnectedOverlayOffsetX", "offsetX"],
+      offsetY: [0, "cdkConnectedOverlayOffsetY", "offsetY"],
+      width: [0, "cdkConnectedOverlayWidth", "width"],
+      height: [0, "cdkConnectedOverlayHeight", "height"],
+      minWidth: [0, "cdkConnectedOverlayMinWidth", "minWidth"],
+      minHeight: [0, "cdkConnectedOverlayMinHeight", "minHeight"],
+      backdropClass: [0, "cdkConnectedOverlayBackdropClass", "backdropClass"],
+      panelClass: [0, "cdkConnectedOverlayPanelClass", "panelClass"],
+      viewportMargin: [0, "cdkConnectedOverlayViewportMargin", "viewportMargin"],
+      scrollStrategy: [0, "cdkConnectedOverlayScrollStrategy", "scrollStrategy"],
+      open: [0, "cdkConnectedOverlayOpen", "open"],
+      disableClose: [0, "cdkConnectedOverlayDisableClose", "disableClose"],
+      transformOriginSelector: [0, "cdkConnectedOverlayTransformOriginOn", "transformOriginSelector"],
+      hasBackdrop: [2, "cdkConnectedOverlayHasBackdrop", "hasBackdrop", booleanAttribute],
+      lockPosition: [2, "cdkConnectedOverlayLockPosition", "lockPosition", booleanAttribute],
+      flexibleDimensions: [2, "cdkConnectedOverlayFlexibleDimensions", "flexibleDimensions", booleanAttribute],
+      growAfterOpen: [2, "cdkConnectedOverlayGrowAfterOpen", "growAfterOpen", booleanAttribute],
+      push: [2, "cdkConnectedOverlayPush", "push", booleanAttribute],
+      disposeOnNavigation: [2, "cdkConnectedOverlayDisposeOnNavigation", "disposeOnNavigation", booleanAttribute]
+    },
+    outputs: {
+      backdropClick: "backdropClick",
+      positionChange: "positionChange",
+      attach: "attach",
+      detach: "detach",
+      overlayKeydown: "overlayKeydown",
+      overlayOutsideClick: "overlayOutsideClick"
+    },
+    exportAs: ["cdkConnectedOverlay"],
+    features: [\u0275\u0275NgOnChangesFeature]
+  });
 };
-__name(_CdkConnectedOverlay, "CdkConnectedOverlay");
-__publicField(_CdkConnectedOverlay, "\u0275fac", /* @__PURE__ */ __name(function CdkConnectedOverlay_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _CdkConnectedOverlay)();
-}, "CdkConnectedOverlay_Factory"));
-__publicField(_CdkConnectedOverlay, "\u0275dir", /* @__PURE__ */ \u0275\u0275defineDirective({
-  type: _CdkConnectedOverlay,
-  selectors: [["", "cdk-connected-overlay", ""], ["", "connected-overlay", ""], ["", "cdkConnectedOverlay", ""]],
-  inputs: {
-    origin: [0, "cdkConnectedOverlayOrigin", "origin"],
-    positions: [0, "cdkConnectedOverlayPositions", "positions"],
-    positionStrategy: [0, "cdkConnectedOverlayPositionStrategy", "positionStrategy"],
-    offsetX: [0, "cdkConnectedOverlayOffsetX", "offsetX"],
-    offsetY: [0, "cdkConnectedOverlayOffsetY", "offsetY"],
-    width: [0, "cdkConnectedOverlayWidth", "width"],
-    height: [0, "cdkConnectedOverlayHeight", "height"],
-    minWidth: [0, "cdkConnectedOverlayMinWidth", "minWidth"],
-    minHeight: [0, "cdkConnectedOverlayMinHeight", "minHeight"],
-    backdropClass: [0, "cdkConnectedOverlayBackdropClass", "backdropClass"],
-    panelClass: [0, "cdkConnectedOverlayPanelClass", "panelClass"],
-    viewportMargin: [0, "cdkConnectedOverlayViewportMargin", "viewportMargin"],
-    scrollStrategy: [0, "cdkConnectedOverlayScrollStrategy", "scrollStrategy"],
-    open: [0, "cdkConnectedOverlayOpen", "open"],
-    disableClose: [0, "cdkConnectedOverlayDisableClose", "disableClose"],
-    transformOriginSelector: [0, "cdkConnectedOverlayTransformOriginOn", "transformOriginSelector"],
-    hasBackdrop: [2, "cdkConnectedOverlayHasBackdrop", "hasBackdrop", booleanAttribute],
-    lockPosition: [2, "cdkConnectedOverlayLockPosition", "lockPosition", booleanAttribute],
-    flexibleDimensions: [2, "cdkConnectedOverlayFlexibleDimensions", "flexibleDimensions", booleanAttribute],
-    growAfterOpen: [2, "cdkConnectedOverlayGrowAfterOpen", "growAfterOpen", booleanAttribute],
-    push: [2, "cdkConnectedOverlayPush", "push", booleanAttribute],
-    disposeOnNavigation: [2, "cdkConnectedOverlayDisposeOnNavigation", "disposeOnNavigation", booleanAttribute]
-  },
-  outputs: {
-    backdropClick: "backdropClick",
-    positionChange: "positionChange",
-    attach: "attach",
-    detach: "detach",
-    overlayKeydown: "overlayKeydown",
-    overlayOutsideClick: "overlayOutsideClick"
-  },
-  exportAs: ["cdkConnectedOverlay"],
-  features: [\u0275\u0275NgOnChangesFeature]
-}));
-var CdkConnectedOverlay = _CdkConnectedOverlay;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(CdkConnectedOverlay, [{
     type: Directive,
@@ -14036,27 +13663,24 @@ function CDK_CONNECTED_OVERLAY_SCROLL_STRATEGY_PROVIDER_FACTORY(overlay) {
   const injector = inject(Injector);
   return () => createRepositionScrollStrategy(injector);
 }
-__name(CDK_CONNECTED_OVERLAY_SCROLL_STRATEGY_PROVIDER_FACTORY, "CDK_CONNECTED_OVERLAY_SCROLL_STRATEGY_PROVIDER_FACTORY");
 var CDK_CONNECTED_OVERLAY_SCROLL_STRATEGY_PROVIDER = {
   provide: CDK_CONNECTED_OVERLAY_SCROLL_STRATEGY,
   useFactory: CDK_CONNECTED_OVERLAY_SCROLL_STRATEGY_PROVIDER_FACTORY
 };
-var _OverlayModule = class _OverlayModule {
+var OverlayModule = class _OverlayModule {
+  static \u0275fac = function OverlayModule_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _OverlayModule)();
+  };
+  static \u0275mod = /* @__PURE__ */ \u0275\u0275defineNgModule({
+    type: _OverlayModule,
+    imports: [BidiModule, PortalModule, ScrollingModule, CdkConnectedOverlay, CdkOverlayOrigin],
+    exports: [CdkConnectedOverlay, CdkOverlayOrigin, ScrollingModule]
+  });
+  static \u0275inj = /* @__PURE__ */ \u0275\u0275defineInjector({
+    providers: [Overlay, CDK_CONNECTED_OVERLAY_SCROLL_STRATEGY_PROVIDER],
+    imports: [BidiModule, PortalModule, ScrollingModule, ScrollingModule]
+  });
 };
-__name(_OverlayModule, "OverlayModule");
-__publicField(_OverlayModule, "\u0275fac", /* @__PURE__ */ __name(function OverlayModule_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _OverlayModule)();
-}, "OverlayModule_Factory"));
-__publicField(_OverlayModule, "\u0275mod", /* @__PURE__ */ \u0275\u0275defineNgModule({
-  type: _OverlayModule,
-  imports: [BidiModule, PortalModule, ScrollingModule, CdkConnectedOverlay, CdkOverlayOrigin],
-  exports: [CdkConnectedOverlay, CdkOverlayOrigin, ScrollingModule]
-}));
-__publicField(_OverlayModule, "\u0275inj", /* @__PURE__ */ \u0275\u0275defineInjector({
-  providers: [Overlay, CDK_CONNECTED_OVERLAY_SCROLL_STRATEGY_PROVIDER],
-  imports: [BidiModule, PortalModule, ScrollingModule, ScrollingModule]
-}));
-var OverlayModule = _OverlayModule;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(OverlayModule, [{
     type: NgModule,
@@ -14069,7 +13693,7 @@ var OverlayModule = _OverlayModule;
 })();
 
 // node_modules/@angular/cdk/fesm2022/overlay.mjs
-var _FullscreenOverlayContainer = class _FullscreenOverlayContainer extends OverlayContainer {
+var FullscreenOverlayContainer = class _FullscreenOverlayContainer extends OverlayContainer {
   _renderer = inject(RendererFactory2).createRenderer(null, null);
   _fullScreenEventName;
   _cleanupFullScreenListener;
@@ -14121,17 +13745,15 @@ var _FullscreenOverlayContainer = class _FullscreenOverlayContainer extends Over
     const _document = this._document;
     return _document.fullscreenElement || _document.webkitFullscreenElement || _document.mozFullScreenElement || _document.msFullscreenElement || null;
   }
+  static \u0275fac = function FullscreenOverlayContainer_Factory(__ngFactoryType__) {
+    return new (__ngFactoryType__ || _FullscreenOverlayContainer)();
+  };
+  static \u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({
+    token: _FullscreenOverlayContainer,
+    factory: _FullscreenOverlayContainer.\u0275fac,
+    providedIn: "root"
+  });
 };
-__name(_FullscreenOverlayContainer, "FullscreenOverlayContainer");
-__publicField(_FullscreenOverlayContainer, "\u0275fac", /* @__PURE__ */ __name(function FullscreenOverlayContainer_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _FullscreenOverlayContainer)();
-}, "FullscreenOverlayContainer_Factory"));
-__publicField(_FullscreenOverlayContainer, "\u0275prov", /* @__PURE__ */ \u0275\u0275defineInjectable({
-  token: _FullscreenOverlayContainer,
-  factory: _FullscreenOverlayContainer.\u0275fac,
-  providedIn: "root"
-}));
-var FullscreenOverlayContainer = _FullscreenOverlayContainer;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(FullscreenOverlayContainer, [{
     type: Injectable,
@@ -14150,15 +13772,17 @@ export {
   CdkScrollableModule,
   NG_VALUE_ACCESSOR,
   DefaultValueAccessor,
-  NG_VALIDATORS,
   Validators,
   NgControl,
   NgControlStatus,
   NgControlStatusGroup,
   NgForm,
   ɵNgNoValidate,
+  NumberValueAccessor,
   FormGroupDirective,
   FormControlName,
+  MinValidator,
+  RequiredValidator,
   MaxLengthValidator,
   FormBuilder,
   ReactiveFormsModule,
@@ -14178,11 +13802,16 @@ export {
   DomPortalOutlet,
   CdkPortalOutlet,
   PortalModule,
+  createBlockScrollStrategy,
   createRepositionScrollStrategy,
   OverlayConfig,
+  OverlayContainer,
+  OverlayRef,
   createFlexibleConnectedPositionStrategy,
   createGlobalPositionStrategy,
   createOverlayRef,
+  CdkOverlayOrigin,
+  CdkConnectedOverlay,
   OverlayModule,
   ListService
 };
@@ -14190,9 +13819,9 @@ export {
 
 @angular/forms/fesm2022/forms.mjs:
   (**
-   * @license Angular v20.3.0
+   * @license Angular v20.3.3
    * (c) 2010-2025 Google LLC. https://angular.io/
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-MBA56NPS.js.map
+//# sourceMappingURL=chunk-M4AMQKTQ.js.map

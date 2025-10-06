@@ -1,15 +1,13 @@
 import {
   AuthService
-} from "./chunk-DTVRW2I7.js";
+} from "./chunk-2U2SCJGW.js";
 import {
   Configuration
-} from "./chunk-3ZBWVIZK.js";
+} from "./chunk-KYZXPXLL.js";
 import {
-  CommonModule,
   Component,
   Router,
   RouterOutlet,
-  __name,
   bootstrapApplication,
   inject,
   map,
@@ -19,10 +17,10 @@ import {
   ɵsetClassDebugInfo,
   ɵɵdefineComponent,
   ɵɵelement
-} from "./chunk-376M5ZWK.js";
+} from "./chunk-3DPZ4J24.js";
 
 // src/app/guards/auth.guard.ts
-var authGuard = /* @__PURE__ */ __name(() => {
+var authGuard = () => {
   const authService = inject(AuthService);
   const router = inject(Router);
   return authService.authState$.pipe(map((state) => {
@@ -33,7 +31,7 @@ var authGuard = /* @__PURE__ */ __name(() => {
       return false;
     }
   }));
-}, "authGuard");
+};
 
 // src/app/app.routes.ts
 var routes = [
@@ -44,21 +42,21 @@ var routes = [
   },
   {
     path: "login",
-    loadComponent: /* @__PURE__ */ __name(() => import("./chunk-ASQ2JG6J.js").then((m) => m.LoginComponent), "loadComponent")
+    loadComponent: () => import("./chunk-HTQ4ZGBB.js").then((m) => m.LoginComponent)
   },
   {
     path: "dashboard",
-    loadComponent: /* @__PURE__ */ __name(() => import("./chunk-TRI6FF5Y.js").then((m) => m.DashboardComponent), "loadComponent"),
+    loadComponent: () => import("./chunk-QFRSL3GE.js").then((m) => m.DashboardComponent),
     canActivate: [authGuard]
   },
   {
     path: "lists/new",
-    loadComponent: /* @__PURE__ */ __name(() => import("./chunk-PGOC6PYL.js").then((m) => m.ListCreateComponent), "loadComponent"),
+    loadComponent: () => import("./chunk-KS6QXR4X.js").then((m) => m.ListCreateComponent),
     canActivate: [authGuard]
   },
   {
     path: "lists/:id",
-    loadComponent: /* @__PURE__ */ __name(() => import("./chunk-OKNWNEIX.js").then((m) => m.ListDetailComponent), "loadComponent"),
+    loadComponent: () => import("./chunk-TL2DPY2F.js").then((m) => m.ListDetailComponent),
     canActivate: [authGuard]
   },
   {
@@ -85,36 +83,32 @@ var environment = {
 var apiConfiguration = new Configuration({
   basePath: environment.apiUrl,
   credentials: {
-    OAuth2: /* @__PURE__ */ __name(() => localStorage.getItem("authToken") || void 0, "OAuth2")
+    OAuth2: () => localStorage.getItem("authToken") || void 0
   }
 });
 var _App = class _App {
 };
-__name(_App, "App");
-_App.\u0275fac = /* @__PURE__ */ __name(function App_Factory(__ngFactoryType__) {
+_App.\u0275fac = function App_Factory(__ngFactoryType__) {
   return new (__ngFactoryType__ || _App)();
-}, "App_Factory");
-_App.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _App, selectors: [["app-root"]], decls: 1, vars: 0, template: /* @__PURE__ */ __name(function App_Template(rf, ctx) {
+};
+_App.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _App, selectors: [["lok-root"]], decls: 1, vars: 0, template: function App_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275element(0, "router-outlet");
   }
-}, "App_Template"), dependencies: [CommonModule, RouterOutlet], encapsulation: 2 });
+}, dependencies: [RouterOutlet], encapsulation: 2 });
 var App = _App;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(App, [{
     type: Component,
     args: [{
-      selector: "app-root",
-      standalone: true,
-      imports: [CommonModule, RouterOutlet],
-      template: `
-      <router-outlet></router-outlet>
-  `
+      selector: "lok-root",
+      imports: [RouterOutlet],
+      template: "<router-outlet></router-outlet>"
     }]
   }], null, null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(App, { className: "App", filePath: "src/main.ts", lineNumber: 26 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(App, { className: "App", filePath: "src/main.ts", lineNumber: 22 });
 })();
 bootstrapApplication(App, {
   providers: [

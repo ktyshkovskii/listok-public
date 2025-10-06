@@ -8,7 +8,6 @@ import {
   NgModule,
   Optional,
   SkipSelf,
-  __name,
   __spreadProps,
   __spreadValues,
   delay,
@@ -19,10 +18,10 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-376M5ZWK.js";
+} from "./chunk-3DPZ4J24.js";
 
 // src/app/generated/api/configuration.ts
-var _Configuration = class _Configuration {
+var Configuration = class {
   constructor(configurationParameters = {}) {
     this.apiKeys = configurationParameters.apiKeys;
     this.username = configurationParameters.username;
@@ -104,8 +103,6 @@ var _Configuration = class _Configuration {
     return encodeURIComponent(String(value));
   }
 };
-__name(_Configuration, "Configuration");
-var Configuration = _Configuration;
 
 // src/app/generated/api/model/itemStatus.ts
 var ItemStatus;
@@ -124,7 +121,12 @@ var ITEM_APPLES = {
 };
 var ITEM_BANANAS = {
   id: "1-4",
-  product: { id: "item-8", name: "Bananananas", img: "https://images.pexels.com/photos/102104/pexels-photo-102104.jpeg" },
+  product: {
+    id: "item-8",
+    name: "Bananananas",
+    img: "https://images.pexels.com/photos/102104/pexels-photo-102104.jpeg",
+    comment: "A really looooooooooooong comment"
+  },
   count: 6,
   groupColor: "#4CAF50",
   status: ItemStatus.ToBuy
@@ -138,7 +140,12 @@ var ITEM_BREAD = {
 };
 var ITEM_MILK = {
   id: "1-3",
-  product: { id: "item-3", name: "Milk", img: "https://images.pexels.com/photos/416354/pexels-photo-416354.jpeg" },
+  product: {
+    id: "item-3",
+    name: "Milk",
+    img: "https://images.pexels.com/photos/416354/pexels-photo-416354.jpeg",
+    comment: "Just a comment"
+  },
   count: 1,
   groupColor: "#2196F3",
   status: ItemStatus.ToBuy
@@ -194,9 +201,9 @@ var LIST_HOME_RENOVATION = {
 };
 var ALL_ITEMS = [ITEM_APPLES, ITEM_BANANAS, ITEM_BREAD, ITEM_MILK, ITEM_NOTEBOOKS, ITEM_PENS, ITEM_TILES, ITEM_PAINT];
 var ALL_LISTS = [LIST_GROCERY_SHOPPING, LIST_OFFICE_SUPPLIES, LIST_HOME_RENOVATION];
-var id = /* @__PURE__ */ __name(function() {
+var id = function() {
   return Math.random().toString(36).substring(2, 6);
-}, "id");
+};
 
 // src/app/generated/api/api/item.service.ts
 var _ItemApiService = class _ItemApiService {
@@ -205,7 +212,7 @@ var _ItemApiService = class _ItemApiService {
     this.configuration = new Configuration();
   }
   getItem(id2) {
-    let item = ALL_ITEMS.find((item2) => item2.id === id2);
+    const item = ALL_ITEMS.find((item2) => item2.id === id2);
     if (item) {
       return of(item);
     } else {
@@ -219,7 +226,7 @@ var _ItemApiService = class _ItemApiService {
     return of(ALL_ITEMS);
   }
   getListsItems(listId) {
-    let items = ALL_LISTS.find((value) => value.id === listId)?.items;
+    const items = ALL_LISTS.find((value) => value.id === listId)?.items;
     if (items) {
       return of(items);
     } else {
@@ -252,9 +259,9 @@ var _ItemApiService = class _ItemApiService {
     for (const list of ALL_LISTS) {
       const itemIndex = list.items.findIndex((i) => i.id === id2);
       if (itemIndex !== -1) {
-        let data = Object.fromEntries(Object.entries(itemData).filter(([_, v]) => v !== void 0));
+        const data = Object.fromEntries(Object.entries(itemData).filter(([, v]) => v !== void 0));
         const updatedItem = __spreadProps(__spreadValues(__spreadValues({}, list.items[itemIndex]), data), { id: id2 });
-        let indexInData = ALL_ITEMS.findIndex((i) => i.id === id2);
+        const indexInData = ALL_ITEMS.findIndex((i) => i.id === id2);
         if (indexInData !== -1) {
           ALL_ITEMS[indexInData] = updatedItem;
         }
@@ -271,9 +278,9 @@ var _ItemApiService = class _ItemApiService {
     for (const list of ALL_LISTS) {
       const itemIndex = list.items.findIndex((i) => i.id === id2);
       if (itemIndex !== -1) {
-        let deletedItem = list.items[itemIndex];
+        const deletedItem = list.items[itemIndex];
         list.items.splice(itemIndex, 1);
-        let indexInData = ALL_ITEMS.findIndex((i) => i.id === id2);
+        const indexInData = ALL_ITEMS.findIndex((i) => i.id === id2);
         if (indexInData !== -1) {
           ALL_ITEMS.splice(indexInData, 1);
         }
@@ -286,10 +293,9 @@ var _ItemApiService = class _ItemApiService {
     }));
   }
 };
-__name(_ItemApiService, "ItemApiService");
-_ItemApiService.\u0275fac = /* @__PURE__ */ __name(function ItemApiService_Factory(__ngFactoryType__) {
+_ItemApiService.\u0275fac = function ItemApiService_Factory(__ngFactoryType__) {
   return new (__ngFactoryType__ || _ItemApiService)();
-}, "ItemApiService_Factory");
+};
 _ItemApiService.\u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({ token: _ItemApiService, factory: _ItemApiService.\u0275fac, providedIn: "root" });
 var ItemApiService = _ItemApiService;
 (() => {
@@ -340,7 +346,7 @@ var _ListApiService = class _ListApiService {
         message: "Not Found"
       }));
     }
-    let data = Object.fromEntries(Object.entries(list).filter(([_, v]) => v !== void 0));
+    const data = Object.fromEntries(Object.entries(list).filter(([, v]) => v !== void 0));
     const updatedList = __spreadProps(__spreadValues(__spreadValues({}, ALL_LISTS[index]), data), { id: listId });
     ALL_LISTS[index] = updatedList;
     return of(__spreadValues({}, updatedList)).pipe(delay(400));
@@ -354,16 +360,15 @@ var _ListApiService = class _ListApiService {
       }));
     }
     const deletedList = ALL_LISTS[index];
-    let itemIds = deletedList.items.map((item) => ALL_ITEMS.indexOf(item));
+    const itemIds = deletedList.items.map((item) => ALL_ITEMS.indexOf(item));
     itemIds.forEach((itemIndex) => ALL_ITEMS.splice(itemIndex, 1));
     ALL_LISTS.splice(index, 1);
     return of(deletedList).pipe(delay(400));
   }
 };
-__name(_ListApiService, "ListApiService");
-_ListApiService.\u0275fac = /* @__PURE__ */ __name(function ListApiService_Factory(__ngFactoryType__) {
+_ListApiService.\u0275fac = function ListApiService_Factory(__ngFactoryType__) {
   return new (__ngFactoryType__ || _ListApiService)();
-}, "ListApiService_Factory");
+};
 _ListApiService.\u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({ token: _ListApiService, factory: _ListApiService.\u0275fac, providedIn: "root" });
 var ListApiService = _ListApiService;
 (() => {
@@ -376,7 +381,7 @@ var ListApiService = _ListApiService;
 })();
 
 // src/app/generated/api/encoder.ts
-var _CustomHttpParameterCodec = class _CustomHttpParameterCodec {
+var CustomHttpParameterCodec = class {
   encodeKey(k) {
     return encodeURIComponent(k);
   }
@@ -390,8 +395,6 @@ var _CustomHttpParameterCodec = class _CustomHttpParameterCodec {
     return decodeURIComponent(v);
   }
 };
-__name(_CustomHttpParameterCodec, "CustomHttpParameterCodec");
-var CustomHttpParameterCodec = _CustomHttpParameterCodec;
 
 // src/app/generated/api/variables.ts
 var BASE_PATH = new InjectionToken("basePath");
@@ -717,10 +720,9 @@ var _ProductApiService = class _ProductApiService {
     });
   }
 };
-__name(_ProductApiService, "ProductApiService");
-_ProductApiService.\u0275fac = /* @__PURE__ */ __name(function ProductApiService_Factory(__ngFactoryType__) {
+_ProductApiService.\u0275fac = function ProductApiService_Factory(__ngFactoryType__) {
   return new (__ngFactoryType__ || _ProductApiService)(\u0275\u0275inject(HttpClient), \u0275\u0275inject(BASE_PATH, 8), \u0275\u0275inject(Configuration, 8));
-}, "ProductApiService_Factory");
+};
 _ProductApiService.\u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({ token: _ProductApiService, factory: _ProductApiService.\u0275fac, providedIn: "root" });
 var ProductApiService = _ProductApiService;
 (() => {
@@ -756,10 +758,9 @@ var _ApiModule = class _ApiModule {
     }
   }
 };
-__name(_ApiModule, "ApiModule");
-_ApiModule.\u0275fac = /* @__PURE__ */ __name(function ApiModule_Factory(__ngFactoryType__) {
+_ApiModule.\u0275fac = function ApiModule_Factory(__ngFactoryType__) {
   return new (__ngFactoryType__ || _ApiModule)(\u0275\u0275inject(_ApiModule, 12), \u0275\u0275inject(HttpClient, 8));
-}, "ApiModule_Factory");
+};
 _ApiModule.\u0275mod = /* @__PURE__ */ \u0275\u0275defineNgModule({ type: _ApiModule });
 _ApiModule.\u0275inj = /* @__PURE__ */ \u0275\u0275defineInjector({});
 var ApiModule = _ApiModule;
@@ -786,4 +787,4 @@ export {
   ListApiService,
   Configuration
 };
-//# sourceMappingURL=chunk-3ZBWVIZK.js.map
+//# sourceMappingURL=chunk-KYZXPXLL.js.map
