@@ -117,7 +117,6 @@ import {
   ElementRef,
   EventEmitter,
   HostAttributeToken,
-  Inject,
   Injectable,
   InjectionToken,
   Injector,
@@ -168,7 +167,6 @@ import {
   ɵɵdefineInjectable,
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
-  ɵɵdirectiveInject,
   ɵɵdomElementEnd,
   ɵɵdomElementStart,
   ɵɵdomProperty,
@@ -4323,8 +4321,8 @@ var AddItemDialogComponent = _AddItemDialogComponent;
 
 // src/app/components/shared/confirm-dialog.component.ts
 var _ConfirmDialogComponent = class _ConfirmDialogComponent {
-  constructor(data) {
-    this.data = data;
+  constructor() {
+    this.data = inject(MAT_DIALOG_DATA);
     this.dialogRef = inject(MatDialogRef);
   }
   onCancel() {
@@ -4335,7 +4333,7 @@ var _ConfirmDialogComponent = class _ConfirmDialogComponent {
   }
 };
 _ConfirmDialogComponent.\u0275fac = function ConfirmDialogComponent_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _ConfirmDialogComponent)(\u0275\u0275directiveInject(MAT_DIALOG_DATA));
+  return new (__ngFactoryType__ || _ConfirmDialogComponent)();
 };
 _ConfirmDialogComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ConfirmDialogComponent, selectors: [["app-confirm-dialog"]], decls: 10, vars: 5, consts: [["mat-dialog-title", ""], ["align", "end"], ["mat-button", "", 3, "click"], ["mat-raised-button", "", 3, "click", "color"]], template: function ConfirmDialogComponent_Template(rf, ctx) {
   if (rf & 1) {
@@ -4396,10 +4394,7 @@ var ConfirmDialogComponent = _ConfirmDialogComponent;
       </button>
     </mat-dialog-actions>
   `, styles: ["/* angular:styles/component:scss;ad69d160c0493c3d21f1132b718c18e364329655ee3ed479921d6347f2c25de6;/home/runner/work/listok-bolt/listok-bolt/src/app/components/shared/confirm-dialog.component.ts */\nmat-dialog-content {\n  padding: 20px 24px;\n  min-width: 300px;\n}\nmat-dialog-content p {\n  margin: 0;\n  font-size: 16px;\n  line-height: 1.5;\n}\n@media (max-width: 768px) {\n  mat-dialog-content {\n    min-width: 250px;\n  }\n}\n/*# sourceMappingURL=confirm-dialog.component.css.map */\n"] }]
-  }], () => [{ type: void 0, decorators: [{
-    type: Inject,
-    args: [MAT_DIALOG_DATA]
-  }] }], null);
+  }], null, null);
 })();
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ConfirmDialogComponent, { className: "ConfirmDialogComponent", filePath: "src/app/components/shared/confirm-dialog.component.ts", lineNumber: 57 });
@@ -5139,7 +5134,7 @@ var ListDetailComponent = _ListDetailComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ListDetailComponent, [{
     type: Component,
-    args: [{ standalone: true, imports: [
+    args: [{ imports: [
       MatCardModule,
       MatButtonModule,
       MatIconModule,
@@ -5359,7 +5354,7 @@ var ListDetailComponent = _ListDetailComponent;
 
 @if (loading) {
   <div class="loading-container">
-    <mat-spinner diameter="50"></mat-spinner>
+    <mat-spinner diameter="50" />
     <p>Loading list details...</p>
   </div>
 }
@@ -5367,9 +5362,9 @@ var ListDetailComponent = _ListDetailComponent;
   }], null, null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ListDetailComponent, { className: "ListDetailComponent", filePath: "src/app/components/list-detail/list-detail.component.ts", lineNumber: 42 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ListDetailComponent, { className: "ListDetailComponent", filePath: "src/app/components/list-detail/list-detail.component.ts", lineNumber: 41 });
 })();
 export {
   ListDetailComponent
 };
-//# sourceMappingURL=chunk-AXICPKBM.js.map
+//# sourceMappingURL=chunk-TA4RZSRI.js.map

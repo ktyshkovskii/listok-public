@@ -4988,7 +4988,7 @@ var DashboardComponent = _DashboardComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(DashboardComponent, [{
     type: Component,
-    args: [{ standalone: true, imports: [
+    args: [{ imports: [
       MatCardModule,
       MatButtonModule,
       MatIconModule,
@@ -5032,7 +5032,7 @@ var DashboardComponent = _DashboardComponent;
           <p class="user-email">{{ currentUser?.email }}</p>
         </div>
       </div>
-      <mat-divider></mat-divider>
+      <mat-divider />
       <button mat-menu-item (click)="signOut()">
         <mat-icon>logout</mat-icon>
         Sign Out
@@ -5055,7 +5055,7 @@ var DashboardComponent = _DashboardComponent;
           <mat-icon matListItemIcon>add</mat-icon>
           <span matListItemTitle>Create List</span>
         </a>
-        <mat-divider></mat-divider>
+        <mat-divider />
         <h3 matSubheader>Quick Stats</h3>
         <mat-list-item>
           <mat-icon matListItemIcon>assignment</mat-icon>
@@ -5190,7 +5190,7 @@ var DashboardComponent = _DashboardComponent;
 
         @if (loading) {
           <div class="loading-container">
-            <mat-spinner diameter="50"></mat-spinner>
+            <mat-spinner diameter="50" />
             <p>Loading your dashboard...</p>
           </div>
         }
@@ -5202,9 +5202,9 @@ var DashboardComponent = _DashboardComponent;
   }], null, null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(DashboardComponent, { className: "DashboardComponent", filePath: "src/app/components/dashboard/dashboard.component.ts", lineNumber: 39 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(DashboardComponent, { className: "DashboardComponent", filePath: "src/app/components/dashboard/dashboard.component.ts", lineNumber: 38 });
 })();
 export {
   DashboardComponent
 };
-//# sourceMappingURL=chunk-QFRSL3GE.js.map
+//# sourceMappingURL=chunk-NPAQPJ3P.js.map

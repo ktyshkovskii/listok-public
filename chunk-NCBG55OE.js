@@ -487,7 +487,7 @@ var ListCreateComponent = _ListCreateComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ListCreateComponent, [{
     type: Component,
-    args: [{ standalone: true, imports: [
+    args: [{ imports: [
       ReactiveFormsModule,
       MatCardModule,
       MatButtonModule,
@@ -516,7 +516,7 @@ var ListCreateComponent = _ListCreateComponent;
         <mat-icon>save</mat-icon>
       }
       @if (isSubmitting) {
-        <mat-spinner diameter="20"></mat-spinner>
+        <mat-spinner diameter="20" />
       }
       {{ isSubmitting ? (isEditMode ? 'Saving...' : 'Creating...') : (isEditMode ? 'Save Changes' : 'Create List') }}
     </button>
@@ -532,7 +532,7 @@ var ListCreateComponent = _ListCreateComponent;
       <mat-card-content>
         @if (loading) {
           <div class="loading-container">
-            <mat-spinner diameter="50"></mat-spinner>
+            <mat-spinner diameter="50" />
             <p>Loading list...</p>
           </div>
         }
@@ -626,7 +626,7 @@ var ListCreateComponent = _ListCreateComponent;
           <mat-icon>{{ isEditMode ? 'save' : 'add' }}</mat-icon>
         }
         @if (isSubmitting) {
-          <mat-spinner diameter="20"></mat-spinner>
+          <mat-spinner diameter="20" />
         }
         {{ isSubmitting ? (isEditMode ? 'Saving List...' : 'Creating List...') : (isEditMode ? 'Save Changes' : 'Create List') }}
       </button>
@@ -637,9 +637,9 @@ var ListCreateComponent = _ListCreateComponent;
   }], null, null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ListCreateComponent, { className: "ListCreateComponent", filePath: "src/app/components/list-create/list-create.component.ts", lineNumber: 30 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ListCreateComponent, { className: "ListCreateComponent", filePath: "src/app/components/list-create/list-create.component.ts", lineNumber: 29 });
 })();
 export {
   ListCreateComponent
 };
-//# sourceMappingURL=chunk-3D7D4VTB.js.map
+//# sourceMappingURL=chunk-NCBG55OE.js.map

@@ -42,26 +42,26 @@ var routes = [
   },
   {
     path: "login",
-    loadComponent: () => import("./chunk-HTQ4ZGBB.js").then((m) => m.LoginComponent)
+    loadComponent: () => import("./chunk-U2ZWNKCB.js").then((m) => m.LoginComponent)
   },
   {
     path: "dashboard",
-    loadComponent: () => import("./chunk-QFRSL3GE.js").then((m) => m.DashboardComponent),
+    loadComponent: () => import("./chunk-NPAQPJ3P.js").then((m) => m.DashboardComponent),
     canActivate: [authGuard]
   },
   {
     path: "lists/new",
-    loadComponent: () => import("./chunk-3D7D4VTB.js").then((m) => m.ListCreateComponent),
+    loadComponent: () => import("./chunk-NCBG55OE.js").then((m) => m.ListCreateComponent),
     canActivate: [authGuard]
   },
   {
     path: "lists/:id/edit",
-    loadComponent: () => import("./chunk-3D7D4VTB.js").then((m) => m.ListCreateComponent),
+    loadComponent: () => import("./chunk-NCBG55OE.js").then((m) => m.ListCreateComponent),
     canActivate: [authGuard]
   },
   {
     path: "lists/:id",
-    loadComponent: () => import("./chunk-AXICPKBM.js").then((m) => m.ListDetailComponent),
+    loadComponent: () => import("./chunk-TA4RZSRI.js").then((m) => m.ListDetailComponent),
     canActivate: [authGuard]
   },
   {
@@ -108,7 +108,7 @@ var App = _App;
     args: [{
       selector: "lok-root",
       imports: [RouterOutlet],
-      template: "<router-outlet></router-outlet>"
+      template: "<router-outlet />"
     }]
   }], null, null);
 })();

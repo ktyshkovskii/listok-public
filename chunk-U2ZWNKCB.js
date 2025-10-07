@@ -237,7 +237,7 @@ var LoginComponent = _LoginComponent;
               </button>
               @if (authState.loading) {
                 <div class="loading-spinner">
-                  <mat-spinner diameter="30"></mat-spinner>
+                  <mat-spinner diameter="30" />
                   <p>Signing you in...</p>
                 </div>
               }
@@ -261,4 +261,4 @@ var LoginComponent = _LoginComponent;
 export {
   LoginComponent
 };
-//# sourceMappingURL=chunk-HTQ4ZGBB.js.map
+//# sourceMappingURL=chunk-U2ZWNKCB.js.map
