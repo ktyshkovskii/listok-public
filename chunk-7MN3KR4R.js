@@ -117,7 +117,6 @@ import {
   ElementRef,
   EventEmitter,
   HostAttributeToken,
-  Inject,
   Injectable,
   InjectionToken,
   Injector,
@@ -168,7 +167,6 @@ import {
   ɵɵdefineInjectable,
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
-  ɵɵdirectiveInject,
   ɵɵdomElementEnd,
   ɵɵdomElementStart,
   ɵɵdomProperty,
@@ -4067,10 +4065,10 @@ function AddItemDialogComponent_Conditional_30_Template(rf, ctx) {
   }
 }
 var _AddItemDialogComponent = class _AddItemDialogComponent {
-  constructor(data) {
-    this.data = data;
+  constructor() {
     this.fb = inject(FormBuilder);
     this.dialogRef = inject(MatDialogRef);
+    this.data = inject(MAT_DIALOG_DATA);
     this.itemForm = this.fb.group({
       name: ["", Validators.required],
       comment: [""],
@@ -4102,9 +4100,9 @@ var _AddItemDialogComponent = class _AddItemDialogComponent {
   }
 };
 _AddItemDialogComponent.\u0275fac = function AddItemDialogComponent_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _AddItemDialogComponent)(\u0275\u0275directiveInject(MAT_DIALOG_DATA));
+  return new (__ngFactoryType__ || _AddItemDialogComponent)();
 };
-_AddItemDialogComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AddItemDialogComponent, selectors: [["app-add-item-dialog"]], decls: 60, vars: 6, consts: [["mat-dialog-title", ""], [1, "item-form", 3, "formGroup"], ["appearance", "outline"], ["matInput", "", "formControlName", "name", "placeholder", "Enter item name", "required", ""], ["matPrefix", ""], ["matInput", "", "formControlName", "comment", "placeholder", "Add notes or description", "rows", "3"], ["matInput", "", "formControlName", "img", "placeholder", "https://example.com/image.jpg"], ["matInput", "", "type", "number", "formControlName", "count", "placeholder", "1", "required", "", "min", "1"], ["formControlName", "color"], [3, "value"], ["value", "#FF6B6B"], ["value", "#4ECDC4"], ["value", "#45B7D1"], ["value", "#FFA07A"], ["value", "#98D8C8"], ["value", "#F7DC6F"], ["value", "#BB8FCE"], ["align", "end"], ["mat-button", "", 3, "click"], ["mat-raised-button", "", "color", "primary", 3, "click", "disabled"]], template: function AddItemDialogComponent_Template(rf, ctx) {
+_AddItemDialogComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AddItemDialogComponent, selectors: [["ng-component"]], decls: 60, vars: 6, consts: [["mat-dialog-title", ""], [1, "item-form", 3, "formGroup"], ["appearance", "outline"], ["matInput", "", "formControlName", "name", "placeholder", "Enter item name", "required", ""], ["matPrefix", ""], ["matInput", "", "formControlName", "comment", "placeholder", "Add notes or description", "rows", "3"], ["matInput", "", "formControlName", "img", "placeholder", "https://example.com/image.jpg"], ["matInput", "", "type", "number", "formControlName", "count", "placeholder", "1", "required", "", "min", "1"], ["formControlName", "color"], [3, "value"], ["value", "#FF6B6B"], ["value", "#4ECDC4"], ["value", "#45B7D1"], ["value", "#FFA07A"], ["value", "#98D8C8"], ["value", "#F7DC6F"], ["value", "#BB8FCE"], ["align", "end"], ["mat-button", "", 3, "click"], ["mat-raised-button", "", "color", "primary", 3, "click", "disabled"]], template: function AddItemDialogComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "h2", 0);
     \u0275\u0275text(1, "Add New Item");
@@ -4240,7 +4238,7 @@ var AddItemDialogComponent = _AddItemDialogComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(AddItemDialogComponent, [{
     type: Component,
-    args: [{ selector: "app-add-item-dialog", imports: [
+    args: [{ imports: [
       CommonModule,
       ReactiveFormsModule,
       MatDialogModule,
@@ -4310,13 +4308,10 @@ var AddItemDialogComponent = _AddItemDialogComponent;
       </button>
     </mat-dialog-actions>
   `, styles: ["/* angular:styles/component:scss;1321adf67defa0dc1480758702dc80cf9feb894510fc1b5b27ad09c997dcdcbf;/home/runner/work/listok-bolt/listok-bolt/src/app/components/list-detail/add-item-dialog.component.ts */\n.item-form {\n  display: flex;\n  flex-direction: column;\n  gap: 16px;\n  min-width: 400px;\n  padding: 16px 0;\n}\nmat-form-field {\n  width: 100%;\n}\nmat-dialog-content {\n  max-height: 70vh;\n  overflow-y: auto;\n}\n@media (max-width: 768px) {\n  .item-form {\n    min-width: 280px;\n  }\n}\n/*# sourceMappingURL=add-item-dialog.component.css.map */\n"] }]
-  }], () => [{ type: void 0, decorators: [{
-    type: Inject,
-    args: [MAT_DIALOG_DATA]
-  }] }], null);
+  }], null, null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AddItemDialogComponent, { className: "AddItemDialogComponent", filePath: "src/app/components/list-detail/add-item-dialog.component.ts", lineNumber: 114 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AddItemDialogComponent, { className: "AddItemDialogComponent", filePath: "src/app/components/list-detail/add-item-dialog.component.ts", lineNumber: 113 });
 })();
 
 // src/app/components/list-detail/list-detail.component.ts
@@ -4375,6 +4370,10 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditi
     const _r3 = \u0275\u0275getCurrentView();
     \u0275\u0275elementStart(0, "div", 32)(1, "div", 33);
     \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_6_For_2_For_4_Template_div_click_1_listener() {
+      const item_r4 = \u0275\u0275restoreView(_r3).$implicit;
+      const ctx_r1 = \u0275\u0275nextContext(6);
+      return \u0275\u0275resetView(ctx_r1.toggleItemStatus(item_r4));
+    })("keydown.enter", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_6_For_2_For_4_Template_div_keydown_enter_1_listener() {
       const item_r4 = \u0275\u0275restoreView(_r3).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(6);
       return \u0275\u0275resetView(ctx_r1.toggleItemStatus(item_r4));
@@ -4554,6 +4553,10 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_F
     const _r8 = \u0275\u0275getCurrentView();
     \u0275\u0275elementStart(0, "div", 46)(1, "div", 33);
     \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_For_4_Template_div_click_1_listener() {
+      const item_r9 = \u0275\u0275restoreView(_r8).$implicit;
+      const ctx_r1 = \u0275\u0275nextContext(5);
+      return \u0275\u0275resetView(ctx_r1.toggleItemStatus(item_r9));
+    })("keydown.enter", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_For_4_Template_div_keydown_enter_1_listener() {
       const item_r9 = \u0275\u0275restoreView(_r8).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(5);
       return \u0275\u0275resetView(ctx_r1.toggleItemStatus(item_r9));
@@ -4957,7 +4960,7 @@ var _ListDetailComponent = class _ListDetailComponent {
 _ListDetailComponent.\u0275fac = function ListDetailComponent_Factory(__ngFactoryType__) {
   return new (__ngFactoryType__ || _ListDetailComponent)();
 };
-_ListDetailComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ListDetailComponent, selectors: [["ng-component"]], decls: 2, vars: 2, consts: [["listMenu", "matMenu"], ["itemMenu", "matMenu"], [1, "list-detail-container"], [1, "loading-container"], [1, "list-toolbar"], ["mat-icon-button", "", 3, "click"], [1, "list-header-info"], [1, "list-title"], [1, "list-subtitle"], [1, "spacer"], ["mat-button", "", 3, "click"], ["mat-icon-button", "", 3, "matMenuTriggerFor"], ["mat-menu-item", "", 3, "routerLink"], ["mat-menu-item", "", 1, "delete-button", 3, "click"], [1, "list-content"], [1, "list-hero"], [1, "list-stats"], [1, "stat-card"], [1, "stat-content"], [1, "stat-icon"], [1, "stat-icon", "to-do"], [1, "stat-icon", "done"], [1, "stat-icon", "progress"], [1, "items-section"], [1, "list-image", 3, "src", "alt"], [1, "section-header"], [1, "item-count-badge"], [1, "items-grid"], [1, "empty-state"], [1, "color-group"], [1, "color-bar"], [1, "group-items"], [1, "item-row"], [1, "item-content", 3, "click"], [1, "item-image"], [1, "item-info"], [1, "item-name"], [1, "item-comment"], [1, "item-details"], [1, "item-quantity"], ["mat-icon-button", "", 1, "item-menu-button", 3, "click", "matMenuTriggerFor"], ["mat-menu-item", "", 3, "click"], [3, "src", "alt"], [1, "empty-icon"], ["mat-raised-button", "", "color", "primary", 3, "click"], [1, "item-count-badge", "completed"], [1, "item-row", "done"], [1, "item-name", "bought-text"], [1, "item-comment", "bought-text"], [1, "item-quantity", "bought-text"], ["diameter", "50"]], template: function ListDetailComponent_Template(rf, ctx) {
+_ListDetailComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ListDetailComponent, selectors: [["ng-component"]], decls: 2, vars: 2, consts: [["listMenu", "matMenu"], ["itemMenu", "matMenu"], [1, "list-detail-container"], [1, "loading-container"], [1, "list-toolbar"], ["mat-icon-button", "", 3, "click"], [1, "list-header-info"], [1, "list-title"], [1, "list-subtitle"], [1, "spacer"], ["mat-button", "", 3, "click"], ["mat-icon-button", "", 3, "matMenuTriggerFor"], ["mat-menu-item", "", 3, "routerLink"], ["mat-menu-item", "", 1, "delete-button", 3, "click"], [1, "list-content"], [1, "list-hero"], [1, "list-stats"], [1, "stat-card"], [1, "stat-content"], [1, "stat-icon"], [1, "stat-icon", "to-do"], [1, "stat-icon", "done"], [1, "stat-icon", "progress"], [1, "items-section"], [1, "list-image", 3, "src", "alt"], [1, "section-header"], [1, "item-count-badge"], [1, "items-grid"], [1, "empty-state"], [1, "color-group"], [1, "color-bar"], [1, "group-items"], [1, "item-row"], ["tabindex", "0", 1, "item-content", 3, "click", "keydown.enter"], [1, "item-image"], [1, "item-info"], [1, "item-name"], [1, "item-comment"], [1, "item-details"], [1, "item-quantity"], ["mat-icon-button", "", 1, "item-menu-button", 3, "click", "matMenuTriggerFor"], ["mat-menu-item", "", 3, "click"], [3, "src", "alt"], [1, "empty-icon"], ["mat-raised-button", "", "color", "primary", 3, "click"], [1, "item-count-badge", "completed"], [1, "item-row", "done"], [1, "item-name", "bought-text"], [1, "item-comment", "bought-text"], [1, "item-quantity", "bought-text"], ["diameter", "50"]], template: function ListDetailComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275conditionalCreate(0, ListDetailComponent_Conditional_0_Template, 28, 7, "div", 2);
     \u0275\u0275conditionalCreate(1, ListDetailComponent_Conditional_1_Template, 4, 0, "div", 3);
@@ -5096,7 +5099,9 @@ var ListDetailComponent = _ListDetailComponent;
                     <div class="group-items">
                       @for (item of group.items; track item) {
                         <div class="item-row">
-                          <div class="item-content" (click)="toggleItemStatus(item)">
+                          <div class="item-content" tabindex="0"
+                               (click)="toggleItemStatus(item)"
+                               (keydown.enter)="toggleItemStatus(item)">
                             @if (item.item.img) {
                               <div class="item-image">
                                 <img [src]="item.item.img" [alt]="item.item.name">
@@ -5166,7 +5171,9 @@ var ListDetailComponent = _ListDetailComponent;
                   <div class="group-items">
                     @for (item of group.items; track item) {
                       <div class="item-row done">
-                        <div class="item-content" (click)="toggleItemStatus(item)">
+                        <div class="item-content" tabindex="0"
+                             (click)="toggleItemStatus(item)"
+                             (keydown.enter)="toggleItemStatus(item)">
                           @if (item.item.img) {
                             <div class="item-image">
                               <img [src]="item.item.img" [alt]="item.item.name">
@@ -5218,9 +5225,9 @@ var ListDetailComponent = _ListDetailComponent;
   }], null, null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ListDetailComponent, { className: "ListDetailComponent", filePath: "src/app/components/list-detail/list-detail.component.ts", lineNumber: 42 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ListDetailComponent, { className: "ListDetailComponent", filePath: "src/app/components/list-detail/list-detail.component.ts", lineNumber: 41 });
 })();
 export {
   ListDetailComponent
 };
-//# sourceMappingURL=chunk-TL2DPY2F.js.map
+//# sourceMappingURL=chunk-7MN3KR4R.js.map

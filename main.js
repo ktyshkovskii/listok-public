@@ -56,7 +56,7 @@ var routes = [
   },
   {
     path: "lists/:id",
-    loadComponent: () => import("./chunk-TL2DPY2F.js").then((m) => m.ListDetailComponent),
+    loadComponent: () => import("./chunk-7MN3KR4R.js").then((m) => m.ListDetailComponent),
     canActivate: [authGuard]
   },
   {
