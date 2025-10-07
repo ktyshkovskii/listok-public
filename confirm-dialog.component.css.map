@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/shared/confirm-dialog.component.ts"],
+  "sourcesContent": ["\n    mat-dialog-content {\n      padding: 20px 24px;\n      min-width: 300px;\n    }\n\n    mat-dialog-content p {\n      margin: 0;\n      font-size: 16px;\n      line-height: 1.5;\n    }\n\n    @media (max-width: 768px) {\n      mat-dialog-content {\n        min-width: 250px;\n      }\n    }\n  "],
+  "mappings": ";AACI;AACE,WAAA,KAAA;AACA,aAAA;;AAGF,mBAAA;AACE,UAAA;AACA,aAAA;AACA,eAAA;;AAGF,OAAA,CAAA,SAAA,EAAA;AACE;AACE,eAAA;;;",
+  "names": []
+}

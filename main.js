@@ -51,12 +51,17 @@ var routes = [
   },
   {
     path: "lists/new",
-    loadComponent: () => import("./chunk-KS6QXR4X.js").then((m) => m.ListCreateComponent),
+    loadComponent: () => import("./chunk-3D7D4VTB.js").then((m) => m.ListCreateComponent),
+    canActivate: [authGuard]
+  },
+  {
+    path: "lists/:id/edit",
+    loadComponent: () => import("./chunk-3D7D4VTB.js").then((m) => m.ListCreateComponent),
     canActivate: [authGuard]
   },
   {
     path: "lists/:id",
-    loadComponent: () => import("./chunk-7MN3KR4R.js").then((m) => m.ListDetailComponent),
+    loadComponent: () => import("./chunk-AXICPKBM.js").then((m) => m.ListDetailComponent),
     canActivate: [authGuard]
   },
   {
