@@ -177,11 +177,21 @@ function ListCreateComponent_Conditional_60_Template(rf, ctx) {
 }
 var _ListCreateComponent = class _ListCreateComponent {
   constructor() {
+    this.fb = inject(FormBuilder);
+    this.router = inject(Router);
+    this.route = inject(ActivatedRoute);
+    this.listService = inject(ListService);
+    this.snackBar = inject(MatSnackBar);
     this.isSubmitting = false;
     this.imagePreviewUrl = "";
     this.isEditMode = false;
     this.listId = null;
     this.loading = false;
+    this.listForm = this.fb.group({
+      name: ["", [Validators.required, Validators.minLength(2)]],
+      comment: [""],
+      img: ["", [Validators.pattern(/^https?:\/\/.+\.(jpg|jpeg|png|gif|webp)(\?.*)?$/i)]]
+    });
     this.suggestedImages = [
       {
         name: "Groceries",
@@ -208,27 +218,14 @@ var _ListCreateComponent = class _ListCreateComponent {
         url: "https://images.pexels.com/photos/346885/pexels-photo-346885.jpeg"
       }
     ];
-    this.fb = inject(FormBuilder);
-    this.router = inject(Router);
-    this.route = inject(ActivatedRoute);
-    this.listService = inject(ListService);
-    this.snackBar = inject(MatSnackBar);
   }
   ngOnInit() {
     this.listId = this.route.snapshot.paramMap.get("id");
     this.isEditMode = !!this.listId;
-    this.initializeForm();
     this.setupImagePreview();
     if (this.isEditMode && this.listId) {
       this.loadList();
     }
-  }
-  initializeForm() {
-    this.listForm = this.fb.group({
-      name: ["", [Validators.required, Validators.minLength(2)]],
-      comment: [""],
-      img: ["", [Validators.pattern(/^https?:\/\/.+\.(jpg|jpeg|png|gif|webp)(\?.*)?$/i)]]
-    });
   }
   setupImagePreview() {
     this.listForm.get("img")?.valueChanges.subscribe((url) => {
@@ -642,4 +639,4 @@ var ListCreateComponent = _ListCreateComponent;
 export {
   ListCreateComponent
 };
-//# sourceMappingURL=chunk-NCBG55OE.js.map
+//# sourceMappingURL=chunk-DEEM5CJC.js.map

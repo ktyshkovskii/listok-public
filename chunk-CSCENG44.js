@@ -4042,29 +4042,29 @@ var MatSelectModule = class _MatSelectModule {
   }], null, null);
 })();
 
-// src/app/components/list-detail/add-item-dialog.component.ts
-function AddItemDialogComponent_Conditional_10_Template(rf, ctx) {
+// src/app/components/shared/add-item-dialog/create-item-dialog.component.ts
+function CreateItemDialogComponent_Conditional_10_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "mat-error");
     \u0275\u0275text(1, "Item name is required");
     \u0275\u0275elementEnd();
   }
 }
-function AddItemDialogComponent_Conditional_29_Template(rf, ctx) {
+function CreateItemDialogComponent_Conditional_17_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "mat-error");
     \u0275\u0275text(1, "Quantity is required");
     \u0275\u0275elementEnd();
   }
 }
-function AddItemDialogComponent_Conditional_30_Template(rf, ctx) {
+function CreateItemDialogComponent_Conditional_18_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "mat-error");
     \u0275\u0275text(1, "Quantity must be at least 1");
     \u0275\u0275elementEnd();
   }
 }
-var _AddItemDialogComponent = class _AddItemDialogComponent {
+var _CreateItemDialogComponent = class _CreateItemDialogComponent {
   constructor() {
     this.fb = inject(FormBuilder);
     this.dialogRef = inject(MatDialogRef);
@@ -4098,10 +4098,10 @@ var _AddItemDialogComponent = class _AddItemDialogComponent {
     }
   }
 };
-_AddItemDialogComponent.\u0275fac = function AddItemDialogComponent_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _AddItemDialogComponent)();
+_CreateItemDialogComponent.\u0275fac = function CreateItemDialogComponent_Factory(__ngFactoryType__) {
+  return new (__ngFactoryType__ || _CreateItemDialogComponent)();
 };
-_AddItemDialogComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AddItemDialogComponent, selectors: [["ng-component"]], decls: 60, vars: 9, consts: [["mat-dialog-title", ""], [1, "item-form", 3, "formGroup"], ["appearance", "outline"], ["matInput", "", "formControlName", "name", "placeholder", "Enter item name", "required", ""], ["matPrefix", ""], ["matInput", "", "formControlName", "comment", "placeholder", "Add notes or description", "rows", "3"], ["matInput", "", "formControlName", "img", "placeholder", "https://example.com/image.jpg"], ["matInput", "", "type", "number", "formControlName", "count", "placeholder", "1", "required", "", "min", "1"], ["formControlName", "color"], [3, "value"], ["value", "#FF6B6B"], ["value", "#4ECDC4"], ["value", "#45B7D1"], ["value", "#FFA07A"], ["value", "#98D8C8"], ["value", "#F7DC6F"], ["value", "#BB8FCE"], ["align", "end"], ["mat-button", "", 3, "click"], ["mat-raised-button", "", "color", "primary", 3, "click", "disabled"]], template: function AddItemDialogComponent_Template(rf, ctx) {
+_CreateItemDialogComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _CreateItemDialogComponent, selectors: [["ng-component"]], decls: 62, vars: 9, consts: [["mat-dialog-title", ""], [1, "item-form", 3, "formGroup"], ["appearance", "outline"], ["matInput", "", "formControlName", "name", "placeholder", "Enter item name", "required", ""], ["matPrefix", ""], ["matInput", "", "type", "number", "formControlName", "count", "placeholder", "1", "required", "", "min", "1"], ["formControlName", "color"], [3, "value"], ["value", "#E91E63"], ["value", "#4ECDC4"], ["value", "#2196F3"], ["value", "#FF9800"], ["value", "#4CAF50"], ["value", "#F7DC6F"], ["value", "#9C27B0"], ["value", "#795548"], ["matInput", "", "formControlName", "comment", "placeholder", "Add notes or description", "rows", "3"], ["matInput", "", "formControlName", "img", "placeholder", "https://example.com/image.jpg"], ["align", "end"], ["mat-button", "", 3, "click"], ["mat-raised-button", "", "color", "primary", 3, "click", "disabled"]], template: function CreateItemDialogComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "h2", 0);
     \u0275\u0275text(1);
@@ -4113,76 +4113,79 @@ _AddItemDialogComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent(
     \u0275\u0275elementStart(8, "mat-icon", 4);
     \u0275\u0275text(9, "shopping_basket");
     \u0275\u0275elementEnd();
-    \u0275\u0275conditionalCreate(10, AddItemDialogComponent_Conditional_10_Template, 2, 0, "mat-error");
+    \u0275\u0275conditionalCreate(10, CreateItemDialogComponent_Conditional_10_Template, 2, 0, "mat-error");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(11, "mat-form-field", 2)(12, "mat-label");
-    \u0275\u0275text(13, "Comment (Optional)");
+    \u0275\u0275text(13, "Quantity");
     \u0275\u0275elementEnd();
-    \u0275\u0275element(14, "textarea", 5);
+    \u0275\u0275element(14, "input", 5);
     \u0275\u0275elementStart(15, "mat-icon", 4);
-    \u0275\u0275text(16, "comment");
+    \u0275\u0275text(16, "tag");
+    \u0275\u0275elementEnd();
+    \u0275\u0275conditionalCreate(17, CreateItemDialogComponent_Conditional_17_Template, 2, 0, "mat-error");
+    \u0275\u0275conditionalCreate(18, CreateItemDialogComponent_Conditional_18_Template, 2, 0, "mat-error");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(19, "mat-form-field", 2)(20, "mat-label");
+    \u0275\u0275text(21, "Color (Optional)");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(22, "mat-select", 6)(23, "mat-option", 7);
+    \u0275\u0275text(24, "None");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(25, "mat-option", 8);
+    \u0275\u0275text(26, "Red");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(27, "mat-option", 9);
+    \u0275\u0275text(28, "Teal");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(29, "mat-option", 10);
+    \u0275\u0275text(30, "Blue");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(31, "mat-option", 11);
+    \u0275\u0275text(32, "Orange");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(33, "mat-option", 12);
+    \u0275\u0275text(34, "Green");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(35, "mat-option", 13);
+    \u0275\u0275text(36, "Yellow");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(37, "mat-option", 14);
+    \u0275\u0275text(38, "Purple");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(39, "mat-option", 15);
+    \u0275\u0275text(40, "Brown");
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(17, "mat-form-field", 2)(18, "mat-label");
-    \u0275\u0275text(19, "Image URL (Optional)");
-    \u0275\u0275elementEnd();
-    \u0275\u0275element(20, "input", 6);
-    \u0275\u0275elementStart(21, "mat-icon", 4);
-    \u0275\u0275text(22, "image");
+    \u0275\u0275elementStart(41, "mat-icon", 4);
+    \u0275\u0275text(42, "palette");
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(23, "mat-form-field", 2)(24, "mat-label");
-    \u0275\u0275text(25, "Quantity");
+    \u0275\u0275elementStart(43, "mat-form-field", 2)(44, "mat-label");
+    \u0275\u0275text(45, "Comment (Optional)");
     \u0275\u0275elementEnd();
-    \u0275\u0275element(26, "input", 7);
-    \u0275\u0275elementStart(27, "mat-icon", 4);
-    \u0275\u0275text(28, "tag");
-    \u0275\u0275elementEnd();
-    \u0275\u0275conditionalCreate(29, AddItemDialogComponent_Conditional_29_Template, 2, 0, "mat-error");
-    \u0275\u0275conditionalCreate(30, AddItemDialogComponent_Conditional_30_Template, 2, 0, "mat-error");
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(31, "mat-form-field", 2)(32, "mat-label");
-    \u0275\u0275text(33, "Color (Optional)");
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(34, "mat-select", 8)(35, "mat-option", 9);
-    \u0275\u0275text(36, "None");
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(37, "mat-option", 10);
-    \u0275\u0275text(38, "Red");
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(39, "mat-option", 11);
-    \u0275\u0275text(40, "Teal");
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(41, "mat-option", 12);
-    \u0275\u0275text(42, "Blue");
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(43, "mat-option", 13);
-    \u0275\u0275text(44, "Orange");
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(45, "mat-option", 14);
-    \u0275\u0275text(46, "Green");
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(47, "mat-option", 15);
-    \u0275\u0275text(48, "Yellow");
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(49, "mat-option", 16);
-    \u0275\u0275text(50, "Purple");
+    \u0275\u0275element(46, "textarea", 16);
+    \u0275\u0275elementStart(47, "mat-icon", 4);
+    \u0275\u0275text(48, "comment");
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(51, "mat-icon", 4);
-    \u0275\u0275text(52, "palette");
+    \u0275\u0275elementStart(49, "mat-form-field", 2)(50, "mat-label");
+    \u0275\u0275text(51, "Image URL (Optional)");
+    \u0275\u0275elementEnd();
+    \u0275\u0275element(52, "input", 17);
+    \u0275\u0275elementStart(53, "mat-icon", 4);
+    \u0275\u0275text(54, "image");
     \u0275\u0275elementEnd()()()();
-    \u0275\u0275elementStart(53, "mat-dialog-actions", 17)(54, "button", 18);
-    \u0275\u0275listener("click", function AddItemDialogComponent_Template_button_click_54_listener() {
+    \u0275\u0275elementStart(55, "mat-dialog-actions", 18)(56, "button", 19);
+    \u0275\u0275listener("click", function CreateItemDialogComponent_Template_button_click_56_listener() {
       return ctx.onCancel();
     });
-    \u0275\u0275text(55, "Cancel");
+    \u0275\u0275text(57, "Cancel");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(56, "button", 19);
-    \u0275\u0275listener("click", function AddItemDialogComponent_Template_button_click_56_listener() {
+    \u0275\u0275elementStart(58, "button", 20);
+    \u0275\u0275listener("click", function CreateItemDialogComponent_Template_button_click_58_listener() {
       return ctx.onSave();
     });
-    \u0275\u0275elementStart(57, "mat-icon");
-    \u0275\u0275text(58);
+    \u0275\u0275elementStart(59, "mat-icon");
+    \u0275\u0275text(60);
     \u0275\u0275elementEnd();
-    \u0275\u0275text(59);
+    \u0275\u0275text(61);
     \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
@@ -4195,13 +4198,13 @@ _AddItemDialogComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent(
     \u0275\u0275property("formGroup", ctx.itemForm);
     \u0275\u0275advance(7);
     \u0275\u0275conditional(((tmp_2_0 = ctx.itemForm.get("name")) == null ? null : tmp_2_0.hasError("required")) && ((tmp_2_0 = ctx.itemForm.get("name")) == null ? null : tmp_2_0.touched) ? 10 : -1);
-    \u0275\u0275advance(19);
-    \u0275\u0275conditional(((tmp_3_0 = ctx.itemForm.get("count")) == null ? null : tmp_3_0.hasError("required")) && ((tmp_3_0 = ctx.itemForm.get("count")) == null ? null : tmp_3_0.touched) ? 29 : -1);
+    \u0275\u0275advance(7);
+    \u0275\u0275conditional(((tmp_3_0 = ctx.itemForm.get("count")) == null ? null : tmp_3_0.hasError("required")) && ((tmp_3_0 = ctx.itemForm.get("count")) == null ? null : tmp_3_0.touched) ? 17 : -1);
     \u0275\u0275advance();
-    \u0275\u0275conditional(((tmp_4_0 = ctx.itemForm.get("count")) == null ? null : tmp_4_0.hasError("min")) ? 30 : -1);
+    \u0275\u0275conditional(((tmp_4_0 = ctx.itemForm.get("count")) == null ? null : tmp_4_0.hasError("min")) ? 18 : -1);
     \u0275\u0275advance(5);
     \u0275\u0275property("value", null);
-    \u0275\u0275advance(21);
+    \u0275\u0275advance(35);
     \u0275\u0275property("disabled", ctx.itemForm.invalid);
     \u0275\u0275advance(2);
     \u0275\u0275textInterpolate(ctx.data.item ? "save" : "add");
@@ -4238,10 +4241,10 @@ _AddItemDialogComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent(
   MatSelectModule,
   MatSelect,
   MatOption
-], styles: ["\n\n.item-form[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  gap: 16px;\n  min-width: 400px;\n  padding: 16px 0;\n}\nmat-form-field[_ngcontent-%COMP%] {\n  width: 100%;\n}\nmat-dialog-content[_ngcontent-%COMP%] {\n  max-height: 70vh;\n  overflow-y: auto;\n}\n@media (max-width: 768px) {\n  .item-form[_ngcontent-%COMP%] {\n    min-width: 280px;\n  }\n}\n/*# sourceMappingURL=add-item-dialog.component.css.map */"] });
-var AddItemDialogComponent = _AddItemDialogComponent;
+], styles: ["\n\n.item-form[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  gap: 16px;\n  min-width: 400px;\n  padding: 16px 0;\n}\nmat-form-field[_ngcontent-%COMP%] {\n  width: 100%;\n}\nmat-dialog-content[_ngcontent-%COMP%] {\n  max-height: 70vh;\n  overflow-y: auto;\n}\n@media (max-width: 768px) {\n  .item-form[_ngcontent-%COMP%] {\n    min-width: 280px;\n  }\n}\n/*# sourceMappingURL=create-item-dialog.component.css.map */"] });
+var CreateItemDialogComponent = _CreateItemDialogComponent;
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(AddItemDialogComponent, [{
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(CreateItemDialogComponent, [{
     type: Component,
     args: [{ imports: [
       CommonModule,
@@ -4252,78 +4255,78 @@ var AddItemDialogComponent = _AddItemDialogComponent;
       MatButtonModule,
       MatIconModule,
       MatSelectModule
-    ], template: `
-    <h2 mat-dialog-title>{{ data.item ? 'Edit Item' : 'Add New Item' }}</h2>
-    <mat-dialog-content>
-      <form [formGroup]="itemForm" class="item-form">
-        <mat-form-field appearance="outline">
-          <mat-label>Item Name</mat-label>
-          <input matInput formControlName="name" placeholder="Enter item name" required>
-          <mat-icon matPrefix>shopping_basket</mat-icon>
-          @if (itemForm.get('name')?.hasError('required') && itemForm.get('name')?.touched) {
-            <mat-error>Item name is required</mat-error>
-          }
-        </mat-form-field>
+    ], template: `<h2 mat-dialog-title>{{ data.item ? 'Edit Item' : 'Add New Item' }}</h2>
+<mat-dialog-content>
+  <form [formGroup]="itemForm" class="item-form">
+    <mat-form-field appearance="outline">
+      <mat-label>Item Name</mat-label>
+      <input matInput formControlName="name" placeholder="Enter item name" required>
+      <mat-icon matPrefix>shopping_basket</mat-icon>
+      @if (itemForm.get('name')?.hasError('required') && itemForm.get('name')?.touched) {
+        <mat-error>Item name is required</mat-error>
+      }
+    </mat-form-field>
 
-        <mat-form-field appearance="outline">
-          <mat-label>Comment (Optional)</mat-label>
-          <textarea matInput formControlName="comment" placeholder="Add notes or description" rows="3"></textarea>
-          <mat-icon matPrefix>comment</mat-icon>
-        </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Quantity</mat-label>
+      <input matInput type="number" formControlName="count" placeholder="1" required min="1">
+      <mat-icon matPrefix>tag</mat-icon>
+      @if (itemForm.get('count')?.hasError('required') && itemForm.get('count')?.touched) {
+        <mat-error>Quantity is required</mat-error>
+      }
+      @if (itemForm.get('count')?.hasError('min')) {
+        <mat-error>Quantity must be at least 1</mat-error>
+      }
+    </mat-form-field>
 
-        <mat-form-field appearance="outline">
-          <mat-label>Image URL (Optional)</mat-label>
-          <input matInput formControlName="img" placeholder="https://example.com/image.jpg">
-          <mat-icon matPrefix>image</mat-icon>
-        </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Color (Optional)</mat-label>
+      <mat-select formControlName="color">
+        <mat-option [value]="null">None</mat-option>
+        <mat-option value="#E91E63">Red</mat-option>
+        <mat-option value="#4ECDC4">Teal</mat-option>
+        <mat-option value="#2196F3">Blue</mat-option>
+        <mat-option value="#FF9800">Orange</mat-option>
+        <mat-option value="#4CAF50">Green</mat-option>
+        <mat-option value="#F7DC6F">Yellow</mat-option>
+        <mat-option value="#9C27B0">Purple</mat-option>
+        <mat-option value="#795548">Brown</mat-option>
+      </mat-select>
+      <mat-icon matPrefix>palette</mat-icon>
+    </mat-form-field>
 
-        <mat-form-field appearance="outline">
-          <mat-label>Quantity</mat-label>
-          <input matInput type="number" formControlName="count" placeholder="1" required min="1">
-          <mat-icon matPrefix>tag</mat-icon>
-          @if (itemForm.get('count')?.hasError('required') && itemForm.get('count')?.touched) {
-            <mat-error>Quantity is required</mat-error>
-          }
-          @if (itemForm.get('count')?.hasError('min')) {
-            <mat-error>Quantity must be at least 1</mat-error>
-          }
-        </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Comment (Optional)</mat-label>
+      <textarea matInput formControlName="comment" placeholder="Add notes or description" rows="3"></textarea>
+      <mat-icon matPrefix>comment</mat-icon>
+    </mat-form-field>
 
-        <mat-form-field appearance="outline">
-          <mat-label>Color (Optional)</mat-label>
-          <mat-select formControlName="color">
-            <mat-option [value]="null">None</mat-option>
-            <mat-option value="#FF6B6B">Red</mat-option>
-            <mat-option value="#4ECDC4">Teal</mat-option>
-            <mat-option value="#45B7D1">Blue</mat-option>
-            <mat-option value="#FFA07A">Orange</mat-option>
-            <mat-option value="#98D8C8">Green</mat-option>
-            <mat-option value="#F7DC6F">Yellow</mat-option>
-            <mat-option value="#BB8FCE">Purple</mat-option>
-          </mat-select>
-          <mat-icon matPrefix>palette</mat-icon>
-        </mat-form-field>
-      </form>
-    </mat-dialog-content>
-    <mat-dialog-actions align="end">
-      <button mat-button (click)="onCancel()">Cancel</button>
-      <button mat-raised-button color="primary" (click)="onSave()" [disabled]="itemForm.invalid">
-        <mat-icon>{{ data.item ? 'save' : 'add' }}</mat-icon>
-        {{ data.item ? 'Save Changes' : 'Add Item' }}
-      </button>
-    </mat-dialog-actions>
-  `, styles: ["/* angular:styles/component:scss;1321adf67defa0dc1480758702dc80cf9feb894510fc1b5b27ad09c997dcdcbf;/home/runner/work/listok-bolt/listok-bolt/src/app/components/list-detail/add-item-dialog.component.ts */\n.item-form {\n  display: flex;\n  flex-direction: column;\n  gap: 16px;\n  min-width: 400px;\n  padding: 16px 0;\n}\nmat-form-field {\n  width: 100%;\n}\nmat-dialog-content {\n  max-height: 70vh;\n  overflow-y: auto;\n}\n@media (max-width: 768px) {\n  .item-form {\n    min-width: 280px;\n  }\n}\n/*# sourceMappingURL=add-item-dialog.component.css.map */\n"] }]
+    <mat-form-field appearance="outline">
+      <mat-label>Image URL (Optional)</mat-label>
+      <input matInput formControlName="img" placeholder="https://example.com/image.jpg">
+      <mat-icon matPrefix>image</mat-icon>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-raised-button color="primary" (click)="onSave()" [disabled]="itemForm.invalid">
+    <mat-icon>{{ data.item ? 'save' : 'add' }}</mat-icon>
+    {{ data.item ? 'Save Changes' : 'Add Item' }}
+  </button>
+</mat-dialog-actions>
+`, styles: ["/* src/app/components/shared/add-item-dialog/create-item-dialog.component.scss */\n.item-form {\n  display: flex;\n  flex-direction: column;\n  gap: 16px;\n  min-width: 400px;\n  padding: 16px 0;\n}\nmat-form-field {\n  width: 100%;\n}\nmat-dialog-content {\n  max-height: 70vh;\n  overflow-y: auto;\n}\n@media (max-width: 768px) {\n  .item-form {\n    min-width: 280px;\n  }\n}\n/*# sourceMappingURL=create-item-dialog.component.css.map */\n"] }]
   }], null, null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AddItemDialogComponent, { className: "AddItemDialogComponent", filePath: "src/app/components/list-detail/add-item-dialog.component.ts", lineNumber: 114 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(CreateItemDialogComponent, { className: "CreateItemDialogComponent", filePath: "src/app/components/shared/add-item-dialog/create-item-dialog.component.ts", lineNumber: 30 });
 })();
 
-// src/app/components/shared/confirm-dialog.component.ts
+// src/app/components/shared/confirm-dialog/confirm-dialog.component.ts
 var _ConfirmDialogComponent = class _ConfirmDialogComponent {
   constructor() {
-    this.data = inject(MAT_DIALOG_DATA);
     this.dialogRef = inject(MatDialogRef);
+    this.data = inject(MAT_DIALOG_DATA);
   }
   onCancel() {
     this.dialogRef.close(false);
@@ -4335,7 +4338,7 @@ var _ConfirmDialogComponent = class _ConfirmDialogComponent {
 _ConfirmDialogComponent.\u0275fac = function ConfirmDialogComponent_Factory(__ngFactoryType__) {
   return new (__ngFactoryType__ || _ConfirmDialogComponent)();
 };
-_ConfirmDialogComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ConfirmDialogComponent, selectors: [["app-confirm-dialog"]], decls: 10, vars: 5, consts: [["mat-dialog-title", ""], ["align", "end"], ["mat-button", "", 3, "click"], ["mat-raised-button", "", 3, "click", "color"]], template: function ConfirmDialogComponent_Template(rf, ctx) {
+_ConfirmDialogComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ConfirmDialogComponent, selectors: [["ng-component"]], decls: 10, vars: 5, consts: [["mat-dialog-title", ""], ["align", "end"], ["mat-button", "", 3, "click"], ["mat-raised-button", "", 3, "click", "color"]], template: function ConfirmDialogComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "h2", 0);
     \u0275\u0275text(1);
@@ -4373,31 +4376,29 @@ var ConfirmDialogComponent = _ConfirmDialogComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ConfirmDialogComponent, [{
     type: Component,
-    args: [{ selector: "app-confirm-dialog", imports: [
+    args: [{ imports: [
       MatDialogModule,
       MatButtonModule,
       MatIconModule
-    ], template: `
-    <h2 mat-dialog-title>{{ data.title }}</h2>
-    <mat-dialog-content>
-      <p>{{ data.message }}</p>
-    </mat-dialog-content>
-    <mat-dialog-actions align="end">
-      <button mat-button (click)="onCancel()">
-        {{ data.cancelText || 'Cancel' }}
-      </button>
-      <button
-        mat-raised-button
-        [color]="data.confirmColor || 'warn'"
-        (click)="onConfirm()">
-        {{ data.confirmText || 'Confirm' }}
-      </button>
-    </mat-dialog-actions>
-  `, styles: ["/* angular:styles/component:scss;ad69d160c0493c3d21f1132b718c18e364329655ee3ed479921d6347f2c25de6;/home/runner/work/listok-bolt/listok-bolt/src/app/components/shared/confirm-dialog.component.ts */\nmat-dialog-content {\n  padding: 20px 24px;\n  min-width: 300px;\n}\nmat-dialog-content p {\n  margin: 0;\n  font-size: 16px;\n  line-height: 1.5;\n}\n@media (max-width: 768px) {\n  mat-dialog-content {\n    min-width: 250px;\n  }\n}\n/*# sourceMappingURL=confirm-dialog.component.css.map */\n"] }]
+    ], template: `<h2 mat-dialog-title>{{ data.title }}</h2>
+<mat-dialog-content>
+  <p>{{ data.message }}</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button (click)="onCancel()">
+    {{ data.cancelText || 'Cancel' }}
+  </button>
+  <button mat-raised-button
+          [color]="data.confirmColor || 'warn'"
+          (click)="onConfirm()">
+    {{ data.confirmText || 'Confirm' }}
+  </button>
+</mat-dialog-actions>
+`, styles: ["/* src/app/components/shared/confirm-dialog/confirm-dialog.component.scss */\nmat-dialog-content {\n  padding: 20px 24px;\n  min-width: 300px;\n}\nmat-dialog-content p {\n  margin: 0;\n  font-size: 16px;\n  line-height: 1.5;\n}\n@media (max-width: 768px) {\n  mat-dialog-content {\n    min-width: 250px;\n  }\n}\n/*# sourceMappingURL=confirm-dialog.component.css.map */\n"] }]
   }], null, null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ConfirmDialogComponent, { className: "ConfirmDialogComponent", filePath: "src/app/components/shared/confirm-dialog.component.ts", lineNumber: 57 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ConfirmDialogComponent, { className: "ConfirmDialogComponent", filePath: "src/app/components/shared/confirm-dialog/confirm-dialog.component.ts", lineNumber: 23 });
 })();
 
 // src/app/components/list-detail/list-detail.component.ts
@@ -4982,11 +4983,7 @@ var _ListDetailComponent = class _ListDetailComponent {
   editItem(item) {
     if (!this.list)
       return;
-    const dialogRef = this.dialog.open(AddItemDialogComponent, {
-      width: "500px",
-      maxWidth: "95vw",
-      data: { listId: this.list.id, item }
-    });
+    const dialogRef = this.openCreateItemDialog(item);
     dialogRef.afterClosed().subscribe((result) => {
       if (result && this.list) {
         this.apiItemService.updateItem(item.id, result).subscribe({
@@ -5008,17 +5005,7 @@ var _ListDetailComponent = class _ListDetailComponent {
     });
   }
   deleteItem(item) {
-    const dialogRef = this.dialog.open(ConfirmDialogComponent, {
-      width: "400px",
-      maxWidth: "95vw",
-      data: {
-        title: "Delete Item",
-        message: `Are you sure you want to delete "${item.item.name}"?`,
-        confirmText: "Delete",
-        cancelText: "Cancel",
-        confirmColor: "warn"
-      }
-    });
+    const dialogRef = this.openConfirmDeleteDialog("Delete Item", `Are you sure you want to delete "${item.item.name}"?`);
     dialogRef.afterClosed().subscribe((confirmed) => {
       if (confirmed) {
         this.apiItemService.deleteItem(item.id).subscribe({
@@ -5039,17 +5026,7 @@ var _ListDetailComponent = class _ListDetailComponent {
   deleteList() {
     if (!this.list)
       return;
-    const dialogRef = this.dialog.open(ConfirmDialogComponent, {
-      width: "400px",
-      maxWidth: "95vw",
-      data: {
-        title: "Delete List",
-        message: `Are you sure you want to delete "${this.list.name}"? This will also delete all items in the list.`,
-        confirmText: "Delete",
-        cancelText: "Cancel",
-        confirmColor: "warn"
-      }
-    });
+    const dialogRef = this.openConfirmDeleteDialog("Delete List", `Are you sure you want to delete "${this.list.name}"? This will also delete all items in the list.`);
     dialogRef.afterClosed().subscribe((confirmed) => {
       if (confirmed) {
         this.apiListService.deleteList(this.list.id).subscribe({
@@ -5071,11 +5048,7 @@ var _ListDetailComponent = class _ListDetailComponent {
   openAddItemDialog() {
     if (!this.list)
       return;
-    const dialogRef = this.dialog.open(AddItemDialogComponent, {
-      width: "500px",
-      maxWidth: "95vw",
-      data: { listId: this.list.id }
-    });
+    const dialogRef = this.openCreateItemDialog();
     dialogRef.afterClosed().subscribe((result) => {
       if (result && this.list) {
         this.apiItemService.createItem(this.list.id, result).subscribe({
@@ -5091,6 +5064,26 @@ var _ListDetailComponent = class _ListDetailComponent {
           }
         });
       }
+    });
+  }
+  openConfirmDeleteDialog(title, message) {
+    return this.dialog.open(ConfirmDialogComponent, {
+      width: "400px",
+      maxWidth: "95vw",
+      data: {
+        title,
+        message,
+        confirmText: "Delete",
+        cancelText: "Cancel",
+        confirmColor: "warn"
+      }
+    });
+  }
+  openCreateItemDialog(item) {
+    return this.dialog.open(CreateItemDialogComponent, {
+      width: "500px",
+      maxWidth: "95vw",
+      data: { item }
     });
   }
 };
@@ -5362,9 +5355,9 @@ var ListDetailComponent = _ListDetailComponent;
   }], null, null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ListDetailComponent, { className: "ListDetailComponent", filePath: "src/app/components/list-detail/list-detail.component.ts", lineNumber: 41 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ListDetailComponent, { className: "ListDetailComponent", filePath: "src/app/components/list-detail/list-detail.component.ts", lineNumber: 44 });
 })();
 export {
   ListDetailComponent
 };
-//# sourceMappingURL=chunk-TA4RZSRI.js.map
+//# sourceMappingURL=chunk-CSCENG44.js.map

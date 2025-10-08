@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/shared/add-item-dialog/create-item-dialog.component.scss"],
+  "sourcesContent": [".item-form {\n  display: flex;\n  flex-direction: column;\n  gap: 16px;\n  min-width: 400px;\n  padding: 16px 0;\n}\n\nmat-form-field {\n  width: 100%;\n}\n\nmat-dialog-content {\n  max-height: 70vh;\n  overflow-y: auto;\n}\n\n@media (max-width: 768px) {\n  .item-form {\n    min-width: 280px;\n  }\n}\n"],
+  "mappings": ";AAAA,CAAA;AACE,WAAA;AACA,kBAAA;AACA,OAAA;AACA,aAAA;AACA,WAAA,KAAA;;AAGF;AACE,SAAA;;AAGF;AACE,cAAA;AACA,cAAA;;AAGF,OAAA,CAAA,SAAA,EAAA;AACE,GAlBF;AAmBI,eAAA;;;",
+  "names": []
+}

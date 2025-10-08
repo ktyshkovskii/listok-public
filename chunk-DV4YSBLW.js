@@ -198,67 +198,13 @@ var LoginComponent = _LoginComponent;
       MatButtonModule,
       MatIconModule,
       MatProgressSpinnerModule
-    ], template: `
-    <div class="login-container">
-      <mat-card class="login-card">
-        <mat-card-header>
-          <mat-card-title>Welcome to Listok</mat-card-title>
-          <mat-card-subtitle>Sign in to manage your lists</mat-card-subtitle>
-        </mat-card-header>
-    
-        <mat-card-content>
-          @if ((authState$ | async); as authState) {
-            <div class="login-buttons">
-              <button
-                mat-raised-button
-                color="primary"
-                class="social-button google-button"
-                [disabled]="authState.loading"
-                (click)="signInWithGoogle()">
-                <mat-icon>account_circle</mat-icon>
-                Continue with Google
-              </button>
-              <button
-                mat-raised-button
-                color="accent"
-                class="social-button github-button"
-                [disabled]="authState.loading"
-                (click)="signInWithGitHub()">
-                <mat-icon>code</mat-icon>
-                Continue with GitHub
-              </button>
-              <button
-                mat-raised-button
-                class="social-button apple-button"
-                [disabled]="authState.loading"
-                (click)="signInWithApple()">
-                <mat-icon>phone_iphone</mat-icon>
-                Continue with Apple
-              </button>
-              @if (authState.loading) {
-                <div class="loading-spinner">
-                  <mat-spinner diameter="30" />
-                  <p>Signing you in...</p>
-                </div>
-              }
-              @if (authState.error) {
-                <div class="error-message">
-                  <mat-icon color="warn">error</mat-icon>
-                  <p>{{ authState.error }}</p>
-                </div>
-              }
-            </div>
-          }
-        </mat-card-content>
-      </mat-card>
-    </div>
-    `, styles: ["/* angular:styles/component:scss;1fffc5c9c87b1f122dd77fe4ff79eaebcd6479f700949448ea1f49ca093a15a5;/home/runner/work/listok-bolt/listok-bolt/src/app/components/login/login.component.ts */\n.login-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  min-height: 100vh;\n  background:\n    linear-gradient(\n      135deg,\n      #667eea 0%,\n      #764ba2 100%);\n  padding: 20px;\n}\n.login-card {\n  max-width: 400px;\n  width: 100%;\n  padding: 24px;\n  border-radius: 16px;\n  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);\n}\nmat-card-header {\n  text-align: center;\n  margin-bottom: 24px;\n}\nmat-card-title {\n  font-size: 28px;\n  font-weight: 600;\n  margin-bottom: 8px;\n}\nmat-card-subtitle {\n  font-size: 16px;\n  opacity: 0.7;\n}\n.login-buttons {\n  display: flex;\n  flex-direction: column;\n  gap: 16px;\n}\n.social-button {\n  height: 48px;\n  font-size: 16px;\n  font-weight: 500;\n  border-radius: 8px;\n  text-transform: none;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 12px;\n}\n.google-button {\n  background-color: #4285f4;\n  color: white;\n}\n.github-button {\n  background-color: #333;\n  color: white;\n}\n.apple-button {\n  background-color: #000;\n  color: white;\n}\n.loading-spinner {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 12px;\n  padding: 20px;\n}\n.error-message {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  padding: 12px;\n  background-color: #ffebee;\n  border-radius: 8px;\n  color: #c62828;\n}\n@media (max-width: 480px) {\n  .login-card {\n    margin: 0;\n    padding: 20px;\n  }\n  .social-button {\n    height: 44px;\n    font-size: 14px;\n  }\n}\n/*# sourceMappingURL=login.component.css.map */\n"] }]
+    ], template: '<div class="login-container">\n  <mat-card class="login-card">\n    <mat-card-header>\n      <mat-card-title>Welcome to Listok</mat-card-title>\n      <mat-card-subtitle>Sign in to manage your lists</mat-card-subtitle>\n    </mat-card-header>\n\n    <mat-card-content>\n      @if ((authState$ | async); as authState) {\n        <div class="login-buttons">\n          <button mat-raised-button color="primary" class="social-button google-button"\n                  [disabled]="authState.loading"\n                  (click)="signInWithGoogle()">\n            <mat-icon>account_circle</mat-icon>\n            Continue with Google\n          </button>\n          <button mat-raised-button color="accent" class="social-button github-button"\n                  [disabled]="authState.loading"\n                  (click)="signInWithGitHub()">\n            <mat-icon>code</mat-icon>\n            Continue with GitHub\n          </button>\n          <button mat-raised-button class="social-button apple-button"\n                  [disabled]="authState.loading"\n                  (click)="signInWithApple()">\n            <mat-icon>phone_iphone</mat-icon>\n            Continue with Apple\n          </button>\n          @if (authState.loading) {\n            <div class="loading-spinner">\n              <mat-spinner diameter="30"/>\n              <p>Signing you in...</p>\n            </div>\n          }\n          @if (authState.error) {\n            <div class="error-message">\n              <mat-icon color="warn">error</mat-icon>\n              <p>{{ authState.error }}</p>\n            </div>\n          }\n        </div>\n      }\n    </mat-card-content>\n  </mat-card>\n</div>\n', styles: ["/* src/app/components/login/login.component.scss */\n.login-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  min-height: 100vh;\n  background:\n    linear-gradient(\n      135deg,\n      #667eea 0%,\n      #764ba2 100%);\n  padding: 20px;\n}\n.login-card {\n  max-width: 400px;\n  width: 100%;\n  padding: 24px;\n  border-radius: 16px;\n  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);\n}\nmat-card-header {\n  text-align: center;\n  margin-bottom: 24px;\n}\nmat-card-title {\n  font-size: 28px;\n  font-weight: 600;\n  margin-bottom: 8px;\n}\nmat-card-subtitle {\n  font-size: 16px;\n  opacity: 0.7;\n}\n.login-buttons {\n  display: flex;\n  flex-direction: column;\n  gap: 16px;\n}\n.social-button {\n  height: 48px;\n  font-size: 16px;\n  font-weight: 500;\n  border-radius: 8px;\n  text-transform: none;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 12px;\n}\n.google-button {\n  background-color: #4285f4;\n  color: white;\n}\n.github-button {\n  background-color: #333;\n  color: white;\n}\n.apple-button {\n  background-color: #000;\n  color: white;\n}\n.loading-spinner {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 12px;\n  padding: 20px;\n}\n.error-message {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  padding: 12px;\n  background-color: #ffebee;\n  border-radius: 8px;\n  color: #c62828;\n}\n@media (max-width: 480px) {\n  .login-card {\n    margin: 0;\n    padding: 20px;\n  }\n  .social-button {\n    height: 44px;\n    font-size: 14px;\n  }\n}\n/*# sourceMappingURL=login.component.css.map */\n"] }]
   }], null, null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(LoginComponent, { className: "LoginComponent", filePath: "src/app/components/login/login.component.ts", lineNumber: 173 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(LoginComponent, { className: "LoginComponent", filePath: "src/app/components/login/login.component.ts", lineNumber: 23 });
 })();
 export {
   LoginComponent
 };
-//# sourceMappingURL=chunk-U2ZWNKCB.js.map
+//# sourceMappingURL=chunk-DV4YSBLW.js.map
