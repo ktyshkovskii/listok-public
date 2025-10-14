@@ -40400,6 +40400,7 @@ export {
   Host,
   ɵɵNgOnChangesFeature,
   ɵɵgetInheritedFactory,
+  Attribute,
   Injectable,
   ElementRef,
   QueryList,
@@ -40565,4 +40566,4 @@ export {
    * found in the LICENSE file at https://angular.dev/license
    *)
 */
-//# sourceMappingURL=chunk-3DPZ4J24.js.map
+//# sourceMappingURL=chunk-QBW5PNTK.js.map

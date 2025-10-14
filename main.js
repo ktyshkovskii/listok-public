@@ -1,9 +1,9 @@
 import {
   AuthService
-} from "./chunk-2U2SCJGW.js";
+} from "./chunk-2YIU6XNI.js";
 import {
   Configuration
-} from "./chunk-KYZXPXLL.js";
+} from "./chunk-UJ35VUF3.js";
 import {
   Component,
   Router,
@@ -17,7 +17,7 @@ import {
   ɵsetClassDebugInfo,
   ɵɵdefineComponent,
   ɵɵelement
-} from "./chunk-3DPZ4J24.js";
+} from "./chunk-QBW5PNTK.js";
 
 // src/app/guards/auth.guard.ts
 var authGuard = () => {
@@ -42,26 +42,26 @@ var routes = [
   },
   {
     path: "login",
-    loadComponent: () => import("./chunk-DV4YSBLW.js").then((m) => m.LoginComponent)
+    loadComponent: () => import("./chunk-NE4RK2XJ.js").then((m) => m.LoginComponent)
   },
   {
     path: "dashboard",
-    loadComponent: () => import("./chunk-NPAQPJ3P.js").then((m) => m.DashboardComponent),
+    loadComponent: () => import("./chunk-KPLM72CD.js").then((m) => m.DashboardComponent),
     canActivate: [authGuard]
   },
   {
     path: "lists/new",
-    loadComponent: () => import("./chunk-DEEM5CJC.js").then((m) => m.ListCreateComponent),
+    loadComponent: () => import("./chunk-OY7VJROF.js").then((m) => m.ListCreateComponent),
     canActivate: [authGuard]
   },
   {
     path: "lists/:id/edit",
-    loadComponent: () => import("./chunk-DEEM5CJC.js").then((m) => m.ListCreateComponent),
+    loadComponent: () => import("./chunk-OY7VJROF.js").then((m) => m.ListCreateComponent),
     canActivate: [authGuard]
   },
   {
     path: "lists/:id",
-    loadComponent: () => import("./chunk-CSCENG44.js").then((m) => m.ListDetailComponent),
+    loadComponent: () => import("./chunk-WA7XUNFS.js").then((m) => m.ListDetailComponent),
     canActivate: [authGuard]
   },
   {

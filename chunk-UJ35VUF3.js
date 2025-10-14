@@ -18,7 +18,7 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-3DPZ4J24.js";
+} from "./chunk-QBW5PNTK.js";
 
 // src/app/generated/api/configuration.ts
 var Configuration = class {
@@ -787,4 +787,4 @@ export {
   ListApiService,
   Configuration
 };
-//# sourceMappingURL=chunk-KYZXPXLL.js.map
+//# sourceMappingURL=chunk-UJ35VUF3.js.map

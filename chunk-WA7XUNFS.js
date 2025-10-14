@@ -7,14 +7,14 @@ import {
   MatPseudoCheckbox,
   MatPseudoCheckboxModule,
   SelectionModel
-} from "./chunk-ZDNPTREO.js";
+} from "./chunk-LLUMOMVE.js";
 import {
   MatFormFieldModule,
   MatInput,
   MatInputModule,
   MatSnackBar,
   MatSnackBarModule
-} from "./chunk-WUIUSMQ3.js";
+} from "./chunk-YJ34AB6W.js";
 import {
   BasePortalOutlet,
   CdkConnectedOverlay,
@@ -59,14 +59,16 @@ import {
   createOverlayRef,
   createRepositionScrollStrategy,
   ɵNgNoValidate
-} from "./chunk-M4AMQKTQ.js";
+} from "./chunk-56TG3XOZ.js";
 import {
   ItemApiService
-} from "./chunk-KYZXPXLL.js";
+} from "./chunk-UJ35VUF3.js";
 import {
   A,
   A11yModule,
   ActiveDescendantKeyManager,
+  BreakpointObserver,
+  Breakpoints,
   DOWN_ARROW,
   Directionality,
   ENTER,
@@ -103,9 +105,10 @@ import {
   coerceNumberProperty,
   hasModifierKey,
   removeAriaReferencedId
-} from "./chunk-UNOES5P2.js";
+} from "./chunk-UKVI6I6H.js";
 import {
   ActivatedRoute,
+  Attribute,
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   CommonModule,
@@ -130,6 +133,7 @@ import {
   RouterLink,
   RouterModule,
   Subject,
+  Subscription,
   TemplateRef,
   ViewChild,
   ViewEncapsulation,
@@ -198,7 +202,7 @@ import {
   ɵɵtextInterpolate,
   ɵɵtextInterpolate1,
   ɵɵviewQuery
-} from "./chunk-3DPZ4J24.js";
+} from "./chunk-QBW5PNTK.js";
 
 // node_modules/@angular/cdk/fesm2022/dialog.mjs
 function CdkDialogContainer_ng_template_0_Template(rf, ctx) {
@@ -4401,6 +4405,46 @@ var ConfirmDialogComponent = _ConfirmDialogComponent;
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ConfirmDialogComponent, { className: "ConfirmDialogComponent", filePath: "src/app/components/shared/confirm-dialog/confirm-dialog.component.ts", lineNumber: 23 });
 })();
 
+// src/app/directives/responsive-text.directive.ts
+var _ResponsiveTextDirective = class _ResponsiveTextDirective {
+  constructor() {
+    this.el = inject(ElementRef);
+    this.renderer = inject(Renderer2);
+    this.breakpointObserver = inject(BreakpointObserver);
+    this.sub = new Subscription();
+  }
+  ngOnInit() {
+    this.sub.add(this.breakpointObserver.observe([Breakpoints.XSmall]).subscribe((result) => {
+      const isSmall = result.matches;
+      const text = isSmall ? this.short : this.full;
+      this.renderer.setProperty(this.el.nativeElement, "textContent", text);
+    }));
+  }
+  ngOnDestroy() {
+    this.sub.unsubscribe();
+  }
+};
+_ResponsiveTextDirective.\u0275fac = function ResponsiveTextDirective_Factory(__ngFactoryType__) {
+  return new (__ngFactoryType__ || _ResponsiveTextDirective)();
+};
+_ResponsiveTextDirective.\u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({ type: _ResponsiveTextDirective, selectors: [["", "lokResponsiveText", ""]], inputs: { full: "full", short: "short" } });
+var ResponsiveTextDirective = _ResponsiveTextDirective;
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ResponsiveTextDirective, [{
+    type: Directive,
+    args: [{
+      selector: "[lokResponsiveText]",
+      inputs: ["full", "short"]
+    }]
+  }], null, { full: [{
+    type: Attribute,
+    args: ["full"]
+  }], short: [{
+    type: Attribute,
+    args: ["short"]
+  }] });
+})();
+
 // src/app/components/list-detail/list-detail.component.ts
 var _c03 = (a0) => ["/lists", a0, "edit"];
 var _forTrack0 = ($index, $item) => $item.color;
@@ -4431,7 +4475,7 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_1_Template
 function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_6_For_2_For_4_Conditional_2_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 34);
-    \u0275\u0275element(1, "img", 42);
+    \u0275\u0275element(1, "img", 43);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -4471,51 +4515,53 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditi
     \u0275\u0275elementEnd();
     \u0275\u0275conditionalCreate(6, ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_6_For_2_For_4_Conditional_6_Template, 2, 1, "p", 37);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(7, "div", 38)(8, "span", 39);
-    \u0275\u0275text(9);
+    \u0275\u0275elementStart(7, "div", 38);
+    \u0275\u0275element(8, "span", 39);
+    \u0275\u0275elementStart(9, "span", 40);
+    \u0275\u0275text(10);
     \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(10, "button", 40);
-    \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_6_For_2_For_4_Template_button_click_10_listener($event) {
+    \u0275\u0275elementStart(11, "button", 41);
+    \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_6_For_2_For_4_Template_button_click_11_listener($event) {
       \u0275\u0275restoreView(_r3);
       return \u0275\u0275resetView($event.stopPropagation());
     });
-    \u0275\u0275elementStart(11, "mat-icon");
-    \u0275\u0275text(12, "more_vert");
+    \u0275\u0275elementStart(12, "mat-icon");
+    \u0275\u0275text(13, "more_vert");
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(13, "mat-menu", null, 1)(15, "button", 41);
-    \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_6_For_2_For_4_Template_button_click_15_listener() {
+    \u0275\u0275elementStart(14, "mat-menu", null, 1)(16, "button", 42);
+    \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_6_For_2_For_4_Template_button_click_16_listener() {
       const item_r4 = \u0275\u0275restoreView(_r3).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(6);
       return \u0275\u0275resetView(ctx_r1.editItem(item_r4));
     });
-    \u0275\u0275elementStart(16, "mat-icon");
-    \u0275\u0275text(17, "edit");
+    \u0275\u0275elementStart(17, "mat-icon");
+    \u0275\u0275text(18, "edit");
     \u0275\u0275elementEnd();
-    \u0275\u0275text(18, " Edit ");
+    \u0275\u0275text(19, " Edit ");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(19, "button", 13);
-    \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_6_For_2_For_4_Template_button_click_19_listener() {
+    \u0275\u0275elementStart(20, "button", 13);
+    \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_6_For_2_For_4_Template_button_click_20_listener() {
       const item_r4 = \u0275\u0275restoreView(_r3).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(6);
       return \u0275\u0275resetView(ctx_r1.deleteItem(item_r4));
     });
-    \u0275\u0275elementStart(20, "mat-icon");
-    \u0275\u0275text(21, "delete");
+    \u0275\u0275elementStart(21, "mat-icon");
+    \u0275\u0275text(22, "delete");
     \u0275\u0275elementEnd();
-    \u0275\u0275text(22, " Delete ");
+    \u0275\u0275text(23, " Delete ");
     \u0275\u0275elementEnd()()();
   }
   if (rf & 2) {
     const item_r4 = ctx.$implicit;
-    const itemMenu_r5 = \u0275\u0275reference(14);
+    const itemMenu_r5 = \u0275\u0275reference(15);
     \u0275\u0275advance(2);
     \u0275\u0275conditional(item_r4.item.img ? 2 : -1);
     \u0275\u0275advance(3);
     \u0275\u0275textInterpolate(item_r4.item.name);
     \u0275\u0275advance();
     \u0275\u0275conditional(item_r4.item.comment ? 6 : -1);
-    \u0275\u0275advance(3);
-    \u0275\u0275textInterpolate1("Quantity: ", item_r4.count);
+    \u0275\u0275advance(4);
+    \u0275\u0275textInterpolate(item_r4.count);
     \u0275\u0275advance();
     \u0275\u0275property("matMenuTriggerFor", itemMenu_r5);
   }
@@ -4525,7 +4571,7 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditi
     \u0275\u0275elementStart(0, "div", 29);
     \u0275\u0275element(1, "div", 30);
     \u0275\u0275elementStart(2, "div", 31);
-    \u0275\u0275repeaterCreate(3, ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_6_For_2_For_4_Template, 23, 5, "div", 32, \u0275\u0275repeaterTrackByIdentity);
+    \u0275\u0275repeaterCreate(3, ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_6_For_2_For_4_Template, 24, 5, "div", 32, \u0275\u0275repeaterTrackByIdentity);
     \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
@@ -4551,7 +4597,7 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditi
 function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_7_Template(rf, ctx) {
   if (rf & 1) {
     const _r7 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div", 28)(1, "mat-icon", 43);
+    \u0275\u0275elementStart(0, "div", 28)(1, "mat-icon", 44);
     \u0275\u0275text(2, "assignment");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(3, "h3");
@@ -4560,7 +4606,7 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditi
     \u0275\u0275elementStart(5, "p");
     \u0275\u0275text(6, "Add your first item to get started.");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(7, "button", 44);
+    \u0275\u0275elementStart(7, "button", 45);
     \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_7_Template_button_click_7_listener() {
       \u0275\u0275restoreView(_r7);
       const ctx_r1 = \u0275\u0275nextContext(4);
@@ -4575,7 +4621,7 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditi
 }
 function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_8_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 28)(1, "mat-icon", 43);
+    \u0275\u0275elementStart(0, "div", 28)(1, "mat-icon", 44);
     \u0275\u0275text(2, "done_all");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(3, "h3");
@@ -4614,7 +4660,7 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Templat
 function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_For_4_Conditional_2_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 34);
-    \u0275\u0275element(1, "img", 42);
+    \u0275\u0275element(1, "img", 43);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -4625,7 +4671,7 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_F
 }
 function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_For_4_Conditional_6_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "p", 48);
+    \u0275\u0275elementStart(0, "p", 49);
     \u0275\u0275text(1);
     \u0275\u0275elementEnd();
   }
@@ -4638,7 +4684,7 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_F
 function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_For_4_Template(rf, ctx) {
   if (rf & 1) {
     const _r8 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div", 46)(1, "div", 33);
+    \u0275\u0275elementStart(0, "div", 47)(1, "div", 33);
     \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_For_4_Template_div_click_1_listener() {
       const item_r9 = \u0275\u0275restoreView(_r8).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(5);
@@ -4649,56 +4695,58 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_F
       return \u0275\u0275resetView(ctx_r1.toggleItemStatus(item_r9));
     });
     \u0275\u0275conditionalCreate(2, ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_For_4_Conditional_2_Template, 2, 2, "div", 34);
-    \u0275\u0275elementStart(3, "div", 35)(4, "h3", 47);
+    \u0275\u0275elementStart(3, "div", 35)(4, "h3", 48);
     \u0275\u0275text(5);
     \u0275\u0275elementEnd();
-    \u0275\u0275conditionalCreate(6, ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_For_4_Conditional_6_Template, 2, 1, "p", 48);
+    \u0275\u0275conditionalCreate(6, ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_For_4_Conditional_6_Template, 2, 1, "p", 49);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(7, "div", 38)(8, "span", 49);
-    \u0275\u0275text(9);
+    \u0275\u0275elementStart(7, "div", 38);
+    \u0275\u0275element(8, "span", 39);
+    \u0275\u0275elementStart(9, "span", 40);
+    \u0275\u0275text(10);
     \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(10, "button", 40);
-    \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_For_4_Template_button_click_10_listener($event) {
+    \u0275\u0275elementStart(11, "button", 41);
+    \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_For_4_Template_button_click_11_listener($event) {
       \u0275\u0275restoreView(_r8);
       return \u0275\u0275resetView($event.stopPropagation());
     });
-    \u0275\u0275elementStart(11, "mat-icon");
-    \u0275\u0275text(12, "more_vert");
+    \u0275\u0275elementStart(12, "mat-icon");
+    \u0275\u0275text(13, "more_vert");
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(13, "mat-menu", null, 1)(15, "button", 41);
-    \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_For_4_Template_button_click_15_listener() {
+    \u0275\u0275elementStart(14, "mat-menu", null, 1)(16, "button", 42);
+    \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_For_4_Template_button_click_16_listener() {
       const item_r9 = \u0275\u0275restoreView(_r8).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(5);
       return \u0275\u0275resetView(ctx_r1.editItem(item_r9));
     });
-    \u0275\u0275elementStart(16, "mat-icon");
-    \u0275\u0275text(17, "edit");
+    \u0275\u0275elementStart(17, "mat-icon");
+    \u0275\u0275text(18, "edit");
     \u0275\u0275elementEnd();
-    \u0275\u0275text(18, " Edit ");
+    \u0275\u0275text(19, " Edit ");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(19, "button", 13);
-    \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_For_4_Template_button_click_19_listener() {
+    \u0275\u0275elementStart(20, "button", 13);
+    \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_For_4_Template_button_click_20_listener() {
       const item_r9 = \u0275\u0275restoreView(_r8).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(5);
       return \u0275\u0275resetView(ctx_r1.deleteItem(item_r9));
     });
-    \u0275\u0275elementStart(20, "mat-icon");
-    \u0275\u0275text(21, "delete");
+    \u0275\u0275elementStart(21, "mat-icon");
+    \u0275\u0275text(22, "delete");
     \u0275\u0275elementEnd();
-    \u0275\u0275text(22, " Delete ");
+    \u0275\u0275text(23, " Delete ");
     \u0275\u0275elementEnd()()();
   }
   if (rf & 2) {
     const item_r9 = ctx.$implicit;
-    const itemMenu_r10 = \u0275\u0275reference(14);
+    const itemMenu_r10 = \u0275\u0275reference(15);
     \u0275\u0275advance(2);
     \u0275\u0275conditional(item_r9.item.img ? 2 : -1);
     \u0275\u0275advance(3);
     \u0275\u0275textInterpolate(item_r9.item.name);
     \u0275\u0275advance();
     \u0275\u0275conditional(item_r9.item.comment ? 6 : -1);
-    \u0275\u0275advance(3);
-    \u0275\u0275textInterpolate1("Quantity: ", item_r9.count);
+    \u0275\u0275advance(4);
+    \u0275\u0275textInterpolate(item_r9.count);
     \u0275\u0275advance();
     \u0275\u0275property("matMenuTriggerFor", itemMenu_r10);
   }
@@ -4708,7 +4756,7 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_T
     \u0275\u0275elementStart(0, "div", 29);
     \u0275\u0275element(1, "div", 30);
     \u0275\u0275elementStart(2, "div", 31);
-    \u0275\u0275repeaterCreate(3, ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_For_4_Template, 23, 5, "div", 46, \u0275\u0275repeaterTrackByIdentity);
+    \u0275\u0275repeaterCreate(3, ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_For_4_Template, 24, 5, "div", 47, \u0275\u0275repeaterTrackByIdentity);
     \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
@@ -4724,7 +4772,7 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_Templat
     \u0275\u0275elementStart(0, "div", 23)(1, "div", 25)(2, "h2");
     \u0275\u0275text(3, "Completed Items");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(4, "span", 45);
+    \u0275\u0275elementStart(4, "span", 46);
     \u0275\u0275text(5);
     \u0275\u0275elementEnd()();
     \u0275\u0275elementStart(6, "div", 27);
@@ -5090,7 +5138,7 @@ var _ListDetailComponent = class _ListDetailComponent {
 _ListDetailComponent.\u0275fac = function ListDetailComponent_Factory(__ngFactoryType__) {
   return new (__ngFactoryType__ || _ListDetailComponent)();
 };
-_ListDetailComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ListDetailComponent, selectors: [["ng-component"]], decls: 2, vars: 2, consts: [["listMenu", "matMenu"], ["itemMenu", "matMenu"], [1, "list-detail-container"], [1, "loading-container"], [1, "list-toolbar"], ["mat-icon-button", "", 3, "click"], [1, "list-header-info"], [1, "list-title"], [1, "list-subtitle"], [1, "spacer"], ["mat-button", "", 3, "click"], ["mat-icon-button", "", 3, "matMenuTriggerFor"], ["mat-menu-item", "", 3, "routerLink"], ["mat-menu-item", "", 1, "delete-button", 3, "click"], [1, "list-content"], [1, "list-hero"], [1, "list-stats"], [1, "stat-card"], [1, "stat-content"], [1, "stat-icon"], [1, "stat-icon", "to-do"], [1, "stat-icon", "done"], [1, "stat-icon", "progress"], [1, "items-section"], [1, "list-image", 3, "src", "alt"], [1, "section-header"], [1, "item-count-badge"], [1, "items-grid"], [1, "empty-state"], [1, "color-group"], [1, "color-bar"], [1, "group-items"], [1, "item-row"], ["tabindex", "0", 1, "item-content", 3, "click", "keydown.enter"], [1, "item-image"], [1, "item-info"], [1, "item-name"], [1, "item-comment"], [1, "item-details"], [1, "item-quantity"], ["mat-icon-button", "", 1, "item-menu-button", 3, "click", "matMenuTriggerFor"], ["mat-menu-item", "", 3, "click"], [3, "src", "alt"], [1, "empty-icon"], ["mat-raised-button", "", "color", "primary", 3, "click"], [1, "item-count-badge", "completed"], [1, "item-row", "done"], [1, "item-name", "bought-text"], [1, "item-comment", "bought-text"], [1, "item-quantity", "bought-text"], ["diameter", "50"]], template: function ListDetailComponent_Template(rf, ctx) {
+_ListDetailComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ListDetailComponent, selectors: [["ng-component"]], decls: 2, vars: 2, consts: [["listMenu", "matMenu"], ["itemMenu", "matMenu"], [1, "list-detail-container"], [1, "loading-container"], [1, "list-toolbar"], ["mat-icon-button", "", 3, "click"], [1, "list-header-info"], [1, "list-title"], [1, "list-subtitle"], [1, "spacer"], ["mat-button", "", 3, "click"], ["mat-icon-button", "", 3, "matMenuTriggerFor"], ["mat-menu-item", "", 3, "routerLink"], ["mat-menu-item", "", 1, "delete-button", 3, "click"], [1, "list-content"], [1, "list-hero"], [1, "list-stats"], [1, "stat-card"], [1, "stat-content"], [1, "stat-icon"], [1, "stat-icon", "to-do"], [1, "stat-icon", "done"], [1, "stat-icon", "progress"], [1, "items-section"], [1, "list-image", 3, "src", "alt"], [1, "section-header"], [1, "item-count-badge"], [1, "items-grid"], [1, "empty-state"], [1, "color-group"], [1, "color-bar"], [1, "group-items"], [1, "item-row"], ["tabindex", "0", 1, "item-content", 3, "click", "keydown.enter"], [1, "item-image"], [1, "item-info"], [1, "item-name"], [1, "item-comment"], [1, "item-details"], ["lokResponsiveText", "", "full", "Quantity: ", "short", "Qt: ", 1, "item-quantity"], [1, "item-quantity"], ["mat-icon-button", "", 1, "item-menu-button", 3, "click", "matMenuTriggerFor"], ["mat-menu-item", "", 3, "click"], [3, "src", "alt"], [1, "empty-icon"], ["mat-raised-button", "", "color", "primary", 3, "click"], [1, "item-count-badge", "completed"], [1, "item-row", "done"], [1, "item-name", "bought-text"], [1, "item-comment", "bought-text"], ["diameter", "50"]], template: function ListDetailComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275conditionalCreate(0, ListDetailComponent_Conditional_0_Template, 28, 7, "div", 2);
     \u0275\u0275conditionalCreate(1, ListDetailComponent_Conditional_1_Template, 4, 0, "div", 3);
@@ -5121,8 +5169,9 @@ _ListDetailComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ t
   MatToolbar,
   MatDialogModule,
   RouterModule,
-  RouterLink
-], styles: ["\n\n.list-detail-container[_ngcontent-%COMP%] {\n  min-height: 100vh;\n  background-color: #fafafa;\n}\n.list-toolbar[_ngcontent-%COMP%] {\n  position: sticky;\n  top: 0;\n  z-index: 100;\n  background-color: white;\n  color: #333;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n}\n.list-header-info[_ngcontent-%COMP%] {\n  flex: 1;\n  margin-left: 16px;\n}\n.list-title[_ngcontent-%COMP%] {\n  font-size: 20px;\n  font-weight: 600;\n  margin: 0;\n}\n.list-subtitle[_ngcontent-%COMP%] {\n  font-size: 14px;\n  opacity: 0.7;\n  margin: 0;\n}\n.spacer[_ngcontent-%COMP%] {\n  flex: 1 1 auto;\n}\n.list-content[_ngcontent-%COMP%] {\n  padding: 24px;\n  max-width: 1200px;\n  margin: 0 auto;\n}\n.list-hero[_ngcontent-%COMP%] {\n  margin-bottom: 24px;\n  border-radius: 12px;\n  overflow: hidden;\n  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);\n}\n.list-image[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 300px;\n  object-fit: cover;\n}\n.list-stats[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: nowrap;\n  gap: 12px;\n  overflow-x: auto;\n  margin-bottom: 32px;\n  padding-bottom: 8px;\n}\n.list-stats[_ngcontent-%COMP%]::-webkit-scrollbar {\n  height: 4px;\n}\n.list-stats[_ngcontent-%COMP%]::-webkit-scrollbar-track {\n  background: #f1f1f1;\n  border-radius: 2px;\n}\n.list-stats[_ngcontent-%COMP%]::-webkit-scrollbar-thumb {\n  background: #c1c1c1;\n  border-radius: 2px;\n}\n.list-stats[_ngcontent-%COMP%]::-webkit-scrollbar-thumb:hover {\n  background: #a8a8a8;\n}\n.stat-card[_ngcontent-%COMP%] {\n  border-radius: 8px;\n  flex: 1 0 auto;\n  min-width: 140px;\n  transition: min-width 0.3s ease;\n}\n.stat-content[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 12px;\n}\n.stat-icon[_ngcontent-%COMP%] {\n  font-size: 32px;\n  width: 32px;\n  height: 32px;\n  color: #1976d2;\n}\n.stat-icon.to-do[_ngcontent-%COMP%] {\n  color: #f57c00;\n}\n.stat-icon.done[_ngcontent-%COMP%] {\n  color: #4caf50;\n}\n.stat-icon.progress[_ngcontent-%COMP%] {\n  color: #9c27b0;\n}\n.stat-content[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n  font-size: 24px;\n  font-weight: 700;\n  margin: 0;\n}\n.stat-content[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-size: 14px;\n  opacity: 0.7;\n  margin: 0;\n  white-space: nowrap;\n}\n@media (max-width: 480px) {\n  .stat-card[_ngcontent-%COMP%] {\n    min-width: 80px;\n  }\n  .stat-content[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n    display: none;\n  }\n  .stat-content[_ngcontent-%COMP%] {\n    gap: 2px;\n  }\n  .stat-icon[_ngcontent-%COMP%] {\n    font-size: 24px;\n    width: 24px;\n    height: 24px;\n  }\n  .stat-content[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n    font-size: 16px;\n  }\n}\n.items-section[_ngcontent-%COMP%] {\n  background-color: white;\n  border-radius: 12px;\n  padding: 24px;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\n}\n.section-header[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 24px;\n  gap: 16px;\n}\n.section-header[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  font-size: 24px;\n  font-weight: 600;\n  margin: 0;\n  flex: 1;\n}\n.item-count-badge[_ngcontent-%COMP%] {\n  background-color: #1976d2;\n  color: white;\n  padding: 4px 12px;\n  border-radius: 16px;\n  font-size: 14px;\n  font-weight: 600;\n  min-width: 24px;\n  text-align: center;\n}\n.item-count-badge.completed[_ngcontent-%COMP%] {\n  background-color: #4caf50;\n}\n.items-grid[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  gap: 16px;\n}\n.color-group[_ngcontent-%COMP%] {\n  display: flex;\n  gap: 0;\n  position: relative;\n}\n.color-bar[_ngcontent-%COMP%] {\n  width: 4px;\n  background-color: currentColor;\n  border-radius: 4px;\n  flex-shrink: 0;\n  margin-right: 12px;\n}\n.group-items[_ngcontent-%COMP%] {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  gap: 8px;\n}\n.item-row[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 16px;\n  padding: 16px;\n  background-color: white;\n  border-radius: 12px;\n  border: 1px solid #e0e0e0;\n  transition: transform 0.2s, box-shadow 0.2s;\n}\n.item-row[_ngcontent-%COMP%]:hover {\n  transform: translateY(-2px);\n  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);\n}\n.item-content[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 16px;\n  flex: 1;\n  cursor: pointer;\n  min-width: 0;\n}\n.item-row.done[_ngcontent-%COMP%] {\n  opacity: 0.6;\n  background-color: #f5f5f5;\n}\n.item-row.done[_ngcontent-%COMP%]:hover {\n  transform: none;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\n}\n.bought-text[_ngcontent-%COMP%] {\n  text-decoration: line-through;\n  color: #999;\n}\n.item-image[_ngcontent-%COMP%] {\n  width: 56px;\n  height: 56px;\n  border-radius: 8px;\n  overflow: hidden;\n  flex-shrink: 0;\n}\n.item-image[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n}\n.item-info[_ngcontent-%COMP%] {\n  flex: 2;\n  min-width: 0;\n}\n.item-name[_ngcontent-%COMP%] {\n  font-size: 18px;\n  font-weight: 600;\n  margin: 0 0 4px 0;\n}\n.item-comment[_ngcontent-%COMP%] {\n  font-size: 15px;\n  opacity: 0.7;\n  margin: 0;\n}\n.item-details[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 16px;\n  flex: 1;\n  justify-content: flex-end;\n}\n.item-quantity[_ngcontent-%COMP%] {\n  font-size: 14px;\n  color: #666;\n  white-space: nowrap;\n}\n.item-menu-button[_ngcontent-%COMP%] {\n  flex-shrink: 0;\n}\n.empty-state[_ngcontent-%COMP%] {\n  text-align: center;\n  padding: 40px;\n}\n.empty-icon[_ngcontent-%COMP%] {\n  font-size: 64px;\n  width: 64px;\n  height: 64px;\n  opacity: 0.3;\n  margin-bottom: 16px;\n}\n.empty-state[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n  margin: 0 0 8px 0;\n  font-size: 20px;\n}\n.empty-state[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  margin: 0 0 24px 0;\n  opacity: 0.7;\n}\n.loading-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  min-height: 100vh;\n  gap: 16px;\n}\n.delete-button[_ngcontent-%COMP%] {\n  color: #f44336;\n}\n@media (max-width: 768px) {\n  .list-content[_ngcontent-%COMP%] {\n    padding: 16px;\n  }\n  .list-stats[_ngcontent-%COMP%] {\n    gap: 8px;\n    margin-bottom: 24px;\n  }\n  .section-header[_ngcontent-%COMP%] {\n    flex-direction: column;\n    align-items: stretch;\n    gap: 12px;\n  }\n  .items-grid[_ngcontent-%COMP%] {\n    gap: 12px;\n  }\n  .item-row[_ngcontent-%COMP%] {\n    padding: 12px;\n    gap: 12px;\n  }\n  .item-content[_ngcontent-%COMP%] {\n    gap: 12px;\n  }\n  .item-details[_ngcontent-%COMP%] {\n    flex-direction: row;\n    gap: 8px;\n  }\n  .item-info[_ngcontent-%COMP%] {\n    flex: 1;\n  }\n  .item-quantity[_ngcontent-%COMP%] {\n    font-size: 12px;\n  }\n}\n/*# sourceMappingURL=list-detail.component.css.map */"] });
+  RouterLink,
+  ResponsiveTextDirective
+], styles: ["\n\n.list-detail-container[_ngcontent-%COMP%] {\n  min-height: 100vh;\n  background-color: #fafafa;\n}\n.list-toolbar[_ngcontent-%COMP%] {\n  position: sticky;\n  top: 0;\n  z-index: 100;\n  background-color: white;\n  color: #333;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n}\n.list-header-info[_ngcontent-%COMP%] {\n  flex: 1;\n  margin-left: 16px;\n}\n.list-title[_ngcontent-%COMP%] {\n  font-size: 20px;\n  font-weight: 600;\n  margin: 0;\n}\n.list-subtitle[_ngcontent-%COMP%] {\n  font-size: 14px;\n  opacity: 0.7;\n  margin: 0;\n}\n.spacer[_ngcontent-%COMP%] {\n  flex: 1 1 auto;\n}\n.list-content[_ngcontent-%COMP%] {\n  padding: 24px;\n  max-width: 1200px;\n  margin: 0 auto;\n}\n.list-hero[_ngcontent-%COMP%] {\n  margin-bottom: 24px;\n  border-radius: 12px;\n  overflow: hidden;\n  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);\n}\n.list-image[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 300px;\n  object-fit: cover;\n}\n.list-stats[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: nowrap;\n  gap: 12px;\n  overflow-x: auto;\n  margin-bottom: 32px;\n  padding-bottom: 8px;\n}\n.list-stats[_ngcontent-%COMP%]::-webkit-scrollbar {\n  height: 4px;\n}\n.list-stats[_ngcontent-%COMP%]::-webkit-scrollbar-track {\n  background: #f1f1f1;\n  border-radius: 2px;\n}\n.list-stats[_ngcontent-%COMP%]::-webkit-scrollbar-thumb {\n  background: #c1c1c1;\n  border-radius: 2px;\n}\n.list-stats[_ngcontent-%COMP%]::-webkit-scrollbar-thumb:hover {\n  background: #a8a8a8;\n}\n.stat-card[_ngcontent-%COMP%] {\n  border-radius: 8px;\n  flex: 1 0 auto;\n  min-width: 140px;\n  transition: min-width 0.3s ease;\n}\n.stat-content[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 12px;\n}\n.stat-icon[_ngcontent-%COMP%] {\n  font-size: 32px;\n  width: 32px;\n  height: 32px;\n  color: #1976d2;\n}\n.stat-icon.to-do[_ngcontent-%COMP%] {\n  color: #f57c00;\n}\n.stat-icon.done[_ngcontent-%COMP%] {\n  color: #4caf50;\n}\n.stat-icon.progress[_ngcontent-%COMP%] {\n  color: #9c27b0;\n}\n.stat-content[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n  font-size: 24px;\n  font-weight: 700;\n  margin: 0;\n}\n.stat-content[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-size: 14px;\n  opacity: 0.7;\n  margin: 0;\n  white-space: nowrap;\n}\n.items-section[_ngcontent-%COMP%] {\n  background-color: white;\n  border-radius: 12px;\n  padding: 12px;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\n}\n.section-header[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-left: 16px;\n  margin-bottom: 24px;\n  gap: 16px;\n}\n.section-header[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  font-size: 24px;\n  font-weight: 600;\n  margin: 0;\n  flex: 1;\n}\n.item-count-badge[_ngcontent-%COMP%] {\n  background-color: #1976d2;\n  color: white;\n  padding: 4px 12px;\n  border-radius: 16px;\n  font-size: 14px;\n  font-weight: 600;\n  min-width: 24px;\n  text-align: center;\n}\n.item-count-badge.completed[_ngcontent-%COMP%] {\n  background-color: #4caf50;\n}\n.items-grid[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  gap: 16px;\n}\n.color-group[_ngcontent-%COMP%] {\n  display: flex;\n  gap: 0;\n  position: relative;\n}\n.color-bar[_ngcontent-%COMP%] {\n  width: 4px;\n  background-color: currentColor;\n  border-radius: 4px;\n  flex-shrink: 0;\n  margin-right: 12px;\n}\n.group-items[_ngcontent-%COMP%] {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  gap: 8px;\n}\n.item-row[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 16px;\n  padding: 16px;\n  background-color: white;\n  border-radius: 12px;\n  border: 1px solid #e0e0e0;\n  transition: transform 0.2s, box-shadow 0.2s;\n}\n.item-row[_ngcontent-%COMP%]:hover {\n  transform: translateY(-2px);\n  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);\n}\n.item-content[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 16px;\n  flex: 1;\n  cursor: pointer;\n  min-width: 0;\n}\n.item-row.done[_ngcontent-%COMP%] {\n  opacity: 0.6;\n  background-color: #f5f5f5;\n}\n.item-row.done[_ngcontent-%COMP%]:hover {\n  transform: none;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\n}\n.bought-text[_ngcontent-%COMP%] {\n  text-decoration: line-through;\n  color: #999;\n}\n.item-image[_ngcontent-%COMP%] {\n  width: 56px;\n  height: 56px;\n  border-radius: 8px;\n  overflow: hidden;\n  flex-shrink: 0;\n}\n.item-image[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n}\n.item-info[_ngcontent-%COMP%] {\n  flex: 2;\n  min-width: 0;\n}\n.item-name[_ngcontent-%COMP%] {\n  font-size: 18px;\n  font-weight: 600;\n  margin: 0 0 4px 0;\n}\n.item-comment[_ngcontent-%COMP%] {\n  font-size: 15px;\n  opacity: 0.7;\n  margin: 0;\n}\n.item-details[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 16px;\n  flex: 1;\n  justify-content: flex-end;\n}\n.item-quantity[_ngcontent-%COMP%] {\n  font-size: 14px;\n  color: #666;\n  white-space: nowrap;\n}\n.item-menu-button[_ngcontent-%COMP%] {\n  flex-shrink: 0;\n}\n.empty-state[_ngcontent-%COMP%] {\n  text-align: center;\n  padding: 40px;\n}\n.empty-icon[_ngcontent-%COMP%] {\n  font-size: 64px;\n  width: 64px;\n  height: 64px;\n  opacity: 0.3;\n  margin-bottom: 16px;\n}\n.empty-state[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n  margin: 0 0 8px 0;\n  font-size: 20px;\n}\n.empty-state[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  margin: 0 0 24px 0;\n  opacity: 0.7;\n}\n.loading-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  min-height: 100vh;\n  gap: 16px;\n}\n.delete-button[_ngcontent-%COMP%] {\n  color: #f44336;\n}\n@media (max-width: 768px) {\n  .list-content[_ngcontent-%COMP%] {\n    padding: 16px;\n  }\n  .list-stats[_ngcontent-%COMP%] {\n    gap: 8px;\n    margin-bottom: 24px;\n  }\n  .section-header[_ngcontent-%COMP%] {\n    gap: 12px;\n  }\n  .items-grid[_ngcontent-%COMP%] {\n    gap: 12px;\n  }\n  .item-row[_ngcontent-%COMP%] {\n    padding: 12px;\n    gap: 12px;\n  }\n  .item-content[_ngcontent-%COMP%] {\n    gap: 12px;\n  }\n  .item-details[_ngcontent-%COMP%] {\n    flex-direction: row;\n    gap: 8px;\n  }\n  .item-info[_ngcontent-%COMP%] {\n    flex: 1;\n  }\n  .item-quantity[_ngcontent-%COMP%] {\n    font-size: 12px;\n  }\n}\n@media (max-width: 480px) {\n  .stat-card[_ngcontent-%COMP%] {\n    min-width: 80px;\n  }\n  .stat-content[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n    display: none;\n  }\n  .stat-content[_ngcontent-%COMP%] {\n    gap: 2px;\n  }\n  .stat-icon[_ngcontent-%COMP%] {\n    font-size: 24px;\n    width: 24px;\n    height: 24px;\n  }\n  .stat-content[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n    font-size: 16px;\n  }\n  .items-section[_ngcontent-%COMP%] {\n    padding: 12px;\n  }\n  .section-header[_ngcontent-%COMP%] {\n    margin-bottom: 12px;\n  }\n  .item-row[_ngcontent-%COMP%] {\n    padding: 8px;\n  }\n  .item-content[_ngcontent-%COMP%] {\n    gap: 4px;\n  }\n}\n/*# sourceMappingURL=list-detail.component.css.map */"] });
 var ListDetailComponent = _ListDetailComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ListDetailComponent, [{
@@ -5137,7 +5186,8 @@ var ListDetailComponent = _ListDetailComponent;
       MatProgressSpinnerModule,
       MatToolbarModule,
       MatDialogModule,
-      RouterModule
+      RouterModule,
+      ResponsiveTextDirective
     ], template: `@if (!loading) {
   <div class="list-detail-container">
     <mat-toolbar class="list-toolbar">
@@ -5244,7 +5294,8 @@ var ListDetailComponent = _ListDetailComponent;
                               }
                             </div>
                             <div class="item-details">
-                              <span class="item-quantity">Quantity: {{ item.count }}</span>
+                              <span class="item-quantity" lokResponsiveText full="Quantity: " short="Qt: "></span>
+                              <span class="item-quantity">{{ item.count }}</span>
                             </div>
                           </div>
                           <button mat-icon-button [matMenuTriggerFor]="itemMenu" class="item-menu-button" (click)="$event.stopPropagation()">
@@ -5316,7 +5367,8 @@ var ListDetailComponent = _ListDetailComponent;
                             }
                           </div>
                           <div class="item-details">
-                            <span class="item-quantity bought-text">Quantity: {{ item.count }}</span>
+                            <span class="item-quantity" lokResponsiveText full="Quantity: " short="Qt: "></span>
+                            <span class="item-quantity">{{ item.count }}</span>
                           </div>
                         </div>
                         <button mat-icon-button [matMenuTriggerFor]="itemMenu" class="item-menu-button" (click)="$event.stopPropagation()">
@@ -5351,13 +5403,13 @@ var ListDetailComponent = _ListDetailComponent;
     <p>Loading list details...</p>
   </div>
 }
-`, styles: ["/* src/app/components/list-detail/list-detail.component.scss */\n.list-detail-container {\n  min-height: 100vh;\n  background-color: #fafafa;\n}\n.list-toolbar {\n  position: sticky;\n  top: 0;\n  z-index: 100;\n  background-color: white;\n  color: #333;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n}\n.list-header-info {\n  flex: 1;\n  margin-left: 16px;\n}\n.list-title {\n  font-size: 20px;\n  font-weight: 600;\n  margin: 0;\n}\n.list-subtitle {\n  font-size: 14px;\n  opacity: 0.7;\n  margin: 0;\n}\n.spacer {\n  flex: 1 1 auto;\n}\n.list-content {\n  padding: 24px;\n  max-width: 1200px;\n  margin: 0 auto;\n}\n.list-hero {\n  margin-bottom: 24px;\n  border-radius: 12px;\n  overflow: hidden;\n  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);\n}\n.list-image {\n  width: 100%;\n  height: 300px;\n  object-fit: cover;\n}\n.list-stats {\n  display: flex;\n  flex-wrap: nowrap;\n  gap: 12px;\n  overflow-x: auto;\n  margin-bottom: 32px;\n  padding-bottom: 8px;\n}\n.list-stats::-webkit-scrollbar {\n  height: 4px;\n}\n.list-stats::-webkit-scrollbar-track {\n  background: #f1f1f1;\n  border-radius: 2px;\n}\n.list-stats::-webkit-scrollbar-thumb {\n  background: #c1c1c1;\n  border-radius: 2px;\n}\n.list-stats::-webkit-scrollbar-thumb:hover {\n  background: #a8a8a8;\n}\n.stat-card {\n  border-radius: 8px;\n  flex: 1 0 auto;\n  min-width: 140px;\n  transition: min-width 0.3s ease;\n}\n.stat-content {\n  display: flex;\n  align-items: center;\n  gap: 12px;\n}\n.stat-icon {\n  font-size: 32px;\n  width: 32px;\n  height: 32px;\n  color: #1976d2;\n}\n.stat-icon.to-do {\n  color: #f57c00;\n}\n.stat-icon.done {\n  color: #4caf50;\n}\n.stat-icon.progress {\n  color: #9c27b0;\n}\n.stat-content h3 {\n  font-size: 24px;\n  font-weight: 700;\n  margin: 0;\n}\n.stat-content p {\n  font-size: 14px;\n  opacity: 0.7;\n  margin: 0;\n  white-space: nowrap;\n}\n@media (max-width: 480px) {\n  .stat-card {\n    min-width: 80px;\n  }\n  .stat-content p {\n    display: none;\n  }\n  .stat-content {\n    gap: 2px;\n  }\n  .stat-icon {\n    font-size: 24px;\n    width: 24px;\n    height: 24px;\n  }\n  .stat-content h3 {\n    font-size: 16px;\n  }\n}\n.items-section {\n  background-color: white;\n  border-radius: 12px;\n  padding: 24px;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\n}\n.section-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-bottom: 24px;\n  gap: 16px;\n}\n.section-header h2 {\n  font-size: 24px;\n  font-weight: 600;\n  margin: 0;\n  flex: 1;\n}\n.item-count-badge {\n  background-color: #1976d2;\n  color: white;\n  padding: 4px 12px;\n  border-radius: 16px;\n  font-size: 14px;\n  font-weight: 600;\n  min-width: 24px;\n  text-align: center;\n}\n.item-count-badge.completed {\n  background-color: #4caf50;\n}\n.items-grid {\n  display: flex;\n  flex-direction: column;\n  gap: 16px;\n}\n.color-group {\n  display: flex;\n  gap: 0;\n  position: relative;\n}\n.color-bar {\n  width: 4px;\n  background-color: currentColor;\n  border-radius: 4px;\n  flex-shrink: 0;\n  margin-right: 12px;\n}\n.group-items {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  gap: 8px;\n}\n.item-row {\n  display: flex;\n  align-items: center;\n  gap: 16px;\n  padding: 16px;\n  background-color: white;\n  border-radius: 12px;\n  border: 1px solid #e0e0e0;\n  transition: transform 0.2s, box-shadow 0.2s;\n}\n.item-row:hover {\n  transform: translateY(-2px);\n  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);\n}\n.item-content {\n  display: flex;\n  align-items: center;\n  gap: 16px;\n  flex: 1;\n  cursor: pointer;\n  min-width: 0;\n}\n.item-row.done {\n  opacity: 0.6;\n  background-color: #f5f5f5;\n}\n.item-row.done:hover {\n  transform: none;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\n}\n.bought-text {\n  text-decoration: line-through;\n  color: #999;\n}\n.item-image {\n  width: 56px;\n  height: 56px;\n  border-radius: 8px;\n  overflow: hidden;\n  flex-shrink: 0;\n}\n.item-image img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n}\n.item-info {\n  flex: 2;\n  min-width: 0;\n}\n.item-name {\n  font-size: 18px;\n  font-weight: 600;\n  margin: 0 0 4px 0;\n}\n.item-comment {\n  font-size: 15px;\n  opacity: 0.7;\n  margin: 0;\n}\n.item-details {\n  display: flex;\n  align-items: center;\n  gap: 16px;\n  flex: 1;\n  justify-content: flex-end;\n}\n.item-quantity {\n  font-size: 14px;\n  color: #666;\n  white-space: nowrap;\n}\n.item-menu-button {\n  flex-shrink: 0;\n}\n.empty-state {\n  text-align: center;\n  padding: 40px;\n}\n.empty-icon {\n  font-size: 64px;\n  width: 64px;\n  height: 64px;\n  opacity: 0.3;\n  margin-bottom: 16px;\n}\n.empty-state h3 {\n  margin: 0 0 8px 0;\n  font-size: 20px;\n}\n.empty-state p {\n  margin: 0 0 24px 0;\n  opacity: 0.7;\n}\n.loading-container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  min-height: 100vh;\n  gap: 16px;\n}\n.delete-button {\n  color: #f44336;\n}\n@media (max-width: 768px) {\n  .list-content {\n    padding: 16px;\n  }\n  .list-stats {\n    gap: 8px;\n    margin-bottom: 24px;\n  }\n  .section-header {\n    flex-direction: column;\n    align-items: stretch;\n    gap: 12px;\n  }\n  .items-grid {\n    gap: 12px;\n  }\n  .item-row {\n    padding: 12px;\n    gap: 12px;\n  }\n  .item-content {\n    gap: 12px;\n  }\n  .item-details {\n    flex-direction: row;\n    gap: 8px;\n  }\n  .item-info {\n    flex: 1;\n  }\n  .item-quantity {\n    font-size: 12px;\n  }\n}\n/*# sourceMappingURL=list-detail.component.css.map */\n"] }]
+`, styles: ["/* src/app/components/list-detail/list-detail.component.scss */\n.list-detail-container {\n  min-height: 100vh;\n  background-color: #fafafa;\n}\n.list-toolbar {\n  position: sticky;\n  top: 0;\n  z-index: 100;\n  background-color: white;\n  color: #333;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n}\n.list-header-info {\n  flex: 1;\n  margin-left: 16px;\n}\n.list-title {\n  font-size: 20px;\n  font-weight: 600;\n  margin: 0;\n}\n.list-subtitle {\n  font-size: 14px;\n  opacity: 0.7;\n  margin: 0;\n}\n.spacer {\n  flex: 1 1 auto;\n}\n.list-content {\n  padding: 24px;\n  max-width: 1200px;\n  margin: 0 auto;\n}\n.list-hero {\n  margin-bottom: 24px;\n  border-radius: 12px;\n  overflow: hidden;\n  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);\n}\n.list-image {\n  width: 100%;\n  height: 300px;\n  object-fit: cover;\n}\n.list-stats {\n  display: flex;\n  flex-wrap: nowrap;\n  gap: 12px;\n  overflow-x: auto;\n  margin-bottom: 32px;\n  padding-bottom: 8px;\n}\n.list-stats::-webkit-scrollbar {\n  height: 4px;\n}\n.list-stats::-webkit-scrollbar-track {\n  background: #f1f1f1;\n  border-radius: 2px;\n}\n.list-stats::-webkit-scrollbar-thumb {\n  background: #c1c1c1;\n  border-radius: 2px;\n}\n.list-stats::-webkit-scrollbar-thumb:hover {\n  background: #a8a8a8;\n}\n.stat-card {\n  border-radius: 8px;\n  flex: 1 0 auto;\n  min-width: 140px;\n  transition: min-width 0.3s ease;\n}\n.stat-content {\n  display: flex;\n  align-items: center;\n  gap: 12px;\n}\n.stat-icon {\n  font-size: 32px;\n  width: 32px;\n  height: 32px;\n  color: #1976d2;\n}\n.stat-icon.to-do {\n  color: #f57c00;\n}\n.stat-icon.done {\n  color: #4caf50;\n}\n.stat-icon.progress {\n  color: #9c27b0;\n}\n.stat-content h3 {\n  font-size: 24px;\n  font-weight: 700;\n  margin: 0;\n}\n.stat-content p {\n  font-size: 14px;\n  opacity: 0.7;\n  margin: 0;\n  white-space: nowrap;\n}\n.items-section {\n  background-color: white;\n  border-radius: 12px;\n  padding: 12px;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\n}\n.section-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-left: 16px;\n  margin-bottom: 24px;\n  gap: 16px;\n}\n.section-header h2 {\n  font-size: 24px;\n  font-weight: 600;\n  margin: 0;\n  flex: 1;\n}\n.item-count-badge {\n  background-color: #1976d2;\n  color: white;\n  padding: 4px 12px;\n  border-radius: 16px;\n  font-size: 14px;\n  font-weight: 600;\n  min-width: 24px;\n  text-align: center;\n}\n.item-count-badge.completed {\n  background-color: #4caf50;\n}\n.items-grid {\n  display: flex;\n  flex-direction: column;\n  gap: 16px;\n}\n.color-group {\n  display: flex;\n  gap: 0;\n  position: relative;\n}\n.color-bar {\n  width: 4px;\n  background-color: currentColor;\n  border-radius: 4px;\n  flex-shrink: 0;\n  margin-right: 12px;\n}\n.group-items {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  gap: 8px;\n}\n.item-row {\n  display: flex;\n  align-items: center;\n  gap: 16px;\n  padding: 16px;\n  background-color: white;\n  border-radius: 12px;\n  border: 1px solid #e0e0e0;\n  transition: transform 0.2s, box-shadow 0.2s;\n}\n.item-row:hover {\n  transform: translateY(-2px);\n  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);\n}\n.item-content {\n  display: flex;\n  align-items: center;\n  gap: 16px;\n  flex: 1;\n  cursor: pointer;\n  min-width: 0;\n}\n.item-row.done {\n  opacity: 0.6;\n  background-color: #f5f5f5;\n}\n.item-row.done:hover {\n  transform: none;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\n}\n.bought-text {\n  text-decoration: line-through;\n  color: #999;\n}\n.item-image {\n  width: 56px;\n  height: 56px;\n  border-radius: 8px;\n  overflow: hidden;\n  flex-shrink: 0;\n}\n.item-image img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n}\n.item-info {\n  flex: 2;\n  min-width: 0;\n}\n.item-name {\n  font-size: 18px;\n  font-weight: 600;\n  margin: 0 0 4px 0;\n}\n.item-comment {\n  font-size: 15px;\n  opacity: 0.7;\n  margin: 0;\n}\n.item-details {\n  display: flex;\n  align-items: center;\n  gap: 16px;\n  flex: 1;\n  justify-content: flex-end;\n}\n.item-quantity {\n  font-size: 14px;\n  color: #666;\n  white-space: nowrap;\n}\n.item-menu-button {\n  flex-shrink: 0;\n}\n.empty-state {\n  text-align: center;\n  padding: 40px;\n}\n.empty-icon {\n  font-size: 64px;\n  width: 64px;\n  height: 64px;\n  opacity: 0.3;\n  margin-bottom: 16px;\n}\n.empty-state h3 {\n  margin: 0 0 8px 0;\n  font-size: 20px;\n}\n.empty-state p {\n  margin: 0 0 24px 0;\n  opacity: 0.7;\n}\n.loading-container {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  min-height: 100vh;\n  gap: 16px;\n}\n.delete-button {\n  color: #f44336;\n}\n@media (max-width: 768px) {\n  .list-content {\n    padding: 16px;\n  }\n  .list-stats {\n    gap: 8px;\n    margin-bottom: 24px;\n  }\n  .section-header {\n    gap: 12px;\n  }\n  .items-grid {\n    gap: 12px;\n  }\n  .item-row {\n    padding: 12px;\n    gap: 12px;\n  }\n  .item-content {\n    gap: 12px;\n  }\n  .item-details {\n    flex-direction: row;\n    gap: 8px;\n  }\n  .item-info {\n    flex: 1;\n  }\n  .item-quantity {\n    font-size: 12px;\n  }\n}\n@media (max-width: 480px) {\n  .stat-card {\n    min-width: 80px;\n  }\n  .stat-content p {\n    display: none;\n  }\n  .stat-content {\n    gap: 2px;\n  }\n  .stat-icon {\n    font-size: 24px;\n    width: 24px;\n    height: 24px;\n  }\n  .stat-content h3 {\n    font-size: 16px;\n  }\n  .items-section {\n    padding: 12px;\n  }\n  .section-header {\n    margin-bottom: 12px;\n  }\n  .item-row {\n    padding: 8px;\n  }\n  .item-content {\n    gap: 4px;\n  }\n}\n/*# sourceMappingURL=list-detail.component.css.map */\n"] }]
   }], null, null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ListDetailComponent, { className: "ListDetailComponent", filePath: "src/app/components/list-detail/list-detail.component.ts", lineNumber: 44 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ListDetailComponent, { className: "ListDetailComponent", filePath: "src/app/components/list-detail/list-detail.component.ts", lineNumber: 46 });
 })();
 export {
   ListDetailComponent
 };
-//# sourceMappingURL=chunk-CSCENG44.js.map
+//# sourceMappingURL=chunk-WA7XUNFS.js.map
