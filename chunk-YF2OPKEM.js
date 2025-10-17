@@ -20,7 +20,7 @@ import {
   ɵɵinject
 } from "./chunk-QBW5PNTK.js";
 
-// src/app/generated/api/configuration.ts
+// src/generated/api/configuration.ts
 var Configuration = class {
   constructor(configurationParameters = {}) {
     this.apiKeys = configurationParameters.apiKeys;
@@ -104,14 +104,14 @@ var Configuration = class {
   }
 };
 
-// src/app/generated/api/model/itemStatus.ts
+// src/generated/api/model/itemStatus.ts
 var ItemStatus;
 (function(ItemStatus2) {
   ItemStatus2["ToBuy"] = "to_buy";
   ItemStatus2["Bought"] = "bought";
 })(ItemStatus || (ItemStatus = {}));
 
-// src/app/mock/mock-data.ts
+// src/mock/mock-data.ts
 var ITEM_APPLES = {
   id: "1-1",
   product: { id: "item-1", name: "Apples", img: "https://images.pexels.com/photos/102104/pexels-photo-102104.jpeg" },
@@ -205,7 +205,7 @@ var id = function() {
   return Math.random().toString(36).substring(2, 6);
 };
 
-// src/app/generated/api/api/item.service.ts
+// src/generated/api/api/item.service.ts
 var _ItemApiService = class _ItemApiService {
   constructor() {
     this.defaultHeaders = new HttpHeaders();
@@ -307,7 +307,7 @@ var ItemApiService = _ItemApiService;
   }], null, null);
 })();
 
-// src/app/generated/api/api/list.service.ts
+// src/generated/api/api/list.service.ts
 var _ListApiService = class _ListApiService {
   constructor() {
     this.defaultHeaders = new HttpHeaders();
@@ -380,7 +380,7 @@ var ListApiService = _ListApiService;
   }], null, null);
 })();
 
-// src/app/generated/api/encoder.ts
+// src/generated/api/encoder.ts
 var CustomHttpParameterCodec = class {
   encodeKey(k) {
     return encodeURIComponent(k);
@@ -396,10 +396,10 @@ var CustomHttpParameterCodec = class {
   }
 };
 
-// src/app/generated/api/variables.ts
+// src/generated/api/variables.ts
 var BASE_PATH = new InjectionToken("basePath");
 
-// src/app/generated/api/api/product.service.ts
+// src/generated/api/api/product.service.ts
 var _ProductApiService = class _ProductApiService {
   constructor(httpClient, basePath, configuration) {
     this.httpClient = httpClient;
@@ -741,7 +741,7 @@ var ProductApiService = _ProductApiService;
   }] }], null);
 })();
 
-// src/app/generated/api/api.module.ts
+// src/generated/api/api.module.ts
 var _ApiModule = class _ApiModule {
   static forRoot(configurationFactory) {
     return {
@@ -787,4 +787,4 @@ export {
   ListApiService,
   Configuration
 };
-//# sourceMappingURL=chunk-UJ35VUF3.js.map
+//# sourceMappingURL=chunk-YF2OPKEM.js.map
