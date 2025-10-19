@@ -687,7 +687,7 @@ bootstrapApplication(App, {
     { provide: Configuration, useValue: apiConfiguration },
     provideServiceWorker("ngsw-worker.js", {
       enabled: !isDevMode(),
-      registrationStrategy: "registerWhenStable:30000"
+      registrationStrategy: "registerImmediately"
     })
   ]
 }).catch((err) => console.error(err));

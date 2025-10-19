@@ -1,6 +1,6 @@
 {
-  "name": "listok-frontend",
-  "short_name": "listok-frontend",
+  "name": "ListOk",
+  "short_name": "ListOk",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
