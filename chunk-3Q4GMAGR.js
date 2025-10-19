@@ -18,7 +18,7 @@ import {
   createFlexibleConnectedPositionStrategy,
   createOverlayRef,
   createRepositionScrollStrategy
-} from "./chunk-VVGSJIM5.js";
+} from "./chunk-2WVIK76S.js";
 import {
   BACKSPACE,
   DELETE,
@@ -48,7 +48,7 @@ import {
   hasModifierKey,
   isFakeMousedownFromScreenReader,
   isFakeTouchstartFromScreenReader
-} from "./chunk-UKVI6I6H.js";
+} from "./chunk-THKDND7H.js";
 import {
   ApplicationRef,
   ChangeDetectionStrategy,
@@ -86,6 +86,7 @@ import {
   numberAttribute,
   of,
   setClassMetadata,
+  signal,
   skipWhile,
   startWith,
   switchMap,
@@ -127,7 +128,7 @@ import {
   ɵɵresetView,
   ɵɵrestoreView,
   ɵɵviewQuery
-} from "./chunk-QBW5PNTK.js";
+} from "./chunk-K6SZ57TL.js";
 
 // node_modules/@angular/material/fesm2022/chips.mjs
 var _c0 = ["*", [["mat-chip-avatar"], ["", "matChipAvatar", ""]], [["mat-chip-trailing-icon"], ["", "matChipRemove", ""], ["", "matChipTrailingIcon", ""]]];
@@ -3064,7 +3065,7 @@ function MatMenu_ng_template_0_Template(rf, ctx) {
   if (rf & 2) {
     const ctx_r1 = \u0275\u0275nextContext();
     \u0275\u0275classMap(ctx_r1._classList);
-    \u0275\u0275classProp("mat-menu-panel-animations-disabled", ctx_r1._animationsDisabled)("mat-menu-panel-exit-animation", ctx_r1._panelAnimationState === "void")("mat-menu-panel-animating", ctx_r1._isAnimating);
+    \u0275\u0275classProp("mat-menu-panel-animations-disabled", ctx_r1._animationsDisabled)("mat-menu-panel-exit-animation", ctx_r1._panelAnimationState === "void")("mat-menu-panel-animating", ctx_r1._isAnimating());
     \u0275\u0275domProperty("id", ctx_r1.panelId);
     \u0275\u0275attribute("aria-label", ctx_r1.ariaLabel || null)("aria-labelledby", ctx_r1.ariaLabelledby || null)("aria-describedby", ctx_r1.ariaDescribedby || null);
   }
@@ -3369,7 +3370,9 @@ var MatMenu = class _MatMenu {
   /** Emits whenever an animation on the menu completes. */
   _animationDone = new Subject();
   /** Whether the menu is animating. */
-  _isAnimating = false;
+  _isAnimating = signal(false, ...ngDevMode ? [{
+    debugName: "_isAnimating"
+  }] : []);
   /** Parent menu of the current menu panel. */
   parentMenu;
   /** Layout direction of the menu. */
@@ -3613,12 +3616,12 @@ var MatMenu = class _MatMenu {
         this._exitFallbackTimeout = void 0;
       }
       this._animationDone.next(isExit ? "void" : "enter");
-      this._isAnimating = false;
+      this._isAnimating.set(false);
     }
   }
   _onAnimationStart(state) {
     if (state === ENTER_ANIMATION || state === EXIT_ANIMATION) {
-      this._isAnimating = true;
+      this._isAnimating.set(true);
     }
   }
   _setIsOpen(isOpen) {
@@ -3754,7 +3757,7 @@ var MatMenu = class _MatMenu {
     [class]="_classList"
     [class.mat-menu-panel-animations-disabled]="_animationsDisabled"
     [class.mat-menu-panel-exit-animation]="_panelAnimationState === 'void'"
-    [class.mat-menu-panel-animating]="_isAnimating"
+    [class.mat-menu-panel-animating]="_isAnimating()"
     (click)="closed.emit('click')"
     tabindex="-1"
     role="menu"
@@ -4305,7 +4308,8 @@ var MatMenuTrigger = class _MatMenuTrigger extends MatMenuTriggerBase {
   _handleHover() {
     if (this.triggersSubmenu() && this._parentMaterialMenu) {
       this._hoverSubscription = this._parentMaterialMenu._hovered().subscribe((active) => {
-        if (active === this._menuItemInstance && !active.disabled) {
+        if (active === this._menuItemInstance && !active.disabled && // Ignore hover events if the parent menu is in the process of being closed (see #31956).
+        this._parentMaterialMenu?._panelAnimationState !== "void") {
           this._openedBy = "mouse";
           this._openMenu(false);
         }
@@ -5063,4 +5067,4 @@ export {
   MatMenuTrigger,
   MatMenuModule
 };
-//# sourceMappingURL=chunk-QJXQKOZO.js.map
+//# sourceMappingURL=chunk-3Q4GMAGR.js.map

@@ -22,7 +22,7 @@ import {
   _ErrorStateTracker,
   createGlobalPositionStrategy,
   createOverlayRef
-} from "./chunk-VVGSJIM5.js";
+} from "./chunk-2WVIK76S.js";
 import {
   BreakpointObserver,
   Breakpoints,
@@ -39,7 +39,7 @@ import {
   coerceElement,
   coerceNumberProperty,
   getSupportedInputTypes
-} from "./chunk-UKVI6I6H.js";
+} from "./chunk-THKDND7H.js";
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -100,7 +100,7 @@ import {
   ɵɵtext,
   ɵɵtextInterpolate1,
   ɵɵviewQuery
-} from "./chunk-QBW5PNTK.js";
+} from "./chunk-K6SZ57TL.js";
 
 // node_modules/@angular/material/fesm2022/form-field-module.mjs
 var MatFormFieldModule = class _MatFormFieldModule {
@@ -335,8 +335,6 @@ var CdkTextareaAutosize = class _CdkTextareaAutosize {
   _cachedLineHeight;
   /** Cached height of a textarea with only the placeholder. */
   _cachedPlaceholderHeight;
-  /** Cached scroll top of a textarea */
-  _cachedScrollTop;
   /** Used to reference correct document/window */
   _document = inject(DOCUMENT);
   _hasFocus;
@@ -460,7 +458,6 @@ var CdkTextareaAutosize = class _CdkTextareaAutosize {
     }
     this._cacheTextareaLineHeight();
     this._cacheTextareaPlaceholderHeight();
-    this._cachedScrollTop = this._textareaElement.scrollTop;
     if (!this._cachedLineHeight) {
       return;
     }
@@ -504,7 +501,6 @@ var CdkTextareaAutosize = class _CdkTextareaAutosize {
     } = textarea;
     if (!this._destroyed.isStopped && this._hasFocus) {
       textarea.setSelectionRange(selectionStart, selectionEnd);
-      textarea.scrollTop = this._cachedScrollTop;
     }
   }
   static \u0275fac = function CdkTextareaAutosize_Factory(__ngFactoryType__) {
@@ -1354,7 +1350,7 @@ var SimpleSnackBar = class _SimpleSnackBar {
       }
     },
     dependencies: [MatButton, MatSnackBarLabel, MatSnackBarActions, MatSnackBarAction],
-    styles: [".mat-mdc-simple-snack-bar{display:flex}\n"],
+    styles: [".mat-mdc-simple-snack-bar{display:flex}.mat-mdc-simple-snack-bar .mat-mdc-snack-bar-label{max-height:50vh;overflow:auto}\n"],
     encapsulation: 2,
     changeDetection: 0
   });
@@ -1372,7 +1368,7 @@ var SimpleSnackBar = class _SimpleSnackBar {
         "class": "mat-mdc-simple-snack-bar"
       },
       template: '<div matSnackBarLabel>\n  {{data.message}}\n</div>\n\n@if (hasAction) {\n  <div matSnackBarActions>\n    <button matButton matSnackBarAction (click)="action()">\n      {{data.action}}\n    </button>\n  </div>\n}\n',
-      styles: [".mat-mdc-simple-snack-bar{display:flex}\n"]
+      styles: [".mat-mdc-simple-snack-bar{display:flex}.mat-mdc-simple-snack-bar .mat-mdc-snack-bar-label{max-height:50vh;overflow:auto}\n"]
     }]
   }], () => [], null);
 })();
@@ -1970,4 +1966,4 @@ export {
   MatSnackBar,
   MatSnackBarModule
 };
-//# sourceMappingURL=chunk-3GJLMYAP.js.map
+//# sourceMappingURL=chunk-NSHZD6UQ.js.map

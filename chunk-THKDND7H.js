@@ -97,7 +97,7 @@ import {
   ɵɵtemplate,
   ɵɵtemplateRefExtractor,
   ɵɵviewQuery
-} from "./chunk-QBW5PNTK.js";
+} from "./chunk-K6SZ57TL.js";
 
 // node_modules/@angular/cdk/fesm2022/fake-event-detection.mjs
 function isFakeMousedownFromScreenReader(event) {
@@ -3565,7 +3565,7 @@ function supportsScrollBehavior() {
       scrollBehaviorSupported = false;
       return scrollBehaviorSupported;
     }
-    if ("scrollBehavior" in document.documentElement.style) {
+    if (document.documentElement?.style && "scrollBehavior" in document.documentElement.style) {
       scrollBehaviorSupported = true;
     } else {
       const scrollToFunction = Element.prototype.scrollTo;
@@ -6403,4 +6403,4 @@ export {
   MatProgressSpinner,
   MatProgressSpinnerModule
 };
-//# sourceMappingURL=chunk-UKVI6I6H.js.map
+//# sourceMappingURL=chunk-THKDND7H.js.map
