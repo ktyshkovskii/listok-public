@@ -8706,8 +8706,8 @@ var _ListService = class _ListService {
   mapApiItemToItem(item) {
     return {
       id: item.id,
-      item: item.product,
-      color: item.groupColor,
+      product: item.product,
+      groupColor: item.groupColor,
       count: item.count,
       status: item.status
     };
@@ -13824,4 +13824,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-IFORJCRU.js.map
+//# sourceMappingURL=chunk-VVGSJIM5.js.map

@@ -46,22 +46,22 @@ var routes = [
   },
   {
     path: "dashboard",
-    loadComponent: () => import("./chunk-52R7W5YW.js").then((m) => m.DashboardComponent),
+    loadComponent: () => import("./chunk-MHKFUBYW.js").then((m) => m.DashboardComponent),
     canActivate: [authGuard]
   },
   {
     path: "lists/new",
-    loadComponent: () => import("./chunk-NOP43RAM.js").then((m) => m.ListCreateComponent),
+    loadComponent: () => import("./chunk-SUGFJJHH.js").then((m) => m.ListCreateComponent),
     canActivate: [authGuard]
   },
   {
     path: "lists/:id/edit",
-    loadComponent: () => import("./chunk-NOP43RAM.js").then((m) => m.ListCreateComponent),
+    loadComponent: () => import("./chunk-SUGFJJHH.js").then((m) => m.ListCreateComponent),
     canActivate: [authGuard]
   },
   {
     path: "lists/:id",
-    loadComponent: () => import("./chunk-OGUYTYE6.js").then((m) => m.ListDetailComponent),
+    loadComponent: () => import("./chunk-2563IPE7.js").then((m) => m.ListDetailComponent),
     canActivate: [authGuard]
   },
   {

@@ -7,14 +7,14 @@ import {
   MatPseudoCheckbox,
   MatPseudoCheckboxModule,
   SelectionModel
-} from "./chunk-MDWM2PGT.js";
+} from "./chunk-QJXQKOZO.js";
 import {
   MatFormFieldModule,
   MatInput,
   MatInputModule,
   MatSnackBar,
   MatSnackBarModule
-} from "./chunk-SKNUA3AO.js";
+} from "./chunk-3GJLMYAP.js";
 import {
   BasePortalOutlet,
   CdkConnectedOverlay,
@@ -59,7 +59,7 @@ import {
   createOverlayRef,
   createRepositionScrollStrategy,
   ɵNgNoValidate
-} from "./chunk-IFORJCRU.js";
+} from "./chunk-VVGSJIM5.js";
 import {
   ItemApiService
 } from "./chunk-YF2OPKEM.js";
@@ -2021,17 +2021,17 @@ var _ItemService = class _ItemService {
   mapApiItemToItem(apiItem) {
     return {
       id: apiItem.id,
-      item: apiItem.product,
+      product: apiItem.product,
       count: apiItem.count,
-      color: apiItem.groupColor,
+      groupColor: apiItem.groupColor,
       status: this.mapItemStatusFromApi(apiItem.status)
     };
   }
   mapItemToItemFields(item) {
     return {
-      product: item.item,
+      product: item.product,
       count: item.count,
-      groupColor: item.color,
+      groupColor: item.groupColor,
       status: this.mapItemStatusToApi(item.status)
     };
   }
@@ -4074,11 +4074,11 @@ var _CreateItemDialogComponent = class _CreateItemDialogComponent {
     this.dialogRef = inject(MatDialogRef);
     this.data = inject(MAT_DIALOG_DATA);
     this.itemForm = this.fb.group({
-      name: [this.data.item?.item.name || "", Validators.required],
-      comment: [this.data.item?.item.comment || ""],
-      img: [this.data.item?.item.img || ""],
+      name: [this.data.item?.product.name || "", Validators.required],
+      comment: [this.data.item?.product.comment || ""],
+      img: [this.data.item?.product.img || ""],
       count: [this.data.item?.count || 1, [Validators.required, Validators.min(1)]],
-      color: [this.data.item?.color || null]
+      color: [this.data.item?.groupColor || null]
     });
   }
   onCancel() {
@@ -4089,7 +4089,7 @@ var _CreateItemDialogComponent = class _CreateItemDialogComponent {
       const formValue = this.itemForm.value;
       const itemRequest = {
         item: {
-          id: this.data.item?.item.id || "",
+          id: this.data.item?.product.id || "",
           name: formValue.name,
           comment: formValue.comment || void 0,
           img: formValue.img || void 0
@@ -4481,7 +4481,7 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditi
   if (rf & 2) {
     const item_r4 = \u0275\u0275nextContext().$implicit;
     \u0275\u0275advance();
-    \u0275\u0275property("src", item_r4.item.img, \u0275\u0275sanitizeUrl)("alt", item_r4.item.name);
+    \u0275\u0275property("src", item_r4.product.img, \u0275\u0275sanitizeUrl)("alt", item_r4.product.name);
   }
 }
 function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_6_For_2_For_4_Conditional_6_Template(rf, ctx) {
@@ -4493,7 +4493,7 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditi
   if (rf & 2) {
     const item_r4 = \u0275\u0275nextContext().$implicit;
     \u0275\u0275advance();
-    \u0275\u0275textInterpolate(item_r4.item.comment);
+    \u0275\u0275textInterpolate(item_r4.product.comment);
   }
 }
 function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_6_For_2_For_4_Template(rf, ctx) {
@@ -4555,11 +4555,11 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditi
     const item_r4 = ctx.$implicit;
     const itemMenu_r5 = \u0275\u0275reference(15);
     \u0275\u0275advance(2);
-    \u0275\u0275conditional(item_r4.item.img ? 2 : -1);
+    \u0275\u0275conditional(item_r4.product.img ? 2 : -1);
     \u0275\u0275advance(3);
-    \u0275\u0275textInterpolate(item_r4.item.name);
+    \u0275\u0275textInterpolate(item_r4.product.name);
     \u0275\u0275advance();
-    \u0275\u0275conditional(item_r4.item.comment ? 6 : -1);
+    \u0275\u0275conditional(item_r4.product.comment ? 6 : -1);
     \u0275\u0275advance(4);
     \u0275\u0275textInterpolate(item_r4.count);
     \u0275\u0275advance();
@@ -4666,7 +4666,7 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_F
   if (rf & 2) {
     const item_r9 = \u0275\u0275nextContext().$implicit;
     \u0275\u0275advance();
-    \u0275\u0275property("src", item_r9.item.img, \u0275\u0275sanitizeUrl)("alt", item_r9.item.name);
+    \u0275\u0275property("src", item_r9.product.img, \u0275\u0275sanitizeUrl)("alt", item_r9.product.name);
   }
 }
 function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_For_4_Conditional_6_Template(rf, ctx) {
@@ -4678,7 +4678,7 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_F
   if (rf & 2) {
     const item_r9 = \u0275\u0275nextContext().$implicit;
     \u0275\u0275advance();
-    \u0275\u0275textInterpolate(item_r9.item.comment);
+    \u0275\u0275textInterpolate(item_r9.product.comment);
   }
 }
 function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_For_4_Template(rf, ctx) {
@@ -4740,11 +4740,11 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_F
     const item_r9 = ctx.$implicit;
     const itemMenu_r10 = \u0275\u0275reference(15);
     \u0275\u0275advance(2);
-    \u0275\u0275conditional(item_r9.item.img ? 2 : -1);
+    \u0275\u0275conditional(item_r9.product.img ? 2 : -1);
     \u0275\u0275advance(3);
-    \u0275\u0275textInterpolate(item_r9.item.name);
+    \u0275\u0275textInterpolate(item_r9.product.name);
     \u0275\u0275advance();
-    \u0275\u0275conditional(item_r9.item.comment ? 6 : -1);
+    \u0275\u0275conditional(item_r9.product.comment ? 6 : -1);
     \u0275\u0275advance(4);
     \u0275\u0275textInterpolate(item_r9.count);
     \u0275\u0275advance();
@@ -4986,8 +4986,8 @@ var _ListDetailComponent = class _ListDetailComponent {
   }
   sortItemsByColor(items) {
     return items.sort((a, b) => {
-      const colorA = a.color || "";
-      const colorB = b.color || "";
+      const colorA = a.groupColor || "";
+      const colorB = b.groupColor || "";
       if (!colorA && colorB)
         return 1;
       if (colorA && !colorB)
@@ -5001,7 +5001,7 @@ var _ListDetailComponent = class _ListDetailComponent {
     const groups = [];
     let currentGroup = null;
     items.forEach((item) => {
-      const color = item.color || null;
+      const color = item.groupColor || null;
       if (!currentGroup || currentGroup.color !== color) {
         currentGroup = { color, items: [] };
         groups.push(currentGroup);
@@ -5053,7 +5053,7 @@ var _ListDetailComponent = class _ListDetailComponent {
     });
   }
   deleteItem(item) {
-    const dialogRef = this.openConfirmDeleteDialog("Delete Item", `Are you sure you want to delete "${item.item.name}"?`);
+    const dialogRef = this.openConfirmDeleteDialog("Delete Item", `Are you sure you want to delete "${item.product.name}"?`);
     dialogRef.afterClosed().subscribe((confirmed) => {
       if (confirmed) {
         this.apiItemService.deleteItem(item.id).subscribe({
@@ -5282,15 +5282,15 @@ var ListDetailComponent = _ListDetailComponent;
                           <div class="item-content" tabindex="0"
                                (click)="toggleItemStatus(item)"
                                (keydown.enter)="toggleItemStatus(item)">
-                            @if (item.item.img) {
+                            @if (item.product.img) {
                               <div class="item-image">
-                                <img [src]="item.item.img" [alt]="item.item.name">
+                                <img [src]="item.product.img" [alt]="item.product.name">
                               </div>
                             }
                             <div class="item-info">
-                              <h3 class="item-name">{{ item.item.name }}</h3>
-                              @if (item.item.comment) {
-                                <p class="item-comment">{{ item.item.comment }}</p>
+                              <h3 class="item-name">{{ item.product.name }}</h3>
+                              @if (item.product.comment) {
+                                <p class="item-comment">{{ item.product.comment }}</p>
                               }
                             </div>
                             <div class="item-details">
@@ -5355,15 +5355,15 @@ var ListDetailComponent = _ListDetailComponent;
                         <div class="item-content" tabindex="0"
                              (click)="toggleItemStatus(item)"
                              (keydown.enter)="toggleItemStatus(item)">
-                          @if (item.item.img) {
+                          @if (item.product.img) {
                             <div class="item-image">
-                              <img [src]="item.item.img" [alt]="item.item.name">
+                              <img [src]="item.product.img" [alt]="item.product.name">
                             </div>
                           }
                           <div class="item-info">
-                            <h3 class="item-name bought-text">{{ item.item.name }}</h3>
-                            @if (item.item.comment) {
-                              <p class="item-comment bought-text">{{ item.item.comment }}</p>
+                            <h3 class="item-name bought-text">{{ item.product.name }}</h3>
+                            @if (item.product.comment) {
+                              <p class="item-comment bought-text">{{ item.product.comment }}</p>
                             }
                           </div>
                           <div class="item-details">
@@ -5412,4 +5412,4 @@ var ListDetailComponent = _ListDetailComponent;
 export {
   ListDetailComponent
 };
-//# sourceMappingURL=chunk-OGUYTYE6.js.map
+//# sourceMappingURL=chunk-2563IPE7.js.map
