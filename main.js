@@ -42,26 +42,26 @@ var routes = [
   },
   {
     path: "login",
-    loadComponent: () => import("./chunk-LV7QCCAH.js").then((m) => m.LoginComponent)
+    loadComponent: () => import("./chunk-7YA4ABAN.js").then((m) => m.LoginComponent)
   },
   {
     path: "dashboard",
-    loadComponent: () => import("./chunk-ZVNPM4I5.js").then((m) => m.DashboardComponent),
+    loadComponent: () => import("./chunk-52R7W5YW.js").then((m) => m.DashboardComponent),
     canActivate: [authGuard]
   },
   {
     path: "lists/new",
-    loadComponent: () => import("./chunk-FO4OL6UC.js").then((m) => m.ListCreateComponent),
+    loadComponent: () => import("./chunk-NOP43RAM.js").then((m) => m.ListCreateComponent),
     canActivate: [authGuard]
   },
   {
     path: "lists/:id/edit",
-    loadComponent: () => import("./chunk-FO4OL6UC.js").then((m) => m.ListCreateComponent),
+    loadComponent: () => import("./chunk-NOP43RAM.js").then((m) => m.ListCreateComponent),
     canActivate: [authGuard]
   },
   {
     path: "lists/:id",
-    loadComponent: () => import("./chunk-VWDLNWUD.js").then((m) => m.ListDetailComponent),
+    loadComponent: () => import("./chunk-OGUYTYE6.js").then((m) => m.ListDetailComponent),
     canActivate: [authGuard]
   },
   {

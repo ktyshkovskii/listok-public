@@ -282,20 +282,6 @@ body {
     0 3px 4px 0 rgba(0, 0, 0, 0.14),
     0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
-.hidden-mobile {
-  display: block;
-}
-@media (max-width: 768px) {
-  .hidden-mobile {
-    display: none;
-  }
-  .mobile-only {
-    display: block;
-  }
-}
-.mobile-only {
-  display: none;
-}
 .mat-mdc-card:hover {
   transform: translateY(-2px);
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
