@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/models/list.model.ts"],
+  "sourcesContent": ["export interface Product {\n  id: number;\n  name: string;\n  img?: string;\n  comment?: string;\n}\n\nexport interface Item {\n  id: number;\n  product: Product;\n  count: number;\n  groupColor?: string;\n  status: ItemStatus;\n}\n\nexport enum ItemStatus {\n  ToBuy = 'to_buy',\n  Bought = 'bought'\n}\n\nexport type CreateItemFields = Omit<Item, 'id' | 'product'> & { product: Omit<Product, 'id'> };\nexport type UpdateItemFields = Partial<Omit<Item, 'id' | 'product'>>;\n\nexport interface List {\n  id: number;\n  name: string;\n  comment?: string;\n  img?: string;\n  items: Item[];\n}\n\nexport type CreateListFields = Omit<List, 'id' | 'items'>;\nexport type UpdateListFields = Partial<Omit<List, 'id' | 'items'>>;\n"],
+  "mappings": ";AAeA,IAAY;CAAZ,SAAYA,aAAU;AACpB,EAAAA,YAAA,OAAA,IAAA;AACA,EAAAA,YAAA,QAAA,IAAA;AACF,GAHY,eAAA,aAAU,CAAA,EAAA;",
+  "names": ["ItemStatus"]
+}
