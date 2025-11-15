@@ -4,7 +4,7 @@ import {
   MatInputModule,
   MatSnackBar,
   MatSnackBarModule
-} from "./chunk-YDHSHABV.js";
+} from "./chunk-V57EUTBC.js";
 import {
   DefaultValueAccessor,
   FormBuilder,
@@ -24,8 +24,8 @@ import {
   ReactiveFormsModule,
   Validators,
   ɵNgNoValidate
-} from "./chunk-KAKX5BFP.js";
-import "./chunk-FR7P32RA.js";
+} from "./chunk-CGMNGKLP.js";
+import "./chunk-YVELVC6T.js";
 import {
   MatButton,
   MatButtonModule,
@@ -40,7 +40,7 @@ import {
   MatIconModule,
   MatProgressSpinner,
   MatProgressSpinnerModule
-} from "./chunk-CZPQX472.js";
+} from "./chunk-5MMZJS6I.js";
 import {
   ActivatedRoute,
   Component,
@@ -69,7 +69,7 @@ import {
   ɵɵtext,
   ɵɵtextInterpolate,
   ɵɵtextInterpolate1
-} from "./chunk-TY32VY2X.js";
+} from "./chunk-JW7K3KUO.js";
 
 // src/app/components/list-create/list-create.component.ts
 function ListCreateComponent_Conditional_9_Template(rf, ctx) {
@@ -220,7 +220,7 @@ var _ListCreateComponent = class _ListCreateComponent {
     ];
   }
   ngOnInit() {
-    this.listId = Number(this.route.snapshot.paramMap.get("id"));
+    this.listId = this.route.snapshot.paramMap.get("id");
     this.isEditMode = !!this.listId;
     this.setupImagePreview();
     if (this.isEditMode && this.listId) {
@@ -644,4 +644,4 @@ var ListCreateComponent = _ListCreateComponent;
 export {
   ListCreateComponent
 };
-//# sourceMappingURL=chunk-HFG6GAZ7.js.map
+//# sourceMappingURL=chunk-BGUKQSTT.js.map

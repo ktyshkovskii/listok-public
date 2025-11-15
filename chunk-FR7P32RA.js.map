@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/app/database/data-repository.ts"],
-  "sourcesContent": ["import { InjectionToken } from \"@angular/core\";\r\nimport { CreateItemFields, CreateListFields, List, UpdateItemFields, UpdateListFields } from \"../models/list.model\";\r\nimport { Observable } from \"rxjs\";\r\n\r\nexport const DATA_REPOSITORY = new InjectionToken<DataRepository>('DataRepository');\r\n\r\nexport interface DataRepository {\r\n  createItemInList(listId: number, newitem: CreateItemFields): Observable<number>;\r\n  updateItem(id: number, item: UpdateItemFields): Observable<number>;\r\n  deleteItem(id: number): Observable<void>;\r\n\r\n  createList(param: CreateListFields): Observable<number>;\r\n  getAllLists(): Observable<List[]>;\r\n  getListById(id: number): Observable<List>;\r\n  updateList(id: number, list: UpdateListFields): Observable<number>;\r\n  deleteList(id: number): Observable<void>;\r\n}\r\n"],
-  "mappings": ";;;;;AAIO,IAAM,kBAAkB,IAAI,eAA+B,gBAAgB;",
-  "names": []
-}

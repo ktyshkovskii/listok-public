@@ -1,6 +1,6 @@
 import {
   AuthService
-} from "./chunk-RB2K7C4D.js";
+} from "./chunk-OBF5TR3F.js";
 import {
   MatChipOption,
   MatChipSet,
@@ -11,7 +11,7 @@ import {
   MatMenuTrigger,
   MatPseudoCheckboxModule,
   SelectionModel
-} from "./chunk-FUFDKGON.js";
+} from "./chunk-UGWFDEFX.js";
 import {
   CdkScrollable,
   CdkScrollableModule,
@@ -21,8 +21,8 @@ import {
   NG_VALUE_ACCESSOR,
   ScrollDispatcher,
   ViewportRuler
-} from "./chunk-KAKX5BFP.js";
-import "./chunk-FR7P32RA.js";
+} from "./chunk-CGMNGKLP.js";
+import "./chunk-YVELVC6T.js";
 import {
   A,
   A11yModule,
@@ -62,7 +62,7 @@ import {
   coerceBooleanProperty,
   coerceNumberProperty,
   hasModifierKey
-} from "./chunk-CZPQX472.js";
+} from "./chunk-5MMZJS6I.js";
 import {
   BehaviorSubject,
   ChangeDetectionStrategy,
@@ -153,7 +153,7 @@ import {
   ɵɵtextInterpolate,
   ɵɵtextInterpolate1,
   ɵɵviewQuery
-} from "./chunk-TY32VY2X.js";
+} from "./chunk-JW7K3KUO.js";
 
 // node_modules/@angular/material/fesm2022/sidenav.mjs
 var _c0 = ["*"];
@@ -4522,9 +4522,34 @@ var _c04 = () => ["/lists/new"];
 var _c14 = () => ["/dashboard"];
 var _c24 = () => ["/lists"];
 var _c34 = () => ({ exact: true });
+var _c43 = () => ["/login"];
+function DashboardComponent_Conditional_12_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "button", 8);
+    \u0275\u0275element(1, "img", 31);
+    \u0275\u0275elementEnd();
+  }
+  if (rf & 2) {
+    const ctx_r2 = \u0275\u0275nextContext();
+    const userMenu_r4 = \u0275\u0275reference(15);
+    \u0275\u0275property("matMenuTriggerFor", userMenu_r4);
+    \u0275\u0275advance();
+    \u0275\u0275property("src", ctx_r2.currentUser.photoURL || "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg", \u0275\u0275sanitizeUrl)("alt", ctx_r2.currentUser.displayName || "User");
+  }
+}
+function DashboardComponent_Conditional_13_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "button", 9)(1, "mat-icon");
+    \u0275\u0275text(2, "account_circle");
+    \u0275\u0275elementEnd()();
+  }
+  if (rf & 2) {
+    \u0275\u0275property("routerLink", \u0275\u0275pureFunction0(1, _c43));
+  }
+}
 function DashboardComponent_Conditional_78_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 28)(1, "mat-card", 31)(2, "mat-card-content")(3, "div", 32)(4, "mat-icon", 33);
+    \u0275\u0275elementStart(0, "div", 28)(1, "mat-card", 32)(2, "mat-card-content")(3, "div", 33)(4, "mat-icon", 34);
     \u0275\u0275text(5, "assignment");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(6, "h3");
@@ -4533,7 +4558,7 @@ function DashboardComponent_Conditional_78_Template(rf, ctx) {
     \u0275\u0275elementStart(8, "p");
     \u0275\u0275text(9, "Total Lists");
     \u0275\u0275elementEnd()()()();
-    \u0275\u0275elementStart(10, "mat-card", 31)(11, "mat-card-content")(12, "div", 32)(13, "mat-icon", 34);
+    \u0275\u0275elementStart(10, "mat-card", 32)(11, "mat-card-content")(12, "div", 33)(13, "mat-icon", 35);
     \u0275\u0275text(14, "shopping_cart");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(15, "h3");
@@ -4542,7 +4567,7 @@ function DashboardComponent_Conditional_78_Template(rf, ctx) {
     \u0275\u0275elementStart(17, "p");
     \u0275\u0275text(18, "Items to Buy");
     \u0275\u0275elementEnd()()()();
-    \u0275\u0275elementStart(19, "mat-card", 31)(20, "mat-card-content")(21, "div", 32)(22, "mat-icon", 35);
+    \u0275\u0275elementStart(19, "mat-card", 32)(20, "mat-card-content")(21, "div", 33)(22, "mat-icon", 36);
     \u0275\u0275text(23, "done_all");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(24, "h3");
@@ -4551,7 +4576,7 @@ function DashboardComponent_Conditional_78_Template(rf, ctx) {
     \u0275\u0275elementStart(26, "p");
     \u0275\u0275text(27, "Items Bought");
     \u0275\u0275elementEnd()()()();
-    \u0275\u0275elementStart(28, "mat-card", 31)(29, "mat-card-content")(30, "div", 32)(31, "mat-icon", 36);
+    \u0275\u0275elementStart(28, "mat-card", 32)(29, "mat-card-content")(30, "div", 33)(31, "mat-icon", 37);
     \u0275\u0275text(32, "percent");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(33, "h3");
@@ -4575,88 +4600,88 @@ function DashboardComponent_Conditional_78_Template(rf, ctx) {
 }
 function DashboardComponent_Conditional_79_For_5_Conditional_6_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "p", 45);
+    \u0275\u0275elementStart(0, "p", 46);
     \u0275\u0275text(1);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
-    const list_r5 = \u0275\u0275nextContext().$implicit;
+    const list_r6 = \u0275\u0275nextContext().$implicit;
     \u0275\u0275advance();
-    \u0275\u0275textInterpolate(list_r5.comment);
+    \u0275\u0275textInterpolate(list_r6.comment);
   }
 }
 function DashboardComponent_Conditional_79_For_5_Conditional_13_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "mat-chip-option", 48)(1, "mat-icon");
+    \u0275\u0275elementStart(0, "mat-chip-option", 49)(1, "mat-icon");
     \u0275\u0275text(2, "shopping_cart");
     \u0275\u0275elementEnd();
     \u0275\u0275text(3);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
-    const list_r5 = \u0275\u0275nextContext().$implicit;
+    const list_r6 = \u0275\u0275nextContext().$implicit;
     const ctx_r2 = \u0275\u0275nextContext(2);
     \u0275\u0275property("disabled", true);
     \u0275\u0275advance(3);
-    \u0275\u0275textInterpolate1(" ", ctx_r2.getListItemsToBuy(list_r5), " to buy ");
+    \u0275\u0275textInterpolate1(" ", ctx_r2.getListItemsToBuy(list_r6), " to buy ");
   }
 }
 function DashboardComponent_Conditional_79_For_5_Conditional_14_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "mat-chip-option", 48)(1, "mat-icon");
+    \u0275\u0275elementStart(0, "mat-chip-option", 49)(1, "mat-icon");
     \u0275\u0275text(2, "done");
     \u0275\u0275elementEnd();
     \u0275\u0275text(3);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
-    const list_r5 = \u0275\u0275nextContext().$implicit;
+    const list_r6 = \u0275\u0275nextContext().$implicit;
     const ctx_r2 = \u0275\u0275nextContext(2);
     \u0275\u0275property("disabled", true);
     \u0275\u0275advance(3);
-    \u0275\u0275textInterpolate1(" ", ctx_r2.getListItemsBought(list_r5), " done ");
+    \u0275\u0275textInterpolate1(" ", ctx_r2.getListItemsBought(list_r6), " done ");
   }
 }
 function DashboardComponent_Conditional_79_For_5_Template(rf, ctx) {
   if (rf & 1) {
-    const _r4 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "mat-card", 41);
+    const _r5 = \u0275\u0275getCurrentView();
+    \u0275\u0275elementStart(0, "mat-card", 42);
     \u0275\u0275listener("click", function DashboardComponent_Conditional_79_For_5_Template_mat_card_click_0_listener() {
-      const list_r5 = \u0275\u0275restoreView(_r4).$implicit;
+      const list_r6 = \u0275\u0275restoreView(_r5).$implicit;
       const ctx_r2 = \u0275\u0275nextContext(2);
-      return \u0275\u0275resetView(ctx_r2.openList(list_r5.id));
+      return \u0275\u0275resetView(ctx_r2.openList(list_r6.id));
     });
-    \u0275\u0275elementStart(1, "div", 42)(2, "div", 43)(3, "h3", 44);
+    \u0275\u0275elementStart(1, "div", 43)(2, "div", 44)(3, "h3", 45);
     \u0275\u0275text(4);
     \u0275\u0275elementEnd()()();
     \u0275\u0275elementStart(5, "mat-card-content");
-    \u0275\u0275conditionalCreate(6, DashboardComponent_Conditional_79_For_5_Conditional_6_Template, 2, 1, "p", 45);
-    \u0275\u0275elementStart(7, "div", 46)(8, "mat-chip-set", 47)(9, "mat-chip-option", 48)(10, "mat-icon");
+    \u0275\u0275conditionalCreate(6, DashboardComponent_Conditional_79_For_5_Conditional_6_Template, 2, 1, "p", 46);
+    \u0275\u0275elementStart(7, "div", 47)(8, "mat-chip-set", 48)(9, "mat-chip-option", 49)(10, "mat-icon");
     \u0275\u0275text(11, "assignment");
     \u0275\u0275elementEnd();
     \u0275\u0275text(12);
     \u0275\u0275elementEnd();
-    \u0275\u0275conditionalCreate(13, DashboardComponent_Conditional_79_For_5_Conditional_13_Template, 4, 2, "mat-chip-option", 48);
-    \u0275\u0275conditionalCreate(14, DashboardComponent_Conditional_79_For_5_Conditional_14_Template, 4, 2, "mat-chip-option", 48);
+    \u0275\u0275conditionalCreate(13, DashboardComponent_Conditional_79_For_5_Conditional_13_Template, 4, 2, "mat-chip-option", 49);
+    \u0275\u0275conditionalCreate(14, DashboardComponent_Conditional_79_For_5_Conditional_14_Template, 4, 2, "mat-chip-option", 49);
     \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(15, "mat-card-actions")(16, "button", 49);
+    \u0275\u0275elementStart(15, "mat-card-actions")(16, "button", 50);
     \u0275\u0275listener("click", function DashboardComponent_Conditional_79_For_5_Template_button_click_16_listener($event) {
-      const list_r5 = \u0275\u0275restoreView(_r4).$implicit;
+      const list_r6 = \u0275\u0275restoreView(_r5).$implicit;
       const ctx_r2 = \u0275\u0275nextContext(2);
       $event.stopPropagation();
-      return \u0275\u0275resetView(ctx_r2.openList(list_r5.id));
+      return \u0275\u0275resetView(ctx_r2.openList(list_r6.id));
     });
     \u0275\u0275elementStart(17, "mat-icon");
     \u0275\u0275text(18, "open_in_new");
     \u0275\u0275elementEnd();
     \u0275\u0275text(19, " View ");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(20, "button", 50);
+    \u0275\u0275elementStart(20, "button", 51);
     \u0275\u0275listener("click", function DashboardComponent_Conditional_79_For_5_Template_button_click_20_listener($event) {
-      const list_r5 = \u0275\u0275restoreView(_r4).$implicit;
+      const list_r6 = \u0275\u0275restoreView(_r5).$implicit;
       const ctx_r2 = \u0275\u0275nextContext(2);
       $event.stopPropagation();
-      return \u0275\u0275resetView(ctx_r2.editList(list_r5.id));
+      return \u0275\u0275resetView(ctx_r2.editList(list_r6.id));
     });
     \u0275\u0275elementStart(21, "mat-icon");
     \u0275\u0275text(22, "edit");
@@ -4665,27 +4690,27 @@ function DashboardComponent_Conditional_79_For_5_Template(rf, ctx) {
     \u0275\u0275elementEnd()()();
   }
   if (rf & 2) {
-    const list_r5 = ctx.$implicit;
+    const list_r6 = ctx.$implicit;
     const ctx_r2 = \u0275\u0275nextContext(2);
     \u0275\u0275advance();
-    \u0275\u0275styleProp("background-image", "url(" + (list_r5.img || "https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg") + ")");
+    \u0275\u0275styleProp("background-image", "url(" + (list_r6.img || "https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg") + ")");
     \u0275\u0275advance(3);
-    \u0275\u0275textInterpolate(list_r5.name);
+    \u0275\u0275textInterpolate(list_r6.name);
     \u0275\u0275advance(2);
-    \u0275\u0275conditional(list_r5.comment ? 6 : -1);
+    \u0275\u0275conditional(list_r6.comment ? 6 : -1);
     \u0275\u0275advance(3);
     \u0275\u0275property("disabled", true);
     \u0275\u0275advance(3);
-    \u0275\u0275textInterpolate1(" ", list_r5.items.length, " items ");
+    \u0275\u0275textInterpolate1(" ", list_r6.items.length, " items ");
     \u0275\u0275advance();
-    \u0275\u0275conditional(ctx_r2.getListItemsToBuy(list_r5) > 0 ? 13 : -1);
+    \u0275\u0275conditional(ctx_r2.getListItemsToBuy(list_r6) > 0 ? 13 : -1);
     \u0275\u0275advance();
-    \u0275\u0275conditional(ctx_r2.getListItemsBought(list_r5) > 0 ? 14 : -1);
+    \u0275\u0275conditional(ctx_r2.getListItemsBought(list_r6) > 0 ? 14 : -1);
   }
 }
 function DashboardComponent_Conditional_79_Conditional_6_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 40)(1, "mat-icon", 51);
+    \u0275\u0275elementStart(0, "div", 41)(1, "mat-icon", 52);
     \u0275\u0275text(2, "assignment");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(3, "h3");
@@ -4694,7 +4719,7 @@ function DashboardComponent_Conditional_79_Conditional_6_Template(rf, ctx) {
     \u0275\u0275elementStart(5, "p");
     \u0275\u0275text(6, "Create your first list to get started");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(7, "button", 52)(8, "mat-icon");
+    \u0275\u0275elementStart(7, "button", 53)(8, "mat-icon");
     \u0275\u0275text(9, "add");
     \u0275\u0275elementEnd();
     \u0275\u0275text(10, " Create Your First List ");
@@ -4707,13 +4732,13 @@ function DashboardComponent_Conditional_79_Conditional_6_Template(rf, ctx) {
 }
 function DashboardComponent_Conditional_79_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 29)(1, "h2", 37);
+    \u0275\u0275elementStart(0, "div", 29)(1, "h2", 38);
     \u0275\u0275text(2, "Recent Lists");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(3, "div", 38);
-    \u0275\u0275repeaterCreate(4, DashboardComponent_Conditional_79_For_5_Template, 24, 8, "mat-card", 39, \u0275\u0275repeaterTrackByIdentity);
+    \u0275\u0275elementStart(3, "div", 39);
+    \u0275\u0275repeaterCreate(4, DashboardComponent_Conditional_79_For_5_Template, 24, 8, "mat-card", 40, \u0275\u0275repeaterTrackByIdentity);
     \u0275\u0275elementEnd();
-    \u0275\u0275conditionalCreate(6, DashboardComponent_Conditional_79_Conditional_6_Template, 11, 2, "div", 40);
+    \u0275\u0275conditionalCreate(6, DashboardComponent_Conditional_79_Conditional_6_Template, 11, 2, "div", 41);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -4727,7 +4752,7 @@ function DashboardComponent_Conditional_79_Template(rf, ctx) {
 function DashboardComponent_Conditional_80_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 30);
-    \u0275\u0275element(1, "mat-spinner", 53);
+    \u0275\u0275element(1, "mat-spinner", 54);
     \u0275\u0275elementStart(2, "p");
     \u0275\u0275text(3, "Loading your dashboard...");
     \u0275\u0275elementEnd()();
@@ -4745,9 +4770,6 @@ var _DashboardComponent = class _DashboardComponent {
   ngOnInit() {
     this.authService.authState$.subscribe((state) => {
       this.currentUser = state.user;
-      if (!state.user && !state.loading) {
-        this.router.navigate(["/login"]);
-      }
     });
     this.loadLists();
   }
@@ -4800,14 +4822,13 @@ var _DashboardComponent = class _DashboardComponent {
   signOut() {
     return __async(this, null, function* () {
       yield this.authService.signOut();
-      this.router.navigate(["/login"]);
     });
   }
 };
 _DashboardComponent.\u0275fac = function DashboardComponent_Factory(__ngFactoryType__) {
   return new (__ngFactoryType__ || _DashboardComponent)();
 };
-_DashboardComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _DashboardComponent, selectors: [["ng-component"]], decls: 81, vars: 24, consts: [["userMenu", "matMenu"], ["sidenav", ""], [1, "dashboard-container"], ["color", "primary", 1, "app-toolbar"], ["mat-icon-button", "", 1, "menu-button", 3, "click"], [1, "app-title"], [1, "spacer"], ["mat-button", "", 1, "new-list-button", 3, "routerLink"], ["mat-icon-button", "", 1, "user-button", 3, "matMenuTriggerFor"], [1, "user-avatar", 3, "src", "alt"], [1, "user-info"], [1, "user-avatar-large", 3, "src", "alt"], [1, "user-name"], [1, "user-email"], ["mat-menu-item", "", 3, "click"], [1, "sidenav-container"], ["mode", "over", 1, "sidenav"], ["mat-list-item", "", "routerLinkActive", "active", 3, "routerLink"], ["matListItemIcon", ""], ["matListItemTitle", ""], ["mat-list-item", "", "routerLinkActive", "active", 3, "routerLink", "routerLinkActiveOptions"], ["matSubheader", ""], ["matListItemMeta", "", 1, "stat-menu-badge"], [1, "main-content"], [1, "content-container"], [1, "welcome-section"], [1, "page-title"], [1, "page-subtitle"], [1, "stats-info"], [1, "recent-lists-section"], [1, "loading-container"], [1, "stat-card"], [1, "stat-content"], [1, "stat-icon"], [1, "stat-icon", "to-do"], [1, "stat-icon", "done"], [1, "stat-icon", "progress"], [1, "section-title"], [1, "lists-grid"], [1, "list-card"], [1, "no-lists"], [1, "list-card", 3, "click"], [1, "list-image"], [1, "list-overlay"], [1, "list-title"], [1, "list-comment"], [1, "list-stats"], ["aria-label", "List statistics"], [3, "disabled"], ["mat-button", "", "color", "primary", 3, "click"], ["mat-button", "", 3, "click"], [1, "empty-icon"], ["mat-raised-button", "", "color", "primary", 3, "routerLink"], ["diameter", "50"]], template: function DashboardComponent_Template(rf, ctx) {
+_DashboardComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _DashboardComponent, selectors: [["ng-component"]], decls: 81, vars: 22, consts: [["userMenu", "matMenu"], ["sidenav", ""], [1, "dashboard-container"], ["color", "primary", 1, "app-toolbar"], ["mat-icon-button", "", 1, "menu-button", 3, "click"], [1, "app-title"], [1, "spacer"], ["mat-button", "", 1, "new-list-button", 3, "routerLink"], ["mat-icon-button", "", 1, "user-button", 3, "matMenuTriggerFor"], ["mat-icon-button", "", 3, "routerLink"], [1, "user-info"], [1, "user-avatar-large", 3, "src", "alt"], [1, "user-name"], [1, "user-email"], ["mat-menu-item", "", 3, "click"], [1, "sidenav-container"], ["mode", "over", 1, "sidenav"], ["mat-list-item", "", "routerLinkActive", "active", 3, "routerLink"], ["matListItemIcon", ""], ["matListItemTitle", ""], ["mat-list-item", "", "routerLinkActive", "active", 3, "routerLink", "routerLinkActiveOptions"], ["matSubheader", ""], ["matListItemMeta", "", 1, "stat-menu-badge"], [1, "main-content"], [1, "content-container"], [1, "welcome-section"], [1, "page-title"], [1, "page-subtitle"], [1, "stats-info"], [1, "recent-lists-section"], [1, "loading-container"], [1, "user-avatar", 3, "src", "alt"], [1, "stat-card"], [1, "stat-content"], [1, "stat-icon"], [1, "stat-icon", "to-do"], [1, "stat-icon", "done"], [1, "stat-icon", "progress"], [1, "section-title"], [1, "lists-grid"], [1, "list-card"], [1, "no-lists"], [1, "list-card", 3, "click"], [1, "list-image"], [1, "list-overlay"], [1, "list-title"], [1, "list-comment"], [1, "list-stats"], ["aria-label", "List statistics"], [3, "disabled"], ["mat-button", "", "color", "primary", 3, "click"], ["mat-button", "", 3, "click"], [1, "empty-icon"], ["mat-raised-button", "", "color", "primary", 3, "routerLink"], ["diameter", "50"]], template: function DashboardComponent_Template(rf, ctx) {
   if (rf & 1) {
     const _r1 = \u0275\u0275getCurrentView();
     \u0275\u0275elementStart(0, "div", 2)(1, "mat-toolbar", 3)(2, "button", 4);
@@ -4828,9 +4849,7 @@ _DashboardComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ ty
     \u0275\u0275elementEnd();
     \u0275\u0275text(11, " New List ");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(12, "button", 8);
-    \u0275\u0275element(13, "img", 9);
-    \u0275\u0275elementEnd();
+    \u0275\u0275conditionalCreate(12, DashboardComponent_Conditional_12_Template, 2, 3, "button", 8)(13, DashboardComponent_Conditional_13_Template, 3, 2, "button", 9);
     \u0275\u0275elementStart(14, "mat-menu", null, 0)(16, "div", 10);
     \u0275\u0275element(17, "img", 11);
     \u0275\u0275elementStart(18, "div")(19, "p", 12);
@@ -4911,25 +4930,22 @@ _DashboardComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ ty
     \u0275\u0275elementEnd()()()();
   }
   if (rf & 2) {
-    const userMenu_r6 = \u0275\u0275reference(15);
     \u0275\u0275advance(8);
-    \u0275\u0275property("routerLink", \u0275\u0275pureFunction0(19, _c04));
+    \u0275\u0275property("routerLink", \u0275\u0275pureFunction0(17, _c04));
     \u0275\u0275advance(4);
-    \u0275\u0275property("matMenuTriggerFor", userMenu_r6);
-    \u0275\u0275advance();
-    \u0275\u0275property("src", (ctx.currentUser == null ? null : ctx.currentUser.photoURL) || "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg", \u0275\u0275sanitizeUrl)("alt", (ctx.currentUser == null ? null : ctx.currentUser.displayName) || "User");
-    \u0275\u0275advance(4);
+    \u0275\u0275conditional(ctx.currentUser ? 12 : 13);
+    \u0275\u0275advance(5);
     \u0275\u0275property("src", (ctx.currentUser == null ? null : ctx.currentUser.photoURL) || "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg", \u0275\u0275sanitizeUrl)("alt", (ctx.currentUser == null ? null : ctx.currentUser.displayName) || "User");
     \u0275\u0275advance(3);
     \u0275\u0275textInterpolate((ctx.currentUser == null ? null : ctx.currentUser.displayName) || "User");
     \u0275\u0275advance(2);
     \u0275\u0275textInterpolate(ctx.currentUser == null ? null : ctx.currentUser.email);
     \u0275\u0275advance(10);
-    \u0275\u0275property("routerLink", \u0275\u0275pureFunction0(20, _c14));
+    \u0275\u0275property("routerLink", \u0275\u0275pureFunction0(18, _c14));
     \u0275\u0275advance(5);
-    \u0275\u0275property("routerLink", \u0275\u0275pureFunction0(21, _c24));
+    \u0275\u0275property("routerLink", \u0275\u0275pureFunction0(19, _c24));
     \u0275\u0275advance(5);
-    \u0275\u0275property("routerLink", \u0275\u0275pureFunction0(22, _c04))("routerLinkActiveOptions", \u0275\u0275pureFunction0(23, _c34));
+    \u0275\u0275property("routerLink", \u0275\u0275pureFunction0(20, _c04))("routerLinkActiveOptions", \u0275\u0275pureFunction0(21, _c34));
     \u0275\u0275advance(14);
     \u0275\u0275textInterpolate(ctx.totalLists);
     \u0275\u0275advance(7);
@@ -5016,23 +5032,29 @@ var DashboardComponent = _DashboardComponent;
       New List
     </button>
 
-    <button mat-icon-button [matMenuTriggerFor]="userMenu" class="user-button">
-      <img [src]="currentUser?.photoURL || 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg'"
-        [alt]="currentUser?.displayName || 'User'"
-        class="user-avatar">
-    </button>
+    @if (currentUser) {
+      <button mat-icon-button [matMenuTriggerFor]="userMenu" class="user-button">
+        <img [src]="currentUser.photoURL || 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg'"
+             [alt]="currentUser.displayName || 'User'"
+             class="user-avatar">
+      </button>
+    } @else {
+      <button mat-icon-button [routerLink]="['/login']">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+    }
 
     <mat-menu #userMenu="matMenu">
       <div class="user-info">
         <img [src]="currentUser?.photoURL || 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg'"
-          [alt]="currentUser?.displayName || 'User'"
-          class="user-avatar-large">
+             [alt]="currentUser?.displayName || 'User'"
+             class="user-avatar-large">
         <div>
           <p class="user-name">{{ currentUser?.displayName || 'User' }}</p>
           <p class="user-email">{{ currentUser?.email }}</p>
         </div>
       </div>
-      <mat-divider />
+      <mat-divider/>
       <button mat-menu-item (click)="signOut()">
         <mat-icon>logout</mat-icon>
         Sign Out
@@ -5055,7 +5077,7 @@ var DashboardComponent = _DashboardComponent;
           <mat-icon matListItemIcon>add</mat-icon>
           <span matListItemTitle>Create List</span>
         </a>
-        <mat-divider />
+        <mat-divider/>
         <h3 matSubheader>Quick Stats</h3>
         <mat-list-item>
           <mat-icon matListItemIcon>assignment</mat-icon>
@@ -5129,8 +5151,8 @@ var DashboardComponent = _DashboardComponent;
             <div class="lists-grid">
               @for (list of recentLists; track list) {
                 <mat-card
-                  class="list-card"
-                  (click)="openList(list.id)">
+                    class="list-card"
+                    (click)="openList(list.id)">
                   <div class="list-image" [style.background-image]="'url(' + (list.img || 'https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg') + ')'">
                     <div class="list-overlay">
                       <h3 class="list-title">{{ list.name }}</h3>
@@ -5190,7 +5212,7 @@ var DashboardComponent = _DashboardComponent;
 
         @if (loading) {
           <div class="loading-container">
-            <mat-spinner diameter="50" />
+            <mat-spinner diameter="50"/>
             <p>Loading your dashboard...</p>
           </div>
         }
@@ -5207,4 +5229,4 @@ var DashboardComponent = _DashboardComponent;
 export {
   DashboardComponent
 };
-//# sourceMappingURL=chunk-LSQOYAV6.js.map
+//# sourceMappingURL=chunk-5CO7JELQ.js.map

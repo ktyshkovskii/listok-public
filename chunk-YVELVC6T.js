@@ -1,6 +1,6 @@
 import {
   InjectionToken
-} from "./chunk-TY32VY2X.js";
+} from "./chunk-JW7K3KUO.js";
 
 // src/app/database/data-repository.ts
 var DATA_REPOSITORY = new InjectionToken("DataRepository");
@@ -8,4 +8,4 @@ var DATA_REPOSITORY = new InjectionToken("DataRepository");
 export {
   DATA_REPOSITORY
 };
-//# sourceMappingURL=chunk-FR7P32RA.js.map
+//# sourceMappingURL=chunk-YVELVC6T.js.map

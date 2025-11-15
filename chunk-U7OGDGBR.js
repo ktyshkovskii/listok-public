@@ -1,6 +1,6 @@
 import {
   ItemStatus
-} from "./chunk-LPOVQX35.js";
+} from "./chunk-HWYB2LLY.js";
 import {
   MatChipsModule,
   MatMenu,
@@ -10,14 +10,14 @@ import {
   MatPseudoCheckbox,
   MatPseudoCheckboxModule,
   SelectionModel
-} from "./chunk-FUFDKGON.js";
+} from "./chunk-UGWFDEFX.js";
 import {
   MatFormFieldModule,
   MatInput,
   MatInputModule,
   MatSnackBar,
   MatSnackBarModule
-} from "./chunk-YDHSHABV.js";
+} from "./chunk-V57EUTBC.js";
 import {
   BasePortalOutlet,
   CdkConnectedOverlay,
@@ -62,10 +62,10 @@ import {
   createOverlayRef,
   createRepositionScrollStrategy,
   ɵNgNoValidate
-} from "./chunk-KAKX5BFP.js";
+} from "./chunk-CGMNGKLP.js";
 import {
   DATA_REPOSITORY
-} from "./chunk-FR7P32RA.js";
+} from "./chunk-YVELVC6T.js";
 import {
   A,
   A11yModule,
@@ -108,7 +108,7 @@ import {
   coerceNumberProperty,
   hasModifierKey,
   removeAriaReferencedId
-} from "./chunk-CZPQX472.js";
+} from "./chunk-5MMZJS6I.js";
 import {
   ActivatedRoute,
   Attribute,
@@ -205,7 +205,7 @@ import {
   ɵɵtextInterpolate,
   ɵɵtextInterpolate1,
   ɵɵviewQuery
-} from "./chunk-TY32VY2X.js";
+} from "./chunk-JW7K3KUO.js";
 
 // node_modules/@angular/cdk/fesm2022/dialog.mjs
 function CdkDialogContainer_ng_template_0_Template(rf, ctx) {
@@ -4897,7 +4897,7 @@ var _ListDetailComponent = class _ListDetailComponent {
   }
   ngOnInit() {
     this.route.params.pipe(takeUntil(this.destroy$)).subscribe((params) => {
-      let idParam = params["id"] ? Number(params["id"]) : void 0;
+      const idParam = params["id"];
       if (idParam) {
         this.loadList(idParam);
       }
@@ -5358,4 +5358,4 @@ var ListDetailComponent = _ListDetailComponent;
 export {
   ListDetailComponent
 };
-//# sourceMappingURL=chunk-5NQNYVQL.js.map
+//# sourceMappingURL=chunk-U7OGDGBR.js.map

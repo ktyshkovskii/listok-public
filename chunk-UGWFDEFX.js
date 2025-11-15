@@ -18,7 +18,7 @@ import {
   createFlexibleConnectedPositionStrategy,
   createOverlayRef,
   createRepositionScrollStrategy
-} from "./chunk-KAKX5BFP.js";
+} from "./chunk-CGMNGKLP.js";
 import {
   BACKSPACE,
   DELETE,
@@ -48,7 +48,7 @@ import {
   hasModifierKey,
   isFakeMousedownFromScreenReader,
   isFakeTouchstartFromScreenReader
-} from "./chunk-CZPQX472.js";
+} from "./chunk-5MMZJS6I.js";
 import {
   ApplicationRef,
   ChangeDetectionStrategy,
@@ -128,7 +128,7 @@ import {
   ɵɵresetView,
   ɵɵrestoreView,
   ɵɵviewQuery
-} from "./chunk-TY32VY2X.js";
+} from "./chunk-JW7K3KUO.js";
 
 // node_modules/@angular/material/fesm2022/chips.mjs
 var _c0 = ["*", [["mat-chip-avatar"], ["", "matChipAvatar", ""]], [["mat-chip-trailing-icon"], ["", "matChipRemove", ""], ["", "matChipTrailingIcon", ""]]];
@@ -5067,4 +5067,4 @@ export {
   MatMenuTrigger,
   MatMenuModule
 };
-//# sourceMappingURL=chunk-FUFDKGON.js.map
+//# sourceMappingURL=chunk-UGWFDEFX.js.map
