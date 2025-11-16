@@ -1,9 +1,13 @@
 import {
+  DexieDataBase
+} from "./chunk-APQWPJCM.js";
+import {
   BehaviorSubject,
   Injectable,
   __async,
   __spreadProps,
   __spreadValues,
+  inject,
   setClassMetadata,
   ɵɵdefineInjectable
 } from "./chunk-JW7K3KUO.js";
@@ -11,59 +15,88 @@ import {
 // src/app/services/auth.service.ts
 var _AuthService = class _AuthService {
   constructor() {
+    this.db = inject(DexieDataBase);
     this._authState = new BehaviorSubject({
       user: null,
       loading: false,
       error: null
     });
     this.authState$ = this._authState.asObservable();
+    this.db.cloud.currentUser.subscribe((value) => {
+      console.group("currentUser");
+      console.log(value);
+      if (value.email) {
+        this._authState.next({
+          user: {
+            uid: value.userId || "???",
+            displayName: value.name || null,
+            email: value.email || null,
+            photoURL: null
+          },
+          loading: false,
+          error: null
+        });
+      }
+      console.groupEnd();
+    });
+  }
+  login() {
+    return __async(this, null, function* () {
+      return this.db.cloud.login().then((value) => {
+        console.group("login success");
+        console.log(value);
+        console.groupEnd();
+      }, (error) => {
+        console.group("login error");
+        console.log(error);
+        console.groupEnd();
+      });
+    });
   }
   signInWithGoogle() {
     return __async(this, null, function* () {
       this._authState.next(__spreadProps(__spreadValues({}, this._authState.value), { loading: true, error: null }));
-      const mockUser = {
-        uid: "google-user-123",
-        email: "user@gmail.com",
-        displayName: "Google User",
-        photoURL: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg",
-        providerId: "google.com"
-      };
-      localStorage.setItem("authToken", "google-token-123");
-      this._authState.next({ user: mockUser, loading: false, error: null });
+      try {
+      } catch (error) {
+        const errorMessage = error instanceof Error ? error.message : String(error);
+        this._authState.next(__spreadProps(__spreadValues({}, this._authState.value), {
+          loading: false,
+          error: errorMessage
+        }));
+      }
     });
   }
   signInWithGitHub() {
     return __async(this, null, function* () {
       this._authState.next(__spreadProps(__spreadValues({}, this._authState.value), { loading: true, error: null }));
-      const mockUser = {
-        uid: "github-user-123",
-        email: "user@github.com",
-        displayName: "GitHub User",
-        photoURL: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg",
-        providerId: "github.com"
-      };
-      localStorage.setItem("authToken", "github-token-123");
-      this._authState.next({ user: mockUser, loading: false, error: null });
+      try {
+      } catch (error) {
+        const errorMessage = error instanceof Error ? error.message : String(error);
+        this._authState.next(__spreadProps(__spreadValues({}, this._authState.value), {
+          loading: false,
+          error: errorMessage
+        }));
+      }
     });
   }
   signInWithApple() {
     return __async(this, null, function* () {
       this._authState.next(__spreadProps(__spreadValues({}, this._authState.value), { loading: true, error: null }));
-      const mockUser = {
-        uid: "apple-user-123",
-        email: "user@icloud.com",
-        displayName: "Apple User",
-        photoURL: "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg",
-        providerId: "apple.com"
-      };
-      localStorage.setItem("authToken", "apple-token-123");
-      this._authState.next({ user: mockUser, loading: false, error: null });
+      try {
+      } catch (error) {
+        const errorMessage = error instanceof Error ? error.message : String(error);
+        this._authState.next(__spreadProps(__spreadValues({}, this._authState.value), {
+          loading: false,
+          error: errorMessage
+        }));
+      }
     });
   }
-  signOut() {
+  logout() {
     return __async(this, null, function* () {
       this._authState.next(__spreadProps(__spreadValues({}, this._authState.value), { loading: true }));
       try {
+        yield this.db.cloud.logout();
         localStorage.removeItem("authToken");
         this._authState.next({ user: null, loading: false, error: null });
       } catch (error) {
@@ -87,10 +120,10 @@ var AuthService = _AuthService;
     args: [{
       providedIn: "root"
     }]
-  }], null, null);
+  }], () => [], null);
 })();
 
 export {
   AuthService
 };
-//# sourceMappingURL=chunk-OBF5TR3F.js.map
+//# sourceMappingURL=chunk-ODBQ47G7.js.map
