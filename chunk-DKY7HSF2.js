@@ -40696,8 +40696,11 @@ export {
   effect,
   HostAttributeToken,
   HOST_TAG_NAME,
+  input,
   viewChild,
   contentChild,
+  contentChildren,
+  model,
   ContentChildren,
   ContentChild,
   ViewChild,
@@ -40777,4 +40780,4 @@ export {
    * found in the LICENSE file at https://angular.dev/license
    *)
 */
-//# sourceMappingURL=chunk-JW7K3KUO.js.map
+//# sourceMappingURL=chunk-DKY7HSF2.js.map

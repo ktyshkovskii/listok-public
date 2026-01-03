@@ -1,11 +1,11 @@
 import {
   DexieDataBase,
   environment
-} from "./chunk-APQWPJCM.js";
-import "./chunk-HWYB2LLY.js";
+} from "./chunk-LOOZGD6U.js";
+import "./chunk-CT6UNQQ2.js";
 import {
   DATA_REPOSITORY
-} from "./chunk-YVELVC6T.js";
+} from "./chunk-SFQT6NKI.js";
 import {
   ApplicationRef,
   Component,
@@ -47,7 +47,7 @@ import {
   ɵɵdefineNgModule,
   ɵɵelement,
   ɵɵinject
-} from "./chunk-JW7K3KUO.js";
+} from "./chunk-DKY7HSF2.js";
 
 // src/app/app.routes.ts
 var routes = [
@@ -58,23 +58,23 @@ var routes = [
   },
   {
     path: "login",
-    loadComponent: () => import("./chunk-6LXWF7UB.js").then((m) => m.LoginComponent)
+    loadComponent: () => import("./chunk-SBNO5X53.js").then((m) => m.LoginComponent)
   },
   {
     path: "dashboard",
-    loadComponent: () => import("./chunk-W3CLSKXI.js").then((m) => m.DashboardComponent)
+    loadComponent: () => import("./chunk-XAADZHOL.js").then((m) => m.DashboardComponent)
   },
   {
     path: "lists/new",
-    loadComponent: () => import("./chunk-BGUKQSTT.js").then((m) => m.ListCreateComponent)
+    loadComponent: () => import("./chunk-POTLN6J3.js").then((m) => m.ListCreateComponent)
   },
   {
     path: "lists/:id/edit",
-    loadComponent: () => import("./chunk-BGUKQSTT.js").then((m) => m.ListCreateComponent)
+    loadComponent: () => import("./chunk-POTLN6J3.js").then((m) => m.ListCreateComponent)
   },
   {
     path: "lists/:id",
-    loadComponent: () => import("./chunk-WACGGNVQ.js").then((m) => m.ListDetailComponent)
+    loadComponent: () => import("./chunk-C5PE4EZ2.js").then((m) => m.ListDetailComponent)
   },
   {
     path: "**",

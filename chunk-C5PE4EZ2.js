@@ -1,23 +1,20 @@
 import {
   MatChipsModule,
-  MatMenu,
-  MatMenuItem,
-  MatMenuModule,
-  MatMenuTrigger,
   MatPseudoCheckbox,
-  MatPseudoCheckboxModule,
-  SelectionModel
-} from "./chunk-UGWFDEFX.js";
+  MatPseudoCheckboxModule
+} from "./chunk-BUTHDLRR.js";
 import {
   ItemStatus
-} from "./chunk-HWYB2LLY.js";
+} from "./chunk-CT6UNQQ2.js";
 import {
+  MatFileSelect,
+  MatFileSelectItem,
   MatFormFieldModule,
   MatInput,
   MatInputModule,
   MatSnackBar,
   MatSnackBarModule
-} from "./chunk-V57EUTBC.js";
+} from "./chunk-Z3R43FZF.js";
 import {
   BasePortalOutlet,
   CdkConnectedOverlay,
@@ -37,6 +34,10 @@ import {
   MatFormField,
   MatFormFieldControl,
   MatLabel,
+  MatMenu,
+  MatMenuItem,
+  MatMenuModule,
+  MatMenuTrigger,
   MatPrefix,
   MatToolbar,
   MatToolbarModule,
@@ -53,6 +54,7 @@ import {
   PortalModule,
   ReactiveFormsModule,
   RequiredValidator,
+  SelectionModel,
   TemplatePortal,
   Validators,
   ViewportRuler,
@@ -62,10 +64,10 @@ import {
   createOverlayRef,
   createRepositionScrollStrategy,
   ɵNgNoValidate
-} from "./chunk-CGMNGKLP.js";
+} from "./chunk-UXPRAXEP.js";
 import {
   DATA_REPOSITORY
-} from "./chunk-YVELVC6T.js";
+} from "./chunk-SFQT6NKI.js";
 import {
   A,
   A11yModule,
@@ -108,7 +110,7 @@ import {
   coerceNumberProperty,
   hasModifierKey,
   removeAriaReferencedId
-} from "./chunk-5MMZJS6I.js";
+} from "./chunk-ILIHEHIC.js";
 import {
   ActivatedRoute,
   Attribute,
@@ -205,7 +207,7 @@ import {
   ɵɵtextInterpolate,
   ɵɵtextInterpolate1,
   ɵɵviewQuery
-} from "./chunk-JW7K3KUO.js";
+} from "./chunk-DKY7HSF2.js";
 
 // node_modules/@angular/cdk/fesm2022/dialog.mjs
 function CdkDialogContainer_ng_template_0_Template(rf, ctx) {
@@ -4028,17 +4030,70 @@ function CreateItemDialogComponent_Conditional_18_Template(rf, ctx) {
     \u0275\u0275elementEnd();
   }
 }
+function CreateItemDialogComponent_Conditional_56_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r1 = \u0275\u0275getCurrentView();
+    \u0275\u0275elementStart(0, "div", 19);
+    \u0275\u0275element(1, "img", 23);
+    \u0275\u0275elementStart(2, "button", 24);
+    \u0275\u0275listener("click", function CreateItemDialogComponent_Conditional_56_Template_button_click_2_listener() {
+      \u0275\u0275restoreView(_r1);
+      const ctx_r1 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r1.clearImage());
+    });
+    \u0275\u0275elementStart(3, "mat-icon");
+    \u0275\u0275text(4, "close");
+    \u0275\u0275elementEnd()()();
+  }
+  if (rf & 2) {
+    const ctx_r1 = \u0275\u0275nextContext();
+    \u0275\u0275advance();
+    \u0275\u0275property("src", ctx_r1.imagePreviewUrl, \u0275\u0275sanitizeUrl);
+  }
+}
 var _CreateItemDialogComponent = class _CreateItemDialogComponent {
   constructor() {
     this.fb = inject(FormBuilder);
     this.dialogRef = inject(MatDialogRef);
     this.data = inject(MAT_DIALOG_DATA);
+    this.imagePreviewUrl = "";
     this.itemForm = this.fb.group({
-      name: [this.data.item?.product.name || "", Validators.required],
-      comment: [this.data.item?.product.comment || ""],
-      img: [this.data.item?.product.img || ""],
-      count: [this.data.item?.count || 1, [Validators.required, Validators.min(1)]],
-      color: [this.data.item?.groupColor || null]
+      name: this.fb.nonNullable.control("", Validators.required),
+      comment: this.fb.control(""),
+      img: this.fb.control(null),
+      count: this.fb.nonNullable.control(1, [Validators.required, Validators.min(1)]),
+      color: this.fb.control(null)
+    });
+  }
+  ngOnInit() {
+    const item = this.data.item;
+    if (item) {
+      const img = !item.product.img ? null : {
+        name: item.product.name,
+        url: item.product.img,
+        file: null
+      };
+      this.itemForm.patchValue({
+        name: item.product.name,
+        comment: item.product.comment || "",
+        img,
+        count: item.count,
+        color: item.groupColor || null
+      });
+    }
+    this.setupImagePreview();
+  }
+  ngOnDestroy() {
+    URL.revokeObjectURL(this.imagePreviewUrl);
+  }
+  setupImagePreview() {
+    this.itemForm.get("img")?.valueChanges.subscribe((fileInfo) => {
+      if (fileInfo?.url) {
+        this.imagePreviewUrl = fileInfo.url;
+      } else if (fileInfo?.file) {
+        URL.revokeObjectURL(this.imagePreviewUrl);
+        this.imagePreviewUrl = URL.createObjectURL(fileInfo?.file);
+      }
     });
   }
   onCancel() {
@@ -4051,7 +4106,7 @@ var _CreateItemDialogComponent = class _CreateItemDialogComponent {
         product: {
           name: formValue.name,
           comment: formValue.comment || void 0,
-          img: formValue.img || void 0
+          img: formValue.img?.url || void 0
         },
         count: formValue.count,
         groupColor: formValue.color || void 0,
@@ -4060,11 +4115,14 @@ var _CreateItemDialogComponent = class _CreateItemDialogComponent {
       this.dialogRef.close(itemRequest);
     }
   }
+  clearImage() {
+    this.itemForm.patchValue({ img: null });
+  }
 };
 _CreateItemDialogComponent.\u0275fac = function CreateItemDialogComponent_Factory(__ngFactoryType__) {
   return new (__ngFactoryType__ || _CreateItemDialogComponent)();
 };
-_CreateItemDialogComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _CreateItemDialogComponent, selectors: [["ng-component"]], decls: 62, vars: 9, consts: [["mat-dialog-title", ""], [1, "item-form", 3, "formGroup"], ["appearance", "outline"], ["matInput", "", "formControlName", "name", "placeholder", "Enter item name", "required", ""], ["matPrefix", ""], ["matInput", "", "type", "number", "formControlName", "count", "placeholder", "1", "required", "", "min", "1"], ["formControlName", "color"], [3, "value"], ["value", "#E91E63"], ["value", "#4ECDC4"], ["value", "#2196F3"], ["value", "#FF9800"], ["value", "#4CAF50"], ["value", "#F7DC6F"], ["value", "#9C27B0"], ["value", "#795548"], ["matInput", "", "formControlName", "comment", "placeholder", "Add notes or description", "rows", "3"], ["matInput", "", "formControlName", "img", "placeholder", "https://example.com/image.jpg"], ["align", "end"], ["mat-button", "", 3, "click"], ["mat-raised-button", "", "color", "primary", 3, "click", "disabled"]], template: function CreateItemDialogComponent_Template(rf, ctx) {
+_CreateItemDialogComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _CreateItemDialogComponent, selectors: [["ng-component"]], decls: 64, vars: 10, consts: [["mat-dialog-title", ""], [1, "item-form", 3, "formGroup"], ["appearance", "outline"], ["matInput", "", "formControlName", "name", "placeholder", "Enter item name", "required", ""], ["matPrefix", ""], ["matInput", "", "type", "number", "formControlName", "count", "placeholder", "1", "required", "", "min", "1"], ["formControlName", "color"], [3, "value"], ["value", "#E91E63"], ["value", "#4ECDC4"], ["value", "#2196F3"], ["value", "#FF9800"], ["value", "#4CAF50"], ["value", "#F7DC6F"], ["value", "#9C27B0"], ["value", "#795548"], ["matInput", "", "formControlName", "comment", "placeholder", "Add notes or description", "rows", "3"], ["appearance", "outline", 1, "full-width"], ["formControlName", "img", "accept", "image/*"], [1, "image-preview"], ["align", "end"], ["mat-button", "", 3, "click"], ["mat-raised-button", "", "color", "primary", 3, "click", "disabled"], ["alt", "Item image", 1, "preview-image", 3, "src"], ["type", "button", "mat-icon-button", "", "title", "Remove image", 1, "clear-image-btn", 3, "click"]], template: function CreateItemDialogComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "h2", 0);
     \u0275\u0275text(1);
@@ -4128,27 +4186,31 @@ _CreateItemDialogComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineCompone
     \u0275\u0275elementStart(47, "mat-icon", 4);
     \u0275\u0275text(48, "comment");
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(49, "mat-form-field", 2)(50, "mat-label");
-    \u0275\u0275text(51, "Image URL (Optional)");
+    \u0275\u0275elementStart(49, "mat-form-field", 17)(50, "mat-label");
+    \u0275\u0275text(51, "Image (Optional)");
     \u0275\u0275elementEnd();
-    \u0275\u0275element(52, "input", 17);
-    \u0275\u0275elementStart(53, "mat-icon", 4);
-    \u0275\u0275text(54, "image");
-    \u0275\u0275elementEnd()()()();
-    \u0275\u0275elementStart(55, "mat-dialog-actions", 18)(56, "button", 19);
-    \u0275\u0275listener("click", function CreateItemDialogComponent_Template_button_click_56_listener() {
+    \u0275\u0275elementStart(52, "mat-icon", 4);
+    \u0275\u0275text(53, "image");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(54, "mat-file-select", 18);
+    \u0275\u0275element(55, "mat-file-select-item");
+    \u0275\u0275elementEnd()();
+    \u0275\u0275conditionalCreate(56, CreateItemDialogComponent_Conditional_56_Template, 5, 1, "div", 19);
+    \u0275\u0275elementEnd()();
+    \u0275\u0275elementStart(57, "mat-dialog-actions", 20)(58, "button", 21);
+    \u0275\u0275listener("click", function CreateItemDialogComponent_Template_button_click_58_listener() {
       return ctx.onCancel();
     });
-    \u0275\u0275text(57, "Cancel");
+    \u0275\u0275text(59, "Cancel");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(58, "button", 20);
-    \u0275\u0275listener("click", function CreateItemDialogComponent_Template_button_click_58_listener() {
+    \u0275\u0275elementStart(60, "button", 22);
+    \u0275\u0275listener("click", function CreateItemDialogComponent_Template_button_click_60_listener() {
       return ctx.onSave();
     });
-    \u0275\u0275elementStart(59, "mat-icon");
-    \u0275\u0275text(60);
+    \u0275\u0275elementStart(61, "mat-icon");
+    \u0275\u0275text(62);
     \u0275\u0275elementEnd();
-    \u0275\u0275text(61);
+    \u0275\u0275text(63);
     \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
@@ -4167,7 +4229,9 @@ _CreateItemDialogComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineCompone
     \u0275\u0275conditional(((tmp_4_0 = ctx.itemForm.get("count")) == null ? null : tmp_4_0.hasError("min")) ? 18 : -1);
     \u0275\u0275advance(5);
     \u0275\u0275property("value", null);
-    \u0275\u0275advance(35);
+    \u0275\u0275advance(33);
+    \u0275\u0275conditional(ctx.imagePreviewUrl ? 56 : -1);
+    \u0275\u0275advance(4);
     \u0275\u0275property("disabled", ctx.itemForm.invalid);
     \u0275\u0275advance(2);
     \u0275\u0275textInterpolate(ctx.data.item ? "save" : "add");
@@ -4199,12 +4263,16 @@ _CreateItemDialogComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineCompone
   MatInput,
   MatButtonModule,
   MatButton,
+  MatIconButton,
   MatIconModule,
   MatIcon,
   MatSelectModule,
   MatSelect,
-  MatOption
-], styles: ["\n\n.item-form[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  gap: 16px;\n  min-width: 400px;\n  padding: 16px 0;\n}\n@media (max-width: 599.98px) {\n  .item-form[_ngcontent-%COMP%] {\n    min-width: 240px;\n  }\n}\nmat-form-field[_ngcontent-%COMP%] {\n  width: 100%;\n}\nmat-dialog-content[_ngcontent-%COMP%] {\n  max-height: 70vh;\n  overflow-y: auto;\n}\n/*# sourceMappingURL=create-item-dialog.component.css.map */"] });
+  MatOption,
+  MatMenuModule,
+  MatFileSelect,
+  MatFileSelectItem
+], styles: ["\n\n.item-form[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  gap: 16px;\n  min-width: 400px;\n  padding: 16px 0;\n}\n@media (max-width: 599.98px) {\n  .item-form[_ngcontent-%COMP%] {\n    min-width: 240px;\n  }\n}\nmat-form-field[_ngcontent-%COMP%] {\n  width: 100%;\n}\nmat-dialog-content[_ngcontent-%COMP%] {\n  max-height: 70vh;\n  overflow-y: auto;\n}\n.image-preview[_ngcontent-%COMP%] {\n  position: relative;\n  border-radius: 4px;\n  overflow: hidden;\n  background: #f5f5f5;\n  margin-top: 8px;\n}\n.image-preview[_ngcontent-%COMP%]   .preview-image[_ngcontent-%COMP%] {\n  display: block;\n  width: 100%;\n  max-height: 300px;\n  object-fit: contain;\n}\n.image-preview[_ngcontent-%COMP%]   .clear-image-btn[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 8px;\n  right: 8px;\n  background: rgba(0, 0, 0, 0.6);\n  color: white;\n  border-radius: 50%;\n}\n.image-preview[_ngcontent-%COMP%]   .clear-image-btn[_ngcontent-%COMP%]:hover {\n  background: rgba(0, 0, 0, 0.8);\n}\n.image-preview[_ngcontent-%COMP%]   .clear-image-btn[_ngcontent-%COMP%]   mat-icon[_ngcontent-%COMP%] {\n  font-size: 20px;\n  width: 20px;\n  height: 20px;\n}\n.full-width[_ngcontent-%COMP%] {\n  width: 100%;\n  box-sizing: border-box;\n}\n/*# sourceMappingURL=create-item-dialog.component.css.map */"] });
 var CreateItemDialogComponent = _CreateItemDialogComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(CreateItemDialogComponent, [{
@@ -4217,7 +4285,11 @@ var CreateItemDialogComponent = _CreateItemDialogComponent;
       MatInputModule,
       MatButtonModule,
       MatIconModule,
-      MatSelectModule
+      MatSelectModule,
+      MatMenuModule,
+      MatFileSelect,
+      MatFileSelectItem,
+      MatFileSelect
     ], template: `<h2 mat-dialog-title>{{ data.item ? 'Edit Item' : 'Add New Item' }}</h2>
 <mat-dialog-content>
   <form [formGroup]="itemForm" class="item-form">
@@ -4264,11 +4336,27 @@ var CreateItemDialogComponent = _CreateItemDialogComponent;
       <mat-icon matPrefix>comment</mat-icon>
     </mat-form-field>
 
-    <mat-form-field appearance="outline">
-      <mat-label>Image URL (Optional)</mat-label>
-      <input matInput formControlName="img" placeholder="https://example.com/image.jpg">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Image (Optional)</mat-label>
       <mat-icon matPrefix>image</mat-icon>
+      <mat-file-select formControlName="img" accept="image/*">
+        <mat-file-select-item/>
+      </mat-file-select>
     </mat-form-field>
+
+    @if (imagePreviewUrl) {
+      <div class="image-preview">
+        <img [src]="imagePreviewUrl" alt="Item image" class="preview-image">
+        <button
+          type="button"
+          mat-icon-button
+          (click)="clearImage()"
+          class="clear-image-btn"
+          title="Remove image">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+    }
   </form>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
@@ -4278,11 +4366,11 @@ var CreateItemDialogComponent = _CreateItemDialogComponent;
     {{ data.item ? 'Save Changes' : 'Add Item' }}
   </button>
 </mat-dialog-actions>
-`, styles: ["/* src/app/components/shared/add-item-dialog/create-item-dialog.component.scss */\n.item-form {\n  display: flex;\n  flex-direction: column;\n  gap: 16px;\n  min-width: 400px;\n  padding: 16px 0;\n}\n@media (max-width: 599.98px) {\n  .item-form {\n    min-width: 240px;\n  }\n}\nmat-form-field {\n  width: 100%;\n}\nmat-dialog-content {\n  max-height: 70vh;\n  overflow-y: auto;\n}\n/*# sourceMappingURL=create-item-dialog.component.css.map */\n"] }]
+`, styles: ["/* src/app/components/shared/add-item-dialog/create-item-dialog.component.scss */\n.item-form {\n  display: flex;\n  flex-direction: column;\n  gap: 16px;\n  min-width: 400px;\n  padding: 16px 0;\n}\n@media (max-width: 599.98px) {\n  .item-form {\n    min-width: 240px;\n  }\n}\nmat-form-field {\n  width: 100%;\n}\nmat-dialog-content {\n  max-height: 70vh;\n  overflow-y: auto;\n}\n.image-preview {\n  position: relative;\n  border-radius: 4px;\n  overflow: hidden;\n  background: #f5f5f5;\n  margin-top: 8px;\n}\n.image-preview .preview-image {\n  display: block;\n  width: 100%;\n  max-height: 300px;\n  object-fit: contain;\n}\n.image-preview .clear-image-btn {\n  position: absolute;\n  top: 8px;\n  right: 8px;\n  background: rgba(0, 0, 0, 0.6);\n  color: white;\n  border-radius: 50%;\n}\n.image-preview .clear-image-btn:hover {\n  background: rgba(0, 0, 0, 0.8);\n}\n.image-preview .clear-image-btn mat-icon {\n  font-size: 20px;\n  width: 20px;\n  height: 20px;\n}\n.full-width {\n  width: 100%;\n  box-sizing: border-box;\n}\n/*# sourceMappingURL=create-item-dialog.component.css.map */\n"] }]
   }], null, null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(CreateItemDialogComponent, { className: "CreateItemDialogComponent", filePath: "src/app/components/shared/add-item-dialog/create-item-dialog.component.ts", lineNumber: 30 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(CreateItemDialogComponent, { className: "CreateItemDialogComponent", filePath: "src/app/components/shared/add-item-dialog/create-item-dialog.component.ts", lineNumber: 43 });
 })();
 
 // src/app/components/shared/confirm-dialog/confirm-dialog.component.ts
@@ -5358,4 +5446,4 @@ var ListDetailComponent = _ListDetailComponent;
 export {
   ListDetailComponent
 };
-//# sourceMappingURL=chunk-WACGGNVQ.js.map
+//# sourceMappingURL=chunk-C5PE4EZ2.js.map
