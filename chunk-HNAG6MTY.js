@@ -1,18 +1,19 @@
 import {
   AuthService
-} from "./chunk-4C6E7EIE.js";
-import "./chunk-LOOZGD6U.js";
+} from "./chunk-AUMR25HN.js";
+import "./chunk-FMG23KCI.js";
 import {
   MatChipOption,
   MatChipSet,
   MatChipsModule,
   MatPseudoCheckboxModule
-} from "./chunk-BUTHDLRR.js";
-import "./chunk-CT6UNQQ2.js";
+} from "./chunk-IQ33FPWE.js";
+import "./chunk-FH5Z5G3K.js";
 import {
   CdkScrollable,
   CdkScrollableModule,
-  ListService,
+  ImageDirective,
+  ListRepositoryService,
   MatMenu,
   MatMenuItem,
   MatMenuModule,
@@ -23,8 +24,8 @@ import {
   ScrollDispatcher,
   SelectionModel,
   ViewportRuler
-} from "./chunk-UXPRAXEP.js";
-import "./chunk-SFQT6NKI.js";
+} from "./chunk-4GVQLJ2X.js";
+import "./chunk-T5ZWQDMH.js";
 import {
   A,
   A11yModule,
@@ -64,7 +65,7 @@ import {
   coerceBooleanProperty,
   coerceNumberProperty,
   hasModifierKey
-} from "./chunk-ILIHEHIC.js";
+} from "./chunk-TUJCRL22.js";
 import {
   BehaviorSubject,
   ChangeDetectionStrategy,
@@ -154,7 +155,7 @@ import {
   ɵɵtextInterpolate,
   ɵɵtextInterpolate1,
   ɵɵviewQuery
-} from "./chunk-DKY7HSF2.js";
+} from "./chunk-6BTNDEJY.js";
 
 // node_modules/@angular/material/fesm2022/sidenav.mjs
 var _c0 = ["*"];
@@ -4697,7 +4698,7 @@ function DashboardComponent_Conditional_79_For_5_Template(rf, ctx) {
     const list_r7 = ctx.$implicit;
     const ctx_r2 = \u0275\u0275nextContext(2);
     \u0275\u0275advance();
-    \u0275\u0275styleProp("background-image", "url(" + (list_r7.img || "https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg") + ")");
+    \u0275\u0275property("lokImage", list_r7.imageId);
     \u0275\u0275advance(3);
     \u0275\u0275textInterpolate(list_r7.name);
     \u0275\u0275advance(2);
@@ -4740,7 +4741,7 @@ function DashboardComponent_Conditional_79_Template(rf, ctx) {
     \u0275\u0275text(2, "Recent Lists");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(3, "div", 40);
-    \u0275\u0275repeaterCreate(4, DashboardComponent_Conditional_79_For_5_Template, 24, 8, "mat-card", 41, \u0275\u0275repeaterTrackByIdentity);
+    \u0275\u0275repeaterCreate(4, DashboardComponent_Conditional_79_For_5_Template, 24, 7, "mat-card", 41, \u0275\u0275repeaterTrackByIdentity);
     \u0275\u0275elementEnd();
     \u0275\u0275conditionalCreate(6, DashboardComponent_Conditional_79_Conditional_6_Template, 11, 2, "div", 42);
     \u0275\u0275elementEnd();
@@ -4767,7 +4768,7 @@ var _DashboardComponent = class _DashboardComponent {
     this.lists$ = new BehaviorSubject([]);
     this.loading = true;
     this.currentUser = null;
-    this.apiService = inject(ListService);
+    this.apiService = inject(ListRepositoryService);
     this.router = inject(Router);
     this.authService = inject(AuthService);
   }
@@ -4827,7 +4828,7 @@ var _DashboardComponent = class _DashboardComponent {
 _DashboardComponent.\u0275fac = function DashboardComponent_Factory(__ngFactoryType__) {
   return new (__ngFactoryType__ || _DashboardComponent)();
 };
-_DashboardComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _DashboardComponent, selectors: [["ng-component"]], decls: 81, vars: 22, consts: [["userMenu", "matMenu"], ["sidenav", ""], [1, "dashboard-container"], ["color", "primary", 1, "app-toolbar"], ["mat-icon-button", "", 1, "menu-button", 3, "click"], [1, "app-title"], [1, "spacer"], ["mat-button", "", 1, "new-list-button", 3, "routerLink"], ["mat-icon-button", "", 1, "user-button", 3, "matMenuTriggerFor"], ["mat-icon-button", ""], [1, "user-info"], [1, "user-avatar-large", 3, "src", "alt"], [1, "user-name"], [1, "user-email"], ["mat-menu-item", "", 3, "click"], [1, "sidenav-container"], ["mode", "over", 1, "sidenav"], ["mat-list-item", "", "routerLinkActive", "active", 3, "routerLink"], ["matListItemIcon", ""], ["matListItemTitle", ""], ["mat-list-item", "", "routerLinkActive", "active", 3, "routerLink", "routerLinkActiveOptions"], ["matSubheader", ""], ["matListItemMeta", "", 1, "stat-menu-badge"], [1, "main-content"], [1, "content-container"], [1, "welcome-section"], [1, "page-title"], [1, "page-subtitle"], [1, "stats-info"], [1, "recent-lists-section"], [1, "loading-container"], [1, "user-avatar", 3, "src", "alt"], ["mat-icon-button", "", 3, "click"], [1, "stat-card"], [1, "stat-content"], [1, "stat-icon"], [1, "stat-icon", "to-do"], [1, "stat-icon", "done"], [1, "stat-icon", "progress"], [1, "section-title"], [1, "lists-grid"], [1, "list-card"], [1, "no-lists"], [1, "list-card", 3, "click"], [1, "list-image"], [1, "list-overlay"], [1, "list-title"], [1, "list-comment"], [1, "list-stats"], ["aria-label", "List statistics"], [3, "disabled"], ["mat-button", "", "color", "primary", 3, "click"], ["mat-button", "", 3, "click"], [1, "empty-icon"], ["mat-raised-button", "", "color", "primary", 3, "routerLink"], ["diameter", "50"]], template: function DashboardComponent_Template(rf, ctx) {
+_DashboardComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _DashboardComponent, selectors: [["ng-component"]], decls: 81, vars: 22, consts: [["userMenu", "matMenu"], ["sidenav", ""], [1, "dashboard-container"], ["color", "primary", 1, "app-toolbar"], ["mat-icon-button", "", 1, "menu-button", 3, "click"], [1, "app-title"], [1, "spacer"], ["mat-button", "", 1, "new-list-button", 3, "routerLink"], ["mat-icon-button", "", 1, "user-button", 3, "matMenuTriggerFor"], ["mat-icon-button", ""], [1, "user-info"], [1, "user-avatar-large", 3, "src", "alt"], [1, "user-name"], [1, "user-email"], ["mat-menu-item", "", 3, "click"], [1, "sidenav-container"], ["mode", "over", 1, "sidenav"], ["mat-list-item", "", "routerLinkActive", "active", 3, "routerLink"], ["matListItemIcon", ""], ["matListItemTitle", ""], ["mat-list-item", "", "routerLinkActive", "active", 3, "routerLink", "routerLinkActiveOptions"], ["matSubheader", ""], ["matListItemMeta", "", 1, "stat-menu-badge"], [1, "main-content"], [1, "content-container"], [1, "welcome-section"], [1, "page-title"], [1, "page-subtitle"], [1, "stats-info"], [1, "recent-lists-section"], [1, "loading-container"], [1, "user-avatar", 3, "src", "alt"], ["mat-icon-button", "", 3, "click"], [1, "stat-card"], [1, "stat-content"], [1, "stat-icon"], [1, "stat-icon", "to-do"], [1, "stat-icon", "done"], [1, "stat-icon", "progress"], [1, "section-title"], [1, "lists-grid"], [1, "list-card"], [1, "no-lists"], [1, "list-card", 3, "click"], [1, "list-image", 3, "lokImage"], [1, "list-overlay"], [1, "list-title"], [1, "list-comment"], [1, "list-stats"], ["aria-label", "List statistics"], [3, "disabled"], ["mat-button", "", "color", "primary", 3, "click"], ["mat-button", "", 3, "click"], [1, "empty-icon"], ["mat-raised-button", "", "color", "primary", 3, "routerLink"], ["diameter", "50"]], template: function DashboardComponent_Template(rf, ctx) {
   if (rf & 1) {
     const _r1 = \u0275\u0275getCurrentView();
     \u0275\u0275elementStart(0, "div", 2)(1, "mat-toolbar", 3)(2, "button", 4);
@@ -4997,7 +4998,8 @@ _DashboardComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ ty
   MatProgressSpinner,
   RouterModule,
   RouterLink,
-  RouterLinkActive
+  RouterLinkActive,
+  ImageDirective
 ], styles: ["\n\n.dashboard-container[_ngcontent-%COMP%] {\n  height: 100vh;\n  display: flex;\n  flex-direction: column;\n}\n.app-toolbar[_ngcontent-%COMP%] {\n  position: sticky;\n  top: 0;\n  z-index: 2;\n}\n.app-title[_ngcontent-%COMP%] {\n  font-size: 20px;\n  font-weight: 600;\n}\n.spacer[_ngcontent-%COMP%] {\n  flex: 1 1 auto;\n}\n.new-list-button[_ngcontent-%COMP%] {\n  margin-right: 16px;\n}\n.user-button[_ngcontent-%COMP%] {\n  padding: 4px;\n}\n.user-avatar[_ngcontent-%COMP%] {\n  width: 32px;\n  height: 32px;\n  border-radius: 50%;\n  object-fit: cover;\n}\n.user-avatar-large[_ngcontent-%COMP%] {\n  width: 48px;\n  height: 48px;\n  border-radius: 50%;\n  object-fit: cover;\n}\n.user-info[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 12px;\n  padding: 16px;\n}\n.user-name[_ngcontent-%COMP%] {\n  font-weight: 600;\n  margin: 0;\n}\n.user-email[_ngcontent-%COMP%] {\n  font-size: 14px;\n  opacity: 0.7;\n  margin: 0;\n}\n.sidenav-container[_ngcontent-%COMP%] {\n  flex: 1;\n}\n.sidenav[_ngcontent-%COMP%] {\n  width: 280px;\n  padding: 0;\n}\n@media (max-width: 599.98px) {\n  .sidenav[_ngcontent-%COMP%] {\n    width: 240px;\n  }\n}\n.sidenav[_ngcontent-%COMP%]   mat-nav-list[_ngcontent-%COMP%] {\n  padding-top: 0;\n}\n.sidenav[_ngcontent-%COMP%]   a.active[_ngcontent-%COMP%] {\n  background-color: rgba(0, 0, 0, 0.04);\n}\n.stat-menu-badge[_ngcontent-%COMP%] {\n  background-color: #1976d2;\n  color: white;\n  padding: 4px 8px;\n  border-radius: 12px;\n  font-size: 12px;\n  font-weight: 600;\n}\n.main-content[_ngcontent-%COMP%] {\n  background-color: #fafafa;\n}\n.content-container[_ngcontent-%COMP%] {\n  padding: 24px;\n  max-width: 1200px;\n  margin: 0 auto;\n}\n@media (max-width: 599.98px) {\n  .content-container[_ngcontent-%COMP%] {\n    padding: 16px;\n  }\n}\n.welcome-section[_ngcontent-%COMP%] {\n  margin-bottom: 32px;\n}\n@media (max-width: 599.98px) {\n  .welcome-section[_ngcontent-%COMP%] {\n    margin-bottom: 16px;\n  }\n}\n.page-title[_ngcontent-%COMP%] {\n  font-size: 32px;\n  font-weight: 600;\n  margin: 0 0 8px 0;\n  color: #1976d2;\n}\n@media (max-width: 599.98px) {\n  .page-title[_ngcontent-%COMP%] {\n    font-size: 24px;\n  }\n}\n.page-subtitle[_ngcontent-%COMP%] {\n  font-size: 16px;\n  opacity: 0.7;\n  margin: 0;\n}\n.stats-info[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: nowrap;\n  gap: 16px;\n  overflow-x: auto;\n  margin-bottom: 32px;\n  padding: 2px;\n}\n@media (max-width: 599.98px) {\n  .stats-info[_ngcontent-%COMP%] {\n    gap: 6px;\n    margin-bottom: 16px;\n  }\n}\n.stat-card[_ngcontent-%COMP%] {\n  flex: 1 0 auto;\n  min-width: 140px;\n  border-radius: 12px;\n  transition: min-width 0.3s ease;\n}\n@media (max-width: 599.98px) {\n  .stat-card[_ngcontent-%COMP%] {\n    min-width: 0;\n  }\n}\n.stat-content[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 16px;\n}\n@media (max-width: 599.98px) {\n  .stat-content[_ngcontent-%COMP%] {\n    gap: 2px;\n  }\n}\n.stat-content[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n  font-size: 28px;\n  font-weight: 700;\n  margin: 0;\n}\n@media (max-width: 599.98px) {\n  .stat-content[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n    font-size: 22px;\n  }\n}\n.stat-content[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-size: 14px;\n  opacity: 0.7;\n  margin: 0;\n  white-space: nowrap;\n}\n@media (max-width: 599.98px) {\n  .stat-content[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n    display: none;\n  }\n}\n.stat-icon[_ngcontent-%COMP%] {\n  font-size: 40px;\n  width: 40px;\n  height: 40px;\n  background-color: #e3f2fd;\n  color: #1976d2;\n}\n.stat-icon.to-do[_ngcontent-%COMP%] {\n  background-color: #fff3e0;\n  color: #f57c00;\n}\n.stat-icon.done[_ngcontent-%COMP%] {\n  background-color: #e8f5e8;\n  color: #4caf50;\n}\n.stat-icon.progress[_ngcontent-%COMP%] {\n  background-color: #f3e5f5;\n  color: #9c27b0;\n}\n.section-title[_ngcontent-%COMP%] {\n  font-size: 24px;\n  font-weight: 600;\n  margin: 0 0 16px 0;\n  color: #333;\n}\n.lists-grid[_ngcontent-%COMP%] {\n  display: grid;\n  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));\n  gap: 20px;\n}\n@media (max-width: 599.98px) {\n  .lists-grid[_ngcontent-%COMP%] {\n    grid-template-columns: 1fr;\n    gap: 16px;\n  }\n}\n.list-card[_ngcontent-%COMP%] {\n  border-radius: 12px;\n  overflow: hidden;\n  transition: transform 0.2s, box-shadow 0.2s;\n  cursor: pointer;\n}\n.list-card[_ngcontent-%COMP%]:hover {\n  transform: translateY(-4px);\n  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);\n}\n.list-image[_ngcontent-%COMP%] {\n  height: 160px;\n  background-size: cover;\n  background-position: center;\n  position: relative;\n}\n.list-overlay[_ngcontent-%COMP%] {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));\n  color: white;\n  padding: 16px;\n}\n.list-title[_ngcontent-%COMP%] {\n  font-size: 18px;\n  font-weight: 600;\n  margin: 0;\n}\n.list-comment[_ngcontent-%COMP%] {\n  font-size: 14px;\n  opacity: 0.7;\n  margin: 0 0 12px 0;\n  line-height: 1.4;\n}\n.list-stats[_ngcontent-%COMP%] {\n  margin-bottom: 8px;\n}\n.list-stats[_ngcontent-%COMP%]   mat-chip-set[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 4px;\n}\n.list-stats[_ngcontent-%COMP%]   mat-chip[_ngcontent-%COMP%] {\n  font-size: 12px;\n}\n.no-lists[_ngcontent-%COMP%] {\n  text-align: center;\n  padding: 40px;\n  background-color: white;\n  border-radius: 12px;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\n}\n.no-lists[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n  margin: 0 0 8px 0;\n  font-size: 20px;\n}\n.no-lists[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  margin: 0 0 24px 0;\n  opacity: 0.7;\n}\n.empty-icon[_ngcontent-%COMP%] {\n  font-size: 64px;\n  width: 64px;\n  height: 64px;\n  opacity: 0.3;\n  margin-bottom: 16px;\n}\n.loading-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  padding: 40px;\n  gap: 16px;\n}\n/*# sourceMappingURL=dashboard.component.css.map */"] });
 var DashboardComponent = _DashboardComponent;
 (() => {
@@ -5015,7 +5017,8 @@ var DashboardComponent = _DashboardComponent;
       MatBadgeModule,
       MatMenuModule,
       MatProgressSpinnerModule,
-      RouterModule
+      RouterModule,
+      ImageDirective
     ], template: `<div class="dashboard-container">
   <mat-toolbar color="primary" class="app-toolbar">
     <button mat-icon-button (click)="sidenav.toggle()" class="menu-button">
@@ -5152,7 +5155,7 @@ var DashboardComponent = _DashboardComponent;
                 <mat-card
                     class="list-card"
                     (click)="openList(list.id)">
-                  <div class="list-image" [style.background-image]="'url(' + (list.img || 'https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg') + ')'">
+                  <div [lokImage]="list.imageId" class="list-image">
                     <div class="list-overlay">
                       <h3 class="list-title">{{ list.name }}</h3>
                     </div>
@@ -5223,9 +5226,9 @@ var DashboardComponent = _DashboardComponent;
   }], null, null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(DashboardComponent, { className: "DashboardComponent", filePath: "src/app/components/dashboard/dashboard.component.ts", lineNumber: 38 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(DashboardComponent, { className: "DashboardComponent", filePath: "src/app/components/dashboard/dashboard.component.ts", lineNumber: 40 });
 })();
 export {
   DashboardComponent
 };
-//# sourceMappingURL=chunk-XAADZHOL.js.map
+//# sourceMappingURL=chunk-HNAG6MTY.js.map

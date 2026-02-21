@@ -1,6 +1,6 @@
 import {
   ItemStatus
-} from "./chunk-CT6UNQQ2.js";
+} from "./chunk-FH5Z5G3K.js";
 import {
   BehaviorSubject,
   Injectable,
@@ -37,7 +37,7 @@ import {
   throwError,
   timer,
   ɵɵdefineInjectable
-} from "./chunk-DKY7HSF2.js";
+} from "./chunk-6BTNDEJY.js";
 
 // node_modules/dexie/dist/dexie.js
 var require_dexie = __commonJS({
@@ -6097,15 +6097,15 @@ var _DataMapperService = class _DataMapperService {
     return {
       id: product.id,
       name: product.name,
-      comment: product.comment,
-      img: product.img
+      comment: product.comment || null,
+      imageId: product.imageId || null
     };
   }
   mapItemFromDB(item, product) {
     return {
       id: item.id,
       status: this.toItemStatus(item.status),
-      groupColor: item.groupColor,
+      groupColor: item.groupColor || null,
       count: item.count,
       product: this.mapProductFromDB(product)
     };
@@ -6114,13 +6114,20 @@ var _DataMapperService = class _DataMapperService {
     return {
       id: list.id,
       name: list.name,
-      comment: list.comment,
-      img: list.img,
+      comment: list.comment || null,
+      imageId: list.imageId || null,
       items
     };
   }
   toItemStatus(value) {
     return Object.values(ItemStatus).includes(value) ? value : ItemStatus.ToBuy;
+  }
+  mapItemToDBUpdate(item) {
+    return {
+      count: item.count || void 0,
+      status: item.status || void 0,
+      groupColor: item.groupColor || void 0
+    };
   }
 };
 _DataMapperService.\u0275fac = function DataMapperService_Factory(__ngFactoryType__) {
@@ -16928,15 +16935,20 @@ var _DexieDataBase = class _DexieDataBase extends import_wrapper_default {
     this.version(1).stores({
       products: "@id, &name",
       items: "@id, productId, listId, groupColor, status",
-      lists: "@id, &name"
+      lists: "@id, &name",
+      images: "@id, &name, updatedAt",
+      imageUploadQueue: "imageId"
     });
     this.products = this.table("products");
     this.items = this.table("items");
     this.lists = this.table("lists");
+    this.images = this.table("images");
+    this.imageUploadQueue = this.table("imageUploadQueue");
     this.cloud.configure({
       databaseUrl: environment.publicDexieCloudDbUrl,
       requireAuth: false,
-      customLoginGui: false
+      customLoginGui: false,
+      unsyncedTables: ["images"]
     });
     this.open().then(() => this.isDbOpen = true).catch((e) => this.error = e.message);
   }
@@ -16952,27 +16964,45 @@ var _DexieDataBase = class _DexieDataBase extends import_wrapper_default {
       if (!list || !list.id) {
         throw new Error(`Could not find list with id ${listId}`);
       }
-      const _a = item, { product } = _a, itemRest = __objRest(_a, ["product"]);
+      const _a = item, { product } = _a, _item = __objRest(_a, ["product"]);
       const productDB = yield this.products.where("name").equalsIgnoreCase(product.name).first();
       let productId;
       if (productDB && productDB.id) {
         productId = productDB.id;
       } else {
-        productId = yield this.products.add(__spreadValues({}, product));
+        const newProductDB = {
+          name: product.name,
+          imageId: product.imageId || void 0,
+          comment: product.comment || void 0
+        };
+        productId = yield this.products.add(newProductDB);
       }
-      const itemDB = __spreadProps(__spreadValues({}, itemRest), { productId, listId: list.id });
+      const itemDB = __spreadProps(__spreadValues({}, _item), {
+        productId,
+        listId: list.id,
+        groupColor: _item.groupColor || void 0
+      });
       return this.items.add(itemDB);
     })));
   }
   updateItem(id2, item) {
-    return from(this.items.update(id2, item));
+    const _item = this.dataMapper.mapItemToDBUpdate(item);
+    return from(this.items.update(id2, _item));
   }
   deleteItem(id2) {
     return from(this.items.delete(id2));
   }
   createList(listData) {
-    return from(this.lists.add(listData));
+    return from(this.transaction("rw", this.lists, () => __async(this, null, function* () {
+      const list = {
+        name: listData.name,
+        comment: listData.comment || void 0,
+        imageId: listData.imageId || void 0
+      };
+      return this.lists.add(list);
+    })));
   }
+  //TODO: replace this eager loading with simple queries and lazy loading
   getAllLists() {
     return from(liveQuery(() => this.transaction("r", this.lists, this.items, this.products, () => __async(this, null, function* () {
       const [lists, itemDBs, products] = yield Promise.all([
@@ -17008,18 +17038,49 @@ var _DexieDataBase = class _DexieDataBase extends import_wrapper_default {
       const itemsDB = yield this.items.where("listId").equals(id2).toArray();
       const productIds = [...new Set(itemsDB.map((i) => i.productId))];
       const products = yield this.products.bulkGet(productIds);
+      console.log(`Loaded list ${id2} from DB:`, products);
       const itemsWithProduct = itemsDB.map((itemDB) => {
         const productDB = products.find((p) => p?.id === itemDB.productId);
         return this.dataMapper.mapItemFromDB(itemDB, productDB);
       });
-      return this.dataMapper.mapListFromDB(listDB, itemsWithProduct);
+      const list = this.dataMapper.mapListFromDB(listDB, itemsWithProduct);
+      console.log("Loaded list from DB:", list);
+      return list;
     }))));
   }
-  updateList(id2, list) {
-    return from(this.lists.update(id2, list));
+  updateList(id2, listData) {
+    return from(this.transaction("rw", this.lists, () => __async(this, null, function* () {
+      const list = {
+        name: listData.name,
+        comment: listData.comment || void 0,
+        imageId: listData.imageId || void 0
+      };
+      return this.lists.update(id2, list);
+    })));
   }
   deleteList(id2) {
     return from(this.lists.delete(id2));
+  }
+  createImage(image) {
+    return __async(this, null, function* () {
+      const imageDB = {
+        data: image,
+        updatedAt: (/* @__PURE__ */ new Date()).getTime()
+      };
+      return this.images.add(imageDB);
+    });
+  }
+  createImage$(image) {
+    return from(this.createImage(image));
+  }
+  getImageById(imageId) {
+    return __async(this, null, function* () {
+      const imageDB = yield this.images.get(imageId);
+      if (!imageDB) {
+        throw new Error(`Image with id ${imageId} not found`);
+      }
+      return imageDB?.data;
+    });
   }
 };
 _DexieDataBase.\u0275fac = function DexieDataBase_Factory(__ngFactoryType__) {
@@ -17054,4 +17115,4 @@ dexie/dist/dexie.js:
   PERFORMANCE OF THIS SOFTWARE.
   ***************************************************************************** *)
 */
-//# sourceMappingURL=chunk-LOOZGD6U.js.map
+//# sourceMappingURL=chunk-FMG23KCI.js.map

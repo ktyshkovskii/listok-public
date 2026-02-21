@@ -1,6 +1,6 @@
 import {
   DexieDataBase
-} from "./chunk-LOOZGD6U.js";
+} from "./chunk-FMG23KCI.js";
 import {
   BehaviorSubject,
   Injectable,
@@ -10,9 +10,9 @@ import {
   inject,
   setClassMetadata,
   ɵɵdefineInjectable
-} from "./chunk-DKY7HSF2.js";
+} from "./chunk-6BTNDEJY.js";
 
-// src/app/services/auth.service.ts
+// src/app/services/auth/auth.service.ts
 var _AuthService = class _AuthService {
   constructor() {
     this.db = inject(DexieDataBase);
@@ -126,4 +126,4 @@ var AuthService = _AuthService;
 export {
   AuthService
 };
-//# sourceMappingURL=chunk-4C6E7EIE.js.map
+//# sourceMappingURL=chunk-AUMR25HN.js.map

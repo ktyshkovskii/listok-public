@@ -28,7 +28,7 @@ import {
   _ErrorStateTracker,
   createGlobalPositionStrategy,
   createOverlayRef
-} from "./chunk-UXPRAXEP.js";
+} from "./chunk-4GVQLJ2X.js";
 import {
   BreakpointObserver,
   Breakpoints,
@@ -48,7 +48,7 @@ import {
   coerceElement,
   coerceNumberProperty,
   getSupportedInputTypes
-} from "./chunk-ILIHEHIC.js";
+} from "./chunk-TUJCRL22.js";
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -85,6 +85,7 @@ import {
   isSignal,
   model,
   of,
+  output,
   setClassMetadata,
   signal,
   takeUntil,
@@ -125,7 +126,7 @@ import {
   ɵɵtextInterpolate1,
   ɵɵviewQuery,
   ɵɵviewQuerySignal
-} from "./chunk-DKY7HSF2.js";
+} from "./chunk-6BTNDEJY.js";
 
 // node_modules/@angular/material/fesm2022/form-field-module.mjs
 var MatFormFieldModule = class _MatFormFieldModule {
@@ -2015,8 +2016,8 @@ var _MatFileSelectItem = class _MatFileSelectItem {
     this.capture = model(...ngDevMode ? [void 0, {
       debugName: "capture"
     }] : []);
-    this.change = new EventEmitter();
-    this.error = new EventEmitter();
+    this.change = output();
+    this.error = output();
   }
   /** Triggered when the radio button receives an interaction from the user. */
   _onInputInteraction(event) {
@@ -2026,8 +2027,7 @@ var _MatFileSelectItem = class _MatFileSelectItem {
     if (!this.disabled() && file) {
       const selectedFile = {
         name: file.name,
-        file,
-        url: null
+        file
       };
       if (!this.isValidFile(file)) {
         this._emitErrorEvent("Please select a valid image file (PNG, JPG, JPEG, GIF, WebP)");
@@ -2173,10 +2173,12 @@ var MatFileSelectItem = _MatFileSelectItem;
       args: ["captureChange"]
     }],
     change: [{
-      type: Output
+      type: Output,
+      args: ["change"]
     }],
     error: [{
-      type: Output
+      type: Output,
+      args: ["error"]
     }]
   });
 })();
@@ -2209,16 +2211,7 @@ var _MatFileSelect = class _MatFileSelect {
     return this._value();
   }
   get errorState() {
-    console.group("FileSelect.errorState");
-    console.log("  -> value:", this._value());
-    console.log("  -> touched:", this.touched());
-    console.log("  -> errorState:", !!this._value() && this.touched());
-    console.groupEnd();
     return !this._value() && this.touched();
-  }
-  set errorState(value) {
-    console.group("FileSelect.setErrorState", value);
-    console.groupEnd();
   }
   constructor() {
     this._onDestroy = new Subject();
@@ -2237,20 +2230,26 @@ var _MatFileSelect = class _MatFileSelect {
     });
     this._id = input(this._idGenerator.getId("mat-file-select-"), ...ngDevMode ? [{
       debugName: "_id",
+      // eslint-disable-next-line @angular-eslint/no-input-rename
       alias: "id"
     }] : [{
+      // eslint-disable-next-line @angular-eslint/no-input-rename
       alias: "id"
     }]);
     this._userAriaDescribedBy = input("", ...ngDevMode ? [{
       debugName: "_userAriaDescribedBy",
+      // eslint-disable-next-line @angular-eslint/no-input-rename
       alias: "aria-describedby"
     }] : [{
+      // eslint-disable-next-line @angular-eslint/no-input-rename
       alias: "aria-describedby"
     }]);
     this._placeholder = input("", ...ngDevMode ? [{
       debugName: "_placeholder",
+      // eslint-disable-next-line @angular-eslint/no-input-rename
       alias: "placeholder"
     }] : [{
+      // eslint-disable-next-line @angular-eslint/no-input-rename
       alias: "placeholder"
     }]);
     this.accept = input(...ngDevMode ? [void 0, {
@@ -2261,21 +2260,26 @@ var _MatFileSelect = class _MatFileSelect {
     }] : []);
     this._required = input(false, ...ngDevMode ? [{
       debugName: "_required",
+      // eslint-disable-next-line @angular-eslint/no-input-rename
       alias: "required",
       transform: booleanAttribute
     }] : [{
+      // eslint-disable-next-line @angular-eslint/no-input-rename
       alias: "required",
       transform: booleanAttribute
     }]);
     this._disabledByInput = input(false, ...ngDevMode ? [{
       debugName: "_disabledByInput",
+      // eslint-disable-next-line @angular-eslint/no-input-rename
       alias: "disabled",
       transform: booleanAttribute
     }] : [{
+      // eslint-disable-next-line @angular-eslint/no-input-rename
       alias: "disabled",
       transform: booleanAttribute
     }]);
     this._menuButtonElement = viewChild.required("menuButton");
+    this._menuTriggerElement = viewChild.required(MatMenuTrigger);
     this.touched = signal(false, ...ngDevMode ? [{
       debugName: "touched"
     }] : []);
@@ -2311,13 +2315,12 @@ var _MatFileSelect = class _MatFileSelect {
       this._value();
       untracked(() => this.stateChanges.next());
     });
-    effect(() => {
-      this._fileSelectItems().forEach((item) => {
-        item.change.pipe(takeUntil(this._onDestroy)).subscribe((event) => {
-          this._updateValue(event.value);
-          this.onChange(event.value);
-        });
-      });
+    effect((onCleanup) => {
+      const subs = this._fileSelectItems().map((item) => item.change.subscribe((event) => {
+        this._updateValue(event.value);
+        this.onChange(event.value);
+      }));
+      onCleanup(() => subs.forEach((sub) => sub.unsubscribe()));
     });
     effect(() => {
       const disabled = this._disabled();
@@ -2362,7 +2365,7 @@ var _MatFileSelect = class _MatFileSelect {
     controlElement.setAttribute("aria-describedby", ids.join(" "));
   }
   onContainerClick() {
-    this._menuButtonElement()._elementRef.nativeElement.click();
+    this._menuTriggerElement().openMenu();
   }
   /**
    * Sets the model value. Implemented as part of ControlValueAccessor.
@@ -2418,9 +2421,10 @@ _MatFileSelect.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
   viewQuery: function MatFileSelect_Query(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275viewQuerySignal(ctx._menuButtonElement, _c02, 5);
+      \u0275\u0275viewQuerySignal(ctx._menuTriggerElement, MatMenuTrigger, 5);
     }
     if (rf & 2) {
-      \u0275\u0275queryAdvance();
+      \u0275\u0275queryAdvance(2);
     }
   },
   hostAttrs: [1, "mat-mdc-file-select"],
@@ -2459,7 +2463,7 @@ _MatFileSelect.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
   ngContentSelectors: _c2,
   decls: 8,
   vars: 6,
-  consts: [["menuButton", ""], ["imageMenu", "matMenu"], ["matInput", "", "type", "text", "autocomplete", "off", "readonly", "", 3, "value", "disabled", "required", "placeholder"], ["type", "button", "title", "Attach image", "mat-icon-button", "", 3, "matMenuTriggerFor", "disabled"], ["xPosition", "before", "yPosition", "above"]],
+  consts: [["menuButton", ""], ["menu", "matMenu"], ["matInput", "", "type", "text", "autocomplete", "off", "readonly", "", 3, "value", "disabled", "required", "placeholder"], ["type", "button", "title", "Attach image", "mat-icon-button", "", 3, "matMenuTriggerFor", "disabled"], ["xPosition", "before", "yPosition", "above"]],
   template: function MatFileSelect_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275projectionDef(_c1);
@@ -2472,10 +2476,10 @@ _MatFileSelect.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({
       \u0275\u0275elementEnd();
     }
     if (rf & 2) {
-      const imageMenu_r1 = \u0275\u0275reference(6);
+      const menu_r1 = \u0275\u0275reference(6);
       \u0275\u0275property("value", ctx.value == null ? null : ctx.value.name)("disabled", ctx.disabled)("required", ctx.required)("placeholder", ctx.placeholder);
       \u0275\u0275advance();
-      \u0275\u0275property("matMenuTriggerFor", imageMenu_r1)("disabled", ctx.disabled);
+      \u0275\u0275property("matMenuTriggerFor", menu_r1)("disabled", ctx.disabled);
     }
   },
   dependencies: [MatMenuModule, MatMenu, MatMenuTrigger, MatButtonModule, MatIconButton, FormsModule, MatIcon, ReactiveFormsModule, MatInput],
@@ -2512,11 +2516,11 @@ var MatFileSelect = _MatFileSelect;
        [placeholder]='placeholder'>
 <button #menuButton type="button" title="Attach image"
         mat-icon-button
-        [matMenuTriggerFor]="imageMenu"
+        [matMenuTriggerFor]="menu"
         [disabled]='disabled'>
   <mat-icon>attach_file</mat-icon>
 </button>
-<mat-menu #imageMenu="matMenu" xPosition="before" yPosition="above">
+<mat-menu #menu="matMenu" xPosition="before" yPosition="above">
   <ng-content select="mat-file-select-item"/>
 </mat-menu>
 `,
@@ -2591,6 +2595,12 @@ var MatFileSelect = _MatFileSelect;
         isSignal: true
       }]
     }],
+    _menuTriggerElement: [{
+      type: ViewChild,
+      args: [forwardRef(() => MatMenuTrigger), {
+        isSignal: true
+      }]
+    }],
     _value: [{
       type: Input,
       args: [{
@@ -2614,4 +2624,4 @@ export {
   MatFileSelectItem,
   MatFileSelect
 };
-//# sourceMappingURL=chunk-Z3R43FZF.js.map
+//# sourceMappingURL=chunk-CWBZZ6VW.js.map

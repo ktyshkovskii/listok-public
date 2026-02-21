@@ -1,6 +1,7 @@
 import {
-  DATA_REPOSITORY
-} from "./chunk-SFQT6NKI.js";
+  IMAGE_REPOSITORY,
+  LIST_REPOSITORY
+} from "./chunk-T5ZWQDMH.js";
 import {
   BidiModule,
   DOWN_ARROW,
@@ -35,7 +36,7 @@ import {
   isFakeMousedownFromScreenReader,
   isFakeTouchstartFromScreenReader,
   supportsScrollBehavior
-} from "./chunk-ILIHEHIC.js";
+} from "./chunk-TUJCRL22.js";
 import {
   ANIMATION_MODULE_TYPE,
   ApplicationRef,
@@ -79,6 +80,7 @@ import {
   ViewChild,
   ViewContainerRef,
   ViewEncapsulation,
+  __async,
   __spreadProps,
   __spreadValues,
   afterNextRender,
@@ -96,8 +98,10 @@ import {
   forkJoin,
   forwardRef,
   from,
+  fromPromise,
   getDOM,
   inject,
+  input,
   isObservable,
   isPromise,
   isSubscribable,
@@ -164,7 +168,7 @@ import {
   ɵɵtextInterpolate,
   ɵɵviewQuery,
   ɵɵviewQuerySignal
-} from "./chunk-DKY7HSF2.js";
+} from "./chunk-6BTNDEJY.js";
 
 // node_modules/@angular/material/fesm2022/toolbar.mjs
 var _c0 = ["*", [["mat-toolbar-row"]]];
@@ -5943,9 +5947,9 @@ var AbstractValidatorDirective = class _AbstractValidatorDirective {
   /** @docs-private */
   ngOnChanges(changes) {
     if (this.inputName in changes) {
-      const input = this.normalizeInput(changes[this.inputName].currentValue);
-      this._enabled = this.enabled(input);
-      this._validator = this._enabled ? this.createValidator(input) : nullValidator;
+      const input2 = this.normalizeInput(changes[this.inputName].currentValue);
+      this._enabled = this.enabled(input2);
+      this._validator = this._enabled ? this.createValidator(input2) : nullValidator;
       if (this._onChange) {
         this._onChange();
       }
@@ -5966,8 +5970,8 @@ var AbstractValidatorDirective = class _AbstractValidatorDirective {
    * `null` and `undefined`). Validator classes that extend this base class can override this
    * function with the logic specific to a particular validator directive.
    */
-  enabled(input) {
-    return input != null;
+  enabled(input2) {
+    return input2 != null;
   }
   static \u0275fac = function AbstractValidatorDirective_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _AbstractValidatorDirective)();
@@ -5996,7 +6000,7 @@ var MaxValidator = class _MaxValidator extends AbstractValidatorDirective {
   /** @internal */
   inputName = "max";
   /** @internal */
-  normalizeInput = (input) => toFloat(input);
+  normalizeInput = (input2) => toFloat(input2);
   /** @internal */
   createValidator = (max) => maxValidator(max);
   static \u0275fac = /* @__PURE__ */ (() => {
@@ -6052,7 +6056,7 @@ var MinValidator = class _MinValidator extends AbstractValidatorDirective {
   /** @internal */
   inputName = "min";
   /** @internal */
-  normalizeInput = (input) => toFloat(input);
+  normalizeInput = (input2) => toFloat(input2);
   /** @internal */
   createValidator = (min) => minValidator(min);
   static \u0275fac = /* @__PURE__ */ (() => {
@@ -6115,10 +6119,10 @@ var RequiredValidator = class _RequiredValidator extends AbstractValidatorDirect
   /** @internal */
   normalizeInput = booleanAttribute;
   /** @internal */
-  createValidator = (input) => requiredValidator;
+  createValidator = (input2) => requiredValidator;
   /** @docs-private */
-  enabled(input) {
-    return input;
+  enabled(input2) {
+    return input2;
   }
   static \u0275fac = /* @__PURE__ */ (() => {
     let \u0275RequiredValidator_BaseFactory;
@@ -6161,7 +6165,7 @@ var RequiredValidator = class _RequiredValidator extends AbstractValidatorDirect
 })();
 var CheckboxRequiredValidator = class _CheckboxRequiredValidator extends RequiredValidator {
   /** @internal */
-  createValidator = (input) => requiredTrueValidator;
+  createValidator = (input2) => requiredTrueValidator;
   static \u0275fac = /* @__PURE__ */ (() => {
     let \u0275CheckboxRequiredValidator_BaseFactory;
     return function CheckboxRequiredValidator_Factory(__ngFactoryType__) {
@@ -6210,10 +6214,10 @@ var EmailValidator = class _EmailValidator extends AbstractValidatorDirective {
   /** @internal */
   normalizeInput = booleanAttribute;
   /** @internal */
-  createValidator = (input) => emailValidator;
+  createValidator = (input2) => emailValidator;
   /** @docs-private */
-  enabled(input) {
-    return input;
+  enabled(input2) {
+    return input2;
   }
   static \u0275fac = /* @__PURE__ */ (() => {
     let \u0275EmailValidator_BaseFactory;
@@ -6259,7 +6263,7 @@ var MinLengthValidator = class _MinLengthValidator extends AbstractValidatorDire
   /** @internal */
   inputName = "minlength";
   /** @internal */
-  normalizeInput = (input) => toInteger(input);
+  normalizeInput = (input2) => toInteger(input2);
   /** @internal */
   createValidator = (minlength) => minLengthValidator(minlength);
   static \u0275fac = /* @__PURE__ */ (() => {
@@ -6315,7 +6319,7 @@ var MaxLengthValidator = class _MaxLengthValidator extends AbstractValidatorDire
   /** @internal */
   inputName = "maxlength";
   /** @internal */
-  normalizeInput = (input) => toInteger(input);
+  normalizeInput = (input2) => toInteger(input2);
   /** @internal */
   createValidator = (maxlength) => maxLengthValidator(maxlength);
   static \u0275fac = /* @__PURE__ */ (() => {
@@ -6372,9 +6376,9 @@ var PatternValidator = class _PatternValidator extends AbstractValidatorDirectiv
   /** @internal */
   inputName = "pattern";
   /** @internal */
-  normalizeInput = (input) => input;
+  normalizeInput = (input2) => input2;
   /** @internal */
-  createValidator = (input) => patternValidator(input);
+  createValidator = (input2) => patternValidator(input2);
   static \u0275fac = /* @__PURE__ */ (() => {
     let \u0275PatternValidator_BaseFactory;
     return function PatternValidator_Factory(__ngFactoryType__) {
@@ -12727,12 +12731,12 @@ function extendStyles(destination, source) {
   }
   return destination;
 }
-function getPixelValue(input) {
-  if (typeof input !== "number" && input != null) {
-    const [value, units] = input.split(cssUnitPattern);
+function getPixelValue(input2) {
+  if (typeof input2 !== "number" && input2 != null) {
+    const [value, units] = input2.split(cssUnitPattern);
     return !units || units === "px" ? parseFloat(value) : null;
   }
-  return input || null;
+  return input2 || null;
 }
 function getRoundedBoundingClientRect(clientRect) {
   return {
@@ -15386,10 +15390,13 @@ var matMenuAnimations = {
 var fadeInItems = matMenuAnimations.fadeInItems;
 var transformMenu = matMenuAnimations.transformMenu;
 
-// src/app/services/list.service.ts
-var _ListService = class _ListService {
+// src/app/services/repository/list-repository.service.ts
+var _ListRepositoryService = class _ListRepositoryService {
   constructor() {
-    this.dataRepository = inject(DATA_REPOSITORY);
+    this.dataRepository = inject(LIST_REPOSITORY);
+  }
+  getState() {
+    return this.dataRepository.getState();
   }
   getAllLists() {
     return this.dataRepository.getAllLists();
@@ -15407,18 +15414,243 @@ var _ListService = class _ListService {
     return this.dataRepository.deleteList(id);
   }
 };
-_ListService.\u0275fac = function ListService_Factory(__ngFactoryType__) {
-  return new (__ngFactoryType__ || _ListService)();
+_ListRepositoryService.\u0275fac = function ListRepositoryService_Factory(__ngFactoryType__) {
+  return new (__ngFactoryType__ || _ListRepositoryService)();
 };
-_ListService.\u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({ token: _ListService, factory: _ListService.\u0275fac, providedIn: "root" });
-var ListService = _ListService;
+_ListRepositoryService.\u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({ token: _ListRepositoryService, factory: _ListRepositoryService.\u0275fac, providedIn: "root" });
+var ListRepositoryService = _ListRepositoryService;
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ListService, [{
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ListRepositoryService, [{
     type: Injectable,
     args: [{
       providedIn: "root"
     }]
   }], null, null);
+})();
+
+// src/app/services/ image/image-compressor.service.ts
+var _ImageCompressorService = class _ImageCompressorService {
+  compressImage(file, maxSize = 1024) {
+    return __async(this, null, function* () {
+      const url = URL.createObjectURL(file);
+      const img = yield this.loadImage(url);
+      const scale = maxSize / Math.max(img.width, img.height);
+      const width = img.width * scale;
+      const height = img.height * scale;
+      const canvas = document.createElement("canvas");
+      canvas.width = width;
+      canvas.height = height;
+      const ctx = canvas.getContext("2d");
+      ctx.drawImage(img, 0, 0, width, height);
+      const compressed = yield new Promise((resolve) => canvas.toBlob((blob) => resolve(blob), "image/webp", 0.8));
+      canvas.remove();
+      URL.revokeObjectURL(url);
+      return compressed;
+    });
+  }
+  loadImage(src) {
+    return new Promise((resolve) => {
+      const img = new Image();
+      img.onload = () => resolve(img);
+      img.src = src;
+    });
+  }
+};
+_ImageCompressorService.\u0275fac = function ImageCompressorService_Factory(__ngFactoryType__) {
+  return new (__ngFactoryType__ || _ImageCompressorService)();
+};
+_ImageCompressorService.\u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({ token: _ImageCompressorService, factory: _ImageCompressorService.\u0275fac, providedIn: "root" });
+var ImageCompressorService = _ImageCompressorService;
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ImageCompressorService, [{
+    type: Injectable,
+    args: [{ providedIn: "root" }]
+  }], null, null);
+})();
+
+// src/app/services/ image/image-repository.service.ts
+var _ImageRepositoryService = class _ImageRepositoryService {
+  constructor() {
+    this.dataRepository = inject(IMAGE_REPOSITORY);
+  }
+  getState() {
+    return this.dataRepository.getState();
+  }
+  createImage$(image) {
+    return this.dataRepository.createImage$(image);
+  }
+  createImage(image) {
+    return this.dataRepository.createImage(image);
+  }
+  getImageById(id) {
+    return this.dataRepository.getImageById(id);
+  }
+};
+_ImageRepositoryService.\u0275fac = function ImageRepositoryService_Factory(__ngFactoryType__) {
+  return new (__ngFactoryType__ || _ImageRepositoryService)();
+};
+_ImageRepositoryService.\u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({ token: _ImageRepositoryService, factory: _ImageRepositoryService.\u0275fac, providedIn: "root" });
+var ImageRepositoryService = _ImageRepositoryService;
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ImageRepositoryService, [{
+    type: Injectable,
+    args: [{
+      providedIn: "root"
+    }]
+  }], null, null);
+})();
+
+// src/app/services/ image/image-storage.service.ts
+var _ImageStorageService = class _ImageStorageService {
+  constructor() {
+    this.imageRepository = inject(ImageRepositoryService);
+    this.imageCompressor = inject(ImageCompressorService);
+    this.blobCache = /* @__PURE__ */ new Map();
+  }
+  getImage(id) {
+    return __async(this, null, function* () {
+      if (this.blobCache.has(id)) {
+        return this.blobCache.get(id);
+      }
+      const blob = yield this.loadFromIndexedDB(id);
+      if (blob) {
+        this.blobCache.set(id, blob);
+      }
+      return blob;
+    });
+  }
+  loadFromIndexedDB(id) {
+    return this.imageRepository.getImageById(id);
+  }
+  storeImage$(image) {
+    return fromPromise(this.imageCompressor.compressImage(image)).pipe(switchMap((image2) => this.imageRepository.createImage$(image2)));
+  }
+};
+_ImageStorageService.\u0275fac = function ImageStorageService_Factory(__ngFactoryType__) {
+  return new (__ngFactoryType__ || _ImageStorageService)();
+};
+_ImageStorageService.\u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({ token: _ImageStorageService, factory: _ImageStorageService.\u0275fac, providedIn: "root" });
+var ImageStorageService = _ImageStorageService;
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ImageStorageService, [{
+    type: Injectable,
+    args: [{ providedIn: "root" }]
+  }], null, null);
+})();
+
+// src/app/services/ image/image-resource.service.ts
+var _ImageResourceService = class _ImageResourceService {
+  constructor() {
+    this.imageStorageService = inject(ImageStorageService);
+    this.cache = /* @__PURE__ */ new Map();
+  }
+  resolve(id) {
+    return __async(this, null, function* () {
+      const entry = this.cache.get(id) || (yield this.createCacheData(id));
+      entry.refs++;
+      return entry.url;
+    });
+  }
+  release(id) {
+    const entry = this.cache.get(id);
+    if (!entry) {
+      return;
+    }
+    entry.refs--;
+    if (entry.refs <= 0) {
+      URL.revokeObjectURL(entry.url);
+      this.cache.delete(id);
+    }
+  }
+  createCacheData(id) {
+    return __async(this, null, function* () {
+      const blob = yield this.imageStorageService.getImage(id);
+      if (!blob) {
+        throw new Error("Image not found");
+      }
+      const entry = {
+        url: URL.createObjectURL(blob),
+        refs: 0
+      };
+      this.cache.set(id, entry);
+      return entry;
+    });
+  }
+};
+_ImageResourceService.\u0275fac = function ImageResourceService_Factory(__ngFactoryType__) {
+  return new (__ngFactoryType__ || _ImageResourceService)();
+};
+_ImageResourceService.\u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({ token: _ImageResourceService, factory: _ImageResourceService.\u0275fac, providedIn: "root" });
+var ImageResourceService = _ImageResourceService;
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ImageResourceService, [{
+    type: Injectable,
+    args: [{ providedIn: "root" }]
+  }], null, null);
+})();
+
+// src/app/directives/image.directive.ts
+var _ImageDirective = class _ImageDirective {
+  constructor() {
+    this.placeholder = input(...ngDevMode ? [void 0, { debugName: "placeholder" }] : []);
+    this.lokImage = input(...ngDevMode ? [void 0, { debugName: "lokImage" }] : []);
+    this.src = input(...ngDevMode ? [void 0, { debugName: "src" }] : []);
+    this.imageId = computed(() => this.lokImage() || this.src(), ...ngDevMode ? [{ debugName: "imageId" }] : []);
+    this.el = inject(ElementRef);
+    this.imageResourceService = inject(ImageResourceService);
+    this.visible = signal(false, ...ngDevMode ? [{ debugName: "visible" }] : []);
+    const observer = new IntersectionObserver((entries) => {
+      this.visible.set(entries[0].isIntersecting);
+    });
+    observer.observe(this.el.nativeElement);
+    effect((onCleanup) => {
+      const id = this.imageId();
+      const isVisible = this.visible();
+      if (!id || !isVisible) {
+        return;
+      }
+      this.applyPlaceholder();
+      let active = true;
+      this.imageResourceService.resolve(id).then((url) => active && this.apply(url));
+      onCleanup(() => {
+        active = false;
+        this.imageResourceService.release(id);
+      });
+    });
+    effect((onCleanup) => {
+      onCleanup(() => observer.disconnect());
+    });
+  }
+  apply(url) {
+    const el = this.el.nativeElement;
+    if (this.isImg(el)) {
+      el.src = url;
+    } else {
+      el.style.backgroundImage = `url("${url}")`;
+    }
+  }
+  applyPlaceholder() {
+    const placeholder = this.placeholder();
+    if (placeholder) {
+      this.apply(placeholder);
+    }
+  }
+  isImg(el) {
+    return el.tagName === "IMG";
+  }
+};
+_ImageDirective.\u0275fac = function ImageDirective_Factory(__ngFactoryType__) {
+  return new (__ngFactoryType__ || _ImageDirective)();
+};
+_ImageDirective.\u0275dir = /* @__PURE__ */ \u0275\u0275defineDirective({ type: _ImageDirective, selectors: [["img", "lokImage", ""], ["img", "lok-image", ""], ["div", "lokImage", ""], ["div", "lok-image", ""]], inputs: { placeholder: [1, "placeholder"], lokImage: [1, "lokImage"], src: [1, "src"] } });
+var ImageDirective = _ImageDirective;
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ImageDirective, [{
+    type: Directive,
+    args: [{
+      selector: "img[lokImage], img[lok-image], div[lokImage], div[lok-image]"
+    }]
+  }], () => [], { placeholder: [{ type: Input, args: [{ isSignal: true, alias: "placeholder", required: false }] }], lokImage: [{ type: Input, args: [{ isSignal: true, alias: "lokImage", required: false }] }], src: [{ type: Input, args: [{ isSignal: true, alias: "src", required: false }] }] });
 })();
 
 // node_modules/@angular/cdk/fesm2022/unique-selection-dispatcher.mjs
@@ -15761,6 +15993,7 @@ export {
   NgForm,
   ɵNgNoValidate,
   NumberValueAccessor,
+  FormControlDirective,
   FormGroupDirective,
   FormControlName,
   MinValidator,
@@ -15798,7 +16031,9 @@ export {
   MatMenu,
   MatMenuTrigger,
   MatMenuModule,
-  ListService
+  ListRepositoryService,
+  ImageStorageService,
+  ImageDirective
 };
 /*! Bundled license information:
 
@@ -15809,4 +16044,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-UXPRAXEP.js.map
+//# sourceMappingURL=chunk-4GVQLJ2X.js.map

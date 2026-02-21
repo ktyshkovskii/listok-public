@@ -1,4 +1,4 @@
-// src/app/models/list.model.ts
+// src/app/models/data.model.ts
 var ItemStatus;
 (function(ItemStatus2) {
   ItemStatus2["ToBuy"] = "to_buy";
@@ -8,4 +8,4 @@ var ItemStatus;
 export {
   ItemStatus
 };
-//# sourceMappingURL=chunk-CT6UNQQ2.js.map
+//# sourceMappingURL=chunk-FH5Z5G3K.js.map

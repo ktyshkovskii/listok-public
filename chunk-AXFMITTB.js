@@ -2,10 +2,10 @@ import {
   MatChipsModule,
   MatPseudoCheckbox,
   MatPseudoCheckboxModule
-} from "./chunk-BUTHDLRR.js";
+} from "./chunk-IQ33FPWE.js";
 import {
   ItemStatus
-} from "./chunk-CT6UNQQ2.js";
+} from "./chunk-FH5Z5G3K.js";
 import {
   MatFileSelect,
   MatFileSelectItem,
@@ -14,7 +14,7 @@ import {
   MatInputModule,
   MatSnackBar,
   MatSnackBarModule
-} from "./chunk-Z3R43FZF.js";
+} from "./chunk-CWBZZ6VW.js";
 import {
   BasePortalOutlet,
   CdkConnectedOverlay,
@@ -26,9 +26,12 @@ import {
   DefaultValueAccessor,
   ErrorStateMatcher,
   FormBuilder,
+  FormControlDirective,
   FormControlName,
   FormGroupDirective,
-  ListService,
+  ImageDirective,
+  ImageStorageService,
+  ListRepositoryService,
   MAT_FORM_FIELD,
   MatError,
   MatFormField,
@@ -64,10 +67,10 @@ import {
   createOverlayRef,
   createRepositionScrollStrategy,
   ɵNgNoValidate
-} from "./chunk-UXPRAXEP.js";
+} from "./chunk-4GVQLJ2X.js";
 import {
-  DATA_REPOSITORY
-} from "./chunk-SFQT6NKI.js";
+  ITEM_REPOSITORY
+} from "./chunk-T5ZWQDMH.js";
 import {
   A,
   A11yModule,
@@ -110,7 +113,7 @@ import {
   coerceNumberProperty,
   hasModifierKey,
   removeAriaReferencedId
-} from "./chunk-ILIHEHIC.js";
+} from "./chunk-TUJCRL22.js";
 import {
   ActivatedRoute,
   Attribute,
@@ -153,6 +156,7 @@ import {
   map,
   merge,
   numberAttribute,
+  of,
   setClassMetadata,
   signal,
   startWith,
@@ -207,7 +211,7 @@ import {
   ɵɵtextInterpolate,
   ɵɵtextInterpolate1,
   ɵɵviewQuery
-} from "./chunk-DKY7HSF2.js";
+} from "./chunk-6BTNDEJY.js";
 
 // node_modules/@angular/cdk/fesm2022/dialog.mjs
 function CdkDialogContainer_ng_template_0_Template(rf, ctx) {
@@ -1988,19 +1992,51 @@ var MatDialogModule = class _MatDialogModule {
   }], null, null);
 })();
 
-// src/app/services/item.service.ts
-var _ItemService = class _ItemService {
+// src/app/services/repository/item-repository.service.ts
+var _ItemRepositoryService = class _ItemRepositoryService {
   constructor() {
-    this.dataRepository = inject(DATA_REPOSITORY);
+    this.dataRepository = inject(ITEM_REPOSITORY);
   }
-  createItem(listId, itemData) {
-    return this.dataRepository.createItemInList(listId, __spreadValues({}, itemData));
+  getState() {
+    return this.dataRepository.getState();
+  }
+  createItemInList(listId, newItem) {
+    return this.dataRepository.createItemInList(listId, newItem);
   }
   updateItem(id, item) {
     return this.dataRepository.updateItem(id, item);
   }
   deleteItem(id) {
     return this.dataRepository.deleteItem(id);
+  }
+};
+_ItemRepositoryService.\u0275fac = function ItemRepositoryService_Factory(__ngFactoryType__) {
+  return new (__ngFactoryType__ || _ItemRepositoryService)();
+};
+_ItemRepositoryService.\u0275prov = /* @__PURE__ */ \u0275\u0275defineInjectable({ token: _ItemRepositoryService, factory: _ItemRepositoryService.\u0275fac, providedIn: "root" });
+var ItemRepositoryService = _ItemRepositoryService;
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ItemRepositoryService, [{
+    type: Injectable,
+    args: [{
+      providedIn: "root"
+    }]
+  }], null, null);
+})();
+
+// src/app/services/item.service.ts
+var _ItemService = class _ItemService {
+  constructor() {
+    this.repository = inject(ItemRepositoryService);
+  }
+  createItem(listId, itemData) {
+    return this.repository.createItemInList(listId, __spreadValues({}, itemData));
+  }
+  updateItem(id, item) {
+    return this.repository.updateItem(id, item);
+  }
+  deleteItem(id) {
+    return this.repository.deleteItem(id);
   }
 };
 _ItemService.\u0275fac = function ItemService_Factory(__ngFactoryType__) {
@@ -4048,81 +4084,76 @@ function CreateItemDialogComponent_Conditional_56_Template(rf, ctx) {
   if (rf & 2) {
     const ctx_r1 = \u0275\u0275nextContext();
     \u0275\u0275advance();
-    \u0275\u0275property("src", ctx_r1.imagePreviewUrl, \u0275\u0275sanitizeUrl);
+    \u0275\u0275property("src", ctx_r1.form.controls.imageId.value, \u0275\u0275sanitizeUrl);
   }
 }
 var _CreateItemDialogComponent = class _CreateItemDialogComponent {
   constructor() {
     this.fb = inject(FormBuilder);
+    this.imageService = inject(ImageStorageService);
     this.dialogRef = inject(MatDialogRef);
+    this.destroyRef = new Subject();
     this.data = inject(MAT_DIALOG_DATA);
-    this.imagePreviewUrl = "";
-    this.itemForm = this.fb.group({
+    this.form = this.fb.group({
       name: this.fb.nonNullable.control("", Validators.required),
       comment: this.fb.control(""),
-      img: this.fb.control(null),
+      imageId: this.fb.control(""),
       count: this.fb.nonNullable.control(1, [Validators.required, Validators.min(1)]),
       color: this.fb.control(null)
     });
+    this.imageControl = this.fb.control(null);
   }
   ngOnInit() {
+    this.imageControl.valueChanges.pipe(takeUntil(this.destroyRef), switchMap((fileSelectInfo) => {
+      if (fileSelectInfo) {
+        return this.imageService.storeImage$(fileSelectInfo.file);
+      } else {
+        return of(null);
+      }
+    })).subscribe((value) => {
+      this.form.controls.imageId.patchValue(value, { emitEvent: false });
+    });
     const item = this.data.item;
     if (item) {
-      const img = !item.product.img ? null : {
-        name: item.product.name,
-        url: item.product.img,
-        file: null
-      };
-      this.itemForm.patchValue({
+      this.form.patchValue({
         name: item.product.name,
         comment: item.product.comment || "",
-        img,
+        imageId: item.product.imageId,
         count: item.count,
         color: item.groupColor || null
       });
     }
-    this.setupImagePreview();
   }
   ngOnDestroy() {
-    URL.revokeObjectURL(this.imagePreviewUrl);
-  }
-  setupImagePreview() {
-    this.itemForm.get("img")?.valueChanges.subscribe((fileInfo) => {
-      if (fileInfo?.url) {
-        this.imagePreviewUrl = fileInfo.url;
-      } else if (fileInfo?.file) {
-        URL.revokeObjectURL(this.imagePreviewUrl);
-        this.imagePreviewUrl = URL.createObjectURL(fileInfo?.file);
-      }
-    });
+    this.destroyRef.complete();
   }
   onCancel() {
     this.dialogRef.close();
   }
   onSave() {
-    if (this.itemForm.valid) {
-      const formValue = this.itemForm.value;
+    if (this.form.valid) {
+      const formValue = this.form.value;
       const itemRequest = {
         product: {
           name: formValue.name,
-          comment: formValue.comment || void 0,
-          img: formValue.img?.url || void 0
+          comment: formValue.comment || null,
+          imageId: formValue.imageId || null
         },
         count: formValue.count,
-        groupColor: formValue.color || void 0,
+        groupColor: formValue.color || null,
         status: this.data.item?.status || ItemStatus.ToBuy
       };
       this.dialogRef.close(itemRequest);
     }
   }
   clearImage() {
-    this.itemForm.patchValue({ img: null });
+    this.form.patchValue({ imageId: "" });
   }
 };
 _CreateItemDialogComponent.\u0275fac = function CreateItemDialogComponent_Factory(__ngFactoryType__) {
   return new (__ngFactoryType__ || _CreateItemDialogComponent)();
 };
-_CreateItemDialogComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _CreateItemDialogComponent, selectors: [["ng-component"]], decls: 64, vars: 10, consts: [["mat-dialog-title", ""], [1, "item-form", 3, "formGroup"], ["appearance", "outline"], ["matInput", "", "formControlName", "name", "placeholder", "Enter item name", "required", ""], ["matPrefix", ""], ["matInput", "", "type", "number", "formControlName", "count", "placeholder", "1", "required", "", "min", "1"], ["formControlName", "color"], [3, "value"], ["value", "#E91E63"], ["value", "#4ECDC4"], ["value", "#2196F3"], ["value", "#FF9800"], ["value", "#4CAF50"], ["value", "#F7DC6F"], ["value", "#9C27B0"], ["value", "#795548"], ["matInput", "", "formControlName", "comment", "placeholder", "Add notes or description", "rows", "3"], ["appearance", "outline", 1, "full-width"], ["formControlName", "img", "accept", "image/*"], [1, "image-preview"], ["align", "end"], ["mat-button", "", 3, "click"], ["mat-raised-button", "", "color", "primary", 3, "click", "disabled"], ["alt", "Item image", 1, "preview-image", 3, "src"], ["type", "button", "mat-icon-button", "", "title", "Remove image", 1, "clear-image-btn", 3, "click"]], template: function CreateItemDialogComponent_Template(rf, ctx) {
+_CreateItemDialogComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _CreateItemDialogComponent, selectors: [["ng-component"]], decls: 64, vars: 11, consts: [["mat-dialog-title", ""], [1, "item-form", 3, "formGroup"], ["appearance", "outline"], ["matInput", "", "formControlName", "name", "placeholder", "Enter item name", "required", ""], ["matPrefix", ""], ["matInput", "", "type", "number", "formControlName", "count", "placeholder", "1", "required", "", "min", "1"], ["formControlName", "color"], [3, "value"], ["value", "#E91E63"], ["value", "#4ECDC4"], ["value", "#2196F3"], ["value", "#FF9800"], ["value", "#4CAF50"], ["value", "#F7DC6F"], ["value", "#9C27B0"], ["value", "#795548"], ["matInput", "", "formControlName", "comment", "placeholder", "Add notes or description", "rows", "3"], ["appearance", "outline", 1, "full-width"], ["accept", "image/*", 3, "formControl"], [1, "image-preview"], ["align", "end"], ["mat-button", "", 3, "click"], ["mat-raised-button", "", "color", "primary", 3, "click", "disabled"], ["lokImage", "", "alt", "Item image", 1, "preview-image", 3, "src"], ["type", "button", "mat-icon-button", "", "title", "Remove image", 1, "clear-image-btn", 3, "click"]], template: function CreateItemDialogComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "h2", 0);
     \u0275\u0275text(1);
@@ -4214,25 +4245,24 @@ _CreateItemDialogComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineCompone
     \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
-    let tmp_2_0;
-    let tmp_3_0;
-    let tmp_4_0;
     \u0275\u0275advance();
     \u0275\u0275textInterpolate(ctx.data.item ? "Edit Item" : "Add New Item");
     \u0275\u0275advance(2);
-    \u0275\u0275property("formGroup", ctx.itemForm);
+    \u0275\u0275property("formGroup", ctx.form);
     \u0275\u0275advance(7);
-    \u0275\u0275conditional(((tmp_2_0 = ctx.itemForm.get("name")) == null ? null : tmp_2_0.hasError("required")) && ((tmp_2_0 = ctx.itemForm.get("name")) == null ? null : tmp_2_0.touched) ? 10 : -1);
+    \u0275\u0275conditional(ctx.form.controls.name.hasError("required") && ctx.form.controls.name.touched ? 10 : -1);
     \u0275\u0275advance(7);
-    \u0275\u0275conditional(((tmp_3_0 = ctx.itemForm.get("count")) == null ? null : tmp_3_0.hasError("required")) && ((tmp_3_0 = ctx.itemForm.get("count")) == null ? null : tmp_3_0.touched) ? 17 : -1);
+    \u0275\u0275conditional(ctx.form.controls.count.hasError("required") && ctx.form.controls.count.touched ? 17 : -1);
     \u0275\u0275advance();
-    \u0275\u0275conditional(((tmp_4_0 = ctx.itemForm.get("count")) == null ? null : tmp_4_0.hasError("min")) ? 18 : -1);
+    \u0275\u0275conditional(ctx.form.controls.count.hasError("min") ? 18 : -1);
     \u0275\u0275advance(5);
     \u0275\u0275property("value", null);
-    \u0275\u0275advance(33);
-    \u0275\u0275conditional(ctx.imagePreviewUrl ? 56 : -1);
+    \u0275\u0275advance(31);
+    \u0275\u0275property("formControl", ctx.imageControl);
+    \u0275\u0275advance(2);
+    \u0275\u0275conditional(ctx.form.controls.imageId.value ? 56 : -1);
     \u0275\u0275advance(4);
-    \u0275\u0275property("disabled", ctx.itemForm.invalid);
+    \u0275\u0275property("disabled", ctx.form.invalid);
     \u0275\u0275advance(2);
     \u0275\u0275textInterpolate(ctx.data.item ? "save" : "add");
     \u0275\u0275advance();
@@ -4248,6 +4278,7 @@ _CreateItemDialogComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineCompone
   NgControlStatusGroup,
   RequiredValidator,
   MinValidator,
+  FormControlDirective,
   FormGroupDirective,
   FormControlName,
   MatDialogModule,
@@ -4271,7 +4302,8 @@ _CreateItemDialogComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineCompone
   MatOption,
   MatMenuModule,
   MatFileSelect,
-  MatFileSelectItem
+  MatFileSelectItem,
+  ImageDirective
 ], styles: ["\n\n.item-form[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  gap: 16px;\n  min-width: 400px;\n  padding: 16px 0;\n}\n@media (max-width: 599.98px) {\n  .item-form[_ngcontent-%COMP%] {\n    min-width: 240px;\n  }\n}\nmat-form-field[_ngcontent-%COMP%] {\n  width: 100%;\n}\nmat-dialog-content[_ngcontent-%COMP%] {\n  max-height: 70vh;\n  overflow-y: auto;\n}\n.image-preview[_ngcontent-%COMP%] {\n  position: relative;\n  border-radius: 4px;\n  overflow: hidden;\n  background: #f5f5f5;\n  margin-top: 8px;\n}\n.image-preview[_ngcontent-%COMP%]   .preview-image[_ngcontent-%COMP%] {\n  display: block;\n  width: 100%;\n  max-height: 300px;\n  object-fit: contain;\n}\n.image-preview[_ngcontent-%COMP%]   .clear-image-btn[_ngcontent-%COMP%] {\n  position: absolute;\n  top: 8px;\n  right: 8px;\n  background: rgba(0, 0, 0, 0.6);\n  color: white;\n  border-radius: 50%;\n}\n.image-preview[_ngcontent-%COMP%]   .clear-image-btn[_ngcontent-%COMP%]:hover {\n  background: rgba(0, 0, 0, 0.8);\n}\n.image-preview[_ngcontent-%COMP%]   .clear-image-btn[_ngcontent-%COMP%]   mat-icon[_ngcontent-%COMP%] {\n  font-size: 20px;\n  width: 20px;\n  height: 20px;\n}\n.full-width[_ngcontent-%COMP%] {\n  width: 100%;\n  box-sizing: border-box;\n}\n/*# sourceMappingURL=create-item-dialog.component.css.map */"] });
 var CreateItemDialogComponent = _CreateItemDialogComponent;
 (() => {
@@ -4289,15 +4321,16 @@ var CreateItemDialogComponent = _CreateItemDialogComponent;
       MatMenuModule,
       MatFileSelect,
       MatFileSelectItem,
-      MatFileSelect
+      MatFileSelect,
+      ImageDirective
     ], template: `<h2 mat-dialog-title>{{ data.item ? 'Edit Item' : 'Add New Item' }}</h2>
 <mat-dialog-content>
-  <form [formGroup]="itemForm" class="item-form">
+  <form [formGroup]="form" class="item-form">
     <mat-form-field appearance="outline">
       <mat-label>Item Name</mat-label>
       <input matInput formControlName="name" placeholder="Enter item name" required>
       <mat-icon matPrefix>shopping_basket</mat-icon>
-      @if (itemForm.get('name')?.hasError('required') && itemForm.get('name')?.touched) {
+      @if (form.controls.name.hasError('required') && form.controls.name.touched) {
         <mat-error>Item name is required</mat-error>
       }
     </mat-form-field>
@@ -4306,10 +4339,10 @@ var CreateItemDialogComponent = _CreateItemDialogComponent;
       <mat-label>Quantity</mat-label>
       <input matInput type="number" formControlName="count" placeholder="1" required min="1">
       <mat-icon matPrefix>tag</mat-icon>
-      @if (itemForm.get('count')?.hasError('required') && itemForm.get('count')?.touched) {
+      @if (form.controls.count.hasError('required') && form.controls.count.touched) {
         <mat-error>Quantity is required</mat-error>
       }
-      @if (itemForm.get('count')?.hasError('min')) {
+      @if (form.controls.count.hasError('min')) {
         <mat-error>Quantity must be at least 1</mat-error>
       }
     </mat-form-field>
@@ -4339,20 +4372,15 @@ var CreateItemDialogComponent = _CreateItemDialogComponent;
     <mat-form-field appearance="outline" class="full-width">
       <mat-label>Image (Optional)</mat-label>
       <mat-icon matPrefix>image</mat-icon>
-      <mat-file-select formControlName="img" accept="image/*">
+      <mat-file-select [formControl]="imageControl" accept="image/*">
         <mat-file-select-item/>
       </mat-file-select>
     </mat-form-field>
 
-    @if (imagePreviewUrl) {
+    @if (form.controls.imageId.value) {
       <div class="image-preview">
-        <img [src]="imagePreviewUrl" alt="Item image" class="preview-image">
-        <button
-          type="button"
-          mat-icon-button
-          (click)="clearImage()"
-          class="clear-image-btn"
-          title="Remove image">
+        <img lokImage [src]="form.controls.imageId.value" alt="Item image" class="preview-image">
+        <button type="button" mat-icon-button class="clear-image-btn" title="Remove image" (click)="clearImage()">
           <mat-icon>close</mat-icon>
         </button>
       </div>
@@ -4361,7 +4389,7 @@ var CreateItemDialogComponent = _CreateItemDialogComponent;
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button (click)="onCancel()">Cancel</button>
-  <button mat-raised-button color="primary" (click)="onSave()" [disabled]="itemForm.invalid">
+  <button mat-raised-button color="primary" (click)="onSave()" [disabled]="form.invalid">
     <mat-icon>{{ data.item ? 'save' : 'add' }}</mat-icon>
     {{ data.item ? 'Save Changes' : 'Add Item' }}
   </button>
@@ -4370,7 +4398,7 @@ var CreateItemDialogComponent = _CreateItemDialogComponent;
   }], null, null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(CreateItemDialogComponent, { className: "CreateItemDialogComponent", filePath: "src/app/components/shared/add-item-dialog/create-item-dialog.component.ts", lineNumber: 43 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(CreateItemDialogComponent, { className: "CreateItemDialogComponent", filePath: "src/app/components/shared/add-item-dialog/create-item-dialog.component.ts", lineNumber: 49 });
 })();
 
 // src/app/components/shared/confirm-dialog/confirm-dialog.component.ts
@@ -4507,19 +4535,7 @@ function ListDetailComponent_Conditional_0_Conditional_8_Template(rf, ctx) {
     \u0275\u0275textInterpolate(ctx_r1.list == null ? null : ctx_r1.list.comment);
   }
 }
-function ListDetailComponent_Conditional_0_Conditional_27_Conditional_1_Template(rf, ctx) {
-  if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 15);
-    \u0275\u0275element(1, "img", 24);
-    \u0275\u0275elementEnd();
-  }
-  if (rf & 2) {
-    const ctx_r1 = \u0275\u0275nextContext(3);
-    \u0275\u0275advance();
-    \u0275\u0275property("src", ctx_r1.list.img, \u0275\u0275sanitizeUrl)("alt", ctx_r1.list.name);
-  }
-}
-function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_6_For_2_For_4_Conditional_2_Template(rf, ctx) {
+function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_Conditional_6_For_2_For_4_Conditional_2_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 34);
     \u0275\u0275element(1, "img", 43);
@@ -4528,10 +4544,10 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditi
   if (rf & 2) {
     const item_r4 = \u0275\u0275nextContext().$implicit;
     \u0275\u0275advance();
-    \u0275\u0275property("src", item_r4.product.img, \u0275\u0275sanitizeUrl)("alt", item_r4.product.name);
+    \u0275\u0275property("src", item_r4.product.imageId, \u0275\u0275sanitizeUrl)("alt", item_r4.product.name);
   }
 }
-function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_6_For_2_For_4_Conditional_6_Template(rf, ctx) {
+function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_Conditional_6_For_2_For_4_Conditional_6_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "p", 37);
     \u0275\u0275text(1);
@@ -4543,24 +4559,24 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditi
     \u0275\u0275textInterpolate(item_r4.product.comment);
   }
 }
-function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_6_For_2_For_4_Template(rf, ctx) {
+function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_Conditional_6_For_2_For_4_Template(rf, ctx) {
   if (rf & 1) {
     const _r3 = \u0275\u0275getCurrentView();
     \u0275\u0275elementStart(0, "div", 32)(1, "div", 33);
-    \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_6_For_2_For_4_Template_div_click_1_listener() {
+    \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_Conditional_6_For_2_For_4_Template_div_click_1_listener() {
       const item_r4 = \u0275\u0275restoreView(_r3).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(6);
       return \u0275\u0275resetView(ctx_r1.toggleItemStatus(item_r4));
-    })("keydown.enter", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_6_For_2_For_4_Template_div_keydown_enter_1_listener() {
+    })("keydown.enter", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_Conditional_6_For_2_For_4_Template_div_keydown_enter_1_listener() {
       const item_r4 = \u0275\u0275restoreView(_r3).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(6);
       return \u0275\u0275resetView(ctx_r1.toggleItemStatus(item_r4));
     });
-    \u0275\u0275conditionalCreate(2, ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_6_For_2_For_4_Conditional_2_Template, 2, 2, "div", 34);
+    \u0275\u0275conditionalCreate(2, ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_Conditional_6_For_2_For_4_Conditional_2_Template, 2, 2, "div", 34);
     \u0275\u0275elementStart(3, "div", 35)(4, "h3", 36);
     \u0275\u0275text(5);
     \u0275\u0275elementEnd();
-    \u0275\u0275conditionalCreate(6, ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_6_For_2_For_4_Conditional_6_Template, 2, 1, "p", 37);
+    \u0275\u0275conditionalCreate(6, ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_Conditional_6_For_2_For_4_Conditional_6_Template, 2, 1, "p", 37);
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(7, "div", 38);
     \u0275\u0275element(8, "span", 39);
@@ -4568,7 +4584,7 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditi
     \u0275\u0275text(10);
     \u0275\u0275elementEnd()()();
     \u0275\u0275elementStart(11, "button", 41);
-    \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_6_For_2_For_4_Template_button_click_11_listener($event) {
+    \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_Conditional_6_For_2_For_4_Template_button_click_11_listener($event) {
       \u0275\u0275restoreView(_r3);
       return \u0275\u0275resetView($event.stopPropagation());
     });
@@ -4576,7 +4592,7 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditi
     \u0275\u0275text(13, "more_vert");
     \u0275\u0275elementEnd()();
     \u0275\u0275elementStart(14, "mat-menu", null, 1)(16, "button", 42);
-    \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_6_For_2_For_4_Template_button_click_16_listener() {
+    \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_Conditional_6_For_2_For_4_Template_button_click_16_listener() {
       const item_r4 = \u0275\u0275restoreView(_r3).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(6);
       return \u0275\u0275resetView(ctx_r1.editItem(item_r4));
@@ -4587,7 +4603,7 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditi
     \u0275\u0275text(19, " Edit ");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(20, "button", 13);
-    \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_6_For_2_For_4_Template_button_click_20_listener() {
+    \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_Conditional_6_For_2_For_4_Template_button_click_20_listener() {
       const item_r4 = \u0275\u0275restoreView(_r3).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(6);
       return \u0275\u0275resetView(ctx_r1.deleteItem(item_r4));
@@ -4602,7 +4618,7 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditi
     const item_r4 = ctx.$implicit;
     const itemMenu_r5 = \u0275\u0275reference(15);
     \u0275\u0275advance(2);
-    \u0275\u0275conditional(item_r4.product.img ? 2 : -1);
+    \u0275\u0275conditional(item_r4.product.imageId ? 2 : -1);
     \u0275\u0275advance(3);
     \u0275\u0275textInterpolate(item_r4.product.name);
     \u0275\u0275advance();
@@ -4613,12 +4629,12 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditi
     \u0275\u0275property("matMenuTriggerFor", itemMenu_r5);
   }
 }
-function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_6_For_2_Template(rf, ctx) {
+function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_Conditional_6_For_2_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 29);
     \u0275\u0275element(1, "div", 30);
     \u0275\u0275elementStart(2, "div", 31);
-    \u0275\u0275repeaterCreate(3, ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_6_For_2_For_4_Template, 24, 5, "div", 32, \u0275\u0275repeaterTrackByIdentity);
+    \u0275\u0275repeaterCreate(3, ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_Conditional_6_For_2_For_4_Template, 24, 5, "div", 32, \u0275\u0275repeaterTrackByIdentity);
     \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
@@ -4629,10 +4645,10 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditi
     \u0275\u0275repeater(group_r6.items);
   }
 }
-function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_6_Template(rf, ctx) {
+function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_Conditional_6_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 27);
-    \u0275\u0275repeaterCreate(1, ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_6_For_2_Template, 5, 2, "div", 29, _forTrack0);
+    \u0275\u0275repeaterCreate(1, ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_Conditional_6_For_2_Template, 5, 2, "div", 29, _forTrack0);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -4641,7 +4657,7 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditi
     \u0275\u0275repeater(ctx_r1.itemsToBuyGroups);
   }
 }
-function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_7_Template(rf, ctx) {
+function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_Conditional_7_Template(rf, ctx) {
   if (rf & 1) {
     const _r7 = \u0275\u0275getCurrentView();
     \u0275\u0275elementStart(0, "div", 28)(1, "mat-icon", 44);
@@ -4654,7 +4670,7 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditi
     \u0275\u0275text(6, "Add your first item to get started.");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(7, "button", 45);
-    \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_7_Template_button_click_7_listener() {
+    \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_Conditional_7_Template_button_click_7_listener() {
       \u0275\u0275restoreView(_r7);
       const ctx_r1 = \u0275\u0275nextContext(4);
       return \u0275\u0275resetView(ctx_r1.openAddItemDialog());
@@ -4666,7 +4682,7 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditi
     \u0275\u0275elementEnd()();
   }
 }
-function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_8_Template(rf, ctx) {
+function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_Conditional_8_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 28)(1, "mat-icon", 44);
     \u0275\u0275text(2, "done_all");
@@ -4679,17 +4695,17 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditi
     \u0275\u0275elementEnd()();
   }
 }
-function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Template(rf, ctx) {
+function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 23)(1, "div", 25)(2, "h2");
+    \u0275\u0275elementStart(0, "div", 24)(1, "div", 25)(2, "h2");
     \u0275\u0275text(3, "Items to Buy");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(4, "span", 26);
     \u0275\u0275text(5);
     \u0275\u0275elementEnd()();
-    \u0275\u0275conditionalCreate(6, ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_6_Template, 3, 0, "div", 27);
-    \u0275\u0275conditionalCreate(7, ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_7_Template, 11, 0, "div", 28);
-    \u0275\u0275conditionalCreate(8, ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Conditional_8_Template, 7, 0, "div", 28);
+    \u0275\u0275conditionalCreate(6, ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_Conditional_6_Template, 3, 0, "div", 27);
+    \u0275\u0275conditionalCreate(7, ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_Conditional_7_Template, 11, 0, "div", 28);
+    \u0275\u0275conditionalCreate(8, ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_Conditional_8_Template, 7, 0, "div", 28);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -4704,19 +4720,19 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Templat
     \u0275\u0275conditional(ctx_r1.itemsToBuyList.length === 0 && ctx_r1.itemsBoughtList.length > 0 ? 8 : -1);
   }
 }
-function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_For_4_Conditional_2_Template(rf, ctx) {
+function ListDetailComponent_Conditional_0_Conditional_27_Conditional_41_For_8_For_4_Conditional_2_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 34);
-    \u0275\u0275element(1, "img", 43);
+    \u0275\u0275element(1, "img", 50);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
     const item_r9 = \u0275\u0275nextContext().$implicit;
     \u0275\u0275advance();
-    \u0275\u0275property("src", item_r9.product.img, \u0275\u0275sanitizeUrl)("alt", item_r9.product.name);
+    \u0275\u0275property("src", item_r9.product.imageId, \u0275\u0275sanitizeUrl)("alt", item_r9.product.name);
   }
 }
-function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_For_4_Conditional_6_Template(rf, ctx) {
+function ListDetailComponent_Conditional_0_Conditional_27_Conditional_41_For_8_For_4_Conditional_6_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "p", 49);
     \u0275\u0275text(1);
@@ -4728,24 +4744,24 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_F
     \u0275\u0275textInterpolate(item_r9.product.comment);
   }
 }
-function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_For_4_Template(rf, ctx) {
+function ListDetailComponent_Conditional_0_Conditional_27_Conditional_41_For_8_For_4_Template(rf, ctx) {
   if (rf & 1) {
     const _r8 = \u0275\u0275getCurrentView();
     \u0275\u0275elementStart(0, "div", 47)(1, "div", 33);
-    \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_For_4_Template_div_click_1_listener() {
+    \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_41_For_8_For_4_Template_div_click_1_listener() {
       const item_r9 = \u0275\u0275restoreView(_r8).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(5);
       return \u0275\u0275resetView(ctx_r1.toggleItemStatus(item_r9));
-    })("keydown.enter", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_For_4_Template_div_keydown_enter_1_listener() {
+    })("keydown.enter", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_41_For_8_For_4_Template_div_keydown_enter_1_listener() {
       const item_r9 = \u0275\u0275restoreView(_r8).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(5);
       return \u0275\u0275resetView(ctx_r1.toggleItemStatus(item_r9));
     });
-    \u0275\u0275conditionalCreate(2, ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_For_4_Conditional_2_Template, 2, 2, "div", 34);
+    \u0275\u0275conditionalCreate(2, ListDetailComponent_Conditional_0_Conditional_27_Conditional_41_For_8_For_4_Conditional_2_Template, 2, 2, "div", 34);
     \u0275\u0275elementStart(3, "div", 35)(4, "h3", 48);
     \u0275\u0275text(5);
     \u0275\u0275elementEnd();
-    \u0275\u0275conditionalCreate(6, ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_For_4_Conditional_6_Template, 2, 1, "p", 49);
+    \u0275\u0275conditionalCreate(6, ListDetailComponent_Conditional_0_Conditional_27_Conditional_41_For_8_For_4_Conditional_6_Template, 2, 1, "p", 49);
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(7, "div", 38);
     \u0275\u0275element(8, "span", 39);
@@ -4753,7 +4769,7 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_F
     \u0275\u0275text(10);
     \u0275\u0275elementEnd()()();
     \u0275\u0275elementStart(11, "button", 41);
-    \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_For_4_Template_button_click_11_listener($event) {
+    \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_41_For_8_For_4_Template_button_click_11_listener($event) {
       \u0275\u0275restoreView(_r8);
       return \u0275\u0275resetView($event.stopPropagation());
     });
@@ -4761,7 +4777,7 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_F
     \u0275\u0275text(13, "more_vert");
     \u0275\u0275elementEnd()();
     \u0275\u0275elementStart(14, "mat-menu", null, 1)(16, "button", 42);
-    \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_For_4_Template_button_click_16_listener() {
+    \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_41_For_8_For_4_Template_button_click_16_listener() {
       const item_r9 = \u0275\u0275restoreView(_r8).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(5);
       return \u0275\u0275resetView(ctx_r1.editItem(item_r9));
@@ -4772,7 +4788,7 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_F
     \u0275\u0275text(19, " Edit ");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(20, "button", 13);
-    \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_For_4_Template_button_click_20_listener() {
+    \u0275\u0275listener("click", function ListDetailComponent_Conditional_0_Conditional_27_Conditional_41_For_8_For_4_Template_button_click_20_listener() {
       const item_r9 = \u0275\u0275restoreView(_r8).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(5);
       return \u0275\u0275resetView(ctx_r1.deleteItem(item_r9));
@@ -4787,7 +4803,7 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_F
     const item_r9 = ctx.$implicit;
     const itemMenu_r10 = \u0275\u0275reference(15);
     \u0275\u0275advance(2);
-    \u0275\u0275conditional(item_r9.product.img ? 2 : -1);
+    \u0275\u0275conditional(item_r9.product.imageId ? 2 : -1);
     \u0275\u0275advance(3);
     \u0275\u0275textInterpolate(item_r9.product.name);
     \u0275\u0275advance();
@@ -4798,12 +4814,12 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_F
     \u0275\u0275property("matMenuTriggerFor", itemMenu_r10);
   }
 }
-function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_Template(rf, ctx) {
+function ListDetailComponent_Conditional_0_Conditional_27_Conditional_41_For_8_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 29);
     \u0275\u0275element(1, "div", 30);
     \u0275\u0275elementStart(2, "div", 31);
-    \u0275\u0275repeaterCreate(3, ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_For_4_Template, 24, 5, "div", 47, \u0275\u0275repeaterTrackByIdentity);
+    \u0275\u0275repeaterCreate(3, ListDetailComponent_Conditional_0_Conditional_27_Conditional_41_For_8_For_4_Template, 24, 5, "div", 47, \u0275\u0275repeaterTrackByIdentity);
     \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
@@ -4814,16 +4830,16 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_T
     \u0275\u0275repeater(group_r11.items);
   }
 }
-function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_Template(rf, ctx) {
+function ListDetailComponent_Conditional_0_Conditional_27_Conditional_41_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 23)(1, "div", 25)(2, "h2");
+    \u0275\u0275elementStart(0, "div", 24)(1, "div", 25)(2, "h2");
     \u0275\u0275text(3, "Completed Items");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(4, "span", 46);
     \u0275\u0275text(5);
     \u0275\u0275elementEnd()();
     \u0275\u0275elementStart(6, "div", 27);
-    \u0275\u0275repeaterCreate(7, ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_For_8_Template, 5, 2, "div", 29, _forTrack0);
+    \u0275\u0275repeaterCreate(7, ListDetailComponent_Conditional_0_Conditional_27_Conditional_41_For_8_Template, 5, 2, "div", 29, _forTrack0);
     \u0275\u0275elementEnd()();
   }
   if (rf & 2) {
@@ -4836,52 +4852,53 @@ function ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_Templat
 }
 function ListDetailComponent_Conditional_0_Conditional_27_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 14);
-    \u0275\u0275conditionalCreate(1, ListDetailComponent_Conditional_0_Conditional_27_Conditional_1_Template, 2, 2, "div", 15);
-    \u0275\u0275elementStart(2, "div", 16)(3, "mat-card", 17)(4, "mat-card-content")(5, "div", 18)(6, "mat-icon", 19);
-    \u0275\u0275text(7, "assignment");
+    \u0275\u0275elementStart(0, "div", 14)(1, "div", 15);
+    \u0275\u0275element(2, "img", 16);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(8, "h3");
-    \u0275\u0275text(9);
+    \u0275\u0275elementStart(3, "div", 17)(4, "mat-card", 18)(5, "mat-card-content")(6, "div", 19)(7, "mat-icon", 20);
+    \u0275\u0275text(8, "assignment");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(10, "p");
-    \u0275\u0275text(11, "Total Items");
+    \u0275\u0275elementStart(9, "h3");
+    \u0275\u0275text(10);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(11, "p");
+    \u0275\u0275text(12, "Total Items");
     \u0275\u0275elementEnd()()()();
-    \u0275\u0275elementStart(12, "mat-card", 17)(13, "mat-card-content")(14, "div", 18)(15, "mat-icon", 20);
-    \u0275\u0275text(16, "shopping_cart");
+    \u0275\u0275elementStart(13, "mat-card", 18)(14, "mat-card-content")(15, "div", 19)(16, "mat-icon", 21);
+    \u0275\u0275text(17, "shopping_cart");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(17, "h3");
-    \u0275\u0275text(18);
+    \u0275\u0275elementStart(18, "h3");
+    \u0275\u0275text(19);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(19, "p");
-    \u0275\u0275text(20, "To Buy");
+    \u0275\u0275elementStart(20, "p");
+    \u0275\u0275text(21, "To Buy");
     \u0275\u0275elementEnd()()()();
-    \u0275\u0275elementStart(21, "mat-card", 17)(22, "mat-card-content")(23, "div", 18)(24, "mat-icon", 21);
-    \u0275\u0275text(25, "done_all");
+    \u0275\u0275elementStart(22, "mat-card", 18)(23, "mat-card-content")(24, "div", 19)(25, "mat-icon", 22);
+    \u0275\u0275text(26, "done_all");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(26, "h3");
-    \u0275\u0275text(27);
+    \u0275\u0275elementStart(27, "h3");
+    \u0275\u0275text(28);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(28, "p");
-    \u0275\u0275text(29, "Completed");
+    \u0275\u0275elementStart(29, "p");
+    \u0275\u0275text(30, "Completed");
     \u0275\u0275elementEnd()()()();
-    \u0275\u0275elementStart(30, "mat-card", 17)(31, "mat-card-content")(32, "div", 18)(33, "mat-icon", 22);
-    \u0275\u0275text(34, "percent");
+    \u0275\u0275elementStart(31, "mat-card", 18)(32, "mat-card-content")(33, "div", 19)(34, "mat-icon", 23);
+    \u0275\u0275text(35, "percent");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(35, "h3");
-    \u0275\u0275text(36);
+    \u0275\u0275elementStart(36, "h3");
+    \u0275\u0275text(37);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(37, "p");
-    \u0275\u0275text(38, "Progress");
+    \u0275\u0275elementStart(38, "p");
+    \u0275\u0275text(39, "Progress");
     \u0275\u0275elementEnd()()()()();
-    \u0275\u0275conditionalCreate(39, ListDetailComponent_Conditional_0_Conditional_27_Conditional_39_Template, 9, 4, "div", 23);
-    \u0275\u0275conditionalCreate(40, ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_Template, 9, 1, "div", 23);
+    \u0275\u0275conditionalCreate(40, ListDetailComponent_Conditional_0_Conditional_27_Conditional_40_Template, 9, 4, "div", 24);
+    \u0275\u0275conditionalCreate(41, ListDetailComponent_Conditional_0_Conditional_27_Conditional_41_Template, 9, 1, "div", 24);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
     const ctx_r1 = \u0275\u0275nextContext(2);
-    \u0275\u0275advance();
-    \u0275\u0275conditional(ctx_r1.list.img ? 1 : -1);
+    \u0275\u0275advance(2);
+    \u0275\u0275property("src", ctx_r1.list.imageId, \u0275\u0275sanitizeUrl)("alt", ctx_r1.list.name);
     \u0275\u0275advance(8);
     \u0275\u0275textInterpolate(ctx_r1.list.items.length);
     \u0275\u0275advance(9);
@@ -4891,9 +4908,9 @@ function ListDetailComponent_Conditional_0_Conditional_27_Template(rf, ctx) {
     \u0275\u0275advance(9);
     \u0275\u0275textInterpolate(ctx_r1.completionRate);
     \u0275\u0275advance(3);
-    \u0275\u0275conditional(ctx_r1.itemsToBuyList.length > 0 || ctx_r1.itemsBoughtList.length === 0 ? 39 : -1);
+    \u0275\u0275conditional(ctx_r1.itemsToBuyList.length > 0 || ctx_r1.itemsBoughtList.length === 0 ? 40 : -1);
     \u0275\u0275advance();
-    \u0275\u0275conditional(ctx_r1.itemsBoughtList.length > 0 ? 40 : -1);
+    \u0275\u0275conditional(ctx_r1.itemsBoughtList.length > 0 ? 41 : -1);
   }
 }
 function ListDetailComponent_Conditional_0_Template(rf, ctx) {
@@ -4944,7 +4961,7 @@ function ListDetailComponent_Conditional_0_Template(rf, ctx) {
     \u0275\u0275elementEnd();
     \u0275\u0275text(26, " Delete List ");
     \u0275\u0275elementEnd()()();
-    \u0275\u0275conditionalCreate(27, ListDetailComponent_Conditional_0_Conditional_27_Template, 41, 7, "div", 14);
+    \u0275\u0275conditionalCreate(27, ListDetailComponent_Conditional_0_Conditional_27_Template, 42, 8, "div", 14);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -4965,7 +4982,7 @@ function ListDetailComponent_Conditional_0_Template(rf, ctx) {
 function ListDetailComponent_Conditional_1_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 3);
-    \u0275\u0275element(1, "mat-spinner", 50);
+    \u0275\u0275element(1, "mat-spinner", 51);
     \u0275\u0275elementStart(2, "p");
     \u0275\u0275text(3, "Loading list details...");
     \u0275\u0275elementEnd()();
@@ -4979,7 +4996,7 @@ var _ListDetailComponent = class _ListDetailComponent {
     this.route = inject(ActivatedRoute);
     this.router = inject(Router);
     this.itemService = inject(ItemService);
-    this.listService = inject(ListService);
+    this.listService = inject(ListRepositoryService);
     this.snackBar = inject(MatSnackBar);
     this.dialog = inject(MatDialog);
   }
@@ -5172,7 +5189,7 @@ var _ListDetailComponent = class _ListDetailComponent {
 _ListDetailComponent.\u0275fac = function ListDetailComponent_Factory(__ngFactoryType__) {
   return new (__ngFactoryType__ || _ListDetailComponent)();
 };
-_ListDetailComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ListDetailComponent, selectors: [["ng-component"]], decls: 2, vars: 2, consts: [["listMenu", "matMenu"], ["itemMenu", "matMenu"], [1, "list-detail-container"], [1, "loading-container"], [1, "list-toolbar"], ["mat-icon-button", "", 3, "click"], [1, "list-header-info"], [1, "list-title"], [1, "list-subtitle"], [1, "spacer"], ["mat-button", "", 3, "click"], ["mat-icon-button", "", 3, "matMenuTriggerFor"], ["mat-menu-item", "", 3, "routerLink"], ["mat-menu-item", "", 1, "delete-button", 3, "click"], [1, "list-content"], [1, "list-img-box"], [1, "list-stats"], [1, "stat-card"], [1, "stat-content"], [1, "stat-icon"], [1, "stat-icon", "to-do"], [1, "stat-icon", "done"], [1, "stat-icon", "progress"], [1, "items-section"], [1, "list-image", 3, "src", "alt"], [1, "section-header"], [1, "item-count-badge"], [1, "items-grid"], [1, "empty-state"], [1, "color-group"], [1, "color-bar"], [1, "group-items"], [1, "item-row"], ["tabindex", "0", 1, "item-content", 3, "click", "keydown.enter"], [1, "item-image"], [1, "item-info"], [1, "item-name"], [1, "item-comment"], [1, "item-details"], ["lokResponsiveText", "", "full", "Quantity: ", "short", "Qt: ", 1, "item-quantity"], [1, "item-quantity"], ["mat-icon-button", "", 1, "item-menu-button", 3, "click", "matMenuTriggerFor"], ["mat-menu-item", "", 3, "click"], [3, "src", "alt"], [1, "empty-icon"], ["mat-raised-button", "", "color", "primary", 3, "click"], [1, "item-count-badge", "completed"], [1, "item-row", "done"], [1, "item-name", "bought-text"], [1, "item-comment", "bought-text"], ["diameter", "50"]], template: function ListDetailComponent_Template(rf, ctx) {
+_ListDetailComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ListDetailComponent, selectors: [["ng-component"]], decls: 2, vars: 2, consts: [["listMenu", "matMenu"], ["itemMenu", "matMenu"], [1, "list-detail-container"], [1, "loading-container"], [1, "list-toolbar"], ["mat-icon-button", "", 3, "click"], [1, "list-header-info"], [1, "list-title"], [1, "list-subtitle"], [1, "spacer"], ["mat-button", "", 3, "click"], ["mat-icon-button", "", 3, "matMenuTriggerFor"], ["mat-menu-item", "", 3, "routerLink"], ["mat-menu-item", "", 1, "delete-button", 3, "click"], [1, "list-content"], [1, "list-img-box"], ["lokImage", "", 1, "list-image", 3, "src", "alt"], [1, "list-stats"], [1, "stat-card"], [1, "stat-content"], [1, "stat-icon"], [1, "stat-icon", "to-do"], [1, "stat-icon", "done"], [1, "stat-icon", "progress"], [1, "items-section"], [1, "section-header"], [1, "item-count-badge"], [1, "items-grid"], [1, "empty-state"], [1, "color-group"], [1, "color-bar"], [1, "group-items"], [1, "item-row"], ["tabindex", "0", 1, "item-content", 3, "click", "keydown.enter"], [1, "item-image"], [1, "item-info"], [1, "item-name"], [1, "item-comment"], [1, "item-details"], ["lokResponsiveText", "", "full", "Quantity: ", "short", "Qt: ", 1, "item-quantity"], [1, "item-quantity"], ["mat-icon-button", "", 1, "item-menu-button", 3, "click", "matMenuTriggerFor"], ["mat-menu-item", "", 3, "click"], ["lokImage", "", 3, "src", "alt"], [1, "empty-icon"], ["mat-raised-button", "", "color", "primary", 3, "click"], [1, "item-count-badge", "completed"], [1, "item-row", "done"], [1, "item-name", "bought-text"], [1, "item-comment", "bought-text"], [3, "src", "alt"], ["diameter", "50"]], template: function ListDetailComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275conditionalCreate(0, ListDetailComponent_Conditional_0_Template, 28, 7, "div", 2);
     \u0275\u0275conditionalCreate(1, ListDetailComponent_Conditional_1_Template, 4, 0, "div", 3);
@@ -5204,7 +5221,8 @@ _ListDetailComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ t
   MatDialogModule,
   RouterModule,
   RouterLink,
-  ResponsiveTextDirective
+  ResponsiveTextDirective,
+  ImageDirective
 ], styles: ["\n\n.list-detail-container[_ngcontent-%COMP%] {\n  min-height: 100vh;\n  background-color: #fafafa;\n}\n.list-toolbar[_ngcontent-%COMP%] {\n  position: sticky;\n  top: 0;\n  z-index: 100;\n  background-color: white;\n  color: #333;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n}\n.list-header-info[_ngcontent-%COMP%] {\n  flex: 1;\n  margin-left: 16px;\n}\n.list-title[_ngcontent-%COMP%] {\n  font-size: 20px;\n  font-weight: 600;\n  margin: 0;\n}\n.list-subtitle[_ngcontent-%COMP%] {\n  font-size: 14px;\n  opacity: 0.7;\n  margin: 0;\n}\n.spacer[_ngcontent-%COMP%] {\n  flex: 1 1 auto;\n}\n.list-content[_ngcontent-%COMP%] {\n  padding: 24px;\n  max-width: 1200px;\n  margin: 0 auto;\n}\n@media (max-width: 599.98px) {\n  .list-content[_ngcontent-%COMP%] {\n    padding: 16px;\n  }\n}\n.list-img-box[_ngcontent-%COMP%] {\n  margin-bottom: 24px;\n  border-radius: 12px;\n  overflow: hidden;\n  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);\n}\n@media (max-width: 599.98px) {\n  .list-img-box[_ngcontent-%COMP%] {\n    margin-bottom: 16px;\n  }\n}\n.list-image[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 300px;\n  object-fit: cover;\n}\n.list-stats[_ngcontent-%COMP%] {\n  display: flex;\n  flex-wrap: nowrap;\n  gap: 12px;\n  overflow-x: auto;\n  margin-bottom: 32px;\n  padding: 2px;\n}\n@media (max-width: 599.98px) {\n  .list-stats[_ngcontent-%COMP%] {\n    gap: 6px;\n    margin-bottom: 16px;\n  }\n}\n.list-stats[_ngcontent-%COMP%]::-webkit-scrollbar {\n  height: 4px;\n}\n.list-stats[_ngcontent-%COMP%]::-webkit-scrollbar-track {\n  background: #f1f1f1;\n  border-radius: 2px;\n}\n.list-stats[_ngcontent-%COMP%]::-webkit-scrollbar-thumb {\n  background: #c1c1c1;\n  border-radius: 2px;\n}\n.list-stats[_ngcontent-%COMP%]::-webkit-scrollbar-thumb:hover {\n  background: #a8a8a8;\n}\n.stat-card[_ngcontent-%COMP%] {\n  border-radius: 8px;\n  flex: 1 0 auto;\n  min-width: 140px;\n  transition: min-width 0.3s ease;\n}\n@media (max-width: 599.98px) {\n  .stat-card[_ngcontent-%COMP%] {\n    min-width: 80px;\n  }\n}\n.stat-content[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 12px;\n}\n@media (max-width: 599.98px) {\n  .stat-content[_ngcontent-%COMP%] {\n    gap: 2px;\n  }\n}\n.stat-content[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n  font-size: 24px;\n  font-weight: 700;\n  margin: 0;\n}\n@media (max-width: 599.98px) {\n  .stat-content[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n    font-size: 20px;\n  }\n}\n.stat-content[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  font-size: 14px;\n  opacity: 0.7;\n  margin: 0;\n  white-space: nowrap;\n}\n@media (max-width: 599.98px) {\n  .stat-content[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n    display: none;\n  }\n}\n.stat-icon[_ngcontent-%COMP%] {\n  font-size: 32px;\n  width: 32px;\n  height: 32px;\n  color: #1976d2;\n}\n@media (max-width: 599.98px) {\n  .stat-icon[_ngcontent-%COMP%] {\n    font-size: 24px;\n    width: 24px;\n    height: 24px;\n  }\n}\n.stat-icon.to-do[_ngcontent-%COMP%] {\n  color: #f57c00;\n}\n.stat-icon.done[_ngcontent-%COMP%] {\n  color: #4caf50;\n}\n.stat-icon.progress[_ngcontent-%COMP%] {\n  color: #9c27b0;\n}\n.items-section[_ngcontent-%COMP%] {\n  background-color: white;\n  border-radius: 12px;\n  padding: 12px;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\n}\n@media (max-width: 599.98px) {\n  .items-section[_ngcontent-%COMP%] {\n    padding: 12px;\n  }\n}\n.section-header[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin-left: 16px;\n  margin-bottom: 24px;\n  gap: 16px;\n}\n@media (max-width: 599.98px) {\n  .section-header[_ngcontent-%COMP%] {\n    gap: 12px;\n    margin-bottom: 12px;\n  }\n}\n.section-header[_ngcontent-%COMP%]   h2[_ngcontent-%COMP%] {\n  font-size: 24px;\n  font-weight: 600;\n  margin: 0;\n  flex: 1;\n}\n.item-count-badge[_ngcontent-%COMP%] {\n  color: white;\n  padding: 4px 12px;\n  border-radius: 16px;\n  font-size: 14px;\n  font-weight: 600;\n  min-width: 24px;\n  text-align: center;\n}\n.item-count-badge[_ngcontent-%COMP%]:not(.completed) {\n  background-color: #1976d2;\n}\n.item-count-badge.completed[_ngcontent-%COMP%] {\n  background-color: #4caf50;\n}\n.items-grid[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  gap: 16px;\n}\n@media (max-width: 599.98px) {\n  .items-grid[_ngcontent-%COMP%] {\n    gap: 12px;\n  }\n}\n.color-group[_ngcontent-%COMP%] {\n  display: flex;\n  gap: 0;\n  position: relative;\n}\n.color-bar[_ngcontent-%COMP%] {\n  width: 4px;\n  background-color: currentColor;\n  border-radius: 4px;\n  flex-shrink: 0;\n  margin-right: 12px;\n}\n.group-items[_ngcontent-%COMP%] {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  gap: 8px;\n}\n.item-row[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 16px;\n  padding: 16px;\n  background-color: white;\n  border-radius: 12px;\n  border: 1px solid #e0e0e0;\n  transition: transform 0.2s, box-shadow 0.2s;\n}\n@media (max-width: 599.98px) {\n  .item-row[_ngcontent-%COMP%] {\n    padding: 8px;\n    gap: 12px;\n  }\n}\n.item-row[_ngcontent-%COMP%]:hover {\n  transform: translateY(-2px);\n  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);\n}\n.item-row.done[_ngcontent-%COMP%] {\n  opacity: 0.6;\n  background-color: #f5f5f5;\n}\n.item-row.done[_ngcontent-%COMP%]:hover {\n  transform: none;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\n}\n.item-content[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 16px;\n  flex: 1;\n  cursor: pointer;\n  min-width: 0;\n}\n@media (max-width: 599.98px) {\n  .item-content[_ngcontent-%COMP%] {\n    gap: 4px;\n  }\n}\n.bought-text[_ngcontent-%COMP%] {\n  text-decoration: line-through;\n  color: #999;\n}\n.item-image[_ngcontent-%COMP%] {\n  width: 56px;\n  height: 56px;\n  border-radius: 8px;\n  overflow: hidden;\n  flex-shrink: 0;\n}\n.item-image[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n}\n.item-info[_ngcontent-%COMP%] {\n  flex: 2;\n  min-width: 0;\n}\n@media (max-width: 599.98px) {\n  .item-info[_ngcontent-%COMP%] {\n    flex: 1;\n  }\n}\n.item-name[_ngcontent-%COMP%] {\n  font-size: 18px;\n  font-weight: 600;\n  margin: 0 0 4px 0;\n}\n.item-comment[_ngcontent-%COMP%] {\n  font-size: 15px;\n  opacity: 0.7;\n  margin: 0;\n}\n.item-details[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 16px;\n  flex: 1;\n  justify-content: flex-end;\n}\n@media (max-width: 599.98px) {\n  .item-details[_ngcontent-%COMP%] {\n    flex-direction: row;\n    gap: 8px;\n  }\n}\n.item-quantity[_ngcontent-%COMP%] {\n  font-size: 14px;\n  color: #666;\n  white-space: nowrap;\n}\n@media (max-width: 599.98px) {\n  .item-quantity[_ngcontent-%COMP%] {\n    font-size: 12px;\n  }\n}\n.item-menu-button[_ngcontent-%COMP%] {\n  flex-shrink: 0;\n}\n.empty-state[_ngcontent-%COMP%] {\n  text-align: center;\n  padding: 40px;\n}\n.empty-state[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n  margin: 0 0 8px 0;\n  font-size: 20px;\n}\n.empty-state[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  margin: 0 0 24px 0;\n  opacity: 0.7;\n}\n.empty-icon[_ngcontent-%COMP%] {\n  font-size: 64px;\n  width: 64px;\n  height: 64px;\n  opacity: 0.3;\n  margin-bottom: 16px;\n}\n.loading-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  min-height: 100vh;\n  gap: 16px;\n}\n.delete-button[_ngcontent-%COMP%] {\n  color: #f44336;\n}\n/*# sourceMappingURL=list-detail.component.css.map */"] });
 var ListDetailComponent = _ListDetailComponent;
 (() => {
@@ -5221,7 +5239,8 @@ var ListDetailComponent = _ListDetailComponent;
       MatToolbarModule,
       MatDialogModule,
       RouterModule,
-      ResponsiveTextDirective
+      ResponsiveTextDirective,
+      ImageDirective
     ], template: `@if (!loading) {
   <div class="list-detail-container">
     <mat-toolbar class="list-toolbar">
@@ -5255,11 +5274,9 @@ var ListDetailComponent = _ListDetailComponent;
     </mat-toolbar>
     @if (list) {
       <div class="list-content">
-        @if (list.img) {
-          <div class="list-img-box">
-            <img [src]="list.img" [alt]="list.name" class="list-image">
-          </div>
-        }
+        <div class="list-img-box">
+          <img lokImage [src]="list.imageId" [alt]="list.name" class="list-image">
+        </div>
         <div class="list-stats">
           <mat-card class="stat-card">
             <mat-card-content>
@@ -5316,9 +5333,9 @@ var ListDetailComponent = _ListDetailComponent;
                           <div class="item-content" tabindex="0"
                                (click)="toggleItemStatus(item)"
                                (keydown.enter)="toggleItemStatus(item)">
-                            @if (item.product.img) {
+                            @if (item.product.imageId) {
                               <div class="item-image">
-                                <img [src]="item.product.img" [alt]="item.product.name">
+                                <img lokImage [src]="item.product.imageId" [alt]="item.product.name">
                               </div>
                             }
                             <div class="item-info">
@@ -5389,9 +5406,9 @@ var ListDetailComponent = _ListDetailComponent;
                         <div class="item-content" tabindex="0"
                              (click)="toggleItemStatus(item)"
                              (keydown.enter)="toggleItemStatus(item)">
-                          @if (item.product.img) {
+                          @if (item.product.imageId) {
                             <div class="item-image">
-                              <img [src]="item.product.img" [alt]="item.product.name">
+                              <img [src]="item.product.imageId" [alt]="item.product.name">
                             </div>
                           }
                           <div class="item-info">
@@ -5441,9 +5458,9 @@ var ListDetailComponent = _ListDetailComponent;
   }], null, null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ListDetailComponent, { className: "ListDetailComponent", filePath: "src/app/components/list-detail/list-detail.component.ts", lineNumber: 46 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ListDetailComponent, { className: "ListDetailComponent", filePath: "src/app/components/list-detail/list-detail.component.ts", lineNumber: 44 });
 })();
 export {
   ListDetailComponent
 };
-//# sourceMappingURL=chunk-C5PE4EZ2.js.map
+//# sourceMappingURL=chunk-AXFMITTB.js.map

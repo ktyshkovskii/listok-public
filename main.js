@@ -1,11 +1,13 @@
 import {
   DexieDataBase,
   environment
-} from "./chunk-LOOZGD6U.js";
-import "./chunk-CT6UNQQ2.js";
+} from "./chunk-FMG23KCI.js";
+import "./chunk-FH5Z5G3K.js";
 import {
-  DATA_REPOSITORY
-} from "./chunk-SFQT6NKI.js";
+  IMAGE_REPOSITORY,
+  ITEM_REPOSITORY,
+  LIST_REPOSITORY
+} from "./chunk-T5ZWQDMH.js";
 import {
   ApplicationRef,
   Component,
@@ -47,7 +49,7 @@ import {
   ɵɵdefineNgModule,
   ɵɵelement,
   ɵɵinject
-} from "./chunk-DKY7HSF2.js";
+} from "./chunk-6BTNDEJY.js";
 
 // src/app/app.routes.ts
 var routes = [
@@ -58,23 +60,23 @@ var routes = [
   },
   {
     path: "login",
-    loadComponent: () => import("./chunk-SBNO5X53.js").then((m) => m.LoginComponent)
+    loadComponent: () => import("./chunk-OVTGEQ4Q.js").then((m) => m.LoginComponent)
   },
   {
     path: "dashboard",
-    loadComponent: () => import("./chunk-XAADZHOL.js").then((m) => m.DashboardComponent)
+    loadComponent: () => import("./chunk-HNAG6MTY.js").then((m) => m.DashboardComponent)
   },
   {
     path: "lists/new",
-    loadComponent: () => import("./chunk-POTLN6J3.js").then((m) => m.ListCreateComponent)
+    loadComponent: () => import("./chunk-Q3OVKGWH.js").then((m) => m.ListCreateComponent)
   },
   {
     path: "lists/:id/edit",
-    loadComponent: () => import("./chunk-POTLN6J3.js").then((m) => m.ListCreateComponent)
+    loadComponent: () => import("./chunk-Q3OVKGWH.js").then((m) => m.ListCreateComponent)
   },
   {
     path: "lists/:id",
-    loadComponent: () => import("./chunk-C5PE4EZ2.js").then((m) => m.ListDetailComponent)
+    loadComponent: () => import("./chunk-AXFMITTB.js").then((m) => m.ListDetailComponent)
   },
   {
     path: "**",
@@ -1860,6 +1862,15 @@ var ServiceWorkerModule = class _ServiceWorkerModule {
   }], null, null);
 })();
 
+// src/app/database/dexie/provider.ts
+function provideDexieRepositories() {
+  return makeEnvironmentProviders([
+    { provide: ITEM_REPOSITORY, useClass: DexieDataBase },
+    { provide: LIST_REPOSITORY, useClass: DexieDataBase },
+    { provide: IMAGE_REPOSITORY, useClass: DexieDataBase }
+  ]);
+}
+
 // src/main.ts
 var apiConfiguration = new Configuration({
   basePath: environment.apiUrl,
@@ -1889,7 +1900,7 @@ var App = _App;
   }], null, null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(App, { className: "App", filePath: "src/main.ts", lineNumber: 25 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(App, { className: "App", filePath: "src/main.ts", lineNumber: 24 });
 })();
 bootstrapApplication(App, {
   providers: [
@@ -1900,7 +1911,7 @@ bootstrapApplication(App, {
       enabled: !isDevMode(),
       registrationStrategy: "registerImmediately"
     }),
-    { provide: DATA_REPOSITORY, useClass: DexieDataBase }
+    provideDexieRepositories()
   ]
 }).catch((err) => console.error(err));
 export {

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["projects/file-select/src/lib/file-select-item.scss"],
+  "sourcesContent": [".mat-file-select-item-input {\n  display: block;\n  visibility: hidden;\n  width: 0;\n  height: 0;\n}\n"],
+  "mappings": ";AAAA,CAAA;AACE,WAAA;AACA,cAAA;AACA,SAAA;AACA,UAAA;;",
+  "names": []
+}
