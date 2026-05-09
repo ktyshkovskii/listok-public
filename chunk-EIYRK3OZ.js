@@ -1143,7 +1143,7 @@ function ListCreateComponent_Conditional_10_Template(rf, ctx) {
 function ListCreateComponent_Conditional_20_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 9);
-    \u0275\u0275element(1, "mat-spinner", 23);
+    \u0275\u0275element(1, "mat-spinner", 24);
     \u0275\u0275elementStart(2, "p");
     \u0275\u0275text(3, "Loading list...");
     \u0275\u0275elementEnd()();
@@ -1163,12 +1163,12 @@ function ListCreateComponent_Conditional_29_Template(rf, ctx) {
     \u0275\u0275elementEnd();
   }
 }
-function ListCreateComponent_Conditional_48_Template(rf, ctx) {
+function ListCreateComponent_Conditional_49_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 17)(1, "h4");
+    \u0275\u0275elementStart(0, "div", 18)(1, "h4");
     \u0275\u0275text(2, "Image Preview:");
     \u0275\u0275elementEnd();
-    \u0275\u0275element(3, "img", 24);
+    \u0275\u0275element(3, "img", 25);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -1177,21 +1177,21 @@ function ListCreateComponent_Conditional_48_Template(rf, ctx) {
     \u0275\u0275property("src", ctx_r0.form.controls.imageId.value, \u0275\u0275sanitizeUrl);
   }
 }
-function ListCreateComponent_For_54_Template(rf, ctx) {
+function ListCreateComponent_For_55_Template(rf, ctx) {
   if (rf & 1) {
     const _r2 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div", 25);
-    \u0275\u0275listener("click", function ListCreateComponent_For_54_Template_div_click_0_listener() {
+    \u0275\u0275elementStart(0, "div", 26);
+    \u0275\u0275listener("click", function ListCreateComponent_For_55_Template_div_click_0_listener() {
       const image_r3 = \u0275\u0275restoreView(_r2).$implicit;
       const ctx_r0 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r0.selectSuggestedImage(image_r3));
-    })("keydown.enter", function ListCreateComponent_For_54_Template_div_keydown_enter_0_listener() {
+    })("keydown.enter", function ListCreateComponent_For_55_Template_div_keydown_enter_0_listener() {
       const image_r3 = \u0275\u0275restoreView(_r2).$implicit;
       const ctx_r0 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r0.selectSuggestedImage(image_r3));
     });
-    \u0275\u0275element(1, "img", 26);
-    \u0275\u0275elementStart(2, "span", 27);
+    \u0275\u0275element(1, "img", 27);
+    \u0275\u0275elementStart(2, "span", 28);
     \u0275\u0275text(3);
     \u0275\u0275elementEnd()();
   }
@@ -1205,7 +1205,7 @@ function ListCreateComponent_For_54_Template(rf, ctx) {
     \u0275\u0275textInterpolate(image_r3.name);
   }
 }
-function ListCreateComponent_Conditional_60_Template(rf, ctx) {
+function ListCreateComponent_Conditional_61_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "mat-icon");
     \u0275\u0275text(1);
@@ -1217,7 +1217,7 @@ function ListCreateComponent_Conditional_60_Template(rf, ctx) {
     \u0275\u0275textInterpolate(ctx_r0.isEditMode ? "save" : "add");
   }
 }
-function ListCreateComponent_Conditional_61_Template(rf, ctx) {
+function ListCreateComponent_Conditional_62_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275element(0, "mat-spinner", 6);
   }
@@ -1237,6 +1237,7 @@ var _ListCreateComponent = class _ListCreateComponent {
       comment: this.fb.control(null),
       imageId: this.fb.control(null)
     });
+    this.testControl = this.fb.control(null);
     this.imageControl = this.fb.control(null);
     this.isSubmitting = false;
     this.loading = true;
@@ -1247,6 +1248,9 @@ var _ListCreateComponent = class _ListCreateComponent {
     return this.listId !== null;
   }
   ngOnInit() {
+    this.testControl.valueChanges.pipe(takeUntil(this.destroyRef)).subscribe((value) => {
+      console.log(value);
+    });
     this.imageControl.valueChanges.pipe(takeUntil(this.destroyRef), switchMap((fileSelectInfo) => {
       if (fileSelectInfo) {
         return this.imageService.storeImage$(fileSelectInfo.file);
@@ -1330,11 +1334,16 @@ var _ListCreateComponent = class _ListCreateComponent {
       }
     });
   }
+  onTestInteraction($event) {
+    console.group("TestInteraction");
+    console.log($event);
+    console.groupEnd();
+  }
 };
 _ListCreateComponent.\u0275fac = function ListCreateComponent_Factory(__ngFactoryType__) {
   return new (__ngFactoryType__ || _ListCreateComponent)();
 };
-_ListCreateComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ListCreateComponent, selectors: [["ng-component"]], decls: 63, vars: 23, consts: [[1, "create-list-container"], [1, "create-toolbar"], ["mat-icon-button", "", 3, "click"], [1, "toolbar-title"], [1, "spacer"], ["mat-raised-button", "", "color", "primary", 3, "click", "disabled"], ["diameter", "20"], [1, "create-content"], [1, "create-card"], [1, "loading-container"], [1, "list-form", 3, "formGroup"], ["appearance", "outline", 1, "full-width"], ["matInput", "", "formControlName", "name", "placeholder", "Enter list name", "maxlength", "100"], ["matPrefix", ""], ["align", "end"], ["matInput", "", "formControlName", "comment", "placeholder", "Add a description for your list", "rows", "3", "maxlength", "500"], ["accept", "image/*", 3, "formControl"], [1, "image-preview"], [1, "suggested-images"], [1, "image-grid"], ["tabindex", "0", 1, "image-option", 3, "selected"], [1, "action-buttons"], ["mat-button", "", 3, "click", "disabled"], ["diameter", "50"], ["lokImage", "", "alt", "List image", 1, "preview-image", 3, "src"], ["tabindex", "0", 1, "image-option", 3, "click", "keydown.enter"], ["lokImage", "", 3, "src", "alt"], [1, "image-label"]], template: function ListCreateComponent_Template(rf, ctx) {
+_ListCreateComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ListCreateComponent, selectors: [["ng-component"]], decls: 64, vars: 24, consts: [[1, "create-list-container"], [1, "create-toolbar"], ["mat-icon-button", "", 3, "click"], [1, "toolbar-title"], [1, "spacer"], ["mat-raised-button", "", "color", "primary", 3, "click", "disabled"], ["diameter", "20"], [1, "create-content"], [1, "create-card"], [1, "loading-container"], [1, "list-form", 3, "formGroup"], ["appearance", "outline", 1, "full-width"], ["matInput", "", "formControlName", "name", "placeholder", "Enter list name", "maxlength", "100"], ["matPrefix", ""], ["align", "end"], ["matInput", "", "formControlName", "comment", "placeholder", "Add a description for your list", "rows", "3", "maxlength", "500"], ["placeholder", "Enter test", "type", "file", "accept", "image/*", "capture", "environment", 3, "change", "formControl"], ["accept", "image/*", 3, "formControl"], [1, "image-preview"], [1, "suggested-images"], [1, "image-grid"], ["tabindex", "0", 1, "image-option", 3, "selected"], [1, "action-buttons"], ["mat-button", "", 3, "click", "disabled"], ["diameter", "50"], ["lokImage", "", "alt", "List image", 1, "preview-image", 3, "src"], ["tabindex", "0", 1, "image-option", 3, "click", "keydown.enter"], ["lokImage", "", 3, "src", "alt"], [1, "image-label"]], template: function ListCreateComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 0)(1, "mat-toolbar", 1)(2, "button", 2);
     \u0275\u0275listener("click", function ListCreateComponent_Template_button_click_2_listener() {
@@ -1387,36 +1396,41 @@ _ListCreateComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ t
     \u0275\u0275elementStart(39, "mat-hint", 14);
     \u0275\u0275text(40);
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(41, "mat-form-field", 11)(42, "mat-label");
-    \u0275\u0275text(43, "Image (Optional)");
+    \u0275\u0275elementStart(41, "input", 16);
+    \u0275\u0275listener("change", function ListCreateComponent_Template_input_change_41_listener($event) {
+      return ctx.onTestInteraction($event);
+    });
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(44, "mat-icon", 13);
-    \u0275\u0275text(45, "image");
+    \u0275\u0275elementStart(42, "mat-form-field", 11)(43, "mat-label");
+    \u0275\u0275text(44, "Image (Optional)");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(46, "mat-file-select", 16);
-    \u0275\u0275element(47, "mat-file-select-item");
+    \u0275\u0275elementStart(45, "mat-icon", 13);
+    \u0275\u0275text(46, "image");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(47, "mat-file-select", 17);
+    \u0275\u0275element(48, "mat-file-select-item");
     \u0275\u0275elementEnd()();
-    \u0275\u0275conditionalCreate(48, ListCreateComponent_Conditional_48_Template, 4, 1, "div", 17);
-    \u0275\u0275elementStart(49, "div", 18)(50, "h4");
-    \u0275\u0275text(51, "Or choose from suggested images:");
+    \u0275\u0275conditionalCreate(49, ListCreateComponent_Conditional_49_Template, 4, 1, "div", 18);
+    \u0275\u0275elementStart(50, "div", 19)(51, "h4");
+    \u0275\u0275text(52, "Or choose from suggested images:");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(52, "div", 19);
-    \u0275\u0275repeaterCreate(53, ListCreateComponent_For_54_Template, 4, 5, "div", 20, \u0275\u0275repeaterTrackByIdentity);
-    \u0275\u0275pipe(55, "async");
+    \u0275\u0275elementStart(53, "div", 20);
+    \u0275\u0275repeaterCreate(54, ListCreateComponent_For_55_Template, 4, 5, "div", 21, \u0275\u0275repeaterTrackByIdentity);
+    \u0275\u0275pipe(56, "async");
     \u0275\u0275elementEnd()()()()();
-    \u0275\u0275elementStart(56, "div", 21)(57, "button", 22);
-    \u0275\u0275listener("click", function ListCreateComponent_Template_button_click_57_listener() {
+    \u0275\u0275elementStart(57, "div", 22)(58, "button", 23);
+    \u0275\u0275listener("click", function ListCreateComponent_Template_button_click_58_listener() {
       return ctx.goBack();
     });
-    \u0275\u0275text(58, " Cancel ");
+    \u0275\u0275text(59, " Cancel ");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(59, "button", 5);
-    \u0275\u0275listener("click", function ListCreateComponent_Template_button_click_59_listener() {
+    \u0275\u0275elementStart(60, "button", 5);
+    \u0275\u0275listener("click", function ListCreateComponent_Template_button_click_60_listener() {
       return ctx.saveList();
     });
-    \u0275\u0275conditionalCreate(60, ListCreateComponent_Conditional_60_Template, 2, 1, "mat-icon");
-    \u0275\u0275conditionalCreate(61, ListCreateComponent_Conditional_61_Template, 1, 0, "mat-spinner", 6);
-    \u0275\u0275text(62);
+    \u0275\u0275conditionalCreate(61, ListCreateComponent_Conditional_61_Template, 2, 1, "mat-icon");
+    \u0275\u0275conditionalCreate(62, ListCreateComponent_Conditional_62_Template, 1, 0, "mat-spinner", 6);
+    \u0275\u0275text(63);
     \u0275\u0275elementEnd()()()();
   }
   if (rf & 2) {
@@ -1445,20 +1459,22 @@ _ListCreateComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ t
     \u0275\u0275textInterpolate1("", ctx.form.controls.name.value.length || 0, "/100");
     \u0275\u0275advance(9);
     \u0275\u0275textInterpolate1("", (ctx.form.controls.comment.value == null ? null : ctx.form.controls.comment.value.length) || 0, "/500");
+    \u0275\u0275advance();
+    \u0275\u0275property("formControl", ctx.testControl);
     \u0275\u0275advance(6);
     \u0275\u0275property("formControl", ctx.imageControl);
     \u0275\u0275advance(2);
-    \u0275\u0275conditional(ctx.form.controls.imageId.value ? 48 : -1);
+    \u0275\u0275conditional(ctx.form.controls.imageId.value ? 49 : -1);
     \u0275\u0275advance(5);
-    \u0275\u0275repeater(\u0275\u0275pipeBind1(55, 21, ctx.suggestedImages));
+    \u0275\u0275repeater(\u0275\u0275pipeBind1(56, 22, ctx.suggestedImages));
     \u0275\u0275advance(4);
     \u0275\u0275property("disabled", ctx.isSubmitting || ctx.loading);
     \u0275\u0275advance(2);
     \u0275\u0275property("disabled", !ctx.form.valid || ctx.isSubmitting || ctx.loading);
     \u0275\u0275advance();
-    \u0275\u0275conditional(!ctx.isSubmitting ? 60 : -1);
+    \u0275\u0275conditional(!ctx.isSubmitting ? 61 : -1);
     \u0275\u0275advance();
-    \u0275\u0275conditional(ctx.isSubmitting ? 61 : -1);
+    \u0275\u0275conditional(ctx.isSubmitting ? 62 : -1);
     \u0275\u0275advance();
     \u0275\u0275textInterpolate1(" ", ctx.isSubmitting ? ctx.isEditMode ? "Saving List..." : "Creating List..." : ctx.isEditMode ? "Save Changes" : "Create List", " ");
   }
@@ -1600,6 +1616,18 @@ var ListCreateComponent = _ListCreateComponent;
             <mat-hint align="end">{{ form.controls.comment.value?.length || 0 }}/500</mat-hint>
           </mat-form-field>
 
+<!--          <mat-form-field appearance="outline" class="full-width">-->
+<!--            <mat-label>Test</mat-label>-->
+            <input
+                [formControl]="testControl"
+                placeholder="Enter test"
+                type="file"
+                accept="image/*"
+                capture="environment"
+
+                (change)="onTestInteraction($event)"            >
+<!--          </mat-form-field>-->
+
           <mat-form-field appearance="outline" class="full-width">
             <mat-label>Image (Optional)</mat-label>
             <mat-icon matPrefix>image</mat-icon>
@@ -1663,4 +1691,4 @@ var ListCreateComponent = _ListCreateComponent;
 export {
   ListCreateComponent
 };
-//# sourceMappingURL=chunk-Q3OVKGWH.js.map
+//# sourceMappingURL=chunk-EIYRK3OZ.js.map

@@ -68,11 +68,11 @@ var routes = [
   },
   {
     path: "lists/new",
-    loadComponent: () => import("./chunk-Q3OVKGWH.js").then((m) => m.ListCreateComponent)
+    loadComponent: () => import("./chunk-EIYRK3OZ.js").then((m) => m.ListCreateComponent)
   },
   {
     path: "lists/:id/edit",
-    loadComponent: () => import("./chunk-Q3OVKGWH.js").then((m) => m.ListCreateComponent)
+    loadComponent: () => import("./chunk-EIYRK3OZ.js").then((m) => m.ListCreateComponent)
   },
   {
     path: "lists/:id",
