@@ -1343,7 +1343,7 @@ var _ListCreateComponent = class _ListCreateComponent {
 _ListCreateComponent.\u0275fac = function ListCreateComponent_Factory(__ngFactoryType__) {
   return new (__ngFactoryType__ || _ListCreateComponent)();
 };
-_ListCreateComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ListCreateComponent, selectors: [["ng-component"]], decls: 64, vars: 24, consts: [[1, "create-list-container"], [1, "create-toolbar"], ["mat-icon-button", "", 3, "click"], [1, "toolbar-title"], [1, "spacer"], ["mat-raised-button", "", "color", "primary", 3, "click", "disabled"], ["diameter", "20"], [1, "create-content"], [1, "create-card"], [1, "loading-container"], [1, "list-form", 3, "formGroup"], ["appearance", "outline", 1, "full-width"], ["matInput", "", "formControlName", "name", "placeholder", "Enter list name", "maxlength", "100"], ["matPrefix", ""], ["align", "end"], ["matInput", "", "formControlName", "comment", "placeholder", "Add a description for your list", "rows", "3", "maxlength", "500"], ["placeholder", "Enter test", "type", "file", "accept", "image/*", "capture", "environment", 3, "change", "formControl"], ["accept", "image/*", 3, "formControl"], [1, "image-preview"], [1, "suggested-images"], [1, "image-grid"], ["tabindex", "0", 1, "image-option", 3, "selected"], [1, "action-buttons"], ["mat-button", "", 3, "click", "disabled"], ["diameter", "50"], ["lokImage", "", "alt", "List image", 1, "preview-image", 3, "src"], ["tabindex", "0", 1, "image-option", 3, "click", "keydown.enter"], ["lokImage", "", 3, "src", "alt"], [1, "image-label"]], template: function ListCreateComponent_Template(rf, ctx) {
+_ListCreateComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ListCreateComponent, selectors: [["ng-component"]], decls: 64, vars: 24, consts: [[1, "create-list-container"], [1, "create-toolbar"], ["mat-icon-button", "", 3, "click"], [1, "toolbar-title"], [1, "spacer"], ["mat-raised-button", "", "color", "primary", 3, "click", "disabled"], ["diameter", "20"], [1, "create-content"], [1, "create-card"], [1, "loading-container"], [1, "list-form", 3, "formGroup"], ["appearance", "outline", 1, "full-width"], ["matInput", "", "formControlName", "name", "placeholder", "Enter list name", "maxlength", "100"], ["matPrefix", ""], ["align", "end"], ["matInput", "", "formControlName", "comment", "placeholder", "Add a description for your list", "rows", "3", "maxlength", "500"], ["placeholder", "Enter test", "type", "file", "accept", "image/*", 3, "change", "formControl"], ["accept", "image/*", 3, "formControl"], [1, "image-preview"], [1, "suggested-images"], [1, "image-grid"], ["tabindex", "0", 1, "image-option", 3, "selected"], [1, "action-buttons"], ["mat-button", "", 3, "click", "disabled"], ["diameter", "50"], ["lokImage", "", "alt", "List image", 1, "preview-image", 3, "src"], ["tabindex", "0", 1, "image-option", 3, "click", "keydown.enter"], ["lokImage", "", 3, "src", "alt"], [1, "image-label"]], template: function ListCreateComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 0)(1, "mat-toolbar", 1)(2, "button", 2);
     \u0275\u0275listener("click", function ListCreateComponent_Template_button_click_2_listener() {
@@ -1623,7 +1623,6 @@ var ListCreateComponent = _ListCreateComponent;
                 placeholder="Enter test"
                 type="file"
                 accept="image/*"
-                capture="environment"
 
                 (change)="onTestInteraction($event)"            >
 <!--          </mat-form-field>-->
@@ -1691,4 +1690,4 @@ var ListCreateComponent = _ListCreateComponent;
 export {
   ListCreateComponent
 };
-//# sourceMappingURL=chunk-EIYRK3OZ.js.map
+//# sourceMappingURL=chunk-CM4YSDOR.js.map
