@@ -68,11 +68,11 @@ var routes = [
   },
   {
     path: "lists/new",
-    loadComponent: () => import("./chunk-CM4YSDOR.js").then((m) => m.ListCreateComponent)
+    loadComponent: () => import("./chunk-Q7DAXTVO.js").then((m) => m.ListCreateComponent)
   },
   {
     path: "lists/:id/edit",
-    loadComponent: () => import("./chunk-CM4YSDOR.js").then((m) => m.ListCreateComponent)
+    loadComponent: () => import("./chunk-Q7DAXTVO.js").then((m) => m.ListCreateComponent)
   },
   {
     path: "lists/:id",

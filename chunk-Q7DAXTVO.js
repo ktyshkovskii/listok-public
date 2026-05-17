@@ -1249,7 +1249,14 @@ var _ListCreateComponent = class _ListCreateComponent {
   }
   ngOnInit() {
     this.testControl.valueChanges.pipe(takeUntil(this.destroyRef)).subscribe((value) => {
-      console.log(value);
+      console.log("Selected file:", value);
+      if (!value) {
+        return;
+      }
+      if (!value.type.startsWith("image/")) {
+        this.snackBar.open("Please choose an image file.", "Close", { duration: 3e3 });
+        this.testControl.setValue(null);
+      }
     });
     this.imageControl.valueChanges.pipe(takeUntil(this.destroyRef), switchMap((fileSelectInfo) => {
       if (fileSelectInfo) {
@@ -1338,12 +1345,27 @@ var _ListCreateComponent = class _ListCreateComponent {
     console.group("TestInteraction");
     console.log($event);
     console.groupEnd();
+    const input = $event.target;
+    const file = input?.files?.[0] ?? null;
+    if (!file) {
+      this.testControl.setValue(null);
+      return;
+    }
+    if (!file.type.startsWith("image/")) {
+      this.snackBar.open("Please choose an image file.", "Close", { duration: 3e3 });
+      this.testControl.setValue(null);
+      if (input) {
+        input.value = "";
+      }
+      return;
+    }
+    this.testControl.setValue(file);
   }
 };
 _ListCreateComponent.\u0275fac = function ListCreateComponent_Factory(__ngFactoryType__) {
   return new (__ngFactoryType__ || _ListCreateComponent)();
 };
-_ListCreateComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ListCreateComponent, selectors: [["ng-component"]], decls: 64, vars: 24, consts: [[1, "create-list-container"], [1, "create-toolbar"], ["mat-icon-button", "", 3, "click"], [1, "toolbar-title"], [1, "spacer"], ["mat-raised-button", "", "color", "primary", 3, "click", "disabled"], ["diameter", "20"], [1, "create-content"], [1, "create-card"], [1, "loading-container"], [1, "list-form", 3, "formGroup"], ["appearance", "outline", 1, "full-width"], ["matInput", "", "formControlName", "name", "placeholder", "Enter list name", "maxlength", "100"], ["matPrefix", ""], ["align", "end"], ["matInput", "", "formControlName", "comment", "placeholder", "Add a description for your list", "rows", "3", "maxlength", "500"], ["placeholder", "Enter test", "type", "file", "accept", "image/*", 3, "change", "formControl"], ["accept", "image/*", 3, "formControl"], [1, "image-preview"], [1, "suggested-images"], [1, "image-grid"], ["tabindex", "0", 1, "image-option", 3, "selected"], [1, "action-buttons"], ["mat-button", "", 3, "click", "disabled"], ["diameter", "50"], ["lokImage", "", "alt", "List image", 1, "preview-image", 3, "src"], ["tabindex", "0", 1, "image-option", 3, "click", "keydown.enter"], ["lokImage", "", 3, "src", "alt"], [1, "image-label"]], template: function ListCreateComponent_Template(rf, ctx) {
+_ListCreateComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ListCreateComponent, selectors: [["ng-component"]], decls: 64, vars: 24, consts: [[1, "create-list-container"], [1, "create-toolbar"], ["mat-icon-button", "", 3, "click"], [1, "toolbar-title"], [1, "spacer"], ["mat-raised-button", "", "color", "primary", 3, "click", "disabled"], ["diameter", "20"], [1, "create-content"], [1, "create-card"], [1, "loading-container"], [1, "list-form", 3, "formGroup"], ["appearance", "outline", 1, "full-width"], ["matInput", "", "formControlName", "name", "placeholder", "Enter list name", "maxlength", "100"], ["matPrefix", ""], ["align", "end"], ["matInput", "", "formControlName", "comment", "placeholder", "Add a description for your list", "rows", "3", "maxlength", "500"], ["placeholder", "Enter test", "type", "file", "aria-label", "Choose image file", 3, "change", "formControl"], ["accept", "image/*", 3, "formControl"], [1, "image-preview"], [1, "suggested-images"], [1, "image-grid"], ["tabindex", "0", 1, "image-option", 3, "selected"], [1, "action-buttons"], ["mat-button", "", 3, "click", "disabled"], ["diameter", "50"], ["lokImage", "", "alt", "List image", 1, "preview-image", 3, "src"], ["tabindex", "0", 1, "image-option", 3, "click", "keydown.enter"], ["lokImage", "", 3, "src", "alt"], [1, "image-label"]], template: function ListCreateComponent_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "div", 0)(1, "mat-toolbar", 1)(2, "button", 2);
     \u0275\u0275listener("click", function ListCreateComponent_Template_button_click_2_listener() {
@@ -1520,7 +1542,7 @@ _ListCreateComponent.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ t
   FormsModule,
   ImageDirective,
   AsyncPipe
-], styles: ["\n\n.create-list-container[_ngcontent-%COMP%] {\n  min-height: 100vh;\n  background-color: #fafafa;\n}\n.create-toolbar[_ngcontent-%COMP%] {\n  background-color: white;\n  color: #333;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n}\n.toolbar-title[_ngcontent-%COMP%] {\n  font-size: 20px;\n  font-weight: 600;\n  margin-left: 16px;\n}\n@media (max-width: 599.98px) {\n  .toolbar-title[_ngcontent-%COMP%] {\n    font-size: 18px;\n  }\n}\n.spacer[_ngcontent-%COMP%] {\n  flex: 1 1 auto;\n}\n.create-content[_ngcontent-%COMP%] {\n  padding: 24px;\n  max-width: 800px;\n  margin: 0 auto;\n}\n@media (max-width: 599.98px) {\n  .create-content[_ngcontent-%COMP%] {\n    padding: 16px;\n  }\n}\n.create-card[_ngcontent-%COMP%] {\n  border-radius: 12px;\n  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);\n  margin-bottom: 24px;\n}\n.list-form[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  gap: 24px;\n  margin-top: 16px;\n}\n.list-form.hidden[_ngcontent-%COMP%] {\n  display: none;\n}\n.full-width[_ngcontent-%COMP%] {\n  width: 100%;\n  box-sizing: border-box;\n}\n.image-preview[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}\n.image-preview[_ngcontent-%COMP%]   h4[_ngcontent-%COMP%] {\n  margin: 0 0 12px 0;\n  font-size: 16px;\n  font-weight: 600;\n}\n.preview-image[_ngcontent-%COMP%] {\n  width: 100%;\n  max-width: 400px;\n  height: 200px;\n  object-fit: cover;\n  border-radius: 8px;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\n}\n.suggested-images[_ngcontent-%COMP%] {\n  margin-top: 24px;\n}\n.suggested-images[_ngcontent-%COMP%]   h4[_ngcontent-%COMP%] {\n  margin: 0 0 16px 0;\n  font-size: 16px;\n  font-weight: 600;\n}\n.image-grid[_ngcontent-%COMP%] {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));\n  gap: 12px;\n}\n@media (max-width: 599.98px) {\n  .image-grid[_ngcontent-%COMP%] {\n    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));\n    gap: 8px;\n  }\n}\n.image-option[_ngcontent-%COMP%] {\n  cursor: pointer;\n  border-radius: 8px;\n  overflow: hidden;\n  transition: transform 0.2s, box-shadow 0.2s;\n  border: 2px solid transparent;\n}\n.image-option[_ngcontent-%COMP%]:hover {\n  transform: translateY(-2px);\n  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);\n}\n.image-option.selected[_ngcontent-%COMP%] {\n  border-color: #1976d2;\n  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);\n}\n.image-option[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100px;\n  object-fit: cover;\n}\n.image-label[_ngcontent-%COMP%] {\n  display: block;\n  padding: 8px;\n  font-size: 12px;\n  text-align: center;\n  background-color: white;\n  border-top: 1px solid #eee;\n}\n.action-buttons[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: flex-end;\n  gap: 16px;\n  padding: 16px 0;\n}\n@media (max-width: 599.98px) {\n  .action-buttons[_ngcontent-%COMP%] {\n    flex-direction: column-reverse;\n  }\n  .action-buttons[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n    width: 100%;\n  }\n}\n.loading-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  padding: 60px 20px;\n}\n.loading-container[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  margin-top: 16px;\n  font-size: 16px;\n  color: #666;\n}\n/*# sourceMappingURL=list-create.component.css.map */"] });
+], styles: ["\n\n.create-list-container[_ngcontent-%COMP%] {\n  min-height: 100vh;\n  background-color: #fafafa;\n}\n.create-toolbar[_ngcontent-%COMP%] {\n  background-color: white;\n  color: #333;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\n}\n.toolbar-title[_ngcontent-%COMP%] {\n  font-size: 20px;\n  font-weight: 600;\n  margin-left: 16px;\n}\n@media (max-width: 599.98px) {\n  .toolbar-title[_ngcontent-%COMP%] {\n    font-size: 18px;\n  }\n}\n.spacer[_ngcontent-%COMP%] {\n  flex: 1 1 auto;\n}\n.create-content[_ngcontent-%COMP%] {\n  padding: 24px;\n  max-width: 800px;\n  margin: 0 auto;\n}\n@media (max-width: 599.98px) {\n  .create-content[_ngcontent-%COMP%] {\n    padding: 16px;\n  }\n}\n.create-card[_ngcontent-%COMP%] {\n  border-radius: 12px;\n  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);\n  margin-bottom: 24px;\n}\n.list-form[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  gap: 24px;\n  margin-top: 16px;\n}\n.list-form.hidden[_ngcontent-%COMP%] {\n  display: none;\n}\n.full-width[_ngcontent-%COMP%] {\n  width: 100%;\n  box-sizing: border-box;\n}\n.image-preview[_ngcontent-%COMP%] {\n  margin-top: 16px;\n}\n.image-preview[_ngcontent-%COMP%]   h4[_ngcontent-%COMP%] {\n  margin: 0 0 12px 0;\n  font-size: 16px;\n  font-weight: 600;\n}\n.preview-image[_ngcontent-%COMP%] {\n  width: 100%;\n  max-width: 400px;\n  height: 200px;\n  object-fit: cover;\n  border-radius: 8px;\n  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\n}\n.suggested-images[_ngcontent-%COMP%] {\n  margin-top: 24px;\n}\n.suggested-images[_ngcontent-%COMP%]   h4[_ngcontent-%COMP%] {\n  margin: 0 0 16px 0;\n  font-size: 16px;\n  font-weight: 600;\n}\n.image-grid[_ngcontent-%COMP%] {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));\n  gap: 12px;\n}\n@media (max-width: 599.98px) {\n  .image-grid[_ngcontent-%COMP%] {\n    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));\n    gap: 8px;\n  }\n}\n.image-option[_ngcontent-%COMP%] {\n  cursor: pointer;\n  border-radius: 8px;\n  overflow: hidden;\n  transition: transform 0.2s, box-shadow 0.2s;\n  border: 2px solid transparent;\n}\n.image-option[_ngcontent-%COMP%]:hover {\n  transform: translateY(-2px);\n  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);\n}\n.image-option.selected[_ngcontent-%COMP%] {\n  border-color: #1976d2;\n  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);\n}\n.image-option[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 100px;\n  object-fit: cover;\n}\n.image-label[_ngcontent-%COMP%] {\n  display: block;\n  padding: 8px;\n  font-size: 12px;\n  text-align: center;\n  background-color: white;\n  border-top: 1px solid #eee;\n}\n.action-buttons[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: flex-end;\n  gap: 16px;\n  padding: 16px 0;\n}\n@media (max-width: 599.98px) {\n  .action-buttons[_ngcontent-%COMP%] {\n    flex-direction: column-reverse;\n  }\n  .action-buttons[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n    width: 100%;\n  }\n}\n.loading-container[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  padding: 60px 20px;\n}\n.loading-container[_ngcontent-%COMP%]   p[_ngcontent-%COMP%] {\n  margin-top: 16px;\n  font-size: 16px;\n  color: #666;\n}\n/*# sourceMappingURL=list-create.component.css.map */"], changeDetection: 0 });
 var ListCreateComponent = _ListCreateComponent;
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ListCreateComponent, [{
@@ -1542,7 +1564,7 @@ var ListCreateComponent = _ListCreateComponent;
       MatRadioModule,
       FormsModule,
       ImageDirective
-    ], template: `<div class="create-list-container">
+    ], changeDetection: ChangeDetectionStrategy.OnPush, template: `<div class="create-list-container">
   <mat-toolbar class="create-toolbar">
     <button mat-icon-button (click)="goBack()">
       <mat-icon>arrow_back</mat-icon>
@@ -1622,7 +1644,7 @@ var ListCreateComponent = _ListCreateComponent;
                 [formControl]="testControl"
                 placeholder="Enter test"
                 type="file"
-                accept="image/*"
+                aria-label="Choose image file"
 
                 (change)="onTestInteraction($event)"            >
 <!--          </mat-form-field>-->
@@ -1685,9 +1707,9 @@ var ListCreateComponent = _ListCreateComponent;
   }], null, null);
 })();
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ListCreateComponent, { className: "ListCreateComponent", filePath: "src/app/components/list-create/list-create.component.ts", lineNumber: 56 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(ListCreateComponent, { className: "ListCreateComponent", filePath: "src/app/components/list-create/list-create.component.ts", lineNumber: 57 });
 })();
 export {
   ListCreateComponent
 };
-//# sourceMappingURL=chunk-CM4YSDOR.js.map
+//# sourceMappingURL=chunk-Q7DAXTVO.js.map
